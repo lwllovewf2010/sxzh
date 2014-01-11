@@ -1,0 +1,536 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <include layout="@layout/title_bar" />
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+<!-- 头部内容 -->
+ <RelativeLayout
+     android:id="@+id/preson_data_layout"
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     android:paddingTop="5dip"
+     android:paddingBottom="5dip"
+     android:paddingLeft="10dip"
+     android:paddingRight="10dip"
+      >
+     <ImageView
+         android:id="@+id/preson_avatar"
+         android:layout_width="75dip"
+         android:layout_height="75dip"
+         android:layout_centerVertical="true"
+         android:background="@drawable/default_avatar"
+         />
+ <ImageView
+         android:id="@+id/arraw1"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignParentRight="true"
+         android:background="@drawable/arrow"
+         android:layout_centerVertical="true"
+         />
+
+     <RelativeLayout
+         android:layout_width="fill_parent"
+         android:layout_height="wrap_content"
+         android:layout_centerVertical="true"
+         android:layout_marginLeft="10dip"
+         android:layout_marginRight="10dip"
+         android:layout_toLeftOf="@id/arraw1"
+         android:layout_toRightOf="@id/preson_avatar" >
+
+         <TextView
+             android:id="@+id/username_tv"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="赵钱孙" />
+
+         <TextView
+             android:id="@+id/phone_tv"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_below="@id/username_tv"
+             android:text="@string/mobile_phone_table" />
+
+         <TextView
+             android:id="@+id/phone_content_tv"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_below="@id/username_tv"
+             android:layout_toRightOf="@id/phone_tv"
+             android:text="158xxxxx111" />
+
+         <LinearLayout
+             android:layout_width="fill_parent"
+             android:layout_height="wrap_content" 
+              android:layout_below="@id/phone_tv">
+
+             <TextView
+                 android:id="@+id/company_tv"
+                 android:layout_width="fill_parent"
+                 android:layout_height="wrap_content"
+                 android:layout_weight="1"
+                 android:singleLine="true"
+                 android:text="xxxx公司" />
+
+             <TextView
+                 android:id="@+id/position_tv"
+                 android:layout_width="fill_parent"
+                 android:layout_height="wrap_content"
+                 android:layout_weight="2"
+                 android:singleLine="true"
+                 android:text="董事长" />
+
+         </LinearLayout>
+     </RelativeLayout>
+
+ </RelativeLayout>
+ <View
+     android:layout_width="fill_parent"
+     android:layout_height="1px"
+     android:background="@color/line_color"
+    />
+
+ <RelativeLayout
+     android:id="@+id/tiny_bank_layout"
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content" 
+     android:paddingTop="10dip"
+     android:paddingBottom="10dip"
+     android:paddingLeft="15dip"
+     android:paddingRight="10dip">
+     <TextView
+         android:id="@+id/tiny_bank_table"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:text="@string/tiny_bank_table"
+         android:layout_centerVertical="true"
+         android:textSize="18sp"
+         />
+       <ImageView
+         android:id="@+id/arraw2"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignParentRight="true"
+         android:background="@drawable/arrow"
+         android:layout_centerVertical="true"
+         
+         />
+        <TextView
+         android:id="@+id/gold_coins_sum"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_toLeftOf="@id/arraw2"
+         android:text="456"
+         android:layout_marginRight="20dip"
+         android:layout_centerVertical="true"
+         />
+         <TextView
+         android:id="@+id/gold_coins_table"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_toLeftOf="@id/gold_coins_sum"
+         android:layout_centerVertical="true"
+         android:text="@string/gold_coins_table"
+         />
+         
+ </RelativeLayout>
+ <View
+     android:layout_width="fill_parent"
+     android:layout_height="1px"
+     android:background="@color/line_color"
+    />
+<!-- 项目，部落，购物车，订单 -->
+ <LinearLayout
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content" >
+
+     <LinearLayout
+         android:id="@+id/my_project_layout"
+         android:layout_width="fill_parent"
+         android:layout_height="wrap_content"
+         android:layout_weight="1"
+         android:orientation="vertical"
+         android:paddingTop="5dip"
+         android:paddingBottom="5dip"
+         android:gravity="center" >
+         
+         <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="@string/my_project_table"
+             />
+         <TextView
+             android:id="@+id/my_project_sum"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="2"
+             />
+         
+     </LinearLayout>
+<View
+     android:layout_width="1px"
+     android:layout_height="fill_parent"
+     android:background="@color/line_color"
+    />
+   <LinearLayout
+         android:id="@+id/my_tribe_layout"
+         android:layout_width="fill_parent"
+         android:layout_height="wrap_content"
+         android:layout_weight="1"
+         android:orientation="vertical"
+         android:paddingTop="5dip"
+         android:paddingBottom="5dip"
+         android:gravity="center" >
+         
+         <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="@string/my_tribe_table"
+             />
+         <TextView
+             android:id="@+id/my_tribe_sum"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="2"
+             />
+         
+     </LinearLayout>
+
+ </LinearLayout>
+<View
+     android:layout_width="fill_parent"
+     android:layout_height="1px"
+     android:background="@color/line_color"
+    />
+
+ <LinearLayout
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content" >
+
+     <LinearLayout
+         android:id="@+id/shopping_trolley_layout"
+         android:layout_width="fill_parent"
+         android:layout_height="wrap_content"
+         android:layout_weight="1"
+         android:orientation="vertical"
+         android:paddingTop="5dip"
+         android:paddingBottom="5dip"
+         android:gravity="center" >
+         
+         <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="@string/shopping_trolley_table"
+             />
+         <TextView
+             android:id="@+id/article_sum"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="2"
+             />
+         
+     </LinearLayout>
+ <View
+     android:layout_width="1px"
+     android:layout_height="fill_parent"
+     android:background="@color/line_color"
+    />
+   <LinearLayout
+         android:id="@+id/my_order_layout"
+         android:layout_width="fill_parent"
+         android:layout_height="wrap_content"
+         android:layout_weight="1"
+         android:orientation="vertical"
+         android:paddingTop="5dip"
+         android:paddingBottom="5dip"
+         android:gravity="center" >
+         
+         <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="@string/my_order_table"
+             />
+         <TextView
+             android:id="@+id/my_order_sum"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="2"
+             />
+         
+     </LinearLayout>
+
+ </LinearLayout>
+ <View
+     android:layout_width="fill_parent"
+     android:layout_height="1px"
+     android:background="@color/line_color"
+    />
+<!-- 微超市 -->
+ <RelativeLayout
+     android:id="@+id/supermarket_layout"
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     android:paddingLeft="10dip"
+     android:paddingRight="10dip" 
+     android:paddingTop="5dip"
+     android:paddingBottom="5dip">
+   
+     <ImageView
+         android:id="@+id/supermarket_img"
+         android:layout_width="40dip"
+         android:layout_height="40dip" 
+         android:src="@drawable/ic_launcher"
+         />
+     
+     <TextView
+         android:id="@+id/tiny_supermarket"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:text="@string/tiny_supermarket"
+         android:layout_toRightOf="@id/supermarket_img"
+         android:layout_centerVertical="true"
+         android:textSize="18sp"
+         android:layout_marginLeft="5dip"
+         />
+      <ImageView
+         android:id="@+id/arraw2"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignParentRight="true"
+         android:background="@drawable/arrow"
+         android:layout_centerVertical="true"
+         />
+ </RelativeLayout>
+ <View
+     android:layout_width="fill_parent"
+     android:layout_height="1px"
+     android:background="@color/line_color"
+    />
+ <!-- 微信 -->
+  <RelativeLayout
+     android:id="@+id/wxin_layout"
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     android:paddingLeft="10dip"
+     android:paddingRight="10dip" 
+     android:paddingTop="5dip"
+     android:paddingBottom="5dip">
+   
+     <ImageView
+         android:id="@+id/wxin_img"
+         android:layout_width="40dip"
+         android:layout_height="40dip" 
+         android:src="@drawable/ic_launcher"
+         />
+     
+     <TextView
+         android:id="@+id/wxin"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:text="@string/wxin_table"
+         android:layout_toRightOf="@id/wxin_img"
+         android:layout_centerVertical="true"
+         android:textSize="18sp"
+         android:layout_marginLeft="5dip"
+         />  
+         
+      <TextView
+         android:id="@+id/wxin_sum"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:text="1"
+         android:layout_toRightOf="@id/wxin"
+         android:layout_centerVertical="true"
+         android:textSize="16sp"
+         android:layout_marginLeft="10dip"
+         /> 
+         
+      <ImageView
+         android:id="@+id/arraw3"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignParentRight="true"
+         android:background="@drawable/arrow"
+         android:layout_centerVertical="true"
+         />
+ </RelativeLayout>
+ <View
+     android:layout_width="fill_parent"
+     android:layout_height="1px"
+     android:background="@color/line_color"
+    />
+ <!-- 我的收藏-->
+ <RelativeLayout
+     android:id="@+id/collection_layout"
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     android:paddingLeft="10dip"
+     android:paddingRight="10dip" 
+     android:paddingTop="5dip"
+     android:paddingBottom="5dip">
+   
+     <ImageView
+         android:id="@+id/collection_img"
+         android:layout_width="40dip"
+         android:layout_height="40dip" 
+         android:src="@drawable/ic_launcher"
+         />
+     
+     <TextView
+         android:id="@+id/my_collection"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:text="@string/my_collection_table"
+         android:layout_toRightOf="@id/collection_img"
+         android:layout_centerVertical="true"
+         android:textSize="18sp"
+         android:layout_marginLeft="5dip"
+         />
+      <ImageView
+         android:id="@+id/arraw4"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignParentRight="true"
+         android:background="@drawable/arrow"
+         android:layout_centerVertical="true"
+         />
+ </RelativeLayout>
+ <View
+     android:layout_width="fill_parent"
+     android:layout_height="1px"
+     android:background="@color/line_color"
+    />
+  <!-- 我的好友-->
+  <RelativeLayout
+     android:id="@+id/friend_layout"
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     android:paddingLeft="10dip"
+     android:paddingRight="10dip" 
+     android:paddingTop="5dip"
+     android:paddingBottom="5dip">
+   
+     <ImageView
+         android:id="@+id/friend_img"
+         android:layout_width="40dip"
+         android:layout_height="40dip" 
+         android:src="@drawable/ic_launcher"
+         />
+     
+     <TextView
+         android:id="@+id/my_friend"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:text="@string/my_friend_table"
+         android:layout_toRightOf="@id/friend_img"
+         android:layout_centerVertical="true"
+         android:textSize="18sp"
+         android:layout_marginLeft="5dip"
+         />
+      <ImageView
+         android:id="@+id/arraw5"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignParentRight="true"
+         android:background="@drawable/arrow"
+         android:layout_centerVertical="true"
+         />
+ </RelativeLayout>
+ <View
+     android:layout_width="fill_parent"
+     android:layout_height="1px"
+     android:background="@color/line_color"
+    />
+ <!-- 微博-->
+   <RelativeLayout
+     android:id="@+id/blogger_layout"
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     android:paddingLeft="10dip"
+     android:paddingRight="10dip" 
+     android:paddingTop="5dip"
+     android:paddingBottom="5dip">
+   
+     <ImageView
+         android:id="@+id/blogger_img"
+         android:layout_width="40dip"
+         android:layout_height="40dip" 
+         android:src="@drawable/ic_launcher"
+         />
+     
+     <TextView
+         android:id="@+id/blogger"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:text="@string/blogger_table"
+         android:layout_toRightOf="@id/blogger_img"
+         android:layout_centerVertical="true"
+         android:textSize="18sp"
+         android:layout_marginLeft="5dip"
+         />
+      <ImageView
+         android:id="@+id/arraw6"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignParentRight="true"
+         android:background="@drawable/arrow"
+         android:layout_centerVertical="true"
+         />
+ </RelativeLayout>
+ <View
+     android:layout_width="fill_parent"
+     android:layout_height="1px"
+     android:background="@color/line_color"
+    />
+ <!-- 微世界-->
+   <RelativeLayout
+     android:id="@+id/world_layout"
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     android:paddingLeft="10dip"
+     android:paddingRight="10dip" 
+     android:paddingTop="5dip"
+     android:paddingBottom="5dip">
+   
+     <ImageView
+         android:id="@+id/world_img"
+         android:layout_width="40dip"
+         android:layout_height="40dip" 
+         android:src="@drawable/ic_launcher"
+         />
+     
+     <TextView
+         android:id="@+id/world"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:text="@string/world_table"
+         android:layout_toRightOf="@id/world_img"
+         android:layout_centerVertical="true"
+         android:textSize="18sp"
+         android:layout_marginLeft="5dip"
+         />
+      <ImageView
+         android:id="@+id/arraw7"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignParentRight="true"
+         android:background="@drawable/arrow"
+         android:layout_centerVertical="true"
+         />
+ </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+ 
+</LinearLayout>

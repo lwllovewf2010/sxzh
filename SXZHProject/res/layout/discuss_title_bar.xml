@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/RelativeLayout1"
+    android:layout_width="fill_parent"
+    android:layout_height="48dp"
+    android:background="@drawable/tongyong_top"
+    android:gravity="center_vertical" >
+
+    <!-- 头部为了可重用 ，用linearLayout设置 -->
+
+    <EditText
+        android:id="@+id/search_et"
+        android:layout_width="fill_parent"
+        android:layout_height="32dp"
+        android:layout_marginTop="6dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="7dip"
+        android:layout_toLeftOf="@+id/scan_btn"
+        android:gravity="center"
+        android:singleLine="true"
+        android:hint="搜索"
+        android:background="#fff"
+        android:textColor="@color/black"
+        android:textSize="16.0sp" />
+
+    <Button
+        android:id="@+id/scan_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="34.5dip"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginRight="7dip"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/titlebar_right_btn_selector"
+        android:gravity="center"
+        android:paddingLeft="11.4dp"
+        android:paddingRight="11dp"
+        android:text="扫一扫"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+
+</RelativeLayout>

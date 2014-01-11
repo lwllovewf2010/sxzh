@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+     <!-- 首页  -->
+    <string name="home_index_originality">创意</string>
+    <string name="home_index_project">项目</string>
+    <string name="home_index_commodity">商品</string>
+    <string name="publish_originality_title">需求名称，必填，不超过25个字</string>
+    <string name="publish_originality_type">发布种类</string>
+    <string name="publish_originality_eara">所在地区</string>
+    <string name="publish_originality_profession">所在行业</string>
+    <string name="publish_originality_introduce">需求简介，可不填，不超过75个字</string>
+    <string name="publish_originality_add_image">添加图片：</string>
+    <string name="publish_originality_netaddress">视频网络地址，可不填</string>
+    <string name="publish_originality_detailed_introduce">详情介绍，不超过1000字。。。</string>
+    <string name="publish_topic_title">话题名称，必填，不超过25个字</string>
+    <string name="publish_topic_detailed_introduce">话题内容，不超过1000字。。。</string>
+    <string name="publish_topic_xieyi">我已阅读并同意《三弦项目发布要求》</string>
+    <string name="topic_content_miaos">创意描述</string>
+    <string name="topic_content_comment">用户评论</string>
+    <string name="publish_submit">提交</string>
+    <string name="topic_content_describe_kanhao">看好</string>
+    <string name="topic_content_describe_shoubuqingchu">说不清楚</string>
+    <string name="topic_content_describe_bukanhao">不看好</string>
+    <string name="topic_content_comment_publish_but">发表评论</string>
+    <string name="publish_comment_manner">发表您对于该项目的态度</string>
+    <string name="publish_comment_title_content">发表您具体评价内容</string>
+    <string name="publish_comment_content">说些什么吧。。。</string>
+    <string name="publish_comment_content_submit">发表</string>
+</resources>

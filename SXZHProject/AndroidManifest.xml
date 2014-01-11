@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.sanxian.sxzhuanhuan"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="17" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <!-- 加入在SDCard中创建与删除文件的权限 -->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <!-- 加入在SDCard中写入数据的权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:name="com.sanxian.sxzhuanhuan.SApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@android:style/Theme.NoTitleBar" >
+
+        <!-- 首页  start -->
+        <activity
+            android:name="com.sanxian.sxzhuanhuan.MainActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- 首页  end -->
+        <!-- dialog  start -->
+        <activity
+            android:name=".dialog.FootDialog"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyDialogStyleBottom" >
+        </activity>
+        <activity
+            android:name=".dialog.TopRightOrLeftDialog"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyDialogStyleTop" >
+        </activity>
+        <activity
+            android:name=".dialog.MiddleDialog"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyDialogStyleMiddle" >
+        </activity>
+
+        <!-- dialog   end -->
+        <!-- zhangfl activity start -->
+        <activity
+            android:name=".WelcomeActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".WelViewPagerActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.sanxian.sxzhuanhuan.function.login.LoginActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.sanxian.sxzhuanhuan.function.login.RegisterActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.sanxian.sxzhuanhuan.function.login.RegisterStep2Activity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.sanxian.sxzhuanhuan.function.login.RegisterStep3Activity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.sanxian.sxzhuanhuan.function.login.RegisterSuccessActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.sanxian.sxzhuanhuan.function.login.SearchPwdActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.sanxian.sxzhuanhuan.function.sort.SortDetailActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.sanxian.sxzhuanhuan.function.sort.SearchHistoryActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.sanxian.sxzhuanhuan.function.sort.SearchResultActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.sanxian.sxzhuanhuan.function.sort.SortFilterActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- zhangfl activity end -->
+        <!-- honaf start -->
+        <activity
+            android:name=".function.personal.myfriends.MyFriendsIndexActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".function.personal.myfriends.MyFriendsNearPeopleActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".function.personal.myfriends.MyFriendsAddFriendActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".function.personal.myfriends.MyFriendsSearchActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".function.personal.myorder.MyOrderIndexActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".function.personal.mycollection.MyCollectionIndexActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".function.personal.microworld.MicroWorldIndexActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".function.personal.myaccount.MyAccoAddressIndexActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- honaf end -->
+        <!-- joe  start -->
+        <activity
+            android:name="com.sanxian.sxzhuanhuan.function.personal.setting.SetIndexActiVity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.sanxian.sxzhuanhuan.function.personal.myaccount.MyAccountActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.sanxian.sxzhuanhuan.function.personal.myaccount.ErWeiMaActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.sanxian.sxzhuanhuan.function.personal.myaccount.PersonInfoActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.sanxian.sxzhuanhuan.function.personal.myaccount.MyAccountInfoActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.sanxian.sxzhuanhuan.function.personal.myaccount.MyAccoSetLoginPWActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.sanxian.sxzhuanhuan.function.personal.myaccount.MyAccoSetPayPWActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.sanxian.sxzhuanhuan.function.personal.myaccount.MyAccoBindPhoneActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.sanxian.sxzhuanhuan.function.personal.myaccount.MyAccoBindEmailActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.sanxian.sxzhuanhuan.function.personal.myaccount.MyAccoCertifyNameActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.sanxian.sxzhuanhuan.function.personal.myaccount.MyAccoAddressManageActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.sanxian.sxzhuanhuan.function.personal.myaccount.MyAccoInviteUserActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.sanxian.sxzhuanhuan.function.personal.myaccount.MyAccoInvitationNoteActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- joe  end -->
+
+
+        <!-- luo start -->
+        <activity
+            android:name="com.sanxian.sxzhuanhuan.function.homeindex.PublishOriginality"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.sanxian.sxzhuanhuan.function.homeindex.PublishTopic"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.sanxian.sxzhuanhuan.function.homeindex.TopicContent"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.sanxian.sxzhuanhuan.function.homeindex.TopicContentDescribe"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.sanxian.sxzhuanhuan.function.homeindex.PublishComment"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.sanxian.sxzhuanhuan.function.homeindex.PublishProjectReport"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.sanxian.sxzhuanhuan.function.homeindex.PublishProjectLast"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.sanxian.sxzhuanhuan.function.homeindex.ProjectContent"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <!-- luo end -->
+
+    </application>
+
+</manifest>

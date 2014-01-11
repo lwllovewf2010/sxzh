@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 个人中心常用文字   joe -->
+<resources>
+  <!-- 个人中心首页 -->
+  <string name="mobile_phone_table">手机：</string>  
+  <string name="tiny_bank_table">微银行</string>
+  <string name="gold_coins_table">现有能量币：</string>
+  <string name="my_project_table">我的项目</string>
+  <string name="my_tribe_table">我的部落</string>
+  <string name="shopping_trolley_table">我的购物车</string>
+  <string name="my_order_table">我的订单</string>
+  <string name="tiny_supermarket">微超市</string>
+  <string name="wxin_table">微信</string>
+  <string name="my_collection_table">我的收藏</string>
+  <string name="my_friend_table">我的好友</string>
+  <string name="blogger_table">微博</string>
+  <string name="world_table">微世界</string>
+   <!-- 设置页面 -->
+  <string name="set_image">仅wifi下显示图片</string>
+  <string name="set_privacy">公开个人信息</string>
+  <string name="set_new_project">新项目每日提醒</string>
+  <string name="set_share">分享设置 </string>
+  <string name="set_about">关于</string>
+  <string name="set_feedback">意见反馈</string>
+  <string name="set_help">帮助信息</string>
+  <string name="set_exit">退出</string>
+  <!-- 我的账号 -->
+  <string name="preson_data_table">个人信息</string>
+  <string name="invitation_table">用户邀请</string>
+  <string name="erweima_table">二维码名片</string>
+  <string name="my_account_table">我的账号</string>
+  
+  <!-- 个人信息 -->
+  <string name="myacc_avatar_table">头像</string>
+  <string name="username_table">姓名</string>
+  <string name="sex_table">性别</string>
+  <string name="area_table">地区</string>
+  <string name="signature_table">个性签名</string>
+  <string name="album_btn_table">从相册选择</string>
+  <string name="take_photo_btn_table">拍照</string>
+  <string name="cancel_btn_table">取消</string>
+  <!-- 二维码 -->
+  <string name="erweima_addfriend_table">扫一扫上面的二维码,加我为好友</string>
+  <!-- 用户邀请 -->
+  <string name="friend_name_table">好友姓名:</string>
+  <string name="friend_phone_table">好友手机号:</string>
+  <string name="invitation_btn_table">邀请</string>
+  <string name="invitation_note_table">邀请记录</string>
+  <string name="invitation_time_table">邀请时间：</string>
+  <string name="invitation_status_table">邀请状态</string>
+  <string name="look_persondata_table">查看个人资料</string>
+  <!-- 我的账号子页面 -->
+  <string name="set_passw_table">修改账号密码</string>
+  <string name="certify_name_table">实名认证</string>
+  <string name="certify_phone_table">手机验证</string>
+  <string name="certify_email_table">邮箱验证</string>
+  <string name="preson_addres_table">个人地址管理</string>
+  <string name="set_pay_passw_table">设置支付密码</string>
+  <string name="current_passw_table">当前密码：</string>
+  <string name="new_passw_table">新密码：</string>
+  <string name="confirm_passw_table">确认新密码：</string>
+  <string name="set_password_suggest">密码长度6-32个字符</string>
+  <string name="reality_name_table">真实姓名：</string>
+  <string name="id_card_number_table">身份证号码：</string>
+  <string name="id_card_img_suggest">上传身份证正面和背面照片：</string>
+  <string name="input_oldphone_suggest">请输入之前绑定的手机号码</string>
+  <string name="bind_phone_suggest">重新绑定后，原手机号将不能作为登录凭证</string>
+  <string name="input_oldphone_hint">输入之前绑定的手机号码</string>
+  <string name="input_newphone_suggest">请输入新的手机号码</string>
+  <string name="get_verify_code_btn">获取验证码</string>
+  <string name="input_phone_hint">填写11位手机号码</string>
+  <string name="input_verify_code_suggest">请输入验证码</string>
+  <string name="get_verify_code_hint">点击“获取验证码”按钮获取验证码</string>
+  <string name="bind_phone_btn">绑定</string>
+  <string name="input_oldemail_suggest">请输入之前绑定的电子邮箱</string>
+  <string name="bind_email_suggest">重新绑定后，原电子邮箱将不能作为登录凭证</string>
+  <string name="input_oldemail_hint">输入之前绑定的电子邮箱</string>
+  <string name="input_newemail_suggest">请输入新的电子邮箱</string>
+  <string name="input_newemail_hint">输入新的电子邮箱</string>
+  <string name="send_link_btn">发送验证链接</string>
+  <string name="set_pay_password">设置支付密码：</string>
+  <string name="confirm_pay_password">确认支付密码：</string>
+  
+  <!-- 添加编辑收货地址 -->
+  <string name="consignee_table">收货人姓名：</string>
+  <string name="phone_number_table">手机号码：</string>
+  <string name="postcode_table">邮政编码：</string>
+  <string name="location_table">所在地区：</string>
+  <string name="detailed_address_table">详细地址：</string>
+  <string name="delete_congsignee_address_table">删除收货地址</string>
+  <string name="default_congsignee_address_table">设为默认收货地址</string>
+</resources>

@@ -1,0 +1,74 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".TopicContentDescribe" >
+	
+	    <RelativeLayout android:id="@+id/topic_content_describe_title_rel"
+	        			android:layout_margin="10dip"
+	        			android:layout_width="fill_parent"
+	        			android:layout_height="wrap_content"
+
+	        >
+	        <TextView android:id="@+id/topic_content_describe_title"
+	            	  android:text="L-Remote 智慧遥控器"
+	            	  android:layout_width="wrap_content"
+	            	  android:layout_height="wrap_content"
+	            	  android:textColor="@color/black"	            	 
+	            	  android:textSize="20sp"
+	            />
+	        
+	    </RelativeLayout>
+	     
+	     <RelativeLayout android:id="@+id/topic_content_describe_name_rel"
+	        			android:layout_margin="10dip"
+	        			android:layout_width="fill_parent"
+	        			android:layout_height="wrap_content"
+	        			android:layout_below="@+id/topic_content_describe_title_rel"
+
+	        >
+	        <TextView android:id="@+id/topic_content_describe_name"
+	            	  android:text="创建人：赵钱孙"
+	            	  android:layout_width="wrap_content"
+	            	  android:layout_height="wrap_content"	            	  
+	            	 
+	            	 android:textColor="@color/black"
+	            />
+	        
+	    </RelativeLayout> 
+	    <RelativeLayout android:id="@+id/topic_content_describe_hanye_rel"
+	        			android:layout_margin="10dip"
+	        			android:layout_width="fill_parent"
+	        			android:layout_height="wrap_content"
+	        			android:layout_below="@+id/topic_content_describe_name_rel"
+
+	        >
+	        <TextView android:id="@+id/topic_content_describe_hangye"
+	            	  android:text="所属行业：高科技·IT"
+	            	  android:layout_width="wrap_content"
+	            	  android:layout_height="wrap_content"	            	  	          
+	            	  android:textColor="@color/black"
+	            />
+	        <TextView android:id="@+id/topic_content_describe_hangye"
+	            	  android:text="所属地域：北京·朝阳"
+	            	  android:layout_width="wrap_content"
+	            	  android:layout_height="wrap_content"	            	  	          
+	            	  android:textColor="@color/black"
+	            	  android:layout_alignParentRight="true"
+	            />
+	    </RelativeLayout>   
+	    
+	     <TextView android:id="@+id/topic_content_describe_text"
+	            	  android:text="我们是北京青柠睿创（Lemphi）智慧团队，Lemphi由两个词合并而成分别是Lemon和Phi，
+	            	  因为我们都喜欢柠檬所以就用了Lemon这个词，Phi代表着精巧的斐波那契数列（黄金比例）。
+	            	  我们希望用最简单的方法解决家庭中的智能控制问题，犹如黄金比例那样为大家带来功能，外观，性价比各方面尽可能完美的产品"
+	            	  android:layout_width="wrap_content"
+	            	  android:layout_height="wrap_content"	            	  
+	            	  android:layout_below="@+id/topic_content_describe_hanye_rel"
+	            	 android:textColor="@color/black"
+	            	 android:layout_margin="10dip"
+	            />
+	    
+
+</RelativeLayout>

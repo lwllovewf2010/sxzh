@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="48dp"
+    android:background="@drawable/tongyong_top"
+    android:gravity="center_vertical" 
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    >
+   	
+        
+
+    <Button  android:id="@+id/title_right"
+        	android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="34.5dip"
+            android:background="@drawable/titlebar_right_btn_selector"           
+            android:paddingLeft="11.4dp"
+            android:paddingRight="11dp"
+            android:layout_marginRight="5dip"
+            android:text="确定"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+        <EditText android:id="@+id/seach"
+            android:layout_toLeftOf="@+id/title_right"
+            	  android:layout_width="fill_parent"
+            	  android:layout_height="34.5dip"
+            	  android:layout_marginLeft="5dip"
+            	  android:layout_marginRight="5dip"
+            	  android:background="@drawable/ic_setting_item_round_normal"
+            />
+   
+
+    
+        
+</RelativeLayout>

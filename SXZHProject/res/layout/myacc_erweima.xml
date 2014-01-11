@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:id="@+id/erweima_layout"
+    android:background="@color/white" >
+
+    <include
+        android:id="@+id/bar"
+        layout="@layout/title_bar" />
+
+    <RelativeLayout
+        android:id="@+id/card_content_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/bar"
+        android:orientation="vertical"
+        android:paddingBottom="10dip"
+        android:paddingLeft="15dip"
+        android:paddingRight="15dip"
+        android:paddingTop="10dip" >
+        
+        <ImageView
+         android:id="@+id/card_avatar"
+         android:layout_width="75dip"
+         android:layout_height="75dip"
+         android:background="@drawable/default_avatar"
+         />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="10dip" 
+            android:layout_toRightOf="@id/card_avatar">
+            
+            <TextView
+               android:id="@+id/preson_name"
+               android:layout_width="fill_parent"
+               android:layout_height="wrap_content"
+               android:text="赵钱孙"
+               android:singleLine="true"
+               android:textSize="18sp"
+                />
+             <TextView
+               android:layout_marginTop="10dip"
+               android:id="@+id/city_name"
+               android:layout_width="fill_parent"
+               android:layout_height="wrap_content"
+               android:text="北京 海淀"
+               android:singleLine="true"
+               android:textSize="16sp"
+                />
+             <TextView
+               android:layout_marginTop="3dip"
+               android:id="@+id/company"
+               android:layout_width="fill_parent"
+               android:layout_height="wrap_content"
+               android:text="我关注某某某某类型的项目"
+               android:singleLine="true"
+               android:textSize="16sp">
+             </TextView>
+        </LinearLayout>
+        <ImageView
+            android:id="@+id/erweima_card"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/card_avatar"
+            android:background="@drawable/default_avatar"
+            android:layout_marginTop="10dip"
+            android:layout_marginBottom="10dip"
+            />
+        <TextView
+            android:id="@+id/suggest_cont"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/erweima_card"
+            android:text="@string/erweima_addfriend_table"
+            android:gravity="center"
+            android:textSize="16sp"
+            />
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/bottom_select_layout"
+        android:layout_below="@id/bar"
+        android:visibility="gone"
+        >
+   <include layout="@layout/bottom_select_popmenu"/>
+   </LinearLayout>
+</RelativeLayout>

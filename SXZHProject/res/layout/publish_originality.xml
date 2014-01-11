@@ -1,0 +1,181 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PublishOriginality" 
+    android:background="@color/white"
+    android:orientation="vertical"
+    >
+	<include layout="@layout/title_bar" android:id="@+id/publish_originality_bar"/>
+	<ScrollView 
+	    			android:layout_width="fill_parent"
+	    			android:layout_height="fill_parent"
+	    			android:layout_below="@+id/publish_originality_bar">
+	
+	
+	<RelativeLayout android:id="@+id/publish_originality_content"
+	    			android:layout_width="fill_parent"
+	    			android:layout_height="wrap_content"	    			
+	    			android:orientation="vertical"
+	    >
+	    <EditText android:id="@+id/publish_originality_originality_title"
+	        	  android:layout_width="fill_parent"
+	        	  android:layout_height="wrap_content"
+	        	  android:hint="@string/publish_originality_title"
+	        	  android:layout_marginLeft="10dip"
+	        	  android:layout_marginRight="10dip"
+	        	  android:layout_marginTop="5dip"
+	        	  android:background="@drawable/ic_setting_item_round_normal" 
+	        />
+	    <RelativeLayout android:id="@+id/publish_originality_originality_type_rel"
+	        	  android:layout_below="@+id/publish_originality_originality_title"
+	        	  android:layout_width="fill_parent"
+	        	  android:layout_height="wrap_content"	        	 
+	        	  android:layout_marginLeft="10dip"
+	        	  android:layout_marginRight="10dip"
+	        	  android:layout_marginTop="5dip"
+	        	  android:background="@drawable/ic_setting_item_round_normal" 
+	        >
+	        <TextView android:id="@+id/publish_originality_type"
+	            android:layout_width="wrap_content"
+	            	  android:layout_height="wrap_content"
+	            	  android:layout_alignParentLeft="true"
+	            	  android:textColor="@color/black"
+	            	  android:layout_centerVertical="true"
+	            	  android:text="@string/publish_originality_type"
+	            />
+	        <ImageView android:layout_width="wrap_content"
+	            		android:layout_height="wrap_content"
+	            		android:layout_alignParentRight="true"
+	            		android:layout_centerVertical="true"
+	            		android:src="@drawable/arrow"
+	            />
+	    </RelativeLayout>
+	   <RelativeLayout android:id="@+id/publish_originality_originality_area_rel"
+	       android:layout_below="@+id/publish_originality_originality_type_rel"
+	        	  android:layout_width="fill_parent"
+	        	  android:layout_height="wrap_content"	        	 
+	        	  android:layout_marginLeft="10dip"
+	        	  android:layout_marginRight="10dip"
+	        	  android:layout_marginTop="5dip"
+	        	  android:background="@drawable/ic_setting_item_round_normal" 
+	        >
+	       <TextView android:id="@+id/publish_originality_eara" 
+	           android:layout_width="wrap_content"
+	            	  android:layout_height="wrap_content"
+	            	  android:layout_alignParentLeft="true"
+	            	  android:layout_centerVertical="true"
+	            	  android:textColor="@color/black"
+	            	  android:text="@string/publish_originality_eara"
+	            />
+	        <ImageView android:layout_width="wrap_content"
+	            		android:layout_height="wrap_content"
+	            		android:layout_alignParentRight="true"
+	            		android:src="@drawable/arrow"
+	            		android:layout_centerVertical="true"
+	            />
+	       
+	   </RelativeLayout>
+	    <RelativeLayout android:id="@+id/publish_originality_originality_profession_rel"
+	        android:layout_below="@+id/publish_originality_originality_area_rel"
+	        	  android:layout_width="fill_parent"
+	        	  android:layout_height="wrap_content"
+	        	  android:layout_marginLeft="10dip"
+	        	  android:layout_marginRight="10dip"	        	  
+	        	  android:layout_marginTop="5dip"
+	        	  android:background="@drawable/ic_setting_item_round_normal" 
+	        >
+	        <TextView android:layout_width="wrap_content"
+	            android:id="@+id/publish_originality_profession"
+	            	  android:layout_height="wrap_content"
+	            	  android:layout_alignParentLeft="true"
+	            	  android:layout_centerVertical="true"
+	            	  android:textColor="@color/black"
+	            	  android:text="@string/publish_originality_profession"
+	            />
+	        <ImageView android:layout_width="wrap_content"
+	            		android:layout_height="wrap_content"
+	            		android:layout_alignParentRight="true"
+	            		android:layout_centerVertical="true"
+	            		android:src="@drawable/arrow"
+	            />
+	        
+	    </RelativeLayout>
+	    
+	    <EditText android:id="@+id/publish_originality_originality_introduce"
+	        	  android:layout_below="@+id/publish_originality_originality_profession_rel"
+	        	  android:layout_width="fill_parent"
+	        	  android:layout_height="100dip"
+	        	  android:hint="@string/publish_originality_introduce"
+	        	  android:layout_marginLeft="10dip"
+	        	  android:layout_marginRight="10dip"
+	        	  android:layout_marginTop="5dip"
+	        	  android:singleLine="false"
+	        	  android:scrollbars="vertical"
+	        	  android:gravity="top"
+	        />
+	    
+	    <RelativeLayout android:id="@+id/publish_originality_originality_image_rel"
+	        android:layout_below="@+id/publish_originality_originality_introduce"
+	        	  android:layout_width="fill_parent"
+	        	  android:layout_height="wrap_content"	        	  
+	        	  android:layout_marginLeft="10dip"
+	        	  android:layout_marginRight="10dip"
+	        	  android:layout_marginTop="5dip"
+	        	   
+	        >
+	        <TextView android:id="@+id/publish_originality_image_title"
+	            	  android:layout_width="wrap_content"
+	            	  android:layout_height="wrap_content"
+	            	  android:text="@string/publish_originality_add_image"	
+	             />
+	        <LinearLayout android:layout_width="fill_parent"
+	            		  android:layout_height="wrap_content"
+	            		  android:orientation="horizontal"
+	            		  android:layout_marginTop="5dip"
+	            		  android:layout_below="@+id/publish_originality_image_title"
+	            >
+	            <ImageView android:layout_width="wrap_content"
+	                	   android:layout_height="wrap_content"
+	                	   android:layout_marginRight="5dip"
+	                	   android:src="@drawable/ic_launcher"
+	                	   android:id="@+id/publish_originality_image_1"
+	                />
+	            <ImageView android:layout_width="wrap_content"
+	                	   android:layout_height="wrap_content"
+	                	   android:layout_marginRight="5dip"
+	                	   android:src="@drawable/ic_launcher"
+	                	   android:id="@+id/publish_originality_image_2"
+	                />
+	        </LinearLayout>
+	    </RelativeLayout>
+	    
+	     <EditText android:id="@+id/publish_originality_originality_netaddress"
+	              android:layout_below="@+id/publish_originality_originality_image_rel"
+	        	  android:layout_width="fill_parent"
+	        	  android:layout_height="wrap_content"
+	        	  android:hint="@string/publish_originality_netaddress"
+	        	  android:layout_marginLeft="10dip"
+	        	  android:layout_marginRight="10dip"
+	        	  android:layout_marginTop="5dip"
+	        	  android:background="@drawable/ic_setting_item_round_normal" 
+	        />
+	    
+	     
+	     <EditText android:id="@+id/publish_originality_originality_detailed_introduce"
+	        	  android:layout_below="@+id/publish_originality_originality_netaddress"
+	        	  android:layout_width="fill_parent"
+	        	  android:layout_height="160dip"
+	        	  android:hint="@string/publish_originality_detailed_introduce"
+	        	  android:layout_marginLeft="10dip"
+	        	  android:layout_marginRight="10dip"
+	        	  android:layout_marginTop="5dip"
+	        	  android:singleLine="false"
+	        	  android:scrollbars="vertical"
+	        	  android:gravity="top"
+	        />
+	     
+	</RelativeLayout>
+	</ScrollView>
+	
+</RelativeLayout>

@@ -1,0 +1,320 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+     >
+		
+    <ScrollView android:layout_width="fill_parent"
+        		android:layout_height="fill_parent"
+        >
+    	<RelativeLayout android:layout_width="fill_parent"
+        				android:layout_height="fill_parent">
+        				
+    	    <Gallery android:id="@+id/project_content_tab1_gallery"
+    	        	 android:layout_width="fill_parent"
+    	        	 android:layout_height="100dip"	
+    	        />
+		    <RelativeLayout android:id="@+id/project_content_tab1_title_rel"
+		        		   android:layout_below="@+id/project_content_tab1_gallery"
+		        			android:layout_margin="10dip"
+		        			android:layout_width="fill_parent"
+		        			android:layout_height="wrap_content"
+	
+		        >
+		        <TextView android:id="@+id/project_content_tab1_title"
+		            	  android:text="L-Remote 智慧遥控器"
+		            	  android:layout_width="wrap_content"
+		            	  android:layout_height="wrap_content"
+		            	  android:textColor="@color/black"	            	 
+		            	  android:textSize="20sp"
+		            />
+		        
+		    </RelativeLayout>
+		     
+		     <RelativeLayout android:id="@+id/project_content_tab1_name_rel"
+		        			android:layout_margin="10dip"
+		        			android:layout_width="fill_parent"
+		        			android:layout_height="wrap_content"
+		        			android:layout_below="@+id/project_content_tab1_title_rel"
+	
+		        >
+		        <TextView android:id="@+id/project_content_tab1_name"
+		            	  android:text="创建人：赵钱孙"
+		            	  android:layout_width="wrap_content"
+		            	  android:layout_height="wrap_content"	            	  
+		            	 
+		            	 android:textColor="@color/black"
+		            />
+		        
+		    </RelativeLayout> 
+		    <RelativeLayout android:id="@+id/project_content_tab1_hanye_rel"
+		        			android:layout_margin="10dip"
+		        			android:layout_width="fill_parent"
+		        			android:layout_height="wrap_content"
+		        			android:layout_below="@+id/project_content_tab1_name_rel"
+	
+		        >
+		        <TextView android:id="@+id/project_content_tab1_hangye"
+		            	  android:text="所属行业：高科技·IT"
+		            	  android:layout_width="wrap_content"
+		            	  android:layout_height="wrap_content"	            	  	          
+		            	  android:textColor="@color/black"
+		            />
+		        <TextView android:id="@+id/project_content_tab1_hangye"
+		            	  android:text="所属地域：北京·朝阳"
+		            	  android:layout_width="wrap_content"
+		            	  android:layout_height="wrap_content"	            	  	          
+		            	  android:textColor="@color/black"
+		            	  android:layout_alignParentRight="true"
+		            />
+		    </RelativeLayout>   
+		    
+		     <TextView android:id="@+id/project_content_tab1_text"
+		            	  android:text="我们是北京青柠睿创（Lemphi）智慧团队，Lemphi由两个词合并而成分别是Lemon和Phi，
+		            	  因为我们都喜欢柠檬所以就用了Lemon这个词，Phi代表着精巧的斐波那契数列（黄金比例）。
+		            	  我们希望用最简单的方法解决家庭中的智能控制问题，犹如黄金比例那样为大家带来功能，外观，性价比各方面尽可能完美的产品"
+		            	  android:layout_width="wrap_content"
+		            	  android:layout_height="wrap_content"	            	  
+		            	  android:layout_below="@+id/project_content_tab1_hanye_rel"
+		            	 android:textColor="@color/black"
+		            	 android:layout_margin="10dip"
+		            />
+		         <RelativeLayout android:id="@+id/project_content_tab1_showtime_rel"
+		             			 android:layout_width="fill_parent"
+		             			 android:layout_height="wrap_content"
+		             			 android:background="@drawable/ic_setting_item_round_normal"
+		             		     android:layout_marginLeft="10dip"
+		             		     android:layout_marginRight="10dip"
+		             		     android:layout_marginTop="10dip"
+		             		     android:layout_below="@+id/project_content_tab1_text"
+		             >
+		             <LinearLayout android:layout_width="fill_parent"
+		                 		   android:layout_height="wrap_content"
+		                 		   android:layout_marginTop="10dip"
+		                 		   android:id="@+id/project_content_tab1_lin1"
+		                 >
+		                 <TextView android:layout_width="fill_parent"
+		                     	   android:layout_height="fill_parent"
+		                     	   android:layout_weight="1.0"
+		                     	   android:text="目标资金"
+		                     />
+		                	 <TextView android:layout_width="fill_parent"
+		                     	   android:layout_height="fill_parent"
+		                     	   android:layout_weight="1.0"
+		                     	   android:text="预购人数"
+		                     /><TextView android:layout_width="fill_parent"
+		                     	   android:layout_height="fill_parent"
+		                     	   android:layout_weight="1.0"
+		                     	   android:text="当前金额"
+		                     /><TextView android:layout_width="fill_parent"
+		                     	   android:layout_height="fill_parent"
+		                     	   android:layout_weight="1.0"
+		                     	   android:text="剩余时间"
+		                     />
+		             </LinearLayout>
+		             
+		             <LinearLayout android:layout_width="fill_parent"
+		                 		   android:layout_height="wrap_content"
+		                 		    android:layout_marginTop="10dip"
+		                 		    android:id="@+id/project_content_tab1_lin2"
+		                 		    android:layout_below="@+id/project_content_tab1_lin1"
+		                 >
+		                 <TextView android:layout_width="fill_parent"
+		                     	   android:layout_height="fill_parent"
+		                     	   android:layout_weight="1.0"
+		                     	   android:text="$100000"
+		                     />
+		                	 <TextView android:layout_width="fill_parent"
+		                     	   android:layout_height="fill_parent"
+		                     	   android:layout_weight="1.0"
+		                     	   android:text="10"
+		                     /><TextView android:layout_width="fill_parent"
+		                     	   android:layout_height="fill_parent"
+		                     	   android:layout_weight="1.0"
+		                     	   android:text="$50000"
+		                     /><TextView android:layout_width="fill_parent"
+		                     	   android:layout_height="fill_parent"
+		                     	   android:layout_weight="1.0"
+		                     	   android:text="2014/12/12"
+		                     	   android:singleLine="true"
+		                     />
+		             </LinearLayout>
+		             <ProgressBar  
+			    		android:id="@+id/project_content_tab1_progressBar" 
+			    		android:layout_below="@+id/project_content_tab1_lin2"
+			    		android:layout_width="fill_parent"  
+			    		android:layout_height="5dip"  
+			    		style="?android:attr/progressBarStyleHorizontal" 
+			    		android:max="100" 
+			    		android:progress="100" 
+			    		android:secondaryProgress="100" 
+			    		android:layout_marginTop="10dip"
+			    		android:layout_marginBottom="9dip"
+    				/>
+		             <TextView android:layout_width="wrap_content"
+		                 	   android:layout_height="1dip"
+		                 	   
+		                 	   android:layout_below="@+id/project_content_tab1_progressBar"
+		                 />
+		         </RelativeLayout>   
+		         
+		         <RelativeLayout android:id="@+id/project_content_type_rel"
+	        	  android:layout_below="@+id/project_content_tab1_showtime_rel"
+	        	  android:layout_width="fill_parent"
+	        	  android:layout_height="wrap_content"	        	 
+	        	  android:layout_marginLeft="10dip"
+	        	  android:layout_marginRight="10dip"
+	        	  android:layout_marginTop="5dip"
+	        	  android:background="@drawable/ic_setting_item_round_normal" 
+	        	  >
+			        <TextView android:id="@+id/dproject_content_type"
+			            android:layout_width="wrap_content"
+			            	  android:layout_height="wrap_content"
+			            	  android:layout_alignParentLeft="true"
+			            	  android:textColor="@color/black"
+			            	  android:layout_centerVertical="true"
+			            	  android:text="详情介绍"
+			            />
+			        <ImageView android:layout_width="wrap_content"
+			            		android:layout_height="wrap_content"
+			            		android:layout_alignParentRight="true"
+			            		android:layout_centerVertical="true"
+			            		android:src="@drawable/arrow"
+			            />
+	    		</RelativeLayout>
+	    		<RelativeLayout android:id="@+id/project_content_renshuss_rel"
+	        	  android:layout_below="@+id/project_content_type_rel"
+	        	  android:layout_width="fill_parent"
+	        	  android:layout_marginLeft="10dip"
+	        	  android:layout_marginRight="10dip"
+	        	  android:layout_height="wrap_content"	        	 	        	 
+	        	  android:background="@drawable/ic_setting_item_round_normal" 
+	        	  >
+			        <TextView android:id="@+id/dproject_content_renshuss"
+			            android:layout_width="wrap_content"
+			            	  android:layout_height="wrap_content"
+			            	  android:layout_alignParentLeft="true"
+			            	  android:textColor="@color/black"
+			            	  android:layout_centerVertical="true"
+			            	  android:text="宣传视频"
+			            />
+			        <ImageView android:layout_width="wrap_content"
+			            		android:layout_height="wrap_content"
+			            		android:layout_alignParentRight="true"
+			            		android:layout_centerVertical="true"
+			            		android:src="@drawable/arrow"
+			            />
+	    		</RelativeLayout>
+	    		<RelativeLayout android:id="@+id/project_content_xiangmu_chengyuan_rel"
+	        	  android:layout_below="@+id/project_content_renshuss_rel"
+	        	  android:layout_width="fill_parent"
+	        	  android:layout_marginLeft="10dip"
+	        	  android:layout_marginRight="10dip"
+	        	  android:layout_height="wrap_content"	        	 
+	        	  android:background="@drawable/ic_setting_item_round_normal" 
+	        	  >
+			        <TextView android:id="@+id/dproject_content_xiangmu_chengyuan"
+			            android:layout_width="wrap_content"
+			            	  android:layout_height="wrap_content"
+			            	  android:layout_alignParentLeft="true"
+			            	  android:textColor="@color/black"
+			            	  android:layout_centerVertical="true"
+			            	  android:text="项目成员"
+			            />
+			        <ImageView android:layout_width="wrap_content"
+			            		android:layout_height="wrap_content"
+			            		android:layout_alignParentRight="true"
+			            		android:layout_centerVertical="true"
+			            		android:src="@drawable/arrow"
+			            />
+	    		</RelativeLayout>	    			    		
+	    		
+	    		 <RelativeLayout android:id="@+id/project_content_tab1_huibaofans_rel"
+	    		     			 android:layout_below="@+id/project_content_xiangmu_chengyuan_rel"
+		             			 android:layout_width="fill_parent"
+		             			 android:layout_height="wrap_content"
+		             			 android:background="@drawable/ic_setting_item_round_normal"
+		             		     android:layout_marginLeft="10dip"
+		             		     android:layout_marginRight="10dip"
+		             		     android:layout_marginTop="10dip"
+		             >
+		             <LinearLayout android:layout_width="fill_parent"
+		                 		   android:layout_height="wrap_content"
+		                 		   android:layout_marginTop="10dip"
+		                 		   android:id="@+id/project_content_tab1_huibao_lin1"
+		                 		   
+		                 >
+		                 	<TextView android:layout_width="fill_parent"
+		                     	   android:layout_height="fill_parent"
+		                     	   android:layout_weight="1.0"
+		                     	   android:text="$10000"
+		                     	   android:textColor="@color/black"
+		                     />
+		                	 <TextView android:layout_width="fill_parent"
+		                     	   android:layout_height="fill_parent"
+		                     	   android:layout_weight="1.0"
+		                     	   android:text="预计回报时间：60天"
+		                     	   android:textColor="@color/black"
+		                     />
+		             </LinearLayout>
+		             
+		             <LinearLayout android:layout_width="fill_parent"
+		                 		   android:layout_height="wrap_content"
+		                 		    android:layout_marginTop="10dip"
+		                 		    android:id="@+id/project_content_tab1ss_lin2"
+		                 		    android:layout_below="@+id/project_content_tab1_huibao_lin1"
+		                 >
+		                 <TextView android:layout_width="fill_parent"
+		                     	   android:layout_height="50dip"
+		                     	   android:layout_weight="1.0"
+		                     	   android:textColor="@color/black"
+		                     	   android:text="回报内容：能得到一堆东西啊一堆东西啊一堆东西啊一堆东西啊一堆东西啊一堆东西啊一堆东西啊一堆东西啊一堆东西啊一堆东西啊一堆东西啊一堆东西啊一堆东西啊一堆东西啊一堆东西啊"
+		                     />
+		                	 
+		             </LinearLayout>
+		             
+		              <LinearLayout android:layout_width="fill_parent"
+		                 		   android:layout_height="wrap_content"
+		                 		   android:layout_marginTop="10dip"
+		                 		   android:layout_marginBottom="10dip"
+		                 		   android:layout_below="@+id/project_content_tab1ss_lin2"
+		                 		   android:id="@+id/project_content_pro_pro"
+		                 >
+		                 	<TextView android:layout_width="fill_parent"
+		                     	   android:layout_height="fill_parent"
+		                     	   android:layout_weight="1.0"
+		                     	   android:text="已购19人/不限定名额"
+		                     	   android:textColor="@color/black"
+		                     />
+		                	 <TextView android:layout_width="fill_parent"
+		                     	   android:layout_height="fill_parent"
+		                     	   android:layout_weight="1.0"
+		                     	   android:text="包快递（大陆地区）"
+		                     	   android:textColor="@color/black"
+		                     />
+		                	 
+		                	 
+		             </LinearLayout>
+		             <TextView android:layout_width="wrap_content"
+		                 	   android:layout_height="1dip"
+		                 	   
+		                 	   android:layout_below="@+id/project_content_pro_pro"
+		                 	/>
+		         </RelativeLayout>   
+		         
+	    		 <Button android:id="@+id/project_content_button_but"
+	    		         android:text="已经投资"
+	    		         android:layout_width="wrap_content"
+	    		         android:layout_height="wrap_content"
+	    		         android:layout_marginTop="10dip"
+	    		         android:layout_marginBottom="10dip"
+	    		         android:layout_alignParentRight="true"
+	    		         android:layout_marginRight="10dip"
+	    		         android:layout_below="@+id/project_content_tab1_huibaofans_rel"
+	    		         android:background="@drawable/ic_setting_item_round_normal"
+	    		     />
+	    		 
+	    </RelativeLayout>
+		</ScrollView>
+</RelativeLayout>

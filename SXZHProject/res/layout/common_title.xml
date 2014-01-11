@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="48dp"
+    android:background="@drawable/tongyong_top"
+    android:gravity="center_vertical" >
+
+    <LinearLayout
+        android:id="@+id/top_left_linear"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="7dip"
+        android:layout_weight="2.0"
+        android:orientation="vertical"
+        android:textSize="15sp" >
+
+        <Button
+            android:id="@+id/title_btn_left"
+            android:layout_width="wrap_content"
+            android:layout_height="34.5dip"
+            android:background="@drawable/titlebar_left_btn_selector"
+            android:gravity="center"
+            android:paddingBottom="2dp"
+            android:paddingLeft="18dp"
+            android:paddingRight="10dp"
+            android:text="返回"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/title_tv_mid"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1.5"
+        android:gravity="center"
+        android:paddingBottom="0dip"
+        android:singleLine="true"
+        android:text="标题"
+        android:textColor="@android:color/white"
+        android:textSize="21.0sp" />
+
+    <LinearLayout
+        android:id="@+id/top_right_linear"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="7dip"
+        android:layout_weight="2.0"
+        android:gravity="right"
+        android:orientation="vertical" >
+
+        <Button
+            android:id="@+id/title_btn_right"
+            android:layout_width="wrap_content"
+            android:layout_height="34.5dip"
+            android:background="@drawable/titlebar_right_btn_selector"
+            android:gravity="center"
+            android:paddingLeft="11.4dp"
+            android:paddingRight="11dp"
+            android:text="确定"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+</LinearLayout>

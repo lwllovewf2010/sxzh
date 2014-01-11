@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white" >
+
+    <include
+        android:id="@+id/title_bar"
+        android:layout_alignParentTop="true"
+        layout="@layout/title_bar" >
+    </include>
+
+    <RelativeLayout
+        android:id="@+id/bottom"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:paddingLeft="10dip"
+        android:paddingRight="10dip"
+        android:background="@color/gray"
+        android:paddingTop="10dip" >
+
+        <Button
+            android:id="@+id/address_back_btn"
+            android:layout_width="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:text="@string/return_value"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/add_address_btn"
+            android:layout_width="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_height="wrap_content"
+            android:text="@string/add_address" />
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@id/bottom"
+        android:layout_below="@id/title_bar" >
+    </ListView>
+
+</RelativeLayout>

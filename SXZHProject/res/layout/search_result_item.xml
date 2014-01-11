@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="38dp"
+    android:layout_gravity="center"
+    android:orientation="horizontal" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="38dp" >
+
+        <ImageView
+            android:id="@+id/sort_search_result_item_list_image_sort"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_alignParentLeft="true"
+            android:src="@drawable/dis_menu_handpick" />
+        
+        <TextView
+            android:id="@+id/sort_search_result_item_list_text_search"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:gravity="center"
+            android:layout_toRightOf="@id/sort_search_result_item_list_image_sort"
+            android:layout_marginLeft="20dp"
+            android:text="搜索的值" />
+
+        <ImageView
+            android:id="@+id/sort_search_result_item_list_image_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="26dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignBaseline="@id/sort_search_result_item_list_image_sort"
+            android:layout_alignBottom="@id/sort_search_result_item_list_image_sort"
+            android:src="@drawable/arrow" />
+        
+        <TextView
+            android:id="@+id/sort_search_result_item_list_text_search_result"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:gravity="center"
+            android:layout_toLeftOf="@id/sort_search_result_item_list_image_arrow"
+            android:layout_marginRight="20dp"
+            android:text="搜索的结果" />
+
+    </RelativeLayout>
+
+</LinearLayout>

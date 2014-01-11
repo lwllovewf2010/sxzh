@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_gravity="center"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/tongyong_top"
+        android:gravity="center_vertical" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <ImageView
+                android:id="@+id/sort_detail_head_ivmenu"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="0dp"
+                android:src="@drawable/head_sort" />
+
+            <TextView
+                android:id="@+id/sort_detail_head_tvtitle"
+                style="@style/main_head_title"
+                android:layout_below="@id/sort_detail_head_ivmenu"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="-5dp"
+                android:text="分类" />
+
+            <LinearLayout android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_toRightOf="@id/sort_detail_head_ivmenu"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="60dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/edit_search_bg"
+                >
+             	<Spinner
+	                android:id="@+id/sort_head_spinner"
+	                android:layout_width="100dp"
+	                android:layout_height="36dp"
+	                android:entries="@array/sorts" />
+	            <EditText
+	                android:id="@+id/sort_head_etfilter"
+	                android:layout_width="150dp"
+	                android:layout_height="36dp"
+	                android:layout_marginLeft="-3dp"
+	                android:layout_gravity="left|center"
+	                android:focusable="true"
+	                android:focusableInTouchMode="true"
+	                android:hint="输入搜索内容"
+	                android:imeOptions="actionSearch"
+	                android:singleLine="true" />
+            </LinearLayout>
+
+            <ImageButton
+                android:id="@+id/sort_detail_head_ivsearch"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="0dp"
+                android:background="@drawable/frame_icon_search" />
+
+            <TextView
+                android:id="@+id/sort_detail_head_tvsearch"
+                style="@style/main_head_title"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/sort_detail_head_ivsearch"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="-5dp"
+                android:text="筛选" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="35dp"
+        android:layout_marginTop="-4dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/sort_detail_btn_creative"
+            style="@style/frame_button"
+            android:text="创意" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:background="@drawable/frame_button_cutline" />
+
+        <Button
+            android:id="@+id/sort_detail_btn_project"
+            style="@style/frame_button"
+            android:text="项目" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:background="@drawable/frame_button_cutline" />
+
+        <Button
+            android:id="@+id/sort_detail_btn_product"
+            style="@style/frame_button"
+            android:text="商品" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_marginTop="5dp"
+        android:layout_weight="1" >
+
+        <ListView
+            android:id="@+id/sort_lv_detail"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:cacheColorHint="#00000000"
+            android:divider="@android:color/darker_gray"
+            android:dividerHeight="0.5dp" >
+        </ListView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="48dp"
+        android:layout_marginBottom="-4dp"
+        android:background="@drawable/tongyong_top"
+        android:gravity="center_vertical" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <ImageView
+                android:id="@+id/sort_detail_footer_iv_back"
+                android:layout_width="34dp"
+                android:layout_height="34dp"
+                android:layout_alignParentLeft="true"
+                android:src="@drawable/ic_launcher" />
+
+            <ImageView
+                android:id="@+id/sort_detail_footer_iv_note"
+                android:layout_width="34dp"
+                android:layout_height="34dp"
+                android:layout_alignParentRight="true"
+                android:paddingRight="10dp"
+                android:src="@drawable/ic_launcher" />
+
+            <ImageView
+                android:id="@+id/sort_detail_footer_iv_more"
+                android:layout_width="34dp"
+                android:layout_height="34dp"
+                android:layout_toLeftOf="@id/sort_detail_footer_iv_note"
+                android:paddingRight="10dp"
+                android:src="@drawable/ic_launcher" />
+
+            <ImageView
+                android:id="@+id/sort_detail_footer_iv_add"
+                android:layout_width="34dp"
+                android:layout_height="34dp"
+                android:layout_toLeftOf="@id/sort_detail_footer_iv_more"
+                android:paddingRight="10dp"
+                android:src="@drawable/ic_launcher" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

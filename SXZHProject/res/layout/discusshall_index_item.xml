@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="8dp" >
+
+    <FrameLayout
+        android:id="@+id/message_index_framelayout"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+
+            <ImageView
+                android:id="@+id/message_index_avatar"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="@drawable/default_avatar"
+                android:layout_alignParentBottom="true"
+                android:scaleType="centerCrop" />
+
+            <TextView
+                android:id="@+id/message_index_count"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:gravity="center"
+                android:paddingBottom="2dp"
+                android:textColor="@color/white"
+                android:textSize="11sp"
+                android:visibility="invisible" />
+        </RelativeLayout>
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/message_index_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/message_index_framelayout"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_toRightOf="@+id/message_index_framelayout"
+        android:singleLine="true"
+        android:text="标题"
+        android:textColor="#6A6A6A"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/message_index_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/message_index_title"
+        android:layout_below="@+id/message_index_title"
+        android:layout_marginTop="5dp"
+        android:text="内容"
+        android:singleLine="true"
+        android:textColor="#6A6A6A" />
+
+    <TextView
+        android:id="@+id/message_index_dateline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:text="2014.1.14"
+        android:layout_alignTop="@+id/message_index_title"
+        android:layout_marginRight="8dp"
+        android:textColor="#696969" />
+
+</RelativeLayout>

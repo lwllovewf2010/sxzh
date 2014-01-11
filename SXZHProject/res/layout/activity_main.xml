@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#fff" >
+
+    <FrameLayout
+        android:id="@+id/fragment"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="52.7dip" >
+    </FrameLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="55dip"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/tongyong_dilan" >
+
+        <LinearLayout
+            android:id="@+id/guide_goup"
+            android:layout_width="fill_parent"
+            android:layout_height="55dip"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal" >
+
+            <!-- 首页start -->
+
+            <LinearLayout
+                android:id="@+id/homeindex"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:orientation="vertical" >
+
+                <ImageView
+                    android:id="@+id/img_homeindex"
+                    android:layout_width="30dip"
+                    android:layout_height="30dip"
+                    android:layout_marginTop="10dip"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ic_launcher" />
+
+                <TextView
+                    android:id="@+id/text_homeindex"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="-3dip"
+                    android:gravity="center|top"
+                    android:text="@string/homeindex_hint"
+                    android:textColor="#bfbfbf"
+                    android:textSize="12sp" />
+            </LinearLayout>
+            <!-- end -->
+
+            <include
+                android:layout_height="49dip"
+                android:layout_marginTop="8dip"
+                layout="@layout/comment_vertical_line" />
+            <!-- 分类start -->
+            <LinearLayout
+                android:id="@+id/sort"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:orientation="vertical" >
+
+                <ImageView
+                    android:id="@+id/img_sort"
+                    android:layout_width="30dip"
+                    android:layout_height="30dip"
+                    android:layout_marginTop="10dip"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ic_launcher" />
+
+                <TextView
+                    android:id="@+id/text_sort"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="-3dip"
+                    android:gravity="center|top"
+                    android:text="@string/sort_hint"
+                    android:textColor="#bfbfbf"
+                    android:textSize="12sp" />
+            </LinearLayout>
+           <!-- end -->
+            <include
+                android:layout_height="49dip"
+                android:layout_marginTop="8dip"
+                layout="@layout/comment_vertical_line" />
+
+            <!-- 讨论大厅start -->
+
+            <LinearLayout
+                android:id="@+id/discuss"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:orientation="vertical" >
+
+                <ImageView
+                    android:id="@+id/img_discuss"
+                    android:layout_width="30dip"
+                    android:layout_height="30dip"
+                    android:layout_marginTop="10dip"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ic_launcher" />
+
+                <TextView
+                    android:id="@+id/text_discuss"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="-3dip"
+                    android:gravity="center|top"
+                    android:text="@string/discusshall_hint"
+                    android:textColor="#bfbfbf"
+                    android:textSize="12sp" />
+            </LinearLayout>
+            <!-- end -->
+
+            <include
+                android:layout_height="49dip"
+                android:layout_marginTop="8dip"
+                layout="@layout/comment_vertical_line" />
+           <!-- 个人中心start -->
+            <LinearLayout
+                android:id="@+id/presonal"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:orientation="vertical" >
+
+                <ImageView
+                    android:id="@+id/img_presonal"
+                    android:layout_width="30dip"
+                    android:layout_height="30dip"
+                    android:layout_marginTop="10dip"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ic_launcher" />
+
+                <TextView
+                    android:id="@+id/text_presonal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="-3dip"
+                    android:gravity="center|top"
+                    android:text="@string/presonal_hint"
+                    android:textColor="#bfbfbf"
+                    android:textSize="12sp" />
+            </LinearLayout>
+        </LinearLayout>
+           <!-- end -->
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="49dip"
+            android:layout_alignParentBottom="true" >
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="49dip"
+                android:layout_weight="1" >
+
+                <TextView
+                    android:id="@+id/message_num"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginRight="2dp"
+                    android:layout_marginTop="3dp"
+                    android:gravity="center"
+                    android:paddingBottom="2dp"
+                    android:textColor="#fff"
+                    android:textSize="10sp"
+                    android:visibility="invisible" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="49dip"
+                android:layout_weight="1" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="49dip"
+                android:layout_weight="1" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="49dip"
+                android:layout_weight="1" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

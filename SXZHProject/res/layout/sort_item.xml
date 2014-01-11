@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+	<ImageView
+        android:id="@+id/sort_iv_logo"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_margin="3dp"
+        android:src="@drawable/ic_launcher" />
+	
+	<TextView
+        android:id="@+id/sort_tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/sort_iv_logo"
+        android:layout_toRightOf="@+id/sort_iv_logo"
+        android:text="大分类X"
+        android:textColor="#000000"
+        android:textSize="20sp" />
+	
+	<TextView
+        android:id="@+id/sort_tv_sortchild"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/sort_tv_name"
+        android:layout_alignBottom="@+id/sort_iv_logo"
+        android:layout_toRightOf="@+id/sort_iv_logo"
+        android:gravity="bottom"
+        android:text="小分类1/消费类2/小分类3"
+        android:textColor="#000000"
+        android:textSize="16sp" />
+    
+</RelativeLayout>
