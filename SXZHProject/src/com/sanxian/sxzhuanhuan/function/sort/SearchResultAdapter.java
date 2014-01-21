@@ -93,8 +93,8 @@ public class SearchResultAdapter extends BaseAdapter{
 	}
 	
 	class ViewHolder {
-		private ImageView ivSortLogo ;
-		private TextView tvSortName ;
+		public ImageView ivSortLogo ;
+		public TextView tvSortName ;
 	}
 	
 	/**

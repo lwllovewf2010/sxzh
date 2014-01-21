@@ -1,12 +1,9 @@
 package com.sanxian.sxzhuanhuan;
 
-import android.content.BroadcastReceiver;
-import android.content.Context;
 import android.content.Intent;
-import android.content.IntentFilter;
+import android.content.SharedPreferences;
 import android.content.res.Resources;
 import android.os.Bundle;
-import android.os.Handler;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
@@ -20,16 +17,18 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.sanxian.sxzhuanhuan.common.BaseFragmentActivity;
+import com.sanxian.sxzhuanhuan.entity.Constant;
 import com.sanxian.sxzhuanhuan.function.discusshall.DiscusshallIndex;
 import com.sanxian.sxzhuanhuan.function.homeindex.HomeIndex;
+import com.sanxian.sxzhuanhuan.function.login.LoginActivity;
 import com.sanxian.sxzhuanhuan.function.personal.PersonalIndex;
 import com.sanxian.sxzhuanhuan.function.sort.SortIndex;
-
 
 public class MainActivity extends BaseFragmentActivity implements OnClickListener {
 
 	private LinearLayout homeindex, sort, discuss, presonal;
 
+	@SuppressWarnings("unused")
 	private ImageView img_homeindex, img_sort, img_discuss, img_presonal;
 
 	private TextView text_homeindex, text_sort, text_discuss, text_presonal;
@@ -52,7 +51,7 @@ public class MainActivity extends BaseFragmentActivity implements OnClickListene
 
 	private int currentId;
 
-	//    private MessageGuideReceiver receiver;
+	// private MessageGuideReceiver receiver;
 
 	public static MainActivity guideActivity;
 
@@ -66,67 +65,90 @@ public class MainActivity extends BaseFragmentActivity implements OnClickListene
 
 	private Resources resources;
 
-	private Handler mHandler = new Handler() {
-		public void handleMessage(android.os.Message msg) {
-			switch (msg.what) {
-			case RECEIVE_MSG:
-				int receiveNum = (Integer) msg.obj;
-				updateTotalUI(receiveNum);
-				break;
-			}
-		};
-	};
+	// private Handler mHandler = new Handler() {
+	// public void handleMessage(android.os.Message msg) {
+	// switch (msg.what) {
+	// case RECEIVE_MSG:
+	// int receiveNum = (Integer) msg.obj;
+	// // updateTotalUI(receiveNum);
+	// break;
+	// }
+	// };
+	// };
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
-		setContentView(R.layout.activity_main);       
+		setContentView(R.layout.activity_main);
 
 		initView();
 		guideActivity = this;
+		int flag = this.getIntent().getIntExtra("flag", -1);
+		if (flag != -1) {
 
-		if (savedInstanceState != null) {
-			DestoryId = savedInstanceState.getInt(SAVE_ID);
-			currentContentFragmentTag = savedInstanceState.getString(SAVE_TAG);
 			removeAllFragment();
-		} else {
-			//currentId = R.id.opprotunity;
-			currentId=R.id.homeindex;
+			switch (flag) {
+			case 0:
+				currentId = R.id.homeindex;
+				break;
+			case 1:
+				currentId = R.id.sort;
+				break;
+			case 2:
+				currentId = R.id.discuss;
+				break;
+			case 3:
+				currentId = R.id.presonal;
+				break;
+			default:
+				currentId = R.id.homeindex;
+				break;
+			}
 			changeUI(currentId);
+		} else {
+			if (savedInstanceState != null) {
+				DestoryId = savedInstanceState.getInt(SAVE_ID);
+				currentContentFragmentTag = savedInstanceState.getString(SAVE_TAG);
+				removeAllFragment();
+			} else {
+				// currentId = R.id.opprotunity;
+				currentId = R.id.homeindex;
+				changeUI(currentId);
+			}
 		}
 
-
-		//        // 根据标识符判断是否从notification跳转
-		//        String fromNote = getIntent().getStringExtra("fromNotification");
-		//        if (fromNote != null && "1".equals(fromNote)) {
-		//            removeAllFragment();
-		//            changeUI(R.id.message);
-		//        } else {
-		//            if (savedInstanceState != null) {
-		//                DestoryId = savedInstanceState.getInt(SAVE_ID);
-		//                currentContentFragmentTag = savedInstanceState.getString(SAVE_TAG);
-		//                removeAllFragment();
-		//            } else {
-		////                currentId = R.id.opprotunity;
-		//            	currentId=R.id.message;
-		//                changeUI(currentId);
-		//            }
+		// // 根据标识符判断是否从notification跳转
+		// String fromNote = getIntent().getStringExtra("fromNotification");
+		// if (fromNote != null && "1".equals(fromNote)) {
+		// removeAllFragment();
+		// changeUI(R.id.message);
+		// } else {
+		// if (savedInstanceState != null) {
+		// DestoryId = savedInstanceState.getInt(SAVE_ID);
+		// currentContentFragmentTag = savedInstanceState.getString(SAVE_TAG);
+		// removeAllFragment();
+		// } else {
+		// // currentId = R.id.opprotunity;
+		// currentId=R.id.message;
+		// changeUI(currentId);
+		// }
 		//
-		//        }
+		// }
 		//
-		//        receiver = new MessageGuideReceiver();
-		//        IntentFilter filter = new IntentFilter("msg_in");
-		//        registerReceiver(receiver, filter);
-		//        unReadTotal = DataUtil.getUnReadTotal(this, CApplication.getInstance().getLoginUserInfo().getUid());
-		//        updateTotalUI(unReadTotal);       
-		//        
+		// receiver = new MessageGuideReceiver();
+		// IntentFilter filter = new IntentFilter("msg_in");
+		// registerReceiver(receiver, filter);
+		// unReadTotal = DataUtil.getUnReadTotal(this,
+		// CApplication.getInstance().getLoginUserInfo().getUid());
+		// updateTotalUI(unReadTotal);
+		//
 	}
 
 	private void initView() {
 		resources = getResources();
-		//        newMessageNum = (TextView) findViewById(R.id.message_num);
+		// newMessageNum = (TextView) findViewById(R.id.message_num);
 		homeindex = (LinearLayout) findViewById(R.id.homeindex);
 		sort = (LinearLayout) findViewById(R.id.sort);
 		discuss = (LinearLayout) findViewById(R.id.discuss);
@@ -227,42 +249,43 @@ public class MainActivity extends BaseFragmentActivity implements OnClickListene
 		}
 	}
 
-	//    @Override
-	//    protected void onNewIntent(Intent intent) {
-	//        // TODO Auto-generated method stub
-	//        super.onNewIntent(intent);
-	//        String fromNote = intent.getStringExtra("fromNotification");
-	//        if (fromNote != null && "1".equals(fromNote)) {
-	//            changeUI(R.id.message);
-	//        }
-	//    }
+	// @Override
+	// protected void onNewIntent(Intent intent) {
+	// // TODO Auto-generated method stub
+	// super.onNewIntent(intent);
+	// String fromNote = intent.getStringExtra("fromNotification");
+	// if (fromNote != null && "1".equals(fromNote)) {
+	// changeUI(R.id.message);
+	// }
+	// }
 
-	//    @Override
-	//    protected void onStart() {
-	//        super.onStart();
-	//        if (!isLoad) {
-	//            int total = DataUtil.getUnReadTotal(MainActivity.this, CApplication.getInstance().getLoginUserInfo().getUid());
-	//            updateTotalUI(total);
-	//        }
-	//        isLoad = false;
-	//        if (DestoryId != -1) {
-	//            changeUI(DestoryId);
-	//            DestoryId = -1;
-	//        }
-	//    }
+	// @Override
+	// protected void onStart() {
+	// super.onStart();
+	// if (!isLoad) {
+	// int total = DataUtil.getUnReadTotal(MainActivity.this,
+	// CApplication.getInstance().getLoginUserInfo().getUid());
+	// updateTotalUI(total);
+	// }
+	// isLoad = false;
+	// if (DestoryId != -1) {
+	// changeUI(DestoryId);
+	// DestoryId = -1;
+	// }
+	// }
 
-	/**
-	 * 根据未读消息数显示
-	 */
-	private void updateTotalUI(int total) {
-		if (total > 0) {
-			newMessageNum.setVisibility(View.VISIBLE);
-			newMessageNum.setText(total + "");
-			newMessageNum.invalidate();
-		} else {
-			newMessageNum.setVisibility(View.INVISIBLE);
-		}
-	}
+	// /**
+	// * 根据未读消息数显示
+	// */
+	// private void updateTotalUI(int total) {
+	// if (total > 0) {
+	// newMessageNum.setVisibility(View.VISIBLE);
+	// newMessageNum.setText(total + "");
+	// newMessageNum.invalidate();
+	// } else {
+	// newMessageNum.setVisibility(View.INVISIBLE);
+	// }
+	// }
 
 	private void removeAllFragment() {
 
@@ -304,10 +327,10 @@ public class MainActivity extends BaseFragmentActivity implements OnClickListene
 
 		switch (checkid) {
 		case R.id.homeindex:
-			//            	img_homeindex.setImageDrawable(resources.getDrawable(R.drawable.shangji_on));
-			//            	img_sort.setImageDrawable(resources.getDrawable(R.drawable.renmai_down));
-			//            	img_discuss.setImageDrawable(resources.getDrawable(R.drawable.xiaoxi_down));
-			//            	img_presonal.setImageDrawable(resources.getDrawable(R.drawable.shezhi_down));
+			// img_homeindex.setImageDrawable(resources.getDrawable(R.drawable.shangji_on));
+			// img_sort.setImageDrawable(resources.getDrawable(R.drawable.renmai_down));
+			// img_discuss.setImageDrawable(resources.getDrawable(R.drawable.xiaoxi_down));
+			// img_presonal.setImageDrawable(resources.getDrawable(R.drawable.shezhi_down));
 			text_homeindex.setTextColor(resources.getColor(R.color.action_on));
 			text_sort.setTextColor(resources.getColor(R.color.action_down));
 			text_discuss.setTextColor(resources.getColor(R.color.action_down));
@@ -315,10 +338,10 @@ public class MainActivity extends BaseFragmentActivity implements OnClickListene
 			updateContent(checkid);
 			break;
 		case R.id.sort:
-			//            	img_homeindex.setImageDrawable(resources.getDrawable(R.drawable.shangji_down));
-			//            	img_sort.setImageDrawable(resources.getDrawable(R.drawable.renmai_on));
-			//            	img_discuss.setImageDrawable(resources.getDrawable(R.drawable.xiaoxi_down));
-			//            	img_presonal.setImageDrawable(resources.getDrawable(R.drawable.shezhi_down));
+			// img_homeindex.setImageDrawable(resources.getDrawable(R.drawable.shangji_down));
+			// img_sort.setImageDrawable(resources.getDrawable(R.drawable.renmai_on));
+			// img_discuss.setImageDrawable(resources.getDrawable(R.drawable.xiaoxi_down));
+			// img_presonal.setImageDrawable(resources.getDrawable(R.drawable.shezhi_down));
 			text_homeindex.setTextColor(resources.getColor(R.color.action_down));
 			text_sort.setTextColor(resources.getColor(R.color.action_on));
 			text_discuss.setTextColor(resources.getColor(R.color.action_down));
@@ -326,10 +349,10 @@ public class MainActivity extends BaseFragmentActivity implements OnClickListene
 			updateContent(checkid);
 			break;
 		case R.id.discuss:
-			//            	img_homeindex.setImageDrawable(resources.getDrawable(R.drawable.shangji_down));
-			//            	img_sort.setImageDrawable(resources.getDrawable(R.drawable.renmai_down));
-			//            	img_discuss.setImageDrawable(resources.getDrawable(R.drawable.xiaoxi_on));
-			//            	img_presonal.setImageDrawable(resources.getDrawable(R.drawable.shezhi_down));
+			// img_homeindex.setImageDrawable(resources.getDrawable(R.drawable.shangji_down));
+			// img_sort.setImageDrawable(resources.getDrawable(R.drawable.renmai_down));
+			// img_discuss.setImageDrawable(resources.getDrawable(R.drawable.xiaoxi_on));
+			// img_presonal.setImageDrawable(resources.getDrawable(R.drawable.shezhi_down));
 			text_homeindex.setTextColor(resources.getColor(R.color.action_down));
 			text_sort.setTextColor(resources.getColor(R.color.action_down));
 			text_discuss.setTextColor(resources.getColor(R.color.action_on));
@@ -337,38 +360,53 @@ public class MainActivity extends BaseFragmentActivity implements OnClickListene
 			updateContent(checkid);
 			break;
 		case R.id.presonal:
-			//            	img_homeindex.setImageDrawable(resources.getDrawable(R.drawable.shangji_down));
-			//            	img_sort.setImageDrawable(resources.getDrawable(R.drawable.renmai_down));
-			//            	img_discuss.setImageDrawable(resources.getDrawable(R.drawable.xiaoxi_down));
-			//            	img_presonal.setImageDrawable(resources.getDrawable(R.drawable.hezhi_on));
+			SharedPreferences spf = this.getSharedPreferences("login_user", 0) ;
+			String open_id = spf.getString("open_id", "");
+			String token = spf.getString("token", "");
+			if("".equals(open_id) || "".equals(token)){
+				Intent intent = new Intent(this, LoginActivity.class);
+				startActivityForResult(intent,Constant.REQUEST_LOGIN_CODE);
+			}else{
+			// img_homeindex.setImageDrawable(resources.getDrawable(R.drawable.shangji_down));
+			// img_sort.setImageDrawable(resources.getDrawable(R.drawable.renmai_down));
+			// img_discuss.setImageDrawable(resources.getDrawable(R.drawable.xiaoxi_down));
+			// img_presonal.setImageDrawable(resources.getDrawable(R.drawable.hezhi_on));
 			text_homeindex.setTextColor(resources.getColor(R.color.action_down));
 			text_sort.setTextColor(resources.getColor(R.color.action_down));
 			text_discuss.setTextColor(resources.getColor(R.color.action_down));
 			text_presonal.setTextColor(resources.getColor(R.color.action_on));
 			updateContent(checkid);
+			}
 			break;
 		}
 
 	}
 
-	//    private class MessageGuideReceiver extends BroadcastReceiver {
+	// private class MessageGuideReceiver extends BroadcastReceiver {
 	//
-	//        @Override
-	//        public void onReceive(Context context, Intent intent) {
-	//            if ("msg_in".equals(intent.getAction())) {
-	//                android.os.Message message = new android.os.Message();
-	//                message.obj = DataUtil.getUnReadTotal(MainActivity.this, CApplication.getInstance().getLoginUserInfo().getUid());
-	//                message.what = RECEIVE_MSG;
-	//                mHandler.sendMessage(message);
-	//            }
-	//        }
-	//    }
+	// @Override
+	// public void onReceive(Context context, Intent intent) {
+	// if ("msg_in".equals(intent.getAction())) {
+	// android.os.Message message = new android.os.Message();
+	// message.obj = DataUtil.getUnReadTotal(MainActivity.this,
+	// CApplication.getInstance().getLoginUserInfo().getUid());
+	// message.what = RECEIVE_MSG;
+	// mHandler.sendMessage(message);
+	// }
+	// }
+	// }
 
 	@Override
 	protected void onDestroy() {
 		// TODO Auto-generated method stub
 		super.onDestroy();
-		//        unregisterReceiver(receiver);
+
+		// System.out.println("-------finish----------");
+		// SharedPreferences spf = getSharedPreferences("login_user", 0) ;
+		// SharedPreferences.Editor editor = spf.edit() ;
+		// editor.putString("open_id", "") ;
+		// editor.putString("token", "" );
+		// editor.commit() ;
 	}
 
 	private long exitTime = 0;
@@ -398,6 +436,21 @@ public class MainActivity extends BaseFragmentActivity implements OnClickListene
 		// TODO Auto-generated method stub
 		int id = v.getId();
 		changeUI(id);
-	}  
-
+	}
+ @Override
+ protected void onActivityResult(int arg0, int arg1, Intent arg2) {
+	// TODO Auto-generated method stub
+	super.onActivityResult(arg0, arg1, arg2);
+	if(arg1 == Constant.RESULT_LOGIN_CODE){
+		// img_homeindex.setImageDrawable(resources.getDrawable(R.drawable.shangji_down));
+					// img_sort.setImageDrawable(resources.getDrawable(R.drawable.renmai_down));
+					// img_discuss.setImageDrawable(resources.getDrawable(R.drawable.xiaoxi_down));
+					// img_presonal.setImageDrawable(resources.getDrawable(R.drawable.hezhi_on));
+					text_homeindex.setTextColor(resources.getColor(R.color.action_down));
+					text_sort.setTextColor(resources.getColor(R.color.action_down));
+					text_discuss.setTextColor(resources.getColor(R.color.action_down));
+					text_presonal.setTextColor(resources.getColor(R.color.action_on));
+					updateContent(R.id.presonal);
+	}
+ }
 }

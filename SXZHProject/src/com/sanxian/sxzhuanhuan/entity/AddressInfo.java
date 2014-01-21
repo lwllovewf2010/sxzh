@@ -17,6 +17,15 @@ public class AddressInfo implements Serializable{
 	private String name="";
 	private String district="";
 	private String street="";
+	//added by yuanqk
+	private String phoneNum = "";
+	
+	public String getPhoneNum() {
+		return phoneNum;
+	}
+	public void setPhoneNum(String phoneNum) {
+		this.phoneNum = phoneNum;
+	}
 	private boolean isDefault=false;  //是否为默认地址
 	public String getName() {
 		return name;
@@ -48,6 +57,15 @@ public class AddressInfo implements Serializable{
 		this.district = district;
 		this.street = street;
 		this.isDefault = isDefault;
+	}
+	//added by yuanqk
+	public AddressInfo(String name, String district, String street,String phoneNum,boolean isDefault) {
+		super();
+		this.name = name;
+		this.district = district;
+		this.street = street;
+		this.isDefault = isDefault;
+		this.phoneNum = phoneNum;
 	}
 	
 	

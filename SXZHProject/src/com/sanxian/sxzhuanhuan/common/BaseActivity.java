@@ -4,6 +4,7 @@ import java.util.List;
 
 import android.app.Activity;
 import android.app.ActivityManager.RunningAppProcessInfo;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
@@ -22,6 +23,7 @@ import android.widget.Toast;
 
 import com.sanxian.sxzhuanhuan.SApplication;
 import com.sanxian.sxzhuanhuan.R;
+import com.sanxian.sxzhuanhuan.function.login.LoginActivity;
 import com.sanxian.sxzhuanhuan.util.FileUtils;
 import com.sanxian.sxzhuanhuan.util.MD5Util;
 
@@ -29,10 +31,11 @@ import com.sanxian.sxzhuanhuan.util.MD5Util;
  * 通用Activity，所有Activity的父类
  * 
  */
-public class BaseActivity extends Activity implements IBaseActivity,OnClickListener {
+public class BaseActivity extends Activity implements IBaseActivity, OnClickListener {
 
 	public static final int ERROR = 10001;
-	public static final int COOKIE_INVILD = 10002;
+	// public static final int COOKIE_INVILD = 10002;
+	public static final int COOKIE_INVILD = 1001;// php 设置cookie失效
 
 	static public int screenWidth = 0;
 	static public int screenHeight = 0;
@@ -118,102 +121,71 @@ public class BaseActivity extends Activity implements IBaseActivity,OnClickListe
 		return obj;
 	}
 
-/*	public void showDialog() {
-		if (mPopupWindow != null) {
-			if (!mPopupWindow.isShowing()) {
-				 最重要的一步：弹出显示 在指定的位置(parent) 最后两个参数 是相对于 x / y 轴的坐标 
-				mPopupWindow.showAtLocation(findViewById(R.id.ucenter_ll), Gravity.BOTTOM, 0, 0);
-			}
-		}
-	}*/
+	/*
+	 * public void showDialog() { if (mPopupWindow != null) { if
+	 * (!mPopupWindow.isShowing()) { 最重要的一步：弹出显示 在指定的位置(parent) 最后两个参数 是相对于 x /
+	 * y 轴的坐标 mPopupWindow.showAtLocation(findViewById(R.id.ucenter_ll),
+	 * Gravity.BOTTOM, 0, 0); } } }
+	 */
 
-	/*public PopupWindow mPopupWindow;
-	View sub_view;
-	public View[] menu;
-
-	protected void initPopuWindow(int menuViewID, String[] array) {
-		LayoutInflater mLayoutInflater = (LayoutInflater) getSystemService(LAYOUT_INFLATER_SERVICE);
-		 设置显示menu布局 view子VIEW 
-		sub_view = mLayoutInflater.inflate(menuViewID, null);
-		 第一个参数弹出显示view 后两个是窗口大小 
-		mPopupWindow = new PopupWindow(sub_view, LayoutParams.FILL_PARENT, LayoutParams.WRAP_CONTENT);
-		 设置背景显示 
-//		mPopupWindow.setBackgroundDrawable(getResources().getDrawable(R.drawable.addressbook_all_bg));
-		 设置触摸外面时消失 
-		mPopupWindow.setOutsideTouchable(true);
-		 设置系统动画 
-//		mPopupWindow.setAnimationStyle(android.R.style.Animation_Dialog);
-//		mPopupWindow.setAnimationStyle(R.style.MyDialogStyleBottom);  
-		mPopupWindow.setAnimationStyle(R.style.AnimBottom);  
-		
-		mPopupWindow.update();
-		mPopupWindow.setTouchable(true);
-		 设置点击menu以外其他地方以及返回键退出 
-		mPopupWindow.setFocusable(true);
-
-		*//**
-		 * 1.解决再次点击MENU键无反应问题 2.sub_view是PopupWindow的子View
-		 *//*
-		sub_view.setFocusableInTouchMode(true);
-		sub_view.setOnKeyListener(new OnKeyListener() {
-			@Override
-			public boolean onKey(View v, int keyCode, KeyEvent event) {
-				if ((keyCode == KeyEvent.KEYCODE_MENU||keyCode==KeyEvent.KEYCODE_BACK) && (mPopupWindow.isShowing())) {
-					mPopupWindow.dismiss();// 这里写明模拟menu的PopupWindow退出就行
-					return true;
-				}
-				
-				return false;
-			}
-
-		});
-		 监听MENU事件 
-		menu = new View[3];
-		menu[0] = sub_view.findViewById(R.id.button1);
-		menu[1] = sub_view.findViewById(R.id.button2);
-		menu[2] = sub_view.findViewById(R.id.button3);
-
-		for (int i = 0; i < array.length; i++) {
-			((TextView) menu[i]).setText(array[i]);
-		}
-
-//		((TextView) menu[0]).setText("扫描二维码名片");
-//		((TextView) menu[2]).setText("扫描二维码名片");
-//		((TextView) menu[3]).setText("扫描二维码名片");
-		if(array.length==2){
-			menu[2].setVisibility(View.GONE);
-		}else{
-			menu[2].setVisibility(View.VISIBLE);
-		}
-		for (int i = 0; i < menu.length; i++) {
-			menu[i].setOnClickListener(this);
-		}
-		sub_view.findViewById(R.id.dismiss).setOnClickListener(new OnClickListener() {
-			
-			@Override
-			public void onClick(View v) {
-				mPopupWindow.dismiss();
-			}
-		});
-		
-		// menu[0].setOnClickListener(new OnClickListener() {
-		// @Override
-		// public void onClick(View v) {
-		// // doSomething
-		// mPopupWindow.dismiss();
-		// }
-		// });
-		//
-		// menu[2].setOnClickListener(new OnClickListener() {
-		// @Override
-		// public void onClick(View v) {
-		// // doSomething
-		// mPopupWindow.dismiss();
-		// }
-		// });
-
-	}
-*/
+	/*
+	 * public PopupWindow mPopupWindow; View sub_view; public View[] menu;
+	 * 
+	 * protected void initPopuWindow(int menuViewID, String[] array) {
+	 * LayoutInflater mLayoutInflater = (LayoutInflater)
+	 * getSystemService(LAYOUT_INFLATER_SERVICE); 设置显示menu布局 view子VIEW sub_view
+	 * = mLayoutInflater.inflate(menuViewID, null); 第一个参数弹出显示view 后两个是窗口大小
+	 * mPopupWindow = new PopupWindow(sub_view, LayoutParams.FILL_PARENT,
+	 * LayoutParams.WRAP_CONTENT); 设置背景显示 //
+	 * mPopupWindow.setBackgroundDrawable(getResources
+	 * ().getDrawable(R.drawable.addressbook_all_bg)); 设置触摸外面时消失
+	 * mPopupWindow.setOutsideTouchable(true); 设置系统动画 //
+	 * mPopupWindow.setAnimationStyle(android.R.style.Animation_Dialog); //
+	 * mPopupWindow.setAnimationStyle(R.style.MyDialogStyleBottom);
+	 * mPopupWindow.setAnimationStyle(R.style.AnimBottom);
+	 * 
+	 * mPopupWindow.update(); mPopupWindow.setTouchable(true);
+	 * 设置点击menu以外其他地方以及返回键退出 mPopupWindow.setFocusable(true);
+	 *//**
+	 * 1.解决再次点击MENU键无反应问题 2.sub_view是PopupWindow的子View
+	 */
+	/*
+	 * sub_view.setFocusableInTouchMode(true); sub_view.setOnKeyListener(new
+	 * OnKeyListener() {
+	 * 
+	 * @Override public boolean onKey(View v, int keyCode, KeyEvent event) { if
+	 * ((keyCode == KeyEvent.KEYCODE_MENU||keyCode==KeyEvent.KEYCODE_BACK) &&
+	 * (mPopupWindow.isShowing())) { mPopupWindow.dismiss();//
+	 * 这里写明模拟menu的PopupWindow退出就行 return true; }
+	 * 
+	 * return false; }
+	 * 
+	 * }); 监听MENU事件 menu = new View[3]; menu[0] =
+	 * sub_view.findViewById(R.id.button1); menu[1] =
+	 * sub_view.findViewById(R.id.button2); menu[2] =
+	 * sub_view.findViewById(R.id.button3);
+	 * 
+	 * for (int i = 0; i < array.length; i++) { ((TextView)
+	 * menu[i]).setText(array[i]); }
+	 * 
+	 * // ((TextView) menu[0]).setText("扫描二维码名片"); // ((TextView)
+	 * menu[2]).setText("扫描二维码名片"); // ((TextView) menu[3]).setText("扫描二维码名片");
+	 * if(array.length==2){ menu[2].setVisibility(View.GONE); }else{
+	 * menu[2].setVisibility(View.VISIBLE); } for (int i = 0; i < menu.length;
+	 * i++) { menu[i].setOnClickListener(this); }
+	 * sub_view.findViewById(R.id.dismiss).setOnClickListener(new
+	 * OnClickListener() {
+	 * 
+	 * @Override public void onClick(View v) { mPopupWindow.dismiss(); } });
+	 * 
+	 * // menu[0].setOnClickListener(new OnClickListener() { // @Override //
+	 * public void onClick(View v) { // // doSomething //
+	 * mPopupWindow.dismiss(); // } // }); // // menu[2].setOnClickListener(new
+	 * OnClickListener() { // @Override // public void onClick(View v) { // //
+	 * doSomething // mPopupWindow.dismiss(); // } // });
+	 * 
+	 * }
+	 */
 	@Override
 	public void initView() {
 		// TODO Auto-generated method stub
@@ -228,7 +200,25 @@ public class BaseActivity extends Activity implements IBaseActivity,OnClickListe
 	{
 
 	}
-
+	public boolean flag=false;//是否离线
+	public boolean isOffLine(){
+		spf = this.getSharedPreferences("login_user", 0);
+		String open_id = spf.getString("open_id", "");
+		String token = spf.getString("token", "");
+		if("".equals(open_id) || "".equals(token)){
+			flag=true;
+		}else{
+			flag=false;
+		}
+		return flag;
+	}
+	public String[] getOpen_idOrToken(){
+		spf = this.getSharedPreferences("login_user", 0);
+		String open_id = spf.getString("open_id", "");
+		String token = spf.getString("token", "");
+		String str[]=new String[]{open_id,token};
+		return str;
+	}
 	@Override
 	public void refresh(Object... param) {
 		// TODO Auto-generated method stub
@@ -239,12 +229,15 @@ public class BaseActivity extends Activity implements IBaseActivity,OnClickListe
 			break;
 		case BaseActivity.COOKIE_INVILD:
 			Toast.makeText(this, R.string.cookie_invild, 3000).show();
+			spf = this.getSharedPreferences("login_user", 0);
+			SharedPreferences.Editor editor = spf.edit() ;
+			editor.putString("open_id", "") ;
+			editor.putString("token","") ;
+			editor.commit() ;
 			// app.getLoginUserInfo().setUid("0");
-			// spf = this.getSharedPreferences("userinfo",
-			// Context.MODE_PRIVATE);
 			// spf.edit().putBoolean("AUTO_ISCHECK", false).commit();
-			// Intent intent = new Intent(this, LoginActivity.class);
-			// this.startActivity(intent);
+			Intent intent = new Intent(this, LoginActivity.class);
+			this.startActivity(intent);
 			// for(Activity activity : app.getAllActivity())
 			// {
 			// if(activity.getClass().getName().indexOf("Login") == -1)
@@ -266,11 +259,13 @@ public class BaseActivity extends Activity implements IBaseActivity,OnClickListe
 
 		}
 	}
+
 	@Override
 	public boolean onKeyDown(int keyCode, KeyEvent event) {
 		return super.onKeyDown(keyCode, event);
-		
+
 	}
+
 	@Override
 	protected void onResume() {
 		super.onResume();
@@ -335,6 +330,6 @@ public class BaseActivity extends Activity implements IBaseActivity,OnClickListe
 
 	@Override
 	public void onClick(View v) {
-		
+
 	}
 }

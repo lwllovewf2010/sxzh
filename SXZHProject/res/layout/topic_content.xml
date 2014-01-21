@@ -13,7 +13,7 @@
         >
 
         <TextView
-            android:id="@+id/topic_content_miaos"
+            android:id="@+id/common_content_profile"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:layout_weight="1.0"
@@ -21,17 +21,9 @@
             android:text="@string/topic_content_miaos"
             android:textColor="#000000"
             android:textSize="22.0dip" />
-		<TextView
-            
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:layout_weight="1.0"
-            android:gravity="center"
-            android:textColor="#000000"
-            android:textSize="22.0dip" />
        
         <TextView
-            android:id="@+id/topic_content_comment"
+            android:id="@+id/common_content_comment"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:layout_weight="1.0"

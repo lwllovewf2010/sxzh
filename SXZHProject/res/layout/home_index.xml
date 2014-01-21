@@ -4,124 +4,120 @@
     xmlns:myattr="http://schemas.android.com/apk/res/com.sanxian.sxzhuanhuan"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:orientation="vertical"    
     android:focusable="true"
-    android:focusableInTouchMode="true" >
-    
-    <include layout="@layout/title_bar3" android:id="@+id/home_index_bar"/>
-    
-    <RelativeLayout  android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:orientation="vertical"
-    android:id="@+id/home_index_context"
-    android:layout_below="@+id/home_index_bar"    
-    >
-        <com.sanxian.sxzhuanhuan.function.homeindex.SlidingSwitcherView
-        android:id="@+id/home_index_bar_slidingLayout"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/home_index_bar"
+        layout="@layout/title_bar3" />
+
+    <RelativeLayout
+        android:id="@+id/home_index_context"
         android:layout_width="fill_parent"
-        android:layout_height="100dip"
-       	myattr:auto_play="true"
-         >
-           <LinearLayout
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/home_index_bar"
+        android:orientation="vertical" >
+
+        <com.sanxian.sxzhuanhuan.function.homeindex.SlidingSwitcherView
+            android:id="@+id/home_index_bar_slidingLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="100dip"
+            myattr:auto_play="true" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/home_index_image1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:background="@drawable/image1" />
+
+                <Button
+                    android:id="@+id/home_index_image2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:background="@drawable/image2" />
+
+                <Button
+                    android:id="@+id/home_index_image3"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:background="@drawable/image3" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="60dip"
+                android:layout_height="20dip"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_margin="15dip"
+                android:orientation="horizontal" >
+            </LinearLayout>
+        </com.sanxian.sxzhuanhuan.function.homeindex.SlidingSwitcherView>
+
+        <RelativeLayout
+            android:id="@+id/home_index_content_botton"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:orientation="horizontal" >
-
-            <Button
-                android:id="@+id/home_index_image1"
-                android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
-                android:background="@drawable/image1" />
-
-            <Button
-                android:id="@+id/home_index_image2"
-                android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
-                android:background="@drawable/image2" />
-
-            <Button
-                android:id="@+id/home_index_image3"
-                android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
-                android:background="@drawable/image3" />
-
-            
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="60dip"
-            android:layout_height="20dip"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentRight="true"
-            android:layout_margin="15dip"
-            android:orientation="horizontal" >
-        </LinearLayout>   
-        </com.sanxian.sxzhuanhuan.function.homeindex.SlidingSwitcherView>
-        
-        <RelativeLayout 
-            android:id="@+id/home_index_content_botton"
             android:layout_below="@+id/home_index_bar_slidingLayout"
-            android:layout_width="fill_parent"
-   			android:layout_height="fill_parent"
-    		android:orientation="vertical"
-    	>
-        	<LinearLayout android:id="@+id/home_index_content_botton_top"
-        	              android:layout_width="fill_parent"
-        	              android:layout_height="wrap_content"		  	
-        	    	      android:orientation="horizontal"        
-        	    	      android:gravity="center"	        	    	        	              	    	    
-        	    >
-          
-        	    	 <TextView android:id="@+id/home_index_originality"
-                	android:layout_width="fill_parent"
-                	android:layout_height="wrap_content"
-                	android:textSize="15sp"
-                	android:layout_weight="1.0"
-                	android:gravity="center"
-                	android:background="@drawable/ic_setting_item_round_normal"
-                	android:text="@string/home_index_originality"
-                />
-	            <TextView android:id="@+id/home_index_project"
-	                	android:layout_width="fill_parent"
-	                	android:layout_height="wrap_content"
-	                	android:textSize="15sp"
-	                	android:gravity="center"
-	                	android:layout_weight="1.0"
-	                	android:background="@drawable/ic_setting_item_round_normal"
-	                	android:text="@string/home_index_project"
-	                />
-	            <TextView android:id="@+id/home_index_commodity"
-	                	android:layout_width="fill_parent"
-	                	android:layout_height="wrap_content"
-	                	android:textSize="15sp"
-	                	android:gravity="center"
-	                	android:layout_weight="1.0"
-	                	android:background="@drawable/ic_setting_item_round_normal"
-	                	android:text="@string/home_index_commodity"
-	                />               	       	    
-        	
-        	    
-        	    
-           
-        	</LinearLayout> 
-        	
-        	<LinearLayout android:id="@+id/home_index_content_button_botton"
-        	    		  android:layout_width="fill_parent"
-        	    		  android:layout_height="fill_parent"
-        	    		  android:orientation="vertical"
-        	    		  android:layout_below="@+id/home_index_content_botton_top"
-        	    >
-        	    <ListView android:id="@+id/home_index_content_list"
-        	        		android:layout_width="fill_parent"
-        	    		  android:layout_height="fill_parent"
-        	        ></ListView>
-        	    
-        	</LinearLayout>
-        	
-        	
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/home_index_content_botton_top"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/home_index_originality"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:background="@drawable/ic_setting_item_round_normal"
+                    android:gravity="center"
+                    android:text="@string/home_index_originality"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/home_index_project"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:background="@drawable/ic_setting_item_round_normal"
+                    android:gravity="center"
+                    android:text="@string/home_index_project"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/home_index_commodity"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:background="@drawable/ic_setting_item_round_normal"
+                    android:gravity="center"
+                    android:text="@string/home_index_commodity"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/home_index_content_button_botton"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_below="@+id/home_index_content_botton_top"
+                android:orientation="vertical" >
+
+                <ListView
+                    android:id="@+id/home_index_content_list"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent" >
+                </ListView>
+            </LinearLayout>
         </RelativeLayout>
-        
-        
     </RelativeLayout>
 
 </RelativeLayout>

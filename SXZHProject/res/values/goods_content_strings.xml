@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 商品strings -->
+<resources>
+  <string name="goods_details">商品详情</string>  
+  <string name="consumer_comments">用户评价 （1573）</string>
+  <string name="goods_param">产品参数</string>
+  <string name="goods_pay_password">请输入支付密码</string>
+  <string name="goods_pay_smg_validate">短信效验码</string>
+  <string name="goods_pay_id_num">身份证末尾8位</string>
+  <string name="goods_pay_new_pwd">新支付密码</string>
+  <string name="goods_pay_new_pwd2">确认新支付密码</string>
+  <!-- 创意 -->
+  <string name="topic_content_button1">提交项目</string>
+  <string name="topic_content_button2">进入此项目详情</string>
+</resources>

@@ -5,12 +5,19 @@ import java.io.IOException;
 import java.sql.Timestamp;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import net.sourceforge.pinyin4j.PinyinHelper;
 import net.sourceforge.pinyin4j.format.HanyuPinyinOutputFormat;
 import net.sourceforge.pinyin4j.format.exception.BadHanyuPinyinOutputFormatCombination;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import android.app.Activity;
 import android.content.Context;
@@ -28,6 +35,8 @@ import android.os.Environment;
 import android.util.Log;
 import android.view.Gravity;
 import android.widget.Toast;
+
+import com.sanxian.sxzhuanhuan.entity.RequestInputInfo;
 
 /**
  * 通用工具方法类
@@ -598,5 +607,59 @@ public class Util {
 		Toast toast = Toast.makeText(context, string, Toast.LENGTH_SHORT);
 		toast.setGravity(Gravity.CENTER, 0, 0); // 设置居中与屏幕
 		toast.show();
+	}
+	
+	/**
+	 * 通用input JSON字符串
+	 * joe
+	 * @param inputinfo 请求参数对象
+	 * @return
+	 */
+	public static String toJSONObject(RequestInputInfo inputinfo) {
+		JSONObject json = new JSONObject();
+		try {
+			json.put("action", inputinfo.getAction());
+			json.put("type", inputinfo.getType());
+			json.put("mcr", inputinfo.getMcr());
+			Map<String,String> params = inputinfo.getParams();
+			if (params != null && params.size() > 0) {
+				JSONObject jsonItems = new JSONObject();
+				for (String key : params.keySet()) {
+					 jsonItems.put(key,params.get(key));
+					 }
+				json.put("params", jsonItems);
+			}
+		} catch (JSONException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return json.toString();
+	}
+	
+
+	/**
+	 * 手机号是否合法验证
+	 * 中国移动134,135,136,137,138,139,150,151,152,157,158,159,182,183,187,188,147
+	 * 中国联通130,131,132,155,156,185,186 中国电信133,153,180,181,189
+	 * joe
+	 */
+	public static boolean checkMobile(String mobile) {
+		String regex = "^1(3[0-9]|5[012356789]|8[012356789])\\d{8}$";
+		Pattern p = Pattern.compile(regex);
+		Matcher m = p.matcher(mobile);
+		return m.find();
+	}
+
+	/**
+	 * 判断email格式是否正确
+	 * joe
+	 * @param email
+	 * @return
+	 */
+	public static boolean isEmail(String email) {
+		String str = "^([a-zA-Z0-9_\\-\\.]+)@((\\[[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.)|(([a-zA-Z0-9\\-]+\\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\\]?)$";
+		Pattern p = Pattern.compile(str);
+		Matcher m = p.matcher(email);
+		return m.matches();
 	}
 }

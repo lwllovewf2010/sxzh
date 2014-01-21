@@ -138,4 +138,21 @@ public class SApplication extends Application {
 		long size = localStatFs.getBlockSize() * localStatFs.getBlockCount();
 		return size;
 	}
+	
+	/**
+	 * 退出整个应用 
+	 * @author zhangfl@sanxian.com
+	 */
+	public void exit() {  
+        try {  
+            for (Activity activity : allActivity) {  
+                if (activity != null)  
+                    activity.finish();  
+            }  
+        } catch (Exception e) {  
+            e.printStackTrace();  
+        } finally {  
+            System.exit(0);  
+        }  
+    }  
 }

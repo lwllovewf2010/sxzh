@@ -3,9 +3,12 @@ package com.sanxian.sxzhuanhuan.function.personal.myaccount;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
 
 import android.content.ContentResolver;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
@@ -17,16 +20,20 @@ import android.provider.MediaStore;
 import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
-import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.sanxian.sxzhuanhuan.R;
+import com.sanxian.sxzhuanhuan.api.CommonAPI;
 import com.sanxian.sxzhuanhuan.common.BaseActivity;
+import com.sanxian.sxzhuanhuan.dialog.DialogConstant;
+import com.sanxian.sxzhuanhuan.dialog.FootDialog;
+import com.sanxian.sxzhuanhuan.dialog.FootDialogInfo;
+import com.sanxian.sxzhuanhuan.entity.Constant;
+import com.sanxian.sxzhuanhuan.function.homeindex.GetRootCommonList;
+import com.sanxian.sxzhuanhuan.function.login.LoginActivity;
 import com.sanxian.sxzhuanhuan.util.ImageUtil;
 /**
  * 个人资料页面
@@ -34,24 +41,29 @@ import com.sanxian.sxzhuanhuan.util.ImageUtil;
  *
  */
 public class PersonInfoActivity extends BaseActivity implements OnClickListener{
-	private RelativeLayout avatar_layout,username_layout,sex_layout,area_layout,signature_layout,person_data_layout;//头像，姓名，性别，地区，个性签名,整个布局
-	private boolean is_show = true;
-	private Animation showAction, hideAction;
-	private LinearLayout bottom_layout;//底部布局
-	private Button take_photo_btn,album_btn,cancel_btn;//拍照，从相册，取消
+	private RelativeLayout avatar_layout,username_layout,sex_layout,area_layout,signature_layout;//头像，姓名，性别，地区，个性签名
 	
 	/* 请求码 */
 	private static final int IMAGE_REQUEST_CODE = 6;
 	private static final int CAMERA_REQUEST_CODE = 7;
 	private static final int RESULT_REQUEST_CODE = 8;
 	
-	 
+	private final int AREA_REQUESTCODE = 9;
+	private final int AREA_RESULTCODE = 118;
+	private String area_root_id = "";
+	private String area_root_name = "";
+	private String area_sub_id = "";
+	private String area_sub_name = "";
 	private final String avatorpath = Environment.getExternalStorageDirectory()+ "/sanxian/sxzhproject/avator/";
 	private String sheariamgepath = ""; // 裁剪后头像路径
 	private String photographpath = ""; // 拍照完后头像路径
 	
 	private ImageView myacc_avatar;//头像
-	
+	private TextView username_tv;//用户名
+	private TextView area_tv; //地区
+	private TextView signature_tv;//个性签名
+	private CommonAPI api = null;
+	private final int GETPERSONINFO = 15;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
@@ -59,6 +71,7 @@ public class PersonInfoActivity extends BaseActivity implements OnClickListener{
 		setContentView(R.layout.myacc_personinfo);
 		initView();
 		initListener();
+		initData();
 		
 	}
 
@@ -74,15 +87,10 @@ public class PersonInfoActivity extends BaseActivity implements OnClickListener{
 		sex_layout = (RelativeLayout)findViewById(R.id.sex_layout);
 		area_layout = (RelativeLayout)findViewById(R.id.area_layout);
 		signature_layout = (RelativeLayout)findViewById(R.id.signature_layout);
-		person_data_layout = (RelativeLayout)findViewById(R.id.person_data_layout);
-		bottom_layout = (LinearLayout)findViewById(R.id.bottom_layout);
-		showAction = AnimationUtils.loadAnimation(this,R.anim.slide_up_in);
-     	hideAction = AnimationUtils.loadAnimation(this, R.anim.slide_down_out);
-     	take_photo_btn = (Button)findViewById(R.id.take_photo_btn);
-     	album_btn = (Button)findViewById(R.id.album_btn);
-     	cancel_btn = (Button)findViewById(R.id.cancel_btn);
-     	
      	myacc_avatar = (ImageView)findViewById(R.id.myacc_avatar);
+     	area_tv = (TextView)findViewById(R.id.area_tv);
+     	username_tv = (TextView)findViewById(R.id.username_tv);
+     	signature_tv = (TextView)findViewById(R.id.signature_tv);
 		
 	}
 
@@ -96,16 +104,41 @@ public class PersonInfoActivity extends BaseActivity implements OnClickListener{
 		sex_layout.setOnClickListener(this);
 		area_layout.setOnClickListener(this);
 		signature_layout.setOnClickListener(this);
-		person_data_layout.setOnClickListener(this);
-		take_photo_btn.setOnClickListener(this);
-		album_btn.setOnClickListener(this);
-		cancel_btn.setOnClickListener(this);
 	}
 
+	private void initData(){
+		SharedPreferences spf = this.getSharedPreferences("login_user", 0);
+		String open_id = spf.getString("open_id", "");
+		String token = spf.getString("token", "");
+		if ("".equals(open_id) || "".equals(token)) {
+			Intent intent = new Intent(this, LoginActivity.class);
+			startActivityForResult(intent, Constant.REQUEST_LOGIN_CODE);
+		} else {
+			if (api == null) {
+				api = new CommonAPI();
+			}
+			Map<String, String> paramsmap = new HashMap<String, String>();
+			paramsmap.put("open_id", open_id);
+			paramsmap.put("token", token);
+			api.getPersonInfo(paramsmap, this, GETPERSONINFO);
+		}
+	}
+	
 	@Override
 	public void refresh(Object... param) {
 		// TODO Auto-generated method stub
 		super.refresh(param);
+		int flag = ((Integer)param[0]).intValue();
+		switch (flag) {
+		case GETPERSONINFO :
+			if(param.length > 0 && param[1] != null && param[1] instanceof String){
+				String data = param[1].toString();
+			}
+			break;
+
+		default:
+			break;
+		}
 	}
 
 	@Override
@@ -115,63 +148,43 @@ public class PersonInfoActivity extends BaseActivity implements OnClickListener{
 		case R.id.title_Left:
 			finish();
 			break;
-
 		case R.id.avatar_layout:
-			if(is_show){
-				showBottomLayout();
-			}else{
-				hideBottomLayout();
-			}
+			showDialog();
 			break;
 		case R.id.username_layout:
+			Intent nameintent = new Intent(this,SetPersonData.class);
+			nameintent.putExtra("set_type", "username");
+			nameintent.putExtra("content", username_tv.getText().toString().trim());
+			startActivity(nameintent);
 			break;
 		case R.id.sex_layout:
 			break;
 		case R.id.area_layout:
+			Intent areaintent = new Intent(this,GetRootCommonList.class);
+			areaintent.putExtra("type","region_province");
+			startActivityForResult(areaintent, AREA_REQUESTCODE);
 			break;
 		case R.id.signature_layout:
-			break;
-		case R.id.person_data_layout:
-			if(!is_show){
-				hideBottomLayout();
-			}
-			break;
-		case R.id.take_photo_btn:// 拍照
-			getPhotoByCamere();
-			hideBottomLayout();
-			break;
-		case R.id.album_btn://从相册选取
-			getPhotoFromAlum();
-			hideBottomLayout();
-			break;
-		case R.id.cancel_btn://取消
-			hideBottomLayout();
+			Intent signature = new Intent(this,SetPersonData.class);
+			signature.putExtra("set_type", "signature");
+			signature.putExtra("content", signature_tv.getText().toString().trim());
+			startActivity(signature);
 			break;
 		default:
 			break;
 		}
 		
 	}
-	/**
-	 * 显示底部菜单
-	 * joe
-	 */
 	
-	private void showBottomLayout(){
-		bottom_layout.setVisibility(View.VISIBLE);	
-		bottom_layout.startAnimation(showAction);
-		is_show = false;
-	};
+	public void showDialog(){
+		Intent intent = new Intent(this,FootDialog.class);
+		FootDialogInfo info = new FootDialogInfo();
+		String []arrayStrings={"拍照","从相册选择","取消"};
+		info.setMenu(arrayStrings);
+		intent.putExtra("info", info);
+		startActivityForResult(intent, DialogConstant.REQUEST_FOOT);
+	}
 	
-	/**
-	 * 隐藏底部菜单
-	 * joe
-	 */
-	private void hideBottomLayout(){
-		bottom_layout.setVisibility(View.GONE);	
-		bottom_layout.startAnimation(hideAction);
-		is_show = true;
-	};
 	@Override
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 		super.onActivityResult(requestCode, resultCode, data);
@@ -237,6 +250,22 @@ public class PersonInfoActivity extends BaseActivity implements OnClickListener{
 				break;
 				}
 			}
+		if(requestCode == DialogConstant.REQUEST_FOOT){
+			if(resultCode==DialogConstant.FOOTDIALOG_ONE){
+				getPhotoByCamere();
+			}else if(resultCode==DialogConstant.FOOTDIALOG_TWO){
+				getPhotoFromAlum();
+			}else if(resultCode==DialogConstant.FOOTDIALOG_THREE){
+			}
+		  }
+		if(resultCode == AREA_RESULTCODE){
+			Bundle bundle = data.getExtras();
+			area_root_id = bundle.getString("root_id");
+			area_root_name = bundle.getString("root_name");
+			area_sub_id = bundle.getString("sub_id");
+			area_sub_name = bundle.getString("sub_name");
+			area_tv.setText(area_root_name + " " + area_sub_name);
+		}
 		}
 	
 	/**

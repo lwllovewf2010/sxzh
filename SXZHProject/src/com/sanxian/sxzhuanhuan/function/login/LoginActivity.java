@@ -1,6 +1,9 @@
 package com.sanxian.sxzhuanhuan.function.login;
 
-import android.content.Intent;
+import java.util.HashMap;
+import java.util.Map;
+
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -10,10 +13,14 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.sanxian.sxzhuanhuan.R;
+import com.sanxian.sxzhuanhuan.api.JSONParser;
+import com.sanxian.sxzhuanhuan.api.TestAPI;
 import com.sanxian.sxzhuanhuan.common.BaseActivity;
 import com.sanxian.sxzhuanhuan.common.CommonTitle;
 import com.sanxian.sxzhuanhuan.common.UIHelper;
 import com.sanxian.sxzhuanhuan.entity.Constant;
+import com.sanxian.sxzhuanhuan.entity.InterfaceData.ILogin;
+import com.sanxian.sxzhuanhuan.util.Util;
 
 /**   
  * @Title: LoginActivity.java 
@@ -24,6 +31,8 @@ import com.sanxian.sxzhuanhuan.entity.Constant;
  * @version V1.0   
  */
 public class LoginActivity extends BaseActivity implements OnClickListener{
+	private TestAPI api = null;
+	private Map<String , String> input = null ;
 	
 	//布局中的相关控件
 	private CommonTitle conTitle = null ;
@@ -48,6 +57,9 @@ public class LoginActivity extends BaseActivity implements OnClickListener{
 	}
 	
 	private void init() {
+		api = new TestAPI();
+		input = new HashMap<String, String>() ;
+		
 		conTitle = (CommonTitle) findViewById(R.id.common_title) ;
 		etAccount = (EditText) findViewById(R.id.login_et_account) ;
 		etPassword = (EditText) findViewById(R.id.login_et_password) ;
@@ -75,14 +87,11 @@ public class LoginActivity extends BaseActivity implements OnClickListener{
 				break ;
 				
 			case R.id.title_btn_right :
-				strAccount = etAccount.getText().toString() ;
-				strPassword = etPassword.getText().toString() ;
-				Intent intent = new Intent() ;
-				intent.putExtra("account", strAccount) ;
-				intent.putExtra("password", strPassword) ;
-//				setResult(Constant.LOGIN_OK, intent ) ;
-				setResult(Constant.LOGIN_OK) ;
-				finish() ;
+				strAccount = etAccount.getText().toString().trim() ;
+				strPassword = etPassword.getText().toString().trim() ;
+				input.put("uname", strAccount) ;
+				input.put("password", strPassword) ;
+				api.login(input, this, Constant.REQUESTCODE.LOGIN_REQUEST) ;
 				break ;
 				
 			case R.id.login_tv_register :
@@ -98,17 +107,63 @@ public class LoginActivity extends BaseActivity implements OnClickListener{
 			default :
 				
 		}
-		// Choreographer Skipped 44 frames!  The application may be doing too much work on its main thread.
-
 	}
 	
-	/* (non-Javadoc)
-	 * @see com.sanxian.sxzhuanhuan.common.BaseActivity#refresh(java.lang.Object[])
-	 */
 	@Override
 	public void refresh(Object... param) {
 		// TODO Auto-generated method stub
 		super.refresh(param);
+
+		int flag = ((Integer) param[0]).intValue();
+		System.out.println("----" + flag);
+		switch (flag) {
+			case Constant.REQUESTCODE.LOGIN_REQUEST:
+				if (param.length > 0 && param[1] != null
+						&& param[1] instanceof String) {
+					String jsondata = param[1].toString();
+					System.out.println(jsondata);
+					if(Constant.ResultStatus.RESULT_OK == JSONParser.getReturnFlag(jsondata)) {
+						ILogin logindata = JSONParser.getLoginData(jsondata) ;
+						//"open_id": "5_1278_539947",
+//				        "user_name": "10629762@qq.com",
+//				        "photo": "",
+//				        "dname": null,
+//				        "mobile": "13811689766",
+//				        "email": "10629762@qq.com",
+//				        "token": "f9a4745d0a1c8ba7"
+						SharedPreferences spf = getSharedPreferences("login_user", 0) ;
+						SharedPreferences.Editor editor = spf.edit() ;
+						editor.putString("open_id", logindata.getOpen_id()) ;
+						editor.putString("token", logindata.getToken()) ;
+						editor.putString("user_name", logindata.getUser_name()) ;
+						editor.putString("photo", logindata.getPhoto()) ;
+						editor.putString("dname", logindata.getDname()) ;
+						editor.putString("mobile", logindata.getMobile()) ;
+						editor.putString("email", logindata.getEmail()) ;
+						
+						editor.commit() ;
+						
+						setResult(Constant.RESULT_LOGIN_CODE) ;
+						finish() ;
+					} else if (Constant.ResultStatus.RESULT_FAIL == JSONParser.getReturnFlag(jsondata)) {
+						//{"ret":1,"content":"info not find"}
+						//{"ret":1,"content":"password error"}
+						if("info not find" .equals(JSONParser.getFailString(jsondata))) {
+							Util.toastInfo(LoginActivity.this, "帐号不存在，请重新输入") ;
+						} else if ("password error" .equals(JSONParser.getFailString(jsondata))  ) {
+							Util.toastInfo(LoginActivity.this, "密码错误，请重新输入") ;
+						}
+					}
+				}
+				break;
+				
+		}
 	}
 	
+	@Override
+	public void onDestroy() {
+		// TODO Auto-generated method stub
+		super.onDestroy();
+		input.clear() ;
+	}
 }

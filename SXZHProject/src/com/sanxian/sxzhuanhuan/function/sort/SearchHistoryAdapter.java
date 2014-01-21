@@ -93,8 +93,8 @@ public class SearchHistoryAdapter extends BaseAdapter{
 	}
 	
 	class ViewHolder {
-		private ImageView ivHistoryLogo ;
-		private TextView tvHistorySortName ;
+		public ImageView ivHistoryLogo ;
+		public TextView tvHistorySortName ;
 	}
 	
 	/**

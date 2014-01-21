@@ -10,31 +10,24 @@
         layout="@layout/title_bar" >
     </include>
 
-    <RelativeLayout
+    <LinearLayout
         android:id="@+id/bottom"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:orientation="vertical"
-        android:paddingLeft="10dip"
-        android:paddingRight="10dip"
         android:background="@color/gray"
-        android:paddingTop="10dip" >
-
-        <Button
-            android:id="@+id/address_back_btn"
-            android:layout_width="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:text="@string/return_value"
-            android:layout_height="wrap_content" />
+        android:orientation="vertical"
+        android:gravity="center"
+        android:paddingTop="5dip"
+        android:paddingBottom="5dip"
+         >
 
         <Button
             android:id="@+id/add_address_btn"
             android:layout_width="wrap_content"
-            android:layout_alignParentRight="true"
             android:layout_height="wrap_content"
             android:text="@string/add_address" />
-    </RelativeLayout>
+    </LinearLayout>
 
     <ListView
         android:id="@+id/listView"

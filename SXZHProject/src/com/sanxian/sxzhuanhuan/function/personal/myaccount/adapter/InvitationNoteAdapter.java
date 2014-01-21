@@ -3,14 +3,17 @@ package com.sanxian.sxzhuanhuan.function.personal.myaccount.adapter;
 import java.util.List;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
 import com.sanxian.sxzhuanhuan.R;
 import com.sanxian.sxzhuanhuan.entity.InvitationUser;
+import com.sanxian.sxzhuanhuan.function.personal.myaccount.PersonInfoActivity;
 /**
  * 邀请记录页面Adapter
  * @author joe
@@ -62,10 +65,17 @@ public class InvitationNoteAdapter extends BaseAdapter {
 		}else{
 			holder = (Holder) convertView.getTag();
 		}
+		String see_uid = list.get(position).getInvite_userid();
+		if("".equals(see_uid)){
+			holder.invitation_look_data.setVisibility(View.INVISIBLE);
+		}else{
+			holder.invitation_look_data.setVisibility(View.VISIBLE);
+		}
 		holder.invitation_name.setText(list.get(position).getInvite_name());
 		holder.invitation_phone.setText(list.get(position).getInvite_phone());
 		holder.invitation_time.setText(list.get(position).getInvite_time());
 		holder.invitation_status.setText(list.get(position).getInvite_status());
+		holder.invitation_look_data.setOnClickListener(new ClickListener(position));
 		return convertView;
 	}
 	class Holder {
@@ -74,5 +84,21 @@ public class InvitationNoteAdapter extends BaseAdapter {
 		TextView invitation_time;
 		TextView invitation_status;
 		TextView invitation_look_data;
+	}
+	
+	class ClickListener implements OnClickListener{
+		private int position;
+        public ClickListener(int position){
+        	this.position = position;
+        }
+		@Override
+		public void onClick(View v) {
+			// TODO Auto-generated method stub
+			Intent intent = new Intent(context,PersonInfoActivity.class);
+			intent.putExtra("from","invite");
+			intent.putExtra("see_uid", list.get(position).getInvite_userid());
+			context.startActivity(intent);
+		}
+		
 	}
 }

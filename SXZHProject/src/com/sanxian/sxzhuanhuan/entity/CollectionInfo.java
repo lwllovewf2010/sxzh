@@ -4,77 +4,77 @@ import java.io.Serializable;
 
 /**
  * 
-* @ClassName: OrderBean  
-* @Description: 我的订单实体类 
-* * @author honaf
-* @date 2014-1-6 下午3:03:52
+* @ClassName: CollectionInfo  
+* @Description: 我的收藏实体
+* @author honaf
+* @date 2014-1-20 下午4:58:14
  */
 public class CollectionInfo implements Serializable {
 
 
 	private static final long serialVersionUID = 1L;
-
-	private String order_id;// 订单号
-	private String avatar;// 商品图片
-	private String unit_price;// 单价
-	private String total_price;// 总价
-	private String number;// 数量
-	private String goods_name;// 商品名称
-	private String transaction_status;// 交易状态
-	public CollectionInfo(){
-		super();
+	private String id;//产品或项目id
+	public String getId() {
+		return id;
 	}
-	public CollectionInfo(String order_id, String avatar, String unit_price, String total_price, String number, String goods_name, String transaction_status) {
-		super();
-		this.order_id = order_id;
-		this.avatar = avatar;
-		this.unit_price = unit_price;
-		this.total_price = total_price;
-		this.number = number;
-		this.goods_name = goods_name;
-		this.transaction_status = transaction_status;
+	public void setId(String id) {
+		this.id = id;
 	}
-	public String getOrder_id() {
-		return order_id;
-	}
-	public void setOrder_id(String order_id) {
-		this.order_id = order_id;
-	}
+	private String avatar;  //图片
+	private String name;   //名称
+	private String type;  //类型    产品和项目
+	private String energy_money;//能量币
+	private String popularity;//人气
+	private String introduction;
 	public String getAvatar() {
 		return avatar;
 	}
 	public void setAvatar(String avatar) {
 		this.avatar = avatar;
 	}
-	public String getUnit_price() {
-		return unit_price;
+	public String getName() {
+		return name;
 	}
-	public void setUnit_price(String unit_price) {
-		this.unit_price = unit_price;
+	public void setName(String name) {
+		this.name = name;
 	}
-	public String getTotal_price() {
-		return total_price;
+	public String getType() {
+		return type;
 	}
-	public void setTotal_price(String total_price) {
-		this.total_price = total_price;
+	public void setType(String type) {
+		this.type = type;
 	}
-	public String getNumber() {
-		return number;
+	public String getEnergy_money() {
+		return energy_money;
 	}
-	public void setNumber(String number) {
-		this.number = number;
+	public void setEnergy_money(String energy_money) {
+		this.energy_money = energy_money;
 	}
-	public String getGoods_name() {
-		return goods_name;
+	public String getPopularity() {
+		return popularity;
 	}
-	public void setGoods_name(String goods_name) {
-		this.goods_name = goods_name;
+	public void setPopularity(String popularity) {
+		this.popularity = popularity;
 	}
-	public String getTransaction_status() {
-		return transaction_status;
+	public String getIntroduction() {
+		return introduction;
 	}
-	public void setTransaction_status(String transaction_status) {
-		this.transaction_status = transaction_status;
+	public void setIntroduction(String introduction) {
+		this.introduction = introduction;
 	}
+	public CollectionInfo(String id, String avatar, String name, String type, String energy_money, String popularity, String introduction) {
+		super();
+		this.id = id;
+		this.avatar = avatar;
+		this.name = name;
+		this.type = type;
+		this.energy_money = energy_money;
+		this.popularity = popularity;
+		this.introduction = introduction;
+	}
+	public CollectionInfo() {
+		super();
+	}
+	
 	
 }

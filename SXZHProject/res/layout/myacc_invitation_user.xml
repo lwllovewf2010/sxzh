@@ -47,6 +47,7 @@
                         android:textSize="17sp" />
 
                     <EditText
+                        android:id="@+id/friend_name"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.6"
@@ -69,14 +70,18 @@
                         android:textSize="17sp" />
 
                     <EditText
+                        android:id="@+id/friend_phone"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.6"
+                        android:text=""
+                        android:inputType="phone"
                         android:textColor="@color/black"
                         android:textSize="17sp" />
                 </LinearLayout>
 
                 <Button
+                    android:id="@+id/invitation_btn"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dip"

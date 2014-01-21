@@ -36,13 +36,12 @@
                 android:textSize="15sp" />
 
             <EditText
+                android:id="@+id/input_oldphone_et"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/input_oldphone_hint"
                 android:textColor="@color/black"
                 android:textSize="17sp" >
-
-                <requestFocus />
             </EditText>
         </LinearLayout>
          
@@ -68,6 +67,7 @@
                 android:gravity="center"
                 />
             <EditText
+                android:id="@+id/input_newphone_et"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/input_phone_hint"
@@ -94,6 +94,7 @@
                 android:textSize="17sp" />
 
             <EditText
+                android:id="@+id/input_verify_code"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/get_verify_code_hint"
@@ -102,6 +103,7 @@
         </LinearLayout>
 
         <Button
+            android:id="@+id/bind_phone_btn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dip"

@@ -3,6 +3,7 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:layout_gravity="center"
+    android:background="@color/white"
     android:orientation="vertical" >
 
     <LinearLayout
@@ -32,30 +33,35 @@
                 android:layout_marginTop="-5dp"
                 android:text="分类" />
 
-            <LinearLayout android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="wrap_content"
                 android:layout_height="30dp"
-                android:layout_toRightOf="@id/sort_detail_head_ivmenu"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="60dp"
                 android:layout_marginTop="5dp"
-                android:background="@drawable/edit_search_bg"
-                >
-             	<Spinner
-	                android:id="@+id/sort_head_spinner"
-	                android:layout_width="100dp"
-	                android:layout_height="36dp"
-	                android:entries="@array/sorts" />
-	            <EditText
-	                android:id="@+id/sort_head_etfilter"
-	                android:layout_width="150dp"
-	                android:layout_height="36dp"
-	                android:layout_marginLeft="-3dp"
-	                android:layout_gravity="left|center"
-	                android:focusable="true"
-	                android:focusableInTouchMode="true"
-	                android:hint="输入搜索内容"
-	                android:imeOptions="actionSearch"
-	                android:singleLine="true" />
+                android:layout_toRightOf="@id/sort_detail_head_ivmenu"
+                android:background="@drawable/edit_search_bg" >
+
+                <Spinner
+                    android:id="@+id/sort_head_spinner"
+                    style="@style/spinner_style"
+                    android:layout_width="100dp"
+                    android:layout_height="fill_parent"
+                    android:animationCache="true"
+                    android:drawSelectorOnTop="true" />
+
+                <EditText
+                    android:id="@+id/sort_head_etfilter"
+                    android:layout_width="150dp"
+                    android:layout_height="36dp"
+                    android:layout_gravity="left|center"
+                    android:layout_marginLeft="-3dp"
+                    android:background="@null"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:hint="输入搜索内容"
+                    android:imeOptions="actionSearch"
+                    android:singleLine="true" />
             </LinearLayout>
 
             <ImageButton

@@ -5,8 +5,10 @@
     tools:context=".PublishOriginality" 
     android:background="@color/white"
     android:orientation="vertical"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
     >
-	<include layout="@layout/title_bar" android:id="@+id/publish_project_report_bar"/>
+	<include layout="@layout/title_bar4" android:id="@+id/publish_project_report_bar"/>
 	<ScrollView 	android:layout_width="fill_parent"
 	    			android:layout_height="fill_parent"
 	    			android:layout_below="@+id/publish_project_report_bar">

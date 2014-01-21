@@ -4,10 +4,37 @@
     android:layout_height="fill_parent"
     android:orientation="vertical" >
 
-    <include layout="@layout/sort_header" />"
+    <!-- <include layout="@layout/sort_header" />" -->
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/tongyong_top"
+        android:orientation="horizontal"
+        android:gravity="center_vertical" >
+
+        <Spinner
+            android:id="@+id/sort_index_head_spinner"
+            android:layout_width="250dp"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:entries="@array/sorts" />
+        
+        <ImageView android:id="@+id/sort_index_head_search"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:src="@drawable/frame_icon_search"/>
+    </LinearLayout>
 
     <ListView
-        android:id="@+id/sort_lv"
+        android:id="@+id/sort_index_lv"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:cacheColorHint="#00000000"

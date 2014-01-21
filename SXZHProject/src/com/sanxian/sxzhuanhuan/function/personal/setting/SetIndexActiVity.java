@@ -1,6 +1,8 @@
 package com.sanxian.sxzhuanhuan.function.personal.setting;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -8,7 +10,10 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 
 import com.sanxian.sxzhuanhuan.R;
+import com.sanxian.sxzhuanhuan.SApplication;
+import com.sanxian.sxzhuanhuan.api.CommonAPI;
 import com.sanxian.sxzhuanhuan.common.BaseActivity;
+import com.sanxian.sxzhuanhuan.common.UIHelper;
 import com.sanxian.sxzhuanhuan.util.Util;
 /**
  * 设置页面 joe
@@ -123,10 +128,26 @@ public class SetIndexActiVity extends BaseActivity implements OnClickListener{
 			break;
 		case R.id.exit_btn:
 			Util.toastInfo(this, "退出");
+			clearUserData() ;
+			
+//			SApplication.getInstance().exit() ; //
 			break;
 		default:
 			break;
 		}
+	}
+	
+	/**
+	 * 退出应用之前清除掉用户登录的相关信息
+	 */
+	private void clearUserData() {
+
+		System.out.println("-------clear user data !!!!----------");
+		SharedPreferences spf = getSharedPreferences("login_user", 0) ;
+		SharedPreferences.Editor editor = spf.edit() ;
+		editor.putString("open_id", "") ;
+		editor.putString("token", "" );
+		editor.commit() ;
 	}
 
 }

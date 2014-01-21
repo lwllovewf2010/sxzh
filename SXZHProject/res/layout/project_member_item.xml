@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white" >
+    
+	<ImageView
+        android:id="@+id/project_members_avatar"
+        android:layout_width="84dp"
+        android:layout_height="84dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_margin="3dp"
+        android:src="@drawable/default_avatar" />
+	
+	<TextView
+        android:id="@+id/project_members_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/project_members_avatar"
+        android:layout_toRightOf="@+id/project_members_avatar"
+        android:text="赵钱孙李"
+        android:textColor="#000000"
+        android:textSize="16sp" />
+	
+	<TextView
+        android:id="@+id/project_members_join_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/project_members_name"
+        android:layout_toRightOf="@+id/project_members_avatar"
+        android:text="2013/06/25 10:21 加入项目"
+        android:textColor="#000000"
+        android:textSize="16sp" />
+	
+	<TextView
+        android:id="@+id/project_members_join_project"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/project_members_join_time"
+        android:layout_toRightOf="@+id/project_members_avatar"
+        android:text="TA总共加入了12个项目"
+        android:textColor="#000000"
+        android:textSize="16sp" />
+	
+	<TextView
+        android:id="@+id/project_members_shares_project"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/project_members_join_project"
+        android:layout_toRightOf="@+id/project_members_avatar"
+        android:text="TA总共入股了9个项目"
+        android:textColor="#000000"
+        android:textSize="16sp" />
+    
+</RelativeLayout>

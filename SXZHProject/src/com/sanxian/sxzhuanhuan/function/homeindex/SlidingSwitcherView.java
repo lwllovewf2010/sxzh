@@ -10,6 +10,7 @@ import android.content.res.TypedArray;
 import android.os.AsyncTask;
 import android.os.Handler;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.MotionEvent;
 import android.view.VelocityTracker;
 import android.view.View;
@@ -107,6 +108,7 @@ public class SlidingSwitcherView extends RelativeLayout implements OnTouchListen
 		TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.SlidingSwitcherView);
 		boolean isAutoPlay = a.getBoolean(R.styleable.SlidingSwitcherView_auto_play, false);
 		if (isAutoPlay) {
+			System.out.println("------enter-------");
 			startAutoPlay();
 		}
 		a.recycle();
@@ -142,6 +144,7 @@ public class SlidingSwitcherView extends RelativeLayout implements OnTouchListen
 	 * 开启图片自动播放功能，当滚动到最后一张图片的时候，会自动回滚到第一张图片。
 	 */
 	public void startAutoPlay() {
+		Log.d("slidingswitch", "我现在在测试首页动画--------------- ");
 		new Timer().scheduleAtFixedRate(new TimerTask() {
 			@Override
 			public void run() {
@@ -297,7 +300,7 @@ public class SlidingSwitcherView extends RelativeLayout implements OnTouchListen
 	 * 
 	 * @return 如果应该滚动到上一个菜单元素返回true，否则返回false。
 	 */
-	private boolean shouldScrollToPrevious() {
+	private boolean shouldScrollToPrevious() { 
 		return xUp - xDown > switcherViewWidth / 2 || getScrollVelocity() > SNAP_VELOCITY;
 	}
 
@@ -305,7 +308,10 @@ public class SlidingSwitcherView extends RelativeLayout implements OnTouchListen
 	 * 刷新标签元素布局，每次currentItemIndex值改变的时候都应该进行刷新。
 	 */
 	private void refreshDotsLayout() {
-		dotsLayout.removeAllViews();
+		if(null == dotsLayout) {
+			System.out.println("---dotsLayout is null ----");
+		} else 
+			dotsLayout.removeAllViews();
 		for (int i = 0; i < itemsCount; i++) {
 			@SuppressWarnings("deprecation")
 			LinearLayout.LayoutParams linearParams = new LinearLayout.LayoutParams(0,

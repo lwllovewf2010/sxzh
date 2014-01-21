@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.widget.TextView;
 
 /**
  * 
@@ -55,6 +56,8 @@ public class PublishProjectReport extends BaseActivity implements OnClickListene
 		setRight("提交审核");
 		findViewById(R.id.title_Left).setOnClickListener(this);
 		findViewById(R.id.title_right).setOnClickListener(this);
+		TextView titleIndo=(TextView)findViewById(R.id.tvTitleIndo);
+		titleIndo.setText("第二步/共三步");
 	}
 	
 }

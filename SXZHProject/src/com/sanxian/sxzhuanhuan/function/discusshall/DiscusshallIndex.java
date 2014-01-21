@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,6 +16,7 @@ import com.sanxian.sxzhuanhuan.R;
 import com.sanxian.sxzhuanhuan.SApplication;
 import com.sanxian.sxzhuanhuan.common.BaseFragment;
 import com.sanxian.sxzhuanhuan.entity.DiscusshallInfo;
+import com.sanxian.sxzhuanhuan.function.discusshall.adapter.DiscusshallIndexAdapter;
 /**
  * 讨论大厅首页
  * @author Administrator
@@ -25,7 +27,7 @@ public class DiscusshallIndex extends BaseFragment implements OnClickListener{
 	
 	private Context context;
 	private ListView discuss_listview;
-	DiscusshallAdapter adapter;
+	DiscusshallIndexAdapter adapter;
 	List<DiscusshallInfo> list=new ArrayList<DiscusshallInfo>();
 	public DiscusshallIndex() {
 		super();
@@ -44,7 +46,7 @@ public class DiscusshallIndex extends BaseFragment implements OnClickListener{
 		View view = inflater.inflate(R.layout.discusshall_index, container,false);
 		initView(view);
 		getData();
-		adapter=new DiscusshallAdapter(context, list);
+		adapter=new DiscusshallIndexAdapter(context, list);
 		discuss_listview.setAdapter(adapter);
 		return view;
 	}
@@ -79,5 +81,6 @@ public class DiscusshallIndex extends BaseFragment implements OnClickListener{
 	@Override
 	public void onClick(View v) {
 	}
-
+	
+	
 }

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/project_hall_rel_1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="15dp"
+        android:background="@color/ivory" >
+
+        <ImageView
+            android:id="@+id/project_hall_iv_hall_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/default_avatar" />
+
+        <TextView
+            android:id="@+id/project_hall_tv_hall_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="0dp"
+            android:gravity="left"
+            android:text="北京创意科技有限责任公司"
+            android:textColor="#000000"
+            android:textSize="22.0dip" />
+        
+         <TextView
+            android:id="@+id/project_hall_tv_create_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/project_hall_tv_hall_name"
+            android:text="成立于2013/06/14 "
+            android:textColor="#000000"
+            android:textSize="12.0dip" />
+        
+        <TextView
+            android:id="@+id/project_hall_tv_creator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/project_hall_tv_hall_name"
+            android:layout_toRightOf="@id/project_hall_tv_create_time"
+            android:layout_alignRight="@id/project_hall_tv_hall_name"
+            android:gravity="right"
+            android:text="创建者:赵钱孙"
+            android:textColor="#000000"
+            android:textSize="12.0dip" />
+        
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:background="@color/line_color" />
+
+</LinearLayout>

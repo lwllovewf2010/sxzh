@@ -37,6 +37,15 @@ public class UserInfo implements Serializable{
 	String position = "";
 	//是否在线
 	String isonline = "";
+	
+	// zhangfl
+	/**加入时间 */
+	String jointime = "" ;
+	/**加入的项目数 */
+	int joinProCount = 0 ;
+	/**入股的项目数 */
+	int shareProCount = 0 ;
+	
 	public String getStatus() {
 		return status;
 	}
@@ -145,6 +154,42 @@ public class UserInfo implements Serializable{
 	}
 	public void setAvatar(String avatar) {
 		this.avatar = avatar;
+	}
+	/**
+	 * @return the jointime
+	 */
+	public String getJointime() {
+		return jointime;
+	}
+	/**
+	 * @param jointime the jointime to set
+	 */
+	public void setJointime(String jointime) {
+		this.jointime = jointime;
+	}
+	/**
+	 * @return the joinProCount
+	 */
+	public int getJoinProCount() {
+		return joinProCount;
+	}
+	/**
+	 * @param joinProCount the joinProCount to set
+	 */
+	public void setJoinProCount(int joinProCount) {
+		this.joinProCount = joinProCount;
+	}
+	/**
+	 * @return the shareProCount
+	 */
+	public int getShareProCount() {
+		return shareProCount;
+	}
+	/**
+	 * @param shareProCount the shareProCount to set
+	 */
+	public void setShareProCount(int shareProCount) {
+		this.shareProCount = shareProCount;
 	}
 	
 }

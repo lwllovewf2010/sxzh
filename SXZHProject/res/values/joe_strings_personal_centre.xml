@@ -88,5 +88,5 @@
   <string name="location_table">所在地区：</string>
   <string name="detailed_address_table">详细地址：</string>
   <string name="delete_congsignee_address_table">删除收货地址</string>
-  <string name="default_congsignee_address_table">设为默认收货地址</string>
+  <string name="default_congsignee_address_table">将其设为默认地址</string>
 </resources>

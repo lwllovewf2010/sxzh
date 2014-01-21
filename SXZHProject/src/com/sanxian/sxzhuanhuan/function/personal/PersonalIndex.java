@@ -1,18 +1,34 @@
 package com.sanxian.sxzhuanhuan.function.personal;
 
+import java.util.HashMap;
+import java.util.Map;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 
+import com.nostra13.universalimageloader.core.DisplayImageOptions;
+import com.nostra13.universalimageloader.core.ImageLoader;
+import com.nostra13.universalimageloader.core.display.RoundedBitmapDisplayer;
 import com.sanxian.sxzhuanhuan.R;
 import com.sanxian.sxzhuanhuan.SApplication;
+import com.sanxian.sxzhuanhuan.api.CommonAPI;
 import com.sanxian.sxzhuanhuan.common.BaseFragment;
+import com.sanxian.sxzhuanhuan.entity.Constant;
+import com.sanxian.sxzhuanhuan.function.login.LoginActivity;
+import com.sanxian.sxzhuanhuan.function.personal.microbank.MicroBankIndexActivity;
 import com.sanxian.sxzhuanhuan.function.personal.microworld.MicroWorldIndexActivity;
 import com.sanxian.sxzhuanhuan.function.personal.myaccount.MyAccountActivity;
 import com.sanxian.sxzhuanhuan.function.personal.mycollection.MyCollectionIndexActivity;
@@ -40,9 +56,24 @@ public class PersonalIndex extends BaseFragment implements OnClickListener{
 	private RelativeLayout blogger_layout;  //微博
 	private RelativeLayout world_layout;  //微世界
 	
-
+	private ImageView preson_avatar;
+	private TextView username;//用户名
+	private TextView phone;//手机号码
+	private TextView company;//公司名称
+	private TextView position;//职位
+	private TextView project;//我的项目数
+	private TextView tribe;//我的部落数
+	private TextView article;//我的购物车数
+	private TextView order;//我的订单数
+	private TextView gold_coins_sum;//能量币
+	
+	private CommonAPI api = null;
+    private final int GETPRESONINDEX = 22;
 	private Context context;
 
+	private DisplayImageOptions options;
+	protected ImageLoader imageLoader;
+	
 	public PersonalIndex() {
 		super();
 	}
@@ -62,9 +93,11 @@ public class PersonalIndex extends BaseFragment implements OnClickListener{
 		View view = inflater.inflate(R.layout.presonal_index, container,false);
 		initView(view);
 		initListener();
+		intImageUtil();
+		initData();
 		return view;
 	}
-
+    
 	@Override
 	public void initView(View view) {
 		// TODO Auto-generated method stubs
@@ -84,12 +117,111 @@ public class PersonalIndex extends BaseFragment implements OnClickListener{
 	     friend_layout = (RelativeLayout)view.findViewById(R.id.friend_layout);
 	     blogger_layout = (RelativeLayout)view.findViewById(R.id.blogger_layout);
 	     world_layout = (RelativeLayout)view.findViewById(R.id.world_layout);
+	     
+	     username = (TextView)view.findViewById(R.id.username_tv);
+	     phone = (TextView)view.findViewById(R.id.phone_content_tv);
+	     company = (TextView)view.findViewById(R.id.company_tv);
+	     position = (TextView)view.findViewById(R.id.position_tv);
+	     project = (TextView)view.findViewById(R.id.my_project_sum);
+	     tribe = (TextView)view.findViewById(R.id.my_tribe_sum);
+	     article = (TextView)view.findViewById(R.id.my_article_sum);
+	     order = (TextView)view.findViewById(R.id.my_order_sum);
+	     gold_coins_sum = (TextView)view.findViewById(R.id.gold_coins_sum);
+	     preson_avatar = (ImageView)view.findViewById(R.id.preson_avatar);
+	}
+	
+	/**
+	 * 初始化页面数据
+	 * joe
+	 */
+	private void initData(){
+		SharedPreferences spf = context.getSharedPreferences("login_user", 0) ;
+		String open_id = spf.getString("open_id", null);
+		String token = spf.getString("token", null);
+//		if(open_id == null || token == null){
+////			UIHelper.showLoginActivity(PersonalIndex.this.getActivity());
+//			Intent intent = new Intent(context, LoginActivity.class);
+//			startActivityForResult(intent,Constant.REQUEST_LOGIN_CODE);
+//		}else{
+		if(api == null){
+			api = new CommonAPI();
+		}
+		Map<String,String> paramsmap = new HashMap<String, String>();
+		paramsmap.put("open_id",open_id);
+		paramsmap.put("token",token);
+		api.getPersonIndex(paramsmap, PersonalIndex.this, GETPRESONINDEX);
+//	 }
+	}
+	
+	/**
+	 * 初始化图片加载方法
+	 * joe
+	 */
+	private void intImageUtil() {
+		imageLoader = ImageLoader.getInstance();
+		options = new DisplayImageOptions.Builder()
+				//.showStubImage(R.drawable.denglu_morentouxiang)
+				// .showImageForEmptyUri(R.drawable.denglu_morentouxiang)//uri为空的时候
+				// .showImageOnFail(R.drawable.denglu_morentouxiang)//加载失败的时候
+				//.cacheOnDisc()
+		        .displayer(new RoundedBitmapDisplayer(7)).build();
 	}
 
+	/* (non-Javadoc)
+	 * @see com.sanxian.sxzhuanhuan.common.BaseFragment#refresh(java.lang.Object[])
+	 */
 	@Override
 	public void refresh(Object... param) {
 		// TODO Auto-generated method stub
 		super.refresh(param);
+		int flag = ((Integer)param[0]).intValue();
+		switch (flag) {
+		case GETPRESONINDEX:
+			if(param.length > 0 && param[1] != null && param[1] instanceof String){
+				String data = param[1].toString();
+				try {
+					JSONObject json = new JSONObject(data);
+					int status = json.getInt("ret");
+					if(status == 0){
+						
+						JSONObject object = json.getJSONObject("content");
+						String company_name = object.optString("company_name");
+						String position_name = object.optString("place_name");
+						String order_num = object.optString("my_order_num");
+						String project_num = object.optString("my_project_num");
+						String shopping_cart_num = object.optString("my_shopping_cart_num");
+						String tribe_num = object.optString("my_tribe_num");
+						String money = object.optString("money");
+						String photo = object.optString("photo");
+						String true_name = object.optString("true_name");
+						String user_name = object.optString("user_name");
+						String mobile = object.optString("mobile");
+						
+						username.setText(user_name);
+						phone.setText(mobile);
+						company.setText(company_name);
+						position.setText(position_name);
+						project.setText(project_num);
+						tribe.setText(tribe_num);
+						article.setText(shopping_cart_num);
+						order.setText(order_num);
+						gold_coins_sum.setText(money);
+						imageLoader.displayImage(photo, preson_avatar, options);
+					}else if(status == 1001){
+						
+					}else {
+						
+					}
+				} catch (JSONException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
+			break;
+
+		default:
+			break;
+		}
 	}
 
 	@Override
@@ -130,6 +262,8 @@ public class PersonalIndex extends BaseFragment implements OnClickListener{
 			break;
 		case R.id.tiny_bank_layout:
 			Util.toastInfo(context, "微银行");
+			intent.setClass(context, MicroBankIndexActivity.class);
+			startActivity(intent);
 			break;
 		case R.id.my_project_layout:
 			Util.toastInfo(context, "我的项目");
@@ -177,5 +311,14 @@ public class PersonalIndex extends BaseFragment implements OnClickListener{
 			break;
 		}
 	}
+	
+	/*@Override
+	public void onActivityResult(int requestCode, int resultCode, Intent data) {
+		// TODO Auto-generated method stub
+		super.onActivityResult(requestCode, resultCode, data);
+		if(resultCode == Constant.RESULT_LOGIN_CODE){
+			initData();
+		}
+	}*/
 
 }

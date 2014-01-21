@@ -102,35 +102,35 @@ public class SortDetailAdapter extends BaseAdapter {
 	}
 	
 	private void setData(ViewHolder holder , MetaData creativeInfo) {
-		holder.tvName.setText(creativeInfo.getMetaName()) ;
-		holder.ivLogo.setImageDrawable(context.getResources().getDrawable(R.drawable.ic_launcher)) ;
-		holder.tvProfile.setText(creativeInfo.getMetaDetail()) ;
-//		holder.ivProgress.set
-		
-		holder.ivParticipate.setImageDrawable(context.getResources().getDrawable(R.drawable.ic_launcher)) ;
-		holder.tvParticipate.setText("" + creativeInfo.getParticipate() + "人") ;
-		holder.ivDiscuss.setImageDrawable(context.getResources().getDrawable(R.drawable.ic_launcher)) ;
-		holder.tvDiscuss.setText("" + creativeInfo.getDiscuss() + "讨论") ;
-		holder.ivDays.setImageDrawable(context.getResources().getDrawable(R.drawable.ic_launcher) ) ;
-		holder.tvDays.setText("" + creativeInfo.getDays() + "天") ;
-		holder.ivMoney.setImageDrawable(context.getResources().getDrawable(R.drawable.ic_launcher)) ;
-		holder.tvMoney.setText("￥" + creativeInfo.getMoney()) ;
+//		holder.tvName.setText(creativeInfo.getMetaName()) ;
+//		holder.ivLogo.setImageDrawable(context.getResources().getDrawable(R.drawable.logo)) ;
+//		holder.tvProfile.setText(creativeInfo.getMetaDetail()) ;
+////		holder.ivProgress.set
+//		
+//		holder.ivParticipate.setImageDrawable(context.getResources().getDrawable(R.drawable.groupico)) ;
+//		holder.tvParticipate.setText("" + creativeInfo.getParticipate() + "人") ;
+//		holder.ivDiscuss.setImageDrawable(context.getResources().getDrawable(R.drawable.groupico)) ;
+//		holder.tvDiscuss.setText("" + creativeInfo.getDiscuss() + "讨论") ;
+//		holder.ivDays.setImageDrawable(context.getResources().getDrawable(R.drawable.groupico) ) ;
+//		holder.tvDays.setText("" + creativeInfo.getDays() + "天") ;
+//		holder.ivMoney.setImageDrawable(context.getResources().getDrawable(R.drawable.groupico)) ;
+//		holder.tvMoney.setText("￥" + creativeInfo.getMoney()) ;
 	}
 
 	class ViewHolder {
-		private TextView tvName ;
-		private ImageView ivLogo ;
-		private TextView tvProfile ;
-		private ProgressBar ivProgress ;
+		public TextView tvName ;
+		public ImageView ivLogo ;
+		public TextView tvProfile ;
+		public ProgressBar ivProgress ;
 		
-		private ImageView ivParticipate ;
-		private TextView tvParticipate ;
-		private ImageView ivDiscuss ;
-		private TextView tvDiscuss ;
-		private ImageView ivDays ; 
-		private TextView tvDays ;
-		private ImageView ivMoney ;
-		private TextView tvMoney ;
+		public ImageView ivParticipate ;
+		public TextView tvParticipate ;
+		public ImageView ivDiscuss ;
+		public TextView tvDiscuss ;
+		public ImageView ivDays ; 
+		public TextView tvDays ;
+		public ImageView ivMoney ;
+		public TextView tvMoney ;
 		
 	}
 	

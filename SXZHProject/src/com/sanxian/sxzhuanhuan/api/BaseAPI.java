@@ -6,7 +6,6 @@ import org.json.JSONObject;
 
 import android.app.AlertDialog;
 import android.app.Dialog;
-import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
 import android.util.Log;
@@ -29,7 +28,7 @@ import com.sanxian.sxzhuanhuan.util.Util;
  */
 public abstract class BaseAPI {
 
-	public static final String API_SERVER = "http://192.168.1.75/index.php";
+	public static final String API_SERVER = "http://192.168.1.9/mobileapi/index.php";
 	// public static final String API_SERVER
 	// ="http://192.168.0.107/index.php/v2/";
 	// public static final String API_SERVER
@@ -93,15 +92,16 @@ public abstract class BaseAPI {
 			client.setTimeout(45000);
 			cookieStore = new PersistentCookieStore(listener);
 		}
-			pdf = listener.getSharedPreferences("userinfo",
-					Context.MODE_PRIVATE);
-		String token = pdf.getString("token", "");
-		params.put("token", token);
-		if ("member/login/?".equals(url) || "member/getBindUid/?".equals(url)) {
-			client.setCookieStore(cookieStore);
-		} else {
-			client.addHeader("Cookie", getCookie());
-		}
+		client.setCookieStore(cookieStore);
+//			pdf = listener.getSharedPreferences("userinfo",
+//					Context.MODE_PRIVATE);
+//		String token = pdf.getString("token", "");
+//		params.put("token", token);
+//		if ("member/login/?".equals(url) || "member/getBindUid/?".equals(url)) {
+//			client.setCookieStore(cookieStore);
+//		} else {
+//			client.addHeader("Cookie", getCookie());
+//		}
 
 		if (postMethod.equals(HTTPMETHOD_POST)) {
 			BaseAPI.post(url, params, new AsyncHttpResponseHandler() {
@@ -132,8 +132,8 @@ public abstract class BaseAPI {
 							saveCookies(cookieStore, listener);
 						}
 						/* 登录信息保存 end */
-						int state = obj.getInt("status");
-						if (state == 444) {
+						int state = obj.getInt("ret");
+						if (state == BaseActivity.COOKIE_INVILD) {
 							listener.refresh(BaseActivity.COOKIE_INVILD);
 						} else {
 							listener.refresh(requestCode, response);
@@ -210,11 +210,11 @@ public abstract class BaseAPI {
 			client = new AsyncHttpClient();
 			client.setTimeout(45000);
 		}
-			pdf = listener.getSharedPreferences("userinfo",
-					Context.MODE_PRIVATE);
-		String token = pdf.getString("token", "");
-		params.put("token", token);
-		client.addHeader("Cookie", getCookie());
+//			pdf = listener.getSharedPreferences("userinfo",
+//					Context.MODE_PRIVATE);
+//		String token = pdf.getString("token", "");
+//		params.put("token", token);
+//		client.addHeader("Cookie", getCookie());
 		if (postMethod.equals(HTTPMETHOD_POST)) {
 			BaseAPI.post(url, params, new AsyncHttpResponseHandler() {
 				public void onStart() {
@@ -237,8 +237,8 @@ public abstract class BaseAPI {
 						Log.d("response", response);
 						JSONObject obj = new JSONObject(response);
 						/* 登录信息保存 end */
-						int state = obj.getInt("status");
-						if (state == 444) {
+						int state = obj.getInt("ret");
+						if (state == BaseActivity.COOKIE_INVILD) {
 							listener.refresh(BaseActivity.COOKIE_INVILD);
 						} else {
 							listener.refresh(requestCode, response, map);
@@ -318,11 +318,11 @@ public abstract class BaseAPI {
 			timeout = 45000;
 		}
 		client.setTimeout(timeout);
-			pdf = listener.getSharedPreferences("userinfo",
-					Context.MODE_PRIVATE);
-		String token = pdf.getString("token", "");
-		params.put("token", token);
-		client.addHeader("Cookie", getCookie());
+//			pdf = listener.getSharedPreferences("userinfo",
+//					Context.MODE_PRIVATE);
+//		String token = pdf.getString("token", "");
+//		params.put("token", token);
+//		client.addHeader("Cookie", getCookie());
 		if (postMethod.equals(HTTPMETHOD_POST)) {
 			BaseAPI.post(url, params, new AsyncHttpResponseHandler() {
 				public void onStart() {
@@ -345,8 +345,8 @@ public abstract class BaseAPI {
 						Log.d("response", response);
 						JSONObject obj = new JSONObject(response);
 						/* 登录信息保存 end */
-						int state = obj.getInt("status");
-						if (state == 444) {
+						int state = obj.getInt("ret");
+						if (state == BaseActivity.COOKIE_INVILD) {
 							listener.refresh(BaseActivity.COOKIE_INVILD);
 						} else {
 							listener.refresh(requestCode, response);
@@ -403,11 +403,11 @@ public abstract class BaseAPI {
 			client.setTimeout(45000);
 		}
 		// client.getHttpClient().setCookieStore((CookieStore) getSaveCookie());
-			pdf = listener.getContext().getSharedPreferences("userinfo",
-					Context.MODE_PRIVATE);
-		String token = pdf.getString("token", "");
-		params.put("token", token); 
-		client.addHeader("Cookie", getCookie());
+//			pdf = listener.getContext().getSharedPreferences("userinfo",
+//					Context.MODE_PRIVATE);
+//		String token = pdf.getString("token", "");
+//		params.put("token", token); 
+//		client.addHeader("Cookie", getCookie());
 		if (postMethod.equals(HTTPMETHOD_POST)) {
 			BaseAPI.post(url, params, new AsyncHttpResponseHandler() {
 				public void onStart() {
@@ -434,8 +434,8 @@ public abstract class BaseAPI {
 						// Toast.LENGTH_LONG).show();
 						JSONObject obj = new JSONObject(response);
 						/* 登录信息保存 end */
-						int state = obj.getInt("status");
-						if (state == 444) {
+						int state = obj.getInt("ret");
+						if (state == BaseActivity.COOKIE_INVILD) {
 							listener.refresh(BaseActivity.COOKIE_INVILD);
 						} else {
 							listener.refresh(requestCode, response);
@@ -499,12 +499,12 @@ public abstract class BaseAPI {
 		if (client == null) {
 			client = new AsyncHttpClient();
 		}
-			pdf = SApplication.getInstance().getSharedPreferences("userinfo",
-					Context.MODE_PRIVATE);
-		String token = pdf.getString("token", "");
-		params.put("token", token);
+//			pdf = SApplication.getInstance().getSharedPreferences("userinfo",
+//					Context.MODE_PRIVATE);
+//		String token = pdf.getString("token", "");
+//		params.put("token", token);
 		// client.getHttpClient().setCookieStore((CookieStore) getSaveCookie());
-		client.addHeader("Cookie", getCookie());
+//		client.addHeader("Cookie", getCookie());
 		if (postMethod.equals(HTTPMETHOD_POST)) {
 			BaseAPI.post(url, params, new AsyncHttpResponseHandler() {
 				public void onStart() {
@@ -562,10 +562,10 @@ public abstract class BaseAPI {
 			client.setTimeout(45000);
 		}
 		// client.getHttpClient().setCookieStore((CookieStore) cookie);
-			pdf = listener.getSharedPreferences("userinfo",
-					Context.MODE_PRIVATE);
-		String token = pdf.getString("token", "");
-		params.put("token", token);
+//			pdf = listener.getSharedPreferences("userinfo",
+//					Context.MODE_PRIVATE);
+//		String token = pdf.getString("token", "");
+//		params.put("token", token);
 		if (postMethod.equals(HTTPMETHOD_POST)) {
 			BaseAPI.post(url, params, new AsyncHttpResponseHandler() {
 				public void onStart() {
@@ -588,8 +588,8 @@ public abstract class BaseAPI {
 						Log.d("response", response);
 						JSONObject obj = new JSONObject(response);
 						/* 登录信息保存 end */
-						int state = obj.getInt("status");
-						if (state == 444) {
+						int state = obj.getInt("ret");
+						if (state == BaseActivity.COOKIE_INVILD) {
 							listener.refresh(BaseActivity.COOKIE_INVILD);
 						} else {
 							listener.refresh(requestCode, response);
@@ -645,10 +645,10 @@ public abstract class BaseAPI {
 			client = new AsyncHttpClient();
 
 		}
-			pdf = listener.getSharedPreferences("userinfo",
-					Context.MODE_PRIVATE);
-		String token = pdf.getString("token", "");
-		params.put("token", token);
+//			pdf = listener.getSharedPreferences("userinfo",
+//					Context.MODE_PRIVATE);
+//		String token = pdf.getString("token", "");
+//		params.put("token", token);
 		if (postMethod.equals(HTTPMETHOD_POST)) {
 
 			client.post(url, params, new AsyncHttpResponseHandler() {

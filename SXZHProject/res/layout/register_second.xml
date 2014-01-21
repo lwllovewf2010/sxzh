@@ -68,7 +68,7 @@
             android:layout_marginTop="15dp"
             android:background="@drawable/login_btn"
             android:gravity="center"
-            android:text="@string/reg_get_phone_code"
+            android:text="@string/reg_submit_phone_code"
             android:textSize="@dimen/reg_text_size" />
     </LinearLayout>
 

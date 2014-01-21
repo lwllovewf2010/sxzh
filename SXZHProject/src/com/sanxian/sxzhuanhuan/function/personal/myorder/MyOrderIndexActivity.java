@@ -12,6 +12,7 @@ import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
+import android.widget.AdapterView.OnItemLongClickListener;
 import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -53,12 +54,12 @@ public class MyOrderIndexActivity extends BaseActivity implements IBaseActivity,
 		imageLoader = ImageLoader.getInstance();
 		options = new DisplayImageOptions.Builder().showStubImage(R.drawable.default_avatar).cacheInMemory().cacheOnDisc().build();
 	}
-	
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.myorder_index);
-//		initPopuWindow(R.layout.bottom_commom_popupwindow,arrayStrings);
+		// initPopuWindow(R.layout.bottom_commom_popupwindow,arrayStrings);
 		intImageUtil();
 		this.initView();
 		this.initListener();
@@ -72,7 +73,7 @@ public class MyOrderIndexActivity extends BaseActivity implements IBaseActivity,
 		for (int i = 0; i < 20; i++) {
 			OrderInfo orderBean = new OrderInfo();
 			orderBean.setAvatar("http://g.hiphotos.baidu.com/image/w%3D2048/sign=56cec885013b5bb5bed727fe02ebd439/7dd98d1001e939015fc5441079ec54e737d196dd.jpg");
-			orderBean.setGoods_name("mac air"+i);
+			orderBean.setGoods_name("mac air" + i);
 			orderList.add(orderBean);
 		}
 
@@ -82,8 +83,8 @@ public class MyOrderIndexActivity extends BaseActivity implements IBaseActivity,
 	public void initView() {
 		super.initView();
 
-//		super.button_right.setVisibility(View.GONE);
-		
+		// super.button_right.setVisibility(View.GONE);
+
 		super.title_txt.setText("我的订单");
 		myorder_listview = (ListView) this.findViewById(R.id.myorder_listview);
 	}
@@ -100,7 +101,8 @@ public class MyOrderIndexActivity extends BaseActivity implements IBaseActivity,
 	class MyOrderListView implements OnItemClickListener {
 		@Override
 		public void onItemClick(AdapterView<?> arg0, View arg1, int arg2, long arg3) {
-			Util.toastInfo(MyOrderIndexActivity.this, orderList.get(arg2).getGoods_name());
+			
+			Util.toastInfo(MyOrderIndexActivity.this, orderList.get(arg2).getGoods_name()+"cs");
 		}
 
 	}
@@ -111,64 +113,60 @@ public class MyOrderIndexActivity extends BaseActivity implements IBaseActivity,
 
 	@Override
 	public void onClick(View v) {
-//		if(v==super.menu[0]){
-//			Util.toastInfo(this, "看1");
-//			mPopupWindow.dismiss();
-//		}else if(v==super.menu[1]){
-//			Util.toastInfo(this, "看2");
-//			mPopupWindow.dismiss();
-//		}else if(v==super.menu[2]){
-//			Util.toastInfo(this, "看3");
-//			mPopupWindow.dismiss();
-//		}
+	
 		switch (v.getId()) {
 
 		case R.id.title_Left:
 			this.finish();
 			break;
 		case R.id.title_right:
-//			showDialog();
+			// showDialog();
 			showDialog2();
 			break;
 		default:
 			break;
 		}
 	}
-	public void showDialog(){
-		Intent intent=new Intent(this,FootDialog.class);
-		FootDialogInfo info=new FootDialogInfo();
-		String []arrayStrings={"看美女","还是看美女","算了吧"};
+
+	public void showDialog() {
+		Intent intent = new Intent(this, FootDialog.class);
+		FootDialogInfo info = new FootDialogInfo();
+		String[] arrayStrings = { "看美女", "还是看美女", "算了吧" };
 		info.setMenu(arrayStrings);
 		intent.putExtra("info", info);
 		startActivityForResult(intent, DialogConstant.REQUEST_FOOT);
 	}
-	public void showDialog2(){
-		Intent intent=new Intent(this,MiddleDialog.class);
-		MiddleDialogInfo info=new MiddleDialogInfo("提示", "对面的女孩看过来，看过来......", false, "", "", "看过来", "不看我走了");
-		
-//		(String title, String content, boolean isEdit, String edit_hint, String edit_content, String ok, String cancel)
+
+	public void showDialog2() {
+		Intent intent = new Intent(this, MiddleDialog.class);
+		MiddleDialogInfo info = new MiddleDialogInfo("提示", "对面的女孩看过来，看过来......", false, "", "", "看过来", "不看我走了");
+
+		// (String title, String content, boolean isEdit, String edit_hint,
+		// String edit_content, String ok, String cancel)
 		intent.putExtra("info", info);
 		startActivityForResult(intent, DialogConstant.REQUEST_MIDDLE);
 	}
+
 	@Override
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 		super.onActivityResult(requestCode, resultCode, data);
-		if(requestCode==DialogConstant.REQUEST_FOOT){
-			if(resultCode==DialogConstant.FOOTDIALOG_ONE){
+		if (requestCode == DialogConstant.REQUEST_FOOT) {
+			if (resultCode == DialogConstant.FOOTDIALOG_ONE) {
 				Util.toastInfo(this, "1");
-			}else if(resultCode==DialogConstant.FOOTDIALOG_TWO){
+			} else if (resultCode == DialogConstant.FOOTDIALOG_TWO) {
 				Util.toastInfo(this, "2");
-			}else if(resultCode==DialogConstant.FOOTDIALOG_THREE){
+			} else if (resultCode == DialogConstant.FOOTDIALOG_THREE) {
 				Util.toastInfo(this, "3");
 			}
-		}else if(requestCode==DialogConstant.REQUEST_MIDDLE){
-			if(resultCode==DialogConstant.MIDDLE_OK){
+		} else if (requestCode == DialogConstant.REQUEST_MIDDLE) {
+			if (resultCode == DialogConstant.MIDDLE_OK) {
 				Util.toastInfo(this, "1");
-			}else if(resultCode==DialogConstant.MIDDLE_CANCEL){
+			} else if (resultCode == DialogConstant.MIDDLE_CANCEL) {
 				Util.toastInfo(this, "2");
 			}
 		}
 	}
+
 	class MyOrderListviewAdapter extends BaseAdapter {
 		List<OrderInfo> list = new ArrayList<OrderInfo>();
 		private LayoutInflater mInflater = null;

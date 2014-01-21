@@ -54,7 +54,7 @@
              android:id="@+id/username_tv"
              android:layout_width="wrap_content"
              android:layout_height="wrap_content"
-             android:text="赵钱孙" />
+             android:text="" />
 
          <TextView
              android:id="@+id/phone_tv"
@@ -69,7 +69,7 @@
              android:layout_height="wrap_content"
              android:layout_below="@id/username_tv"
              android:layout_toRightOf="@id/phone_tv"
-             android:text="158xxxxx111" />
+             android:text="" />
 
          <LinearLayout
              android:layout_width="fill_parent"
@@ -82,7 +82,7 @@
                  android:layout_height="wrap_content"
                  android:layout_weight="1"
                  android:singleLine="true"
-                 android:text="xxxx公司" />
+                 android:text="" />
 
              <TextView
                  android:id="@+id/position_tv"
@@ -90,7 +90,7 @@
                  android:layout_height="wrap_content"
                  android:layout_weight="2"
                  android:singleLine="true"
-                 android:text="董事长" />
+                 android:text="" />
 
          </LinearLayout>
      </RelativeLayout>
@@ -132,7 +132,7 @@
          android:layout_width="wrap_content"
          android:layout_height="wrap_content"
          android:layout_toLeftOf="@id/arraw2"
-         android:text="456"
+         android:text=""
          android:layout_marginRight="20dip"
          android:layout_centerVertical="true"
          />
@@ -175,7 +175,7 @@
              android:id="@+id/my_project_sum"
              android:layout_width="wrap_content"
              android:layout_height="wrap_content"
-             android:text="2"
+             android:text=""
              />
          
      </LinearLayout>
@@ -203,7 +203,7 @@
              android:id="@+id/my_tribe_sum"
              android:layout_width="wrap_content"
              android:layout_height="wrap_content"
-             android:text="2"
+             android:text=""
              />
          
      </LinearLayout>
@@ -235,10 +235,10 @@
              android:text="@string/shopping_trolley_table"
              />
          <TextView
-             android:id="@+id/article_sum"
+             android:id="@+id/my_article_sum"
              android:layout_width="wrap_content"
              android:layout_height="wrap_content"
-             android:text="2"
+             android:text=""
              />
          
      </LinearLayout>
@@ -266,7 +266,7 @@
              android:id="@+id/my_order_sum"
              android:layout_width="wrap_content"
              android:layout_height="wrap_content"
-             android:text="2"
+             android:text=""
              />
          
      </LinearLayout>
@@ -350,7 +350,7 @@
          android:id="@+id/wxin_sum"
          android:layout_width="wrap_content"
          android:layout_height="wrap_content"
-         android:text="1"
+         android:text=""
          android:layout_toRightOf="@id/wxin"
          android:layout_centerVertical="true"
          android:textSize="16sp"

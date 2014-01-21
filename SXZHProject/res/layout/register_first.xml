@@ -39,24 +39,21 @@
         android:layout_marginRight="20dp"
         android:layout_marginTop="25dp"
         android:gravity="center"
-        android:orientation="horizontal" >
+        android:orientation="vertical" >
 
-        <EditText
-            android:layout_width="50dp"
-            android:layout_height="wrap_content"
-            android:clickable="false"
-            android:focusable="false"
-            android:gravity="center"
-            android:text="@string/reg_cn_code" />
-
-        <EditText
+        <TextView
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:clickable="false"
-            android:focusable="false"
-            android:gravity="right"
-            android:paddingLeft="-10dp"
-            android:text="@string/reg_cn" />
+            android:gravity="left"
+            android:text="系统需邀请才能注册，请输入您的被邀请信息：" />
+        
+        <EditText
+            android:id="@+id/register_et_username"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:hint="请输入您的姓名" />
+
     </LinearLayout>
 
     <LinearLayout

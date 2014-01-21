@@ -31,33 +31,52 @@
 	    
 	    <TextView android:id="@+id/home_index_list_right_text"
 	        	  android:layout_width="150dip"
-	        	  android:layout_height="wrap_content"
+	        	  android:layout_height="60dip"
 	        	  android:layout_toRightOf="@+id/home_index_list_image" 
 	        	  android:layout_alignParentRight="true"
 	        	  android:text="这是一段详细介绍这是一段详细介绍这是一段详细介绍这是一段详细介绍这是一段详细介绍这是一段详细介绍这是一段详细介绍这是一段详细介绍"		
 	        	    	 
 	        />
 	    
-	    <ProgressBar  
-	        android:layout_marginTop="15dip"
-	        android:layout_marginLeft="5dip"
-	        android:layout_marginRight="5dip"
-    		android:id="@+id/home_index_progressBar" 
-    		android:layout_width="fill_parent"  
-    		android:layout_height="5dip"  
-    		style="?android:attr/progressBarStyleHorizontal" 
-    		android:max="100" 
-    		android:progress="100" 
-    		android:secondaryProgress="100" 
-    		android:layout_below="@+id/home_index_list_image"
-    		
-    /> 
+	    <FrameLayout
+                		android:layout_width="match_parent"
+                		android:layout_height="wrap_content"
+                		android:orientation="horizontal"
+                		android:id="@+id/home_index_progressBar" 
+                		android:layout_below="@+id/home_index_list_right_text"
+                		android:layout_marginTop="10dip"
+                		android:layout_marginLeft="5dip"
+                		android:layout_marginRight="5dip"
+                		 >
+                    <ProgressBar
+					   	android:id="@+id/fileReceiveProgressBar"
+					    style="?android:style/attr/progressBarStyleHorizontal"
+					    android:layout_width="match_parent"
+					    android:layout_height="15dip"
+					    android:max="100"
+					    android:progress="100" 
+    					android:secondaryProgress="100"					    
+    				/>
+                    <TextView
+                    android:id="@+id/tv_percentageOfFile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="30%"
+                   	android:textColor="@color/black"
+                    android:textSize="10dip"
+                    android:layout_gravity="center"
+                    android:background="@color/transparent" />
+                     
+                 </FrameLayout>
+   
     <LinearLayout android:id="@+id/home_index_button_bar"
         		  android:layout_width="fill_parent"
         		  android:layout_height="wrap_content"
         		  android:layout_below="@+id/home_index_progressBar"
         		  android:orientation="horizontal"
-        		  android:layout_marginTop="10dip"
+        		  android:layout_marginTop="5dip"
+                  android:layout_marginLeft="5dip"
+                  android:layout_marginRight="5dip"
         		  
         >
 	        <LinearLayout android:id="@+id/home_index_button_bar1"

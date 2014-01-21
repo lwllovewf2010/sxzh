@@ -18,4 +18,17 @@ public class IndexAPI extends BaseAPI{
 		params.put("type", type);		
 		request("", params, HTTPMETHOD_GET, false, listener, requestCode);
 	}
+	
+	
+	/**
+	 * 获取创意列表
+	 * @param value
+	 * @param listener
+	 * @param requestCode
+	 */
+	public void findProjectList(String value,final BaseFragment listener,final int requestCode){
+		RequestParams params = new RequestParams();
+		params.put("input", value);
+		request("", params, HTTPMETHOD_POST, false,listener, requestCode);
+	}
 }

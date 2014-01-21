@@ -12,7 +12,7 @@
     <string name="publish_originality_add_image">添加图片：</string>
     <string name="publish_originality_netaddress">视频网络地址，可不填</string>
     <string name="publish_originality_detailed_introduce">详情介绍，不超过1000字。。。</string>
-    <string name="publish_topic_title">话题名称，必填，不超过25个字</string>
+    <string name="publish_topic_title">话题名称，必填，不超过10个字</string>
     <string name="publish_topic_detailed_introduce">话题内容，不超过1000字。。。</string>
     <string name="publish_topic_xieyi">我已阅读并同意《三弦项目发布要求》</string>
     <string name="topic_content_miaos">创意描述</string>

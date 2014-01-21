@@ -1,6 +1,12 @@
 package com.sanxian.sxzhuanhuan.entity;
 
 import java.util.ArrayList;
+import java.util.Date;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import com.sanxian.sxzhuanhuan.entity.InterfaceData.ICategory;
 
 /**   
  * @Title: TestData.java 
@@ -37,14 +43,15 @@ public class TestData {
 	 * 初始化创意测试数据
 	 * @return
 	 */
-	public static ArrayList<CreativeInfo> initCreative() {
+	/*public static ArrayList<CreativeInfo> initCreative() {
 		ArrayList<CreativeInfo> creativeInfos = new ArrayList<CreativeInfo>() ;
 		CreativeInfo creativeInfo = null ;
 		for (int i = 1; i < 10; i++) {
 			creativeInfo = new CreativeInfo() ;
 			creativeInfo.setMetaName("metaName" + i) ;
 			creativeInfo.setLogo("logo---url" ) ;
-			creativeInfo.setMetaDetail("CreativeInfoCreativeInfoCreativeInfo" + i) ;
+			creativeInfo.setMetaDetail("这是一段详细介绍这是一段详细介绍这是一段详细介绍这是一段详细介绍" + 
+            "这是一段详细介绍这是一段详细介绍这是一段详细介绍这是一段详细介绍" + i) ;
 			creativeInfo.setMoney(100.0f * i) ;
 			creativeInfo.setMetaMoney(10000.0f * i) ;
 			creativeInfo.setParticipate(10 * i) ;
@@ -54,20 +61,21 @@ public class TestData {
 			creativeInfos.add(creativeInfo) ;
 		}
 		return creativeInfos ;
-	}
+	}*/
 	
 	/**
 	 * 初始化项目测试数据
 	 * @return
 	 */
-	public static ArrayList<ProjectInfo> initProject() {
+	/*public static ArrayList<ProjectInfo> initProject() {
 		ArrayList<ProjectInfo> projectInfos = new ArrayList<ProjectInfo>() ;
 		ProjectInfo projectInfo = null ;
 		for (int i = 1; i < 10; i++) {
 			projectInfo = new ProjectInfo() ;
 			projectInfo.setMetaName("metaName" + i) ;
 			projectInfo.setLogo("logo---url" ) ;
-			projectInfo.setMetaDetail("ProjectInfoProjectInfoProjectInfoProjectInfo" + i) ;
+			projectInfo.setMetaDetail("这是一段详细介绍这是一段详细介绍这是一段详细介绍这是一段详细介绍" + 
+		            "这是一段详细介绍这是一段详细介绍这是一段详细介绍这是一段详细介绍" + i) ;
 			projectInfo.setMoney(100.0f * i) ;
 			projectInfo.setMetaMoney(10000.0f * i) ;
 			projectInfo.setParticipate(10 * i) ;
@@ -77,19 +85,20 @@ public class TestData {
 			projectInfos.add(projectInfo) ;
 		}
 		return projectInfos ;
-	}
+	}*/
 	/**
 	 * 初始化商品测试数据
 	 * @return
 	 */
-	public static ArrayList<ProductInfo> initProduct() {
+	/*public static ArrayList<ProductInfo> initProduct() {
 		ArrayList<ProductInfo> productInfos = new ArrayList<ProductInfo>() ;
 		ProductInfo productInfo = null ;
 		for (int i = 1; i < 10; i++) {
 			productInfo = new ProductInfo() ;
 			productInfo.setMetaName("metaName" + i) ;
 			productInfo.setLogo("logo---url" ) ;
-			productInfo.setMetaDetail("ProductInfoProductInfoProductInfoProductInfo" + i) ;
+			productInfo.setMetaDetail("这是一段详细介绍这是一段详细介绍这是一段详细介绍这是一段详细介绍" + 
+		            "这是一段详细介绍这是一段详细介绍这是一段详细介绍这是一段详细介绍" + i) ;
 			productInfo.setMoney(100.0f * i) ;
 			productInfo.setMetaMoney(10000.0f * i) ;
 			productInfo.setParticipate(10 * i) ;
@@ -99,5 +108,61 @@ public class TestData {
 			productInfos.add(productInfo) ;
 		}
 		return productInfos ;
+	}*/
+	
+	/**
+	 * 初始化测试数据---行业
+	 * @param arrs
+	 * @return
+	 */
+	public static List<Map<String , String>> initIndustry(String[] arrs) {
+		List<Map<String , String>> contents = new ArrayList<Map<String,String>>() ;
+		for (int i = 0; i < arrs.length; i++) {
+			Map<String, String> map = new HashMap<String, String>();
+			map.put("CONTENT", arrs[i]);
+//			map.put("COUNT", "111") ;
+			contents.add(map);
+		}
+		return contents ;
+	}
+	
+	public static List<Map<String , String>> initIndustry(List<ICategory> sortParent) {
+		List<Map<String , String>> contents = new ArrayList<Map<String,String>>() ;
+		for (int i = 0; i < sortParent.size(); i++) {
+			Map<String, String> map = new HashMap<String, String>();
+			map.put("CONTENT", sortParent.get(i).getTitle() ) ;
+//			map.put("COUNT", "111") ;
+			contents.add(map);
+		}
+		return contents ;
+	}
+	
+	public static List<Map<String , String>> initIndustryParent(List<ICategory> sortParent) {
+		List<Map<String , String>> contents = new ArrayList<Map<String,String>>() ;
+		for (int i = 0; i < sortParent.size(); i++) {
+			Map<String, String> map = new HashMap<String, String>();
+			map.put("CONTENT", sortParent.get(i).getTitle());
+			map.put("COUNT", sortParent.get(i).getSub_count()) ;
+			contents.add(map);
+		}
+		return contents ;
+	}
+	
+	/**
+	 * 初始化测试数据---项目成员
+	 * @return
+	 */
+	public static ArrayList<UserInfo> initUserinfos() {
+		ArrayList<UserInfo> userinfos = new ArrayList<UserInfo>() ;
+		UserInfo userinfo = null ;
+		for (int i = 1; i <= 10; i++) {
+			userinfo = new UserInfo() ;
+			userinfo.setUsername("zhangfl---" + i) ;
+			userinfo.setJointime("" + new Date()) ;
+			userinfo.setJoinProCount( i * i) ;
+			userinfo.setShareProCount(i * 10 ) ;
+			userinfos.add(userinfo) ;
+		}
+		return userinfos ;
 	}
 }

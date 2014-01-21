@@ -1,168 +1,179 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent" 
-    android:background="@color/white">
- <include
-     android:id="@+id/title_bar" 
-     layout="@layout/title_bar"></include>"
+    android:layout_height="fill_parent"
+    android:background="@color/white" >
+
+    <include
+        android:id="@+id/title_bar"
+        layout="@layout/title_bar" >
+    </include>
+"
+
     <LinearLayout
         android:id="@+id/linearLayout_con"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical" 
         android:layout_below="@id/title_bar"
+        android:orientation="vertical"
         android:paddingLeft="10dip"
         android:paddingRight="10dip"
-        android:paddingTop="10dip">
-        
+        android:paddingTop="10dip" >
+
         <LinearLayout
-           android:layout_width="fill_parent"
-           android:layout_height="wrap_content"
-           android:orientation="horizontal" >
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
 
-           <TextView
-               android:layout_width="fill_parent"
-               android:layout_height="wrap_content"
-               android:layout_weight="1"
-               android:text="@string/consignee_table" 
-               android:textSize="17sp"
-               android:gravity="right"
-               android:textColor="@color/black" 
-               />
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/consignee_table"
+                android:textColor="@color/black"
+                android:textSize="17sp" />
 
-           <EditText
-               android:layout_width="match_parent"
-               android:layout_height="wrap_content"
-               android:layout_weight="0.6"
-               android:text=""
-               android:textSize="17sp"  
-               android:layout_marginLeft="10dip"
-               android:textColor="@color/black">
-           </EditText>
-       </LinearLayout>
-       
-         <LinearLayout
-           android:layout_width="fill_parent"
-           android:layout_height="wrap_content"
-           android:orientation="horizontal" >
-
-           <TextView
-               android:layout_width="fill_parent"
-               android:layout_height="wrap_content"
-               android:layout_weight="1"
-               android:text="@string/phone_number_table" 
-               android:textSize="17sp"
-               android:gravity="right"
-               android:textColor="@color/black" />
-
-           <EditText
-               android:layout_width="match_parent"
-               android:layout_height="wrap_content"
-               android:layout_weight="0.6"
-               android:text=""
-               android:layout_marginLeft="10dip"
-               android:textSize="17sp"  
-               android:textColor="@color/black">
-           </EditText>
-       </LinearLayout>
-       
-          <LinearLayout
-           android:layout_width="fill_parent"
-           android:layout_height="wrap_content"
-           android:orientation="horizontal" >
-
-           <TextView
-               android:layout_width="fill_parent"
-               android:layout_height="wrap_content"
-               android:layout_weight="1"
-               android:text="@string/postcode_table" 
-               android:textSize="17sp"
-               android:gravity="right"
-               android:textColor="@color/black" />
-
-           <EditText
-               android:layout_width="match_parent"
-               android:layout_height="wrap_content"
-               android:layout_weight="0.6"
-               android:text=""
-               android:textSize="17sp" 
-               android:layout_marginLeft="10dip" 
-               android:textColor="@color/black">
-           </EditText>
-       </LinearLayout>
-       
-           <LinearLayout
-           android:layout_width="fill_parent"
-           android:layout_height="wrap_content"
-           android:orientation="horizontal"
-           android:paddingTop="10dip"
-           android:paddingBottom="10dip" 
-           android:gravity="center_vertical">
-
-           <TextView
-               android:layout_width="fill_parent"
-               android:layout_height="wrap_content"
-               android:layout_weight="1"
-               android:text="@string/location_table" 
-               android:textSize="17sp"
-               android:gravity="right"
-               android:textColor="@color/black" />
-
-           <TextView
-               android:layout_width="match_parent"
-               android:layout_height="wrap_content"
-               android:layout_weight="0.65"
-               android:text="北京 北京市 海淀区 "
-               android:textSize="17sp"  
-               android:layout_marginLeft="10dip"
-               android:textColor="@color/black">
-           </TextView>
-           <ImageView
-               android:layout_width="wrap_content"
-               android:layout_height="wrap_content"
-               android:background="@drawable/arrow"
-              />
-       </LinearLayout>
-       
-            <LinearLayout
-           android:layout_width="fill_parent"
-           android:layout_height="wrap_content"
-           android:orientation="horizontal" >
-
-                <TextView
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:gravity="right"
-                    android:text="@string/detailed_address_table"
-                    android:textColor="@color/black"
-                    android:textSize="17sp" />
-
-           <EditText
-               android:layout_width="match_parent"
-               android:layout_height="wrap_content"
-               android:layout_weight="0.6"
-               android:text=""
-               android:textSize="17sp"  
-               android:layout_marginLeft="10dip"
-               android:textColor="@color/black">
-           </EditText>
-       </LinearLayout>
-        
-            <Button 
+            <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/delete_congsignee_address_table"
-                android:layout_marginTop="10dip"
-                />
-            
-             <Button 
+                android:layout_marginLeft="10dip"
+                android:layout_weight="0.6"
+                android:text=""
+                android:textColor="@color/black"
+                android:textSize="17sp" >
+            </EditText>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/phone_number_table"
+                android:textColor="@color/black"
+                android:textSize="17sp" />
+
+            <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="10dip"
+                android:layout_weight="0.6"
+                android:text=""
+                android:textColor="@color/black"
+                android:textSize="17sp" >
+            </EditText>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/postcode_table"
+                android:textColor="@color/black"
+                android:textSize="17sp" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dip"
+                android:layout_weight="0.6"
+                android:text=""
+                android:textColor="@color/black"
+                android:textSize="17sp" >
+            </EditText>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingBottom="10dip"
+            android:paddingTop="10dip" >
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/location_table"
+                android:textColor="@color/black"
+                android:textSize="17sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dip"
+                android:layout_weight="0.65"
+                android:text="北京 北京市 海淀区 "
+                android:textColor="@color/black"
+                android:textSize="17sp" >
+            </TextView>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/arrow" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/detailed_address_table"
+                android:textColor="@color/black"
+                android:textSize="17sp" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dip"
+                android:layout_weight="0.6"
+                android:text=""
+                android:textColor="@color/black"
+                android:textSize="17sp" >
+            </EditText>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/RelativeLayout1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dip"
+             >
+
+            <TextView
+                android:id="@+id/TextView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
                 android:text="@string/default_congsignee_address_table"
-                android:layout_marginTop="10dip"
-                />
+                android:textColor="@color/black"
+                android:layout_centerVertical="true"
+                android:textSize="17sp" />
+
+            <ImageView
+                android:id="@+id/set_default"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/anniu_on"
+                android:layout_centerVertical="true"
+                android:tag="1" />
+        </RelativeLayout>
     </LinearLayout>
 
 </RelativeLayout>

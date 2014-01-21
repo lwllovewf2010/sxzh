@@ -6,6 +6,7 @@ import com.sanxian.sxzhuanhuan.common.BaseActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.widget.TextView;
 
 
 
@@ -43,7 +44,8 @@ public class PublishProjectLast extends BaseActivity implements OnClickListener{
 		setTitle("需求发布");
 		setLeft("从设回报");	
 		findViewById(R.id.title_Left).setOnClickListener(this);
-		
+		TextView titleIndo=(TextView)findViewById(R.id.tvTitleIndo);
+		titleIndo.setText("第三步/共三步");
 	}
 
 }

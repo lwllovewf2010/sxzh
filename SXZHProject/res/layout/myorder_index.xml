@@ -2,14 +2,12 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:background="@color/red"
-    android:id="@+id/ucenter_ll"
+    android:background="@color/gray"
     android:orientation="vertical" >
 
     <include layout="@layout/title_bar" />
 
     <LinearLayout
-        style="@style/myfriends_padding"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:orientation="vertical" >
@@ -94,7 +92,10 @@
         <ListView
             android:id="@+id/myorder_listview"
             android:layout_width="fill_parent"
-            android:layout_height="fill_parent" >
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:cacheColorHint="@color/transparent"
+            android:fadingEdge="none" >
         </ListView>
     </LinearLayout>
 

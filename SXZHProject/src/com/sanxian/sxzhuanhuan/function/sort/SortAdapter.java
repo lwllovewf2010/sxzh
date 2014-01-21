@@ -3,7 +3,6 @@ package com.sanxian.sxzhuanhuan.function.sort;
 import java.util.ArrayList;
 
 import android.content.Context;
-import android.graphics.Bitmap;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,7 +11,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.sanxian.sxzhuanhuan.R;
-import com.sanxian.sxzhuanhuan.entity.SortInfo;
+import com.sanxian.sxzhuanhuan.entity.InterfaceData.ICategory;
 
 
 /**   
@@ -26,15 +25,15 @@ import com.sanxian.sxzhuanhuan.entity.SortInfo;
 public class SortAdapter extends BaseAdapter{
 
 	private Context context ;
-	private ArrayList<SortInfo> sorts ;
+	private ArrayList<ICategory> sorts ;
 	private LayoutInflater inflater ;
 	
-	public SortAdapter(Context context, ArrayList<SortInfo> sorts) {
+	public SortAdapter(Context context, ArrayList<ICategory> sorts) {
 		this.context = context ;
 		if (sorts != null)
 			this.sorts = sorts;
 		else
-			this.sorts = new ArrayList<SortInfo>();
+			this.sorts = new ArrayList<ICategory>();
 		inflater = LayoutInflater.from(context);
 		// loader = new ImageAsyncLoader();
 	}
@@ -85,34 +84,22 @@ public class SortAdapter extends BaseAdapter{
 			holder = (ViewHolder) convertView.getTag() ;
 		}
 		
-		SortInfo sort = sorts.get(position) ;
-//		holder.ivSortLogo.setImageBitmap(loadLogo(sort.getSortLogoUrl()));
-		holder.ivSortLogo.setImageDrawable(context.getResources().getDrawable(R.drawable.ic_launcher)) ;
-		holder.tvSortName.setText(sort.getSortName()) ;
-		String sortChild = "" ;
-		for (String s : sort.getSortChild()) {
-			sortChild += s + "/" ;
-		}
-		holder.tvSortChild.setText(sortChild.substring(0, sortChild.length() - 1 )) ;
+		ICategory sort = sorts.get(position) ;
+		holder.ivSortLogo.setImageDrawable(context.getResources().getDrawable(R.drawable.logo)) ;
+		holder.tvSortName.setText(sort.getTitle()) ;
+//		String sortChild = "" ;
+//		for (String s : sort.getSortChild()) {
+//			sortChild += s + "/" ;
+//		}
+//		holder.tvSortChild.setText(sortChild.substring(0, sortChild.length() - 1 )) ;
 		
 		return convertView;
 	}
 	
 	class ViewHolder {
-		private ImageView ivSortLogo ;
-		private TextView tvSortName ;
-		private TextView tvSortChild ;
-	}
-	
-	/**
-	 * 获取图库图片
-	 * @param url  图片地址
-	 * @return Bitmap
-	 */
-	private Bitmap loadLogo(String url) {
-		Bitmap logoBitmap = null;
-		// TODO 
-		return logoBitmap ;
+		public ImageView ivSortLogo ;
+		public TextView tvSortName ;
+		public TextView tvSortChild ;
 	}
 
 }

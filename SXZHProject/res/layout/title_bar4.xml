@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="48dp"
+    android:background="@drawable/tongyong_top"
+    android:gravity="center_vertical" >
+
+    <!-- 头部为了可重用 ，用linearLayout设置 -->
+
+    <LinearLayout
+        android:id="@+id/top_left_linear"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="7dip"
+        android:orientation="vertical"
+        android:layout_weight="1.6"
+        android:textSize="15sp" >
+
+        <Button
+            android:id="@+id/title_Left"
+            android:layout_width="wrap_content"
+            android:layout_height="34.5dip"
+            android:background="@drawable/titlebar_left_btn_selector"
+            android:gravity="center"
+            android:paddingLeft="18dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="2dp"
+            android:text="返回"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+     <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="42dp"
+        android:layout_weight="1.5"
+        android:gravity="center" >
+
+        <Button
+            android:id="@+id/near_people"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:visibility="gone"
+            android:background="@drawable/sixin_icon" >
+        </Button>
+        	<LinearLayout android:layout_width="wrap_content"
+        	    		  android:layout_height="fill_parent"
+        	    		  android:orientation="vertical"
+        	    >
+        	    <TextView
+	            android:id="@+id/tvTitle"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"	            	           
+	            android:singleLine="true"
+	            android:text="标题"
+	            android:textColor="@android:color/white"
+	            android:gravity="center_horizontal"
+	            android:textSize="18.0sp" />
+        	    <TextView android:layout_width="wrap_content"
+        	        	  android:layout_height="wrap_content"
+        	        	  android:text="第一步"
+        	        	  android:id="@+id/tvTitleIndo"	
+        	        	  android:textSize="10.0sp"
+        	        	  android:textColor="@android:color/white"
+        	        	   android:gravity="center_horizontal"
+        	        />
+        	    
+        	</LinearLayout>      
+	        
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/top_right_linear"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="7dip"
+        android:orientation="vertical"
+        android:layout_weight="1.6" 
+        android:gravity="right">
+
+        <Button
+            android:id="@+id/title_right"
+            android:layout_width="wrap_content"
+            android:layout_height="34.5dip"
+            android:background="@drawable/titlebar_right_btn_selector"
+            android:gravity="center"
+            android:text="确定"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:paddingLeft="11.4dp"
+            android:paddingRight="11dp" />
+    </LinearLayout>
+
+</LinearLayout>
