@@ -25,6 +25,7 @@ import com.sanxian.sxzhuanhuan.api.CommonAPI;
 import com.sanxian.sxzhuanhuan.common.BaseActivity;
 import com.sanxian.sxzhuanhuan.common.UIHelper;
 import com.sanxian.sxzhuanhuan.entity.Constant;
+import com.sanxian.sxzhuanhuan.function.homeindex.originality.OriginalityActivity;
 import com.sanxian.sxzhuanhuan.function.login.LoginActivity;
 import com.sanxian.sxzhuanhuan.util.Util;
 
@@ -88,7 +89,12 @@ public class PublishTopic extends BaseActivity implements OnClickListener {
 					JSONObject json = new JSONObject(data);
 					int status = json.getInt("ret");
 					if(status == 0){
-						Util.toastInfo(this, "创意发布成功");	
+						Util.toastInfo(this, "创意发布成功");
+						String creativeID = json.optString("content");
+						Intent intent = new Intent(this,OriginalityActivity.class);
+						intent.putExtra("creativeID", creativeID);
+						startActivity(intent);
+						finish();
 					}else{
 						Util.toastInfo(this, "创意发布失败");	
 					}
@@ -155,6 +161,7 @@ public class PublishTopic extends BaseActivity implements OnClickListener {
 //		showDialog(SHOW_TYPE, null);
 		Intent typeintent = new Intent(PublishTopic.this,GetRootCommonList.class);
 		typeintent.putExtra("type", "mode");
+		typeintent.putExtra("is_get_last","0");
 		startActivityForResult(typeintent, REQUESTCODE);
 		break;
 		//地区
@@ -163,6 +170,7 @@ public class PublishTopic extends BaseActivity implements OnClickListener {
 //		showDialog(SHOW_AREA, null);
 		Intent areaintent = new Intent(PublishTopic.this,GetRootCommonList.class);
 		areaintent.putExtra("type", "region_province");
+		areaintent.putExtra("is_get_last","0");
 		startActivityForResult(areaintent, REQUESTCODE);
 		break;
 		//行业
@@ -171,6 +179,7 @@ public class PublishTopic extends BaseActivity implements OnClickListener {
 //		showDialog(SHOW_PROFESSION, null);
 		Intent categoryintent = new Intent(PublishTopic.this,GetRootCommonList.class);
 		categoryintent.putExtra("type", "category");
+		categoryintent.putExtra("is_get_last","0");
 		startActivityForResult(categoryintent, REQUESTCODE);
 		break;
 	case R.id.title_Left:

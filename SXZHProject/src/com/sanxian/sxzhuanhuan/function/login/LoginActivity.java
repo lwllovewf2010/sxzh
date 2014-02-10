@@ -3,14 +3,17 @@ package com.sanxian.sxzhuanhuan.function.login;
 import java.util.HashMap;
 import java.util.Map;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.Window;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.sanxian.sxzhuanhuan.R;
 import com.sanxian.sxzhuanhuan.api.JSONParser;
@@ -20,6 +23,9 @@ import com.sanxian.sxzhuanhuan.common.CommonTitle;
 import com.sanxian.sxzhuanhuan.common.UIHelper;
 import com.sanxian.sxzhuanhuan.entity.Constant;
 import com.sanxian.sxzhuanhuan.entity.InterfaceData.ILogin;
+import com.sanxian.sxzhuanhuan.message.MessageLogin;
+import com.sanxian.sxzhuanhuan.message.xmpp.XmppService;
+import com.sanxian.sxzhuanhuan.message.xmpp.XmppUtils;
 import com.sanxian.sxzhuanhuan.util.Util;
 
 /**   
@@ -48,7 +54,6 @@ public class LoginActivity extends BaseActivity implements OnClickListener{
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
-		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		
 		setContentView(R.layout.login) ;
 		
@@ -109,6 +114,7 @@ public class LoginActivity extends BaseActivity implements OnClickListener{
 		}
 	}
 	
+	@SuppressWarnings("unchecked")
 	@Override
 	public void refresh(Object... param) {
 		// TODO Auto-generated method stub
@@ -137,11 +143,38 @@ public class LoginActivity extends BaseActivity implements OnClickListener{
 						editor.putString("token", logindata.getToken()) ;
 						editor.putString("user_name", logindata.getUser_name()) ;
 						editor.putString("photo", logindata.getPhoto()) ;
-						editor.putString("dname", logindata.getDname()) ;
+						editor.putString("dname", logindata.getTrue_name()) ;
 						editor.putString("mobile", logindata.getMobile()) ;
 						editor.putString("email", logindata.getEmail()) ;
 						
 						editor.commit() ;
+						
+						
+						MessageLogin login=new MessageLogin(){
+
+							@Override
+							protected void onPostExecute(Boolean result) {
+								// TODO Auto-generated method stub
+								if(result){
+									Log.d("loginactivity", "登入成功了启动服务");
+									Toast toast=new Toast(LoginActivity.this);
+									toast.makeText(LoginActivity.this, "openfire登入成功", Toast.LENGTH_LONG).show();
+									//登入成功
+									Intent intentService = new Intent(LoginActivity.this,XmppService.class);
+									startService(intentService);									
+									//状态设置为上线
+									XmppUtils.getInstance().sendOnLine();
+								}
+							}
+							
+						};
+						Map<String, String> map=new HashMap<String, String>();
+//						map.put("username", etAccount.getText().toString());
+//						map.put("username", etPassword.getText().toString());
+						map.put("username",logindata.getOpen_id());
+						map.put("password","666666");						
+						login.execute(map);
+						
 						
 						setResult(Constant.RESULT_LOGIN_CODE) ;
 						finish() ;

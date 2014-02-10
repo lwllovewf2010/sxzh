@@ -22,14 +22,17 @@ import com.sanxian.sxzhuanhuan.R;
 import com.sanxian.sxzhuanhuan.api.CommonAPI;
 import com.sanxian.sxzhuanhuan.api.HomeIndexGoodsAPI;
 import com.sanxian.sxzhuanhuan.common.BaseActivity;
+import com.sanxian.sxzhuanhuan.entity.AddressInfo;
 import com.sanxian.sxzhuanhuan.entity.GoodsBuyEntity;
 import com.sanxian.sxzhuanhuan.entity.GoodsItemDetails;
+import com.sanxian.sxzhuanhuan.function.homeindex.project.ProjectContentActivity;
 import com.sanxian.sxzhuanhuan.function.personal.myaccount.MyAccoAddressIndexActivity;
 import com.sanxian.sxzhuanhuan.util.Util;
 
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.RectF;
 import android.os.Bundle;
@@ -70,7 +73,7 @@ public class GoodsContentActivity extends BaseActivity {
 	Button goods_add_shopping;
 	RelativeLayout goods_detail_relative;
 	RelativeLayout goods_param_relative;
-	TextView project_describe;
+	TextView project_name2;
 	TextView join_num;
 	ImageView adver1_pic;
 	TextView adver1_price;
@@ -92,12 +95,16 @@ public class GoodsContentActivity extends BaseActivity {
 
 	private HomeIndexGoodsAPI api = null;
 	private final int REQUESTCODE = 12;
+	private final int REQUEST_ORG_PROJECT = 1;
+	private final int REQUEST_DEFAULT_ADDR = 2;
+	public final static int REQUEST_NEW_ADDR = 3;
 	private GoodsItemDetails goodsItem = new GoodsItemDetails();
-	//图片参数
+	private AddressInfo address = new AddressInfo();
+	// 图片参数
 	private ImageLoader imageLoader = ImageLoader.getInstance();
-	private DisplayImageOptions options = null ;
+	private DisplayImageOptions options = null;
 	private ImageLoadingListener animateFirstListener = new AnimateFirstDisplayListener();
-	
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub MyAccoAddressIndexActivity
@@ -107,16 +114,13 @@ public class GoodsContentActivity extends BaseActivity {
 		setContentView(goodsLay);
 
 		initView();
-		
+
 		options = new DisplayImageOptions.Builder()
-		.showImageOnLoading(R.drawable.logo)
-		.showImageForEmptyUri(R.drawable.ic_empty)
-		.showImageOnFail(R.drawable.ic_error)
-		.cacheInMemory(true)
-		.cacheOnDisc(true)
-		.considerExifParams(true)
-		.displayer(new RoundedBitmapDisplayer(20))
-		.build();
+				.showImageOnLoading(R.drawable.logo)
+				.showImageForEmptyUri(R.drawable.ic_empty)
+				.showImageOnFail(R.drawable.ic_error).cacheInMemory(true)
+				.cacheOnDisc(true).considerExifParams(true)
+				.displayer(new RoundedBitmapDisplayer(20)).build();
 		Intent intent = getIntent();
 		goodsID = intent.getStringExtra("goodsID");
 		initData();
@@ -139,11 +143,11 @@ public class GoodsContentActivity extends BaseActivity {
 		goods_num = (TextView) goods_num_ll.findViewById(R.id.goods_num);
 		radioGroup1 = (RadioGroup) findViewById(R.id.radioGroup1);
 		radioGroup2 = (RadioGroup) findViewById(R.id.radioGroup2);
-		
+
 		goods_add_shopping = (Button) findViewById(R.id.goods_add_shopping);
 		goods_detail_relative = (RelativeLayout) findViewById(R.id.goods_detail_relative);
 		goods_param_relative = (RelativeLayout) findViewById(R.id.goods_param_relative);
-		project_describe = (TextView) findViewById(R.id.project_describe);
+		project_name2 = (TextView) findViewById(R.id.project_name2);
 		join_num = (TextView) findViewById(R.id.join_num);
 		adver1_pic = (ImageView) findViewById(R.id.adver1_pic);
 		adver1_price = (TextView) findViewById(R.id.adver1_price);
@@ -158,25 +162,28 @@ public class GoodsContentActivity extends BaseActivity {
 		home_menu = (ImageView) findViewById(R.id.home_menu);
 
 	}
-	
-	private static class AnimateFirstDisplayListener extends SimpleImageLoadingListener {  
-        
-        static final List<String> displayedImages = Collections.synchronizedList(new LinkedList<String>());  
-  
-        @Override  
-        public void onLoadingComplete(String imageUri, View view, Bitmap loadedImage) {  
-            if (loadedImage != null) {  
-                ImageView imageView = (ImageView) view;  
-                // 是否第一次显示  
-                boolean firstDisplay = !displayedImages.contains(imageUri);  
-                if (firstDisplay) {  
-                    // 图片淡入效果  
-                    FadeInBitmapDisplayer.animate(imageView, 500);  
-                    displayedImages.add(imageUri);  
-                }  
-            }  
-        }  
-    }  
+
+	private static class AnimateFirstDisplayListener extends
+			SimpleImageLoadingListener {
+
+		static final List<String> displayedImages = Collections
+				.synchronizedList(new LinkedList<String>());
+
+		@Override
+		public void onLoadingComplete(String imageUri, View view,
+				Bitmap loadedImage) {
+			if (loadedImage != null) {
+				ImageView imageView = (ImageView) view;
+				// 是否第一次显示
+				boolean firstDisplay = !displayedImages.contains(imageUri);
+				if (firstDisplay) {
+					// 图片淡入效果
+					FadeInBitmapDisplayer.animate(imageView, 500);
+					displayedImages.add(imageUri);
+				}
+			}
+		}
+	}
 
 	/*
 	 * 现在只有489一条商品有数据 {"goods_id": 489, "open_id": "1_1177_469954"}
@@ -186,10 +193,30 @@ public class GoodsContentActivity extends BaseActivity {
 			api = new HomeIndexGoodsAPI();
 		}
 		Map<String, String> paramsMap = new HashMap<String, String>();
-		
+
 		paramsMap.put("goods_id", goodsID);
 		paramsMap.put("open_id", "1_1177_469954");
 		api.getGoodsItemInfo(paramsMap, this, REQUESTCODE);
+	}
+
+	/*
+	 * {"action":"user_center","type":"get_default_address","mcr":0,"params":{
+	 * "open_id":"5_1278_539947","token":"b1fccbf52f67ca26"}}
+	 */
+	public void getDefaultAddr() {
+		
+		if (api == null) {
+			api = new HomeIndexGoodsAPI();
+		}
+		Map<String, String> paramsMap = new HashMap<String, String>();
+		SharedPreferences spf = getSharedPreferences("login_user", 0);
+		String openID = spf.getString("open_id", "0");
+		String token = spf.getString("token", "0");
+		paramsMap.put("open_id", openID);
+		paramsMap.put("token", token);
+		Log.d("open_id", "open_id = " + openID);
+		Log.d("token", "token = " + token);
+		api.getDefaultAddr(paramsMap, this, REQUEST_DEFAULT_ADDR);
 	}
 
 	@Override
@@ -210,39 +237,45 @@ public class GoodsContentActivity extends BaseActivity {
 						JSONObject jsonmode = json.getJSONObject("content");
 
 						if (jsonmode != null && jsonmode.length() > 0) {
-								goodsItem.setId(jsonmode.getString("id"));
-								goodsItem.setGoods_name(jsonmode
-										.getString("goods_name"));
-								goodsItem.setGoods_image(jsonmode
-										.getString("goods_image"));
-//								goodsItem.setProject_describe(jsonmode
-//										.getString("project_describe"));
-								goodsItem.setGoods_post_min(jsonmode
-										.getString("goods_post_min"));
-								goodsItem.setGoods_status(jsonmode
-										.getString("goods_status"));
-								goodsItem.setGoods_price(jsonmode
-										.getString("goods_price"));
-								goodsItem.setGoods_cost_price(jsonmode
-										.getString("goods_cost_price"));
-								goodsItem.setGoods_post_type(jsonmode
-										.getString("goods_post_type"));
-								goodsItem.setGoods_post_free(jsonmode
-										.getString("goods_post_free"));
-								goodsItem.setGoods_post_price(jsonmode
-										.getString("goods_post_price"));
-								goodsItem.setGoods_sales_time(jsonmode
-										.getString("goods_sales_time"));
-								goodsItem.setSales_num(jsonmode
-										.getString("sales_num"));
-								goodsItem.setCompany_id(jsonmode
-										.getString("company_id"));
-								goodsItem.setCompany_name(jsonmode
-										.getString("company_name"));
-								goodsItem.setAttention_num(jsonmode
-										.getString("attention_num"));
-								goodsItem.setIs_attention(jsonmode
-										.getString("is_attention"));
+							goodsItem.setId(jsonmode.getString("id"));
+							goodsItem.setGoods_name(jsonmode
+									.getString("goods_name"));
+							goodsItem.setGoods_image(jsonmode
+									.getString("goods_image"));
+							// goodsItem.setProject_describe(jsonmode
+							// .getString("project_describe"));
+							goodsItem.setGoods_post_min(jsonmode
+									.getString("goods_post_min"));
+							goodsItem.setGoods_status(jsonmode
+									.getString("goods_status"));
+							goodsItem.setGoods_price(jsonmode
+									.getString("goods_price"));
+							goodsItem.setGoods_cost_price(jsonmode
+									.getString("goods_cost_price"));
+							goodsItem.setGoods_post_type(jsonmode
+									.getString("goods_post_type"));
+							goodsItem.setGoods_post_free(jsonmode
+									.getString("goods_post_free"));
+							goodsItem.setGoods_post_price(jsonmode
+									.getString("goods_post_price"));
+							goodsItem.setGoods_sales_time(jsonmode
+									.getString("goods_sales_time"));
+							goodsItem.setSales_num(jsonmode
+									.getString("sales_num"));
+							goodsItem.setCompany_id(jsonmode
+									.getString("company_id"));
+							goodsItem.setCompany_name(jsonmode
+									.getString("company_name"));
+							goodsItem.setAttention_num(jsonmode
+									.getString("attention_num"));
+							goodsItem.setIs_attention(jsonmode
+									.getString("is_attention"));
+							goodsItem.setCom_project(jsonmode
+									.getString("comp_project"));
+							goodsItem.setProject_name(jsonmode
+									.getString("project_name"));
+							goodsItem.setProj_purchase_user_num(jsonmode
+									.getString("proj_purchase_user_num"));
 						}
 					} else {
 						Util.toastInfo(this, "请求失败");
@@ -253,25 +286,67 @@ public class GoodsContentActivity extends BaseActivity {
 					e.printStackTrace();
 				}
 			}
-			//更新界面
+			// 更新界面
 			refreshUI(goodsItem);
+			break;
+		case REQUEST_DEFAULT_ADDR:
+			if (param.length > 0 && param[1] != null
+					&& param[1] instanceof String) {
+				String data = param[1].toString();
+				Log.d("yuanqikai", "yuanqikai 请求数据 = " + data);
+				try {
+					JSONObject json = new JSONObject(data);
+					int status = json.getInt("ret");
+					if (status == 0) {
+						JSONObject jsonmode = json.getJSONObject("content");
+						Log.d("yuanqikai", "yuanqikai jsonmode" + jsonmode.toString());
+						if(jsonmode.has("default_address")){
+							//没有默认地址
+							startActivityByContent(this, MyAccoAddressIndexActivity.class);
+						}else {
+							if (jsonmode != null && jsonmode.length() > 0) {
+								address.setId(jsonmode.getString("id"));
+								address.setName(jsonmode.getString("rname"));
+								address.setPhoneNum(jsonmode.getString("mobile"));
+								address.setPostcode(jsonmode.getString("zipcode"));
+								address.setProvince_id(jsonmode
+										.getString("province"));
+								address.setCity_id(jsonmode.getString("city"));
+								address.setArea_id(jsonmode.getString("area"));
+								address.setAddress(jsonmode.getString("address"));
+								//跳到购买页面
+								dellgoodsBuybutton(address);
+							}
+						}
+					} else {
+						//自己写地址
+						startActivityByContent(this, MyAccoAddressIndexActivity.class);
+					}
+				} catch (JSONException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
 			break;
 
 		default:
 			break;
 		}
 	}
-	
-	public void refreshUI(GoodsItemDetails goodsItem){
+
+	public void refreshUI(GoodsItemDetails goodsItem) {
 		project_name.setText(goodsItem.getGoods_name());
 		cash.setText(goodsItem.getGoods_price());
 		original_cost.setText(goodsItem.getGoods_cost_price());
 		express.setText(goodsItem.getGoods_post_price());
 		collection_num.setText(goodsItem.getAttention_num());
 		sale_num.setText(goodsItem.getSales_num());
-		project_describe.setText(goodsItem.getProject_describe());
-		//加载图片
-		imageLoader.displayImage(goodsItem.getGoods_image(), project_pic1, options,animateFirstListener);
+		join_num.setText(goodsItem.getProj_purchase_user_num() + "人");
+		project_name2.setText(goodsItem.getProject_name());
+
+		// 加载图片
+		imageLoader.displayImage(goodsItem.getGoods_image(), project_pic1,
+				options, animateFirstListener);
 	}
 
 	// 处理button事件
@@ -279,7 +354,15 @@ public class GoodsContentActivity extends BaseActivity {
 		int id = view.getId();
 		switch (id) {
 		case R.id.goods_buy:
-			dellgoodsBuybutton(view);
+			//判断用户是否加入购物车
+//			if (goods_add_shopping.isClickable()) {
+//				Toast.makeText(this, "请先加入购物车，然后再购买", Toast.LENGTH_SHORT).show();
+//				return;
+//			}else{
+				//发送请求默认地址
+				getDefaultAddr();
+//			}
+			
 			break;
 		case R.id.goods_add_shopping:
 			dellgoodsAddShoppingButton(view);
@@ -288,16 +371,20 @@ public class GoodsContentActivity extends BaseActivity {
 			finish();
 			break;
 		case R.id.goods_add_num:
-			int num1 = Integer.valueOf((String)(goods_num.getText().toString()));
-			goods_num.setText(""+(num1+1));
+			int num1 = Integer
+					.valueOf((String) (goods_num.getText().toString()));
+			goods_num.setText("" + (num1 + 1));
 			break;
 		case R.id.goods_desc_num:
-			int num2 = Integer.valueOf((String)(goods_num.getText().toString()));
-			if(num2 > 0)
-				goods_num.setText(""+(num2-1));
+			int num2 = Integer
+					.valueOf((String) (goods_num.getText().toString()));
+			if (num2 > 0)
+				goods_num.setText("" + (num2 - 1));
 			break;
 		case R.id.goods_show_project:
-			Log.d("", "");//goodsID
+			Intent intent2 = new Intent(this, ProjectContentActivity.class);
+			intent2.putExtra("project_id", goodsItem.getCom_project());
+			startActivityForResult(intent2, REQUEST_ORG_PROJECT);
 			break;
 
 		default:
@@ -315,27 +402,21 @@ public class GoodsContentActivity extends BaseActivity {
 		return;
 	}
 
-	public void dellgoodsBuybutton(View view) {
-		if(goods_add_shopping.isClickable()){
-			Toast.makeText(this, "请先加入购物车，然后再购买", Toast.LENGTH_SHORT).show();
-			return;
-		}
-		// 测试使用
-		if (!defaultAddress) {
-			startActivityByContent(this, MyAccoAddressIndexActivity.class);
-		}
+	public void dellgoodsBuybutton(AddressInfo address) {
 		GoodsBuyEntity entity = new GoodsBuyEntity();
-		entity.setAddress("火星");//从地址栏返回
+		entity.setAddress(address.getAddress());// 从地址栏返回
 		entity.setEnterprise(goodsItem.getCompany_name());
-		entity.setGoodsColor(checkedRadioText(radioGroup1.getCheckedRadioButtonId()));
-		entity.setGoodsSize(checkedRadioText(radioGroup2.getCheckedRadioButtonId()));
+		entity.setGoodsColor(checkedRadioText(radioGroup1
+				.getCheckedRadioButtonId()));
+		entity.setGoodsSize(checkedRadioText(radioGroup2
+				.getCheckedRadioButtonId()));
 		entity.setGoodsImage(goodsItem.getGoods_image());
 		entity.setGoodsName(goodsItem.getGoods_name());
 		entity.setGoodsNum(goods_num.getText().toString());
 		entity.setGoodsPice(goodsItem.getGoods_price());
-		entity.setPersonName("外星人");//从地址栏返回
-		entity.setPhoneNum("88888");//从地址栏返回
-		
+		entity.setPersonName(address.getName());// 从地址栏返回
+		entity.setPhoneNum(address.getPhoneNum());// 从地址栏返回
+
 		Intent intent = new Intent(this, GoodsBuyActivity.class);
 		Bundle bundle = new Bundle();
 		bundle.putSerializable("entity", entity);
@@ -343,8 +424,9 @@ public class GoodsContentActivity extends BaseActivity {
 		startActivity(intent);
 		return;
 	}
-	//单选框
-	public String checkedRadioText(final int id){
+
+	// 单选框
+	public String checkedRadioText(final int id) {
 		String text = "";
 		switch (id) {
 		case R.id.radio10:
@@ -371,12 +453,23 @@ public class GoodsContentActivity extends BaseActivity {
 		}
 		return text;
 	}
-	
 
 	public void startActivityByContent(Context context, Class<?> cls) {
 		Intent intent = new Intent(context, cls);
-		intent.putExtra("startClass", "GoodsBuyActivity");
-		startActivity(intent);
+		intent.putExtra("from", "goods_buy");
+		startActivityForResult(intent, REQUEST_NEW_ADDR);
 	}
+	@Override
+	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+		// TODO Auto-generated method stub
+		super.onActivityResult(requestCode, resultCode, data);
+		if(requestCode == REQUEST_NEW_ADDR){
+			if(resultCode == MyAccoAddressIndexActivity.CHOOSE_ADDRESS_CODE){
+				AddressInfo addr = (AddressInfo)data.getSerializableExtra("addressInfo");
+				dellgoodsBuybutton(addr);
+			}
+		}
+	}
+	
 
 }

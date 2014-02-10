@@ -1,0 +1,3225 @@
+﻿body {
+    margin: 0px;
+}
+
+div {
+    background-repeat: no-repeat;
+}
+
+.raw_image {
+    width: 100%;
+    height: 100%;
+}
+
+.preload {
+    display: none;
+}
+#main_container {
+}
+
+.form_sketch {
+    border-color: transparent;
+    background-color: transparent;
+}
+
+.u0_normal {
+    background-image: url('../地域数据管理_files/u0_normal.png');
+}
+
+.u0_container {
+    position:absolute;
+    left:150px;
+    top:126px;
+    width:920px;
+    height:599px;
+}
+
+#u0_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:926px;
+    height:605px;
+}
+
+.u1 {
+    position:absolute;
+    left:2px;
+    top:292px;
+    width:916px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u2 {
+    position:absolute;
+    left:170px;
+    top:138px;
+    width:367px;
+    height:15px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+#u3 {
+    position:absolute;
+    left:0px;
+    top:128px;
+    width:151px;
+    height:201px;
+    overflow:hidden;
+}
+
+#pd0u3 {
+    position:absolute;
+    left:0px;
+    top:0px;
+    width:151px;
+    height:201px;
+    
+}
+
+#u4 {
+    position:absolute;
+    left:0px;
+    top:30px;
+    width:151px;
+    height:81px;
+    overflow:hidden;
+}
+
+#pd1u4 {
+    position:absolute;
+    left:0px;
+    top:0px;
+    width:151px;
+    height:81px;
+    
+}
+
+.u5_selected {
+    background-image: url('../后台菜单_files/Page_one_u431_selected.png');
+}
+
+.u5_normal {
+    background-image: url('../后台菜单_files/Page_one_u431_normal.png');
+}
+
+.u5_container {
+    position:absolute;
+    left:0px;
+    top:30px;
+    width:150px;
+    height:25px;
+}
+
+#u5_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:156px;
+    height:31px;
+}
+
+.u6 {
+    position:absolute;
+    left:2px;
+    top:4px;
+    width:146px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u7_selected {
+    background-image: url('../后台菜单_files/Page_one_u431_selected.png');
+}
+
+.u7_normal {
+    background-image: url('../后台菜单_files/Page_one_u431_normal.png');
+}
+
+.u7_container {
+    position:absolute;
+    left:0px;
+    top:55px;
+    width:150px;
+    height:25px;
+}
+
+#u7_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:156px;
+    height:31px;
+}
+
+.u8 {
+    position:absolute;
+    left:2px;
+    top:4px;
+    width:146px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u9_normal {
+    background-image: url('../后台菜单_files/u435_normal.png');
+}
+
+.u9_container {
+    position:absolute;
+    left:0px;
+    top:0px;
+    width:150px;
+    height:30px;
+}
+
+#u9_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:156px;
+    height:36px;
+}
+
+.u10 {
+    position:absolute;
+    left:2px;
+    top:7px;
+    width:146px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u11 {
+    position:absolute;
+    left:10px;
+    top:7px;
+    width:110px;
+    height:15px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u12_normal {
+    background-image: url('../后台菜单_files/u438_normal.png');
+}
+
+.u12_container {
+    position:absolute;
+    left:130px;
+    top:10px;
+    width:10px;
+    height:10px;
+}
+
+#u12_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:16px;
+    height:16px;
+}
+
+.u13 {
+    position:absolute;
+    left:2px;
+    top:-3px;
+    width:6px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u14 {
+    position:absolute;
+    left:10px;
+    top:35px;
+    width:130px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u15 {
+    position:absolute;
+    left:10px;
+    top:60px;
+    width:130px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+#pd0u4 {
+    position:absolute;
+    left:0px;
+    top:0px;
+    width:151px;
+    height:81px;
+    
+}
+
+.u16_normal {
+    background-image: url('../后台菜单_files/u442_normal.png');
+}
+
+.u16_container {
+    position:absolute;
+    left:0px;
+    top:0px;
+    width:150px;
+    height:30px;
+}
+
+#u16_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:156px;
+    height:36px;
+}
+
+.u17 {
+    position:absolute;
+    left:2px;
+    top:7px;
+    width:146px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u18 {
+    position:absolute;
+    left:10px;
+    top:7px;
+    width:110px;
+    height:15px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u19_normal {
+    background-image: url('../后台菜单_files/u445_normal.png');
+}
+
+.u19_container {
+    position:absolute;
+    left:130px;
+    top:10px;
+    width:10px;
+    height:10px;
+}
+
+#u19_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:16px;
+    height:16px;
+}
+
+.u20 {
+    position:absolute;
+    left:2px;
+    top:-3px;
+    width:6px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u21_normal {
+    background-image: url('../后台菜单_files/u447_normal.png');
+}
+
+.u21_container {
+    position:absolute;
+    left:0px;
+    top:0px;
+    width:150px;
+    height:30px;
+}
+
+#u21_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:156px;
+    height:36px;
+}
+
+.u22 {
+    position:absolute;
+    left:2px;
+    top:8px;
+    width:146px;
+    height:15px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+#u23 {
+    position:absolute;
+    left:0px;
+    top:60px;
+    width:151px;
+    height:81px;
+    overflow:hidden;
+}
+
+#pd1u23 {
+    position:absolute;
+    left:0px;
+    top:0px;
+    width:151px;
+    height:81px;
+    
+}
+
+.u24_normal {
+    background-image: url('../后台菜单_files/u435_normal.png');
+}
+
+.u24_container {
+    position:absolute;
+    left:0px;
+    top:0px;
+    width:150px;
+    height:30px;
+}
+
+#u24_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:156px;
+    height:36px;
+}
+
+.u25 {
+    position:absolute;
+    left:2px;
+    top:7px;
+    width:146px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u26_normal {
+    background-image: url('../后台菜单_files/u438_normal.png');
+}
+
+.u26_container {
+    position:absolute;
+    left:130px;
+    top:10px;
+    width:10px;
+    height:10px;
+}
+
+#u26_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:16px;
+    height:16px;
+}
+
+.u27 {
+    position:absolute;
+    left:2px;
+    top:-3px;
+    width:6px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u28_selected {
+    background-image: url('../后台菜单_files/Page_one_u431_selected.png');
+}
+
+.u28_normal {
+    background-image: url('../后台菜单_files/Page_one_u431_normal.png');
+}
+
+.u28_container {
+    position:absolute;
+    left:0px;
+    top:30px;
+    width:150px;
+    height:25px;
+}
+
+#u28_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:156px;
+    height:31px;
+}
+
+.u29 {
+    position:absolute;
+    left:2px;
+    top:4px;
+    width:146px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u30 {
+    position:absolute;
+    left:10px;
+    top:35px;
+    width:130px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u31_selected {
+    background-image: url('../后台菜单_files/Page_one_u431_selected.png');
+}
+
+.u31_normal {
+    background-image: url('../后台菜单_files/Page_one_u431_normal.png');
+}
+
+.u31_container {
+    position:absolute;
+    left:0px;
+    top:55px;
+    width:150px;
+    height:25px;
+}
+
+#u31_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:156px;
+    height:31px;
+}
+
+.u32 {
+    position:absolute;
+    left:2px;
+    top:4px;
+    width:146px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u33 {
+    position:absolute;
+    left:10px;
+    top:60px;
+    width:130px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u34 {
+    position:absolute;
+    left:10px;
+    top:7px;
+    width:110px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+#pd0u23 {
+    position:absolute;
+    left:0px;
+    top:0px;
+    width:151px;
+    height:81px;
+    
+}
+
+.u35_normal {
+    background-image: url('../后台菜单_files/u442_normal.png');
+}
+
+.u35_container {
+    position:absolute;
+    left:0px;
+    top:0px;
+    width:150px;
+    height:30px;
+}
+
+#u35_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:156px;
+    height:36px;
+}
+
+.u36 {
+    position:absolute;
+    left:2px;
+    top:7px;
+    width:146px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u37_normal {
+    background-image: url('../后台菜单_files/u445_normal.png');
+}
+
+.u37_container {
+    position:absolute;
+    left:130px;
+    top:10px;
+    width:10px;
+    height:10px;
+}
+
+#u37_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:16px;
+    height:16px;
+}
+
+.u38 {
+    position:absolute;
+    left:2px;
+    top:-3px;
+    width:6px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u39 {
+    position:absolute;
+    left:10px;
+    top:7px;
+    width:110px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u40_normal {
+    background-image: url('../后台菜单_files/u442_normal.png');
+}
+
+.u40_container {
+    position:absolute;
+    left:0px;
+    top:248px;
+    width:150px;
+    height:30px;
+}
+
+#u40_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:156px;
+    height:36px;
+}
+
+.u41 {
+    position:absolute;
+    left:2px;
+    top:7px;
+    width:146px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u42 {
+    position:absolute;
+    left:10px;
+    top:255px;
+    width:110px;
+    height:15px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u43_normal {
+    background-image: url('../后台菜单_files/u445_normal.png');
+}
+
+.u43_container {
+    position:absolute;
+    left:130px;
+    top:258px;
+    width:10px;
+    height:10px;
+}
+
+#u43_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:16px;
+    height:16px;
+}
+
+.u44 {
+    position:absolute;
+    left:2px;
+    top:-3px;
+    width:6px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u45_normal {
+    background-image: url('../后台菜单_files/u442_normal.png');
+}
+
+.u45_container {
+    position:absolute;
+    left:0px;
+    top:278px;
+    width:150px;
+    height:30px;
+}
+
+#u45_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:156px;
+    height:36px;
+}
+
+.u46 {
+    position:absolute;
+    left:2px;
+    top:7px;
+    width:146px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u47 {
+    position:absolute;
+    left:10px;
+    top:285px;
+    width:110px;
+    height:15px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u48_normal {
+    background-image: url('../后台菜单_files/u445_normal.png');
+}
+
+.u48_container {
+    position:absolute;
+    left:130px;
+    top:288px;
+    width:10px;
+    height:10px;
+}
+
+#u48_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:16px;
+    height:16px;
+}
+
+.u49 {
+    position:absolute;
+    left:2px;
+    top:-3px;
+    width:6px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u50_normal {
+    background-image: url('../后台菜单_files/u442_normal.png');
+}
+
+.u50_container {
+    position:absolute;
+    left:0px;
+    top:308px;
+    width:150px;
+    height:30px;
+}
+
+#u50_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:156px;
+    height:36px;
+}
+
+.u51 {
+    position:absolute;
+    left:2px;
+    top:7px;
+    width:146px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u52 {
+    position:absolute;
+    left:10px;
+    top:315px;
+    width:110px;
+    height:15px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u53_normal {
+    background-image: url('../后台菜单_files/u445_normal.png');
+}
+
+.u53_container {
+    position:absolute;
+    left:130px;
+    top:318px;
+    width:10px;
+    height:10px;
+}
+
+#u53_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:16px;
+    height:16px;
+}
+
+.u54 {
+    position:absolute;
+    left:2px;
+    top:-3px;
+    width:6px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u55_normal {
+    background-image: url('../后台菜单_files/u442_normal.png');
+}
+
+.u55_container {
+    position:absolute;
+    left:0px;
+    top:217px;
+    width:150px;
+    height:30px;
+}
+
+#u55_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:156px;
+    height:36px;
+}
+
+.u56 {
+    position:absolute;
+    left:2px;
+    top:7px;
+    width:146px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u57 {
+    position:absolute;
+    left:10px;
+    top:224px;
+    width:110px;
+    height:15px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u58_normal {
+    background-image: url('../后台菜单_files/u445_normal.png');
+}
+
+.u58_container {
+    position:absolute;
+    left:130px;
+    top:227px;
+    width:10px;
+    height:10px;
+}
+
+#u58_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:16px;
+    height:16px;
+}
+
+.u59 {
+    position:absolute;
+    left:2px;
+    top:-3px;
+    width:6px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u60_normal {
+    background-image: url('../后台菜单_files/u442_normal.png');
+}
+
+.u60_container {
+    position:absolute;
+    left:0px;
+    top:338px;
+    width:150px;
+    height:30px;
+}
+
+#u60_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:156px;
+    height:36px;
+}
+
+.u61 {
+    position:absolute;
+    left:2px;
+    top:7px;
+    width:146px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u62 {
+    position:absolute;
+    left:10px;
+    top:345px;
+    width:110px;
+    height:15px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u63_normal {
+    background-image: url('../后台菜单_files/u445_normal.png');
+}
+
+.u63_container {
+    position:absolute;
+    left:130px;
+    top:348px;
+    width:10px;
+    height:10px;
+}
+
+#u63_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:16px;
+    height:16px;
+}
+
+.u64 {
+    position:absolute;
+    left:2px;
+    top:-3px;
+    width:6px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u65_normal {
+    background-image: url('../后台菜单_files/u442_normal.png');
+}
+
+.u65_container {
+    position:absolute;
+    left:0px;
+    top:368px;
+    width:150px;
+    height:30px;
+}
+
+#u65_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:156px;
+    height:36px;
+}
+
+.u66 {
+    position:absolute;
+    left:2px;
+    top:7px;
+    width:146px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u67 {
+    position:absolute;
+    left:10px;
+    top:375px;
+    width:110px;
+    height:15px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u68_normal {
+    background-image: url('../后台菜单_files/u445_normal.png');
+}
+
+.u68_container {
+    position:absolute;
+    left:130px;
+    top:378px;
+    width:10px;
+    height:10px;
+}
+
+#u68_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:16px;
+    height:16px;
+}
+
+.u69 {
+    position:absolute;
+    left:2px;
+    top:-3px;
+    width:6px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u70_normal {
+    background-image: url('../后台菜单_files/u442_normal.png');
+}
+
+.u70_container {
+    position:absolute;
+    left:0px;
+    top:398px;
+    width:150px;
+    height:30px;
+}
+
+#u70_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:156px;
+    height:36px;
+}
+
+.u71 {
+    position:absolute;
+    left:2px;
+    top:7px;
+    width:146px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u72 {
+    position:absolute;
+    left:10px;
+    top:405px;
+    width:110px;
+    height:15px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u73_normal {
+    background-image: url('../后台菜单_files/u445_normal.png');
+}
+
+.u73_container {
+    position:absolute;
+    left:130px;
+    top:408px;
+    width:10px;
+    height:10px;
+}
+
+#u73_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:16px;
+    height:16px;
+}
+
+.u74 {
+    position:absolute;
+    left:2px;
+    top:-3px;
+    width:6px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u76_normal {
+    background-image: url('../后台页头_files/u502_normal.png');
+}
+
+.u76_container {
+    position:absolute;
+    left:0px;
+    top:0px;
+    width:1199px;
+    height:20px;
+}
+
+#u76_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:1205px;
+    height:26px;
+}
+
+.u77 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:1195px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u78 {
+    position:absolute;
+    left:10px;
+    top:4px;
+    width:215px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u79 {
+    position:absolute;
+    left:705px;
+    top:2px;
+    width:493px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u80_normal {
+    background-image: url('../后台页头_files/u506_normal.png');
+}
+
+.u80_container {
+    position:absolute;
+    left:10px;
+    top:32px;
+    width:179px;
+    height:86px;
+}
+
+#u80_img {
+    position:absolute;
+    left:0px;
+    top:0px;
+    width:179px;
+    height:86px;
+}
+
+.u81 {
+    position:absolute;
+    left:2px;
+    top:35px;
+    width:175px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u82_normal {
+    background-image: url('../resources/images/transparent.gif');
+}
+
+.u82_container {
+    position:absolute;
+    left:163px;
+    top:31px;
+    width:210px;
+    height:40px;
+}
+
+#u82_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:216px;
+    height:46px;
+}
+
+.u83 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:206px;
+    height:36px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u84_normal {
+    background-image: url('../resources/images/transparent.gif');
+}
+
+.u84_container {
+    position:absolute;
+    left:200px;
+    top:73px;
+    width:174px;
+    height:20px;
+}
+
+#u84_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:180px;
+    height:26px;
+}
+
+.u85 {
+    position:absolute;
+    left:2px;
+    top:0px;
+    width:170px;
+    height:21px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u86_line {
+    background-image: url('../后台页头_files/u512_line.png');
+}
+
+.u86_line {
+    position:absolute;
+    left:0px;
+    top:4px;
+    width:1199px;
+    height:3px;
+}
+
+.u86 {
+    position:absolute;
+    left:0px;
+    top:120px;
+    width:1199px;
+    height:10px;
+    
+}
+
+.u88_normal {
+    background-image: url('../地域数据管理_files/u88_normal.png');
+}
+
+.u88_container {
+    position:absolute;
+    left:232px;
+    top:230px;
+    width:180px;
+    height:299px;
+}
+
+#u88_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:186px;
+    height:305px;
+}
+
+.u89 {
+    position:absolute;
+    left:2px;
+    top:142px;
+    width:176px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u90_normal {
+    background-image: url('../地域数据管理_files/u90_normal.png');
+}
+
+.u90_container {
+    position:absolute;
+    left:232px;
+    top:230px;
+    width:260px;
+    height:29px;
+}
+
+#u90_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:266px;
+    height:35px;
+}
+
+.u91 {
+    position:absolute;
+    left:2px;
+    top:6px;
+    width:256px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u92_normal {
+    background-image: url('../地域数据管理_files/u92_normal.png');
+}
+
+.u92_container {
+    position:absolute;
+    left:232px;
+    top:259px;
+    width:260px;
+    height:29px;
+}
+
+#u92_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:266px;
+    height:35px;
+}
+
+.u93 {
+    position:absolute;
+    left:2px;
+    top:6px;
+    width:256px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u94_normal {
+    background-image: url('../地域数据管理_files/u92_normal.png');
+}
+
+.u94_container {
+    position:absolute;
+    left:232px;
+    top:288px;
+    width:260px;
+    height:29px;
+}
+
+#u94_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:266px;
+    height:35px;
+}
+
+.u95 {
+    position:absolute;
+    left:2px;
+    top:6px;
+    width:256px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u96_normal {
+    background-image: url('../地域数据管理_files/u92_normal.png');
+}
+
+.u96_container {
+    position:absolute;
+    left:232px;
+    top:317px;
+    width:260px;
+    height:29px;
+}
+
+#u96_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:266px;
+    height:35px;
+}
+
+.u97 {
+    position:absolute;
+    left:2px;
+    top:6px;
+    width:256px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u98_normal {
+    background-image: url('../地域数据管理_files/u92_normal.png');
+}
+
+.u98_container {
+    position:absolute;
+    left:232px;
+    top:346px;
+    width:260px;
+    height:29px;
+}
+
+#u98_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:266px;
+    height:35px;
+}
+
+.u99 {
+    position:absolute;
+    left:2px;
+    top:6px;
+    width:256px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u100_normal {
+    background-image: url('../地域数据管理_files/u92_normal.png');
+}
+
+.u100_container {
+    position:absolute;
+    left:232px;
+    top:375px;
+    width:260px;
+    height:29px;
+}
+
+#u100_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:266px;
+    height:35px;
+}
+
+.u101 {
+    position:absolute;
+    left:2px;
+    top:6px;
+    width:256px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u102_normal {
+    background-image: url('../地域数据管理_files/u92_normal.png');
+}
+
+.u102_container {
+    position:absolute;
+    left:232px;
+    top:404px;
+    width:260px;
+    height:29px;
+}
+
+#u102_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:266px;
+    height:35px;
+}
+
+.u103 {
+    position:absolute;
+    left:2px;
+    top:6px;
+    width:256px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u104_normal {
+    background-image: url('../地域数据管理_files/u92_normal.png');
+}
+
+.u104_container {
+    position:absolute;
+    left:232px;
+    top:433px;
+    width:260px;
+    height:29px;
+}
+
+#u104_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:266px;
+    height:35px;
+}
+
+.u105 {
+    position:absolute;
+    left:2px;
+    top:6px;
+    width:256px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u106_normal {
+    background-image: url('../地域数据管理_files/u92_normal.png');
+}
+
+.u106_container {
+    position:absolute;
+    left:232px;
+    top:462px;
+    width:260px;
+    height:29px;
+}
+
+#u106_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:266px;
+    height:35px;
+}
+
+.u107 {
+    position:absolute;
+    left:2px;
+    top:6px;
+    width:256px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u108_normal {
+    background-image: url('../地域数据管理_files/u92_normal.png');
+}
+
+.u108_container {
+    position:absolute;
+    left:232px;
+    top:491px;
+    width:260px;
+    height:29px;
+}
+
+#u108_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:266px;
+    height:35px;
+}
+
+.u109 {
+    position:absolute;
+    left:2px;
+    top:6px;
+    width:256px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u110_normal {
+    background-image: url('../地域数据管理_files/u92_normal.png');
+}
+
+.u110_container {
+    position:absolute;
+    left:232px;
+    top:520px;
+    width:260px;
+    height:29px;
+}
+
+#u110_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:266px;
+    height:35px;
+}
+
+.u111 {
+    position:absolute;
+    left:2px;
+    top:6px;
+    width:256px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u112_normal {
+    background-image: url('../地域数据管理_files/u92_normal.png');
+}
+
+.u112_container {
+    position:absolute;
+    left:232px;
+    top:549px;
+    width:260px;
+    height:29px;
+}
+
+#u112_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:266px;
+    height:35px;
+}
+
+.u113 {
+    position:absolute;
+    left:2px;
+    top:6px;
+    width:256px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u114 {
+    position:absolute;
+    left:232px;
+    top:188px;
+    width:180px;
+    height:25px;
+    ;
+    ;
+    text-align: left;;
+    font-family:'Arial';
+    font-size: 13px;
+    color:#000000;
+    font-style:normal;
+    font-weight:normal;
+    text-decoration:none;
+    
+}
+
+.u115 {
+    position:absolute;
+    left:429px;
+    top:188px;
+    width:63px;
+    height:25px;
+    ;
+    ;
+    text-align: center;;
+    font-family:'Arial';
+    font-size: 13px;
+    color:#000000;
+    font-style:normal;
+    font-weight:normal;
+    text-decoration:none;
+    
+}
+
+.u116_normal {
+    background-image: url('../地域数据管理_files/u92_normal.png');
+}
+
+.u116_container {
+    position:absolute;
+    left:561px;
+    top:230px;
+    width:260px;
+    height:29px;
+}
+
+#u116_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:266px;
+    height:35px;
+}
+
+.u117 {
+    position:absolute;
+    left:2px;
+    top:6px;
+    width:256px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u118_normal {
+    background-image: url('../地域数据管理_files/u92_normal.png');
+}
+
+.u118_container {
+    position:absolute;
+    left:561px;
+    top:259px;
+    width:260px;
+    height:29px;
+}
+
+#u118_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:266px;
+    height:35px;
+}
+
+.u119 {
+    position:absolute;
+    left:2px;
+    top:6px;
+    width:256px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u120_normal {
+    background-image: url('../地域数据管理_files/u92_normal.png');
+}
+
+.u120_container {
+    position:absolute;
+    left:561px;
+    top:288px;
+    width:260px;
+    height:29px;
+}
+
+#u120_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:266px;
+    height:35px;
+}
+
+.u121 {
+    position:absolute;
+    left:2px;
+    top:6px;
+    width:256px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u122_normal {
+    background-image: url('../地域数据管理_files/u92_normal.png');
+}
+
+.u122_container {
+    position:absolute;
+    left:561px;
+    top:317px;
+    width:260px;
+    height:29px;
+}
+
+#u122_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:266px;
+    height:35px;
+}
+
+.u123 {
+    position:absolute;
+    left:2px;
+    top:6px;
+    width:256px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u124_normal {
+    background-image: url('../地域数据管理_files/u92_normal.png');
+}
+
+.u124_container {
+    position:absolute;
+    left:561px;
+    top:346px;
+    width:260px;
+    height:29px;
+}
+
+#u124_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:266px;
+    height:35px;
+}
+
+.u125 {
+    position:absolute;
+    left:2px;
+    top:6px;
+    width:256px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u126_normal {
+    background-image: url('../地域数据管理_files/u92_normal.png');
+}
+
+.u126_container {
+    position:absolute;
+    left:561px;
+    top:375px;
+    width:260px;
+    height:29px;
+}
+
+#u126_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:266px;
+    height:35px;
+}
+
+.u127 {
+    position:absolute;
+    left:2px;
+    top:6px;
+    width:256px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u128_normal {
+    background-image: url('../地域数据管理_files/u92_normal.png');
+}
+
+.u128_container {
+    position:absolute;
+    left:561px;
+    top:404px;
+    width:260px;
+    height:29px;
+}
+
+#u128_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:266px;
+    height:35px;
+}
+
+.u129 {
+    position:absolute;
+    left:2px;
+    top:6px;
+    width:256px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u130_normal {
+    background-image: url('../地域数据管理_files/u92_normal.png');
+}
+
+.u130_container {
+    position:absolute;
+    left:561px;
+    top:433px;
+    width:260px;
+    height:29px;
+}
+
+#u130_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:266px;
+    height:35px;
+}
+
+.u131 {
+    position:absolute;
+    left:2px;
+    top:6px;
+    width:256px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u132_normal {
+    background-image: url('../地域数据管理_files/u92_normal.png');
+}
+
+.u132_container {
+    position:absolute;
+    left:561px;
+    top:462px;
+    width:260px;
+    height:29px;
+}
+
+#u132_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:266px;
+    height:35px;
+}
+
+.u133 {
+    position:absolute;
+    left:2px;
+    top:6px;
+    width:256px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u134_normal {
+    background-image: url('../地域数据管理_files/u92_normal.png');
+}
+
+.u134_container {
+    position:absolute;
+    left:561px;
+    top:491px;
+    width:260px;
+    height:29px;
+}
+
+#u134_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:266px;
+    height:35px;
+}
+
+.u135 {
+    position:absolute;
+    left:2px;
+    top:6px;
+    width:256px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u136_normal {
+    background-image: url('../地域数据管理_files/u92_normal.png');
+}
+
+.u136_container {
+    position:absolute;
+    left:561px;
+    top:520px;
+    width:260px;
+    height:29px;
+}
+
+#u136_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:266px;
+    height:35px;
+}
+
+.u137 {
+    position:absolute;
+    left:2px;
+    top:6px;
+    width:256px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u138_normal {
+    background-image: url('../地域数据管理_files/u92_normal.png');
+}
+
+.u138_container {
+    position:absolute;
+    left:561px;
+    top:549px;
+    width:260px;
+    height:29px;
+}
+
+#u138_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:266px;
+    height:35px;
+}
+
+.u139 {
+    position:absolute;
+    left:2px;
+    top:6px;
+    width:256px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u140 {
+    position:absolute;
+    left:561px;
+    top:188px;
+    width:180px;
+    height:25px;
+    ;
+    ;
+    text-align: left;;
+    font-family:'Arial';
+    font-size: 13px;
+    color:#000000;
+    font-style:normal;
+    font-weight:normal;
+    text-decoration:none;
+    
+}
+
+.u141 {
+    position:absolute;
+    left:758px;
+    top:188px;
+    width:63px;
+    height:25px;
+    ;
+    ;
+    text-align: center;;
+    font-family:'Arial';
+    font-size: 13px;
+    color:#000000;
+    font-style:normal;
+    font-weight:normal;
+    text-decoration:none;
+    
+}
+
+.u142 {
+    position:absolute;
+    left:510px;
+    top:223px;
+    width:49px;
+    height:42px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u143_normal {
+    background-image: url('../地域数据管理_files/u143_normal.png');
+}
+
+.u143_container {
+    position:absolute;
+    left:459px;
+    top:261px;
+    width:25px;
+    height:25px;
+}
+
+#u143_img {
+    position:absolute;
+    left:0px;
+    top:0px;
+    width:25px;
+    height:25px;
+}
+
+.u144 {
+    position:absolute;
+    left:2px;
+    top:4px;
+    width:21px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u145_normal {
+    background-image: url('../地域数据管理_files/u143_normal.png');
+}
+
+.u145_container {
+    position:absolute;
+    left:459px;
+    top:290px;
+    width:25px;
+    height:25px;
+}
+
+#u145_img {
+    position:absolute;
+    left:0px;
+    top:0px;
+    width:25px;
+    height:25px;
+}
+
+.u146 {
+    position:absolute;
+    left:2px;
+    top:4px;
+    width:21px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u147_normal {
+    background-image: url('../地域数据管理_files/u143_normal.png');
+}
+
+.u147_container {
+    position:absolute;
+    left:459px;
+    top:233px;
+    width:25px;
+    height:25px;
+}
+
+#u147_img {
+    position:absolute;
+    left:0px;
+    top:0px;
+    width:25px;
+    height:25px;
+}
+
+.u148 {
+    position:absolute;
+    left:2px;
+    top:4px;
+    width:21px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u149_normal {
+    background-image: url('../地域数据管理_files/u143_normal.png');
+}
+
+.u149_container {
+    position:absolute;
+    left:459px;
+    top:347px;
+    width:25px;
+    height:25px;
+}
+
+#u149_img {
+    position:absolute;
+    left:0px;
+    top:0px;
+    width:25px;
+    height:25px;
+}
+
+.u150 {
+    position:absolute;
+    left:2px;
+    top:4px;
+    width:21px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u151_normal {
+    background-image: url('../地域数据管理_files/u143_normal.png');
+}
+
+.u151_container {
+    position:absolute;
+    left:459px;
+    top:376px;
+    width:25px;
+    height:25px;
+}
+
+#u151_img {
+    position:absolute;
+    left:0px;
+    top:0px;
+    width:25px;
+    height:25px;
+}
+
+.u152 {
+    position:absolute;
+    left:2px;
+    top:4px;
+    width:21px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u153_normal {
+    background-image: url('../地域数据管理_files/u143_normal.png');
+}
+
+.u153_container {
+    position:absolute;
+    left:459px;
+    top:319px;
+    width:25px;
+    height:25px;
+}
+
+#u153_img {
+    position:absolute;
+    left:0px;
+    top:0px;
+    width:25px;
+    height:25px;
+}
+
+.u154 {
+    position:absolute;
+    left:2px;
+    top:4px;
+    width:21px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u155_normal {
+    background-image: url('../地域数据管理_files/u143_normal.png');
+}
+
+.u155_container {
+    position:absolute;
+    left:459px;
+    top:435px;
+    width:25px;
+    height:25px;
+}
+
+#u155_img {
+    position:absolute;
+    left:0px;
+    top:0px;
+    width:25px;
+    height:25px;
+}
+
+.u156 {
+    position:absolute;
+    left:2px;
+    top:4px;
+    width:21px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u157_normal {
+    background-image: url('../地域数据管理_files/u143_normal.png');
+}
+
+.u157_container {
+    position:absolute;
+    left:459px;
+    top:464px;
+    width:25px;
+    height:25px;
+}
+
+#u157_img {
+    position:absolute;
+    left:0px;
+    top:0px;
+    width:25px;
+    height:25px;
+}
+
+.u158 {
+    position:absolute;
+    left:2px;
+    top:4px;
+    width:21px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u159_normal {
+    background-image: url('../地域数据管理_files/u143_normal.png');
+}
+
+.u159_container {
+    position:absolute;
+    left:459px;
+    top:407px;
+    width:25px;
+    height:25px;
+}
+
+#u159_img {
+    position:absolute;
+    left:0px;
+    top:0px;
+    width:25px;
+    height:25px;
+}
+
+.u160 {
+    position:absolute;
+    left:2px;
+    top:4px;
+    width:21px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u161_normal {
+    background-image: url('../地域数据管理_files/u143_normal.png');
+}
+
+.u161_container {
+    position:absolute;
+    left:459px;
+    top:521px;
+    width:25px;
+    height:25px;
+}
+
+#u161_img {
+    position:absolute;
+    left:0px;
+    top:0px;
+    width:25px;
+    height:25px;
+}
+
+.u162 {
+    position:absolute;
+    left:2px;
+    top:4px;
+    width:21px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u163_normal {
+    background-image: url('../地域数据管理_files/u143_normal.png');
+}
+
+.u163_container {
+    position:absolute;
+    left:459px;
+    top:550px;
+    width:25px;
+    height:25px;
+}
+
+#u163_img {
+    position:absolute;
+    left:0px;
+    top:0px;
+    width:25px;
+    height:25px;
+}
+
+.u164 {
+    position:absolute;
+    left:2px;
+    top:4px;
+    width:21px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u165_normal {
+    background-image: url('../地域数据管理_files/u143_normal.png');
+}
+
+.u165_container {
+    position:absolute;
+    left:459px;
+    top:493px;
+    width:25px;
+    height:25px;
+}
+
+#u165_img {
+    position:absolute;
+    left:0px;
+    top:0px;
+    width:25px;
+    height:25px;
+}
+
+.u166 {
+    position:absolute;
+    left:2px;
+    top:4px;
+    width:21px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u167_normal {
+    background-image: url('../地域数据管理_files/u143_normal.png');
+}
+
+.u167_container {
+    position:absolute;
+    left:788px;
+    top:261px;
+    width:25px;
+    height:25px;
+}
+
+#u167_img {
+    position:absolute;
+    left:0px;
+    top:0px;
+    width:25px;
+    height:25px;
+}
+
+.u168 {
+    position:absolute;
+    left:2px;
+    top:4px;
+    width:21px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u169_normal {
+    background-image: url('../地域数据管理_files/u143_normal.png');
+}
+
+.u169_container {
+    position:absolute;
+    left:788px;
+    top:290px;
+    width:25px;
+    height:25px;
+}
+
+#u169_img {
+    position:absolute;
+    left:0px;
+    top:0px;
+    width:25px;
+    height:25px;
+}
+
+.u170 {
+    position:absolute;
+    left:2px;
+    top:4px;
+    width:21px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u171_normal {
+    background-image: url('../地域数据管理_files/u143_normal.png');
+}
+
+.u171_container {
+    position:absolute;
+    left:788px;
+    top:233px;
+    width:25px;
+    height:25px;
+}
+
+#u171_img {
+    position:absolute;
+    left:0px;
+    top:0px;
+    width:25px;
+    height:25px;
+}
+
+.u172 {
+    position:absolute;
+    left:2px;
+    top:4px;
+    width:21px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u173_normal {
+    background-image: url('../地域数据管理_files/u143_normal.png');
+}
+
+.u173_container {
+    position:absolute;
+    left:788px;
+    top:347px;
+    width:25px;
+    height:25px;
+}
+
+#u173_img {
+    position:absolute;
+    left:0px;
+    top:0px;
+    width:25px;
+    height:25px;
+}
+
+.u174 {
+    position:absolute;
+    left:2px;
+    top:4px;
+    width:21px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u175_normal {
+    background-image: url('../地域数据管理_files/u143_normal.png');
+}
+
+.u175_container {
+    position:absolute;
+    left:788px;
+    top:376px;
+    width:25px;
+    height:25px;
+}
+
+#u175_img {
+    position:absolute;
+    left:0px;
+    top:0px;
+    width:25px;
+    height:25px;
+}
+
+.u176 {
+    position:absolute;
+    left:2px;
+    top:4px;
+    width:21px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u177_normal {
+    background-image: url('../地域数据管理_files/u143_normal.png');
+}
+
+.u177_container {
+    position:absolute;
+    left:788px;
+    top:319px;
+    width:25px;
+    height:25px;
+}
+
+#u177_img {
+    position:absolute;
+    left:0px;
+    top:0px;
+    width:25px;
+    height:25px;
+}
+
+.u178 {
+    position:absolute;
+    left:2px;
+    top:4px;
+    width:21px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u179_normal {
+    background-image: url('../地域数据管理_files/u143_normal.png');
+}
+
+.u179_container {
+    position:absolute;
+    left:788px;
+    top:435px;
+    width:25px;
+    height:25px;
+}
+
+#u179_img {
+    position:absolute;
+    left:0px;
+    top:0px;
+    width:25px;
+    height:25px;
+}
+
+.u180 {
+    position:absolute;
+    left:2px;
+    top:4px;
+    width:21px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u181_normal {
+    background-image: url('../地域数据管理_files/u143_normal.png');
+}
+
+.u181_container {
+    position:absolute;
+    left:788px;
+    top:464px;
+    width:25px;
+    height:25px;
+}
+
+#u181_img {
+    position:absolute;
+    left:0px;
+    top:0px;
+    width:25px;
+    height:25px;
+}
+
+.u182 {
+    position:absolute;
+    left:2px;
+    top:4px;
+    width:21px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u183_normal {
+    background-image: url('../地域数据管理_files/u143_normal.png');
+}
+
+.u183_container {
+    position:absolute;
+    left:788px;
+    top:407px;
+    width:25px;
+    height:25px;
+}
+
+#u183_img {
+    position:absolute;
+    left:0px;
+    top:0px;
+    width:25px;
+    height:25px;
+}
+
+.u184 {
+    position:absolute;
+    left:2px;
+    top:4px;
+    width:21px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u185_normal {
+    background-image: url('../地域数据管理_files/u143_normal.png');
+}
+
+.u185_container {
+    position:absolute;
+    left:788px;
+    top:521px;
+    width:25px;
+    height:25px;
+}
+
+#u185_img {
+    position:absolute;
+    left:0px;
+    top:0px;
+    width:25px;
+    height:25px;
+}
+
+.u186 {
+    position:absolute;
+    left:2px;
+    top:4px;
+    width:21px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u187_normal {
+    background-image: url('../地域数据管理_files/u143_normal.png');
+}
+
+.u187_container {
+    position:absolute;
+    left:788px;
+    top:550px;
+    width:25px;
+    height:25px;
+}
+
+#u187_img {
+    position:absolute;
+    left:0px;
+    top:0px;
+    width:25px;
+    height:25px;
+}
+
+.u188 {
+    position:absolute;
+    left:2px;
+    top:4px;
+    width:21px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u189_normal {
+    background-image: url('../地域数据管理_files/u143_normal.png');
+}
+
+.u189_container {
+    position:absolute;
+    left:788px;
+    top:493px;
+    width:25px;
+    height:25px;
+}
+
+#u189_img {
+    position:absolute;
+    left:0px;
+    top:0px;
+    width:25px;
+    height:25px;
+}
+
+.u190 {
+    position:absolute;
+    left:2px;
+    top:4px;
+    width:21px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+

@@ -1,0 +1,310 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>项目大厅-三弦转换智慧系统</title>
+	<link rel="stylesheet" href="../css/base.css"/>
+	<link rel="stylesheet" href="../css/style.css"/>
+</head>
+<body>
+	<!--———— 头部板块———— -->
+	<div id="header">
+		<div class="header-top clearfix">
+			<div class="w1003">
+				<div class="top-fl fl">
+					<ul class="clearfix">
+						<li><i class="mobile-icon"></i>手机版</li>
+						<li>您好，zhangtongbo！<a href="#">[退出]</a></li>
+					</ul>
+				</div>
+				<!-- 我的订单 -->
+				<div class="top-fr fr">
+					<ul>
+						<li class="my_dd li-drop">
+							<a href="javascript:;" class="nav-a">我的订单<i class="down-icon"></i></a>
+							<ul class="ul-list">
+								<li><a href="#">我的订单1</a></li>
+								<li><a href="#">我的订单2</a></li>
+								<li><a href="#">我的订单3</a></li>
+							</ul>
+						</li>
+						<li class="my_car li-drop">
+							<a href="javascript:;" class="nav-a"><i class="car-icon"></i>购物车<i>5</i>件<i class="down-icon"></i></a>
+							<ul class="ul-list">
+								<li><a href="#">我的购物车1</a></li>
+								<li><a href="#">我的购物车2</a></li>
+								<li><a href="#">我的购物车3</a></li>
+							</ul>
+						</li>
+						<li class="service li-drop">
+							<a href="javascript:;" class="nav-a">客户服务<i class="down-icon"></i></a>
+							<ul class="ul-list">
+								<li><a href="#">我的客服1</a></li>
+								<li><a href="#">我的客服2</a></li>
+								<li><a href="#">我的客服3</a></li>
+							</ul>
+						</li>
+						<li class="navigation li-drop"><a href="#"><i class="nav-icon"></i>网站导航</a></li>
+					</ul>
+				</div>
+				<!-- 我的订单 -->
+			</div>
+		</div>
+		<!-- 头部主要内容 -->
+		<div class="header-main">
+			<div class="w1003 clearfix">
+				<!-- logo -->
+				<div id="logo" class="fl">
+					<img src="../images/logo.png" alt=""/>
+				</div>
+				<!--End logo -->
+				<!-- 顶部导航 -->
+				<div id="nav" class="fl">
+					<ul class="clearfix">
+						<li><a href="#">首页</a></li>
+						<li><a href="#">创意大厅</a></li>
+						<li class="active"><a href="#">项目大厅</a></li>
+						<li><a href="#">商品大厅</a></li>
+					</ul>
+				</div>
+				<!-- End顶部导航 -->
+				<!-- 收索 -->
+				<div id="search-box" class="fl">
+					<div class="search-bg clearfix">
+						<form action="#" name="form-search" id="form-search">
+							<input type="text" name="search" id="search"/>
+							<button>收索</button>
+						</form>
+					</div>
+				</div>
+				<!-- 收索 -->
+				<div id="publish" class="fr">
+					<a href="#">免费发布项目</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--————大图 banner————-->
+	<div id="banner-img">
+		<img src="../images/banner1.jpg" alt=""/>
+	</div>
+	<!--————项目大厅 内容板块 ————-->
+	<div id="products-publish">
+			<div class="w1003">
+				<h2 class="bread">首页 》项目大厅 》<em>发布项目</em></h2>
+				<div class="main-box">
+					<!--流程图-->
+					<div class="step-box clearfix">
+						<div class="step step1 fl active">
+							<span>1</span>项目基本信息
+						</div>
+						<div class="step step2 fl">
+							<span>2</span>回报设置
+						</div>
+						<div class="step step3 fl">
+							<span>3</span>提交审核
+						</div>
+					</div>
+					<!--End流程图-->
+					<!--————form表单————-->
+					<form action="#" method="post" id="theform" name ="theform" enctype="multipart/form-data" onSubmit="return checkData();">
+						<input type="hidden" name="pid" value="">
+						<ul class="form-list clearfix">
+							<li>
+								<label><b>*</b>项目名称：</label>
+								<div class="ip-cell">
+									<input type="text" class="txt-ip" id="project_name" name="project_name" placeholder="不超过10个字"  value="">
+									<span id="project_name_tip" style="color:#F00;"></span>
+								</div>
+							</li>
+							<li>
+								<label><b>*</b>所在地区：</label>
+								<div class="ip-cell">
+									<select id="project_province" name="project_province">
+										<option value="0">请选择省市</option>
+									</select>
+
+									<span id="citys">
+										<select id="project_city" name="project_city">
+											<option  value="" >请选择地区</option>
+										</select>
+									</span>
+									<span id="project_province_tip" style="color:#F00;"></span>
+								</div>
+							</li>
+							<li>
+								<label><b>*</b>所属行业：</label>
+								<div class=" ip-cell">
+									<select id="category_id" name="category_id">
+										<option value="0">请选择行业</option>
+									</select>
+									<select id="category_id" name="category_id">
+										<option value="0">请选择行业</option>
+									</select>
+									<span id="category_id_tip" style="color:#F00;"></span>
+								</div>
+							</li>
+							<li>
+								<label><b>*</b>项目描述：</label>
+								<div class="ip-cell">
+									<textarea rows="" cols="" id="project_explain" name="project_explain" placeholder="不超过75个字"></textarea>
+									<span id="project_explain_tip" style="color:#F00;  vertical-align: top;"></span>
+								</div>
+							</li>
+							<li>
+								<label><b>*</b>上传图片：</label>
+								<div class="ip-cell">
+									<input type="hidden" class="txt-ip upload-ip" name="plogo" id="plogo" value=""/>
+									<button id="cert" name='cert' class="btn-g upload-bt  btn-btn">选择图片</button>
+									<span id="plogo_tip" style="color:#F00;"></span> 
+									<span id="lu_ul_desc"></span>
+									<span class="info">支持jpg、jpeg、png、gif格式；建议尺寸: 570X422px</span>
+									<div class="upload-img">
+										<img id='showImg' src="" alt="" />
+									</div>
+								</div>
+							</li>
+							<li>
+								<label><b>*</b>项目详情：</label>
+								<div class="ip-cell">
+									<textarea name="project_describe" class="edui-editor-loader" style="height:300px;">
+										
+									</textarea>
+									 <span id="project_describe_tip" style="color:#F00;"></span>
+								</div>
+							</li>
+							<li>
+								<label><b>*</b>专利情况：</label>
+								<div class="ip-cell">
+									<span class="choose-icon active">没有发明专利</span><span class="choose-icon">有发明专利</span>
+									 <div class="choose-div">
+										专利编号：<input type="text" class="txt-ip txt-sort-ip"/>
+										专利名称：<input type="text" class="txt-ip txt-sort-ip"/>
+									 </div>
+									<span id="choose_tip" style="color:#F00;"></span>
+								</div>
+							</li>
+							<li><label for="a001">插入视频：</label>
+								<div class="ui-text  ip-cell">
+									<div class="ui-text-right">
+										<input  class="txt-ip" id="project_video" name="project_video" type="text" placeholder="(可选）输入视频地址（支持youku, 土豆，酷6，新浪视频）"/>
+									</div>
+								</div>
+							</li>
+							<li>
+							<label>附件：</label>
+							<div class="ip-cell">
+							<input type="hidden" id="pfile" name="pfile"/>
+							<button id="cfile" class="btn-btn" name="cfile">选择文件</button>
+							<span id="fu_ul_desc"></span>
+									<p class="info">附件支持格式包含文档、图片、压缩文件等</p>
+							</div>
+							</li>
+							<li>
+								<label><b>*</b>回报方式：</label>
+								<div class="ip-cell">
+									<select name="pay_back" id="pay_back">
+										<option value="">按比例分红</option>
+									</select>
+									<span id="pay_back_tip" style="color:#F00;"></span>
+								</div>
+							</li>
+							<li>
+								<label><b>*</b>筹集金额：</label>
+								<div class="ip-cell">
+									<input type="text" class="txt-ip txt-sort-ip" id="project_money" name="project_money" value="">
+									<span>元 </span>
+									<span id="project_money_tip" style="color:#F00;"></span>
+								</div>
+							</li>
+							<li>
+								<label><b>*</b>筹集天数：</label>
+								<div class="ip-cell">
+									<input type="text" class="txt-ip txt-sort-ip" id="project_days" placeholder="1-60"  name="project_days" value="">
+									<span>天</span>
+									<span id="project_days_tip" style="color:#F00;"></span>
+								</div>
+							</li>
+
+							<li>
+								<label><b>*</b>服务协议：</label>
+								<div class="ip-cell">
+									<input name="agreements" id="agreements" type="hidden" value="2"><span class="filter-span active"></span><a href="" target="_blank">我已阅读并同意《三弦创意或项目发布协议》</a>
+								</div>
+							</li>
+
+							<li class="btns cent">
+								<button type="submit" class="btn-sub-b">下一步</button>
+								<button type="button" class="btn-sub-b">取消</button>
+							</li>
+						</ul>
+					</form>
+		
+				</div>
+			</div>
+	</div>
+	<!-- ————底部文件 ————-->
+	<div id="footer">
+		<div class="links-box w1003">
+			<a href="#">
+				<img src="../images/logo1.jpg" alt=""/>
+				<div class="link-img">
+					<img src="../images/logo1_hover.jpg" alt=""/>
+				</div>
+			</a>
+			<a href="#">
+				<img src="../images/logo2.jpg" alt=""/>
+				<div class="link-img">
+					<img src="../images/logo2_hover.jpg" alt=""/>
+				</div>
+			</a>
+			<a href="#">
+				<img src="../images/logo3.jpg" alt=""/>
+				<div class="link-img">
+					<img src="../images/logo3_hover.jpg" alt=""/>
+				</div>
+			</a>
+			<a href="#">
+				<img src="../images/logo4.jpg" alt=""/>
+				<div class="link-img">
+					<img src="../images/logo4_hover.jpg" alt=""/>
+				</div>
+			</a>
+			<a href="#">
+				<img src="../images/logo5.jpg" alt=""/>
+				<div class="link-img">
+					<img src="../images/logo5_hover.jpg" alt=""/>
+				</div>
+			</a>
+			<a href="#">
+				<img src="../images/logo6.jpg" alt=""/>
+				<div class="link-img">
+					<img src="../images/logo6_hover.jpg" alt=""/>
+				</div>
+			</a>
+			<a href="#">
+				<img src="../images/logo7.jpg" alt=""/>
+				<div class="link-img">
+					<img src="../images/logo7_hover.jpg" alt=""/>
+				</div>
+			</a>
+		</div>
+		<!-- 大图片背景 -->
+		<div class="footer-img">
+			<div class="w1003">
+				<a href="#">>>了解更多</a>
+			</div>
+		</div>
+		<!-- End大图片背景 -->
+		<div class="footer">
+			<div class="footer-text">
+				<p class="cent"><a href="#">发起项目</a><a href="#">服务介绍</a><a href="#">项目规范</a><a href="#">常见问题</a><a href="#">服务条款</a><a href="#">隐私权政策</a><a href="#">关于我们</a><a href="#">建议反馈</a><a href="#">官方微博</a></p>
+				<p class="cent">Copyright © 2012-2013三弦转换(北京)网络科技有限公司 版权所有</p>
+				<p class="cent">京ICP备13032648号</p>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="../js/jquery.js"></script>
+	<script type="text/javascript" src="../js/comm.js"></script>
+</body>
+</html>

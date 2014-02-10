@@ -1,13 +1,26 @@
 package com.sanxian.sxzhuanhuan.function.personal.myaccount;
 
+import java.util.HashMap;
+import java.util.Map;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 
 import com.sanxian.sxzhuanhuan.R;
+import com.sanxian.sxzhuanhuan.api.CommonAPI;
 import com.sanxian.sxzhuanhuan.common.BaseActivity;
+import com.sanxian.sxzhuanhuan.entity.Constant;
+import com.sanxian.sxzhuanhuan.function.login.LoginActivity;
+import com.sanxian.sxzhuanhuan.function.personal.PersonalIndex;
+import com.sanxian.sxzhuanhuan.util.Util;
 /**
  * 我的账号详细页面
  * @author joe
@@ -16,6 +29,12 @@ import com.sanxian.sxzhuanhuan.common.BaseActivity;
 public class MyAccountInfoActivity extends BaseActivity implements OnClickListener{
 	/*修改密码，实名验证，手机验证，邮箱验证，个人地址管理，设置支付密码*/
 	private RelativeLayout set_passw_layout,certify_name_layout,certify_phone_layout,certify_email_layout,preson_address_layout,set_pay_passw_layout;
+	private TextView phone_number,email_number,certify_number;//手机号码，邮箱
+	private String email = "";
+	private final int REQUESTCODE = 10;
+	private final int RESULTCODE = 15;
+	private CommonAPI api = null;
+	private final int GETACCOUNTINFO = 22;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
@@ -23,6 +42,7 @@ public class MyAccountInfoActivity extends BaseActivity implements OnClickListen
 		setContentView(R.layout.myacc_info);
 		initView();
 		initListener();
+		initData();
 	};
 
 	@Override
@@ -38,9 +58,28 @@ public class MyAccountInfoActivity extends BaseActivity implements OnClickListen
 		certify_email_layout = (RelativeLayout)findViewById(R.id.certify_email_layout);
 		preson_address_layout = (RelativeLayout)findViewById(R.id.preson_address_layout);
 		set_pay_passw_layout = (RelativeLayout)findViewById(R.id.set_pay_passw_layout);
+		certify_number = (TextView)findViewById(R.id.certify_number);
+		phone_number = (TextView)findViewById(R.id.phone_number);
+		email_number = (TextView)findViewById(R.id.email_number);
 		
 	}
-
+	
+	/**
+	 * 初始化页面数据
+	 * joe
+	 */
+	private void initData(){
+		String array[] = getOpen_idOrToken();
+		if(api == null){
+			api = new CommonAPI();
+		}
+		Map<String,String> paramsmap = new HashMap<String, String>();
+		paramsmap.put("open_id",array[0]);
+		paramsmap.put("token",array[1]);
+		api.getPersonInfo("index",paramsmap,this,GETACCOUNTINFO);
+//	 }
+	}
+	
 	@Override
 	public void initListener() {
 		// TODO Auto-generated method stub
@@ -58,6 +97,65 @@ public class MyAccountInfoActivity extends BaseActivity implements OnClickListen
 	public void refresh(Object... param) {
 		// TODO Auto-generated method stub
 		super.refresh(param);
+		int flag = ((Integer)param[0]).intValue();
+		switch (flag) {
+		case GETACCOUNTINFO:
+			if(param.length > 0 && param[1] != null && param[1] instanceof String){
+				String data = param[1].toString();
+				try {
+					JSONObject json = new JSONObject(data);
+					int status = json.getInt("ret");
+					if(status == 0){
+						JSONObject object = json.getJSONObject("content");
+						
+//						String company_name = object.optString("company_name");
+//						String position_name = object.optString("place_name");
+//						String order_num = object.optString("my_order_num");
+//						String project_num = object.optString("my_project_num");
+//						String shopping_cart_num = object.optString("my_shopping_cart_num");
+//						String tribe_num = object.optString("my_tribe_num");
+//						String money = object.optString("money");
+//						String photo = object.optString("photo");
+//						String true_name = object.optString("true_name");
+//						String user_name = object.optString("user_name");
+						String id_card = object.optString("id_card");
+						email = object.optString("email");
+						String mobile = object.optString("mobile");
+						
+						if("null".equals(id_card)){
+							id_card = "";
+						}
+						if("null".equals(email)){
+							email = "";
+						}
+						if("null".equals(mobile)){
+							mobile = "";
+						}
+						if(mobile.length() > 0){
+							phone_number.setText(mobile.replace(mobile.subSequence(3,7), "XXXX"));
+						}
+						if(email.length() > 0){
+							email_number.setText(email.replace(email.subSequence(3,7), "XXXX"));
+						}
+					    if(id_card.length() > 0){
+					    	certify_number.setText(id_card.replace(id_card.subSequence(3,14), "XXXXXXXXXXX"));
+					    }
+					}else if(status == 1001){
+						Intent intent = new Intent(this, LoginActivity.class);
+						startActivityForResult(intent,Constant.REQUEST_LOGIN_CODE);
+					}else {
+						Util.toastInfo(this, "请求失败");
+					}
+				} catch (JSONException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
+			break;
+
+		default:
+			break;
+		}
 	}
 
 	@Override
@@ -77,14 +175,17 @@ public class MyAccountInfoActivity extends BaseActivity implements OnClickListen
 			break;
 		case R.id.certify_phone_layout:
 			Intent bindphone = new Intent(MyAccountInfoActivity.this,MyAccoBindPhoneActivity.class);
-			startActivity(bindphone);
+			startActivityForResult(bindphone, REQUESTCODE);
 			break;
 		case R.id.certify_email_layout:
+			if(email.length() == 0){
 			Intent bindemail = new Intent(MyAccountInfoActivity.this,MyAccoBindEmailActivity.class);
 			startActivity(bindemail);
+			}
 			break;
 		case R.id.preson_address_layout:
 			Intent address = new Intent(MyAccountInfoActivity.this,MyAccoAddressIndexActivity.class);
+			address.putExtra("from","accountinfo");
 			startActivity(address);
 			break;
 		case R.id.set_pay_passw_layout:
@@ -93,6 +194,17 @@ public class MyAccountInfoActivity extends BaseActivity implements OnClickListen
 			break;
 		default:
 			break;
+		}
+	}
+	@Override
+	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+		// TODO Auto-generated method stub
+		super.onActivityResult(requestCode, resultCode, data);
+		if(resultCode == RESULTCODE){
+			initData();
+			SharedPreferences spf = getSharedPreferences("login_user", 0) ;
+			String mobile = spf.getString("mobile","");
+			phone_number.setText(mobile.replace(mobile.subSequence(3,7), "XXXX"));
 		}
 	}
 

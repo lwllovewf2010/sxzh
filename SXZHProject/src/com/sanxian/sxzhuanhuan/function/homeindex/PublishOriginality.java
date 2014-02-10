@@ -38,7 +38,7 @@ public class PublishOriginality extends BaseActivity implements OnClickListener{
 	private static final int SHOW_TYPE=1;
 	private static final int SHOW_AREA=2;
 	private static final int SHOW_PROFESSION=3;
-	private static final int CREATEPROJECTONE = 4;
+	
 	
 	private final int FROM_PUBLI_ROOT_CODE = 112;
 	private final int FROM_PUBLI_SUB_CODE = 118;
@@ -55,8 +55,7 @@ public class PublishOriginality extends BaseActivity implements OnClickListener{
 	private CharSequence[] testType={"创意","项目"};
 	private CharSequence[] testArea={"北京","上海","深圳"};
 	private CharSequence[] testProfession={"互联网","科技"}; 
-	CommonAPI api=new CommonAPI();
-
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -151,6 +150,7 @@ public class PublishOriginality extends BaseActivity implements OnClickListener{
 //		showDialog(SHOW_TYPE, null);
 		Intent typeintent = new Intent(PublishOriginality.this,GetRootCommonList.class);
 		typeintent.putExtra("type", "mode");
+		typeintent.putExtra("is_get_last","0");
 		startActivityForResult(typeintent,REQUESTCODE);
 		break;
 		//地区
@@ -159,6 +159,7 @@ public class PublishOriginality extends BaseActivity implements OnClickListener{
 //		showDialog(SHOW_AREA, null);
 		Intent areaintent = new Intent(PublishOriginality.this,GetRootCommonList.class);
 		areaintent.putExtra("type", "region_province");
+		areaintent.putExtra("is_get_last","0");
 		startActivityForResult(areaintent,REQUESTCODE);
 		break;
 		//行业
@@ -167,12 +168,15 @@ public class PublishOriginality extends BaseActivity implements OnClickListener{
 //		showDialog(SHOW_PROFESSION, null);
 		Intent categoryintent = new Intent(PublishOriginality.this,GetRootCommonList.class);
 		categoryintent.putExtra("type", "category");
+		categoryintent.putExtra("is_get_last","0");
 		startActivityForResult(categoryintent,REQUESTCODE);
 		break;
 	case R.id.title_right:
-		api.manageProject("create", getMap(), this,CREATEPROJECTONE);
-//		Intent intent=new Intent(this, PublishProjectReport.class);
-//		startActivity(intent);
+		//此处还需判断是否为空（略）
+
+		 getMap();
+		Intent intent=new Intent(this, PublishProjectReport.class);
+		startActivity(intent);
 		break;
 	case R.id.title_Left:
 		this.finish();
@@ -185,39 +189,22 @@ public class PublishOriginality extends BaseActivity implements OnClickListener{
 	public Map<String,String> getMap(){
 		PublishConstant.paramMap.clear();
 		Map<String,String> tempMap=new HashMap<String, String>();
-		tempMap.put("user_id", getOpen_idOrToken()[0]);
-		
-		
+		tempMap.put("open_id", getOpen_idOrToken()[0]);
+		tempMap.put("project_name", originalityTitle.getText().toString());
+		tempMap.put("mode_id", "1");
+		tempMap.put("province_id", area_root_id);
+		tempMap.put("city_id", area_sub_id);
+		tempMap.put("category_id", category_id);
+		tempMap.put("project_explain",originalityIntroduce.getText().toString());
+		tempMap.put("project_logo", "");
+		tempMap.put("project_video", "");
+		tempMap.put("project_describe", originalityDetailedIntroduce.getText().toString());
 		PublishConstant.paramMap.putAll(tempMap);
-		
-		
 		return PublishConstant.paramMap;
-//		user_id true (string) 项目创建人openid 
-//		project_name true (string) 项目名 
-//		mode_id true (int) 1 1=项目 
-//		category_id true (int) 行业id 科技/金融/影视的对应id 
-//		province_id true (int) 省id 
-//		city_id true (int) 城市id 
-//		project_explain false (string) 需求简介 
-//		project_logo false (string) Logo 
-//		project_video false (string) 网络视频地址URL 
-//		project_describe true (string) 详细介绍 
-//		project_days true (int) 筹集天数 
-//		project_money_refund false (string) 退款说明 
-//		reward_mode true (int) 筹集回报按百分比均分 10的整数倍,例如：100 90 80 70 10 
-//		project_money true (int) 项目总筹资金额 
-//		reward_money true (int) 单笔筹资限额 
-//		reward_name true (string) 回报标题 
-//		reward_content true (string) 回报内容描述 
-//		reward_return_days true (int) 回报时间 
-//		reward_limit true (int) 是否限定入股人数 1=限 0=不限 
-//		reward_person true (int) 限定入股人数 
-//		reward_post true (int) 邮寄 0=不包邮 1=快递 2=平邮/EMS 
-//		reward_patent_id false (string) 专利编号 
-//		reward_patent_name false (string) 专利名 
-//		project_qq false (string) 发起人QQ 
-//		project_mobile true (string) 发起人手机号 
-//		project_realname true (string) 发起人真实姓名 
+
+		
+		
+
 
 		
 	}

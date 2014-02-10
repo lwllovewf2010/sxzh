@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.sanxian.sxzhuanhuan.R;
+import com.sanxian.sxzhuanhuan.common.CustomProgress;
 import com.sanxian.sxzhuanhuan.common.UIHelper;
 import com.sanxian.sxzhuanhuan.entity.MetaData;
 import com.sanxian.sxzhuanhuan.entity.ProjectInfo;
@@ -111,7 +112,9 @@ public class ProjectAdapter extends BaseAdapter implements OnClickListener {
 				.findViewById(R.id.sort_detail_item_list_image);
 		holder.tvProfile = (TextView) convertView
 				.findViewById(R.id.sort_detail_item_list_right_text);
-		holder.ivProgress = (ProgressBar) convertView
+//		holder.ivProgress = (ProgressBar) convertView
+//				.findViewById(R.id.sort_detail_item_progressBar);
+		holder.ivProgress = (CustomProgress) convertView
 				.findViewById(R.id.sort_detail_item_progressBar);
 
 		holder.ivParticipate = (ImageView) convertView
@@ -140,17 +143,18 @@ public class ProjectAdapter extends BaseAdapter implements OnClickListener {
 		imageLoader.displayImage(info.getProject_logo(),holder.ivLogo, options, null);
 		
 //		holder.tvProfile.setText(Html.fromHtml(info.getProject_describe()));
-		holder.tvProfile.setText(info.getProject_explain()) ;
+//		holder.tvProfile.setText(info.getProject_explain()) ;
+		holder.tvProfile.setText(Html.fromHtml(info.getProject_explain()));
+//		holder.ivProgress.setProgress(25) ;
+		holder.ivProgress.setProgress(Integer.parseInt(info.getPurchase_money()) * 100 / info.getProject_money() ) ;
 		
-		holder.ivProgress.setProgress(25) ;
-//		holder.ivProgress.setProgress(Integer.parseInt(info.getPurchase_money()) * 100 / info.getProject_money() ) ;
 
 		holder.ivParticipate.setImageDrawable(context.getResources()
 				.getDrawable(R.drawable.groupico));
-		holder.tvParticipate.setText("" + 12 + "人");
+		holder.tvParticipate.setText("" + info.getAttention_nums() + "人");
 		holder.ivDiscuss.setImageDrawable(context.getResources().getDrawable(
 				R.drawable.groupico));
-		holder.tvDiscuss.setText("" + 122 + "讨论");
+		holder.tvDiscuss.setText("" + info.getProject_topic_count() + "讨论");
 		holder.ivDays.setImageDrawable(context.getResources().getDrawable(
 				R.drawable.groupico));
 		holder.tvDays.setText("" + info.getProject_days() + "天");
@@ -165,7 +169,8 @@ public class ProjectAdapter extends BaseAdapter implements OnClickListener {
 		public TextView tvName;
 		public ImageView ivLogo;
 		public TextView tvProfile;
-		public ProgressBar ivProgress;
+//		public ProgressBar ivProgress;
+		public CustomProgress ivProgress ;
 
 		public ImageView ivParticipate;
 		public TextView tvParticipate;
@@ -182,8 +187,8 @@ public class ProjectAdapter extends BaseAdapter implements OnClickListener {
 	@Override
 	public void onClick(View v) {
 		// TODO Auto-generated method stub
-		System.out.println("-------project-------");
-		System.out.println("----" + projectInfo.getId());
+//		System.out.println("-------project-------");
+//		System.out.println("----" + projectInfo.getId());
 		UIHelper.showProjectDetailActivity(context ,((ViewHolder)v.getTag()).project_id);
 	}
 

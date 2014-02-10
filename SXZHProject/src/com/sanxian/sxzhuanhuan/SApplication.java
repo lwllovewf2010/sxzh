@@ -7,12 +7,14 @@ import com.nostra13.universalimageloader.cache.disc.naming.Md5FileNameGenerator;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
 import com.nostra13.universalimageloader.core.assist.QueueProcessingType;
+import com.sanxian.sxzhuanhuan.entity.UserInfo;
 
 import android.app.Activity;
 import android.app.ActivityManager;
 import android.app.Application;
 import android.app.NotificationManager;
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.os.Environment;
 import android.os.StatFs;
@@ -31,14 +33,34 @@ public class SApplication extends Application {
 	public static String photographpath = "";//头像上传拍照保存路径
 	public static String sheariamgepath = "";//头像裁剪拍照保存路径
 	public static SApplication instance;
-
+	private SharedPreferences spf;
 	// /注册获取验证码的冷却事件
 	private int codeSeconds = 0;
 
 	// 将当前的activity加到Service中方便管理和调用
 	public ArrayList<Activity> allActivity = new ArrayList<Activity>();
-
-
+	private UserInfo loginUserInfo=new UserInfo();
+	public UserInfo getLoginUserInfo() {
+		spf = this.getSharedPreferences("login_user", 0);
+		loginUserInfo.setUid(spf.getString("open_id", ""));
+		loginUserInfo.setAvatar(spf.getString("photo", ""));
+		loginUserInfo.setToken(spf.getString("token", ""));
+		loginUserInfo.setUsername(spf.getString("user_name", ""));
+		loginUserInfo.setRealName(spf.getString("dname", ""));
+		loginUserInfo.setMobile(spf.getString("mobile", ""));
+		loginUserInfo.setEmail(spf.getString("email", ""));
+		return loginUserInfo;
+	}
+	public void setLoginUserInfo(UserInfo loginUserInfo) {
+		this.loginUserInfo = loginUserInfo;
+	}
+	public String[] getOpen_idOrToken(){
+		spf = this.getSharedPreferences("login_user", 0);
+		String open_id = spf.getString("open_id", "");
+		String token = spf.getString("token", "");
+		String str[]=new String[]{open_id,token};
+		return str;
+	}
 	@Override
 	public void onCreate() {
 		super.onCreate();

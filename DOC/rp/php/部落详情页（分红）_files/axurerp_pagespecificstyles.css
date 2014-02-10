@@ -1,0 +1,6588 @@
+﻿body {
+    margin: 0px;
+}
+
+div {
+    background-repeat: no-repeat;
+}
+
+.raw_image {
+    width: 100%;
+    height: 100%;
+}
+
+.preload {
+    display: none;
+}
+#main_container {
+}
+
+.form_sketch {
+    border-color: transparent;
+    background-color: transparent;
+}
+
+.u0_normal {
+    background-image: url('../前台页头（登录后）_4_files/u0_normal.png');
+}
+
+.u0_container {
+    position:absolute;
+    left:0px;
+    top:0px;
+    width:1199px;
+    height:20px;
+}
+
+#u0_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:1205px;
+    height:26px;
+}
+
+.u1 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:1195px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u2 {
+    position:absolute;
+    left:705px;
+    top:2px;
+    width:493px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u3_normal {
+    background-image: url('../前台页头（登录后）_4_files/u3_normal.png');
+}
+
+.u3_container {
+    position:absolute;
+    left:10px;
+    top:32px;
+    width:179px;
+    height:86px;
+}
+
+#u3_img {
+    position:absolute;
+    left:0px;
+    top:0px;
+    width:179px;
+    height:86px;
+}
+
+.u4 {
+    position:absolute;
+    left:2px;
+    top:35px;
+    width:175px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u5_normal {
+    background-image: url('../resources/images/transparent.gif');
+}
+
+.u5_container {
+    position:absolute;
+    left:191px;
+    top:35px;
+    width:126px;
+    height:40px;
+}
+
+#u5_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:132px;
+    height:46px;
+}
+
+.u6 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:122px;
+    height:36px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u7_normal {
+    background-image: url('../resources/images/transparent.gif');
+}
+
+.u7_container {
+    position:absolute;
+    left:191px;
+    top:77px;
+    width:174px;
+    height:20px;
+}
+
+#u7_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:180px;
+    height:26px;
+}
+
+.u8 {
+    position:absolute;
+    left:2px;
+    top:0px;
+    width:170px;
+    height:21px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u9_line {
+    background-image: url('../前台页头（登录后）_4_files/u9_line.png');
+}
+
+.u9_line {
+    position:absolute;
+    left:0px;
+    top:4px;
+    width:1199px;
+    height:3px;
+}
+
+.u9 {
+    position:absolute;
+    left:0px;
+    top:148px;
+    width:1199px;
+    height:10px;
+    
+}
+
+.u10_normal {
+    background-image: url('../前台页头（登录后）_4_files/u10_normal.png');
+}
+
+.u10_container {
+    position:absolute;
+    left:419px;
+    top:127px;
+    width:85px;
+    height:25px;
+}
+
+#u10_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:91px;
+    height:31px;
+}
+
+.u11 {
+    position:absolute;
+    left:2px;
+    top:4px;
+    width:81px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u12_normal {
+    background-image: url('../前台页头（登录后）_4_files/u10_normal.png');
+}
+
+.u12_container {
+    position:absolute;
+    left:314px;
+    top:127px;
+    width:85px;
+    height:25px;
+}
+
+#u12_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:91px;
+    height:31px;
+}
+
+.u13 {
+    position:absolute;
+    left:2px;
+    top:4px;
+    width:81px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u14_normal {
+    background-image: url('../前台页头（登录后）_4_files/u10_normal.png');
+}
+
+.u14_container {
+    position:absolute;
+    left:207px;
+    top:128px;
+    width:85px;
+    height:25px;
+}
+
+#u14_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:91px;
+    height:31px;
+}
+
+.u15 {
+    position:absolute;
+    left:2px;
+    top:4px;
+    width:81px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u16_normal {
+    background-image: url('../前台页头（登录后）_4_files/u10_normal.png');
+}
+
+.u16_container {
+    position:absolute;
+    left:529px;
+    top:127px;
+    width:85px;
+    height:25px;
+}
+
+#u16_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:91px;
+    height:31px;
+}
+
+.u17 {
+    position:absolute;
+    left:2px;
+    top:4px;
+    width:81px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u18 {
+    position:absolute;
+    left:401px;
+    top:93px;
+    width:478px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u19 {
+    position:absolute;
+    left:399px;
+    top:63px;
+    width:392px;
+    height:25px;
+    ;
+    ;
+    text-align: left;;
+    font-family:'Arial';
+    font-size: 11px;
+    color:#000000;
+    font-style:normal;
+    font-weight:normal;
+    text-decoration:none;
+    
+}
+
+.u20_normal {
+    background-image: url('../搜索框_4_files/Submit_button_u20_normal.png');
+}
+
+.u20_container {
+    position:absolute;
+    left:806px;
+    top:62px;
+    width:60px;
+    height:25px;
+}
+
+#u20_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:66px;
+    height:31px;
+}
+
+.u21 {
+    position:absolute;
+    left:2px;
+    top:4px;
+    width:56px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+#u22 {
+    position:absolute;
+    left:399px;
+    top:88px;
+    width:393px;
+    height:131px;
+    overflow:hidden;
+}
+
+#pd0u22 {
+    position:absolute;
+    left:0px;
+    top:0px;
+    width:393px;
+    height:131px;
+    
+}
+
+.u23_normal {
+    background-image: url('../搜索框_4_files/u23_normal.png');
+}
+
+.u23_container {
+    position:absolute;
+    left:0px;
+    top:8px;
+    width:474px;
+    height:130px;
+}
+
+#u23_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:480px;
+    height:136px;
+}
+
+.u24 {
+    position:absolute;
+    left:2px;
+    top:57px;
+    width:470px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u25 {
+    position:absolute;
+    left:8px;
+    top:65px;
+    width:458px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u26 {
+    position:absolute;
+    left:8px;
+    top:110px;
+    width:458px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u27 {
+    position:absolute;
+    left:8px;
+    top:80px;
+    width:458px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u28 {
+    position:absolute;
+    left:8px;
+    top:95px;
+    width:458px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u29 {
+    position:absolute;
+    left:8px;
+    top:50px;
+    width:458px;
+    height:14px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u30 {
+    position:absolute;
+    left:8px;
+    top:20px;
+    width:458px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u31 {
+    position:absolute;
+    left:8px;
+    top:35px;
+    width:458px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u32 {
+    position:absolute;
+    left:8px;
+    top:5px;
+    width:458px;
+    height:14px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u33 {
+    position:absolute;
+    left:876px;
+    top:60px;
+    width:76px;
+    height:14px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u34 {
+    position:absolute;
+    left:876px;
+    top:74px;
+    width:76px;
+    height:14px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u35_mouseOver {
+    background-image: url('../搜索框_4_files/Section_tab_two_u35_mouseOver.png');
+}
+
+.u35_normal {
+    background-image: url('../搜索框_4_files/Section_tab_two_u35_mouseOver.png');
+}
+
+.u35_container {
+    position:absolute;
+    left:469px;
+    top:36px;
+    width:48px;
+    height:25px;
+}
+
+#u35_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:54px;
+    height:31px;
+}
+
+.u36 {
+    position:absolute;
+    left:2px;
+    top:6px;
+    width:44px;
+    height:14px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u37_mouseOver {
+    background-image: url('../搜索框_4_files/Section_tab_three_u37_mouseOver.png');
+}
+
+.u37_normal {
+    background-image: url('../搜索框_4_files/Section_tab_three_u37_mouseOver.png');
+}
+
+.u37_container {
+    position:absolute;
+    left:527px;
+    top:36px;
+    width:52px;
+    height:25px;
+}
+
+#u37_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:58px;
+    height:31px;
+}
+
+.u38 {
+    position:absolute;
+    left:2px;
+    top:6px;
+    width:48px;
+    height:14px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u39_mouseOver {
+    background-image: url('../搜索框_4_files/Section_tab_four_u39_mouseOver.png');
+}
+
+.u39_normal {
+    background-image: url('../搜索框_4_files/Section_tab_four_u39_mouseOver.png');
+}
+
+.u39_container {
+    position:absolute;
+    left:591px;
+    top:36px;
+    width:53px;
+    height:25px;
+}
+
+#u39_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:59px;
+    height:31px;
+}
+
+.u40 {
+    position:absolute;
+    left:2px;
+    top:4px;
+    width:49px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u41_line {
+    background-image: url('../搜索框_4_files/u41_line.png');
+}
+
+.u41_line {
+    position:absolute;
+    left:0px;
+    top:4px;
+    width:297px;
+    height:3px;
+}
+
+.u41 {
+    position:absolute;
+    left:400px;
+    top:56px;
+    width:297px;
+    height:10px;
+    
+}
+
+.u42_mouseOver {
+    background-image: url('../搜索框_4_files/Section_tab_one_u42_mouseOver.png');
+}
+
+.u42_normal {
+    background-image: url('../搜索框_4_files/Section_tab_one_u42_mouseOver.png');
+}
+
+.u42_container {
+    position:absolute;
+    left:410px;
+    top:36px;
+    width:49px;
+    height:25px;
+}
+
+#u42_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:55px;
+    height:31px;
+}
+
+.u43 {
+    position:absolute;
+    left:2px;
+    top:6px;
+    width:45px;
+    height:14px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u45_normal {
+    background-image: url('../前台页头（登录后）_4_files/u45_normal.png');
+}
+
+.u45_container {
+    position:absolute;
+    left:10px;
+    top:3px;
+    width:16px;
+    height:16px;
+}
+
+#u45_img {
+    position:absolute;
+    left:0px;
+    top:0px;
+    width:16px;
+    height:16px;
+}
+
+.u46 {
+    position:absolute;
+    left:2px;
+    top:0px;
+    width:12px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u47 {
+    position:absolute;
+    left:26px;
+    top:4px;
+    width:46px;
+    height:14px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u48 {
+    position:absolute;
+    left:201px;
+    top:5px;
+    width:45px;
+    height:15px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u49_normal {
+    background-image: url('../前台页头（登录后）_4_files/u49_normal.png');
+}
+
+.u49_container {
+    position:absolute;
+    left:1019px;
+    top:64px;
+    width:152px;
+    height:39px;
+}
+
+#u49_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:158px;
+    height:45px;
+}
+
+.u50 {
+    position:absolute;
+    left:2px;
+    top:12px;
+    width:148px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u51_normal {
+    background-image: url('../前台页头（登录后）_4_files/u51_normal.png');
+}
+
+.u51_container {
+    position:absolute;
+    left:1028px;
+    top:68px;
+    width:32px;
+    height:32px;
+}
+
+#u51_img {
+    position:absolute;
+    left:0px;
+    top:0px;
+    width:32px;
+    height:32px;
+}
+
+.u52 {
+    position:absolute;
+    left:2px;
+    top:8px;
+    width:28px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u53 {
+    position:absolute;
+    left:1083px;
+    top:74px;
+    width:79px;
+    height:19px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u54 {
+    position:absolute;
+    left:74px;
+    top:4px;
+    width:141px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u56_normal {
+    background-image: url('../部落详情页（分红）_files/u56_normal.png');
+}
+
+.u56_container {
+    position:absolute;
+    left:7px;
+    top:166px;
+    width:721px;
+    height:27px;
+}
+
+#u56_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:727px;
+    height:33px;
+}
+
+.u57 {
+    position:absolute;
+    left:2px;
+    top:6px;
+    width:717px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u58 {
+    position:absolute;
+    left:18px;
+    top:169px;
+    width:700px;
+    height:24px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u59_normal {
+    background-image: url('../部落详情页（分红）_files/u59_normal.png');
+}
+
+.u59_container {
+    position:absolute;
+    left:8px;
+    top:203px;
+    width:875px;
+    height:250px;
+}
+
+#u59_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:881px;
+    height:256px;
+}
+
+.u60 {
+    position:absolute;
+    left:2px;
+    top:117px;
+    width:871px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u61_normal {
+    background-image: url('../部落详情页（分红）_files/u61_normal.png');
+}
+
+.u61_container {
+    position:absolute;
+    left:33px;
+    top:230px;
+    width:173px;
+    height:208px;
+}
+
+#u61_img {
+    position:absolute;
+    left:0px;
+    top:0px;
+    width:173px;
+    height:208px;
+}
+
+.u62 {
+    position:absolute;
+    left:2px;
+    top:96px;
+    width:169px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u63 {
+    position:absolute;
+    left:234px;
+    top:233px;
+    width:600px;
+    height:188px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u64 {
+    position:absolute;
+    left:234px;
+    top:417px;
+    width:627px;
+    height:32px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u65_normal {
+    background-image: url('../前台页尾_4_files/u177_normal.png');
+}
+
+.u65_container {
+    position:absolute;
+    left:0px;
+    top:1521px;
+    width:1201px;
+    height:80px;
+}
+
+#u65_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:1207px;
+    height:86px;
+}
+
+.u66 {
+    position:absolute;
+    left:2px;
+    top:32px;
+    width:1197px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u67 {
+    position:absolute;
+    left:58px;
+    top:1537px;
+    width:1002px;
+    height:48px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u69_line {
+    background-image: url('../部落详情页（分红）_files/u69_line.png');
+}
+
+.u69_line {
+    position:absolute;
+    left:0px;
+    top:4px;
+    width:875px;
+    height:3px;
+}
+
+.u69 {
+    position:absolute;
+    left:10px;
+    top:498px;
+    width:875px;
+    height:10px;
+    
+}
+
+.u70_normal {
+    background-image: url('../部落详情页（分红）_files/u70_normal.png');
+}
+
+.u70_container {
+    position:absolute;
+    left:257px;
+    top:478px;
+    width:85px;
+    height:25px;
+}
+
+#u70_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:91px;
+    height:31px;
+}
+
+.u71 {
+    position:absolute;
+    left:2px;
+    top:4px;
+    width:81px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u72_normal {
+    background-image: url('../部落详情页（分红）_files/u70_normal.png');
+}
+
+.u72_container {
+    position:absolute;
+    left:152px;
+    top:477px;
+    width:85px;
+    height:25px;
+}
+
+#u72_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:91px;
+    height:31px;
+}
+
+.u73 {
+    position:absolute;
+    left:2px;
+    top:4px;
+    width:81px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u74_normal {
+    background-image: url('../部落详情页（分红）_files/u70_normal.png');
+}
+
+.u74_container {
+    position:absolute;
+    left:45px;
+    top:477px;
+    width:85px;
+    height:25px;
+}
+
+#u74_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:91px;
+    height:31px;
+}
+
+.u75 {
+    position:absolute;
+    left:2px;
+    top:4px;
+    width:81px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u76_normal {
+    background-image: url('../部落详情页（分红）_files/u70_normal.png');
+}
+
+.u76_container {
+    position:absolute;
+    left:365px;
+    top:477px;
+    width:85px;
+    height:25px;
+}
+
+#u76_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:91px;
+    height:31px;
+}
+
+.u77 {
+    position:absolute;
+    left:2px;
+    top:4px;
+    width:81px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u78_normal {
+    background-image: url('../部落详情页（分红）_files/u78_normal.png');
+}
+
+.u78_container {
+    position:absolute;
+    left:905px;
+    top:472px;
+    width:293px;
+    height:977px;
+}
+
+#u78_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:299px;
+    height:983px;
+}
+
+.u79 {
+    position:absolute;
+    left:2px;
+    top:480px;
+    width:289px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u80 {
+    position:absolute;
+    left:917px;
+    top:490px;
+    width:150px;
+    height:19px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u81 {
+    position:absolute;
+    left:918px;
+    top:630px;
+    width:281px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u82_normal {
+    background-image: url('../部落详情页（分红）_files/u82_normal.png');
+}
+
+.u82_container {
+    position:absolute;
+    left:917px;
+    top:526px;
+    width:258px;
+    height:94px;
+}
+
+#u82_img {
+    position:absolute;
+    left:0px;
+    top:0px;
+    width:258px;
+    height:94px;
+}
+
+.u83 {
+    position:absolute;
+    left:2px;
+    top:39px;
+    width:254px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u84 {
+    position:absolute;
+    left:918px;
+    top:656px;
+    width:181px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u85 {
+    position:absolute;
+    left:917px;
+    top:682px;
+    width:282px;
+    height:15px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u86 {
+    position:absolute;
+    left:918px;
+    top:816px;
+    width:281px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u87_normal {
+    background-image: url('../部落详情页（分红）_files/u87_normal.png');
+}
+
+.u87_container {
+    position:absolute;
+    left:917px;
+    top:716px;
+    width:258px;
+    height:90px;
+}
+
+#u87_img {
+    position:absolute;
+    left:0px;
+    top:0px;
+    width:258px;
+    height:90px;
+}
+
+.u88 {
+    position:absolute;
+    left:2px;
+    top:37px;
+    width:254px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u89 {
+    position:absolute;
+    left:918px;
+    top:842px;
+    width:181px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u90 {
+    position:absolute;
+    left:917px;
+    top:868px;
+    width:282px;
+    height:45px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u91 {
+    position:absolute;
+    left:918px;
+    top:1042px;
+    width:281px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u92_normal {
+    background-image: url('../部落详情页（分红）_files/u92_normal.png');
+}
+
+.u92_container {
+    position:absolute;
+    left:917px;
+    top:930px;
+    width:258px;
+    height:103px;
+}
+
+#u92_img {
+    position:absolute;
+    left:0px;
+    top:0px;
+    width:258px;
+    height:103px;
+}
+
+.u93 {
+    position:absolute;
+    left:2px;
+    top:44px;
+    width:254px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u94 {
+    position:absolute;
+    left:918px;
+    top:1068px;
+    width:181px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u95 {
+    position:absolute;
+    left:917px;
+    top:1094px;
+    width:282px;
+    height:60px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u96 {
+    position:absolute;
+    left:1148px;
+    top:490px;
+    width:41px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u97 {
+    position:absolute;
+    left:775px;
+    top:230px;
+    width:88px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u98_normal {
+    background-image: url('../部落详情页（分红）_files/u98_normal.png');
+}
+
+.u98_container {
+    position:absolute;
+    left:905px;
+    top:203px;
+    width:294px;
+    height:74px;
+}
+
+#u98_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:300px;
+    height:80px;
+}
+
+.u99 {
+    position:absolute;
+    left:2px;
+    top:29px;
+    width:290px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u100 {
+    position:absolute;
+    left:918px;
+    top:246px;
+    width:253px;
+    height:19px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u101 {
+    position:absolute;
+    left:917px;
+    top:218px;
+    width:214px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u102_normal {
+    background-image: url('../部落详情页（分红）_files/u102_normal.png');
+}
+
+.u102_container {
+    position:absolute;
+    left:905px;
+    top:287px;
+    width:294px;
+    height:166px;
+}
+
+#u102_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:300px;
+    height:172px;
+}
+
+.u103 {
+    position:absolute;
+    left:2px;
+    top:75px;
+    width:290px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u104 {
+    position:absolute;
+    left:917px;
+    top:302px;
+    width:214px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u105 {
+    position:absolute;
+    left:917px;
+    top:339px;
+    width:188px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u106 {
+    position:absolute;
+    left:1128px;
+    top:339px;
+    width:71px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u107 {
+    position:absolute;
+    left:917px;
+    top:357px;
+    width:188px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u108 {
+    position:absolute;
+    left:1128px;
+    top:357px;
+    width:71px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u109 {
+    position:absolute;
+    left:917px;
+    top:376px;
+    width:188px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u110 {
+    position:absolute;
+    left:1128px;
+    top:376px;
+    width:71px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u111 {
+    position:absolute;
+    left:917px;
+    top:395px;
+    width:188px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u112 {
+    position:absolute;
+    left:1128px;
+    top:395px;
+    width:71px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u113 {
+    position:absolute;
+    left:917px;
+    top:414px;
+    width:188px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u114 {
+    position:absolute;
+    left:1128px;
+    top:414px;
+    width:71px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u115 {
+    position:absolute;
+    left:1157px;
+    top:302px;
+    width:41px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u116 {
+    position:absolute;
+    left:919px;
+    top:1287px;
+    width:281px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u117_normal {
+    background-image: url('../部落详情页（分红）_files/u92_normal.png');
+}
+
+.u117_container {
+    position:absolute;
+    left:918px;
+    top:1175px;
+    width:258px;
+    height:103px;
+}
+
+#u117_img {
+    position:absolute;
+    left:0px;
+    top:0px;
+    width:258px;
+    height:103px;
+}
+
+.u118 {
+    position:absolute;
+    left:2px;
+    top:44px;
+    width:254px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u119 {
+    position:absolute;
+    left:919px;
+    top:1313px;
+    width:181px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u120 {
+    position:absolute;
+    left:918px;
+    top:1339px;
+    width:282px;
+    height:60px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u121 {
+    position:absolute;
+    left:33px;
+    top:518px;
+    width:106px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u122 {
+    position:absolute;
+    left:87px;
+    top:544px;
+    width:492px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u123 {
+    position:absolute;
+    left:48px;
+    top:570px;
+    width:459px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u124 {
+    position:absolute;
+    left:33px;
+    top:630px;
+    width:73px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u125_line {
+    background-image: url('../部落详情页（分红）_files/u125_line.png');
+}
+
+.u125_line {
+    position:absolute;
+    left:0px;
+    top:4px;
+    width:817px;
+    height:3px;
+}
+
+.u125 {
+    position:absolute;
+    left:33px;
+    top:606px;
+    width:817px;
+    height:10px;
+    
+}
+
+#u126 {
+    position:absolute;
+    left:37px;
+    top:656px;
+    width:818px;
+    height:305px
+}
+
+.u127_normal {
+    background-image: url('../部落详情页（分红）_files/u127_normal.png');
+}
+
+.u127_container {
+    position:absolute;
+    left:0px;
+    top:0px;
+    width:114px;
+    height:20px;
+}
+
+#u127_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:120px;
+    height:26px;
+}
+
+.u128 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:110px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u129_normal {
+    background-image: url('../部落详情页（分红）_files/u129_normal.png');
+}
+
+.u129_container {
+    position:absolute;
+    left:114px;
+    top:0px;
+    width:100px;
+    height:20px;
+}
+
+#u129_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:106px;
+    height:26px;
+}
+
+.u130 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:96px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u131_normal {
+    background-image: url('../部落详情页（分红）_files/u131_normal.png');
+}
+
+.u131_container {
+    position:absolute;
+    left:214px;
+    top:0px;
+    width:79px;
+    height:20px;
+}
+
+#u131_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:85px;
+    height:26px;
+}
+
+.u132 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:75px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u133_normal {
+    background-image: url('../部落详情页（分红）_files/u133_normal.png');
+}
+
+.u133_container {
+    position:absolute;
+    left:293px;
+    top:0px;
+    width:116px;
+    height:20px;
+}
+
+#u133_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:122px;
+    height:26px;
+}
+
+.u134 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:112px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u135_normal {
+    background-image: url('../部落详情页（分红）_files/u135_normal.png');
+}
+
+.u135_container {
+    position:absolute;
+    left:409px;
+    top:0px;
+    width:98px;
+    height:20px;
+}
+
+#u135_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:104px;
+    height:26px;
+}
+
+.u136 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:94px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u137_normal {
+    background-image: url('../部落详情页（分红）_files/u137_normal.png');
+}
+
+.u137_container {
+    position:absolute;
+    left:507px;
+    top:0px;
+    width:93px;
+    height:20px;
+}
+
+#u137_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:99px;
+    height:26px;
+}
+
+.u138 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:89px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u139_normal {
+    background-image: url('../部落详情页（分红）_files/u139_normal.png');
+}
+
+.u139_container {
+    position:absolute;
+    left:600px;
+    top:0px;
+    width:52px;
+    height:20px;
+}
+
+#u139_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:58px;
+    height:26px;
+}
+
+.u140 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:48px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u141_normal {
+    background-image: url('../部落详情页（分红）_files/u141_normal.png');
+}
+
+.u141_container {
+    position:absolute;
+    left:652px;
+    top:0px;
+    width:87px;
+    height:20px;
+}
+
+#u141_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:93px;
+    height:26px;
+}
+
+.u142 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:83px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u143_normal {
+    background-image: url('../部落详情页（分红）_files/u143_normal.png');
+}
+
+.u143_container {
+    position:absolute;
+    left:739px;
+    top:0px;
+    width:74px;
+    height:20px;
+}
+
+#u143_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:80px;
+    height:26px;
+}
+
+.u144 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:70px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u145_normal {
+    background-image: url('../部落详情页（分红）_files/u127_normal.png');
+}
+
+.u145_container {
+    position:absolute;
+    left:0px;
+    top:20px;
+    width:114px;
+    height:20px;
+}
+
+#u145_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:120px;
+    height:26px;
+}
+
+.u146 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:110px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u147_normal {
+    background-image: url('../部落详情页（分红）_files/u129_normal.png');
+}
+
+.u147_container {
+    position:absolute;
+    left:114px;
+    top:20px;
+    width:100px;
+    height:20px;
+}
+
+#u147_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:106px;
+    height:26px;
+}
+
+.u148 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:96px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u149_normal {
+    background-image: url('../部落详情页（分红）_files/u131_normal.png');
+}
+
+.u149_container {
+    position:absolute;
+    left:214px;
+    top:20px;
+    width:79px;
+    height:20px;
+}
+
+#u149_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:85px;
+    height:26px;
+}
+
+.u150 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:75px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u151_normal {
+    background-image: url('../部落详情页（分红）_files/u133_normal.png');
+}
+
+.u151_container {
+    position:absolute;
+    left:293px;
+    top:20px;
+    width:116px;
+    height:20px;
+}
+
+#u151_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:122px;
+    height:26px;
+}
+
+.u152 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:112px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u153_normal {
+    background-image: url('../部落详情页（分红）_files/u135_normal.png');
+}
+
+.u153_container {
+    position:absolute;
+    left:409px;
+    top:20px;
+    width:98px;
+    height:20px;
+}
+
+#u153_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:104px;
+    height:26px;
+}
+
+.u154 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:94px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u155_normal {
+    background-image: url('../部落详情页（分红）_files/u137_normal.png');
+}
+
+.u155_container {
+    position:absolute;
+    left:507px;
+    top:20px;
+    width:93px;
+    height:20px;
+}
+
+#u155_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:99px;
+    height:26px;
+}
+
+.u156 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:89px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u157_normal {
+    background-image: url('../部落详情页（分红）_files/u139_normal.png');
+}
+
+.u157_container {
+    position:absolute;
+    left:600px;
+    top:20px;
+    width:52px;
+    height:20px;
+}
+
+#u157_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:58px;
+    height:26px;
+}
+
+.u158 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:48px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u159_normal {
+    background-image: url('../部落详情页（分红）_files/u141_normal.png');
+}
+
+.u159_container {
+    position:absolute;
+    left:652px;
+    top:20px;
+    width:87px;
+    height:20px;
+}
+
+#u159_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:93px;
+    height:26px;
+}
+
+.u160 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:83px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u161_normal {
+    background-image: url('../部落详情页（分红）_files/u143_normal.png');
+}
+
+.u161_container {
+    position:absolute;
+    left:739px;
+    top:20px;
+    width:74px;
+    height:20px;
+}
+
+#u161_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:80px;
+    height:26px;
+}
+
+.u162 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:70px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u163_normal {
+    background-image: url('../部落详情页（分红）_files/u127_normal.png');
+}
+
+.u163_container {
+    position:absolute;
+    left:0px;
+    top:40px;
+    width:114px;
+    height:20px;
+}
+
+#u163_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:120px;
+    height:26px;
+}
+
+.u164 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:110px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u165_normal {
+    background-image: url('../部落详情页（分红）_files/u129_normal.png');
+}
+
+.u165_container {
+    position:absolute;
+    left:114px;
+    top:40px;
+    width:100px;
+    height:20px;
+}
+
+#u165_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:106px;
+    height:26px;
+}
+
+.u166 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:96px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u167_normal {
+    background-image: url('../部落详情页（分红）_files/u131_normal.png');
+}
+
+.u167_container {
+    position:absolute;
+    left:214px;
+    top:40px;
+    width:79px;
+    height:20px;
+}
+
+#u167_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:85px;
+    height:26px;
+}
+
+.u168 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:75px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u169_normal {
+    background-image: url('../部落详情页（分红）_files/u133_normal.png');
+}
+
+.u169_container {
+    position:absolute;
+    left:293px;
+    top:40px;
+    width:116px;
+    height:20px;
+}
+
+#u169_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:122px;
+    height:26px;
+}
+
+.u170 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:112px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u171_normal {
+    background-image: url('../部落详情页（分红）_files/u135_normal.png');
+}
+
+.u171_container {
+    position:absolute;
+    left:409px;
+    top:40px;
+    width:98px;
+    height:20px;
+}
+
+#u171_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:104px;
+    height:26px;
+}
+
+.u172 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:94px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u173_normal {
+    background-image: url('../部落详情页（分红）_files/u137_normal.png');
+}
+
+.u173_container {
+    position:absolute;
+    left:507px;
+    top:40px;
+    width:93px;
+    height:20px;
+}
+
+#u173_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:99px;
+    height:26px;
+}
+
+.u174 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:89px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u175_normal {
+    background-image: url('../部落详情页（分红）_files/u139_normal.png');
+}
+
+.u175_container {
+    position:absolute;
+    left:600px;
+    top:40px;
+    width:52px;
+    height:20px;
+}
+
+#u175_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:58px;
+    height:26px;
+}
+
+.u176 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:48px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u177_normal {
+    background-image: url('../部落详情页（分红）_files/u141_normal.png');
+}
+
+.u177_container {
+    position:absolute;
+    left:652px;
+    top:40px;
+    width:87px;
+    height:20px;
+}
+
+#u177_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:93px;
+    height:26px;
+}
+
+.u178 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:83px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u179_normal {
+    background-image: url('../部落详情页（分红）_files/u143_normal.png');
+}
+
+.u179_container {
+    position:absolute;
+    left:739px;
+    top:40px;
+    width:74px;
+    height:20px;
+}
+
+#u179_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:80px;
+    height:26px;
+}
+
+.u180 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:70px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u181_normal {
+    background-image: url('../部落详情页（分红）_files/u127_normal.png');
+}
+
+.u181_container {
+    position:absolute;
+    left:0px;
+    top:60px;
+    width:114px;
+    height:20px;
+}
+
+#u181_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:120px;
+    height:26px;
+}
+
+.u182 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:110px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u183_normal {
+    background-image: url('../部落详情页（分红）_files/u129_normal.png');
+}
+
+.u183_container {
+    position:absolute;
+    left:114px;
+    top:60px;
+    width:100px;
+    height:20px;
+}
+
+#u183_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:106px;
+    height:26px;
+}
+
+.u184 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:96px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u185_normal {
+    background-image: url('../部落详情页（分红）_files/u131_normal.png');
+}
+
+.u185_container {
+    position:absolute;
+    left:214px;
+    top:60px;
+    width:79px;
+    height:20px;
+}
+
+#u185_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:85px;
+    height:26px;
+}
+
+.u186 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:75px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u187_normal {
+    background-image: url('../部落详情页（分红）_files/u133_normal.png');
+}
+
+.u187_container {
+    position:absolute;
+    left:293px;
+    top:60px;
+    width:116px;
+    height:20px;
+}
+
+#u187_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:122px;
+    height:26px;
+}
+
+.u188 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:112px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u189_normal {
+    background-image: url('../部落详情页（分红）_files/u135_normal.png');
+}
+
+.u189_container {
+    position:absolute;
+    left:409px;
+    top:60px;
+    width:98px;
+    height:20px;
+}
+
+#u189_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:104px;
+    height:26px;
+}
+
+.u190 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:94px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u191_normal {
+    background-image: url('../部落详情页（分红）_files/u137_normal.png');
+}
+
+.u191_container {
+    position:absolute;
+    left:507px;
+    top:60px;
+    width:93px;
+    height:20px;
+}
+
+#u191_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:99px;
+    height:26px;
+}
+
+.u192 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:89px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u193_normal {
+    background-image: url('../部落详情页（分红）_files/u139_normal.png');
+}
+
+.u193_container {
+    position:absolute;
+    left:600px;
+    top:60px;
+    width:52px;
+    height:20px;
+}
+
+#u193_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:58px;
+    height:26px;
+}
+
+.u194 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:48px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u195_normal {
+    background-image: url('../部落详情页（分红）_files/u141_normal.png');
+}
+
+.u195_container {
+    position:absolute;
+    left:652px;
+    top:60px;
+    width:87px;
+    height:20px;
+}
+
+#u195_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:93px;
+    height:26px;
+}
+
+.u196 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:83px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u197_normal {
+    background-image: url('../部落详情页（分红）_files/u143_normal.png');
+}
+
+.u197_container {
+    position:absolute;
+    left:739px;
+    top:60px;
+    width:74px;
+    height:20px;
+}
+
+#u197_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:80px;
+    height:26px;
+}
+
+.u198 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:70px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u199_normal {
+    background-image: url('../部落详情页（分红）_files/u127_normal.png');
+}
+
+.u199_container {
+    position:absolute;
+    left:0px;
+    top:80px;
+    width:114px;
+    height:20px;
+}
+
+#u199_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:120px;
+    height:26px;
+}
+
+.u200 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:110px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u201_normal {
+    background-image: url('../部落详情页（分红）_files/u129_normal.png');
+}
+
+.u201_container {
+    position:absolute;
+    left:114px;
+    top:80px;
+    width:100px;
+    height:20px;
+}
+
+#u201_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:106px;
+    height:26px;
+}
+
+.u202 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:96px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u203_normal {
+    background-image: url('../部落详情页（分红）_files/u131_normal.png');
+}
+
+.u203_container {
+    position:absolute;
+    left:214px;
+    top:80px;
+    width:79px;
+    height:20px;
+}
+
+#u203_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:85px;
+    height:26px;
+}
+
+.u204 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:75px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u205_normal {
+    background-image: url('../部落详情页（分红）_files/u133_normal.png');
+}
+
+.u205_container {
+    position:absolute;
+    left:293px;
+    top:80px;
+    width:116px;
+    height:20px;
+}
+
+#u205_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:122px;
+    height:26px;
+}
+
+.u206 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:112px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u207_normal {
+    background-image: url('../部落详情页（分红）_files/u135_normal.png');
+}
+
+.u207_container {
+    position:absolute;
+    left:409px;
+    top:80px;
+    width:98px;
+    height:20px;
+}
+
+#u207_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:104px;
+    height:26px;
+}
+
+.u208 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:94px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u209_normal {
+    background-image: url('../部落详情页（分红）_files/u137_normal.png');
+}
+
+.u209_container {
+    position:absolute;
+    left:507px;
+    top:80px;
+    width:93px;
+    height:20px;
+}
+
+#u209_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:99px;
+    height:26px;
+}
+
+.u210 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:89px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u211_normal {
+    background-image: url('../部落详情页（分红）_files/u139_normal.png');
+}
+
+.u211_container {
+    position:absolute;
+    left:600px;
+    top:80px;
+    width:52px;
+    height:20px;
+}
+
+#u211_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:58px;
+    height:26px;
+}
+
+.u212 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:48px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u213_normal {
+    background-image: url('../部落详情页（分红）_files/u141_normal.png');
+}
+
+.u213_container {
+    position:absolute;
+    left:652px;
+    top:80px;
+    width:87px;
+    height:20px;
+}
+
+#u213_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:93px;
+    height:26px;
+}
+
+.u214 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:83px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u215_normal {
+    background-image: url('../部落详情页（分红）_files/u143_normal.png');
+}
+
+.u215_container {
+    position:absolute;
+    left:739px;
+    top:80px;
+    width:74px;
+    height:20px;
+}
+
+#u215_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:80px;
+    height:26px;
+}
+
+.u216 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:70px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u217_normal {
+    background-image: url('../部落详情页（分红）_files/u127_normal.png');
+}
+
+.u217_container {
+    position:absolute;
+    left:0px;
+    top:100px;
+    width:114px;
+    height:20px;
+}
+
+#u217_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:120px;
+    height:26px;
+}
+
+.u218 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:110px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u219_normal {
+    background-image: url('../部落详情页（分红）_files/u129_normal.png');
+}
+
+.u219_container {
+    position:absolute;
+    left:114px;
+    top:100px;
+    width:100px;
+    height:20px;
+}
+
+#u219_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:106px;
+    height:26px;
+}
+
+.u220 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:96px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u221_normal {
+    background-image: url('../部落详情页（分红）_files/u131_normal.png');
+}
+
+.u221_container {
+    position:absolute;
+    left:214px;
+    top:100px;
+    width:79px;
+    height:20px;
+}
+
+#u221_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:85px;
+    height:26px;
+}
+
+.u222 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:75px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u223_normal {
+    background-image: url('../部落详情页（分红）_files/u133_normal.png');
+}
+
+.u223_container {
+    position:absolute;
+    left:293px;
+    top:100px;
+    width:116px;
+    height:20px;
+}
+
+#u223_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:122px;
+    height:26px;
+}
+
+.u224 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:112px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u225_normal {
+    background-image: url('../部落详情页（分红）_files/u135_normal.png');
+}
+
+.u225_container {
+    position:absolute;
+    left:409px;
+    top:100px;
+    width:98px;
+    height:20px;
+}
+
+#u225_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:104px;
+    height:26px;
+}
+
+.u226 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:94px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u227_normal {
+    background-image: url('../部落详情页（分红）_files/u137_normal.png');
+}
+
+.u227_container {
+    position:absolute;
+    left:507px;
+    top:100px;
+    width:93px;
+    height:20px;
+}
+
+#u227_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:99px;
+    height:26px;
+}
+
+.u228 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:89px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u229_normal {
+    background-image: url('../部落详情页（分红）_files/u139_normal.png');
+}
+
+.u229_container {
+    position:absolute;
+    left:600px;
+    top:100px;
+    width:52px;
+    height:20px;
+}
+
+#u229_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:58px;
+    height:26px;
+}
+
+.u230 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:48px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u231_normal {
+    background-image: url('../部落详情页（分红）_files/u141_normal.png');
+}
+
+.u231_container {
+    position:absolute;
+    left:652px;
+    top:100px;
+    width:87px;
+    height:20px;
+}
+
+#u231_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:93px;
+    height:26px;
+}
+
+.u232 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:83px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u233_normal {
+    background-image: url('../部落详情页（分红）_files/u143_normal.png');
+}
+
+.u233_container {
+    position:absolute;
+    left:739px;
+    top:100px;
+    width:74px;
+    height:20px;
+}
+
+#u233_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:80px;
+    height:26px;
+}
+
+.u234 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:70px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u235_normal {
+    background-image: url('../部落详情页（分红）_files/u127_normal.png');
+}
+
+.u235_container {
+    position:absolute;
+    left:0px;
+    top:120px;
+    width:114px;
+    height:20px;
+}
+
+#u235_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:120px;
+    height:26px;
+}
+
+.u236 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:110px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u237_normal {
+    background-image: url('../部落详情页（分红）_files/u129_normal.png');
+}
+
+.u237_container {
+    position:absolute;
+    left:114px;
+    top:120px;
+    width:100px;
+    height:20px;
+}
+
+#u237_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:106px;
+    height:26px;
+}
+
+.u238 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:96px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u239_normal {
+    background-image: url('../部落详情页（分红）_files/u131_normal.png');
+}
+
+.u239_container {
+    position:absolute;
+    left:214px;
+    top:120px;
+    width:79px;
+    height:20px;
+}
+
+#u239_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:85px;
+    height:26px;
+}
+
+.u240 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:75px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u241_normal {
+    background-image: url('../部落详情页（分红）_files/u133_normal.png');
+}
+
+.u241_container {
+    position:absolute;
+    left:293px;
+    top:120px;
+    width:116px;
+    height:20px;
+}
+
+#u241_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:122px;
+    height:26px;
+}
+
+.u242 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:112px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u243_normal {
+    background-image: url('../部落详情页（分红）_files/u135_normal.png');
+}
+
+.u243_container {
+    position:absolute;
+    left:409px;
+    top:120px;
+    width:98px;
+    height:20px;
+}
+
+#u243_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:104px;
+    height:26px;
+}
+
+.u244 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:94px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u245_normal {
+    background-image: url('../部落详情页（分红）_files/u137_normal.png');
+}
+
+.u245_container {
+    position:absolute;
+    left:507px;
+    top:120px;
+    width:93px;
+    height:20px;
+}
+
+#u245_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:99px;
+    height:26px;
+}
+
+.u246 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:89px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u247_normal {
+    background-image: url('../部落详情页（分红）_files/u139_normal.png');
+}
+
+.u247_container {
+    position:absolute;
+    left:600px;
+    top:120px;
+    width:52px;
+    height:20px;
+}
+
+#u247_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:58px;
+    height:26px;
+}
+
+.u248 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:48px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u249_normal {
+    background-image: url('../部落详情页（分红）_files/u141_normal.png');
+}
+
+.u249_container {
+    position:absolute;
+    left:652px;
+    top:120px;
+    width:87px;
+    height:20px;
+}
+
+#u249_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:93px;
+    height:26px;
+}
+
+.u250 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:83px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u251_normal {
+    background-image: url('../部落详情页（分红）_files/u143_normal.png');
+}
+
+.u251_container {
+    position:absolute;
+    left:739px;
+    top:120px;
+    width:74px;
+    height:20px;
+}
+
+#u251_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:80px;
+    height:26px;
+}
+
+.u252 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:70px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u253_normal {
+    background-image: url('../部落详情页（分红）_files/u127_normal.png');
+}
+
+.u253_container {
+    position:absolute;
+    left:0px;
+    top:140px;
+    width:114px;
+    height:20px;
+}
+
+#u253_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:120px;
+    height:26px;
+}
+
+.u254 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:110px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u255_normal {
+    background-image: url('../部落详情页（分红）_files/u129_normal.png');
+}
+
+.u255_container {
+    position:absolute;
+    left:114px;
+    top:140px;
+    width:100px;
+    height:20px;
+}
+
+#u255_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:106px;
+    height:26px;
+}
+
+.u256 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:96px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u257_normal {
+    background-image: url('../部落详情页（分红）_files/u131_normal.png');
+}
+
+.u257_container {
+    position:absolute;
+    left:214px;
+    top:140px;
+    width:79px;
+    height:20px;
+}
+
+#u257_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:85px;
+    height:26px;
+}
+
+.u258 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:75px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u259_normal {
+    background-image: url('../部落详情页（分红）_files/u133_normal.png');
+}
+
+.u259_container {
+    position:absolute;
+    left:293px;
+    top:140px;
+    width:116px;
+    height:20px;
+}
+
+#u259_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:122px;
+    height:26px;
+}
+
+.u260 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:112px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u261_normal {
+    background-image: url('../部落详情页（分红）_files/u135_normal.png');
+}
+
+.u261_container {
+    position:absolute;
+    left:409px;
+    top:140px;
+    width:98px;
+    height:20px;
+}
+
+#u261_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:104px;
+    height:26px;
+}
+
+.u262 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:94px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u263_normal {
+    background-image: url('../部落详情页（分红）_files/u137_normal.png');
+}
+
+.u263_container {
+    position:absolute;
+    left:507px;
+    top:140px;
+    width:93px;
+    height:20px;
+}
+
+#u263_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:99px;
+    height:26px;
+}
+
+.u264 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:89px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u265_normal {
+    background-image: url('../部落详情页（分红）_files/u139_normal.png');
+}
+
+.u265_container {
+    position:absolute;
+    left:600px;
+    top:140px;
+    width:52px;
+    height:20px;
+}
+
+#u265_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:58px;
+    height:26px;
+}
+
+.u266 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:48px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u267_normal {
+    background-image: url('../部落详情页（分红）_files/u141_normal.png');
+}
+
+.u267_container {
+    position:absolute;
+    left:652px;
+    top:140px;
+    width:87px;
+    height:20px;
+}
+
+#u267_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:93px;
+    height:26px;
+}
+
+.u268 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:83px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u269_normal {
+    background-image: url('../部落详情页（分红）_files/u143_normal.png');
+}
+
+.u269_container {
+    position:absolute;
+    left:739px;
+    top:140px;
+    width:74px;
+    height:20px;
+}
+
+#u269_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:80px;
+    height:26px;
+}
+
+.u270 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:70px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u271_normal {
+    background-image: url('../部落详情页（分红）_files/u127_normal.png');
+}
+
+.u271_container {
+    position:absolute;
+    left:0px;
+    top:160px;
+    width:114px;
+    height:20px;
+}
+
+#u271_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:120px;
+    height:26px;
+}
+
+.u272 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:110px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u273_normal {
+    background-image: url('../部落详情页（分红）_files/u129_normal.png');
+}
+
+.u273_container {
+    position:absolute;
+    left:114px;
+    top:160px;
+    width:100px;
+    height:20px;
+}
+
+#u273_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:106px;
+    height:26px;
+}
+
+.u274 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:96px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u275_normal {
+    background-image: url('../部落详情页（分红）_files/u131_normal.png');
+}
+
+.u275_container {
+    position:absolute;
+    left:214px;
+    top:160px;
+    width:79px;
+    height:20px;
+}
+
+#u275_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:85px;
+    height:26px;
+}
+
+.u276 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:75px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u277_normal {
+    background-image: url('../部落详情页（分红）_files/u133_normal.png');
+}
+
+.u277_container {
+    position:absolute;
+    left:293px;
+    top:160px;
+    width:116px;
+    height:20px;
+}
+
+#u277_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:122px;
+    height:26px;
+}
+
+.u278 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:112px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u279_normal {
+    background-image: url('../部落详情页（分红）_files/u135_normal.png');
+}
+
+.u279_container {
+    position:absolute;
+    left:409px;
+    top:160px;
+    width:98px;
+    height:20px;
+}
+
+#u279_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:104px;
+    height:26px;
+}
+
+.u280 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:94px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u281_normal {
+    background-image: url('../部落详情页（分红）_files/u137_normal.png');
+}
+
+.u281_container {
+    position:absolute;
+    left:507px;
+    top:160px;
+    width:93px;
+    height:20px;
+}
+
+#u281_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:99px;
+    height:26px;
+}
+
+.u282 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:89px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u283_normal {
+    background-image: url('../部落详情页（分红）_files/u139_normal.png');
+}
+
+.u283_container {
+    position:absolute;
+    left:600px;
+    top:160px;
+    width:52px;
+    height:20px;
+}
+
+#u283_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:58px;
+    height:26px;
+}
+
+.u284 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:48px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u285_normal {
+    background-image: url('../部落详情页（分红）_files/u141_normal.png');
+}
+
+.u285_container {
+    position:absolute;
+    left:652px;
+    top:160px;
+    width:87px;
+    height:20px;
+}
+
+#u285_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:93px;
+    height:26px;
+}
+
+.u286 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:83px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u287_normal {
+    background-image: url('../部落详情页（分红）_files/u143_normal.png');
+}
+
+.u287_container {
+    position:absolute;
+    left:739px;
+    top:160px;
+    width:74px;
+    height:20px;
+}
+
+#u287_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:80px;
+    height:26px;
+}
+
+.u288 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:70px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u289_normal {
+    background-image: url('../部落详情页（分红）_files/u127_normal.png');
+}
+
+.u289_container {
+    position:absolute;
+    left:0px;
+    top:180px;
+    width:114px;
+    height:20px;
+}
+
+#u289_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:120px;
+    height:26px;
+}
+
+.u290 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:110px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u291_normal {
+    background-image: url('../部落详情页（分红）_files/u129_normal.png');
+}
+
+.u291_container {
+    position:absolute;
+    left:114px;
+    top:180px;
+    width:100px;
+    height:20px;
+}
+
+#u291_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:106px;
+    height:26px;
+}
+
+.u292 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:96px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u293_normal {
+    background-image: url('../部落详情页（分红）_files/u131_normal.png');
+}
+
+.u293_container {
+    position:absolute;
+    left:214px;
+    top:180px;
+    width:79px;
+    height:20px;
+}
+
+#u293_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:85px;
+    height:26px;
+}
+
+.u294 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:75px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u295_normal {
+    background-image: url('../部落详情页（分红）_files/u133_normal.png');
+}
+
+.u295_container {
+    position:absolute;
+    left:293px;
+    top:180px;
+    width:116px;
+    height:20px;
+}
+
+#u295_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:122px;
+    height:26px;
+}
+
+.u296 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:112px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u297_normal {
+    background-image: url('../部落详情页（分红）_files/u135_normal.png');
+}
+
+.u297_container {
+    position:absolute;
+    left:409px;
+    top:180px;
+    width:98px;
+    height:20px;
+}
+
+#u297_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:104px;
+    height:26px;
+}
+
+.u298 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:94px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u299_normal {
+    background-image: url('../部落详情页（分红）_files/u137_normal.png');
+}
+
+.u299_container {
+    position:absolute;
+    left:507px;
+    top:180px;
+    width:93px;
+    height:20px;
+}
+
+#u299_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:99px;
+    height:26px;
+}
+
+.u300 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:89px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u301_normal {
+    background-image: url('../部落详情页（分红）_files/u139_normal.png');
+}
+
+.u301_container {
+    position:absolute;
+    left:600px;
+    top:180px;
+    width:52px;
+    height:20px;
+}
+
+#u301_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:58px;
+    height:26px;
+}
+
+.u302 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:48px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u303_normal {
+    background-image: url('../部落详情页（分红）_files/u141_normal.png');
+}
+
+.u303_container {
+    position:absolute;
+    left:652px;
+    top:180px;
+    width:87px;
+    height:20px;
+}
+
+#u303_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:93px;
+    height:26px;
+}
+
+.u304 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:83px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u305_normal {
+    background-image: url('../部落详情页（分红）_files/u143_normal.png');
+}
+
+.u305_container {
+    position:absolute;
+    left:739px;
+    top:180px;
+    width:74px;
+    height:20px;
+}
+
+#u305_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:80px;
+    height:26px;
+}
+
+.u306 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:70px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u307_normal {
+    background-image: url('../部落详情页（分红）_files/u127_normal.png');
+}
+
+.u307_container {
+    position:absolute;
+    left:0px;
+    top:200px;
+    width:114px;
+    height:20px;
+}
+
+#u307_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:120px;
+    height:26px;
+}
+
+.u308 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:110px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u309_normal {
+    background-image: url('../部落详情页（分红）_files/u129_normal.png');
+}
+
+.u309_container {
+    position:absolute;
+    left:114px;
+    top:200px;
+    width:100px;
+    height:20px;
+}
+
+#u309_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:106px;
+    height:26px;
+}
+
+.u310 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:96px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u311_normal {
+    background-image: url('../部落详情页（分红）_files/u131_normal.png');
+}
+
+.u311_container {
+    position:absolute;
+    left:214px;
+    top:200px;
+    width:79px;
+    height:20px;
+}
+
+#u311_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:85px;
+    height:26px;
+}
+
+.u312 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:75px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u313_normal {
+    background-image: url('../部落详情页（分红）_files/u133_normal.png');
+}
+
+.u313_container {
+    position:absolute;
+    left:293px;
+    top:200px;
+    width:116px;
+    height:20px;
+}
+
+#u313_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:122px;
+    height:26px;
+}
+
+.u314 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:112px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u315_normal {
+    background-image: url('../部落详情页（分红）_files/u135_normal.png');
+}
+
+.u315_container {
+    position:absolute;
+    left:409px;
+    top:200px;
+    width:98px;
+    height:20px;
+}
+
+#u315_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:104px;
+    height:26px;
+}
+
+.u316 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:94px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u317_normal {
+    background-image: url('../部落详情页（分红）_files/u137_normal.png');
+}
+
+.u317_container {
+    position:absolute;
+    left:507px;
+    top:200px;
+    width:93px;
+    height:20px;
+}
+
+#u317_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:99px;
+    height:26px;
+}
+
+.u318 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:89px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u319_normal {
+    background-image: url('../部落详情页（分红）_files/u139_normal.png');
+}
+
+.u319_container {
+    position:absolute;
+    left:600px;
+    top:200px;
+    width:52px;
+    height:20px;
+}
+
+#u319_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:58px;
+    height:26px;
+}
+
+.u320 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:48px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u321_normal {
+    background-image: url('../部落详情页（分红）_files/u141_normal.png');
+}
+
+.u321_container {
+    position:absolute;
+    left:652px;
+    top:200px;
+    width:87px;
+    height:20px;
+}
+
+#u321_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:93px;
+    height:26px;
+}
+
+.u322 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:83px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u323_normal {
+    background-image: url('../部落详情页（分红）_files/u143_normal.png');
+}
+
+.u323_container {
+    position:absolute;
+    left:739px;
+    top:200px;
+    width:74px;
+    height:20px;
+}
+
+#u323_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:80px;
+    height:26px;
+}
+
+.u324 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:70px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u325_normal {
+    background-image: url('../部落详情页（分红）_files/u127_normal.png');
+}
+
+.u325_container {
+    position:absolute;
+    left:0px;
+    top:220px;
+    width:114px;
+    height:20px;
+}
+
+#u325_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:120px;
+    height:26px;
+}
+
+.u326 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:110px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u327_normal {
+    background-image: url('../部落详情页（分红）_files/u129_normal.png');
+}
+
+.u327_container {
+    position:absolute;
+    left:114px;
+    top:220px;
+    width:100px;
+    height:20px;
+}
+
+#u327_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:106px;
+    height:26px;
+}
+
+.u328 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:96px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u329_normal {
+    background-image: url('../部落详情页（分红）_files/u131_normal.png');
+}
+
+.u329_container {
+    position:absolute;
+    left:214px;
+    top:220px;
+    width:79px;
+    height:20px;
+}
+
+#u329_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:85px;
+    height:26px;
+}
+
+.u330 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:75px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u331_normal {
+    background-image: url('../部落详情页（分红）_files/u133_normal.png');
+}
+
+.u331_container {
+    position:absolute;
+    left:293px;
+    top:220px;
+    width:116px;
+    height:20px;
+}
+
+#u331_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:122px;
+    height:26px;
+}
+
+.u332 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:112px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u333_normal {
+    background-image: url('../部落详情页（分红）_files/u135_normal.png');
+}
+
+.u333_container {
+    position:absolute;
+    left:409px;
+    top:220px;
+    width:98px;
+    height:20px;
+}
+
+#u333_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:104px;
+    height:26px;
+}
+
+.u334 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:94px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u335_normal {
+    background-image: url('../部落详情页（分红）_files/u137_normal.png');
+}
+
+.u335_container {
+    position:absolute;
+    left:507px;
+    top:220px;
+    width:93px;
+    height:20px;
+}
+
+#u335_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:99px;
+    height:26px;
+}
+
+.u336 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:89px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u337_normal {
+    background-image: url('../部落详情页（分红）_files/u139_normal.png');
+}
+
+.u337_container {
+    position:absolute;
+    left:600px;
+    top:220px;
+    width:52px;
+    height:20px;
+}
+
+#u337_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:58px;
+    height:26px;
+}
+
+.u338 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:48px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u339_normal {
+    background-image: url('../部落详情页（分红）_files/u141_normal.png');
+}
+
+.u339_container {
+    position:absolute;
+    left:652px;
+    top:220px;
+    width:87px;
+    height:20px;
+}
+
+#u339_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:93px;
+    height:26px;
+}
+
+.u340 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:83px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u341_normal {
+    background-image: url('../部落详情页（分红）_files/u143_normal.png');
+}
+
+.u341_container {
+    position:absolute;
+    left:739px;
+    top:220px;
+    width:74px;
+    height:20px;
+}
+
+#u341_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:80px;
+    height:26px;
+}
+
+.u342 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:70px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u343_normal {
+    background-image: url('../部落详情页（分红）_files/u127_normal.png');
+}
+
+.u343_container {
+    position:absolute;
+    left:0px;
+    top:240px;
+    width:114px;
+    height:20px;
+}
+
+#u343_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:120px;
+    height:26px;
+}
+
+.u344 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:110px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u345_normal {
+    background-image: url('../部落详情页（分红）_files/u129_normal.png');
+}
+
+.u345_container {
+    position:absolute;
+    left:114px;
+    top:240px;
+    width:100px;
+    height:20px;
+}
+
+#u345_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:106px;
+    height:26px;
+}
+
+.u346 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:96px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u347_normal {
+    background-image: url('../部落详情页（分红）_files/u131_normal.png');
+}
+
+.u347_container {
+    position:absolute;
+    left:214px;
+    top:240px;
+    width:79px;
+    height:20px;
+}
+
+#u347_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:85px;
+    height:26px;
+}
+
+.u348 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:75px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u349_normal {
+    background-image: url('../部落详情页（分红）_files/u133_normal.png');
+}
+
+.u349_container {
+    position:absolute;
+    left:293px;
+    top:240px;
+    width:116px;
+    height:20px;
+}
+
+#u349_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:122px;
+    height:26px;
+}
+
+.u350 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:112px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u351_normal {
+    background-image: url('../部落详情页（分红）_files/u135_normal.png');
+}
+
+.u351_container {
+    position:absolute;
+    left:409px;
+    top:240px;
+    width:98px;
+    height:20px;
+}
+
+#u351_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:104px;
+    height:26px;
+}
+
+.u352 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:94px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u353_normal {
+    background-image: url('../部落详情页（分红）_files/u137_normal.png');
+}
+
+.u353_container {
+    position:absolute;
+    left:507px;
+    top:240px;
+    width:93px;
+    height:20px;
+}
+
+#u353_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:99px;
+    height:26px;
+}
+
+.u354 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:89px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u355_normal {
+    background-image: url('../部落详情页（分红）_files/u139_normal.png');
+}
+
+.u355_container {
+    position:absolute;
+    left:600px;
+    top:240px;
+    width:52px;
+    height:20px;
+}
+
+#u355_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:58px;
+    height:26px;
+}
+
+.u356 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:48px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u357_normal {
+    background-image: url('../部落详情页（分红）_files/u141_normal.png');
+}
+
+.u357_container {
+    position:absolute;
+    left:652px;
+    top:240px;
+    width:87px;
+    height:20px;
+}
+
+#u357_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:93px;
+    height:26px;
+}
+
+.u358 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:83px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u359_normal {
+    background-image: url('../部落详情页（分红）_files/u143_normal.png');
+}
+
+.u359_container {
+    position:absolute;
+    left:739px;
+    top:240px;
+    width:74px;
+    height:20px;
+}
+
+#u359_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:80px;
+    height:26px;
+}
+
+.u360 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:70px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u361_normal {
+    background-image: url('../部落详情页（分红）_files/u127_normal.png');
+}
+
+.u361_container {
+    position:absolute;
+    left:0px;
+    top:260px;
+    width:114px;
+    height:20px;
+}
+
+#u361_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:120px;
+    height:26px;
+}
+
+.u362 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:110px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u363_normal {
+    background-image: url('../部落详情页（分红）_files/u129_normal.png');
+}
+
+.u363_container {
+    position:absolute;
+    left:114px;
+    top:260px;
+    width:100px;
+    height:20px;
+}
+
+#u363_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:106px;
+    height:26px;
+}
+
+.u364 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:96px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u365_normal {
+    background-image: url('../部落详情页（分红）_files/u131_normal.png');
+}
+
+.u365_container {
+    position:absolute;
+    left:214px;
+    top:260px;
+    width:79px;
+    height:20px;
+}
+
+#u365_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:85px;
+    height:26px;
+}
+
+.u366 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:75px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u367_normal {
+    background-image: url('../部落详情页（分红）_files/u133_normal.png');
+}
+
+.u367_container {
+    position:absolute;
+    left:293px;
+    top:260px;
+    width:116px;
+    height:20px;
+}
+
+#u367_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:122px;
+    height:26px;
+}
+
+.u368 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:112px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u369_normal {
+    background-image: url('../部落详情页（分红）_files/u135_normal.png');
+}
+
+.u369_container {
+    position:absolute;
+    left:409px;
+    top:260px;
+    width:98px;
+    height:20px;
+}
+
+#u369_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:104px;
+    height:26px;
+}
+
+.u370 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:94px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u371_normal {
+    background-image: url('../部落详情页（分红）_files/u137_normal.png');
+}
+
+.u371_container {
+    position:absolute;
+    left:507px;
+    top:260px;
+    width:93px;
+    height:20px;
+}
+
+#u371_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:99px;
+    height:26px;
+}
+
+.u372 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:89px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u373_normal {
+    background-image: url('../部落详情页（分红）_files/u139_normal.png');
+}
+
+.u373_container {
+    position:absolute;
+    left:600px;
+    top:260px;
+    width:52px;
+    height:20px;
+}
+
+#u373_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:58px;
+    height:26px;
+}
+
+.u374 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:48px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u375_normal {
+    background-image: url('../部落详情页（分红）_files/u141_normal.png');
+}
+
+.u375_container {
+    position:absolute;
+    left:652px;
+    top:260px;
+    width:87px;
+    height:20px;
+}
+
+#u375_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:93px;
+    height:26px;
+}
+
+.u376 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:83px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u377_normal {
+    background-image: url('../部落详情页（分红）_files/u143_normal.png');
+}
+
+.u377_container {
+    position:absolute;
+    left:739px;
+    top:260px;
+    width:74px;
+    height:20px;
+}
+
+#u377_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:80px;
+    height:26px;
+}
+
+.u378 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:70px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u379_normal {
+    background-image: url('../部落详情页（分红）_files/u127_normal.png');
+}
+
+.u379_container {
+    position:absolute;
+    left:0px;
+    top:280px;
+    width:114px;
+    height:20px;
+}
+
+#u379_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:120px;
+    height:26px;
+}
+
+.u380 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:110px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u381_normal {
+    background-image: url('../部落详情页（分红）_files/u129_normal.png');
+}
+
+.u381_container {
+    position:absolute;
+    left:114px;
+    top:280px;
+    width:100px;
+    height:20px;
+}
+
+#u381_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:106px;
+    height:26px;
+}
+
+.u382 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:96px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u383_normal {
+    background-image: url('../部落详情页（分红）_files/u131_normal.png');
+}
+
+.u383_container {
+    position:absolute;
+    left:214px;
+    top:280px;
+    width:79px;
+    height:20px;
+}
+
+#u383_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:85px;
+    height:26px;
+}
+
+.u384 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:75px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u385_normal {
+    background-image: url('../部落详情页（分红）_files/u133_normal.png');
+}
+
+.u385_container {
+    position:absolute;
+    left:293px;
+    top:280px;
+    width:116px;
+    height:20px;
+}
+
+#u385_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:122px;
+    height:26px;
+}
+
+.u386 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:112px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u387_normal {
+    background-image: url('../部落详情页（分红）_files/u135_normal.png');
+}
+
+.u387_container {
+    position:absolute;
+    left:409px;
+    top:280px;
+    width:98px;
+    height:20px;
+}
+
+#u387_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:104px;
+    height:26px;
+}
+
+.u388 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:94px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u389_normal {
+    background-image: url('../部落详情页（分红）_files/u137_normal.png');
+}
+
+.u389_container {
+    position:absolute;
+    left:507px;
+    top:280px;
+    width:93px;
+    height:20px;
+}
+
+#u389_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:99px;
+    height:26px;
+}
+
+.u390 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:89px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u391_normal {
+    background-image: url('../部落详情页（分红）_files/u139_normal.png');
+}
+
+.u391_container {
+    position:absolute;
+    left:600px;
+    top:280px;
+    width:52px;
+    height:20px;
+}
+
+#u391_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:58px;
+    height:26px;
+}
+
+.u392 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:48px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u393_normal {
+    background-image: url('../部落详情页（分红）_files/u141_normal.png');
+}
+
+.u393_container {
+    position:absolute;
+    left:652px;
+    top:280px;
+    width:87px;
+    height:20px;
+}
+
+#u393_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:93px;
+    height:26px;
+}
+
+.u394 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:83px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u395_normal {
+    background-image: url('../部落详情页（分红）_files/u143_normal.png');
+}
+
+.u395_container {
+    position:absolute;
+    left:739px;
+    top:280px;
+    width:74px;
+    height:20px;
+}
+
+#u395_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:80px;
+    height:26px;
+}
+
+.u396 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:70px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+

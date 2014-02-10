@@ -45,6 +45,7 @@
 
             <ListView
                 android:id="@+id/sort_category_ll_left_category_big_listview"
+                android:choiceMode="singleChoice"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content" >
             </ListView>
@@ -60,6 +61,7 @@
             <ListView
                 android:id="@+id/sort_category_ll_right_category_small_listview"
                 android:layout_width="fill_parent"
+                android:choiceMode="singleChoice"
                 android:layout_height="wrap_content" >
             </ListView>
         </LinearLayout>

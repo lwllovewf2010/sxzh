@@ -17,10 +17,8 @@ import android.widget.AbsListView.OnScrollListener;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.AdapterView.OnItemSelectedListener;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
@@ -36,16 +34,18 @@ import com.sanxian.sxzhuanhuan.common.UIHelper;
 import com.sanxian.sxzhuanhuan.dialog.BottomRightOrLeftDialog;
 import com.sanxian.sxzhuanhuan.dialog.DialogConstant;
 import com.sanxian.sxzhuanhuan.dialog.TopDialogInfo;
+import com.sanxian.sxzhuanhuan.entity.City;
 import com.sanxian.sxzhuanhuan.entity.Constant;
 import com.sanxian.sxzhuanhuan.entity.CreativeInfo;
 import com.sanxian.sxzhuanhuan.entity.InterfaceData.ICategory;
 import com.sanxian.sxzhuanhuan.entity.ProductInfo;
 import com.sanxian.sxzhuanhuan.entity.ProjectInfo;
+import com.sanxian.sxzhuanhuan.entity.Province;
+import com.sanxian.sxzhuanhuan.entity.SortListItemEntity;
 import com.sanxian.sxzhuanhuan.entity.TestData;
 import com.sanxian.sxzhuanhuan.function.homeindex.CreativeAdapter;
 import com.sanxian.sxzhuanhuan.function.homeindex.ProductAdapter;
 import com.sanxian.sxzhuanhuan.function.homeindex.project.ProjectAdapter;
-import com.sanxian.sxzhuanhuan.function.homeindex.project.ProjectContentActivity;
 import com.sanxian.sxzhuanhuan.function.sort.slidingmenu.BaseSlidingFragmentActivity;
 import com.sanxian.sxzhuanhuan.function.sort.slidingmenu.SlidingMenu;
 import com.sanxian.sxzhuanhuan.util.Util;
@@ -71,6 +71,9 @@ public class SortDetailActivity extends BaseSlidingFragmentActivity implements
 	private ArrayList<CreativeInfo> creativeInfos = null;
 	private ArrayList<ProjectInfo> projectInfos = null;
 	private ArrayList<ProductInfo> productInfos = null;
+	private CreativeInfo creinfo = null ;
+	private ProjectInfo projinfo = null ;
+	private ProductInfo prodinfo = null ;
 
 	private Spinner sortSpinner = null;
 	private Button creativeButton = null;
@@ -87,7 +90,8 @@ public class SortDetailActivity extends BaseSlidingFragmentActivity implements
 	private Button sortFilterSort = null;
 	private LinearLayout sortFilterAreaLL = null;
 	private LinearLayout sortFilterSequenceLL = null;
-	private ImageView imgQuery = null;
+	private ListView provinceList = null;
+	private ListView citylist = null;
 	private EditText etFilter = null;
 
 	// 底部按钮
@@ -103,25 +107,41 @@ public class SortDetailActivity extends BaseSlidingFragmentActivity implements
 	private static View postRightView = null;
 	private static ICategory curLeftSort = null;
 	private static ICategory curRightSort = null;
+	
+	//yuanqk added
+	private ArrayList<SortListItemEntity> sortList ;
+	private SortListAdapter sortListCityAdapt;
+	private SortListAdapter sortListProvinceAdapt;
+	private ArrayList<Province> provincesInfo = null;
+	private ArrayList<City> citysInfo = null;
+	private SortListAdapter.ViewHolder holder;
+	public static SortListAdapter.ViewHolder cityHolder;
+	
 	/** 当前的分类项 */
 	private String curSortContent = "";
 	/** 当前的分类项对应的ID */
 	private int curSortID = 0;
+	private int provinceID = 0;
+	private int cityID = 0;
 	/** 当前查找的文本 */
 	private String curSearchContent = "";
+	/** 当前的分类ID---子项*/
+	private String curSortChildID = "" ;
 
+	private int ORDERBY = 1 ; //1=发布日期倒序(默认), 2=价格倒序, 3=价格升序, 4=点击量, 5=参与人数最多
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
-		// requestWindowFeature(Window.FEATURE_NO_TITLE);
 
 		context = SApplication.getInstance();
 		Intent intent = getIntent();
 		if (null != intent) {
 			curSortContent = intent.getStringExtra("sort_parent");
 			curSearchContent = intent.getStringExtra("sort_child");
+			curSortChildID = intent.getStringExtra("sort_child_id") ;
 			curSortID = Constant.Sort.getSortID(curSortContent);
+			System.out.println("----sort-detail-activity:" + curSortContent  + "---" + curSearchContent + "---" + curSortID + "---" + curSortChildID);
 		}
 
 		initSlidingMenu();
@@ -131,10 +151,11 @@ public class SortDetailActivity extends BaseSlidingFragmentActivity implements
 		searchClick();
 		initControl();
 
-		// initData() ;
 		initListView();
+		
+		//yuanqk added
 		initRightListView();
-		// initNav() ;
+		initRightData();
 	}
 
 	/**
@@ -161,9 +182,6 @@ public class SortDetailActivity extends BaseSlidingFragmentActivity implements
 
 		mAboveTitle = (TextView) findViewById(R.id.sort_detail_head_tvtitle);
 		mAboveTitle.setText("分类");
-		imgQuery = (ImageButton) findViewById(R.id.sort_detail_head_ivsearch);
-		imgQuery.setOnClickListener(this);
-		// lvTitle = (ListView) findViewById(R.id.behind_list_show);
 
 		lvSortLeft = (ListView) findViewById(R.id.sort_category_ll_left_category_big_listview);
 		lvSortRigth = (ListView) findViewById(R.id.sort_category_ll_right_category_small_listview);
@@ -177,20 +195,8 @@ public class SortDetailActivity extends BaseSlidingFragmentActivity implements
 			@Override
 			public void onItemClick(AdapterView<?> parent, View view,
 					int position, long id) {
-				if (null == postLeftView && null != sortParent) {
-					curLeftSort = sortParent.get(0);
-					view.setBackgroundResource(R.drawable.back_behind_list);
-					System.out.println("----------0000");
-				} else {
-					postLeftView.setBackgroundColor(Color.TRANSPARENT);
-					System.out.println("--------" + position);
-					curLeftSort = sortParent.get(position);
-				}
-
-				view.setBackgroundResource(R.drawable.back_behind_list);
 				postLeftView = view;
-				
-				System.out.println(curLeftSort);
+				curLeftSort = sortParent.get(position);
 				getSortChild(curLeftSort.getId());
 			}
 		});
@@ -211,19 +217,157 @@ public class SortDetailActivity extends BaseSlidingFragmentActivity implements
 				etFilter.setText(curRightSort.getTitle());
 				postRightView = view;
 
+				System.out.println("curRightSort.getId()----->" + curRightSort.getId());
+				curSortChildID = curRightSort.getId() ;
+				getData(curSortID, curRightSort.getId()) ;
 				sm.toggle();
 			}
 		});
 
 	}
+	
+	private void getData(int curSortID , String curChildID) {
+		if(null == creativeInfos)
+			creativeInfos = new ArrayList<CreativeInfo>() ;
+		if(null == projectInfos) 
+			projectInfos = new ArrayList<ProjectInfo>() ;
+		if(null == productInfos)
+			productInfos = new ArrayList<ProductInfo>() ;
+		switch (curSortID) {
+		case 0:
+//			getCreative(curChildID) ;
+			System.out.println("---" + curChildID);
+			getCreativeMore(curChildID) ;
+			break;
+		case 1 :
+//			getProject(curChildID , "" ) ;
+			getProjectMore("", curChildID) ;
+			break ;
+		case 2:
+//			getProduct(curChildID, "") ;
+			getProductMore() ;
+			break;
+	}
+	}
 
-	// added by yuanqk
+	//初始化筛选界面
 	void initRightListView() {
 		sortFilterZone = (Button) findViewById(R.id.sort_filter_btn_zone);
 		sortFilterSort = (Button) findViewById(R.id.sort_filter_btn_sort);
 		sortFilterAreaLL = (LinearLayout) findViewById(R.id.sort_filter_area);
 		sortFilterSequenceLL = (LinearLayout) findViewById(R.id.sort_filter_sequence);
+		provinceList = (ListView) findViewById(R.id.sort_listView1);
+		provinceList.setOnItemClickListener(new OnItemClickListener() {
+
+			@Override
+			public void onItemClick(AdapterView<?> parent, View view,
+					int position, long id) {
+				Log.d("yuanqikai11", "yuanqikai11 arg2 = "+position);
+				provinceList.setItemChecked(position, true);
+				SortListAdapter.ViewHolder hold = (SortListAdapter.ViewHolder)view.getTag();
+				initCityData(hold.provinceId);
+			}
+			
+		});
+		citylist = (ListView) findViewById(R.id.sort_listView2);
+		citylist.setOnItemClickListener(new OnItemClickListener() {
+
+			@Override
+			public void onItemClick(AdapterView<?> parent, View view,
+					int position, long id) {
+				// TODO Auto-generated method stub
+				cityHolder = (SortListAdapter.ViewHolder)view.getTag();
+				searchByCity(cityHolder);
+				//关闭第二菜单
+				getSlidingMenu().toggle();
+			}
+		});
 	}
+	//通过城市搜索
+	public void searchByCity(SortListAdapter.ViewHolder holder){
+		if(api == null) api = new TestAPI();
+		Map<String, String> map = new HashMap<String, String>();
+		map.put("start", "0");
+		map.put("category_id", curSortChildID);
+		map.put("start", curSearchContent);
+		map.put("province_id", holder.provinceId);
+		Log.d("", "yuanqikai province_id = "+holder.provinceId);
+		map.put("city_id", holder.cityId);
+		
+		Log.d("", "yuanqikai curSortIDcurSortID= "+curSortID);
+		
+		if(curSortID == 0){
+			api.operaCreativess("search", map, this, Constant.REQUESTCODE.CREATIVE_LIST_REQUEST);
+		}else if(curSortID == 1){
+			api.operaProjects("search", map, this, Constant.REQUESTCODE.PROJECT_GET_ROW_REQUEST);
+		}else if(curSortID == 2){
+			api.operaProduct("search", map, this, Constant.REQUESTCODE.PRODUCT_GET_ROW_REQUEST);
+		}
+		
+	}
+	
+	public void searchByCase(SortListAdapter.ViewHolder holder,String orderby){
+		if(api == null) api = new TestAPI();
+		Map<String, String> map = new HashMap<String, String>();
+		map.put("start", "0");
+		map.put("category_id", curSortChildID);
+		map.put("start", curSearchContent);
+		if(null != holder) {
+			map.put("province_id", holder.provinceId);
+			map.put("city_id", holder.cityId);
+		}
+		map.put("orderby", orderby);
+		
+		if(curSortID == 0){
+			api.operaCreativess("search", map, this, Constant.REQUESTCODE.CREATIVE_LIST_REQUEST);
+		}else if(curSortID == 1){
+			api.operaProjects("search", map, this, Constant.REQUESTCODE.PROJECT_GET_ROW_REQUEST);
+		}else if(curSortID == 2){
+			api.operaProduct("search", map, this, Constant.REQUESTCODE.PRODUCT_GET_ROW_REQUEST);
+		}
+		
+	}
+	
+	// added by yuanqk 
+	//获取城市列表
+	void initRightData(){
+		if(api==null) api = new TestAPI();
+		api.getSortProvince(this, Constant.REQUESTCODE.SORT_PROVINCE_REQUEST);
+	}
+	void initCityData(String province_id){
+		if(api==null) api = new TestAPI();
+		Map<String, String> map = new HashMap<String, String>();
+		map.put("province_id", province_id);
+		api.getSortCity(map, this, Constant.REQUESTCODE.SORT_CITY_REQUEST);
+	}
+	//yuanqk added
+	public ArrayList<SortListItemEntity> provinceConvertToList(ArrayList<Province> province){
+		ArrayList<SortListItemEntity> sortlist = new ArrayList<SortListItemEntity>();
+		SortListItemEntity item = null;
+		
+		for (int i = 0; i < province.size(); i++) {
+			item = new SortListItemEntity();
+			item.setName(((Province)province.get(i)).getRegion_name());
+			item.setProvinceId(((Province)province.get(i)).getId());
+			sortlist.add(item);
+		}
+		return sortlist;
+	}
+	//yuanqk added
+	public ArrayList<SortListItemEntity> cityConvertToList(ArrayList<City> city){
+		ArrayList<SortListItemEntity> sortlist = new ArrayList<SortListItemEntity>();
+		SortListItemEntity item = null;
+		
+		for (int i = 0; i < city.size(); i++) {
+			item = new SortListItemEntity();
+			item.setCityId(((City)city.get(i)).getId());
+			item.setProvinceId(((City)city.get(i)).getProvince_id());
+			item.setName(((City)city.get(i)).getRegion_name());
+			sortlist.add(item);
+		}
+		return sortlist;
+	}
+	
 	// added by yuanqk
 	public void rightSlippingMenuEvent(View view) {
 		switch (view.getId()) {
@@ -266,13 +410,13 @@ public class SortDetailActivity extends BaseSlidingFragmentActivity implements
 		ivFooterMore = (ImageView) findViewById(R.id.sort_detail_footer_iv_more);
 		ivFooterNote = (ImageView) findViewById(R.id.sort_detail_footer_iv_note);
 
-//		sortSpinner.setSelection(curSortID);
 		etFilter.setText(curSearchContent);
+		etFilter.setOnClickListener(this) ;		//跳到搜索页面
 //		sortSpinner.setOnItemSelectedListener(this);
 		creativeButton.setEnabled(false);
-		creativeButton.setOnClickListener(sortsBtnClick(creativeButton, 1));
-		projectButton.setOnClickListener(sortsBtnClick(projectButton, 2));
-		productButton.setOnClickListener(sortsBtnClick(productButton, 3));
+//		creativeButton.setOnClickListener(sortsBtnClick(creativeButton, 1));
+//		projectButton.setOnClickListener(sortsBtnClick(projectButton, 2));
+//		productButton.setOnClickListener(sortsBtnClick(productButton, 3));
 		ivSortMenu.setOnClickListener(this);
 		ivFooterBack.setOnClickListener(this);
 		ivFooterAdd.setOnClickListener(this);
@@ -283,17 +427,16 @@ public class SortDetailActivity extends BaseSlidingFragmentActivity implements
 		lvSortDetail.setOnScrollListener(this);
 		lvSortDetail.setOnItemClickListener(this);
 
-		ArrayAdapter<String> adapter = new ArrayAdapter<String>(context,
-				R.layout.simple_spinner_item);
-		String[] dataArr = getResources().getStringArray(R.array.sorts);
-		for (int i = 0; i < dataArr.length; i++) {
-			adapter.add(dataArr[i]);
-		}
-		adapter.setDropDownViewResource(R.layout.simple_spinner_item);
-		sortSpinner.setAdapter(adapter);
+//		ArrayAdapter<String> adapter = new ArrayAdapter<String>(context,
+//				R.layout.simple_spinner_item);
+//		String[] dataArr = getResources().getStringArray(R.array.sorts);
+//		for (int i = 0; i < dataArr.length; i++) {
+//			adapter.add(dataArr[i]);
+//		}
+//		adapter.setDropDownViewResource(R.layout.simple_spinner_item);
+//		sortSpinner.setAdapter(adapter);
 		sortSpinner.setSelection(curSortID) ;
-//		initData(Constant.Sort.SORT_CREATIVE);
-		initData(curSortID + Constant.Sort.SORT_BASE) ;
+		getData(curSortID, curSortChildID) ;
 		hideWidget() ;
 	}
 	/**
@@ -316,89 +459,6 @@ public class SortDetailActivity extends BaseSlidingFragmentActivity implements
 		}
 	}
 
-	/**
-	 * 响应分类按钮事件
-	 * 
-	 * @param btn
-	 *            事件源，及当前点击的按钮
-	 * @param catalog
-	 *            额外参数
-	 * @return
-	 */
-	private View.OnClickListener sortsBtnClick(final Button btn,
-			final int catalog) {
-		return new View.OnClickListener() {
-
-			@Override
-			public void onClick(View v) {
-				// TODO Auto-generated method stub
-				if (btn == creativeButton) {
-					sortSpinner.setSelection(0);
-					creativeButton.setEnabled(false);
-					initData(Constant.Sort.SORT_CREATIVE) ;
-				} else {
-					creativeButton.setEnabled(true);
-				}
-
-				if (btn == projectButton) {
-					sortSpinner.setSelection(1);
-					projectButton.setEnabled(false);
-					initData(Constant.Sort.SORT_PROJECT) ;
-				} else {
-					projectButton.setEnabled(true);
-				}
-
-				if (btn == productButton) {
-					sortSpinner.setSelection(2);
-					productButton.setEnabled(false);
-					initData(Constant.Sort.SORT_PRODUCT) ;
-				} else {
-					productButton.setEnabled(true);
-				}
-			}
-
-		};
-	}
-
-	/**
-	 * 设置相关分类的数据信息
-	 * 
-	 * @param flag
-	 *            分类的类别ID
-	 */
-	private void initData(int flag) {
-		switch (flag) {
-			case Constant.Sort.SORT_CREATIVE:
-				if(null == creativeInfos) {
-					input.put("pmode", "2") ;
-					input.put("pagesize", "10") ;
-					api.getCPPData(input, SortDetailActivity.this, Constant.REQUESTCODE.CREATIVE_LIST_REQUEST) ;
-				} else {
-					lvSortDetail.setAdapter(new CreativeAdapter(SortDetailActivity.this, creativeInfos)) ;
-				}
-				break;
-			case Constant.Sort.SORT_PROJECT :
-				if(null == projectInfos) {
-					input.put("pmode", "1") ;
-					input.put("pagesize", "10") ;
-					api.getCPPData(input, this, Constant.REQUESTCODE.PROJECT_LIST_REQUEST) ;
-				} else {
-					lvSortDetail.setAdapter(new ProjectAdapter(SortDetailActivity.this, projectInfos) ) ;
-				}
-				break ;
-			case Constant.Sort.SORT_PRODUCT :
-				if(null == productInfos) {
-					input.put("pmode", "4") ;
-					input.put("pagesize", "5") ;
-					api.getCPPData(input, this, Constant.REQUESTCODE.PRODUCT_LIST_REQUEST) ;
-				} else {
-					lvSortDetail.setAdapter( new ProductAdapter(SortDetailActivity.this, productInfos)) ;
-				}
-				break ;
-			default:
-				break;
-		}
-	}
 
 	/**
 	 * 提取公共方法，为任一界面进入分类详情页抑或是在分类详情页点击筛选时的界面、数据地显示
@@ -426,12 +486,6 @@ public class SortDetailActivity extends BaseSlidingFragmentActivity implements
 		}
 	}
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see android.widget.AbsListView.OnScrollListener#onScroll(android.widget.
-	 * AbsListView, int, int, int)
-	 */
 	@Override
 	public void onScroll(AbsListView view, int firstVisibleItem,
 			int visibleItemCount, int totalItemCount) {
@@ -450,16 +504,7 @@ public class SortDetailActivity extends BaseSlidingFragmentActivity implements
 			long id) {
 		// TODO Auto-generated method stub
 		switch (curSortID) {
-		case 0:
-			break;
-		case 1:
-			break;
-		case 2:
-			break;
-		default:
-			break;
 		}
-		// Util.toastInfo(context, info.getMetaName()) ;
 
 	}
 
@@ -467,15 +512,20 @@ public class SortDetailActivity extends BaseSlidingFragmentActivity implements
 	public void onClick(View v) {
 		// TODO Auto-generated method stub
 		switch (v.getId()) {
+		case R.id.sort_head_etfilter :   
+//			UIHelper.showSearchResultActivity(SortDetailActivity.this, curSortContent, curSearchContent) ;
+			UIHelper.showSearchHistoryActivity(SortDetailActivity.this, curSortContent) ;
+			break ;
+			
 		case R.id.sort_detail_head_ivmenu:
 //			if (null == sortParent || sortParent.size() < 1)
 			getSortParent();
-
 			showMenu(); // show SlidingMenu
 
 			break;
-		case R.id.sort_detail_head_ivsearch:
+		case R.id.sort_detail_ll:
 			// yuanqk
+			getSlidingMenu().showSecondaryMenu();
 			break;
 
 		case R.id.sort_detail_footer_iv_back:
@@ -483,6 +533,36 @@ public class SortDetailActivity extends BaseSlidingFragmentActivity implements
 			break;
 		case R.id.sort_detail_footer_iv_note:
 			showBottomMenuDialog();
+			break;
+		case R.id.sort_filter_sort_join_num:
+			getSlidingMenu().toggle();
+			searchByCase(cityHolder, "5");
+			ORDERBY = 5 ; 
+			break;
+		case R.id.sort_filter_sort_clicknum:
+			getSlidingMenu().toggle();
+			searchByCase(cityHolder, "4");
+			ORDERBY = 4 ; 
+			break;
+		case R.id.sort_filter_sort_pub_time:
+			getSlidingMenu().toggle();
+			searchByCase(cityHolder, "1");
+			ORDERBY = 1 ; 
+			break;
+		case R.id.sort_filter_sort_default:
+			getSlidingMenu().toggle();
+			searchByCase(cityHolder, "1");
+			ORDERBY = 1 ; 
+			break;
+		case R.id.sort_filter_ll_sequence_price_up:
+			getSlidingMenu().toggle();
+			searchByCase(cityHolder, "3");
+			ORDERBY = 3 ; 
+			break;
+		case R.id.sort_filter_ll_sequence_price_down:
+			getSlidingMenu().toggle();
+			searchByCase(cityHolder, "2");
+			ORDERBY = 2 ; 
 			break;
 		default:
 			break;
@@ -507,6 +587,7 @@ public class SortDetailActivity extends BaseSlidingFragmentActivity implements
 	 * 大分类列表:{"action":"get_common_data","type":"category","mcr":0}
 	 */
 	private void getSortParent() {
+		input.clear() ;   //note
 		api.getMCAData("category", input, SortDetailActivity.this,
 				Constant.REQUESTCODE.SORT_PARENT_REQUEST);
 	}
@@ -516,11 +597,83 @@ public class SortDetailActivity extends BaseSlidingFragmentActivity implements
 	 * "params":{"parent_id":"1"}}
 	 */
 	private void getSortChild(String parent_id) {
+		input.clear() ;
 		input.put("parent_id", parent_id);
 		api.getMCAData("category", input, SortDetailActivity.this,
 				Constant.REQUESTCODE.SORT_CHILD_REQUEST);
 	}
 
+	/**
+	 * 查找单个创意 input={"action":"originality","type":"get_row","mcr":0,"params":{"id": 100}}
+	 * @param creative_id
+	 */
+	private void getCreative(String creative_id) {
+		input.clear() ;
+		input.put("id", creative_id ) ;
+		api.operaCreativess("get_row", input, SortDetailActivity.this,
+				Constant.REQUESTCODE.CREATIVE_FETCH_ONE);
+	}
+	/**
+	 * 查找多个创意input={"action":"originality","type":"search","mcr":0,"params":{"start":0,"pagesize":10,"category_id":1,"total_count":1, "title":"关键词1,关键词2"...}}
+	 * @param creative_id
+	 */
+	private void getCreativeMore(String category_id) {
+		input.clear() ;
+		input.put("start", "0") ;
+//		input.put("pagesize", "100") ;
+		input.put("category_id", category_id ) ;
+		input.put("orderby", "" + ORDERBY) ; //1=发布日期倒序(默认), 4=点击量, 5=关注人数
+		api.operaCreativess("search", input, SortDetailActivity.this,
+				Constant.REQUESTCODE.CREATIVE_LIST_REQUEST);
+	}
+	
+	/**
+	 * 查找单个项目  {"action":"project","type":"get_row","mcr":0,"params":{"proj_id": 100, "open_id": "6_1210_309970"}}
+	 */
+	private void getProject(String proj_id , String open_id) {
+		input.clear() ;
+		input.put("proj_id", proj_id ) ;
+		input.put("open_id", UIHelper.getOpenID(context) ) ; //"6_1210_309970" ) ;   //获取open_id
+		api.operaProjects("get_row", input, SortDetailActivity.this,
+				Constant.REQUESTCODE.PROJECT_GET_ROW_REQUEST);
+	}
+	/**
+	 * 查找多个项目 {"action":"project","type":"search","mcr":0,"params":{"start":0,"pagesize":10,"mode_id":1,"total_count":1 ....}}
+	 */
+	private void getProjectMore( String open_id , String category_id) {
+		input.clear() ;
+		input.put("start", "0") ;
+//		input.put("pagesize", "100") ;
+		input.put("category_id", category_id ) ;
+		input.put("orderby", "" + ORDERBY) ; //1=发布日期倒序(默认), 4=点击量, 5=关注人数
+		input.put("open_id", "6_1210_309970" ) ;   //获取open_id  UIHelper.getOpenID(context)
+		api.operaProjects("search", input, SortDetailActivity.this,
+				Constant.REQUESTCODE.PROJECT_LIST_REQUEST);
+		
+	}
+	
+	/**
+	 * 查找单个商品：input={"action":"goods","type":"get_row","mcr":0,"params":{"goods_id": 489, "open_id": "1_1177_469954"}}
+	 */
+	private void getProduct(String goods_id , String open_id) {
+		input.clear() ;
+		input.put("goods_id", goods_id ) ;
+		input.put("open_id", UIHelper.getOpenID(context) ) ; //"6_1210_309970" ) ;	//获取open_id
+		api.operaProduct("get_row", input, SortDetailActivity.this,
+				Constant.REQUESTCODE.PRODUCT_GET_ROW_REQUEST);
+	}
+	/**
+	 * 查找多个商品：input={"action":"goods","type":"search","mcr":0,"params":{"start":0,"pagesize":10,"mode_id":1,"total_count":1....}}
+	 */
+	private void getProductMore() {
+		input.clear() ;
+		input.put("start", "0") ;
+//		input.put("pagesize", "100") ;
+		input.put("open_id", "6_1210_309970" ) ;	//获取open_id UIHelper.getOpenID(context)
+		api.operaProduct("get_row", input, SortDetailActivity.this,
+				Constant.REQUESTCODE.PRODUCT_LIST_REQUEST);
+	}
+	
 	@Override
 	public void refresh(Object... param) {
 		// TODO Auto-generated method stub
@@ -528,12 +681,13 @@ public class SortDetailActivity extends BaseSlidingFragmentActivity implements
 
 		int flag = ((Integer) param[0]).intValue();
 		switch (flag) {
-		case Constant.REQUESTCODE.SORT_PARENT_REQUEST:
+		case Constant.REQUESTCODE.SORT_PARENT_REQUEST:		//行业一级分类
 			if (param.length > 0 && param[1] != null
 					&& param[1] instanceof String) {
 				String jsondata = param[1].toString();
 				sortParent = JSONParser.getCategory(jsondata);
 
+//				System.out.println("---here:---" + sortParent.get(0).toString());
 				getSortChild(sortParent.get(0).getId()) ;   /////
 				if (null == curLeftSort) {
 					curLeftSort = sortParent.get(0) ;
@@ -547,7 +701,7 @@ public class SortDetailActivity extends BaseSlidingFragmentActivity implements
 				
 			}
 			break ;
-		case Constant.REQUESTCODE.SORT_CHILD_REQUEST:
+		case Constant.REQUESTCODE.SORT_CHILD_REQUEST:  // 行业子分类
 			if (param.length > 0 && param[1] != null
 					&& param[1] instanceof String) {
 				String jsondata = param[1].toString();
@@ -562,33 +716,96 @@ public class SortDetailActivity extends BaseSlidingFragmentActivity implements
 			}
 			break ;
 			
-		case Constant.REQUESTCODE.CREATIVE_LIST_REQUEST :
+		case Constant.REQUESTCODE.CREATIVE_FETCH_ONE:   //查找单个创意
 			if (param.length > 0 && param[1] != null
 					&& param[1] instanceof String) {
 				String jsondata = param[1].toString();
-				creativeInfos = (ArrayList<CreativeInfo>) JSONParser.getCreativeInfo(jsondata);
+				creinfo = JSONParser.parseCreativeInfo(jsondata);
+				if(null != creativeInfos)
+					creativeInfos.clear() ;
+				if(null != creinfo && null != creinfo.getId())
+					creativeInfos.add(creinfo) ;
 				lvSortDetail.setAdapter( new CreativeAdapter(SortDetailActivity.this, creativeInfos)) ;
 			}
 			break ;
-		case Constant.REQUESTCODE.PROJECT_LIST_REQUEST : 
+			
+		case Constant.REQUESTCODE.PROJECT_GET_ROW_REQUEST :   //查找单个项目
 			if (param.length > 0 && param[1] != null
 					&& param[1] instanceof String) {
 				String jsondata = param[1].toString();
-				projectInfos = (ArrayList<ProjectInfo>) JSONParser.getProjectInfo(jsondata);
-				
+				projinfo = JSONParser.parseProjectInfo(jsondata) ;
+				if(null != projectInfos)
+					projectInfos.clear();
+				if(null != projinfo.getId())
+					projectInfos.add(projinfo);
 				lvSortDetail.setAdapter( new ProjectAdapter(SortDetailActivity.this, projectInfos)) ;
 			}
 			break ;
-		case Constant.REQUESTCODE.PRODUCT_LIST_REQUEST :
+			
+		case Constant.REQUESTCODE.PRODUCT_GET_ROW_REQUEST :   //查找单个商品
 			if (param.length > 0 && param[1] != null
 					&& param[1] instanceof String) {
 				String jsondata = param[1].toString();
-				productInfos = (ArrayList<ProductInfo>) JSONParser.getProductInfo(jsondata);
-				
+				prodinfo = JSONParser.parseProductInfo(jsondata);
+				if(null != productInfos)
+					productInfos.clear();
+				if(null != prodinfo.getId())
+					productInfos.add(prodinfo);
 				lvSortDetail.setAdapter( new ProductAdapter(SortDetailActivity.this, productInfos)) ;
 			}
 			break ;
 			
+			
+		case Constant.REQUESTCODE.CREATIVE_LIST_REQUEST :		//获取所有的创意
+			if (param.length > 0 && param[1] != null
+					&& param[1] instanceof String) {
+				String jsondata = param[1].toString();
+				if(null != creativeInfos)
+					creativeInfos.clear() ;
+				creativeInfos = (ArrayList<CreativeInfo>) JSONParser.getCreativeInfo(jsondata);
+				lvSortDetail.setAdapter( new CreativeAdapter(SortDetailActivity.this, creativeInfos)) ;
+			}
+			break ;
+		case Constant.REQUESTCODE.PROJECT_LIST_REQUEST : 		//获取所有的项目
+			if (param.length > 0 && param[1] != null
+					&& param[1] instanceof String) {
+				String jsondata = param[1].toString();
+				if(null != projectInfos)
+					projectInfos.clear() ;
+				projectInfos = (ArrayList<ProjectInfo>) JSONParser.getProjectInfo(jsondata);
+				lvSortDetail.setAdapter( new ProjectAdapter(SortDetailActivity.this, projectInfos)) ;
+			}
+			break ;
+		case Constant.REQUESTCODE.PRODUCT_LIST_REQUEST :		//获取所有的商品
+			if (param.length > 0 && param[1] != null
+			&& param[1] instanceof String) {
+				String jsondata = param[1].toString();
+				if(null != productInfos)
+					productInfos.clear() ;
+				productInfos = (ArrayList<ProductInfo>) JSONParser.getProductInfo(jsondata);
+				lvSortDetail.setAdapter( new ProductAdapter(SortDetailActivity.this, productInfos)) ;
+			}
+			break ;
+		case Constant.REQUESTCODE.SORT_PROVINCE_REQUEST :		//获取省份
+			if (param.length > 0 && param[1] != null
+			&& param[1] instanceof String) {
+				String jsondata = param[1].toString();
+				provincesInfo = (ArrayList<Province>) JSONParser.getProvinceInfo(jsondata);
+				sortListProvinceAdapt = new SortListAdapter(this,provinceConvertToList(provincesInfo));
+				provinceList.setAdapter(sortListProvinceAdapt);
+			}
+			break ;
+		case Constant.REQUESTCODE.SORT_CITY_REQUEST :		//获取城市
+			if (param.length > 0 && param[1] != null
+					&& param[1] instanceof String) {
+				String jsondata = param[1].toString();
+				citysInfo = (ArrayList<City>) JSONParser.getCityInfo(jsondata);
+				sortListCityAdapt = new SortListAdapter(this,cityConvertToList(citysInfo));
+				citylist.setAdapter(sortListCityAdapt) ;
+			}
+			break ;
+		default:
+			break;
 			
 		}
 		
@@ -596,11 +813,9 @@ public class SortDetailActivity extends BaseSlidingFragmentActivity implements
 
 	
 	
-	
-	
-	
-	
-	
+	/**
+	 * 显示底部快捷菜单
+	 */
 	private void showBottomMenuDialog() {
 		Intent intent = new Intent(SortDetailActivity.this,
 				BottomRightOrLeftDialog.class);
@@ -629,6 +844,91 @@ public class SortDetailActivity extends BaseSlidingFragmentActivity implements
 
 		}
 	}
+	
+	
+	/**
+	 * 响应分类按钮事件
+	 * 
+	 * @param btn
+	 *            事件源，及当前点击的按钮
+	 * @param catalog
+	 *            额外参数
+	 * @return
+	 */
+//	private View.OnClickListener sortsBtnClick(final Button btn,
+//			final int catalog) {
+//		return new View.OnClickListener() {
+//
+//			@Override
+//			public void onClick(View v) {
+//				// TODO Auto-generated method stub
+//				if (btn == creativeButton) {
+//					sortSpinner.setSelection(0);
+//					creativeButton.setEnabled(false);
+//					initData(Constant.Sort.SORT_CREATIVE) ;
+//				} else {
+//					creativeButton.setEnabled(true);
+//				}
+//
+//				if (btn == projectButton) {
+//					sortSpinner.setSelection(1);
+//					projectButton.setEnabled(false);
+//					initData(Constant.Sort.SORT_PROJECT) ;
+//				} else {
+//					projectButton.setEnabled(true);
+//				}
+//
+//				if (btn == productButton) {
+//					sortSpinner.setSelection(2);
+//					productButton.setEnabled(false);
+//					initData(Constant.Sort.SORT_PRODUCT) ;
+//				} else {
+//					productButton.setEnabled(true);
+//				}
+//			}
+//
+//		};
+//	}
+
+	/**
+	 * 设置相关分类的数据信息
+	 * 
+	 * @param flag
+	 *            分类的类别ID
+	 */
+//	private void initData(int flag) {
+//		switch (flag) {
+//			case Constant.Sort.SORT_CREATIVE:
+//				if(null == creativeInfos) {
+//					input.put("pmode", "2") ;
+//					input.put("pagesize", "10") ;
+//					api.getCPPData(input, SortDetailActivity.this, Constant.REQUESTCODE.CREATIVE_LIST_REQUEST) ;
+//				} else {
+//					lvSortDetail.setAdapter(new CreativeAdapter(SortDetailActivity.this, creativeInfos)) ;
+//				}
+//				break;
+//			case Constant.Sort.SORT_PROJECT :
+//				if(null == projectInfos) {
+//					input.put("pmode", "1") ;
+//					input.put("pagesize", "10") ;
+//					api.getCPPData(input, this, Constant.REQUESTCODE.PROJECT_LIST_REQUEST) ;
+//				} else {
+//					lvSortDetail.setAdapter(new ProjectAdapter(SortDetailActivity.this, projectInfos) ) ;
+//				}
+//				break ;
+//			case Constant.Sort.SORT_PRODUCT :
+//				if(null == productInfos) {
+//					input.put("pmode", "4") ;
+//					input.put("pagesize", "5") ;
+//					api.getCPPData(input, this, Constant.REQUESTCODE.PRODUCT_LIST_REQUEST) ;
+//				} else {
+//					lvSortDetail.setAdapter( new ProductAdapter(SortDetailActivity.this, productInfos)) ;
+//				}
+//				break ;
+//			default:
+//				break;
+//		}
+//	}
 
 
 }

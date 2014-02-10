@@ -34,7 +34,8 @@
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
                     android:text="@string/set_image"
-                    android:textSize="20sp" />
+                    android:textSize="20sp" 
+                    android:textColor="@color/black"/>
 
                 <ImageView
                     android:id="@+id/set_image"
@@ -58,7 +59,8 @@
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
                     android:text="@string/set_privacy"
-                    android:textSize="20sp" />
+                    android:textSize="20sp"
+                    android:textColor="@color/black" />
 
                 <ImageView
                     android:id="@+id/set_privacy"
@@ -82,7 +84,8 @@
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
                     android:text="@string/set_new_project"
-                    android:textSize="20sp" />
+                    android:textSize="20sp" 
+                    android:textColor="@color/black"/>
 
                 <ImageView
                     android:id="@+id/set_new_project"
@@ -106,7 +109,8 @@
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
                     android:text="@string/set_share"
-                    android:textSize="20sp" />
+                    android:textSize="20sp" 
+                    android:textColor="@color/black"/>
 
                 <ImageView
                     android:layout_width="wrap_content"
@@ -128,7 +132,8 @@
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
                     android:text="@string/set_about"
-                    android:textSize="20sp" />
+                    android:textSize="20sp"
+                    android:textColor="@color/black" />
 
                 <ImageView
                     android:layout_width="wrap_content"
@@ -157,7 +162,8 @@
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
                     android:text="@string/set_feedback"
-                    android:textSize="20sp" />
+                    android:textSize="20sp" 
+                    android:textColor="@color/black"/>
 
                 <ImageView
                     android:layout_width="wrap_content"
@@ -179,7 +185,8 @@
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
                     android:text="@string/set_help"
-                    android:textSize="20sp" />
+                    android:textSize="20sp"
+                    android:textColor="@color/black" />
 
                 <ImageView
                     android:layout_width="wrap_content"
@@ -195,6 +202,7 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dip"
+            android:textSize="20sp"
             android:text="@string/set_exit" />
 
     </LinearLayout>

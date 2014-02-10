@@ -180,10 +180,11 @@
                         android:layout_height="fill_parent"
                         android:layout_weight="1.0"
                         android:singleLine="true"
+                        android:layout_marginLeft="-30dp"
                         android:text="2014/12/12" />
                 </LinearLayout>
 
-                <ProgressBar
+                <!-- <ProgressBar
                     android:id="@+id/project_content_tab1_progressBar"
                     style="?android:attr/progressBarStyleHorizontal"
                     android:layout_width="fill_parent"
@@ -193,7 +194,18 @@
                     android:layout_marginTop="10dip"
                     android:max="100"
                     android:progress="100"
-                    android:secondaryProgress="100" />
+                    android:secondaryProgress="100" /> -->
+                    
+                    <com.sanxian.sxzhuanhuan.common.CustomProgress 
+                android:id="@+id/project_content_tab1_progressBar"
+	    	android:max="100"
+	    	 android:layout_width="fill_parent"
+                    android:layout_height="15dip"
+                    android:layout_below="@+id/project_content_tab1_lin2"
+                    android:layout_marginBottom="9dip"
+                    android:layout_marginTop="10dip"
+	    	style="?android:attr/progressBarStyleHorizontal"
+	    	android:visibility="visible"/>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -404,6 +416,7 @@
                         android:textColor="@color/black" />
 
                     <TextView
+                        android:id="@+id/project_content_tab1_huibao_baoyou"
                         android:layout_width="fill_parent"
                         android:layout_height="fill_parent"
                         android:layout_weight="1.0"
@@ -426,7 +439,7 @@
                 android:layout_marginBottom="10dip"
                 android:layout_marginRight="10dip"
                 android:layout_marginTop="10dip"
-                android:background="@drawable/login_btn"
+                android:background="@color/red"
                 android:text="立即参股" />
         </RelativeLayout>
     </ScrollView>

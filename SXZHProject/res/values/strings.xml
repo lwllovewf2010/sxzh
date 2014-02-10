@@ -27,7 +27,7 @@
     <string name="title_activity_publish_project_last">PublishProjectLast</string>
     <string name="title_activity_project_content">ProjectContent</string>
     <string name="return_value">返回</string>
-    
+
     <!-- yuanqk added -->
     <string-array name="planets_array">
         <item>--请选择排序方式--</item>

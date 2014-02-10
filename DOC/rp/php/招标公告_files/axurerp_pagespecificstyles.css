@@ -1,0 +1,5368 @@
+﻿body {
+    margin: 0px;
+}
+
+div {
+    background-repeat: no-repeat;
+}
+
+.raw_image {
+    width: 100%;
+    height: 100%;
+}
+
+.preload {
+    display: none;
+}
+#main_container {
+}
+
+.form_sketch {
+    border-color: transparent;
+    background-color: transparent;
+}
+
+.u0_normal {
+    background-image: url('../企业前台页头_files/u0_normal.png');
+}
+
+.u0_container {
+    position:absolute;
+    left:0px;
+    top:0px;
+    width:1199px;
+    height:20px;
+}
+
+#u0_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:1205px;
+    height:26px;
+}
+
+.u1 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:1195px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u2 {
+    position:absolute;
+    left:77px;
+    top:4px;
+    width:184px;
+    height:15px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u3 {
+    position:absolute;
+    left:705px;
+    top:2px;
+    width:493px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u4_normal {
+    background-image: url('../企业前台页头_files/u4_normal.png');
+}
+
+.u4_container {
+    position:absolute;
+    left:10px;
+    top:32px;
+    width:179px;
+    height:86px;
+}
+
+#u4_img {
+    position:absolute;
+    left:0px;
+    top:0px;
+    width:179px;
+    height:86px;
+}
+
+.u5 {
+    position:absolute;
+    left:2px;
+    top:35px;
+    width:175px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u6_normal {
+    background-image: url('../resources/images/transparent.gif');
+}
+
+.u6_container {
+    position:absolute;
+    left:191px;
+    top:35px;
+    width:126px;
+    height:40px;
+}
+
+#u6_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:132px;
+    height:46px;
+}
+
+.u7 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:122px;
+    height:36px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u8_normal {
+    background-image: url('../resources/images/transparent.gif');
+}
+
+.u8_container {
+    position:absolute;
+    left:191px;
+    top:77px;
+    width:174px;
+    height:20px;
+}
+
+#u8_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:180px;
+    height:26px;
+}
+
+.u9 {
+    position:absolute;
+    left:2px;
+    top:0px;
+    width:170px;
+    height:21px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u10_line {
+    background-image: url('../企业前台页头_files/u10_line.png');
+}
+
+.u10_line {
+    position:absolute;
+    left:0px;
+    top:4px;
+    width:1199px;
+    height:3px;
+}
+
+.u10 {
+    position:absolute;
+    left:0px;
+    top:148px;
+    width:1199px;
+    height:10px;
+    
+}
+
+.u11_normal {
+    background-image: url('../企业前台页头_files/u11_normal.png');
+}
+
+.u11_container {
+    position:absolute;
+    left:314px;
+    top:127px;
+    width:85px;
+    height:25px;
+}
+
+#u11_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:91px;
+    height:31px;
+}
+
+.u12 {
+    position:absolute;
+    left:2px;
+    top:4px;
+    width:81px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u13_normal {
+    background-image: url('../企业前台页头_files/u11_normal.png');
+}
+
+.u13_container {
+    position:absolute;
+    left:207px;
+    top:128px;
+    width:85px;
+    height:25px;
+}
+
+#u13_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:91px;
+    height:31px;
+}
+
+.u14 {
+    position:absolute;
+    left:2px;
+    top:4px;
+    width:81px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u15 {
+    position:absolute;
+    left:429px;
+    top:100px;
+    width:478px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u16 {
+    position:absolute;
+    left:427px;
+    top:70px;
+    width:392px;
+    height:25px;
+    ;
+    ;
+    text-align: left;;
+    font-family:'Arial';
+    font-size: 11px;
+    color:#000000;
+    font-style:normal;
+    font-weight:normal;
+    text-decoration:none;
+    
+}
+
+.u17_normal {
+    background-image: url('../搜索框_files/Submit_button_u20_normal.png');
+}
+
+.u17_container {
+    position:absolute;
+    left:834px;
+    top:69px;
+    width:60px;
+    height:25px;
+}
+
+#u17_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:66px;
+    height:31px;
+}
+
+.u18 {
+    position:absolute;
+    left:2px;
+    top:4px;
+    width:56px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+#u19 {
+    position:absolute;
+    left:427px;
+    top:95px;
+    width:393px;
+    height:131px;
+    overflow:hidden;
+}
+
+#pd0u19 {
+    position:absolute;
+    left:0px;
+    top:0px;
+    width:393px;
+    height:131px;
+    
+}
+
+.u20_normal {
+    background-image: url('../搜索框_files/u23_normal.png');
+}
+
+.u20_container {
+    position:absolute;
+    left:0px;
+    top:8px;
+    width:474px;
+    height:130px;
+}
+
+#u20_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:480px;
+    height:136px;
+}
+
+.u21 {
+    position:absolute;
+    left:2px;
+    top:57px;
+    width:470px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u22 {
+    position:absolute;
+    left:8px;
+    top:65px;
+    width:458px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u23 {
+    position:absolute;
+    left:8px;
+    top:110px;
+    width:458px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u24 {
+    position:absolute;
+    left:8px;
+    top:80px;
+    width:458px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u25 {
+    position:absolute;
+    left:8px;
+    top:95px;
+    width:458px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u26 {
+    position:absolute;
+    left:8px;
+    top:50px;
+    width:458px;
+    height:14px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u27 {
+    position:absolute;
+    left:8px;
+    top:20px;
+    width:458px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u28 {
+    position:absolute;
+    left:8px;
+    top:35px;
+    width:458px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u29 {
+    position:absolute;
+    left:8px;
+    top:5px;
+    width:458px;
+    height:14px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u30 {
+    position:absolute;
+    left:904px;
+    top:67px;
+    width:76px;
+    height:14px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u31 {
+    position:absolute;
+    left:904px;
+    top:81px;
+    width:76px;
+    height:14px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u32_mouseOver {
+    background-image: url('../搜索框_files/Section_tab_two_u35_mouseOver.png');
+}
+
+.u32_normal {
+    background-image: url('../搜索框_files/Section_tab_two_u35_mouseOver.png');
+}
+
+.u32_container {
+    position:absolute;
+    left:497px;
+    top:43px;
+    width:48px;
+    height:25px;
+}
+
+#u32_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:54px;
+    height:31px;
+}
+
+.u33 {
+    position:absolute;
+    left:2px;
+    top:6px;
+    width:44px;
+    height:14px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u34_mouseOver {
+    background-image: url('../搜索框_files/Section_tab_three_u37_mouseOver.png');
+}
+
+.u34_normal {
+    background-image: url('../搜索框_files/Section_tab_three_u37_mouseOver.png');
+}
+
+.u34_container {
+    position:absolute;
+    left:555px;
+    top:43px;
+    width:52px;
+    height:25px;
+}
+
+#u34_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:58px;
+    height:31px;
+}
+
+.u35 {
+    position:absolute;
+    left:2px;
+    top:6px;
+    width:48px;
+    height:14px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u36_mouseOver {
+    background-image: url('../搜索框_files/Section_tab_four_u39_mouseOver.png');
+}
+
+.u36_normal {
+    background-image: url('../搜索框_files/Section_tab_four_u39_mouseOver.png');
+}
+
+.u36_container {
+    position:absolute;
+    left:619px;
+    top:43px;
+    width:53px;
+    height:25px;
+}
+
+#u36_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:59px;
+    height:31px;
+}
+
+.u37 {
+    position:absolute;
+    left:2px;
+    top:4px;
+    width:49px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u38_line {
+    background-image: url('../搜索框_files/u41_line.png');
+}
+
+.u38_line {
+    position:absolute;
+    left:0px;
+    top:4px;
+    width:297px;
+    height:3px;
+}
+
+.u38 {
+    position:absolute;
+    left:428px;
+    top:63px;
+    width:297px;
+    height:10px;
+    
+}
+
+.u39_mouseOver {
+    background-image: url('../搜索框_files/Section_tab_one_u42_mouseOver.png');
+}
+
+.u39_normal {
+    background-image: url('../搜索框_files/Section_tab_one_u42_mouseOver.png');
+}
+
+.u39_container {
+    position:absolute;
+    left:438px;
+    top:43px;
+    width:49px;
+    height:25px;
+}
+
+#u39_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:55px;
+    height:31px;
+}
+
+.u40 {
+    position:absolute;
+    left:2px;
+    top:6px;
+    width:45px;
+    height:14px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u42_normal {
+    background-image: url('../企业前台页头_files/u42_normal.png');
+}
+
+.u42_container {
+    position:absolute;
+    left:10px;
+    top:3px;
+    width:16px;
+    height:16px;
+}
+
+#u42_img {
+    position:absolute;
+    left:0px;
+    top:0px;
+    width:16px;
+    height:16px;
+}
+
+.u43 {
+    position:absolute;
+    left:2px;
+    top:0px;
+    width:12px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u44 {
+    position:absolute;
+    left:26px;
+    top:4px;
+    width:46px;
+    height:14px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u45 {
+    position:absolute;
+    left:261px;
+    top:4px;
+    width:45px;
+    height:15px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u46 {
+    position:absolute;
+    left:299px;
+    top:4px;
+    width:74px;
+    height:15px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u47_normal {
+    background-image: url('../企业前台页头_files/u47_normal.png');
+}
+
+.u47_container {
+    position:absolute;
+    left:1019px;
+    top:64px;
+    width:152px;
+    height:39px;
+}
+
+#u47_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:158px;
+    height:45px;
+}
+
+.u48 {
+    position:absolute;
+    left:2px;
+    top:12px;
+    width:148px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u49_normal {
+    background-image: url('../企业前台页头_files/u49_normal.png');
+}
+
+.u49_container {
+    position:absolute;
+    left:1028px;
+    top:68px;
+    width:32px;
+    height:32px;
+}
+
+#u49_img {
+    position:absolute;
+    left:0px;
+    top:0px;
+    width:32px;
+    height:32px;
+}
+
+.u50 {
+    position:absolute;
+    left:2px;
+    top:8px;
+    width:28px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u51 {
+    position:absolute;
+    left:1083px;
+    top:74px;
+    width:79px;
+    height:19px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u53_normal {
+    background-image: url('../前台页尾_files/u248_normal.png');
+}
+
+.u53_container {
+    position:absolute;
+    left:0px;
+    top:880px;
+    width:1201px;
+    height:80px;
+}
+
+#u53_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:1207px;
+    height:86px;
+}
+
+.u54 {
+    position:absolute;
+    left:2px;
+    top:32px;
+    width:1197px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u55 {
+    position:absolute;
+    left:58px;
+    top:896px;
+    width:1002px;
+    height:48px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u57_normal {
+    background-image: url('../招标公告_files/u57_normal.png');
+}
+
+.u57_container {
+    position:absolute;
+    left:290px;
+    top:236px;
+    width:160px;
+    height:30px;
+}
+
+#u57_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:166px;
+    height:36px;
+}
+
+.u58 {
+    position:absolute;
+    left:2px;
+    top:8px;
+    width:156px;
+    height:15px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u59_normal {
+    background-image: url('../招标公告_files/u59_normal.png');
+}
+
+.u59_container {
+    position:absolute;
+    left:616px;
+    top:236px;
+    width:391px;
+    height:30px;
+}
+
+#u59_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:397px;
+    height:36px;
+}
+
+.u60 {
+    position:absolute;
+    left:2px;
+    top:8px;
+    width:387px;
+    height:15px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u61_normal {
+    background-image: url('../招标公告_files/u61_normal.png');
+}
+
+.u61_container {
+    position:absolute;
+    left:1007px;
+    top:236px;
+    width:179px;
+    height:30px;
+}
+
+#u61_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:185px;
+    height:36px;
+}
+
+.u62 {
+    position:absolute;
+    left:2px;
+    top:8px;
+    width:175px;
+    height:15px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u63_normal {
+    background-image: url('../招标公告_files/u63_normal.png');
+}
+
+.u63_container {
+    position:absolute;
+    left:450px;
+    top:236px;
+    width:167px;
+    height:30px;
+}
+
+#u63_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:173px;
+    height:36px;
+}
+
+.u64 {
+    position:absolute;
+    left:2px;
+    top:8px;
+    width:163px;
+    height:15px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u65_normal {
+    background-image: url('../招标公告_files/u57_normal.png');
+}
+
+.u65_container {
+    position:absolute;
+    left:290px;
+    top:266px;
+    width:160px;
+    height:30px;
+}
+
+#u65_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:166px;
+    height:36px;
+}
+
+.u66 {
+    position:absolute;
+    left:2px;
+    top:7px;
+    width:156px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u67_normal {
+    background-image: url('../招标公告_files/u59_normal.png');
+}
+
+.u67_container {
+    position:absolute;
+    left:616px;
+    top:266px;
+    width:391px;
+    height:30px;
+}
+
+#u67_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:397px;
+    height:36px;
+}
+
+.u68 {
+    position:absolute;
+    left:2px;
+    top:7px;
+    width:387px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u69_normal {
+    background-image: url('../招标公告_files/u61_normal.png');
+}
+
+.u69_container {
+    position:absolute;
+    left:1007px;
+    top:266px;
+    width:179px;
+    height:30px;
+}
+
+#u69_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:185px;
+    height:36px;
+}
+
+.u70 {
+    position:absolute;
+    left:2px;
+    top:7px;
+    width:175px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u71_normal {
+    background-image: url('../招标公告_files/u63_normal.png');
+}
+
+.u71_container {
+    position:absolute;
+    left:450px;
+    top:266px;
+    width:167px;
+    height:30px;
+}
+
+#u71_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:173px;
+    height:36px;
+}
+
+.u72 {
+    position:absolute;
+    left:2px;
+    top:7px;
+    width:163px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u73_normal {
+    background-image: url('../招标公告_files/u57_normal.png');
+}
+
+.u73_container {
+    position:absolute;
+    left:290px;
+    top:296px;
+    width:160px;
+    height:30px;
+}
+
+#u73_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:166px;
+    height:36px;
+}
+
+.u74 {
+    position:absolute;
+    left:2px;
+    top:7px;
+    width:156px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u75_normal {
+    background-image: url('../招标公告_files/u59_normal.png');
+}
+
+.u75_container {
+    position:absolute;
+    left:616px;
+    top:296px;
+    width:391px;
+    height:30px;
+}
+
+#u75_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:397px;
+    height:36px;
+}
+
+.u76 {
+    position:absolute;
+    left:2px;
+    top:7px;
+    width:387px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u77_normal {
+    background-image: url('../招标公告_files/u61_normal.png');
+}
+
+.u77_container {
+    position:absolute;
+    left:1007px;
+    top:296px;
+    width:179px;
+    height:30px;
+}
+
+#u77_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:185px;
+    height:36px;
+}
+
+.u78 {
+    position:absolute;
+    left:2px;
+    top:7px;
+    width:175px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u79_normal {
+    background-image: url('../招标公告_files/u63_normal.png');
+}
+
+.u79_container {
+    position:absolute;
+    left:450px;
+    top:296px;
+    width:167px;
+    height:30px;
+}
+
+#u79_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:173px;
+    height:36px;
+}
+
+.u80 {
+    position:absolute;
+    left:2px;
+    top:7px;
+    width:163px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u81_normal {
+    background-image: url('../招标公告_files/u57_normal.png');
+}
+
+.u81_container {
+    position:absolute;
+    left:290px;
+    top:326px;
+    width:160px;
+    height:30px;
+}
+
+#u81_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:166px;
+    height:36px;
+}
+
+.u82 {
+    position:absolute;
+    left:2px;
+    top:7px;
+    width:156px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u83_normal {
+    background-image: url('../招标公告_files/u59_normal.png');
+}
+
+.u83_container {
+    position:absolute;
+    left:616px;
+    top:326px;
+    width:391px;
+    height:30px;
+}
+
+#u83_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:397px;
+    height:36px;
+}
+
+.u84 {
+    position:absolute;
+    left:2px;
+    top:7px;
+    width:387px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u85_normal {
+    background-image: url('../招标公告_files/u61_normal.png');
+}
+
+.u85_container {
+    position:absolute;
+    left:1007px;
+    top:326px;
+    width:179px;
+    height:30px;
+}
+
+#u85_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:185px;
+    height:36px;
+}
+
+.u86 {
+    position:absolute;
+    left:2px;
+    top:7px;
+    width:175px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u87_normal {
+    background-image: url('../招标公告_files/u63_normal.png');
+}
+
+.u87_container {
+    position:absolute;
+    left:450px;
+    top:326px;
+    width:167px;
+    height:30px;
+}
+
+#u87_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:173px;
+    height:36px;
+}
+
+.u88 {
+    position:absolute;
+    left:2px;
+    top:7px;
+    width:163px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u89_normal {
+    background-image: url('../招标公告_files/u57_normal.png');
+}
+
+.u89_container {
+    position:absolute;
+    left:290px;
+    top:356px;
+    width:160px;
+    height:30px;
+}
+
+#u89_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:166px;
+    height:36px;
+}
+
+.u90 {
+    position:absolute;
+    left:2px;
+    top:7px;
+    width:156px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u91_normal {
+    background-image: url('../招标公告_files/u59_normal.png');
+}
+
+.u91_container {
+    position:absolute;
+    left:616px;
+    top:356px;
+    width:391px;
+    height:30px;
+}
+
+#u91_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:397px;
+    height:36px;
+}
+
+.u92 {
+    position:absolute;
+    left:2px;
+    top:7px;
+    width:387px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u93_normal {
+    background-image: url('../招标公告_files/u61_normal.png');
+}
+
+.u93_container {
+    position:absolute;
+    left:1007px;
+    top:356px;
+    width:179px;
+    height:30px;
+}
+
+#u93_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:185px;
+    height:36px;
+}
+
+.u94 {
+    position:absolute;
+    left:2px;
+    top:7px;
+    width:175px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u95_normal {
+    background-image: url('../招标公告_files/u63_normal.png');
+}
+
+.u95_container {
+    position:absolute;
+    left:450px;
+    top:356px;
+    width:167px;
+    height:30px;
+}
+
+#u95_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:173px;
+    height:36px;
+}
+
+.u96 {
+    position:absolute;
+    left:2px;
+    top:7px;
+    width:163px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u97_normal {
+    background-image: url('../招标公告_files/u57_normal.png');
+}
+
+.u97_container {
+    position:absolute;
+    left:290px;
+    top:386px;
+    width:160px;
+    height:30px;
+}
+
+#u97_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:166px;
+    height:36px;
+}
+
+.u98 {
+    position:absolute;
+    left:2px;
+    top:7px;
+    width:156px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u99_normal {
+    background-image: url('../招标公告_files/u59_normal.png');
+}
+
+.u99_container {
+    position:absolute;
+    left:616px;
+    top:386px;
+    width:391px;
+    height:30px;
+}
+
+#u99_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:397px;
+    height:36px;
+}
+
+.u100 {
+    position:absolute;
+    left:2px;
+    top:7px;
+    width:387px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u101_normal {
+    background-image: url('../招标公告_files/u61_normal.png');
+}
+
+.u101_container {
+    position:absolute;
+    left:1007px;
+    top:386px;
+    width:179px;
+    height:30px;
+}
+
+#u101_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:185px;
+    height:36px;
+}
+
+.u102 {
+    position:absolute;
+    left:2px;
+    top:7px;
+    width:175px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u103_normal {
+    background-image: url('../招标公告_files/u63_normal.png');
+}
+
+.u103_container {
+    position:absolute;
+    left:450px;
+    top:386px;
+    width:167px;
+    height:30px;
+}
+
+#u103_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:173px;
+    height:36px;
+}
+
+.u104 {
+    position:absolute;
+    left:2px;
+    top:7px;
+    width:163px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u105_normal {
+    background-image: url('../招标公告_files/u57_normal.png');
+}
+
+.u105_container {
+    position:absolute;
+    left:290px;
+    top:416px;
+    width:160px;
+    height:30px;
+}
+
+#u105_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:166px;
+    height:36px;
+}
+
+.u106 {
+    position:absolute;
+    left:2px;
+    top:7px;
+    width:156px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u107_normal {
+    background-image: url('../招标公告_files/u59_normal.png');
+}
+
+.u107_container {
+    position:absolute;
+    left:616px;
+    top:416px;
+    width:391px;
+    height:30px;
+}
+
+#u107_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:397px;
+    height:36px;
+}
+
+.u108 {
+    position:absolute;
+    left:2px;
+    top:7px;
+    width:387px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u109_normal {
+    background-image: url('../招标公告_files/u61_normal.png');
+}
+
+.u109_container {
+    position:absolute;
+    left:1007px;
+    top:416px;
+    width:179px;
+    height:30px;
+}
+
+#u109_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:185px;
+    height:36px;
+}
+
+.u110 {
+    position:absolute;
+    left:2px;
+    top:7px;
+    width:175px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u111_normal {
+    background-image: url('../招标公告_files/u63_normal.png');
+}
+
+.u111_container {
+    position:absolute;
+    left:450px;
+    top:416px;
+    width:167px;
+    height:30px;
+}
+
+#u111_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:173px;
+    height:36px;
+}
+
+.u112 {
+    position:absolute;
+    left:2px;
+    top:7px;
+    width:163px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u113_normal {
+    background-image: url('../招标公告_files/u57_normal.png');
+}
+
+.u113_container {
+    position:absolute;
+    left:290px;
+    top:446px;
+    width:160px;
+    height:30px;
+}
+
+#u113_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:166px;
+    height:36px;
+}
+
+.u114 {
+    position:absolute;
+    left:2px;
+    top:7px;
+    width:156px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u115_normal {
+    background-image: url('../招标公告_files/u59_normal.png');
+}
+
+.u115_container {
+    position:absolute;
+    left:616px;
+    top:446px;
+    width:391px;
+    height:30px;
+}
+
+#u115_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:397px;
+    height:36px;
+}
+
+.u116 {
+    position:absolute;
+    left:2px;
+    top:7px;
+    width:387px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u117_normal {
+    background-image: url('../招标公告_files/u61_normal.png');
+}
+
+.u117_container {
+    position:absolute;
+    left:1007px;
+    top:446px;
+    width:179px;
+    height:30px;
+}
+
+#u117_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:185px;
+    height:36px;
+}
+
+.u118 {
+    position:absolute;
+    left:2px;
+    top:7px;
+    width:175px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u119_normal {
+    background-image: url('../招标公告_files/u63_normal.png');
+}
+
+.u119_container {
+    position:absolute;
+    left:450px;
+    top:446px;
+    width:167px;
+    height:30px;
+}
+
+#u119_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:173px;
+    height:36px;
+}
+
+.u120 {
+    position:absolute;
+    left:2px;
+    top:7px;
+    width:163px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u121_normal {
+    background-image: url('../招标公告_files/u57_normal.png');
+}
+
+.u121_container {
+    position:absolute;
+    left:290px;
+    top:476px;
+    width:160px;
+    height:30px;
+}
+
+#u121_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:166px;
+    height:36px;
+}
+
+.u122 {
+    position:absolute;
+    left:2px;
+    top:7px;
+    width:156px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u123_normal {
+    background-image: url('../招标公告_files/u59_normal.png');
+}
+
+.u123_container {
+    position:absolute;
+    left:616px;
+    top:476px;
+    width:391px;
+    height:30px;
+}
+
+#u123_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:397px;
+    height:36px;
+}
+
+.u124 {
+    position:absolute;
+    left:2px;
+    top:7px;
+    width:387px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u125_normal {
+    background-image: url('../招标公告_files/u61_normal.png');
+}
+
+.u125_container {
+    position:absolute;
+    left:1007px;
+    top:476px;
+    width:179px;
+    height:30px;
+}
+
+#u125_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:185px;
+    height:36px;
+}
+
+.u126 {
+    position:absolute;
+    left:2px;
+    top:7px;
+    width:175px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u127_normal {
+    background-image: url('../招标公告_files/u63_normal.png');
+}
+
+.u127_container {
+    position:absolute;
+    left:450px;
+    top:476px;
+    width:167px;
+    height:30px;
+}
+
+#u127_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:173px;
+    height:36px;
+}
+
+.u128 {
+    position:absolute;
+    left:2px;
+    top:7px;
+    width:163px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u129_normal {
+    background-image: url('../招标公告_files/u57_normal.png');
+}
+
+.u129_container {
+    position:absolute;
+    left:290px;
+    top:506px;
+    width:160px;
+    height:30px;
+}
+
+#u129_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:166px;
+    height:36px;
+}
+
+.u130 {
+    position:absolute;
+    left:2px;
+    top:7px;
+    width:156px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u131_normal {
+    background-image: url('../招标公告_files/u59_normal.png');
+}
+
+.u131_container {
+    position:absolute;
+    left:616px;
+    top:506px;
+    width:391px;
+    height:30px;
+}
+
+#u131_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:397px;
+    height:36px;
+}
+
+.u132 {
+    position:absolute;
+    left:2px;
+    top:7px;
+    width:387px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u133_normal {
+    background-image: url('../招标公告_files/u61_normal.png');
+}
+
+.u133_container {
+    position:absolute;
+    left:1007px;
+    top:506px;
+    width:179px;
+    height:30px;
+}
+
+#u133_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:185px;
+    height:36px;
+}
+
+.u134 {
+    position:absolute;
+    left:2px;
+    top:7px;
+    width:175px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u135_normal {
+    background-image: url('../招标公告_files/u63_normal.png');
+}
+
+.u135_container {
+    position:absolute;
+    left:450px;
+    top:506px;
+    width:167px;
+    height:30px;
+}
+
+#u135_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:173px;
+    height:36px;
+}
+
+.u136 {
+    position:absolute;
+    left:2px;
+    top:7px;
+    width:163px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u137_normal {
+    background-image: url('../招标公告_files/u57_normal.png');
+}
+
+.u137_container {
+    position:absolute;
+    left:290px;
+    top:536px;
+    width:160px;
+    height:30px;
+}
+
+#u137_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:166px;
+    height:36px;
+}
+
+.u138 {
+    position:absolute;
+    left:2px;
+    top:7px;
+    width:156px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u139_normal {
+    background-image: url('../招标公告_files/u59_normal.png');
+}
+
+.u139_container {
+    position:absolute;
+    left:616px;
+    top:536px;
+    width:391px;
+    height:30px;
+}
+
+#u139_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:397px;
+    height:36px;
+}
+
+.u140 {
+    position:absolute;
+    left:2px;
+    top:7px;
+    width:387px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u141_normal {
+    background-image: url('../招标公告_files/u61_normal.png');
+}
+
+.u141_container {
+    position:absolute;
+    left:1007px;
+    top:536px;
+    width:179px;
+    height:30px;
+}
+
+#u141_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:185px;
+    height:36px;
+}
+
+.u142 {
+    position:absolute;
+    left:2px;
+    top:7px;
+    width:175px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u143_normal {
+    background-image: url('../招标公告_files/u63_normal.png');
+}
+
+.u143_container {
+    position:absolute;
+    left:450px;
+    top:536px;
+    width:167px;
+    height:30px;
+}
+
+#u143_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:173px;
+    height:36px;
+}
+
+.u144 {
+    position:absolute;
+    left:2px;
+    top:7px;
+    width:163px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u145_normal {
+    background-image: url('../招标公告_files/u57_normal.png');
+}
+
+.u145_container {
+    position:absolute;
+    left:290px;
+    top:566px;
+    width:160px;
+    height:30px;
+}
+
+#u145_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:166px;
+    height:36px;
+}
+
+.u146 {
+    position:absolute;
+    left:2px;
+    top:7px;
+    width:156px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u147_normal {
+    background-image: url('../招标公告_files/u59_normal.png');
+}
+
+.u147_container {
+    position:absolute;
+    left:616px;
+    top:566px;
+    width:391px;
+    height:30px;
+}
+
+#u147_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:397px;
+    height:36px;
+}
+
+.u148 {
+    position:absolute;
+    left:2px;
+    top:7px;
+    width:387px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u149_normal {
+    background-image: url('../招标公告_files/u61_normal.png');
+}
+
+.u149_container {
+    position:absolute;
+    left:1007px;
+    top:566px;
+    width:179px;
+    height:30px;
+}
+
+#u149_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:185px;
+    height:36px;
+}
+
+.u150 {
+    position:absolute;
+    left:2px;
+    top:7px;
+    width:175px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u151_normal {
+    background-image: url('../招标公告_files/u63_normal.png');
+}
+
+.u151_container {
+    position:absolute;
+    left:450px;
+    top:566px;
+    width:167px;
+    height:30px;
+}
+
+#u151_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:173px;
+    height:36px;
+}
+
+.u152 {
+    position:absolute;
+    left:2px;
+    top:7px;
+    width:163px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u153_normal {
+    background-image: url('../招标公告_files/u57_normal.png');
+}
+
+.u153_container {
+    position:absolute;
+    left:290px;
+    top:596px;
+    width:160px;
+    height:30px;
+}
+
+#u153_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:166px;
+    height:36px;
+}
+
+.u154 {
+    position:absolute;
+    left:2px;
+    top:7px;
+    width:156px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u155_normal {
+    background-image: url('../招标公告_files/u59_normal.png');
+}
+
+.u155_container {
+    position:absolute;
+    left:616px;
+    top:596px;
+    width:391px;
+    height:30px;
+}
+
+#u155_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:397px;
+    height:36px;
+}
+
+.u156 {
+    position:absolute;
+    left:2px;
+    top:7px;
+    width:387px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u157_normal {
+    background-image: url('../招标公告_files/u61_normal.png');
+}
+
+.u157_container {
+    position:absolute;
+    left:1007px;
+    top:596px;
+    width:179px;
+    height:30px;
+}
+
+#u157_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:185px;
+    height:36px;
+}
+
+.u158 {
+    position:absolute;
+    left:2px;
+    top:7px;
+    width:175px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u159_normal {
+    background-image: url('../招标公告_files/u63_normal.png');
+}
+
+.u159_container {
+    position:absolute;
+    left:450px;
+    top:596px;
+    width:167px;
+    height:30px;
+}
+
+#u159_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:173px;
+    height:36px;
+}
+
+.u160 {
+    position:absolute;
+    left:2px;
+    top:7px;
+    width:163px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u161_normal {
+    background-image: url('../招标公告_files/u57_normal.png');
+}
+
+.u161_container {
+    position:absolute;
+    left:291px;
+    top:626px;
+    width:160px;
+    height:30px;
+}
+
+#u161_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:166px;
+    height:36px;
+}
+
+.u162 {
+    position:absolute;
+    left:2px;
+    top:7px;
+    width:156px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u163_normal {
+    background-image: url('../招标公告_files/u59_normal.png');
+}
+
+.u163_container {
+    position:absolute;
+    left:617px;
+    top:626px;
+    width:391px;
+    height:30px;
+}
+
+#u163_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:397px;
+    height:36px;
+}
+
+.u164 {
+    position:absolute;
+    left:2px;
+    top:7px;
+    width:387px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u165_normal {
+    background-image: url('../招标公告_files/u61_normal.png');
+}
+
+.u165_container {
+    position:absolute;
+    left:1008px;
+    top:626px;
+    width:179px;
+    height:30px;
+}
+
+#u165_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:185px;
+    height:36px;
+}
+
+.u166 {
+    position:absolute;
+    left:2px;
+    top:7px;
+    width:175px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u167_normal {
+    background-image: url('../招标公告_files/u63_normal.png');
+}
+
+.u167_container {
+    position:absolute;
+    left:451px;
+    top:626px;
+    width:167px;
+    height:30px;
+}
+
+#u167_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:173px;
+    height:36px;
+}
+
+.u168 {
+    position:absolute;
+    left:2px;
+    top:7px;
+    width:163px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u169_normal {
+    background-image: url('../招标公告_files/u57_normal.png');
+}
+
+.u169_container {
+    position:absolute;
+    left:291px;
+    top:656px;
+    width:160px;
+    height:30px;
+}
+
+#u169_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:166px;
+    height:36px;
+}
+
+.u170 {
+    position:absolute;
+    left:2px;
+    top:7px;
+    width:156px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u171_normal {
+    background-image: url('../招标公告_files/u59_normal.png');
+}
+
+.u171_container {
+    position:absolute;
+    left:617px;
+    top:656px;
+    width:391px;
+    height:30px;
+}
+
+#u171_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:397px;
+    height:36px;
+}
+
+.u172 {
+    position:absolute;
+    left:2px;
+    top:7px;
+    width:387px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u173_normal {
+    background-image: url('../招标公告_files/u61_normal.png');
+}
+
+.u173_container {
+    position:absolute;
+    left:1008px;
+    top:656px;
+    width:179px;
+    height:30px;
+}
+
+#u173_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:185px;
+    height:36px;
+}
+
+.u174 {
+    position:absolute;
+    left:2px;
+    top:7px;
+    width:175px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u175_normal {
+    background-image: url('../招标公告_files/u63_normal.png');
+}
+
+.u175_container {
+    position:absolute;
+    left:451px;
+    top:656px;
+    width:167px;
+    height:30px;
+}
+
+#u175_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:173px;
+    height:36px;
+}
+
+.u176 {
+    position:absolute;
+    left:2px;
+    top:7px;
+    width:163px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+#u177 {
+    position:absolute;
+    left:840px;
+    top:770px;
+    width:300px;
+    height:26px
+}
+
+.u178_normal {
+    background-image: url('../招标公告_files/u178_normal.png');
+}
+
+.u178_container {
+    position:absolute;
+    left:0px;
+    top:0px;
+    width:20px;
+    height:21px;
+}
+
+#u178_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:26px;
+    height:27px;
+}
+
+.u179 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:16px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u180_normal {
+    background-image: url('../招标公告_files/u178_normal.png');
+}
+
+.u180_container {
+    position:absolute;
+    left:20px;
+    top:0px;
+    width:20px;
+    height:21px;
+}
+
+#u180_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:26px;
+    height:27px;
+}
+
+.u181 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:16px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u182_normal {
+    background-image: url('../招标公告_files/u178_normal.png');
+}
+
+.u182_container {
+    position:absolute;
+    left:40px;
+    top:0px;
+    width:20px;
+    height:21px;
+}
+
+#u182_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:26px;
+    height:27px;
+}
+
+.u183 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:16px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u184_normal {
+    background-image: url('../招标公告_files/u178_normal.png');
+}
+
+.u184_container {
+    position:absolute;
+    left:60px;
+    top:0px;
+    width:20px;
+    height:21px;
+}
+
+#u184_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:26px;
+    height:27px;
+}
+
+.u185 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:16px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u186_normal {
+    background-image: url('../招标公告_files/u178_normal.png');
+}
+
+.u186_container {
+    position:absolute;
+    left:80px;
+    top:0px;
+    width:20px;
+    height:21px;
+}
+
+#u186_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:26px;
+    height:27px;
+}
+
+.u187 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:16px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u188_normal {
+    background-image: url('../招标公告_files/u178_normal.png');
+}
+
+.u188_container {
+    position:absolute;
+    left:100px;
+    top:0px;
+    width:20px;
+    height:21px;
+}
+
+#u188_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:26px;
+    height:27px;
+}
+
+.u189 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:16px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u190_normal {
+    background-image: url('../招标公告_files/u190_normal.png');
+}
+
+.u190_container {
+    position:absolute;
+    left:120px;
+    top:0px;
+    width:95px;
+    height:21px;
+}
+
+#u190_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:101px;
+    height:27px;
+}
+
+.u191 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:91px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u192_normal {
+    background-image: url('../招标公告_files/u192_normal.png');
+}
+
+.u192_container {
+    position:absolute;
+    left:215px;
+    top:0px;
+    width:28px;
+    height:21px;
+}
+
+#u192_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:34px;
+    height:27px;
+}
+
+.u193 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:24px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u194_normal {
+    background-image: url('../招标公告_files/u194_normal.png');
+}
+
+.u194_container {
+    position:absolute;
+    left:243px;
+    top:0px;
+    width:29px;
+    height:21px;
+}
+
+#u194_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:35px;
+    height:27px;
+}
+
+.u195 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:25px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u196_normal {
+    background-image: url('../招标公告_files/u196_normal.png');
+}
+
+.u196_container {
+    position:absolute;
+    left:272px;
+    top:0px;
+    width:23px;
+    height:21px;
+}
+
+#u196_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:29px;
+    height:27px;
+}
+
+.u197 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:19px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u198_normal {
+    background-image: url('../招标公告_files/u198_normal.png');
+}
+
+.u198_container {
+    position:absolute;
+    left:10px;
+    top:163px;
+    width:250px;
+    height:27px;
+}
+
+#u198_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:256px;
+    height:33px;
+}
+
+.u199 {
+    position:absolute;
+    left:2px;
+    top:6px;
+    width:246px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u200 {
+    position:absolute;
+    left:18px;
+    top:166px;
+    width:242px;
+    height:24px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u201_normal {
+    background-image: url('../招标公告_files/u201_normal.png');
+}
+
+.u201_container {
+    position:absolute;
+    left:10px;
+    top:210px;
+    width:252px;
+    height:250px;
+}
+
+#u201_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:258px;
+    height:256px;
+}
+
+.u202 {
+    position:absolute;
+    left:2px;
+    top:117px;
+    width:248px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u203_normal {
+    background-image: url('../招标公告_files/u203_normal.png');
+}
+
+.u203_container {
+    position:absolute;
+    left:11px;
+    top:211px;
+    width:249px;
+    height:30px;
+}
+
+#u203_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:255px;
+    height:36px;
+}
+
+.u204 {
+    position:absolute;
+    left:2px;
+    top:7px;
+    width:245px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u205 {
+    position:absolute;
+    left:16px;
+    top:218px;
+    width:150px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u206 {
+    position:absolute;
+    left:16px;
+    top:251px;
+    width:34px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u207_line {
+    background-image: url('../招标公告_files/u207_line.png');
+}
+
+.u207_line {
+    position:absolute;
+    left:0px;
+    top:4px;
+    width:251px;
+    height:3px;
+}
+
+.u207 {
+    position:absolute;
+    left:11px;
+    top:269px;
+    width:251px;
+    height:10px;
+    
+}
+
+.u208 {
+    position:absolute;
+    left:16px;
+    top:282px;
+    width:34px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u209_line {
+    background-image: url('../招标公告_files/u209_line.png');
+}
+
+.u209_line {
+    position:absolute;
+    left:0px;
+    top:4px;
+    width:253px;
+    height:3px;
+}
+
+.u209 {
+    position:absolute;
+    left:9px;
+    top:298px;
+    width:253px;
+    height:10px;
+    
+}
+
+.u210 {
+    position:absolute;
+    left:16px;
+    top:308px;
+    width:34px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u211_line {
+    background-image: url('../招标公告_files/u211_line.png');
+}
+
+.u211_line {
+    position:absolute;
+    left:0px;
+    top:4px;
+    width:252px;
+    height:3px;
+}
+
+.u211 {
+    position:absolute;
+    left:10px;
+    top:324px;
+    width:252px;
+    height:10px;
+    
+}
+
+.u212 {
+    position:absolute;
+    left:16px;
+    top:334px;
+    width:34px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u213_line {
+    background-image: url('../招标公告_files/u213_line.png');
+}
+
+.u213_line {
+    position:absolute;
+    left:0px;
+    top:4px;
+    width:253px;
+    height:3px;
+}
+
+.u213 {
+    position:absolute;
+    left:9px;
+    top:356px;
+    width:253px;
+    height:10px;
+    
+}
+
+.u214 {
+    position:absolute;
+    left:16px;
+    top:368px;
+    width:34px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u215_line {
+    background-image: url('../招标公告_files/u215_line.png');
+}
+
+.u215_line {
+    position:absolute;
+    left:0px;
+    top:4px;
+    width:251px;
+    height:3px;
+}
+
+.u215 {
+    position:absolute;
+    left:11px;
+    top:384px;
+    width:251px;
+    height:10px;
+    
+}
+
+.u216 {
+    position:absolute;
+    left:16px;
+    top:394px;
+    width:34px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u217_line {
+    background-image: url('../招标公告_files/u217_line.png');
+}
+
+.u217_line {
+    position:absolute;
+    left:0px;
+    top:4px;
+    width:249px;
+    height:3px;
+}
+
+.u217 {
+    position:absolute;
+    left:11px;
+    top:416px;
+    width:249px;
+    height:10px;
+    
+}
+
+.u218 {
+    position:absolute;
+    left:16px;
+    top:428px;
+    width:34px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u219 {
+    position:absolute;
+    left:60px;
+    top:251px;
+    width:189px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u220 {
+    position:absolute;
+    left:60px;
+    top:283px;
+    width:189px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u221 {
+    position:absolute;
+    left:60px;
+    top:309px;
+    width:189px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u222 {
+    position:absolute;
+    left:60px;
+    top:335px;
+    width:189px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u223 {
+    position:absolute;
+    left:60px;
+    top:368px;
+    width:189px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u224 {
+    position:absolute;
+    left:60px;
+    top:394px;
+    width:189px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u225 {
+    position:absolute;
+    left:60px;
+    top:428px;
+    width:189px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u226_normal {
+    background-image: url('../招标公告_files/u226_normal.png');
+}
+
+.u226_container {
+    position:absolute;
+    left:11px;
+    top:474px;
+    width:253px;
+    height:270px;
+}
+
+#u226_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:259px;
+    height:276px;
+}
+
+.u227 {
+    position:absolute;
+    left:2px;
+    top:127px;
+    width:249px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u228_normal {
+    background-image: url('../招标公告_files/u203_normal.png');
+}
+
+.u228_container {
+    position:absolute;
+    left:12px;
+    top:475px;
+    width:249px;
+    height:30px;
+}
+
+#u228_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:255px;
+    height:36px;
+}
+
+.u229 {
+    position:absolute;
+    left:2px;
+    top:7px;
+    width:245px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u230 {
+    position:absolute;
+    left:16px;
+    top:482px;
+    width:150px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u231 {
+    position:absolute;
+    left:24px;
+    top:518px;
+    width:81px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u232 {
+    position:absolute;
+    left:95px;
+    top:518px;
+    width:81px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u233 {
+    position:absolute;
+    left:165px;
+    top:518px;
+    width:81px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u234 {
+    position:absolute;
+    left:26px;
+    top:546px;
+    width:81px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u235 {
+    position:absolute;
+    left:95px;
+    top:546px;
+    width:81px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u236 {
+    position:absolute;
+    left:165px;
+    top:547px;
+    width:101px;
+    height:15px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u237 {
+    position:absolute;
+    left:26px;
+    top:576px;
+    width:81px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u238 {
+    position:absolute;
+    left:96px;
+    top:576px;
+    width:81px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u239 {
+    position:absolute;
+    left:166px;
+    top:576px;
+    width:81px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u240 {
+    position:absolute;
+    left:23px;
+    top:604px;
+    width:81px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u241 {
+    position:absolute;
+    left:91px;
+    top:604px;
+    width:81px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u242 {
+    position:absolute;
+    left:161px;
+    top:605px;
+    width:101px;
+    height:15px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u243 {
+    position:absolute;
+    left:22px;
+    top:631px;
+    width:81px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u244 {
+    position:absolute;
+    left:93px;
+    top:631px;
+    width:81px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u245 {
+    position:absolute;
+    left:163px;
+    top:631px;
+    width:81px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u246 {
+    position:absolute;
+    left:23px;
+    top:659px;
+    width:81px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u247 {
+    position:absolute;
+    left:92px;
+    top:659px;
+    width:81px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u248 {
+    position:absolute;
+    left:162px;
+    top:660px;
+    width:101px;
+    height:15px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u249 {
+    position:absolute;
+    left:25px;
+    top:686px;
+    width:81px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u250 {
+    position:absolute;
+    left:96px;
+    top:686px;
+    width:81px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u251 {
+    position:absolute;
+    left:166px;
+    top:686px;
+    width:81px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u252 {
+    position:absolute;
+    left:24px;
+    top:714px;
+    width:81px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u253 {
+    position:absolute;
+    left:93px;
+    top:714px;
+    width:81px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u254 {
+    position:absolute;
+    left:163px;
+    top:715px;
+    width:101px;
+    height:15px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u255 {
+    position:absolute;
+    left:400px;
+    top:208px;
+    width:410px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u256 {
+    position:absolute;
+    left:320px;
+    top:210px;
+    width:150px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u257_normal {
+    background-image: url('../招标公告_files/u57_normal.png');
+}
+
+.u257_container {
+    position:absolute;
+    left:291px;
+    top:686px;
+    width:160px;
+    height:30px;
+}
+
+#u257_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:166px;
+    height:36px;
+}
+
+.u258 {
+    position:absolute;
+    left:2px;
+    top:7px;
+    width:156px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u259_normal {
+    background-image: url('../招标公告_files/u59_normal.png');
+}
+
+.u259_container {
+    position:absolute;
+    left:617px;
+    top:686px;
+    width:391px;
+    height:30px;
+}
+
+#u259_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:397px;
+    height:36px;
+}
+
+.u260 {
+    position:absolute;
+    left:2px;
+    top:7px;
+    width:387px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u261_normal {
+    background-image: url('../招标公告_files/u61_normal.png');
+}
+
+.u261_container {
+    position:absolute;
+    left:1008px;
+    top:686px;
+    width:179px;
+    height:30px;
+}
+
+#u261_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:185px;
+    height:36px;
+}
+
+.u262 {
+    position:absolute;
+    left:2px;
+    top:7px;
+    width:175px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u263_normal {
+    background-image: url('../招标公告_files/u63_normal.png');
+}
+
+.u263_container {
+    position:absolute;
+    left:451px;
+    top:686px;
+    width:167px;
+    height:30px;
+}
+
+#u263_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:173px;
+    height:36px;
+}
+
+.u264 {
+    position:absolute;
+    left:2px;
+    top:7px;
+    width:163px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u265_normal {
+    background-image: url('../招标公告_files/u57_normal.png');
+}
+
+.u265_container {
+    position:absolute;
+    left:291px;
+    top:716px;
+    width:160px;
+    height:30px;
+}
+
+#u265_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:166px;
+    height:36px;
+}
+
+.u266 {
+    position:absolute;
+    left:2px;
+    top:7px;
+    width:156px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u267_normal {
+    background-image: url('../招标公告_files/u59_normal.png');
+}
+
+.u267_container {
+    position:absolute;
+    left:617px;
+    top:716px;
+    width:391px;
+    height:30px;
+}
+
+#u267_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:397px;
+    height:36px;
+}
+
+.u268 {
+    position:absolute;
+    left:2px;
+    top:7px;
+    width:387px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u269_normal {
+    background-image: url('../招标公告_files/u61_normal.png');
+}
+
+.u269_container {
+    position:absolute;
+    left:1008px;
+    top:716px;
+    width:179px;
+    height:30px;
+}
+
+#u269_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:185px;
+    height:36px;
+}
+
+.u270 {
+    position:absolute;
+    left:2px;
+    top:7px;
+    width:175px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u271_normal {
+    background-image: url('../招标公告_files/u63_normal.png');
+}
+
+.u271_container {
+    position:absolute;
+    left:451px;
+    top:716px;
+    width:167px;
+    height:30px;
+}
+
+#u271_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:173px;
+    height:36px;
+}
+
+.u272 {
+    position:absolute;
+    left:2px;
+    top:7px;
+    width:163px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u273 {
+    position:absolute;
+    left:353px;
+    top:273px;
+    width:74px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u274 {
+    position:absolute;
+    left:639px;
+    top:273px;
+    width:285px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u275 {
+    position:absolute;
+    left:500px;
+    top:273px;
+    width:86px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u276 {
+    position:absolute;
+    left:1040px;
+    top:273px;
+    width:159px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u277 {
+    position:absolute;
+    left:352px;
+    top:304px;
+    width:74px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u278 {
+    position:absolute;
+    left:638px;
+    top:304px;
+    width:285px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u279 {
+    position:absolute;
+    left:499px;
+    top:304px;
+    width:86px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u280 {
+    position:absolute;
+    left:1039px;
+    top:304px;
+    width:159px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u281 {
+    position:absolute;
+    left:352px;
+    top:336px;
+    width:74px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u282 {
+    position:absolute;
+    left:638px;
+    top:336px;
+    width:285px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u283 {
+    position:absolute;
+    left:499px;
+    top:336px;
+    width:86px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u284 {
+    position:absolute;
+    left:1039px;
+    top:336px;
+    width:159px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u285 {
+    position:absolute;
+    left:352px;
+    top:366px;
+    width:74px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u286 {
+    position:absolute;
+    left:638px;
+    top:366px;
+    width:285px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u287 {
+    position:absolute;
+    left:499px;
+    top:366px;
+    width:86px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u288 {
+    position:absolute;
+    left:1039px;
+    top:366px;
+    width:159px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u289 {
+    position:absolute;
+    left:352px;
+    top:396px;
+    width:74px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u290 {
+    position:absolute;
+    left:638px;
+    top:396px;
+    width:285px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u291 {
+    position:absolute;
+    left:499px;
+    top:396px;
+    width:86px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u292 {
+    position:absolute;
+    left:1039px;
+    top:396px;
+    width:159px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u293 {
+    position:absolute;
+    left:352px;
+    top:426px;
+    width:74px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u294 {
+    position:absolute;
+    left:638px;
+    top:426px;
+    width:285px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u295 {
+    position:absolute;
+    left:499px;
+    top:426px;
+    width:86px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u296 {
+    position:absolute;
+    left:1039px;
+    top:426px;
+    width:159px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u297 {
+    position:absolute;
+    left:352px;
+    top:456px;
+    width:74px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u298 {
+    position:absolute;
+    left:638px;
+    top:456px;
+    width:285px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u299 {
+    position:absolute;
+    left:499px;
+    top:456px;
+    width:86px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u300 {
+    position:absolute;
+    left:1039px;
+    top:456px;
+    width:159px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u301 {
+    position:absolute;
+    left:352px;
+    top:486px;
+    width:74px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u302 {
+    position:absolute;
+    left:638px;
+    top:486px;
+    width:285px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u303 {
+    position:absolute;
+    left:499px;
+    top:486px;
+    width:86px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u304 {
+    position:absolute;
+    left:1039px;
+    top:486px;
+    width:159px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u305 {
+    position:absolute;
+    left:352px;
+    top:516px;
+    width:74px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u306 {
+    position:absolute;
+    left:638px;
+    top:516px;
+    width:285px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u307 {
+    position:absolute;
+    left:499px;
+    top:516px;
+    width:86px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u308 {
+    position:absolute;
+    left:1039px;
+    top:516px;
+    width:159px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u309 {
+    position:absolute;
+    left:352px;
+    top:546px;
+    width:74px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u310 {
+    position:absolute;
+    left:638px;
+    top:546px;
+    width:285px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u311 {
+    position:absolute;
+    left:499px;
+    top:546px;
+    width:86px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u312 {
+    position:absolute;
+    left:1039px;
+    top:546px;
+    width:159px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u313 {
+    position:absolute;
+    left:352px;
+    top:573px;
+    width:74px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u314 {
+    position:absolute;
+    left:638px;
+    top:573px;
+    width:285px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u315 {
+    position:absolute;
+    left:499px;
+    top:573px;
+    width:86px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u316 {
+    position:absolute;
+    left:1039px;
+    top:573px;
+    width:159px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u317 {
+    position:absolute;
+    left:352px;
+    top:606px;
+    width:74px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u318 {
+    position:absolute;
+    left:638px;
+    top:606px;
+    width:285px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u319 {
+    position:absolute;
+    left:499px;
+    top:606px;
+    width:86px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u320 {
+    position:absolute;
+    left:1039px;
+    top:606px;
+    width:159px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u321 {
+    position:absolute;
+    left:352px;
+    top:633px;
+    width:74px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u322 {
+    position:absolute;
+    left:638px;
+    top:633px;
+    width:285px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u323 {
+    position:absolute;
+    left:499px;
+    top:633px;
+    width:86px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u324 {
+    position:absolute;
+    left:1039px;
+    top:633px;
+    width:159px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u325 {
+    position:absolute;
+    left:352px;
+    top:663px;
+    width:74px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u326 {
+    position:absolute;
+    left:638px;
+    top:663px;
+    width:285px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u327 {
+    position:absolute;
+    left:499px;
+    top:663px;
+    width:86px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u328 {
+    position:absolute;
+    left:1039px;
+    top:663px;
+    width:159px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u329 {
+    position:absolute;
+    left:352px;
+    top:693px;
+    width:74px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u330 {
+    position:absolute;
+    left:638px;
+    top:693px;
+    width:285px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u331 {
+    position:absolute;
+    left:499px;
+    top:693px;
+    width:86px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u332 {
+    position:absolute;
+    left:1039px;
+    top:693px;
+    width:159px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u333 {
+    position:absolute;
+    left:352px;
+    top:723px;
+    width:74px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u334 {
+    position:absolute;
+    left:638px;
+    top:723px;
+    width:285px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u335 {
+    position:absolute;
+    left:499px;
+    top:723px;
+    width:86px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u336 {
+    position:absolute;
+    left:1039px;
+    top:723px;
+    width:159px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+

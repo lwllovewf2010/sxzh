@@ -8,7 +8,6 @@
         android:id="@+id/title_bar"
         layout="@layout/title_bar" >
     </include>
-"
 
     <LinearLayout
         android:id="@+id/linearLayout_con"
@@ -34,11 +33,14 @@
                 android:textSize="17sp" />
 
             <EditText
+                android:id="@+id/name_et"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dip"
                 android:layout_weight="0.6"
                 android:text=""
+                android:singleLine="true"
+                android:maxLength="15"
                 android:textColor="@color/black"
                 android:textSize="17sp" >
             </EditText>
@@ -58,11 +60,14 @@
                 android:textSize="17sp" />
 
             <EditText
+                android:id="@+id/phone_et"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dip"
                 android:layout_weight="0.6"
                 android:text=""
+                android:inputType="phone"
+                android:singleLine="true"
                 android:textColor="@color/black"
                 android:textSize="17sp" >
             </EditText>
@@ -82,11 +87,15 @@
                 android:textSize="17sp" />
 
             <EditText
+                android:id="@+id/postcode_et"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dip"
                 android:layout_weight="0.6"
                 android:text=""
+                android:singleLine="true"
+                android:maxLines="6"
+                android:inputType="number"
                 android:textColor="@color/black"
                 android:textSize="17sp" >
             </EditText>
@@ -109,11 +118,12 @@
                 android:textSize="17sp" />
 
             <TextView
+                android:id="@+id/district_et"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dip"
                 android:layout_weight="0.65"
-                android:text="北京 北京市 海淀区 "
+                android:text=""
                 android:textColor="@color/black"
                 android:textSize="17sp" >
             </TextView>
@@ -138,11 +148,13 @@
                 android:textSize="17sp" />
 
             <EditText
+                android:id="@+id/address_et"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dip"
                 android:layout_weight="0.6"
                 android:text=""
+                android:singleLine="true"
                 android:textColor="@color/black"
                 android:textSize="17sp" >
             </EditText>
@@ -172,7 +184,7 @@
                 android:layout_alignParentRight="true"
                 android:background="@drawable/anniu_on"
                 android:layout_centerVertical="true"
-                android:tag="1" />
+                android:tag="0" />
         </RelativeLayout>
     </LinearLayout>
 

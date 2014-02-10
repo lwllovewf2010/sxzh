@@ -18,7 +18,6 @@ import android.widget.AdapterView.OnItemClickListener;
 import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.ImageView;
 import android.widget.ListView;
-import android.widget.SimpleAdapter;
 import android.widget.Spinner;
 
 import com.sanxian.sxzhuanhuan.R;
@@ -28,10 +27,7 @@ import com.sanxian.sxzhuanhuan.api.TestAPI;
 import com.sanxian.sxzhuanhuan.common.BaseFragment;
 import com.sanxian.sxzhuanhuan.common.UIHelper;
 import com.sanxian.sxzhuanhuan.entity.Constant;
-import com.sanxian.sxzhuanhuan.entity.SortInfo;
-import com.sanxian.sxzhuanhuan.entity.TestData;
 import com.sanxian.sxzhuanhuan.entity.InterfaceData.ICategory;
-import com.sanxian.sxzhuanhuan.function.homeindex.HomeIndex;
 import com.sanxian.sxzhuanhuan.util.Util;
 /**   
  * @Title: SortIndex.java 
@@ -82,9 +78,6 @@ public class SortIndex extends BaseFragment implements OnItemClickListener , OnS
 		
 		initWidget(view) ;
 		setListener() ;
-//		sorts = TestData.initSort() ;
-//		sortAdapter = new SortAdapter(context, sorts) ;
-//		lvSort.setAdapter(sortAdapter);
 		
 		api.getMCAData("category", input, SortIndex.this, Constant.REQUESTCODE.SORT_PARENT_REQUEST) ;
 		
@@ -118,8 +111,6 @@ public class SortIndex extends BaseFragment implements OnItemClickListener , OnS
 		// TODO Auto-generated method stubs
 	}
 
-//	private List<Map<String , List<ICategory>>> sortChildsss = null ;
-//	private Map<String , List<ICategory>> mapSort = null ;
 	@Override
 	public void refresh(Object... param) {
 		// TODO Auto-generated method stub
@@ -133,7 +124,6 @@ public class SortIndex extends BaseFragment implements OnItemClickListener , OnS
 					String jsondata = param[1].toString();
 					sortParent = JSONParser.getCategory(jsondata) ;
 					
-//					sortChildsss = new ArrayList<Map<String,List<ICategory>>>() ;
 					for(int i = 0 ; i < sortParent.size() ; i++) {
 						input.put("parent_id" , sortParent.get(i).getId()) ;
 						api.getMCAData("category", input, SortIndex.this, Constant.REQUESTCODE.SORT_CHILD_REQUEST) ;
@@ -141,20 +131,6 @@ public class SortIndex extends BaseFragment implements OnItemClickListener , OnS
 					lvSort.setAdapter(new SortAdapter(getActivity(), (ArrayList<ICategory>) sortParent)) ;
 					
 				}
-//			case Constant.REQUESTCODE.SORT_CHILD_REQUEST:
-//				if (param.length > 0 && param[1] != null
-//						&& param[1] instanceof String) {
-//					String jsondata = param[1].toString();
-//					sortChild = JSONParser.getCategory(jsondata) ;
-//					
-//					for(int i = 0 ; i < sortParent.size() ; i++) {
-//						mapSort = new HashMap<String, List<ICategory>>() ;
-//						mapSort.put(sortParent.get(i).getId() , sortChild) ;
-//						System.out.println("parent_id----" + sortParent.get(i).getId()); 
-//						System.out.println("------------" + sortChild);
-//						sortChildsss.add(mapSort) ;
-//					}
-//				}
 		}
 	}
 
@@ -168,13 +144,8 @@ public class SortIndex extends BaseFragment implements OnItemClickListener , OnS
 	public void onItemClick(AdapterView<?> parent, View view, int position,	long id) {
 		// TODO Auto-generated method stub
 		ICategory sortInfo = (ICategory) sortParent.get(position) ;
-		Util.toastInfo(context, sortInfo.getTitle()) ;
 		
-//		UIHelper.showLoginActivity(context) ;
-//		UIHelper.showTestApiActivity(getActivity()) ;
-//		UIHelper.showRealAuthActivity(context) ;
-		
-		UIHelper.showCategoryActivity(context , sortInfo.getTitle() , sortInfo.getId()) ;
+		UIHelper.showCategoryActivity(context ,curSortItem ,  sortInfo.getTitle() , sortInfo.getId()) ;
 	}
 
 	@Override
@@ -209,8 +180,7 @@ public class SortIndex extends BaseFragment implements OnItemClickListener , OnS
 		// TODO Auto-generated method stub
 		switch (v.getId()) {
 			case R.id.sort_index_head_search:
-				System.out.println("search");
-				UIHelper.showSortDetailActivity(getActivity(), curSortItem, "") ;
+				UIHelper.showSearchHistoryActivity(context, curSortItem) ;
 				break;
 		}
 	}

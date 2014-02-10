@@ -19,6 +19,7 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.ProgressBar;
+import android.widget.RelativeLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
 
@@ -28,6 +29,7 @@ import com.sanxian.sxzhuanhuan.R;
 import com.sanxian.sxzhuanhuan.api.JSONParser;
 import com.sanxian.sxzhuanhuan.api.TestAPI;
 import com.sanxian.sxzhuanhuan.common.BaseActivity;
+import com.sanxian.sxzhuanhuan.common.CustomProgress;
 import com.sanxian.sxzhuanhuan.common.UIHelper;
 import com.sanxian.sxzhuanhuan.dialog.BottomRightOrLeftDialog;
 import com.sanxian.sxzhuanhuan.dialog.DialogConstant;
@@ -74,6 +76,7 @@ public class ProjectContentActivity extends BaseActivity implements
 	
 	private ImageView ivProjectContentLogo = null ;
 	private TextView tvProjectContentTitle = null ;
+	private TextView tvProjectContentJoin = null ;
 	private TextView tvProjectContentCreateName = null ;
 	private TextView tvProjectContentHangye= null ;
 	private TextView tvProjectContentZone= null ;
@@ -82,14 +85,20 @@ public class ProjectContentActivity extends BaseActivity implements
 	private TextView tvProjectContentPrePerson= null ;
 	private TextView tvProjectContentCurMoney= null ;
 	private TextView tvProjectContentShenTime= null ;
-	private ProgressBar pbProjectContentBar = null ;
-	
+//	private ProgressBar pbProjectContentBar = null ;
+	private CustomProgress pbProjectContentBar = null ;
 	private TextView tvProjectContentHBMoney= null ;
 	private TextView tvProjectContentHBTime= null ;
 	private TextView tvProjectContentHBContent= null ;
 	private TextView tvProjectContentHBPreBuy= null ;
+	private TextView tvProjectContentHBBaoyou= null ;
 	private Button btnProjectContentCangu = null ;
 	
+	private RelativeLayout rlProjectContentHall = null ;
+	private RelativeLayout rlProjectContentDetail = null ;
+	private RelativeLayout rlProjectContentVideo = null ;
+	private RelativeLayout rlProjectContentParter = null ;
+	private RelativeLayout rlProjectContentProduct = null ;
 	
 	//项目详情
 	private TextView tvProjectDetailName = null ;
@@ -229,6 +238,7 @@ public class ProjectContentActivity extends BaseActivity implements
 		if( 1 == PAGE_FALG ) {
 			ivProjectContentLogo = (ImageView) viewProjectContent.findViewById(R.id.project_content_tab1__pro_logo ) ;
 			tvProjectContentTitle = (TextView) viewProjectContent.findViewById(R.id.project_content_tab1_title);
+			tvProjectContentJoin = (TextView) viewProjectContent.findViewById(R.id.project_content_tab1_sale) ;
 			tvProjectContentCreateName = (TextView) viewProjectContent.findViewById(R.id.project_content_tab1_name) ;
 			tvProjectContentHangye = (TextView) viewProjectContent.findViewById(R.id.project_content_tab1_hangye); 
 			tvProjectContentZone = (TextView) viewProjectContent.findViewById(R.id.project_content_tab1_zone); 
@@ -238,12 +248,13 @@ public class ProjectContentActivity extends BaseActivity implements
 			tvProjectContentPrePerson = (TextView) viewProjectContent.findViewById(R.id.project_content_tab1_buy_count);
 			tvProjectContentCurMoney = (TextView) viewProjectContent.findViewById(R.id.project_content_tab1_cur_money);
 			tvProjectContentShenTime = (TextView) viewProjectContent.findViewById(R.id.project_content_tab1_shen_time);
-			pbProjectContentBar = (ProgressBar) viewProjectContent.findViewById(R.id.project_content_tab1_progressBar);
+			pbProjectContentBar = (CustomProgress) viewProjectContent.findViewById(R.id.project_content_tab1_progressBar);
 			
 			tvProjectContentHBMoney = (TextView) viewProjectContent.findViewById(R.id.project_content_tab1_huibao_lin1_money);
 			tvProjectContentHBTime = (TextView) viewProjectContent.findViewById(R.id.project_content_tab1_huibao_lin1_time);
 			tvProjectContentHBContent = (TextView) viewProjectContent.findViewById(R.id.project_content_tab1_huibao_lin1_content);
 			tvProjectContentHBPreBuy = (TextView) viewProjectContent.findViewById(R.id.project_content_tab1_huibao_lin1_pre_buy);
+			tvProjectContentHBBaoyou = (TextView) viewProjectContent.findViewById(R.id.project_content_tab1_huibao_baoyou) ;
 			btnProjectContentCangu = (Button)  viewProjectContent.findViewById(R.id.project_content_button_but);
 			btnProjectContentCangu.setOnClickListener(this) ;
 			
@@ -252,11 +263,21 @@ public class ProjectContentActivity extends BaseActivity implements
 			tvGOTOVideos = (TextView) viewProjectContent.findViewById(R.id.project_content_goto_videos) ;
 			tvGOTOMembers = (TextView) viewProjectContent.findViewById(R.id.project_content_goto_xiangmu_chengyuan) ;
 			tvGOTOProduct = (TextView) viewProjectContent.findViewById(R.id.project_content_goto_pro_product) ;
-			tvGOTOHall.setOnClickListener(this) ;
-			tvGOTODetail.setOnClickListener(this) ;
-			tvGOTOVideos.setOnClickListener(this) ;
-			tvGOTOMembers.setOnClickListener(this) ;
-			tvGOTOProduct.setOnClickListener(this) ;
+//			tvGOTOHall.setOnClickListener(this) ;
+//			tvGOTODetail.setOnClickListener(this) ;
+//			tvGOTOVideos.setOnClickListener(this) ;
+//			tvGOTOMembers.setOnClickListener(this) ;
+//			tvGOTOProduct.setOnClickListener(this) ;
+			rlProjectContentHall = (RelativeLayout) viewProjectContent.findViewById(R.id.project_content_type_rel_hall) ;
+			rlProjectContentDetail = (RelativeLayout) viewProjectContent.findViewById(R.id.project_content_type_rel) ;
+			rlProjectContentVideo = (RelativeLayout) viewProjectContent.findViewById(R.id.project_content_renshuss_rel) ;
+			rlProjectContentParter = (RelativeLayout) viewProjectContent.findViewById(R.id.project_content_xiangmu_chengyuan_rel) ;
+			rlProjectContentProduct = (RelativeLayout) viewProjectContent.findViewById(R.id.project_content_type_rel_pro_product) ;
+			rlProjectContentHall.setOnClickListener(this) ;
+			rlProjectContentDetail.setOnClickListener(this) ;
+			rlProjectContentVideo.setOnClickListener(this) ;
+			rlProjectContentParter.setOnClickListener(this) ;
+			rlProjectContentProduct.setOnClickListener(this) ;
 			
 			ivCollect.setVisibility(View.VISIBLE) ;
 			ivCollect.setOnClickListener(this);
@@ -292,26 +313,43 @@ public class ProjectContentActivity extends BaseActivity implements
 		if( 1 == PAGE_FALG ) {
 			
 			if(null != projectInfoDetail ) {
-				System.out.println("------initdata ------ 1 ");
 				imageLoader.displayImage(projectInfoDetail.getProject_logo(), ivProjectContentLogo, options, null);
 				tvProjectContentTitle.setText( projectInfoDetail.getProject_name()) ;
 				tvProjectContentCreateName.setText("创建人：" +projectInfoDetail.getProject_realname()) ;
-				tvProjectContentHangye.setText("所属行业:" + projectInfoDetail.getCategory_id()) ;
-				tvProjectContentZone.setText("所属地域:" + projectInfoDetail.getCity_id()) ;
+				tvProjectContentHangye.setText("所属行业:" + projectInfoDetail.getCategory_name()) ;
+				tvProjectContentZone.setText("所属地域:" + projectInfoDetail.getProvince_name() + "." + projectInfoDetail.getCity_name()) ;
 				tvProjectContentProfile.setText(Html.fromHtml(projectInfoDetail.getProject_explain())) ;
 				tvProjectContentTotalMoney.setText("" + projectInfoDetail.getProject_money()) ;
 				tvProjectContentPrePerson.setText(projectInfoDetail.getPurchase_user_num()) ;
 				tvProjectContentCurMoney.setText(projectInfoDetail.getPurchase_money()) ;
-				tvProjectContentShenTime.setText(projectInfoDetail.getProject_shentime()) ;
+				tvProjectContentShenTime.setText(projectInfoDetail.getProject_shentime()) ;  //  substring(0, 10)
+				pbProjectContentBar.setProgress(Integer.parseInt(projectInfoDetail.getPurchase_money()) * 100 / projectInfoDetail.getProject_money() ) ;
 				tvProjectContentHBMoney.setText("￥" + projectInfoDetail.getReward_money() + " RMB") ;
 				tvProjectContentHBTime.setText("预计回报时间:" + projectInfoDetail.getReward_return_days() + "天") ;
-//				tvProjectContentHBContent.setText(projectInfoDetail) ;  //回报的内容
-//				tvProjectContentHBPreBuy.setText(projectInfoDetail) ;  //已购的人数
+				tvProjectContentHBContent.setText(projectInfoDetail.getReward_content()) ;  //回报的内容
+				if(1 == projectInfoDetail.getReward_limit()) {//是否限定入股人数 1=限 0=不限
+					tvProjectContentHBPreBuy.setText("已购" + projectInfoDetail.getPurchase_user_num() + "人/" + projectInfoDetail.getReward_person()) ;
+				} else {
+					tvProjectContentHBPreBuy.setText("已购" + projectInfoDetail.getPurchase_user_num() + "人/不限定名额" ) ;
+				}
+				
+				if(1 == projectInfoDetail.getReward_post_free()) {//是否包邮 0=不包邮 1=大陆包邮
+					tvProjectContentHBBaoyou.setText("包快递（大陆地区）") ;
+				}else {
+					tvProjectContentHBBaoyou.setText("不包邮") ;
+				}
+				if(true == projectInfoDetail.isPurchase_already()) {
+					btnProjectContentCangu.setClickable(false) ;
+					btnProjectContentCangu.setText("已经投资") ;
+					btnProjectContentCangu.setBackgroundColor(ProjectContentActivity.this.getResources().getColor(R.color.dimgray)) ;
+				} else {
+					btnProjectContentCangu.setClickable(true) ;
+					tvProjectContentJoin.setText("项目预售中(我还未加入)") ;
+				}
 			}
 			
 		} else if (2 == PAGE_FALG ) {
 			if(null != projectInfoDetail ) {
-				System.out.println("------initdata ------ 2 ");
 				tvProjectDetailName.setText(projectInfoDetail.getProject_name()) ;
 				imageLoader.displayImage(projectInfoDetail.getProject_logo(), ivProjectDetailLogo, options, null);
 				tvProjectDetailContent.setText(Html.fromHtml(projectInfoDetail.getProject_describe())) ;
@@ -355,7 +393,10 @@ public class ProjectContentActivity extends BaseActivity implements
 			break;
 			
 		case R.id.project_content_button_but:
-			Util.toastInfo(ProjectContentActivity.this, "立即参股") ;
+			Util.toastInfo(ProjectContentActivity.this, "立即参股---跳转到") ;
+//			btnProjectContentCangu.setClickable(false) ;
+//			btnProjectContentCangu.setText("已经投资") ;
+//			btnProjectContentCangu.setBackgroundColor(ProjectContentActivity.this.getResources().getColor(R.color.dimgray)) ;
 			break ;
 		case R.id.project_content_footer_iv_back:  	
 			System.out.println("back");
@@ -377,24 +418,27 @@ public class ProjectContentActivity extends BaseActivity implements
 			showBottomMenuDialog() ;
 			break;
 			
-		case R.id.project_content_goto_hall :	//部落大厅
+		case R.id.project_content_type_rel_hall : //case R.id.project_content_goto_hall :	//部落大厅
 			System.out.println("hall");
-			initHall() ;
+//			initHall() ;
+			//TODO
 			break ;
-		case R.id.project_content_goto_pro_detail:     //项目详情
+		case R.id.project_content_type_rel : //case R.id.project_content_goto_pro_detail:     //项目详情
 			System.out.println("detail");
 			initDetail() ;
 			break;
-		case R.id.project_content_goto_videos:    // 宣传视频
+		case R.id.project_content_renshuss_rel : //case R.id.project_content_goto_videos:    // 宣传视频
 			System.out.println("videos");
 			//宣传视频：创建者提交关于该项目的相关视频链接，点击后跳转至手机浏览器打开相关视频地址
 			break;
-		case R.id.project_content_goto_xiangmu_chengyuan:   //项目成员
+		case R.id.project_content_xiangmu_chengyuan_rel : //case R.id.project_content_goto_xiangmu_chengyuan:   //项目成员
 			System.out.println("members");
 			initMembers() ;
+			//TODO
 			break;
-		case R.id.project_content_goto_pro_product : 	//项目产品
+		case R.id.project_content_type_rel_pro_product : //case R.id.project_content_goto_pro_product : 	//项目产品
 			System.out.println("product"); 
+			//TODO
 			break ;
 
 		case R.id.project_members_iv_search :     

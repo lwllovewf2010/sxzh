@@ -34,6 +34,7 @@ import com.sanxian.sxzhuanhuan.function.personal.myaccount.MyAccountActivity;
 import com.sanxian.sxzhuanhuan.function.personal.mycollection.MyCollectionIndexActivity;
 import com.sanxian.sxzhuanhuan.function.personal.myfriends.MyFriendsIndexActivity;
 import com.sanxian.sxzhuanhuan.function.personal.myorder.MyOrderIndexActivity;
+import com.sanxian.sxzhuanhuan.function.personal.myproject.MyProjectIndexActivity;
 import com.sanxian.sxzhuanhuan.function.personal.setting.SetIndexActiVity;
 import com.sanxian.sxzhuanhuan.util.Util;
 /**
@@ -134,15 +135,10 @@ public class PersonalIndex extends BaseFragment implements OnClickListener{
 	 * 初始化页面数据
 	 * joe
 	 */
-	private void initData(){
+	public void initData(){
 		SharedPreferences spf = context.getSharedPreferences("login_user", 0) ;
 		String open_id = spf.getString("open_id", null);
 		String token = spf.getString("token", null);
-//		if(open_id == null || token == null){
-////			UIHelper.showLoginActivity(PersonalIndex.this.getActivity());
-//			Intent intent = new Intent(context, LoginActivity.class);
-//			startActivityForResult(intent,Constant.REQUEST_LOGIN_CODE);
-//		}else{
 		if(api == null){
 			api = new CommonAPI();
 		}
@@ -197,8 +193,8 @@ public class PersonalIndex extends BaseFragment implements OnClickListener{
 						String user_name = object.optString("user_name");
 						String mobile = object.optString("mobile");
 						
-						username.setText(user_name);
-						phone.setText(mobile);
+						username.setText(user_name + " V");
+						phone.setText(mobile.replace(mobile.subSequence(3,7), "XXXX"));
 						company.setText(company_name);
 						position.setText(position_name);
 						project.setText(project_num);
@@ -208,9 +204,10 @@ public class PersonalIndex extends BaseFragment implements OnClickListener{
 						gold_coins_sum.setText(money);
 						imageLoader.displayImage(photo, preson_avatar, options);
 					}else if(status == 1001){
-						
+						Intent intent = new Intent(context, LoginActivity.class);
+						startActivityForResult(intent,Constant.REQUEST_LOGIN_CODE);
 					}else {
-						
+						Util.toastInfo(context, "请求失败");
 					}
 				} catch (JSONException e) {
 					// TODO Auto-generated catch block
@@ -267,6 +264,8 @@ public class PersonalIndex extends BaseFragment implements OnClickListener{
 			break;
 		case R.id.my_project_layout:
 			Util.toastInfo(context, "我的项目");
+			intent.setClass(context, MyProjectIndexActivity.class);
+			startActivity(intent);
 			break;
 		case R.id.my_tribe_layout:
 			Util.toastInfo(context, "我的部落");

@@ -9,6 +9,7 @@ package com.sanxian.sxzhuanhuan.entity;
  * @version V1.0   
  */
 public class Constant {
+	public final static String PRE_CONFIG_FILE = "pre_config" ;
 	/**取消登录 */
 	public final static int LOGIN_CANCLE = 0x01 ;
 	/**登录 */
@@ -110,7 +111,19 @@ public class Constant {
 		public static final int SORT_PROVINCE_REQUEST = 0x22 ; //省列表
 		public static final int SORT_CITY_REQUEST = 0x23 ; //城市列表
 		
+		public static final int CREATIVE_FETCH_ONE = 0x30 ;  //查找单个创意
+		public static final int CREATIVE_FETCH_ALL = 0x31 ; //得到多个创意
+		
+		public static final int PRODUCT_GET_ROW_REQUEST = 0x41 ; //查找单个商品
+		
+		
 		public static final int CHECK_USER_REGISTER_REQUEST = 0x50 ; //user_register
+		
+		public static final int USER_CHANGE_PASSWORD_REQUEST = 0x60 ; //chang password
+		
+		public static final int HOME_INDEX_SEARCH_CREATIVE_REQUEST = 0x70 ; //首页创意搜索
+		public static final int HOME_INDEX_SEARCH_PROJECT_REQUEST = 0x71 ; //首页项目搜索
+		public static final int HOME_INDEX_SEARCH_PRODUCT_REQUEST = 0x72 ; //首页商品搜索
 	}
 	
 	/**

@@ -1,0 +1,66 @@
+	<script type="text/javascript">
+		$(function(){
+			//———————— 单选按钮
+			$(".choose-icon").click(function(){
+				$(this).addClass("active").siblings().removeClass("active");
+			});
+		});
+	</script>
+
+	<div id="dialog">
+		<h2 class="title">内容举报</h2>
+		<!-- 流程 -->
+		<div class="step-box clearfix">
+			<div class="step step1 fl active">
+				<span>1</span>填写举报信息
+			</div>
+			<div class="step step2 fl">
+				<span>2</span>完成举报
+			</div>
+		</div>
+		<!--End 流程 -->
+		<h2 class="title">请选择举报类型</h2>
+		<div class="report-box clearfix">
+			<div class="report report1 fl">
+				<h2 class="cent">侵权举报</h2>
+				<div class="ip-cell">
+					<span class="choose-icon active">个人侵权</span>
+					<br>
+					<br>
+					<span class="choose-icon">企业侵权</span>
+					<input type="hidden" value="1" name="report">
+				</div>
+			</div>
+			<div class="report report2 fr">
+				<h2 class="cent">侵权举报</h2>
+				<div class="ip-cell">
+					<span class="choose-icon active">广告</span>
+					<br>
+					<br>
+					<span class="choose-icon">色情、反动</span>
+					<br>
+					<br>
+					<span class="choose-icon">头像、签名档</span>
+					<input type="hidden" value="1" name="report1">
+				</div>
+			</div>
+		</div>
+		<!-- End举报类型 -->
+		<h2 class="title">我举报的信息：</h2>
+		<div class="my-report clearfix">
+			<div class="a-img fl"><img alt="" src="images/people3.jpg"></div>
+			<div class="my-text">
+				三弦转换平台正是基于这一理念产生，旨在让消费者用需求做投资，使消费者在消费的同时可以转换成“股东”将“需求转换为财富”的概念变为现实。而昌和寿项目即是依托三弦转换平台对上述商业理念的一次有益实践。
+昌和寿有魂的健康养生产品”转换平台对上述商业理念的一次有益实践。
+			</div>
+		</div>
+		<!-- End我举报的信息 -->
+		<!-- 验证码 -->
+		<div class="yzm-box">
+			<label for="">请输入图片验证码：</label><input type="text" id="yzm" name="yzm"/><img src="../images/yzm.png" alt=""/><a href="javascript:;">看不清？换一张</a>
+		</div>
+		<!--End 验证码 -->
+		<!-- 提交按钮 -->
+		<div class="btns cent gt40"><a href="javascript:;" class="btn-sub-b">确认提交</a></div>
+		<!--End 提交按钮 -->
+	</div>

@@ -19,10 +19,12 @@ import com.sanxian.sxzhuanhuan.util.Util;
 
 import android.opengl.Visibility;
 import android.os.Bundle;
+import android.text.Html;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.webkit.WebView;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.ArrayAdapter;
@@ -44,13 +46,14 @@ public class OriginalityActivity extends BaseActivity implements OnClickListener
 	TextView topic_content_describe_name;
 	TextView topic_content_describe_hangye;
 	TextView topic_content_describe_region;
-	TextView topic_content_describe_text;
+	WebView topic_content_describe_text;
 	Button topic_content_button;
 	
 	private HomeIndexGoodsAPI api = null;
 	private final int REQUESTCODE = 12;
 	private OriginalityItemDetails originalityItem = new OriginalityItemDetails();
 	String creativeID;
+	final String mimeType = "text/html";
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -84,7 +87,7 @@ public class OriginalityActivity extends BaseActivity implements OnClickListener
 		topic_content_describe_name = (TextView)topicDescribe.findViewById(R.id.topic_content_describe_name);
 		topic_content_describe_hangye = (TextView)topicDescribe.findViewById(R.id.topic_content_describe_hangye);
 		topic_content_describe_region = (TextView)topicDescribe.findViewById(R.id.topic_content_describe_region);
-		topic_content_describe_text = (TextView)topicDescribe.findViewById(R.id.topic_content_describe_text);
+		topic_content_describe_text = (WebView)topicDescribe.findViewById(R.id.topic_content_describe_text);
 		topic_content_button = (Button)topicDescribe.findViewById(R.id.topic_content_button);
 		//初始化发表评论按钮
 		Button butCommnet=(Button)topicComment.findViewById(R.id.topic_content_comment_publish_but);
@@ -169,7 +172,11 @@ public class OriginalityActivity extends BaseActivity implements OnClickListener
 	
 	private void refreshUI(OriginalityItemDetails item){
 		topic_content_describe_title.setText(item.getOrg_name());
-		topic_content_describe_text.setText(item.getOrg_desc());
+		final String mimeType = "text/html;charset=UTF-8";
+		topic_content_describe_text.loadData(item.getOrg_desc(), mimeType,null);
+//		topic_content_describe_text.setu
+//		settings.setUseWideViewPort(true); 
+//        settings.setLoadWithOverviewMode(true); 
 		topic_content_describe_region.setText("所属地域："+item.getProvince_name()+"·"+item.getCity_name());
 		topic_content_describe_hangye.setText("所属行业："+item.getCategory_name());
 		//判断useid
@@ -178,10 +185,10 @@ public class OriginalityActivity extends BaseActivity implements OnClickListener
 		if((item.getPid()!= null)&&(item.getPid().trim()!="0")&&(item.getPid().trim()!="")){
 			topic_content_button.setText(getResources().getString(R.string.topic_content_button2));
 			topic_content_button.setVisibility(View.VISIBLE);
-			topic_content_button.setTag(1);
+			topic_content_button.setTag("details");
 		}else if(openid.trim().equals(item.getUser_id())){
 			topic_content_button.setVisibility(View.VISIBLE);
-			topic_content_button.setTag(0);
+			topic_content_button.setTag("submit");
 		}
 		Log.d("openid",	"openid = "+openid);
 	}
@@ -196,9 +203,9 @@ public class OriginalityActivity extends BaseActivity implements OnClickListener
 		case R.id.topic_content_button:
 			String tag = (String)v.getTag();
 			if(tag!=null){
-				if(tag.trim().equals("0")){
+				if(tag.trim().equals("submit")){
 					Toast.makeText(this, "发布项目", Toast.LENGTH_SHORT).show();
-				}else if(tag.trim().equals("1")){
+				}else if(tag.trim().equals("details")){
 					Toast.makeText(this, "项目详情", Toast.LENGTH_SHORT).show();
 				}
 			}

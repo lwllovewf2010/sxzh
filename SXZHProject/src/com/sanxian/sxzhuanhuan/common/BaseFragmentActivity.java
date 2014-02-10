@@ -4,6 +4,7 @@ package com.sanxian.sxzhuanhuan.common;
 import com.sanxian.sxzhuanhuan.SApplication;
 import com.sanxian.sxzhuanhuan.R;
 
+import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
@@ -21,11 +22,11 @@ public class BaseFragmentActivity extends FragmentActivity implements FragmentCa
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		app = (SApplication) this.getApplicationContext();
-//		String classname = this.getClass().getName();
-//		Activity act = app.getActivityByName(classname);
-//		if (act == null) {
-//			app.allActivity.add(this);
-//		}
+		String classname = this.getClass().getName();
+		Activity act = app.getActivityByName(classname);
+		if (act == null) {
+			app.allActivity.add(this);
+		}
 	}
 	@Override
 	public void initView(View view) {

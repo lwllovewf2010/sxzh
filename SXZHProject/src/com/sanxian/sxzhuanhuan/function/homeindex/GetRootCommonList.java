@@ -32,6 +32,7 @@ public class GetRootCommonList extends BaseActivity {
 
 	private ListView common_list;
 	private String type = "";
+	private String is_get_last = "0";
 	private CommonAPI api = null;
 	private final int REQUESTCODE = 12;
 	private List<Map<String, String>> list;
@@ -40,7 +41,7 @@ public class GetRootCommonList extends BaseActivity {
 	private String root_name;
 	private final int RESULT_CODE = 112;
 	private final int SUB_REQUESTCODE = 109;
-	private final int SUB_RESULTCODE = 118;
+	private final int SET_SUB_RESULTCODE = 118;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
@@ -57,6 +58,7 @@ public class GetRootCommonList extends BaseActivity {
 		super.initView();
 		displayRight();
 		type = getIntent().getStringExtra("type");
+		is_get_last = getIntent().getStringExtra("is_get_last");
 		if("mode".equals(type)){
 			setTitle("分类");
 		}else if("category".equals(type)){
@@ -172,6 +174,7 @@ public class GetRootCommonList extends BaseActivity {
 					Intent intent = new Intent(GetRootCommonList.this,GetSubCommonList.class);
 					intent.putExtra("type", "region_city");
 					intent.putExtra("root_id", root_id);
+					intent.putExtra("is_get_last", is_get_last);
 					startActivityForResult(intent, SUB_REQUESTCODE);
 				}else if("category".equals(type)){
 					String sub_count = list.get(arg2).get("sub_count");
@@ -179,6 +182,7 @@ public class GetRootCommonList extends BaseActivity {
 						Intent intent = new Intent(GetRootCommonList.this,GetSubCommonList.class);
 						intent.putExtra("type",type);
 						intent.putExtra("root_id", root_id);
+						intent.putExtra("is_get_last", is_get_last);
 						startActivityForResult(intent, SUB_REQUESTCODE);
 					}else{
 						Bundle bundle = new Bundle();
@@ -203,11 +207,11 @@ public class GetRootCommonList extends BaseActivity {
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 		// TODO Auto-generated method stub
 		super.onActivityResult(requestCode, resultCode, data);
-		if(resultCode == SUB_RESULTCODE){
+		if(resultCode == SET_SUB_RESULTCODE){
 			Bundle bundle = data.getExtras();
 			bundle.putString("root_id", root_id);
 			bundle.putString("root_name", root_name);
-			setResult(SUB_RESULTCODE, getIntent().putExtras(bundle));
+			setResult(SET_SUB_RESULTCODE, getIntent().putExtras(bundle));
 			finish();
 		}
 	}

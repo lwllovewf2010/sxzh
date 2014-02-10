@@ -227,10 +227,10 @@ public class InterfaceData {
 		private String open_id ; 
 		private String user_name ; 
 		private String photo ; 
-		private String dname ; 
 		private String mobile ; 
 		private String email ; 
 		private String token ;
+		private String true_name;
 		public String getOpen_id() {
 			return open_id;
 		}
@@ -248,12 +248,6 @@ public class InterfaceData {
 		}
 		public void setPhoto(String photo) {
 			this.photo = photo;
-		}
-		public String getDname() {
-			return dname;
-		}
-		public void setDname(String dname) {
-			this.dname = dname;
 		}
 		public String getMobile() {
 			return mobile;
@@ -273,13 +267,19 @@ public class InterfaceData {
 		public void setToken(String token) {
 			this.token = token;
 		}
+		public String getTrue_name() {
+			return true_name;
+		}
+		public void setTrue_name(String true_name) {
+			this.true_name = true_name;
+		}
 		/* (non-Javadoc)
 		 * @see java.lang.Object#toString()
 		 */
 		@Override
 		public String toString() {
 			return "ILogin [open_id=" + open_id + ", user_name=" + user_name
-					+ ", photo=" + photo + ", dname=" + dname + ", mobile="
+					+ ", photo=" + photo + ", dname=" + true_name + ", mobile="
 					+ mobile + ", email=" + email + ", token=" + token + "]";
 		} 
 		

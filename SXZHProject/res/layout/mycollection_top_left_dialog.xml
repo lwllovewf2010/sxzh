@@ -6,7 +6,7 @@
     <RelativeLayout
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:layout_marginBottom="48dp" >
+        android:layout_marginTop="48dp" >
 
         <LinearLayout
             android:id="@+id/main_dialog_layout"
@@ -14,10 +14,10 @@
             android:layout_height="wrap_content"
             android:paddingLeft="5dp"
             android:paddingRight="5dp"
-            android:paddingTop="5dp" 
-            android:paddingBottom="20dp"
+            android:paddingTop="20dp" 
+            android:paddingBottom="5dp"
             android:layout_alignParentLeft="true"
-            android:layout_alignParentBottom="true"
+            android:layout_alignParentTop="true"
             android:background="@drawable/title_function_bg"
             android:orientation="vertical" >
 

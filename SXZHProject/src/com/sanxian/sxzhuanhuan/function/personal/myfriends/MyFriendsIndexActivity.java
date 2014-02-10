@@ -1,6 +1,7 @@
 package com.sanxian.sxzhuanhuan.function.personal.myfriends;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 import org.json.JSONArray;
@@ -27,9 +28,13 @@ import android.widget.TextView;
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.sanxian.sxzhuanhuan.R;
+import com.sanxian.sxzhuanhuan.api.JSONParser;
+import com.sanxian.sxzhuanhuan.api.MyFriendsAPI;
 import com.sanxian.sxzhuanhuan.common.BaseActivity;
 import com.sanxian.sxzhuanhuan.common.IBaseActivity;
+import com.sanxian.sxzhuanhuan.entity.Constant;
 import com.sanxian.sxzhuanhuan.entity.UserInfo;
+import com.sanxian.sxzhuanhuan.message.ChatActivity;
 import com.sanxian.sxzhuanhuan.util.Util;
 
 /**
@@ -49,14 +54,9 @@ public class MyFriendsIndexActivity extends BaseActivity implements IBaseActivit
 	private int spinnerIdItems[] = { 0, 1, 2 };
 	private FriendListviewAdapter adapter;
 	private List<UserInfo> friendList = new ArrayList<UserInfo>();
-	public ImageLoader imageLoader;
-	public DisplayImageOptions options;
 
-	public void intImageUtil() {
-
-		imageLoader = ImageLoader.getInstance();
-		options = new DisplayImageOptions.Builder().showStubImage(R.drawable.default_avatar).cacheInMemory().cacheOnDisc().build();
-	}
+	MyFriendsAPI api = new MyFriendsAPI();
+	private final int GETFRIENDLIST = 100;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -66,9 +66,10 @@ public class MyFriendsIndexActivity extends BaseActivity implements IBaseActivit
 		this.initView();
 		this.initListener();
 		spinner.setAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, spinnerDataItems));
-		getData();
+		// getData();
 		adapter = new FriendListviewAdapter(this, friendList);
 		friends_listview.setAdapter(adapter);
+		api.getFriendList(new HashMap<String, String>(), this, GETFRIENDLIST);
 	}
 
 	@Override
@@ -82,17 +83,17 @@ public class MyFriendsIndexActivity extends BaseActivity implements IBaseActivit
 		near_people.setVisibility(View.VISIBLE);
 	}
 
-	public void getData() {
-		UserInfo userInfo = null;
-		for (int i = 0; i < 20; i++) {
-			userInfo = new UserInfo();
-			userInfo.setUid(i + "");
-			userInfo.setFullname("乔布斯" + i);
-			userInfo.setAddress("深圳" + i);
-			userInfo.setAvatar("http://h.hiphotos.baidu.com/image/w%3D2048/sign=443597d217ce36d3a20484300ecb3b87/3801213fb80e7bec4b6768e92d2eb9389b506b7c.jpg");
-			friendList.add(userInfo);
-		}
-	}
+	// public void getData() {
+	// UserInfo userInfo = null;
+	// for (int i = 0; i < 20; i++) {
+	// userInfo = new UserInfo();
+	// userInfo.setUid(i + "");
+	// userInfo.setRealName("乔布斯" + i);
+	// userInfo.setAddress("深圳" + i);
+	// userInfo.setAvatar("http://h.hiphotos.baidu.com/image/w%3D2048/sign=443597d217ce36d3a20484300ecb3b87/3801213fb80e7bec4b6768e92d2eb9389b506b7c.jpg");
+	// friendList.add(userInfo);
+	// }
+	// }
 
 	@Override
 	public void initListener() {
@@ -107,6 +108,48 @@ public class MyFriendsIndexActivity extends BaseActivity implements IBaseActivit
 
 	@Override
 	public void refresh(Object... param) {
+		super.refresh(param);
+		int flag = ((Integer) param[0]).intValue();
+		try {
+			switch (flag) {
+			case GETFRIENDLIST:
+				if (param.length > 0 && param[1] != null && param[1] instanceof String) {
+					String jsondata = param[1].toString();
+					if (Constant.ResultStatus.RESULT_OK == JSONParser.getReturnFlag(jsondata)) {
+						JSONObject jsonObject = new JSONObject(jsondata);
+						JSONArray contentArray = jsonObject.optJSONArray("content");
+
+						if (contentArray != null && contentArray.length() != 0) {
+							UserInfo userInfo = null;
+							JSONObject contentObject = null;
+							for (int i = 0; i < contentArray.length(); i++) {
+								contentObject = contentArray.optJSONObject(i);
+								if (contentObject != null) {
+									userInfo = new UserInfo();
+									userInfo.setUid(contentObject.optString("open_id"));
+									userInfo.setUsername(contentObject.optString("user_name"));
+									userInfo.setAvatar(contentObject.optString("photo"));
+									userInfo.setAddress(contentObject.optString("area"));
+									friendList.add(userInfo);
+								}
+
+							}
+							adapter.notifyDataSetChanged();
+						}
+						// content":
+						// [{"open_id":"3_1206_629938","photo":"http:\/\/s.sxzhuanhuan.com\/avatar\/avatar1390467086989.png",
+						// "user_name":"houhui123","area":"\u4e0a\u6d77\u5e02\u4e0a\u6d77\u5e02\u9ec4\u6d66\u533a"},
+
+					} else if (Constant.ResultStatus.RESULT_FAIL == JSONParser.getReturnFlag(jsondata)) {
+					}
+				}
+				break;
+			default:
+				break;
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 
 	@Override
@@ -131,12 +174,13 @@ public class MyFriendsIndexActivity extends BaseActivity implements IBaseActivit
 			break;
 		}
 	}
+
 	/**
 	 * 
-	* @ClassName: FriendListviewAdapter  
-	* @Description: 好友列表适配器  
-	* @author honaf
-	* @date 2014-1-3 下午3:41:06
+	 * @ClassName: FriendListviewAdapter
+	 * @Description: 好友列表适配器
+	 * @author honaf
+	 * @date 2014-1-3 下午3:41:06
 	 */
 	class FriendListviewAdapter extends BaseAdapter {
 		List<UserInfo> list = new ArrayList<UserInfo>();
@@ -168,7 +212,7 @@ public class MyFriendsIndexActivity extends BaseActivity implements IBaseActivit
 
 		@Override
 		public View getView(int position, View convertView, ViewGroup arg2) {
-			UserInfo userInfo = list.get(position);
+			final UserInfo userInfo = list.get(position);
 
 			ViewHolder holder = null;
 			if (convertView == null) {
@@ -186,11 +230,16 @@ public class MyFriendsIndexActivity extends BaseActivity implements IBaseActivit
 
 			imageLoader.displayImage(userInfo.getAvatar(), holder.lvitem_img, options);
 			holder.lvitem_address.setText(userInfo.getAddress());
-			holder.lvitem_username.setText(userInfo.getFullname());
+			holder.lvitem_username.setText(userInfo.getUsername());
 			holder.lvitem_operation.setOnClickListener(new OnClickListener() {
 				@Override
 				public void onClick(View v) {
-					Util.toastInfo(MyFriendsIndexActivity.this, "消息入口");
+//					Util.toastInfo(MyFriendsIndexActivity.this, "消息入口");
+					
+					Intent intent = new Intent(MyFriendsIndexActivity.this, ChatActivity.class);
+					intent.putExtra("userinfo", userInfo);
+					startActivity(intent);
+
 				}
 			});
 			return convertView;
@@ -204,126 +253,5 @@ public class MyFriendsIndexActivity extends BaseActivity implements IBaseActivit
 			public LinearLayout lvitem_operation;// 点击聊天入口
 		}
 	}
-	/*
-	 * @Override public void refresh(Object... param) {
-	 * 
-	 * super.refresh(param); int falg = ((Integer) param[0]).intValue(); switch
-	 * (falg) { case GETMYFRIENDLIST: if (param.length > 0 && param[1] != null
-	 * && param[1] instanceof String) { String data = param[1].toString(); try {
-	 * JSONObject json = new JSONObject(data); int status =
-	 * json.getInt("status"); JSONObject dataObj = null;
-	 * Log.e("honaf-contactindex", "getfriendlist" + data); if (status == 1) {
-	 * 
-	 * if (friendList != null) { friendList.clear(); } dataObj =
-	 * json.optJSONObject("data"); if (dataObj == null) { return; } JSONArray
-	 * dataArray = null; UserInfo u = null;
-	 * 
-	 * for (int i = 0; i < CApplication.defaultLetters.length; i++) {
-	 * 
-	 * dataArray = dataObj.optJSONArray(CApplication.defaultLetters[i]);
-	 * JSONObject zimuObj = null;
-	 * 
-	 * if (dataArray != null && dataArray.length() != 0) {
-	 * 
-	 * for (int j = 0; j < dataArray.length(); j++) { zimuObj =
-	 * dataArray.optJSONObject(j);
-	 * 
-	 * if (zimuObj != null) {
-	 * 
-	 * u = new UserInfo(); u.setName_letter(CApplication.defaultLetters[i]);
-	 * u.setUid(zimuObj.optString("uid"));
-	 * u.setFullname(zimuObj.optString("name"));
-	 * u.setMobile(zimuObj.optString("mobile"));
-	 * u.setCompany(zimuObj.optString("company"));
-	 * u.setSex(zimuObj.optString("sex"));
-	 * u.setPosition(zimuObj.optString("duty"));
-	 * u.setAvatar(zimuObj.optString("avatar"));
-	 * u.setTrade(zimuObj.optString("industry")); friendList.add(u);
-	 * 
-	 * }
-	 * 
-	 * }
-	 * 
-	 * }
-	 * 
-	 * } if (!"".equals(dataObj.optString("changetime"))) { last_changetime =
-	 * dataObj.optString("changetime"); } refreshHandler.sendEmptyMessage(0);
-	 * 
-	 * } else { Util.toastInfo(guide, "还没有好友，人气不行哦"); }
-	 * 
-	 * } catch (Exception e) { Util.toastInfo(guide, "还没有好友，人气不行哦");
-	 * e.printStackTrace(); } finally {
-	 * 
-	 * }
-	 * 
-	 * } break;
-	 * 
-	 * case DELFRIEND: if (param.length > 0 && param[1] != null && param[1]
-	 * instanceof String) { String data = param[1].toString(); try { JSONObject
-	 * json = new JSONObject(data); int status = json.getInt("status"); if
-	 * (status == 1) {
-	 * 
-	 * Util.toastInfo(guide, "删除成功");
-	 * 
-	 * api.updateCache("friend", app.getLoginUserInfo().getUid(),
-	 * last_changetime + "", false, ContactsIndex.this, UPDATECACHE);
-	 * 
-	 * 
-	 * } else { Util.toastInfo(guide, "删除失败"); }
-	 * 
-	 * } catch (Exception e) { Util.toastInfo(guide, "解析异常");
-	 * e.printStackTrace(); } finally {
-	 * 
-	 * }
-	 * 
-	 * } break;
-	 * 
-	 * case DELFRIENDFORSEARCH: if (param.length > 0 && param[1] != null &&
-	 * param[1] instanceof String) { String data = param[1].toString(); try {
-	 * JSONObject json = new JSONObject(data); int status =
-	 * json.getInt("status"); if (status == 1) {
-	 * searchlist.remove(tempLongPosition);
-	 * resultAdapter.notifyDataSetChanged(); } else { Util.toastInfo(guide,
-	 * "没有返回数据"); }
-	 * 
-	 * } catch (Exception e) { Util.toastInfo(guide, "解析异常");
-	 * e.printStackTrace(); } finally {
-	 * 
-	 * }
-	 * 
-	 * } break; case UPDATECACHE: if (param.length > 0 && param[1] != null &&
-	 * param[1] instanceof String) { String data = param[1].toString(); try {
-	 * JSONObject json = new JSONObject(data); int status =
-	 * json.getInt("status"); JSONObject dataObj = null;
-	 * Log.e("honaf-contactindex", "updatecache" + data); if (status == 1) {
-	 * 
-	 * dataObj = json.optJSONObject("data");
-	 * 
-	 * if (dataObj != null) { if (!"".equals(dataObj.optString("changetime"))) {
-	 * last_changetime = dataObj.optString("changetime"); }
-	 * 
-	 * JSONObject insertObj = dataObj.optJSONObject("insert"); if (insertObj !=
-	 * null) { insertfriendcacheList = convertJsonObject(insertObj); } else {
-	 * insertfriendcacheList.clear(); }
-	 * 
-	 * JSONObject deleteObj = dataObj.optJSONObject("delete"); if (deleteObj !=
-	 * null) { deletefriendcacheList = convertJsonObject(deleteObj); } else {
-	 * deletefriendcacheList.clear(); }
-	 * 
-	 * JSONObject updateObj = dataObj.optJSONObject("update"); if (updateObj !=
-	 * null) { updatefriendcacheList = convertJsonObject(updateObj); } else {
-	 * updatefriendcacheList.clear(); }
-	 * 
-	 * refreshHandler.sendEmptyMessage(UPDATECACHESUCCESS); }
-	 * 
-	 * } else { }
-	 * 
-	 * } catch (Exception e) { Util.toastInfo(guide, "解析异常");
-	 * e.printStackTrace(); } finally {
-	 * 
-	 * }
-	 * 
-	 * } break; } }
-	 */
 
 }

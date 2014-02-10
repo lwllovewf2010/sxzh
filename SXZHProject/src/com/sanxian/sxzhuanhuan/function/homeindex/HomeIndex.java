@@ -1,5 +1,7 @@
 package com.sanxian.sxzhuanhuan.function.homeindex;
 
+import java.sql.Date;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
@@ -9,8 +11,10 @@ import java.util.Map;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -42,7 +46,10 @@ import com.sanxian.sxzhuanhuan.entity.InterfaceData.IImgs;
 import com.sanxian.sxzhuanhuan.entity.ProductInfo;
 import com.sanxian.sxzhuanhuan.entity.ProjectInfo;
 import com.sanxian.sxzhuanhuan.function.homeindex.project.ProjectAdapter;
+import com.sanxian.sxzhuanhuan.function.login.LoginActivity;
 import com.sanxian.sxzhuanhuan.util.Util;
+import com.sanxian.sxzhuanhuan.view.xlistview.XListView;
+import com.sanxian.sxzhuanhuan.view.xlistview.XListView.IXListViewListener;
 
 /**
  * @Title: HomeIndex.java
@@ -52,15 +59,19 @@ import com.sanxian.sxzhuanhuan.util.Util;
  * @date 2014-1-15 下午3:27:42
  * @version V1.0
  */
-public class HomeIndex extends BaseFragment implements OnClickListener {
+public class HomeIndex extends BaseFragment implements OnClickListener , IXListViewListener {
 
-	private static int test = 1 ; 
+	private XListView mListView = null ;
+	private boolean isUpRefresh = true ;
+	private boolean isDownRefresh = false ;
+	private String[] refreshTime = new String[3] ;
+	private Handler mHandler = null ;
 	
 	private static int SORTID = 0 ;
+	//布局控件
 	private ImageView imageBut1, imageBut2, imageBut3;
 	private List<ImageView> listImgs = null ;
 	private String[] publishType = { "创意话题", "集资项目" };
-
 	private Button btnPublish = null ;
 	private EditText etSearch = null ;
 	private ImageView ivSearch = null ;
@@ -70,6 +81,9 @@ public class HomeIndex extends BaseFragment implements OnClickListener {
 	private ArrayList<CreativeInfo> creativeInfos = null ;
 	private ArrayList<ProjectInfo> projectInfos = null ;
 	private ArrayList<ProductInfo> productInfos = null ;
+	private ArrayList<CreativeInfo> creativeSearchInfos = null ;
+	private ArrayList<ProjectInfo> projectSearchInfos = null ;
+	private ArrayList<ProductInfo> productSearchInfos = null ;
 	private ListView lvSortDetail;
 	private Context context;
 
@@ -77,7 +91,10 @@ public class HomeIndex extends BaseFragment implements OnClickListener {
 	
 	private TestAPI api = null;
 	private Map<String , String> input = null ;
+	private Map<String , String> searchInput = null ;
 	private List<IImgs> indexImgs = null ;
+	private int[] PAGE = new int[3];
+	private final static int PAGESIZE = 5 ;
 	
 	private ImageLoader imageLoader = ImageLoader.getInstance();
 	private DisplayImageOptions options = null ;
@@ -92,7 +109,7 @@ public class HomeIndex extends BaseFragment implements OnClickListener {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
 		context = SApplication.getInstance();
-		System.out.println("---- onCreat------");
+//		System.out.println("---- onCreat------");
 	}
 
 	@Override
@@ -103,15 +120,16 @@ public class HomeIndex extends BaseFragment implements OnClickListener {
 		View view = inflater.inflate(R.layout.home_index_zfl, container, false);
 		init(view);
 		
-		System.out.println("---- onCreateView------");
+//		System.out.println("---- onCreateView------");
 		
 		options = UIHelper.setOption() ;
 		
-		api.getIndexImgs(HomeIndex.this, Constant.REQUESTCODE.INDEX_IMGS_REQUEST) ;   //首页轮播图
+//		api.getIndexImgs(HomeIndex.this, Constant.REQUESTCODE.INDEX_IMGS_REQUEST) ;   //首页轮播图----
 		
-		input.put("pmode", "2") ;
-		input.put("pagesize", "5") ;
-		api.getCPPData(input, HomeIndex.this, Constant.REQUESTCODE.CREATIVE_LIST_REQUEST) ;  //首页创意
+//		input.put("start", "" + PAGE[SORTID] * PAGESIZE) ;
+//		input.put("pmode", "2") ;
+//		input.put("pagesize", "" + PAGESIZE) ;
+//		api.getCPPData(input, HomeIndex.this, Constant.REQUESTCODE.CREATIVE_LIST_REQUEST) ;  //首页创意
 		
 		return view;
 	}
@@ -124,24 +142,12 @@ public class HomeIndex extends BaseFragment implements OnClickListener {
 		int flag = ((Integer) param[0]).intValue();
 		//imgpath:http://192.168.1.9/mobileapi/3.jpg
 		switch (flag) {
-			case Constant.REQUESTCODE.INDEX_IMGS_REQUEST:
+			case Constant.REQUESTCODE.INDEX_IMGS_REQUEST:	//首页轮播图
 				if (param.length > 0 && param[1] != null
 						&& param[1] instanceof String) {
 					String jsondata = param[1].toString();
 					System.out.println(jsondata);
 					indexImgs = JSONParser.getIndexImgs(jsondata);
-					
-					//test
-//					indexImgs = null ;
-//					IImgs img = null ;
-//					if(null == indexImgs ) {
-//						indexImgs = new ArrayList<IImgs>() ;
-//						for(int i = 1 ; i < 4 ; i++) {
-//							img = new IImgs() ;
-//							img.setImgpath("http://192.168.1.9/mobileapi/" + i + ".jpg") ;
-//							indexImgs.add(img) ;
-//						}
-//					}
 					
 					for(int i = 0 ; i< 3 ; i++) {
 						imageLoader.displayImage(indexImgs.get(i).getImgpath(), listImgs.get(i), options, animateFirstListener);
@@ -150,38 +156,93 @@ public class HomeIndex extends BaseFragment implements OnClickListener {
 				}
 				break;
 				
-			case Constant.REQUESTCODE.CREATIVE_LIST_REQUEST :
+			case Constant.REQUESTCODE.CREATIVE_LIST_REQUEST :	//首页创意列表
 				if (param.length > 0 && param[1] != null
 						&& param[1] instanceof String) {
+					PAGE[0]++ ;
 					String jsondata = param[1].toString();
-//					System.out.println(jsondata);
-					creativeInfos = (ArrayList<CreativeInfo>) JSONParser.getCreativeInfo(jsondata);
-					lvSortDetail.setAdapter( new CreativeAdapter(getActivity(), creativeInfos)) ;
+					ArrayList<CreativeInfo> tempCreativeInfo = null ;
+					tempCreativeInfo = (ArrayList<CreativeInfo>) JSONParser.getCreativeInfo(jsondata);
+					if( null != creativeInfos) 
+						creativeInfos.addAll(tempCreativeInfo) ;
+					else creativeInfos = tempCreativeInfo ;
+					mListView.setAdapter(new CreativeAdapter(getActivity(), creativeInfos)) ; 
+					setXlistviewPos() ;
+				}
+				break ; 
+			case Constant.REQUESTCODE.PROJECT_LIST_REQUEST : 	//首页项目列表 
+				if (param.length > 0 && param[1] != null
+						&& param[1] instanceof String) {
+					PAGE[1]++ ;
+					String jsondata = param[1].toString();
+					ArrayList<ProjectInfo> tempProjectInfo = null ;
+					tempProjectInfo = (ArrayList<ProjectInfo>) JSONParser.getProjectInfo(jsondata);
+					if( null != projectInfos )
+						projectInfos.addAll(tempProjectInfo) ;
+					else projectInfos = tempProjectInfo ;
+					mListView.setAdapter(new ProjectAdapter(getActivity(), projectInfos)) ; 
+					setXlistviewPos() ;
 				}
 				break ;
-			case Constant.REQUESTCODE.PROJECT_LIST_REQUEST : 
+			case Constant.REQUESTCODE.PRODUCT_LIST_REQUEST :	//首页商品列表
 				if (param.length > 0 && param[1] != null
 						&& param[1] instanceof String) {
+					PAGE[2]++ ;
 					String jsondata = param[1].toString();
-//					System.out.println(jsondata);
-					projectInfos = (ArrayList<ProjectInfo>) JSONParser.getProjectInfo(jsondata);
-					
-					lvSortDetail.setAdapter( new ProjectAdapter(getActivity(), projectInfos)) ;
+					ArrayList<ProductInfo> tempProductInfo = null ;
+					tempProductInfo = (ArrayList<ProductInfo>) JSONParser.getProductInfo(jsondata);
+					if( null != productInfos ) 
+						productInfos.addAll(tempProductInfo) ;
+					else productInfos = tempProductInfo ;
+					mListView.setAdapter(new ProductAdapter(getActivity(), productInfos)) ;
+					setXlistviewPos() ;
 				}
 				break ;
-			case Constant.REQUESTCODE.PRODUCT_LIST_REQUEST :
+				
+			case Constant.REQUESTCODE.HOME_INDEX_SEARCH_CREATIVE_REQUEST : 		//首页创意查找
 				if (param.length > 0 && param[1] != null
 						&& param[1] instanceof String) {
 					String jsondata = param[1].toString();
-//					System.out.println(jsondata);
-					productInfos = (ArrayList<ProductInfo>) JSONParser.getProductInfo(jsondata);
-					
-					lvSortDetail.setAdapter( new ProductAdapter(getActivity(), productInfos)) ;
+					System.out.println(jsondata);
+					creativeSearchInfos = (ArrayList<CreativeInfo>) JSONParser.getCreativeInfo(jsondata);
+					mListView.setAdapter(new CreativeAdapter(getActivity(),creativeSearchInfos));  // +++
+				}
+				break ;
+			case Constant.REQUESTCODE.HOME_INDEX_SEARCH_PROJECT_REQUEST : 		//首页项目查找
+				if (param.length > 0 && param[1] != null
+						&& param[1] instanceof String) {
+					String jsondata = param[1].toString();
+					System.out.println(jsondata);
+					projectSearchInfos = (ArrayList<ProjectInfo>) JSONParser.getProjectInfo(jsondata);
+					mListView.setAdapter(new ProjectAdapter(getActivity(),projectSearchInfos));   // +++
+				}
+				break ;
+			case Constant.REQUESTCODE.HOME_INDEX_SEARCH_PRODUCT_REQUEST : 		//首页商品查找
+				if (param.length > 0 && param[1] != null
+						&& param[1] instanceof String) {
+					String jsondata = param[1].toString();
+					System.out.println(jsondata);
+					productSearchInfos = (ArrayList<ProductInfo>) JSONParser.getProductInfo(jsondata);
+//					lvSortDetail.setAdapter(new ProductAdapter(getActivity(),productSearchInfos));	//---
+					mListView.setAdapter(new ProductAdapter(getActivity(),productSearchInfos)); // +++
 				}
 				break ;
 				
 		}
 
+	}
+	
+	/**
+	 * 设置XListView中滚动的位置  上拉为第一条， 下拉为最后一条
+	 */
+	private void setXlistviewPos() {
+		if(isUpRefresh) {
+			mListView.setSelection(0) ;
+		}
+		if(isDownRefresh) {
+			mListView.setSelection(creativeInfos.size() - 1) ;
+			isDownRefresh = false ;
+		}
 	}
 
 	@Override
@@ -195,21 +256,25 @@ public class HomeIndex extends BaseFragment implements OnClickListener {
 		// TODO Auto-generated method stub
 		switch (v.getId()) {
 			case R.id.home_index_title_right_btn:
-				test++ ;
-				if(1 == (test % 2)) {
+				if(isOffLine()){
+					Util.toastInfo(context, "请登录再操作！");
+					Intent intent=new Intent(context,LoginActivity.class);
+					startActivity(intent);
+				}else{
 					showRightDialog() ;
-				} else {
-					showMidDialog() ;
 				}
 				break;
 			case R.id.home_index_title_search_img :
-				Util.toastInfo(getActivity(), "" + etSearch.getText().toString()) ;
-				UIHelper.showSortDetailActivity(getActivity(), Constant.Sort.SORTS_NAME[SORTID], etSearch.getText().toString()) ;
+				isUpRefresh = true ;
+				initSearchData(SORTID) ;
 				break ;
 		}
 
 	}
 	
+	/**
+	 * 右上角对话框
+	 */
 	private void showRightDialog() {
 		dialogInfo=new TopDialogInfo(DialogConstant.TRIGHT, publishType);
 		Intent intent=new Intent(getActivity(),TopRightOrLeftDialog.class);
@@ -217,6 +282,9 @@ public class HomeIndex extends BaseFragment implements OnClickListener {
 		startActivityForResult(intent, DialogConstant.REQUEST_TOP);
 	}
 	
+	/**
+	 * 实名验证对话框
+	 */
 	private void showMidDialog() {
 		Intent intent = new Intent(getActivity() , MiddleDialog.class);
 		MiddleDialogInfo info = new MiddleDialogInfo("提示", "请您先进行实名认证再继续发布项目，以便于客服在您需要的时候提供及时的帮助。", 
@@ -224,14 +292,12 @@ public class HomeIndex extends BaseFragment implements OnClickListener {
 		intent.putExtra("info", info);
 		startActivityForResult(intent, DialogConstant.REQUEST_MIDDLE);
 	}
-	
 	@Override
 	public void onActivityResult(int requestCode, int resultCode, Intent data) {
 		super.onActivityResult(requestCode, resultCode, data);
 		if(requestCode==DialogConstant.REQUEST_TOP){
 			if(resultCode!=DialogConstant.DIALOG_RETURN){
 				System.out.println("resultCode=" + resultCode + "    " + dialogInfo.getMenu()[resultCode]); 
-				
 				Intent publishIntent = null ;
 				if(resultCode == Constant.PUBLISH_TOPIC) {
 					publishIntent = new Intent(getActivity(),	PublishTopic.class);
@@ -258,6 +324,16 @@ public class HomeIndex extends BaseFragment implements OnClickListener {
 	private void init(View view) {
 		api = new TestAPI();
 		input = new HashMap<String, String>();
+		searchInput = new HashMap<String, String>() ;
+
+		for(int i = 0 ; i < PAGE.length ; i++) {
+			PAGE[i] = 0 ;
+		}
+		
+		mHandler = new Handler();
+		mListView = (XListView) view.findViewById(R.id.home_index_content_xlist) ; // +++ 
+		mListView.setPullLoadEnable(true);
+		mListView.setXListViewListener(this);
 		
 		btnPublish = (Button) view.findViewById(R.id.home_index_title_right_btn) ;
 		btnPublish.setOnClickListener(this) ;
@@ -285,8 +361,8 @@ public class HomeIndex extends BaseFragment implements OnClickListener {
 		btnProject.setOnClickListener(sortsBtnClick(btnProject, 2));
 		btnProduct.setOnClickListener(sortsBtnClick(btnProduct, 3));
 
-		lvSortDetail = (ListView) view
-				.findViewById(R.id.home_index_content_list);
+//		lvSortDetail = (ListView) view
+//				.findViewById(R.id.home_index_content_list);
 
 		btnCreative.setEnabled(false);
 		initData(Constant.Sort.SORT_CREATIVE);
@@ -300,7 +376,7 @@ public class HomeIndex extends BaseFragment implements OnClickListener {
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
 				if(btn == btnCreative) {
-					SORTID = 1 ;
+					SORTID = 0 ;
 					btnCreative.setEnabled(false) ;
 					initData(Constant.Sort.SORT_CREATIVE) ;
 				} else {
@@ -308,7 +384,7 @@ public class HomeIndex extends BaseFragment implements OnClickListener {
 				}
 				
 				if(btn == btnProject) {
-					SORTID = 2 ;
+					SORTID = 1 ;
 					btnProject.setEnabled(false) ;
 					initData(Constant.Sort.SORT_PROJECT) ;
 				} else {
@@ -316,7 +392,7 @@ public class HomeIndex extends BaseFragment implements OnClickListener {
 				}
 				
 				if(btn == btnProduct) {
-					SORTID = 3 ;
+					SORTID = 2 ;
 					btnProduct.setEnabled(false) ;
 					initData(Constant.Sort.SORT_PRODUCT) ;
 				} else {
@@ -334,37 +410,115 @@ public class HomeIndex extends BaseFragment implements OnClickListener {
 	private void initData(int flag) {
 		switch (flag) {
 			case Constant.Sort.SORT_CREATIVE:
-				if(null == creativeInfos) {
-//					creativeInfos = TestData.initCreative() ;
-					input.put("pmode", "2") ;
-					input.put("pagesize", "10") ;
-					api.getCPPData(input, this, Constant.REQUESTCODE.CREATIVE_LIST_REQUEST) ;
-				} else {
-					lvSortDetail.setAdapter(new CreativeAdapter(getActivity(), creativeInfos)) ;
-				}
+//				if(null == creativeInfos) {
+				input.put("start", "" + PAGE[SORTID] * PAGESIZE) ;
+				input.put("pmode", "2") ;
+				input.put("pagesize", "" + PAGESIZE) ;
+				api.getCPPData(input, this, Constant.REQUESTCODE.CREATIVE_LIST_REQUEST) ;
+//				} else {
+//					lvSortDetail.setAdapter(new CreativeAdapter(getActivity(), creativeInfos)) ;
+//				}
 				break;
 			case Constant.Sort.SORT_PROJECT :
 				if(null == projectInfos) {
-//					projectInfos = TestData.initProject() ;
+					input.put("start", "" + PAGE[SORTID] * PAGESIZE) ;
 					input.put("pmode", "1") ;
-					input.put("pagesize", "10") ;
+					input.put("pagesize", "" + PAGESIZE) ;
 					api.getCPPData(input, this, Constant.REQUESTCODE.PROJECT_LIST_REQUEST) ;
 				} else {
-					lvSortDetail.setAdapter(new ProjectAdapter(getActivity(), projectInfos) ) ;
+					mListView.setAdapter(new ProjectAdapter(getActivity(), projectInfos) ) ; 
 				}
 				break ;
 			case Constant.Sort.SORT_PRODUCT :
 				if(null == productInfos) {
-//					productInfos = TestData.initProduct() ;
+					input.put("start", "" + PAGE[SORTID] * PAGESIZE) ;
 					input.put("pmode", "4") ;
-					input.put("pagesize", "5") ;
+					input.put("pagesize", "" + PAGESIZE) ;
 					api.getCPPData(input, this, Constant.REQUESTCODE.PRODUCT_LIST_REQUEST) ;
 				} else {
-					lvSortDetail.setAdapter( new ProductAdapter(getActivity(), productInfos)) ;
+					mListView.setAdapter(new ProductAdapter(getActivity(), productInfos)) ;  
 				}
 				break ;
 			default:
 				break;
+		}
+	}
+	
+	/**
+	 * 首页搜索
+	 * @param flag
+	 */
+	private void initSearchData(int flag) {
+		switch (flag) {
+		case 0:
+			//"params":{"start":0,"pagesize":10,"category_id":1,"total_count":1, "title":"关键词1,关键词2"...}}
+//			参数名	必选	类型及值	说明
+//			start	true	(int)	limit分页起始行
+//			pagesize	false	(int)	分页显示数量，不带=10
+//			total_count	false	(int)1或0	1=结果中带有总记录数 0=不带
+//			open_id	false	(string)	创意创建人openid
+//			category_id	false	(int)	行业id
+//			province_id	false	(int)	省id
+//			city_id	false	(int)	城市id
+//			title	false	(string)	搜索创意标题 模糊搜索 空格或逗号可最多同时搜索5个关键词 模糊搜索
+//			orderby	false	(int)1 4 5	排序方式，取值： 1=发布日期倒序(默认), 4=点击量, 5=关注人数
+			searchInput.clear() ;
+			searchInput.put("start", "") ;
+			searchInput.put("pagesize", "") ;
+			searchInput.put("total_count", "0") ;
+			searchInput.put("open_id", "") ;
+			searchInput.put("category_id", "") ;
+			searchInput.put("province_id", "") ;
+			searchInput.put("city_id", "") ;
+			searchInput.put("title", etSearch.getText().toString()) ;
+			searchInput.put("orderby", "") ;
+			api.operaCreativess("search" , searchInput, this,
+					Constant.REQUESTCODE.HOME_INDEX_SEARCH_CREATIVE_REQUEST);
+			break;
+		case 1:
+//			参数名	必选	类型及值	说明
+//			start	true	(int)	limit分页起始行
+//			pagesize	false	(int)	分页显示数量
+//			total_count	false	(int)1或0	1=结果中带有总记录数 0=不带
+//			project_state	false	(string)不带则查找 2	项目状态 -2:删除 -1:审核失败 0:创建 1:提交审核 2:审核成功
+//			user_id	false	(string)	项目创建人openid
+//			project_step	false	(string) 多个用逗号分隔	默认查找6, 项目（产品）进行的步骤（-1:筹集失败 1:项目新建 2:项目回报 3:项目提交 4:审核中 5:预热中 6:筹集中 7:招标中 8:公司创建成功（产品：9：发布招标 10：招标成功 11：全部发货完成交易））
+//			orderby	false	(int)1 2 3 4 5	排序方式，取值： 1=发布日期倒序(默认), 2=价格倒序, 3=价格升序, 4=点击量, 5=参与人数最多
+//			category_id	false	(int)	行业id
+//			province_id	false	(int)	省id
+//			city_id	false	(int)	城市id
+//			title	false	(string)	搜索项目名称关键词 空格或逗号可最多同时搜索5个关键词 模糊搜索
+			searchInput.clear() ;
+			searchInput.put("start", "") ;
+			searchInput.put("pagesize", "") ;
+			searchInput.put("total_count", "0") ;
+			searchInput.put("project_state", "") ;
+			searchInput.put("user_id", "") ;
+			searchInput.put("project_step", "") ;
+			searchInput.put("orderby", "") ;
+			searchInput.put("category_id", "") ;
+			searchInput.put("province_id", "") ;
+			searchInput.put("city_id", "") ;
+			searchInput.put("title", etSearch.getText().toString()) ;
+			api.operaProjects("search", searchInput, this, Constant.REQUESTCODE.HOME_INDEX_SEARCH_PROJECT_REQUEST) ;
+			break;
+		case 2:
+//			参数名	必选	类型及值	说明
+//			start	true	(int)	limit分页起始行
+//			pagesize	false	(int)	分页显示数量
+//			total_count	false	(int)1或0	1=结果中带有总记录数 0=不带
+//			title	false	(string)	商品名称 空格或逗号可最多同时搜索5个关键词 模糊搜索
+//			province_id	false	(int)	省id
+//			city_id	false	(int)	城市id
+			searchInput.clear() ;
+			searchInput.put("start", "") ;
+			searchInput.put("pagesize", "") ;
+			searchInput.put("total_count", "0") ;
+			searchInput.put("title", etSearch.getText().toString()) ;
+			searchInput.put("province_id", "") ;
+			searchInput.put("city_id", "") ;
+			api.operaProduct("search", searchInput, this, Constant.REQUESTCODE.HOME_INDEX_SEARCH_PRODUCT_REQUEST) ;
+			break;
 		}
 	}
 	
@@ -389,23 +543,93 @@ public class HomeIndex extends BaseFragment implements OnClickListener {
 	public void onDestroy() {
 		// TODO Auto-generated method stub
 		super.onDestroy();
-		System.out.println("----HomeIndex   onDestroy ------");
+//		System.out.println("----HomeIndex   onDestroy ------");
+		
 	}
 
 	@Override
 	public void onPause() {
 		// TODO Auto-generated method stub
 		super.onPause();
-		System.out.println("---HomeIndex    -onPause ------");
+//		System.out.println("---HomeIndex    -onPause ------");
+		SharedPreferences spf = getActivity().getSharedPreferences(Constant.PRE_CONFIG_FILE, 0) ;
+		SharedPreferences.Editor editor = spf.edit() ;
+		for(int i = 0 ; i < 3 ; i++) {
+			editor.putString("refresh_time_"+i, refreshTime[i]) ;
+		}
+		editor.commit() ;
 	}
 
 	@Override
 	public void onStart() {
 		// TODO Auto-generated method stub
 		super.onStart();
-		System.out.println("----HomeIndex     onStart ------");
+//		System.out.println("----HomeIndex     onStart ------");
+		SharedPreferences spf = getActivity().getSharedPreferences(Constant.PRE_CONFIG_FILE, 0) ;
+		for(int i = 0 ; i < 3 ; i++) {
+			refreshTime[i] = spf.getString("refresh_time_"+i, "") ;
+		}
+	}
+
+	
+	@Override
+	public void onRefresh() {
+		// TODO Auto-generated method stub
+		mHandler.postDelayed(new Runnable() {
+			@Override
+			public void run() {
+				// TODO Auto-generated method stub
+				isUpRefresh = true ;
+				onLoad(refreshTime[SORTID]);
+				refreshTime[SORTID] = refTimeFormat() ;
+			}
+		}, 2000 );
+	}
+
+	@Override
+	public void onLoadMore() {
+		// TODO Auto-generated method stub
+		mHandler.postDelayed(new Runnable() {
+			@Override
+			public void run() {
+				// TODO Auto-generated method stub
+				isDownRefresh = true ;
+				switch (SORTID) {
+					case 0:
+						input.put("start", "" + PAGE[SORTID] * PAGESIZE) ;
+						input.put("pmode", "2") ;
+						input.put("pagesize", "" + PAGESIZE) ;
+						api.getCPPData(input, HomeIndex.this, Constant.REQUESTCODE.CREATIVE_LIST_REQUEST) ;
+						break;
+					case 1:
+						input.put("start", "" + PAGE[SORTID] * PAGESIZE) ;
+						input.put("pmode", "1") ;
+						input.put("pagesize", "" + PAGESIZE) ;
+						api.getCPPData(input, HomeIndex.this, Constant.REQUESTCODE.PROJECT_LIST_REQUEST) ;
+						break;
+					case 2:
+						input.put("start", "" + PAGE[SORTID] * PAGESIZE) ;
+						input.put("pmode", "4") ;
+						input.put("pagesize", "" + PAGESIZE) ;
+						api.getCPPData(input, HomeIndex.this, Constant.REQUESTCODE.PRODUCT_LIST_REQUEST) ;
+						break;
+	
+				}
+				onLoad("");
+			}
+		} , 2000 ) ;
 	}
 	
+	private void onLoad(String time) {
+		mListView.stopRefresh();
+		mListView.stopLoadMore();
+		mListView.setRefreshTime(time);
+	}
 	
-	
+	private String refTimeFormat() {
+		SimpleDateFormat formatter = new SimpleDateFormat(
+				"yyyy年MM月dd日   HH:mm:ss");
+		Date curDate = new Date(System.currentTimeMillis());
+		return formatter.format(curDate);
+	}
 }

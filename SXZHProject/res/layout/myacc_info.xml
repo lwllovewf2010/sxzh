@@ -43,6 +43,7 @@
             android:text="@string/set_passw_table"
             android:layout_centerVertical="true"
             android:textSize="18sp"
+            android:textColor="@color/black"
             android:layout_marginLeft="5dip"
             android:layout_marginRight="5dip"
             />
@@ -79,6 +80,7 @@
             android:text="@string/certify_name_table"
             android:layout_centerVertical="true"
             android:textSize="18sp"
+            android:textColor="@color/black"
             />
          <TextView
             android:id="@+id/certify_number"  
@@ -134,6 +136,7 @@
             android:text="@string/certify_phone_table"
             android:layout_centerVertical="true"
             android:textSize="18sp"
+            android:textColor="@color/black"
             />
          <TextView
             android:id="@+id/phone_number"  
@@ -146,6 +149,7 @@
             android:layout_marginLeft="5dip"
             android:layout_marginRight="5dip"
             android:textSize="18sp"
+            android:textColor="@color/black"
             android:singleLine="true"
             />
          <ImageView
@@ -188,6 +192,7 @@
             android:text="@string/certify_email_table"
             android:layout_centerVertical="true"
             android:textSize="18sp"
+            android:textColor="@color/black"
             />
          <TextView
             android:id="@+id/email_number"  
@@ -200,6 +205,7 @@
             android:layout_marginLeft="5dip"
             android:layout_marginRight="5dip"
             android:textSize="18sp"
+            android:textColor="@color/black"
             android:singleLine="true"
             />
          <ImageView
@@ -252,6 +258,7 @@
             android:textSize="18sp"
             android:layout_marginLeft="5dip"
             android:layout_marginRight="5dip"
+            android:textColor="@color/black"
             />
        
     </RelativeLayout>
@@ -294,6 +301,7 @@
             android:text="@string/set_pay_passw_table"
             android:layout_centerVertical="true"
             android:textSize="18sp"
+            android:textColor="@color/black"
             android:layout_marginLeft="5dip"
             android:layout_marginRight="5dip"
             />

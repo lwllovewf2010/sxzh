@@ -1,0 +1,10156 @@
+﻿body {
+    margin: 0px;
+}
+
+div {
+    background-repeat: no-repeat;
+}
+
+.raw_image {
+    width: 100%;
+    height: 100%;
+}
+
+.preload {
+    display: none;
+}
+#main_container {
+}
+
+.form_sketch {
+    border-color: transparent;
+    background-color: transparent;
+}
+
+.u0_normal {
+    background-image: url('../前台页尾_files/u248_normal.png');
+}
+
+.u0_container {
+    position:absolute;
+    left:10px;
+    top:1190px;
+    width:1201px;
+    height:80px;
+}
+
+#u0_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:1207px;
+    height:86px;
+}
+
+.u1 {
+    position:absolute;
+    left:2px;
+    top:32px;
+    width:1197px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u2 {
+    position:absolute;
+    left:68px;
+    top:1206px;
+    width:1002px;
+    height:48px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u4_normal {
+    background-image: url('../我投标的项目_files/u4_normal.png');
+}
+
+.u4_container {
+    position:absolute;
+    left:20px;
+    top:170px;
+    width:470px;
+    height:27px;
+}
+
+#u4_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:476px;
+    height:33px;
+}
+
+.u5 {
+    position:absolute;
+    left:2px;
+    top:6px;
+    width:466px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u6 {
+    position:absolute;
+    left:34px;
+    top:173px;
+    width:456px;
+    height:24px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u7_normal {
+    background-image: url('../企业中心子菜单_files/Accordion_u3_normal.png');
+}
+
+.u7_container {
+    position:absolute;
+    left:20px;
+    top:210px;
+    width:161px;
+    height:180px;
+}
+
+#u7_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:167px;
+    height:186px;
+}
+
+.u8 {
+    position:absolute;
+    left:2px;
+    top:82px;
+    width:157px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+#u9 {
+    position:absolute;
+    left:20px;
+    top:210px;
+    width:162px;
+    height:343px;
+    overflow:hidden;
+}
+
+#pd6u9 {
+    position:absolute;
+    left:0px;
+    top:0px;
+    width:162px;
+    height:343px;
+    
+}
+
+.u10_normal {
+    background-image: url('../企业中心子菜单_files/u6_normal.png');
+}
+
+.u10_container {
+    position:absolute;
+    left:0px;
+    top:100px;
+    width:160px;
+    height:100px;
+}
+
+#u10_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:166px;
+    height:106px;
+}
+
+.u11 {
+    position:absolute;
+    left:2px;
+    top:42px;
+    width:156px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u12 {
+    position:absolute;
+    left:5px;
+    top:110px;
+    width:150px;
+    height:32px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u13_normal {
+    background-image: url('../企业中心子菜单_files/Panel_two_tab_u9_normal.png');
+}
+
+.u13_container {
+    position:absolute;
+    left:0px;
+    top:20px;
+    width:160px;
+    height:20px;
+}
+
+#u13_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:166px;
+    height:26px;
+}
+
+.u14 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:156px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u15_normal {
+    background-image: url('../企业中心子菜单_files/Panel_two_tab_u9_normal.png');
+}
+
+.u15_container {
+    position:absolute;
+    left:0px;
+    top:60px;
+    width:160px;
+    height:20px;
+}
+
+#u15_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:166px;
+    height:26px;
+}
+
+.u16 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:156px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u17_normal {
+    background-image: url('../企业中心子菜单_files/Panel_two_tab_u9_normal.png');
+}
+
+.u17_container {
+    position:absolute;
+    left:0px;
+    top:80px;
+    width:160px;
+    height:20px;
+}
+
+#u17_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:166px;
+    height:26px;
+}
+
+.u18 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:156px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u19_normal {
+    background-image: url('../企业中心子菜单_files/Panel_two_tab_u9_normal.png');
+}
+
+.u19_container {
+    position:absolute;
+    left:0px;
+    top:0px;
+    width:160px;
+    height:20px;
+}
+
+#u19_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:166px;
+    height:26px;
+}
+
+.u20 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:156px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u21_normal {
+    background-image: url('../企业中心子菜单_files/u17_normal.png');
+}
+
+.u21_container {
+    position:absolute;
+    left:-1px;
+    top:260px;
+    width:161px;
+    height:20px;
+}
+
+#u21_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:167px;
+    height:26px;
+}
+
+.u22 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:157px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u23_normal {
+    background-image: url('../企业中心子菜单_files/u17_normal.png');
+}
+
+.u23_container {
+    position:absolute;
+    left:-1px;
+    top:200px;
+    width:161px;
+    height:20px;
+}
+
+#u23_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:167px;
+    height:26px;
+}
+
+.u24 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:157px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u25_normal {
+    background-image: url('../企业中心子菜单_files/u17_normal.png');
+}
+
+.u25_container {
+    position:absolute;
+    left:-1px;
+    top:220px;
+    width:161px;
+    height:20px;
+}
+
+#u25_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:167px;
+    height:26px;
+}
+
+.u26 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:157px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u27_normal {
+    background-image: url('../企业中心子菜单_files/u17_normal.png');
+}
+
+.u27_container {
+    position:absolute;
+    left:-1px;
+    top:240px;
+    width:161px;
+    height:20px;
+}
+
+#u27_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:167px;
+    height:26px;
+}
+
+.u28 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:157px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u29_normal {
+    background-image: url('../企业中心子菜单_files/u17_normal.png');
+}
+
+.u29_container {
+    position:absolute;
+    left:-1px;
+    top:300px;
+    width:161px;
+    height:20px;
+}
+
+#u29_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:167px;
+    height:26px;
+}
+
+.u30 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:157px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u31_normal {
+    background-image: url('../企业中心子菜单_files/u17_normal.png');
+}
+
+.u31_container {
+    position:absolute;
+    left:-1px;
+    top:320px;
+    width:161px;
+    height:20px;
+}
+
+#u31_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:167px;
+    height:26px;
+}
+
+.u32 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:157px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u33_normal {
+    background-image: url('../企业中心子菜单_files/u17_normal.png');
+}
+
+.u33_container {
+    position:absolute;
+    left:-1px;
+    top:280px;
+    width:161px;
+    height:20px;
+}
+
+#u33_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:167px;
+    height:26px;
+}
+
+.u34 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:157px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u35_normal {
+    background-image: url('../企业中心子菜单_files/u17_normal.png');
+}
+
+.u35_container {
+    position:absolute;
+    left:0px;
+    top:40px;
+    width:161px;
+    height:20px;
+}
+
+#u35_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:167px;
+    height:26px;
+}
+
+.u36 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:157px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+#pd5u9 {
+    position:absolute;
+    left:0px;
+    top:0px;
+    width:162px;
+    height:343px;
+    
+}
+
+.u37_normal {
+    background-image: url('../企业中心子菜单_files/u33_normal.png');
+}
+
+.u37_container {
+    position:absolute;
+    left:0px;
+    top:79px;
+    width:161px;
+    height:100px;
+}
+
+#u37_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:167px;
+    height:106px;
+}
+
+.u38 {
+    position:absolute;
+    left:2px;
+    top:42px;
+    width:157px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u39 {
+    position:absolute;
+    left:5px;
+    top:89px;
+    width:151px;
+    height:32px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u40_normal {
+    background-image: url('../企业中心子菜单_files/u17_normal.png');
+}
+
+.u40_container {
+    position:absolute;
+    left:0px;
+    top:20px;
+    width:161px;
+    height:20px;
+}
+
+#u40_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:167px;
+    height:26px;
+}
+
+.u41 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:157px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u42_normal {
+    background-image: url('../企业中心子菜单_files/u17_normal.png');
+}
+
+.u42_container {
+    position:absolute;
+    left:0px;
+    top:59px;
+    width:161px;
+    height:20px;
+}
+
+#u42_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:167px;
+    height:26px;
+}
+
+.u43 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:157px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u44_normal {
+    background-image: url('../企业中心子菜单_files/u17_normal.png');
+}
+
+.u44_container {
+    position:absolute;
+    left:0px;
+    top:179px;
+    width:161px;
+    height:20px;
+}
+
+#u44_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:167px;
+    height:26px;
+}
+
+.u45 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:157px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u46_normal {
+    background-image: url('../企业中心子菜单_files/u17_normal.png');
+}
+
+.u46_container {
+    position:absolute;
+    left:0px;
+    top:0px;
+    width:161px;
+    height:20px;
+}
+
+#u46_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:167px;
+    height:26px;
+}
+
+.u47 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:157px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u48_normal {
+    background-image: url('../企业中心子菜单_files/u17_normal.png');
+}
+
+.u48_container {
+    position:absolute;
+    left:0px;
+    top:259px;
+    width:161px;
+    height:20px;
+}
+
+#u48_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:167px;
+    height:26px;
+}
+
+.u49 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:157px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u50_normal {
+    background-image: url('../企业中心子菜单_files/u17_normal.png');
+}
+
+.u50_container {
+    position:absolute;
+    left:0px;
+    top:199px;
+    width:161px;
+    height:20px;
+}
+
+#u50_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:167px;
+    height:26px;
+}
+
+.u51 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:157px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u52_normal {
+    background-image: url('../企业中心子菜单_files/u17_normal.png');
+}
+
+.u52_container {
+    position:absolute;
+    left:0px;
+    top:219px;
+    width:161px;
+    height:20px;
+}
+
+#u52_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:167px;
+    height:26px;
+}
+
+.u53 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:157px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u54_normal {
+    background-image: url('../企业中心子菜单_files/u17_normal.png');
+}
+
+.u54_container {
+    position:absolute;
+    left:0px;
+    top:239px;
+    width:161px;
+    height:20px;
+}
+
+#u54_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:167px;
+    height:26px;
+}
+
+.u55 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:157px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u56_normal {
+    background-image: url('../企业中心子菜单_files/u17_normal.png');
+}
+
+.u56_container {
+    position:absolute;
+    left:0px;
+    top:299px;
+    width:161px;
+    height:20px;
+}
+
+#u56_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:167px;
+    height:26px;
+}
+
+.u57 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:157px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u58_normal {
+    background-image: url('../企业中心子菜单_files/u17_normal.png');
+}
+
+.u58_container {
+    position:absolute;
+    left:0px;
+    top:319px;
+    width:161px;
+    height:20px;
+}
+
+#u58_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:167px;
+    height:26px;
+}
+
+.u59 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:157px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u60_normal {
+    background-image: url('../企业中心子菜单_files/u17_normal.png');
+}
+
+.u60_container {
+    position:absolute;
+    left:0px;
+    top:279px;
+    width:161px;
+    height:20px;
+}
+
+#u60_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:167px;
+    height:26px;
+}
+
+.u61 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:157px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u62_normal {
+    background-image: url('../企业中心子菜单_files/u17_normal.png');
+}
+
+.u62_container {
+    position:absolute;
+    left:0px;
+    top:38px;
+    width:161px;
+    height:20px;
+}
+
+#u62_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:167px;
+    height:26px;
+}
+
+.u63 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:157px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+#pd4u9 {
+    position:absolute;
+    left:0px;
+    top:0px;
+    width:162px;
+    height:343px;
+    
+}
+
+.u64_normal {
+    background-image: url('../企业中心子菜单_files/u33_normal.png');
+}
+
+.u64_container {
+    position:absolute;
+    left:0px;
+    top:40px;
+    width:161px;
+    height:100px;
+}
+
+#u64_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:167px;
+    height:106px;
+}
+
+.u65 {
+    position:absolute;
+    left:2px;
+    top:42px;
+    width:157px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u66_normal {
+    background-image: url('../企业中心子菜单_files/u17_normal.png');
+}
+
+.u66_container {
+    position:absolute;
+    left:0px;
+    top:20px;
+    width:161px;
+    height:20px;
+}
+
+#u66_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:167px;
+    height:26px;
+}
+
+.u67 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:157px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u68_normal {
+    background-image: url('../企业中心子菜单_files/u17_normal.png');
+}
+
+.u68_container {
+    position:absolute;
+    left:0px;
+    top:160px;
+    width:161px;
+    height:20px;
+}
+
+#u68_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:167px;
+    height:26px;
+}
+
+.u69 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:157px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u70_normal {
+    background-image: url('../企业中心子菜单_files/u17_normal.png');
+}
+
+.u70_container {
+    position:absolute;
+    left:0px;
+    top:180px;
+    width:161px;
+    height:20px;
+}
+
+#u70_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:167px;
+    height:26px;
+}
+
+.u71 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:157px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u72_normal {
+    background-image: url('../企业中心子菜单_files/u17_normal.png');
+}
+
+.u72_container {
+    position:absolute;
+    left:0px;
+    top:0px;
+    width:161px;
+    height:20px;
+}
+
+#u72_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:167px;
+    height:26px;
+}
+
+.u73 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:157px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u74_normal {
+    background-image: url('../企业中心子菜单_files/u17_normal.png');
+}
+
+.u74_container {
+    position:absolute;
+    left:0px;
+    top:260px;
+    width:161px;
+    height:20px;
+}
+
+#u74_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:167px;
+    height:26px;
+}
+
+.u75 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:157px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u76_normal {
+    background-image: url('../企业中心子菜单_files/u17_normal.png');
+}
+
+.u76_container {
+    position:absolute;
+    left:0px;
+    top:200px;
+    width:161px;
+    height:20px;
+}
+
+#u76_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:167px;
+    height:26px;
+}
+
+.u77 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:157px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u78_normal {
+    background-image: url('../企业中心子菜单_files/u17_normal.png');
+}
+
+.u78_container {
+    position:absolute;
+    left:0px;
+    top:220px;
+    width:161px;
+    height:20px;
+}
+
+#u78_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:167px;
+    height:26px;
+}
+
+.u79 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:157px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u80_normal {
+    background-image: url('../企业中心子菜单_files/u17_normal.png');
+}
+
+.u80_container {
+    position:absolute;
+    left:0px;
+    top:240px;
+    width:161px;
+    height:20px;
+}
+
+#u80_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:167px;
+    height:26px;
+}
+
+.u81 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:157px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u82_normal {
+    background-image: url('../企业中心子菜单_files/u17_normal.png');
+}
+
+.u82_container {
+    position:absolute;
+    left:0px;
+    top:300px;
+    width:161px;
+    height:20px;
+}
+
+#u82_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:167px;
+    height:26px;
+}
+
+.u83 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:157px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u84_normal {
+    background-image: url('../企业中心子菜单_files/u17_normal.png');
+}
+
+.u84_container {
+    position:absolute;
+    left:0px;
+    top:320px;
+    width:161px;
+    height:20px;
+}
+
+#u84_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:167px;
+    height:26px;
+}
+
+.u85 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:157px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u86_normal {
+    background-image: url('../企业中心子菜单_files/u17_normal.png');
+}
+
+.u86_container {
+    position:absolute;
+    left:0px;
+    top:280px;
+    width:161px;
+    height:20px;
+}
+
+#u86_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:167px;
+    height:26px;
+}
+
+.u87 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:157px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u88_normal {
+    background-image: url('../企业中心子菜单_files/u17_normal.png');
+}
+
+.u88_container {
+    position:absolute;
+    left:0px;
+    top:40px;
+    width:161px;
+    height:20px;
+}
+
+#u88_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:167px;
+    height:26px;
+}
+
+.u89 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:157px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u90 {
+    position:absolute;
+    left:5px;
+    top:70px;
+    width:144px;
+    height:32px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u91_normal {
+    background-image: url('../企业中心子菜单_files/u17_normal.png');
+}
+
+.u91_container {
+    position:absolute;
+    left:209px;
+    top:22px;
+    width:161px;
+    height:20px;
+}
+
+#u91_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:167px;
+    height:26px;
+}
+
+.u92 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:157px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u93_normal {
+    background-image: url('../企业中心子菜单_files/u17_normal.png');
+}
+
+.u93_container {
+    position:absolute;
+    left:209px;
+    top:162px;
+    width:161px;
+    height:20px;
+}
+
+#u93_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:167px;
+    height:26px;
+}
+
+.u94 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:157px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u95_normal {
+    background-image: url('../企业中心子菜单_files/u17_normal.png');
+}
+
+.u95_container {
+    position:absolute;
+    left:209px;
+    top:182px;
+    width:161px;
+    height:20px;
+}
+
+#u95_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:167px;
+    height:26px;
+}
+
+.u96 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:157px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u97_normal {
+    background-image: url('../企业中心子菜单_files/u17_normal.png');
+}
+
+.u97_container {
+    position:absolute;
+    left:209px;
+    top:2px;
+    width:161px;
+    height:20px;
+}
+
+#u97_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:167px;
+    height:26px;
+}
+
+.u98 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:157px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u99_normal {
+    background-image: url('../企业中心子菜单_files/u17_normal.png');
+}
+
+.u99_container {
+    position:absolute;
+    left:209px;
+    top:262px;
+    width:161px;
+    height:20px;
+}
+
+#u99_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:167px;
+    height:26px;
+}
+
+.u100 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:157px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u101_normal {
+    background-image: url('../企业中心子菜单_files/u17_normal.png');
+}
+
+.u101_container {
+    position:absolute;
+    left:209px;
+    top:202px;
+    width:161px;
+    height:20px;
+}
+
+#u101_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:167px;
+    height:26px;
+}
+
+.u102 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:157px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u103_normal {
+    background-image: url('../企业中心子菜单_files/u17_normal.png');
+}
+
+.u103_container {
+    position:absolute;
+    left:209px;
+    top:222px;
+    width:161px;
+    height:20px;
+}
+
+#u103_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:167px;
+    height:26px;
+}
+
+.u104 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:157px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u105_normal {
+    background-image: url('../企业中心子菜单_files/u17_normal.png');
+}
+
+.u105_container {
+    position:absolute;
+    left:209px;
+    top:242px;
+    width:161px;
+    height:20px;
+}
+
+#u105_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:167px;
+    height:26px;
+}
+
+.u106 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:157px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u107_normal {
+    background-image: url('../企业中心子菜单_files/u17_normal.png');
+}
+
+.u107_container {
+    position:absolute;
+    left:209px;
+    top:302px;
+    width:161px;
+    height:20px;
+}
+
+#u107_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:167px;
+    height:26px;
+}
+
+.u108 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:157px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u109_normal {
+    background-image: url('../企业中心子菜单_files/u17_normal.png');
+}
+
+.u109_container {
+    position:absolute;
+    left:209px;
+    top:322px;
+    width:161px;
+    height:20px;
+}
+
+#u109_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:167px;
+    height:26px;
+}
+
+.u110 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:157px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u111_normal {
+    background-image: url('../企业中心子菜单_files/u17_normal.png');
+}
+
+.u111_container {
+    position:absolute;
+    left:209px;
+    top:282px;
+    width:161px;
+    height:20px;
+}
+
+#u111_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:167px;
+    height:26px;
+}
+
+.u112 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:157px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u113_normal {
+    background-image: url('../企业中心子菜单_files/u17_normal.png');
+}
+
+.u113_container {
+    position:absolute;
+    left:209px;
+    top:62px;
+    width:161px;
+    height:20px;
+}
+
+#u113_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:167px;
+    height:26px;
+}
+
+.u114 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:157px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u115_normal {
+    background-image: url('../企业中心子菜单_files/u17_normal.png');
+}
+
+.u115_container {
+    position:absolute;
+    left:209px;
+    top:42px;
+    width:161px;
+    height:20px;
+}
+
+#u115_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:167px;
+    height:26px;
+}
+
+.u116 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:157px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u117_normal {
+    background-image: url('../企业中心子菜单_files/u113_normal.png');
+}
+
+.u117_container {
+    position:absolute;
+    left:209px;
+    top:82px;
+    width:161px;
+    height:80px;
+}
+
+#u117_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:167px;
+    height:86px;
+}
+
+.u118 {
+    position:absolute;
+    left:2px;
+    top:16px;
+    width:157px;
+    height:48px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+#pd3u9 {
+    position:absolute;
+    left:0px;
+    top:0px;
+    width:162px;
+    height:343px;
+    
+}
+
+.u119_normal {
+    background-image: url('../企业中心子菜单_files/u17_normal.png');
+}
+
+.u119_container {
+    position:absolute;
+    left:0px;
+    top:22px;
+    width:161px;
+    height:20px;
+}
+
+#u119_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:167px;
+    height:26px;
+}
+
+.u120 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:157px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u121_normal {
+    background-image: url('../企业中心子菜单_files/u17_normal.png');
+}
+
+.u121_container {
+    position:absolute;
+    left:0px;
+    top:83px;
+    width:161px;
+    height:20px;
+}
+
+#u121_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:167px;
+    height:26px;
+}
+
+.u122 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:157px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u123_normal {
+    background-image: url('../企业中心子菜单_files/u17_normal.png');
+}
+
+.u123_container {
+    position:absolute;
+    left:0px;
+    top:103px;
+    width:161px;
+    height:20px;
+}
+
+#u123_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:167px;
+    height:26px;
+}
+
+.u124 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:157px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u125_normal {
+    background-image: url('../企业中心子菜单_files/u17_normal.png');
+}
+
+.u125_container {
+    position:absolute;
+    left:0px;
+    top:2px;
+    width:161px;
+    height:20px;
+}
+
+#u125_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:167px;
+    height:26px;
+}
+
+.u126 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:157px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u127_normal {
+    background-image: url('../企业中心子菜单_files/u17_normal.png');
+}
+
+.u127_container {
+    position:absolute;
+    left:0px;
+    top:183px;
+    width:161px;
+    height:20px;
+}
+
+#u127_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:167px;
+    height:26px;
+}
+
+.u128 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:157px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u129_normal {
+    background-image: url('../企业中心子菜单_files/u17_normal.png');
+}
+
+.u129_container {
+    position:absolute;
+    left:0px;
+    top:123px;
+    width:161px;
+    height:20px;
+}
+
+#u129_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:167px;
+    height:26px;
+}
+
+.u130 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:157px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u131_normal {
+    background-image: url('../企业中心子菜单_files/u17_normal.png');
+}
+
+.u131_container {
+    position:absolute;
+    left:0px;
+    top:143px;
+    width:161px;
+    height:20px;
+}
+
+#u131_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:167px;
+    height:26px;
+}
+
+.u132 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:157px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u133_normal {
+    background-image: url('../企业中心子菜单_files/u17_normal.png');
+}
+
+.u133_container {
+    position:absolute;
+    left:0px;
+    top:163px;
+    width:161px;
+    height:20px;
+}
+
+#u133_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:167px;
+    height:26px;
+}
+
+.u134 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:157px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u135_normal {
+    background-image: url('../企业中心子菜单_files/u17_normal.png');
+}
+
+.u135_container {
+    position:absolute;
+    left:0px;
+    top:223px;
+    width:161px;
+    height:20px;
+}
+
+#u135_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:167px;
+    height:26px;
+}
+
+.u136 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:157px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u137_normal {
+    background-image: url('../企业中心子菜单_files/u17_normal.png');
+}
+
+.u137_container {
+    position:absolute;
+    left:0px;
+    top:243px;
+    width:161px;
+    height:20px;
+}
+
+#u137_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:167px;
+    height:26px;
+}
+
+.u138 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:157px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u139_normal {
+    background-image: url('../企业中心子菜单_files/u17_normal.png');
+}
+
+.u139_container {
+    position:absolute;
+    left:0px;
+    top:203px;
+    width:161px;
+    height:20px;
+}
+
+#u139_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:167px;
+    height:26px;
+}
+
+.u140 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:157px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u141_normal {
+    background-image: url('../企业中心子菜单_files/u17_normal.png');
+}
+
+.u141_container {
+    position:absolute;
+    left:0px;
+    top:63px;
+    width:161px;
+    height:20px;
+}
+
+#u141_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:167px;
+    height:26px;
+}
+
+.u142 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:157px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u143_normal {
+    background-image: url('../企业中心子菜单_files/u17_normal.png');
+}
+
+.u143_container {
+    position:absolute;
+    left:0px;
+    top:43px;
+    width:161px;
+    height:20px;
+}
+
+#u143_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:167px;
+    height:26px;
+}
+
+.u144 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:157px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+#pd2u9 {
+    position:absolute;
+    left:0px;
+    top:0px;
+    width:162px;
+    height:343px;
+    
+}
+
+.u145_normal {
+    background-image: url('../企业中心子菜单_files/u33_normal.png');
+}
+
+.u145_container {
+    position:absolute;
+    left:0px;
+    top:42px;
+    width:161px;
+    height:100px;
+}
+
+#u145_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:167px;
+    height:106px;
+}
+
+.u146 {
+    position:absolute;
+    left:2px;
+    top:42px;
+    width:157px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u147 {
+    position:absolute;
+    left:5px;
+    top:52px;
+    width:144px;
+    height:64px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u148_normal {
+    background-image: url('../企业中心子菜单_files/u17_normal.png');
+}
+
+.u148_container {
+    position:absolute;
+    left:0px;
+    top:22px;
+    width:161px;
+    height:20px;
+}
+
+#u148_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:167px;
+    height:26px;
+}
+
+.u149 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:157px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u150_normal {
+    background-image: url('../企业中心子菜单_files/u17_normal.png');
+}
+
+.u150_container {
+    position:absolute;
+    left:0px;
+    top:162px;
+    width:161px;
+    height:20px;
+}
+
+#u150_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:167px;
+    height:26px;
+}
+
+.u151 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:157px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u152_normal {
+    background-image: url('../企业中心子菜单_files/u17_normal.png');
+}
+
+.u152_container {
+    position:absolute;
+    left:0px;
+    top:182px;
+    width:161px;
+    height:20px;
+}
+
+#u152_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:167px;
+    height:26px;
+}
+
+.u153 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:157px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u154_normal {
+    background-image: url('../企业中心子菜单_files/u17_normal.png');
+}
+
+.u154_container {
+    position:absolute;
+    left:0px;
+    top:2px;
+    width:161px;
+    height:20px;
+}
+
+#u154_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:167px;
+    height:26px;
+}
+
+.u155 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:157px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u156_normal {
+    background-image: url('../企业中心子菜单_files/u17_normal.png');
+}
+
+.u156_container {
+    position:absolute;
+    left:0px;
+    top:262px;
+    width:161px;
+    height:20px;
+}
+
+#u156_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:167px;
+    height:26px;
+}
+
+.u157 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:157px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u158_normal {
+    background-image: url('../企业中心子菜单_files/u17_normal.png');
+}
+
+.u158_container {
+    position:absolute;
+    left:0px;
+    top:202px;
+    width:161px;
+    height:20px;
+}
+
+#u158_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:167px;
+    height:26px;
+}
+
+.u159 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:157px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u160_normal {
+    background-image: url('../企业中心子菜单_files/u17_normal.png');
+}
+
+.u160_container {
+    position:absolute;
+    left:0px;
+    top:222px;
+    width:161px;
+    height:20px;
+}
+
+#u160_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:167px;
+    height:26px;
+}
+
+.u161 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:157px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u162_normal {
+    background-image: url('../企业中心子菜单_files/u17_normal.png');
+}
+
+.u162_container {
+    position:absolute;
+    left:0px;
+    top:242px;
+    width:161px;
+    height:20px;
+}
+
+#u162_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:167px;
+    height:26px;
+}
+
+.u163 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:157px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u164_normal {
+    background-image: url('../企业中心子菜单_files/u17_normal.png');
+}
+
+.u164_container {
+    position:absolute;
+    left:0px;
+    top:302px;
+    width:161px;
+    height:20px;
+}
+
+#u164_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:167px;
+    height:26px;
+}
+
+.u165 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:157px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u166_normal {
+    background-image: url('../企业中心子菜单_files/u17_normal.png');
+}
+
+.u166_container {
+    position:absolute;
+    left:0px;
+    top:322px;
+    width:161px;
+    height:20px;
+}
+
+#u166_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:167px;
+    height:26px;
+}
+
+.u167 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:157px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u168_normal {
+    background-image: url('../企业中心子菜单_files/u17_normal.png');
+}
+
+.u168_container {
+    position:absolute;
+    left:0px;
+    top:282px;
+    width:161px;
+    height:20px;
+}
+
+#u168_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:167px;
+    height:26px;
+}
+
+.u169 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:157px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u170_normal {
+    background-image: url('../企业中心子菜单_files/u17_normal.png');
+}
+
+.u170_container {
+    position:absolute;
+    left:0px;
+    top:142px;
+    width:161px;
+    height:20px;
+}
+
+#u170_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:167px;
+    height:26px;
+}
+
+.u171 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:157px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u172_normal {
+    background-image: url('../企业中心子菜单_files/u17_normal.png');
+}
+
+.u172_container {
+    position:absolute;
+    left:0px;
+    top:122px;
+    width:161px;
+    height:20px;
+}
+
+#u172_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:167px;
+    height:26px;
+}
+
+.u173 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:157px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+#pd1u9 {
+    position:absolute;
+    left:0px;
+    top:0px;
+    width:162px;
+    height:343px;
+    
+}
+
+.u174_normal {
+    background-image: url('../企业中心子菜单_files/u33_normal.png');
+}
+
+.u174_container {
+    position:absolute;
+    left:0px;
+    top:20px;
+    width:161px;
+    height:100px;
+}
+
+#u174_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:167px;
+    height:106px;
+}
+
+.u175 {
+    position:absolute;
+    left:2px;
+    top:42px;
+    width:157px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u176 {
+    position:absolute;
+    left:5px;
+    top:27px;
+    width:151px;
+    height:70px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u177_normal {
+    background-image: url('../企业中心子菜单_files/u17_normal.png');
+}
+
+.u177_container {
+    position:absolute;
+    left:0px;
+    top:100px;
+    width:161px;
+    height:20px;
+}
+
+#u177_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:167px;
+    height:26px;
+}
+
+.u178 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:157px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u179_normal {
+    background-image: url('../企业中心子菜单_files/u17_normal.png');
+}
+
+.u179_container {
+    position:absolute;
+    left:0px;
+    top:160px;
+    width:161px;
+    height:20px;
+}
+
+#u179_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:167px;
+    height:26px;
+}
+
+.u180 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:157px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u181_normal {
+    background-image: url('../企业中心子菜单_files/u17_normal.png');
+}
+
+.u181_container {
+    position:absolute;
+    left:0px;
+    top:180px;
+    width:161px;
+    height:20px;
+}
+
+#u181_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:167px;
+    height:26px;
+}
+
+.u182 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:157px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u183_normal {
+    background-image: url('../企业中心子菜单_files/u17_normal.png');
+}
+
+.u183_container {
+    position:absolute;
+    left:0px;
+    top:0px;
+    width:161px;
+    height:20px;
+}
+
+#u183_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:167px;
+    height:26px;
+}
+
+.u184 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:157px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u185_normal {
+    background-image: url('../企业中心子菜单_files/u17_normal.png');
+}
+
+.u185_container {
+    position:absolute;
+    left:0px;
+    top:260px;
+    width:161px;
+    height:20px;
+}
+
+#u185_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:167px;
+    height:26px;
+}
+
+.u186 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:157px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u187_normal {
+    background-image: url('../企业中心子菜单_files/u17_normal.png');
+}
+
+.u187_container {
+    position:absolute;
+    left:0px;
+    top:200px;
+    width:161px;
+    height:20px;
+}
+
+#u187_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:167px;
+    height:26px;
+}
+
+.u188 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:157px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u189_normal {
+    background-image: url('../企业中心子菜单_files/u17_normal.png');
+}
+
+.u189_container {
+    position:absolute;
+    left:0px;
+    top:220px;
+    width:161px;
+    height:20px;
+}
+
+#u189_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:167px;
+    height:26px;
+}
+
+.u190 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:157px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u191_normal {
+    background-image: url('../企业中心子菜单_files/u17_normal.png');
+}
+
+.u191_container {
+    position:absolute;
+    left:0px;
+    top:240px;
+    width:161px;
+    height:20px;
+}
+
+#u191_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:167px;
+    height:26px;
+}
+
+.u192 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:157px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u193_normal {
+    background-image: url('../企业中心子菜单_files/u17_normal.png');
+}
+
+.u193_container {
+    position:absolute;
+    left:0px;
+    top:300px;
+    width:161px;
+    height:20px;
+}
+
+#u193_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:167px;
+    height:26px;
+}
+
+.u194 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:157px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u195_normal {
+    background-image: url('../企业中心子菜单_files/u17_normal.png');
+}
+
+.u195_container {
+    position:absolute;
+    left:0px;
+    top:320px;
+    width:161px;
+    height:20px;
+}
+
+#u195_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:167px;
+    height:26px;
+}
+
+.u196 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:157px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u197_normal {
+    background-image: url('../企业中心子菜单_files/u17_normal.png');
+}
+
+.u197_container {
+    position:absolute;
+    left:0px;
+    top:280px;
+    width:161px;
+    height:20px;
+}
+
+#u197_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:167px;
+    height:26px;
+}
+
+.u198 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:157px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u199_normal {
+    background-image: url('../企业中心子菜单_files/u17_normal.png');
+}
+
+.u199_container {
+    position:absolute;
+    left:0px;
+    top:140px;
+    width:161px;
+    height:20px;
+}
+
+#u199_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:167px;
+    height:26px;
+}
+
+.u200 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:157px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u201_normal {
+    background-image: url('../企业中心子菜单_files/u17_normal.png');
+}
+
+.u201_container {
+    position:absolute;
+    left:0px;
+    top:120px;
+    width:161px;
+    height:20px;
+}
+
+#u201_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:167px;
+    height:26px;
+}
+
+.u202 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:157px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+#pd0u9 {
+    position:absolute;
+    left:0px;
+    top:0px;
+    width:162px;
+    height:343px;
+    
+}
+
+.u203_normal {
+    background-image: url('../企业中心子菜单_files/u33_normal.png');
+}
+
+.u203_container {
+    position:absolute;
+    left:0px;
+    top:20px;
+    width:161px;
+    height:100px;
+}
+
+#u203_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:167px;
+    height:106px;
+}
+
+.u204 {
+    position:absolute;
+    left:2px;
+    top:42px;
+    width:157px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u205 {
+    position:absolute;
+    left:5px;
+    top:27px;
+    width:151px;
+    height:70px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u206_normal {
+    background-image: url('../企业中心子菜单_files/u17_normal.png');
+}
+
+.u206_container {
+    position:absolute;
+    left:0px;
+    top:100px;
+    width:161px;
+    height:20px;
+}
+
+#u206_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:167px;
+    height:26px;
+}
+
+.u207 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:157px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u208_normal {
+    background-image: url('../企业中心子菜单_files/u17_normal.png');
+}
+
+.u208_container {
+    position:absolute;
+    left:0px;
+    top:160px;
+    width:161px;
+    height:20px;
+}
+
+#u208_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:167px;
+    height:26px;
+}
+
+.u209 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:157px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u210_normal {
+    background-image: url('../企业中心子菜单_files/u17_normal.png');
+}
+
+.u210_container {
+    position:absolute;
+    left:0px;
+    top:180px;
+    width:161px;
+    height:20px;
+}
+
+#u210_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:167px;
+    height:26px;
+}
+
+.u211 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:157px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u212_normal {
+    background-image: url('../企业中心子菜单_files/u17_normal.png');
+}
+
+.u212_container {
+    position:absolute;
+    left:0px;
+    top:0px;
+    width:161px;
+    height:20px;
+}
+
+#u212_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:167px;
+    height:26px;
+}
+
+.u213 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:157px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u214_normal {
+    background-image: url('../企业中心子菜单_files/u17_normal.png');
+}
+
+.u214_container {
+    position:absolute;
+    left:0px;
+    top:260px;
+    width:161px;
+    height:20px;
+}
+
+#u214_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:167px;
+    height:26px;
+}
+
+.u215 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:157px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u216_normal {
+    background-image: url('../企业中心子菜单_files/u17_normal.png');
+}
+
+.u216_container {
+    position:absolute;
+    left:0px;
+    top:200px;
+    width:161px;
+    height:20px;
+}
+
+#u216_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:167px;
+    height:26px;
+}
+
+.u217 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:157px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u218_normal {
+    background-image: url('../企业中心子菜单_files/u17_normal.png');
+}
+
+.u218_container {
+    position:absolute;
+    left:0px;
+    top:220px;
+    width:161px;
+    height:20px;
+}
+
+#u218_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:167px;
+    height:26px;
+}
+
+.u219 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:157px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u220_normal {
+    background-image: url('../企业中心子菜单_files/u17_normal.png');
+}
+
+.u220_container {
+    position:absolute;
+    left:0px;
+    top:240px;
+    width:161px;
+    height:20px;
+}
+
+#u220_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:167px;
+    height:26px;
+}
+
+.u221 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:157px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u222_normal {
+    background-image: url('../企业中心子菜单_files/u17_normal.png');
+}
+
+.u222_container {
+    position:absolute;
+    left:0px;
+    top:300px;
+    width:161px;
+    height:20px;
+}
+
+#u222_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:167px;
+    height:26px;
+}
+
+.u223 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:157px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u224_normal {
+    background-image: url('../企业中心子菜单_files/u17_normal.png');
+}
+
+.u224_container {
+    position:absolute;
+    left:0px;
+    top:320px;
+    width:161px;
+    height:20px;
+}
+
+#u224_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:167px;
+    height:26px;
+}
+
+.u225 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:157px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u226_normal {
+    background-image: url('../企业中心子菜单_files/u17_normal.png');
+}
+
+.u226_container {
+    position:absolute;
+    left:0px;
+    top:280px;
+    width:161px;
+    height:20px;
+}
+
+#u226_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:167px;
+    height:26px;
+}
+
+.u227 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:157px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u228_normal {
+    background-image: url('../企业中心子菜单_files/u17_normal.png');
+}
+
+.u228_container {
+    position:absolute;
+    left:0px;
+    top:140px;
+    width:161px;
+    height:20px;
+}
+
+#u228_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:167px;
+    height:26px;
+}
+
+.u229 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:157px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u230_normal {
+    background-image: url('../企业中心子菜单_files/u17_normal.png');
+}
+
+.u230_container {
+    position:absolute;
+    left:0px;
+    top:120px;
+    width:161px;
+    height:20px;
+}
+
+#u230_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:167px;
+    height:26px;
+}
+
+.u231 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:157px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u233_normal {
+    background-image: url('../前台页头（登录前）_files/u229_normal.png');
+}
+
+.u233_container {
+    position:absolute;
+    left:0px;
+    top:0px;
+    width:1199px;
+    height:20px;
+}
+
+#u233_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:1205px;
+    height:26px;
+}
+
+.u234 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:1195px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u235 {
+    position:absolute;
+    left:77px;
+    top:4px;
+    width:184px;
+    height:15px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u236 {
+    position:absolute;
+    left:705px;
+    top:2px;
+    width:493px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u237_normal {
+    background-image: url('../前台页头（登录前）_files/u233_normal.png');
+}
+
+.u237_container {
+    position:absolute;
+    left:10px;
+    top:32px;
+    width:179px;
+    height:86px;
+}
+
+#u237_img {
+    position:absolute;
+    left:0px;
+    top:0px;
+    width:179px;
+    height:86px;
+}
+
+.u238 {
+    position:absolute;
+    left:2px;
+    top:35px;
+    width:175px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u239_normal {
+    background-image: url('../resources/images/transparent.gif');
+}
+
+.u239_container {
+    position:absolute;
+    left:191px;
+    top:35px;
+    width:126px;
+    height:40px;
+}
+
+#u239_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:132px;
+    height:46px;
+}
+
+.u240 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:122px;
+    height:36px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u241_normal {
+    background-image: url('../resources/images/transparent.gif');
+}
+
+.u241_container {
+    position:absolute;
+    left:191px;
+    top:77px;
+    width:174px;
+    height:20px;
+}
+
+#u241_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:180px;
+    height:26px;
+}
+
+.u242 {
+    position:absolute;
+    left:2px;
+    top:0px;
+    width:170px;
+    height:21px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u243_line {
+    background-image: url('../前台页头（登录前）_files/u239_line.png');
+}
+
+.u243_line {
+    position:absolute;
+    left:0px;
+    top:4px;
+    width:1199px;
+    height:3px;
+}
+
+.u243 {
+    position:absolute;
+    left:0px;
+    top:148px;
+    width:1199px;
+    height:10px;
+    
+}
+
+.u244_normal {
+    background-image: url('../前台页头（登录前）_files/u240_normal.png');
+}
+
+.u244_container {
+    position:absolute;
+    left:419px;
+    top:127px;
+    width:85px;
+    height:25px;
+}
+
+#u244_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:91px;
+    height:31px;
+}
+
+.u245 {
+    position:absolute;
+    left:2px;
+    top:4px;
+    width:81px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u246_normal {
+    background-image: url('../前台页头（登录前）_files/u240_normal.png');
+}
+
+.u246_container {
+    position:absolute;
+    left:314px;
+    top:127px;
+    width:85px;
+    height:25px;
+}
+
+#u246_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:91px;
+    height:31px;
+}
+
+.u247 {
+    position:absolute;
+    left:2px;
+    top:4px;
+    width:81px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u248_normal {
+    background-image: url('../前台页头（登录前）_files/u240_normal.png');
+}
+
+.u248_container {
+    position:absolute;
+    left:207px;
+    top:128px;
+    width:85px;
+    height:25px;
+}
+
+#u248_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:91px;
+    height:31px;
+}
+
+.u249 {
+    position:absolute;
+    left:2px;
+    top:4px;
+    width:81px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u250_normal {
+    background-image: url('../前台页头（登录前）_files/u240_normal.png');
+}
+
+.u250_container {
+    position:absolute;
+    left:529px;
+    top:127px;
+    width:85px;
+    height:25px;
+}
+
+#u250_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:91px;
+    height:31px;
+}
+
+.u251 {
+    position:absolute;
+    left:2px;
+    top:4px;
+    width:81px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u252 {
+    position:absolute;
+    left:401px;
+    top:93px;
+    width:478px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u253 {
+    position:absolute;
+    left:399px;
+    top:63px;
+    width:392px;
+    height:25px;
+    ;
+    ;
+    text-align: left;;
+    font-family:'Arial';
+    font-size: 11px;
+    color:#000000;
+    font-style:normal;
+    font-weight:normal;
+    text-decoration:none;
+    
+}
+
+.u254_normal {
+    background-image: url('../搜索框_files/Submit_button_u20_normal.png');
+}
+
+.u254_container {
+    position:absolute;
+    left:806px;
+    top:62px;
+    width:60px;
+    height:25px;
+}
+
+#u254_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:66px;
+    height:31px;
+}
+
+.u255 {
+    position:absolute;
+    left:2px;
+    top:4px;
+    width:56px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+#u256 {
+    position:absolute;
+    left:399px;
+    top:88px;
+    width:393px;
+    height:131px;
+    overflow:hidden;
+}
+
+#pd0u256 {
+    position:absolute;
+    left:0px;
+    top:0px;
+    width:393px;
+    height:131px;
+    
+}
+
+.u257_normal {
+    background-image: url('../搜索框_files/u23_normal.png');
+}
+
+.u257_container {
+    position:absolute;
+    left:0px;
+    top:8px;
+    width:474px;
+    height:130px;
+}
+
+#u257_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:480px;
+    height:136px;
+}
+
+.u258 {
+    position:absolute;
+    left:2px;
+    top:57px;
+    width:470px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u259 {
+    position:absolute;
+    left:8px;
+    top:65px;
+    width:458px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u260 {
+    position:absolute;
+    left:8px;
+    top:110px;
+    width:458px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u261 {
+    position:absolute;
+    left:8px;
+    top:80px;
+    width:458px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u262 {
+    position:absolute;
+    left:8px;
+    top:95px;
+    width:458px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u263 {
+    position:absolute;
+    left:8px;
+    top:50px;
+    width:458px;
+    height:14px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u264 {
+    position:absolute;
+    left:8px;
+    top:20px;
+    width:458px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u265 {
+    position:absolute;
+    left:8px;
+    top:35px;
+    width:458px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u266 {
+    position:absolute;
+    left:8px;
+    top:5px;
+    width:458px;
+    height:14px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u267 {
+    position:absolute;
+    left:876px;
+    top:60px;
+    width:76px;
+    height:14px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u268 {
+    position:absolute;
+    left:876px;
+    top:74px;
+    width:76px;
+    height:14px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u269_mouseOver {
+    background-image: url('../搜索框_files/Section_tab_two_u35_mouseOver.png');
+}
+
+.u269_normal {
+    background-image: url('../搜索框_files/Section_tab_two_u35_mouseOver.png');
+}
+
+.u269_container {
+    position:absolute;
+    left:469px;
+    top:36px;
+    width:48px;
+    height:25px;
+}
+
+#u269_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:54px;
+    height:31px;
+}
+
+.u270 {
+    position:absolute;
+    left:2px;
+    top:6px;
+    width:44px;
+    height:14px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u271_mouseOver {
+    background-image: url('../搜索框_files/Section_tab_three_u37_mouseOver.png');
+}
+
+.u271_normal {
+    background-image: url('../搜索框_files/Section_tab_three_u37_mouseOver.png');
+}
+
+.u271_container {
+    position:absolute;
+    left:527px;
+    top:36px;
+    width:52px;
+    height:25px;
+}
+
+#u271_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:58px;
+    height:31px;
+}
+
+.u272 {
+    position:absolute;
+    left:2px;
+    top:6px;
+    width:48px;
+    height:14px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u273_mouseOver {
+    background-image: url('../搜索框_files/Section_tab_four_u39_mouseOver.png');
+}
+
+.u273_normal {
+    background-image: url('../搜索框_files/Section_tab_four_u39_mouseOver.png');
+}
+
+.u273_container {
+    position:absolute;
+    left:591px;
+    top:36px;
+    width:53px;
+    height:25px;
+}
+
+#u273_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:59px;
+    height:31px;
+}
+
+.u274 {
+    position:absolute;
+    left:2px;
+    top:4px;
+    width:49px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u275_line {
+    background-image: url('../搜索框_files/u41_line.png');
+}
+
+.u275_line {
+    position:absolute;
+    left:0px;
+    top:4px;
+    width:297px;
+    height:3px;
+}
+
+.u275 {
+    position:absolute;
+    left:400px;
+    top:56px;
+    width:297px;
+    height:10px;
+    
+}
+
+.u276_mouseOver {
+    background-image: url('../搜索框_files/Section_tab_one_u42_mouseOver.png');
+}
+
+.u276_normal {
+    background-image: url('../搜索框_files/Section_tab_one_u42_mouseOver.png');
+}
+
+.u276_container {
+    position:absolute;
+    left:410px;
+    top:36px;
+    width:49px;
+    height:25px;
+}
+
+#u276_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:55px;
+    height:31px;
+}
+
+.u277 {
+    position:absolute;
+    left:2px;
+    top:6px;
+    width:45px;
+    height:14px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u279_normal {
+    background-image: url('../前台页头（登录前）_files/u275_normal.png');
+}
+
+.u279_container {
+    position:absolute;
+    left:10px;
+    top:3px;
+    width:16px;
+    height:16px;
+}
+
+#u279_img {
+    position:absolute;
+    left:0px;
+    top:0px;
+    width:16px;
+    height:16px;
+}
+
+.u280 {
+    position:absolute;
+    left:2px;
+    top:0px;
+    width:12px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u281 {
+    position:absolute;
+    left:26px;
+    top:4px;
+    width:46px;
+    height:14px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u282 {
+    position:absolute;
+    left:261px;
+    top:4px;
+    width:45px;
+    height:15px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u283 {
+    position:absolute;
+    left:299px;
+    top:4px;
+    width:74px;
+    height:15px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u284_normal {
+    background-image: url('../前台页头（登录前）_files/u280_normal.png');
+}
+
+.u284_container {
+    position:absolute;
+    left:1019px;
+    top:64px;
+    width:152px;
+    height:39px;
+}
+
+#u284_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:158px;
+    height:45px;
+}
+
+.u285 {
+    position:absolute;
+    left:2px;
+    top:12px;
+    width:148px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u286_normal {
+    background-image: url('../前台页头（登录前）_files/u282_normal.png');
+}
+
+.u286_container {
+    position:absolute;
+    left:1028px;
+    top:68px;
+    width:32px;
+    height:32px;
+}
+
+#u286_img {
+    position:absolute;
+    left:0px;
+    top:0px;
+    width:32px;
+    height:32px;
+}
+
+.u287 {
+    position:absolute;
+    left:2px;
+    top:8px;
+    width:28px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u288 {
+    position:absolute;
+    left:1083px;
+    top:74px;
+    width:79px;
+    height:19px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u290 {
+    position:absolute;
+    left:240px;
+    top:215px;
+    width:78px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u291 {
+    position:absolute;
+    left:310px;
+    top:206px;
+    width:180px;
+    height:25px;
+    ;
+    ;
+    text-align: left;;
+    font-family:'Arial';
+    font-size: 13px;
+    color:#000000;
+    font-style:normal;
+    font-weight:normal;
+    text-decoration:none;
+    
+}
+
+.u292 {
+    position:absolute;
+    left:240px;
+    top:250px;
+    width:78px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u293 {
+    position:absolute;
+    left:310px;
+    top:241px;
+    width:180px;
+    height:25px;
+    ;
+    ;
+    text-align: left;;
+    font-family:'Arial';
+    font-size: 13px;
+    color:#000000;
+    font-style:normal;
+    font-weight:normal;
+    text-decoration:none;
+    
+}
+
+.u294 {
+    position:absolute;
+    left:510px;
+    top:250px;
+    width:50px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u295 {
+    position:absolute;
+    left:563px;
+    top:244px;
+    width:147px;
+    height:22px;
+    ;
+    ;
+    ;
+    font-family:'Arial';
+    font-size: 13px;
+    color:#000000;
+    font-style:normal;
+    font-weight:normal;
+    text-decoration:none;
+    
+}
+
+.u296_line {
+    background-image: url('../我投标的项目_files/u296_line.png');
+}
+
+.u296_line {
+    position:absolute;
+    left:0px;
+    top:4px;
+    width:1008px;
+    height:3px;
+}
+
+.u296 {
+    position:absolute;
+    left:194px;
+    top:347px;
+    width:1008px;
+    height:10px;
+    
+}
+
+.u297_mouseOver {
+    background-image: url('../我投标的项目_files/button_u297_mouseOver.png');
+}
+
+.u297_disabled {
+    background-image: url('../我投标的项目_files/button_u297_disabled.png');
+}
+
+.u297_normal {
+    background-image: url('../我投标的项目_files/button_u297_normal.png');
+}
+
+.u297_container {
+    position:absolute;
+    left:948px;
+    top:270px;
+    width:82px;
+    height:25px;
+}
+
+#u297_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:88px;
+    height:31px;
+}
+
+.u298 {
+    position:absolute;
+    left:2px;
+    top:4px;
+    width:78px;
+    height:17px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u299_mouseOver {
+    background-image: url('../我投标的项目_files/button_u297_mouseOver.png');
+}
+
+.u299_disabled {
+    background-image: url('../我投标的项目_files/button_u297_disabled.png');
+}
+
+.u299_normal {
+    background-image: url('../我投标的项目_files/button_u297_normal.png');
+}
+
+.u299_container {
+    position:absolute;
+    left:1070px;
+    top:270px;
+    width:82px;
+    height:25px;
+}
+
+#u299_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:88px;
+    height:31px;
+}
+
+.u300 {
+    position:absolute;
+    left:2px;
+    top:4px;
+    width:78px;
+    height:17px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+#u301 {
+    position:absolute;
+    left:896px;
+    top:377px;
+    width:300px;
+    height:26px
+}
+
+.u302_normal {
+    background-image: url('../我投标的项目_files/u302_normal.png');
+}
+
+.u302_container {
+    position:absolute;
+    left:0px;
+    top:0px;
+    width:20px;
+    height:21px;
+}
+
+#u302_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:26px;
+    height:27px;
+}
+
+.u303 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:16px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u304_normal {
+    background-image: url('../我投标的项目_files/u302_normal.png');
+}
+
+.u304_container {
+    position:absolute;
+    left:20px;
+    top:0px;
+    width:20px;
+    height:21px;
+}
+
+#u304_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:26px;
+    height:27px;
+}
+
+.u305 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:16px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u306_normal {
+    background-image: url('../我投标的项目_files/u302_normal.png');
+}
+
+.u306_container {
+    position:absolute;
+    left:40px;
+    top:0px;
+    width:20px;
+    height:21px;
+}
+
+#u306_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:26px;
+    height:27px;
+}
+
+.u307 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:16px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u308_normal {
+    background-image: url('../我投标的项目_files/u302_normal.png');
+}
+
+.u308_container {
+    position:absolute;
+    left:60px;
+    top:0px;
+    width:20px;
+    height:21px;
+}
+
+#u308_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:26px;
+    height:27px;
+}
+
+.u309 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:16px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u310_normal {
+    background-image: url('../我投标的项目_files/u302_normal.png');
+}
+
+.u310_container {
+    position:absolute;
+    left:80px;
+    top:0px;
+    width:20px;
+    height:21px;
+}
+
+#u310_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:26px;
+    height:27px;
+}
+
+.u311 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:16px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u312_normal {
+    background-image: url('../我投标的项目_files/u302_normal.png');
+}
+
+.u312_container {
+    position:absolute;
+    left:100px;
+    top:0px;
+    width:20px;
+    height:21px;
+}
+
+#u312_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:26px;
+    height:27px;
+}
+
+.u313 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:16px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u314_normal {
+    background-image: url('../我投标的项目_files/u314_normal.png');
+}
+
+.u314_container {
+    position:absolute;
+    left:120px;
+    top:0px;
+    width:95px;
+    height:21px;
+}
+
+#u314_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:101px;
+    height:27px;
+}
+
+.u315 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:91px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u316_normal {
+    background-image: url('../我投标的项目_files/u316_normal.png');
+}
+
+.u316_container {
+    position:absolute;
+    left:215px;
+    top:0px;
+    width:28px;
+    height:21px;
+}
+
+#u316_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:34px;
+    height:27px;
+}
+
+.u317 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:24px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u318_normal {
+    background-image: url('../我投标的项目_files/u318_normal.png');
+}
+
+.u318_container {
+    position:absolute;
+    left:243px;
+    top:0px;
+    width:29px;
+    height:21px;
+}
+
+#u318_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:35px;
+    height:27px;
+}
+
+.u319 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:25px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u320_normal {
+    background-image: url('../我投标的项目_files/u320_normal.png');
+}
+
+.u320_container {
+    position:absolute;
+    left:272px;
+    top:0px;
+    width:23px;
+    height:21px;
+}
+
+#u320_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:29px;
+    height:27px;
+}
+
+.u321 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:19px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u322 {
+    position:absolute;
+    left:563px;
+    top:205px;
+    width:85px;
+    height:25px;
+    ;
+    ;
+    text-align: left;;
+    font-family:'Arial';
+    font-size: 13px;
+    color:#999999;
+    font-style:italic;
+    font-weight:normal;
+    text-decoration:none;
+    
+}
+
+.u323 {
+    position:absolute;
+    left:510px;
+    top:213px;
+    width:50px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u324_normal {
+    background-image: url('../我投标的项目_files/u324_normal.png');
+}
+
+.u324_container {
+    position:absolute;
+    left:763px;
+    top:205px;
+    width:40px;
+    height:26px;
+}
+
+#u324_img {
+    position:absolute;
+    left:0px;
+    top:0px;
+    width:40px;
+    height:26px;
+}
+
+.u325 {
+    position:absolute;
+    left:2px;
+    top:5px;
+    width:36px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u326 {
+    position:absolute;
+    left:673px;
+    top:205px;
+    width:85px;
+    height:25px;
+    ;
+    ;
+    text-align: left;;
+    font-family:'Arial';
+    font-size: 13px;
+    color:#999999;
+    font-style:italic;
+    font-weight:normal;
+    text-decoration:none;
+    
+}
+
+.u327 {
+    position:absolute;
+    left:653px;
+    top:209px;
+    width:15px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+#u328 {
+    position:absolute;
+    left:783px;
+    top:215px;
+    width:166px;
+    height:191px;
+    overflow:hidden;
+}
+
+#pd0u328 {
+    position:absolute;
+    left:0px;
+    top:0px;
+    width:166px;
+    height:191px;
+    
+}
+
+.u329_normal {
+    background-image: url('../我投标的项目_files/u329_normal.png');
+}
+
+.u329_container {
+    position:absolute;
+    left:0px;
+    top:0px;
+    width:160px;
+    height:185px;
+}
+
+#u329_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:166px;
+    height:191px;
+}
+
+.u330 {
+    position:absolute;
+    left:2px;
+    top:84px;
+    width:156px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u331_normal {
+    background-image: url('../我投标的项目_files/u331_normal.png');
+}
+
+.u331_container {
+    position:absolute;
+    left:10px;
+    top:10px;
+    width:22px;
+    height:18px;
+}
+
+#u331_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:28px;
+    height:24px;
+}
+
+.u332 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:18px;
+    height:15px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u333_normal {
+    background-image: url('../我投标的项目_files/u331_normal.png');
+}
+
+.u333_container {
+    position:absolute;
+    left:128px;
+    top:10px;
+    width:22px;
+    height:18px;
+}
+
+#u333_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:28px;
+    height:24px;
+}
+
+.u334 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:18px;
+    height:15px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u335 {
+    position:absolute;
+    left:37px;
+    top:12px;
+    width:86px;
+    height:15px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+#u336 {
+    position:absolute;
+    left:10px;
+    top:50px;
+    width:145px;
+    height:125px
+}
+
+.u337_normal {
+    background-image: url('../我投标的项目_files/u337_normal.png');
+}
+
+.u337_container {
+    position:absolute;
+    left:0px;
+    top:0px;
+    width:20px;
+    height:20px;
+}
+
+#u337_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:26px;
+    height:26px;
+}
+
+.u338 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:16px;
+    height:15px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u339_normal {
+    background-image: url('../我投标的项目_files/u339_normal.png');
+}
+
+.u339_container {
+    position:absolute;
+    left:20px;
+    top:0px;
+    width:20px;
+    height:20px;
+}
+
+#u339_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:26px;
+    height:26px;
+}
+
+.u340 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:16px;
+    height:15px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u341_normal {
+    background-image: url('../我投标的项目_files/u337_normal.png');
+}
+
+.u341_container {
+    position:absolute;
+    left:40px;
+    top:0px;
+    width:20px;
+    height:20px;
+}
+
+#u341_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:26px;
+    height:26px;
+}
+
+.u342 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:16px;
+    height:15px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u343_normal {
+    background-image: url('../我投标的项目_files/u337_normal.png');
+}
+
+.u343_container {
+    position:absolute;
+    left:60px;
+    top:0px;
+    width:20px;
+    height:20px;
+}
+
+#u343_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:26px;
+    height:26px;
+}
+
+.u344 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:16px;
+    height:15px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u345_normal {
+    background-image: url('../我投标的项目_files/u337_normal.png');
+}
+
+.u345_container {
+    position:absolute;
+    left:80px;
+    top:0px;
+    width:20px;
+    height:20px;
+}
+
+#u345_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:26px;
+    height:26px;
+}
+
+.u346 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:16px;
+    height:15px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u347_normal {
+    background-image: url('../我投标的项目_files/u337_normal.png');
+}
+
+.u347_container {
+    position:absolute;
+    left:100px;
+    top:0px;
+    width:20px;
+    height:20px;
+}
+
+#u347_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:26px;
+    height:26px;
+}
+
+.u348 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:16px;
+    height:15px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u349_normal {
+    background-image: url('../我投标的项目_files/u337_normal.png');
+}
+
+.u349_container {
+    position:absolute;
+    left:120px;
+    top:0px;
+    width:20px;
+    height:20px;
+}
+
+#u349_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:26px;
+    height:26px;
+}
+
+.u350 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:16px;
+    height:15px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u351_normal {
+    background-image: url('../我投标的项目_files/u337_normal.png');
+}
+
+.u351_container {
+    position:absolute;
+    left:0px;
+    top:20px;
+    width:20px;
+    height:20px;
+}
+
+#u351_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:26px;
+    height:26px;
+}
+
+.u352 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:16px;
+    height:15px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u353_normal {
+    background-image: url('../我投标的项目_files/u337_normal.png');
+}
+
+.u353_container {
+    position:absolute;
+    left:20px;
+    top:20px;
+    width:20px;
+    height:20px;
+}
+
+#u353_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:26px;
+    height:26px;
+}
+
+.u354 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:16px;
+    height:15px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u355_normal {
+    background-image: url('../我投标的项目_files/u355_normal.png');
+}
+
+.u355_container {
+    position:absolute;
+    left:40px;
+    top:20px;
+    width:20px;
+    height:20px;
+}
+
+#u355_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:26px;
+    height:26px;
+}
+
+.u356 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:16px;
+    height:15px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u357_normal {
+    background-image: url('../我投标的项目_files/u355_normal.png');
+}
+
+.u357_container {
+    position:absolute;
+    left:60px;
+    top:20px;
+    width:20px;
+    height:20px;
+}
+
+#u357_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:26px;
+    height:26px;
+}
+
+.u358 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:16px;
+    height:15px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u359_normal {
+    background-image: url('../我投标的项目_files/u355_normal.png');
+}
+
+.u359_container {
+    position:absolute;
+    left:80px;
+    top:20px;
+    width:20px;
+    height:20px;
+}
+
+#u359_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:26px;
+    height:26px;
+}
+
+.u360 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:16px;
+    height:15px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u361_normal {
+    background-image: url('../我投标的项目_files/u355_normal.png');
+}
+
+.u361_container {
+    position:absolute;
+    left:100px;
+    top:20px;
+    width:20px;
+    height:20px;
+}
+
+#u361_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:26px;
+    height:26px;
+}
+
+.u362 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:16px;
+    height:15px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u363_normal {
+    background-image: url('../我投标的项目_files/u355_normal.png');
+}
+
+.u363_container {
+    position:absolute;
+    left:120px;
+    top:20px;
+    width:20px;
+    height:20px;
+}
+
+#u363_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:26px;
+    height:26px;
+}
+
+.u364 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:16px;
+    height:15px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u365_normal {
+    background-image: url('../我投标的项目_files/u355_normal.png');
+}
+
+.u365_container {
+    position:absolute;
+    left:0px;
+    top:40px;
+    width:20px;
+    height:20px;
+}
+
+#u365_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:26px;
+    height:26px;
+}
+
+.u366 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:16px;
+    height:15px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u367_normal {
+    background-image: url('../我投标的项目_files/u355_normal.png');
+}
+
+.u367_container {
+    position:absolute;
+    left:20px;
+    top:40px;
+    width:20px;
+    height:20px;
+}
+
+#u367_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:26px;
+    height:26px;
+}
+
+.u368 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:16px;
+    height:15px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u369_normal {
+    background-image: url('../我投标的项目_files/u355_normal.png');
+}
+
+.u369_container {
+    position:absolute;
+    left:40px;
+    top:40px;
+    width:20px;
+    height:20px;
+}
+
+#u369_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:26px;
+    height:26px;
+}
+
+.u370 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:16px;
+    height:15px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u371_normal {
+    background-image: url('../我投标的项目_files/u355_normal.png');
+}
+
+.u371_container {
+    position:absolute;
+    left:60px;
+    top:40px;
+    width:20px;
+    height:20px;
+}
+
+#u371_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:26px;
+    height:26px;
+}
+
+.u372 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:16px;
+    height:15px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u373_normal {
+    background-image: url('../我投标的项目_files/u373_normal.png');
+}
+
+.u373_container {
+    position:absolute;
+    left:80px;
+    top:40px;
+    width:20px;
+    height:20px;
+}
+
+#u373_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:26px;
+    height:26px;
+}
+
+.u374 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:16px;
+    height:15px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u375_normal {
+    background-image: url('../我投标的项目_files/u355_normal.png');
+}
+
+.u375_container {
+    position:absolute;
+    left:100px;
+    top:40px;
+    width:20px;
+    height:20px;
+}
+
+#u375_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:26px;
+    height:26px;
+}
+
+.u376 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:16px;
+    height:15px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u377_normal {
+    background-image: url('../我投标的项目_files/u355_normal.png');
+}
+
+.u377_container {
+    position:absolute;
+    left:120px;
+    top:40px;
+    width:20px;
+    height:20px;
+}
+
+#u377_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:26px;
+    height:26px;
+}
+
+.u378 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:16px;
+    height:15px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u379_normal {
+    background-image: url('../我投标的项目_files/u355_normal.png');
+}
+
+.u379_container {
+    position:absolute;
+    left:0px;
+    top:60px;
+    width:20px;
+    height:20px;
+}
+
+#u379_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:26px;
+    height:26px;
+}
+
+.u380 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:16px;
+    height:15px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u381_normal {
+    background-image: url('../我投标的项目_files/u355_normal.png');
+}
+
+.u381_container {
+    position:absolute;
+    left:20px;
+    top:60px;
+    width:20px;
+    height:20px;
+}
+
+#u381_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:26px;
+    height:26px;
+}
+
+.u382 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:16px;
+    height:15px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u383_normal {
+    background-image: url('../我投标的项目_files/u355_normal.png');
+}
+
+.u383_container {
+    position:absolute;
+    left:40px;
+    top:60px;
+    width:20px;
+    height:20px;
+}
+
+#u383_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:26px;
+    height:26px;
+}
+
+.u384 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:16px;
+    height:15px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u385_normal {
+    background-image: url('../我投标的项目_files/u385_normal.png');
+}
+
+.u385_container {
+    position:absolute;
+    left:60px;
+    top:60px;
+    width:20px;
+    height:20px;
+}
+
+#u385_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:26px;
+    height:26px;
+}
+
+.u386 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:16px;
+    height:15px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u387_normal {
+    background-image: url('../我投标的项目_files/u387_normal.png');
+}
+
+.u387_container {
+    position:absolute;
+    left:80px;
+    top:60px;
+    width:20px;
+    height:20px;
+}
+
+#u387_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:26px;
+    height:26px;
+}
+
+.u388 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:16px;
+    height:15px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u389_normal {
+    background-image: url('../我投标的项目_files/u389_normal.png');
+}
+
+.u389_container {
+    position:absolute;
+    left:100px;
+    top:60px;
+    width:20px;
+    height:20px;
+}
+
+#u389_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:26px;
+    height:26px;
+}
+
+.u390 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:16px;
+    height:15px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u391_normal {
+    background-image: url('../我投标的项目_files/u337_normal.png');
+}
+
+.u391_container {
+    position:absolute;
+    left:120px;
+    top:60px;
+    width:20px;
+    height:20px;
+}
+
+#u391_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:26px;
+    height:26px;
+}
+
+.u392 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:16px;
+    height:15px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u393_normal {
+    background-image: url('../我投标的项目_files/u337_normal.png');
+}
+
+.u393_container {
+    position:absolute;
+    left:0px;
+    top:80px;
+    width:20px;
+    height:20px;
+}
+
+#u393_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:26px;
+    height:26px;
+}
+
+.u394 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:16px;
+    height:15px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u395_normal {
+    background-image: url('../我投标的项目_files/u337_normal.png');
+}
+
+.u395_container {
+    position:absolute;
+    left:20px;
+    top:80px;
+    width:20px;
+    height:20px;
+}
+
+#u395_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:26px;
+    height:26px;
+}
+
+.u396 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:16px;
+    height:15px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u397_normal {
+    background-image: url('../我投标的项目_files/u337_normal.png');
+}
+
+.u397_container {
+    position:absolute;
+    left:40px;
+    top:80px;
+    width:20px;
+    height:20px;
+}
+
+#u397_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:26px;
+    height:26px;
+}
+
+.u398 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:16px;
+    height:15px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u399_normal {
+    background-image: url('../我投标的项目_files/u399_normal.png');
+}
+
+.u399_container {
+    position:absolute;
+    left:60px;
+    top:80px;
+    width:20px;
+    height:20px;
+}
+
+#u399_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:26px;
+    height:26px;
+}
+
+.u400 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:16px;
+    height:15px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u401_normal {
+    background-image: url('../我投标的项目_files/u401_normal.png');
+}
+
+.u401_container {
+    position:absolute;
+    left:80px;
+    top:80px;
+    width:20px;
+    height:20px;
+}
+
+#u401_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:26px;
+    height:26px;
+}
+
+.u402 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:16px;
+    height:15px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u403_normal {
+    background-image: url('../我投标的项目_files/u399_normal.png');
+}
+
+.u403_container {
+    position:absolute;
+    left:100px;
+    top:80px;
+    width:20px;
+    height:20px;
+}
+
+#u403_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:26px;
+    height:26px;
+}
+
+.u404 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:16px;
+    height:15px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u405_normal {
+    background-image: url('../我投标的项目_files/u399_normal.png');
+}
+
+.u405_container {
+    position:absolute;
+    left:120px;
+    top:80px;
+    width:20px;
+    height:20px;
+}
+
+#u405_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:26px;
+    height:26px;
+}
+
+.u406 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:16px;
+    height:15px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u407_normal {
+    background-image: url('../我投标的项目_files/u399_normal.png');
+}
+
+.u407_container {
+    position:absolute;
+    left:0px;
+    top:100px;
+    width:20px;
+    height:20px;
+}
+
+#u407_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:26px;
+    height:26px;
+}
+
+.u408 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:16px;
+    height:15px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u409_normal {
+    background-image: url('../我投标的项目_files/u399_normal.png');
+}
+
+.u409_container {
+    position:absolute;
+    left:20px;
+    top:100px;
+    width:20px;
+    height:20px;
+}
+
+#u409_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:26px;
+    height:26px;
+}
+
+.u410 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:16px;
+    height:15px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u411_normal {
+    background-image: url('../我投标的项目_files/u399_normal.png');
+}
+
+.u411_container {
+    position:absolute;
+    left:40px;
+    top:100px;
+    width:20px;
+    height:20px;
+}
+
+#u411_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:26px;
+    height:26px;
+}
+
+.u412 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:16px;
+    height:15px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u413_normal {
+    background-image: url('../我投标的项目_files/u399_normal.png');
+}
+
+.u413_container {
+    position:absolute;
+    left:60px;
+    top:100px;
+    width:20px;
+    height:20px;
+}
+
+#u413_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:26px;
+    height:26px;
+}
+
+.u414 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:16px;
+    height:15px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u415_normal {
+    background-image: url('../我投标的项目_files/u399_normal.png');
+}
+
+.u415_container {
+    position:absolute;
+    left:80px;
+    top:100px;
+    width:20px;
+    height:20px;
+}
+
+#u415_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:26px;
+    height:26px;
+}
+
+.u416 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:16px;
+    height:15px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u417_normal {
+    background-image: url('../我投标的项目_files/u399_normal.png');
+}
+
+.u417_container {
+    position:absolute;
+    left:100px;
+    top:100px;
+    width:20px;
+    height:20px;
+}
+
+#u417_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:26px;
+    height:26px;
+}
+
+.u418 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:16px;
+    height:15px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u419_normal {
+    background-image: url('../我投标的项目_files/u399_normal.png');
+}
+
+.u419_container {
+    position:absolute;
+    left:120px;
+    top:100px;
+    width:20px;
+    height:20px;
+}
+
+#u419_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:26px;
+    height:26px;
+}
+
+.u420 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:16px;
+    height:15px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u421 {
+    position:absolute;
+    left:10px;
+    top:35px;
+    width:17px;
+    height:14px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u422 {
+    position:absolute;
+    left:130px;
+    top:35px;
+    width:17px;
+    height:14px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u423 {
+    position:absolute;
+    left:30px;
+    top:35px;
+    width:17px;
+    height:14px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u424 {
+    position:absolute;
+    left:50px;
+    top:35px;
+    width:17px;
+    height:14px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u425 {
+    position:absolute;
+    left:70px;
+    top:35px;
+    width:17px;
+    height:14px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u426 {
+    position:absolute;
+    left:90px;
+    top:35px;
+    width:17px;
+    height:14px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u427 {
+    position:absolute;
+    left:110px;
+    top:35px;
+    width:17px;
+    height:14px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u428_normal {
+    background-image: url('../我投标的项目_files/u428_normal.png');
+}
+
+.u428_container {
+    position:absolute;
+    left:222px;
+    top:442px;
+    width:969px;
+    height:108px;
+}
+
+#u428_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:975px;
+    height:114px;
+}
+
+.u429 {
+    position:absolute;
+    left:2px;
+    top:46px;
+    width:965px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u430_normal {
+    background-image: url('../我投标的项目_files/u430_normal.png');
+}
+
+.u430_container {
+    position:absolute;
+    left:222px;
+    top:442px;
+    width:969px;
+    height:20px;
+}
+
+#u430_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:975px;
+    height:26px;
+}
+
+.u431 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:965px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u432 {
+    position:absolute;
+    left:230px;
+    top:444px;
+    width:140px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u433_normal {
+    background-image: url('../我投标的项目_files/placeholder_u433_normal.png');
+}
+
+.u433_container {
+    position:absolute;
+    left:261px;
+    top:480px;
+    width:40px;
+    height:40px;
+}
+
+#u433_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:46px;
+    height:46px;
+}
+
+.u434 {
+    position:absolute;
+    left:2px;
+    top:4px;
+    width:36px;
+    height:32px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u435 {
+    position:absolute;
+    left:240px;
+    top:530px;
+    width:140px;
+    height:15px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u436_line {
+    background-image: url('../我投标的项目_files/u436_line.png');
+}
+
+.u436_line {
+    position:absolute;
+    left:0px;
+    top:4px;
+    width:969px;
+    height:3px;
+}
+
+.u436 {
+    position:absolute;
+    left:222px;
+    top:405px;
+    width:969px;
+    height:10px;
+    
+}
+
+.u437 {
+    position:absolute;
+    left:380px;
+    top:419px;
+    width:140px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u438 {
+    position:absolute;
+    left:908px;
+    top:419px;
+    width:79px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u439 {
+    position:absolute;
+    left:1011px;
+    top:419px;
+    width:59px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u440 {
+    position:absolute;
+    left:1100px;
+    top:419px;
+    width:140px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u441 {
+    position:absolute;
+    left:808px;
+    top:420px;
+    width:79px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u442 {
+    position:absolute;
+    left:803px;
+    top:493px;
+    width:140px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u443 {
+    position:absolute;
+    left:908px;
+    top:493px;
+    width:92px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u444 {
+    position:absolute;
+    left:1003px;
+    top:493px;
+    width:70px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u445 {
+    position:absolute;
+    left:1012px;
+    top:512px;
+    width:59px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u446_line {
+    background-image: url('../我投标的项目_files/u446_line.png');
+}
+
+.u446_line {
+    position:absolute;
+    left:4px;
+    top:0px;
+    width:3px;
+    height:78px;
+}
+
+.u446 {
+    position:absolute;
+    left:793px;
+    top:472px;
+    width:10px;
+    height:78px;
+    
+}
+
+.u447_line {
+    background-image: url('../我投标的项目_files/u447_line.png');
+}
+
+.u447_line {
+    position:absolute;
+    left:4px;
+    top:0px;
+    width:3px;
+    height:78px;
+}
+
+.u447 {
+    position:absolute;
+    left:888px;
+    top:472px;
+    width:10px;
+    height:78px;
+    
+}
+
+.u448_line {
+    background-image: url('../我投标的项目_files/u448_line.png');
+}
+
+.u448_line {
+    position:absolute;
+    left:4px;
+    top:0px;
+    width:3px;
+    height:78px;
+}
+
+.u448 {
+    position:absolute;
+    left:961px;
+    top:472px;
+    width:10px;
+    height:78px;
+    
+}
+
+.u449_line {
+    background-image: url('../我投标的项目_files/u449_line.png');
+}
+
+.u449_line {
+    position:absolute;
+    left:4px;
+    top:0px;
+    width:3px;
+    height:78px;
+}
+
+.u449 {
+    position:absolute;
+    left:1081px;
+    top:472px;
+    width:10px;
+    height:78px;
+    
+}
+
+.u450 {
+    position:absolute;
+    left:1101px;
+    top:493px;
+    width:59px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u451_normal {
+    background-image: url('../我投标的项目_files/u428_normal.png');
+}
+
+.u451_container {
+    position:absolute;
+    left:222px;
+    top:658px;
+    width:969px;
+    height:108px;
+}
+
+#u451_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:975px;
+    height:114px;
+}
+
+.u452 {
+    position:absolute;
+    left:2px;
+    top:46px;
+    width:965px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u453_normal {
+    background-image: url('../我投标的项目_files/u430_normal.png');
+}
+
+.u453_container {
+    position:absolute;
+    left:222px;
+    top:658px;
+    width:969px;
+    height:20px;
+}
+
+#u453_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:975px;
+    height:26px;
+}
+
+.u454 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:965px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u455 {
+    position:absolute;
+    left:230px;
+    top:660px;
+    width:140px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u456_normal {
+    background-image: url('../我投标的项目_files/placeholder_u433_normal.png');
+}
+
+.u456_container {
+    position:absolute;
+    left:261px;
+    top:696px;
+    width:40px;
+    height:40px;
+}
+
+#u456_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:46px;
+    height:46px;
+}
+
+.u457 {
+    position:absolute;
+    left:2px;
+    top:4px;
+    width:36px;
+    height:32px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u458 {
+    position:absolute;
+    left:240px;
+    top:746px;
+    width:140px;
+    height:15px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u459 {
+    position:absolute;
+    left:803px;
+    top:709px;
+    width:140px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u460 {
+    position:absolute;
+    left:908px;
+    top:709px;
+    width:92px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u461 {
+    position:absolute;
+    left:1011px;
+    top:709px;
+    width:70px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u462 {
+    position:absolute;
+    left:1012px;
+    top:728px;
+    width:59px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u463_line {
+    background-image: url('../我投标的项目_files/u463_line.png');
+}
+
+.u463_line {
+    position:absolute;
+    left:4px;
+    top:0px;
+    width:3px;
+    height:78px;
+}
+
+.u463 {
+    position:absolute;
+    left:793px;
+    top:688px;
+    width:10px;
+    height:78px;
+    
+}
+
+.u464_line {
+    background-image: url('../我投标的项目_files/u464_line.png');
+}
+
+.u464_line {
+    position:absolute;
+    left:4px;
+    top:0px;
+    width:3px;
+    height:78px;
+}
+
+.u464 {
+    position:absolute;
+    left:888px;
+    top:688px;
+    width:10px;
+    height:78px;
+    
+}
+
+.u465_line {
+    background-image: url('../我投标的项目_files/u465_line.png');
+}
+
+.u465_line {
+    position:absolute;
+    left:4px;
+    top:0px;
+    width:3px;
+    height:78px;
+}
+
+.u465 {
+    position:absolute;
+    left:961px;
+    top:688px;
+    width:10px;
+    height:78px;
+    
+}
+
+.u466_line {
+    background-image: url('../我投标的项目_files/u466_line.png');
+}
+
+.u466_line {
+    position:absolute;
+    left:4px;
+    top:0px;
+    width:3px;
+    height:78px;
+}
+
+.u466 {
+    position:absolute;
+    left:1081px;
+    top:688px;
+    width:10px;
+    height:78px;
+    
+}
+
+.u467 {
+    position:absolute;
+    left:1101px;
+    top:709px;
+    width:59px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u468_normal {
+    background-image: url('../我投标的项目_files/u428_normal.png');
+}
+
+.u468_container {
+    position:absolute;
+    left:222px;
+    top:550px;
+    width:969px;
+    height:108px;
+}
+
+#u468_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:975px;
+    height:114px;
+}
+
+.u469 {
+    position:absolute;
+    left:2px;
+    top:46px;
+    width:965px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u470_normal {
+    background-image: url('../我投标的项目_files/u430_normal.png');
+}
+
+.u470_container {
+    position:absolute;
+    left:222px;
+    top:550px;
+    width:969px;
+    height:20px;
+}
+
+#u470_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:975px;
+    height:26px;
+}
+
+.u471 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:965px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u472 {
+    position:absolute;
+    left:230px;
+    top:552px;
+    width:140px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u473_normal {
+    background-image: url('../我投标的项目_files/placeholder_u433_normal.png');
+}
+
+.u473_container {
+    position:absolute;
+    left:261px;
+    top:588px;
+    width:40px;
+    height:40px;
+}
+
+#u473_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:46px;
+    height:46px;
+}
+
+.u474 {
+    position:absolute;
+    left:2px;
+    top:4px;
+    width:36px;
+    height:32px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u475 {
+    position:absolute;
+    left:240px;
+    top:638px;
+    width:140px;
+    height:15px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u476 {
+    position:absolute;
+    left:803px;
+    top:601px;
+    width:140px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u477 {
+    position:absolute;
+    left:908px;
+    top:601px;
+    width:92px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u478 {
+    position:absolute;
+    left:1003px;
+    top:601px;
+    width:70px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u479 {
+    position:absolute;
+    left:1012px;
+    top:620px;
+    width:59px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u480_line {
+    background-image: url('../我投标的项目_files/u480_line.png');
+}
+
+.u480_line {
+    position:absolute;
+    left:4px;
+    top:0px;
+    width:3px;
+    height:78px;
+}
+
+.u480 {
+    position:absolute;
+    left:793px;
+    top:580px;
+    width:10px;
+    height:78px;
+    
+}
+
+.u481_line {
+    background-image: url('../我投标的项目_files/u481_line.png');
+}
+
+.u481_line {
+    position:absolute;
+    left:4px;
+    top:0px;
+    width:3px;
+    height:78px;
+}
+
+.u481 {
+    position:absolute;
+    left:888px;
+    top:580px;
+    width:10px;
+    height:78px;
+    
+}
+
+.u482_line {
+    background-image: url('../我投标的项目_files/u482_line.png');
+}
+
+.u482_line {
+    position:absolute;
+    left:4px;
+    top:0px;
+    width:3px;
+    height:78px;
+}
+
+.u482 {
+    position:absolute;
+    left:961px;
+    top:580px;
+    width:10px;
+    height:78px;
+    
+}
+
+.u483_line {
+    background-image: url('../我投标的项目_files/u483_line.png');
+}
+
+.u483_line {
+    position:absolute;
+    left:4px;
+    top:0px;
+    width:3px;
+    height:78px;
+}
+
+.u483 {
+    position:absolute;
+    left:1081px;
+    top:580px;
+    width:10px;
+    height:78px;
+    
+}
+
+.u484 {
+    position:absolute;
+    left:1101px;
+    top:601px;
+    width:59px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u485_normal {
+    background-image: url('../我投标的项目_files/u428_normal.png');
+}
+
+.u485_container {
+    position:absolute;
+    left:222px;
+    top:766px;
+    width:969px;
+    height:108px;
+}
+
+#u485_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:975px;
+    height:114px;
+}
+
+.u486 {
+    position:absolute;
+    left:2px;
+    top:46px;
+    width:965px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u487_normal {
+    background-image: url('../我投标的项目_files/u430_normal.png');
+}
+
+.u487_container {
+    position:absolute;
+    left:222px;
+    top:766px;
+    width:969px;
+    height:20px;
+}
+
+#u487_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:975px;
+    height:26px;
+}
+
+.u488 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:965px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u489 {
+    position:absolute;
+    left:230px;
+    top:768px;
+    width:140px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u490_normal {
+    background-image: url('../我投标的项目_files/placeholder_u433_normal.png');
+}
+
+.u490_container {
+    position:absolute;
+    left:261px;
+    top:804px;
+    width:40px;
+    height:40px;
+}
+
+#u490_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:46px;
+    height:46px;
+}
+
+.u491 {
+    position:absolute;
+    left:2px;
+    top:4px;
+    width:36px;
+    height:32px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u492 {
+    position:absolute;
+    left:240px;
+    top:854px;
+    width:140px;
+    height:15px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u493 {
+    position:absolute;
+    left:803px;
+    top:817px;
+    width:140px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u494 {
+    position:absolute;
+    left:908px;
+    top:817px;
+    width:92px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u495 {
+    position:absolute;
+    left:1011px;
+    top:817px;
+    width:70px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u496 {
+    position:absolute;
+    left:1012px;
+    top:836px;
+    width:59px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u497_line {
+    background-image: url('../我投标的项目_files/u497_line.png');
+}
+
+.u497_line {
+    position:absolute;
+    left:4px;
+    top:0px;
+    width:3px;
+    height:78px;
+}
+
+.u497 {
+    position:absolute;
+    left:793px;
+    top:796px;
+    width:10px;
+    height:78px;
+    
+}
+
+.u498_line {
+    background-image: url('../我投标的项目_files/u498_line.png');
+}
+
+.u498_line {
+    position:absolute;
+    left:4px;
+    top:0px;
+    width:3px;
+    height:78px;
+}
+
+.u498 {
+    position:absolute;
+    left:888px;
+    top:796px;
+    width:10px;
+    height:78px;
+    
+}
+
+.u499_line {
+    background-image: url('../我投标的项目_files/u499_line.png');
+}
+
+.u499_line {
+    position:absolute;
+    left:4px;
+    top:0px;
+    width:3px;
+    height:78px;
+}
+
+.u499 {
+    position:absolute;
+    left:961px;
+    top:796px;
+    width:10px;
+    height:78px;
+    
+}
+
+.u500_line {
+    background-image: url('../我投标的项目_files/u500_line.png');
+}
+
+.u500_line {
+    position:absolute;
+    left:4px;
+    top:0px;
+    width:3px;
+    height:78px;
+}
+
+.u500 {
+    position:absolute;
+    left:1081px;
+    top:796px;
+    width:10px;
+    height:78px;
+    
+}
+
+.u501 {
+    position:absolute;
+    left:1101px;
+    top:817px;
+    width:59px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u502_line {
+    background-image: url('../我投标的项目_files/u502_line.png');
+}
+
+.u502_line {
+    position:absolute;
+    left:0px;
+    top:4px;
+    width:969px;
+    height:3px;
+}
+
+.u502 {
+    position:absolute;
+    left:222px;
+    top:430px;
+    width:969px;
+    height:10px;
+    
+}
+
+.u503 {
+    position:absolute;
+    left:396px;
+    top:444px;
+    width:190px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u504 {
+    position:absolute;
+    left:586px;
+    top:444px;
+    width:190px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u505 {
+    position:absolute;
+    left:396px;
+    top:550px;
+    width:190px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u506 {
+    position:absolute;
+    left:586px;
+    top:550px;
+    width:190px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u507 {
+    position:absolute;
+    left:396px;
+    top:662px;
+    width:190px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u508 {
+    position:absolute;
+    left:586px;
+    top:662px;
+    width:190px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u509 {
+    position:absolute;
+    left:396px;
+    top:768px;
+    width:190px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u510 {
+    position:absolute;
+    left:586px;
+    top:768px;
+    width:190px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u511_normal {
+    background-image: url('../我投标的项目_files/u428_normal.png');
+}
+
+.u511_container {
+    position:absolute;
+    left:222px;
+    top:874px;
+    width:969px;
+    height:108px;
+}
+
+#u511_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:975px;
+    height:114px;
+}
+
+.u512 {
+    position:absolute;
+    left:2px;
+    top:46px;
+    width:965px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u513_normal {
+    background-image: url('../我投标的项目_files/u430_normal.png');
+}
+
+.u513_container {
+    position:absolute;
+    left:222px;
+    top:874px;
+    width:969px;
+    height:20px;
+}
+
+#u513_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:975px;
+    height:26px;
+}
+
+.u514 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:965px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u515 {
+    position:absolute;
+    left:230px;
+    top:876px;
+    width:140px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u516_normal {
+    background-image: url('../我投标的项目_files/placeholder_u433_normal.png');
+}
+
+.u516_container {
+    position:absolute;
+    left:261px;
+    top:912px;
+    width:40px;
+    height:40px;
+}
+
+#u516_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:46px;
+    height:46px;
+}
+
+.u517 {
+    position:absolute;
+    left:2px;
+    top:4px;
+    width:36px;
+    height:32px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u518 {
+    position:absolute;
+    left:240px;
+    top:962px;
+    width:140px;
+    height:15px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u519 {
+    position:absolute;
+    left:803px;
+    top:925px;
+    width:140px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u520 {
+    position:absolute;
+    left:908px;
+    top:925px;
+    width:92px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u521 {
+    position:absolute;
+    left:996px;
+    top:925px;
+    width:70px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u522 {
+    position:absolute;
+    left:1012px;
+    top:944px;
+    width:59px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u523_line {
+    background-image: url('../我投标的项目_files/u523_line.png');
+}
+
+.u523_line {
+    position:absolute;
+    left:4px;
+    top:0px;
+    width:3px;
+    height:78px;
+}
+
+.u523 {
+    position:absolute;
+    left:793px;
+    top:904px;
+    width:10px;
+    height:78px;
+    
+}
+
+.u524_line {
+    background-image: url('../我投标的项目_files/u524_line.png');
+}
+
+.u524_line {
+    position:absolute;
+    left:4px;
+    top:0px;
+    width:3px;
+    height:78px;
+}
+
+.u524 {
+    position:absolute;
+    left:888px;
+    top:904px;
+    width:10px;
+    height:78px;
+    
+}
+
+.u525_line {
+    background-image: url('../我投标的项目_files/u525_line.png');
+}
+
+.u525_line {
+    position:absolute;
+    left:4px;
+    top:0px;
+    width:3px;
+    height:78px;
+}
+
+.u525 {
+    position:absolute;
+    left:961px;
+    top:904px;
+    width:10px;
+    height:78px;
+    
+}
+
+.u526_line {
+    background-image: url('../我投标的项目_files/u526_line.png');
+}
+
+.u526_line {
+    position:absolute;
+    left:4px;
+    top:0px;
+    width:3px;
+    height:78px;
+}
+
+.u526 {
+    position:absolute;
+    left:1081px;
+    top:904px;
+    width:10px;
+    height:78px;
+    
+}
+
+.u527 {
+    position:absolute;
+    left:1118px;
+    top:925px;
+    width:59px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u528 {
+    position:absolute;
+    left:396px;
+    top:876px;
+    width:190px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u529 {
+    position:absolute;
+    left:586px;
+    top:876px;
+    width:190px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u530_normal {
+    background-image: url('../我投标的项目_files/u428_normal.png');
+}
+
+.u530_container {
+    position:absolute;
+    left:222px;
+    top:982px;
+    width:969px;
+    height:108px;
+}
+
+#u530_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:975px;
+    height:114px;
+}
+
+.u531 {
+    position:absolute;
+    left:2px;
+    top:46px;
+    width:965px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u532_normal {
+    background-image: url('../我投标的项目_files/u430_normal.png');
+}
+
+.u532_container {
+    position:absolute;
+    left:222px;
+    top:982px;
+    width:969px;
+    height:20px;
+}
+
+#u532_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:975px;
+    height:26px;
+}
+
+.u533 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:965px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u534 {
+    position:absolute;
+    left:230px;
+    top:984px;
+    width:140px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u535_normal {
+    background-image: url('../我投标的项目_files/placeholder_u433_normal.png');
+}
+
+.u535_container {
+    position:absolute;
+    left:261px;
+    top:1020px;
+    width:40px;
+    height:40px;
+}
+
+#u535_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:46px;
+    height:46px;
+}
+
+.u536 {
+    position:absolute;
+    left:2px;
+    top:4px;
+    width:36px;
+    height:32px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u537 {
+    position:absolute;
+    left:240px;
+    top:1070px;
+    width:140px;
+    height:15px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u538 {
+    position:absolute;
+    left:803px;
+    top:1033px;
+    width:140px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u539 {
+    position:absolute;
+    left:908px;
+    top:1033px;
+    width:92px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u540 {
+    position:absolute;
+    left:996px;
+    top:1033px;
+    width:70px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u541 {
+    position:absolute;
+    left:1012px;
+    top:1052px;
+    width:59px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u542_line {
+    background-image: url('../我投标的项目_files/u542_line.png');
+}
+
+.u542_line {
+    position:absolute;
+    left:4px;
+    top:0px;
+    width:3px;
+    height:78px;
+}
+
+.u542 {
+    position:absolute;
+    left:793px;
+    top:1012px;
+    width:10px;
+    height:78px;
+    
+}
+
+.u543_line {
+    background-image: url('../我投标的项目_files/u543_line.png');
+}
+
+.u543_line {
+    position:absolute;
+    left:4px;
+    top:0px;
+    width:3px;
+    height:78px;
+}
+
+.u543 {
+    position:absolute;
+    left:888px;
+    top:1012px;
+    width:10px;
+    height:78px;
+    
+}
+
+.u544_line {
+    background-image: url('../我投标的项目_files/u544_line.png');
+}
+
+.u544_line {
+    position:absolute;
+    left:4px;
+    top:0px;
+    width:3px;
+    height:78px;
+}
+
+.u544 {
+    position:absolute;
+    left:961px;
+    top:1012px;
+    width:10px;
+    height:78px;
+    
+}
+
+.u545_line {
+    background-image: url('../我投标的项目_files/u545_line.png');
+}
+
+.u545_line {
+    position:absolute;
+    left:4px;
+    top:0px;
+    width:3px;
+    height:78px;
+}
+
+.u545 {
+    position:absolute;
+    left:1081px;
+    top:1012px;
+    width:10px;
+    height:78px;
+    
+}
+
+.u546 {
+    position:absolute;
+    left:1107px;
+    top:1033px;
+    width:59px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u547 {
+    position:absolute;
+    left:396px;
+    top:984px;
+    width:190px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u548 {
+    position:absolute;
+    left:586px;
+    top:984px;
+    width:190px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+#u549 {
+    position:absolute;
+    left:898px;
+    top:1130px;
+    width:300px;
+    height:26px
+}
+
+.u550_normal {
+    background-image: url('../我投标的项目_files/u302_normal.png');
+}
+
+.u550_container {
+    position:absolute;
+    left:0px;
+    top:0px;
+    width:20px;
+    height:21px;
+}
+
+#u550_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:26px;
+    height:27px;
+}
+
+.u551 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:16px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u552_normal {
+    background-image: url('../我投标的项目_files/u302_normal.png');
+}
+
+.u552_container {
+    position:absolute;
+    left:20px;
+    top:0px;
+    width:20px;
+    height:21px;
+}
+
+#u552_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:26px;
+    height:27px;
+}
+
+.u553 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:16px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u554_normal {
+    background-image: url('../我投标的项目_files/u302_normal.png');
+}
+
+.u554_container {
+    position:absolute;
+    left:40px;
+    top:0px;
+    width:20px;
+    height:21px;
+}
+
+#u554_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:26px;
+    height:27px;
+}
+
+.u555 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:16px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u556_normal {
+    background-image: url('../我投标的项目_files/u302_normal.png');
+}
+
+.u556_container {
+    position:absolute;
+    left:60px;
+    top:0px;
+    width:20px;
+    height:21px;
+}
+
+#u556_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:26px;
+    height:27px;
+}
+
+.u557 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:16px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u558_normal {
+    background-image: url('../我投标的项目_files/u302_normal.png');
+}
+
+.u558_container {
+    position:absolute;
+    left:80px;
+    top:0px;
+    width:20px;
+    height:21px;
+}
+
+#u558_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:26px;
+    height:27px;
+}
+
+.u559 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:16px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u560_normal {
+    background-image: url('../我投标的项目_files/u302_normal.png');
+}
+
+.u560_container {
+    position:absolute;
+    left:100px;
+    top:0px;
+    width:20px;
+    height:21px;
+}
+
+#u560_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:26px;
+    height:27px;
+}
+
+.u561 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:16px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u562_normal {
+    background-image: url('../我投标的项目_files/u314_normal.png');
+}
+
+.u562_container {
+    position:absolute;
+    left:120px;
+    top:0px;
+    width:95px;
+    height:21px;
+}
+
+#u562_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:101px;
+    height:27px;
+}
+
+.u563 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:91px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u564_normal {
+    background-image: url('../我投标的项目_files/u316_normal.png');
+}
+
+.u564_container {
+    position:absolute;
+    left:215px;
+    top:0px;
+    width:28px;
+    height:21px;
+}
+
+#u564_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:34px;
+    height:27px;
+}
+
+.u565 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:24px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u566_normal {
+    background-image: url('../我投标的项目_files/u318_normal.png');
+}
+
+.u566_container {
+    position:absolute;
+    left:243px;
+    top:0px;
+    width:29px;
+    height:21px;
+}
+
+#u566_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:35px;
+    height:27px;
+}
+
+.u567 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:25px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u568_normal {
+    background-image: url('../我投标的项目_files/u320_normal.png');
+}
+
+.u568_container {
+    position:absolute;
+    left:272px;
+    top:0px;
+    width:23px;
+    height:21px;
+}
+
+#u568_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:29px;
+    height:27px;
+}
+
+.u569 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:19px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u570_normal {
+    background-image: url('../我投标的项目_files/u570_normal.png');
+}
+
+.u570_container {
+    position:absolute;
+    left:333px;
+    top:332px;
+    width:80px;
+    height:20px;
+}
+
+#u570_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:86px;
+    height:26px;
+}
+
+.u571 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:76px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u572_normal {
+    background-image: url('../我投标的项目_files/u572_normal.png');
+}
+
+.u572_container {
+    position:absolute;
+    left:218px;
+    top:332px;
+    width:115px;
+    height:20px;
+}
+
+#u572_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:121px;
+    height:26px;
+}
+
+.u573 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:111px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u574_normal {
+    background-image: url('../我投标的项目_files/u570_normal.png');
+}
+
+.u574_container {
+    position:absolute;
+    left:413px;
+    top:332px;
+    width:80px;
+    height:20px;
+}
+
+#u574_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:86px;
+    height:26px;
+}
+
+.u575 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:76px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u576_normal {
+    background-image: url('../我投标的项目_files/u576_normal.png');
+}
+
+.u576_container {
+    position:absolute;
+    left:263px;
+    top:352px;
+    width:15px;
+    height:10px;
+}
+
+#u576_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:21px;
+    height:16px;
+}
+
+.u577 {
+    position:absolute;
+    left:2px;
+    top:-3px;
+    width:11px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u578_normal {
+    background-image: url('../我投标的项目_files/u578_normal.png');
+}
+
+.u578_container {
+    position:absolute;
+    left:493px;
+    top:332px;
+    width:78px;
+    height:20px;
+}
+
+#u578_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:84px;
+    height:26px;
+}
+
+.u579 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:74px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u580_normal {
+    background-image: url('../我投标的项目_files/u570_normal.png');
+}
+
+.u580_container {
+    position:absolute;
+    left:571px;
+    top:332px;
+    width:80px;
+    height:20px;
+}
+
+#u580_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:86px;
+    height:26px;
+}
+
+.u581 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:76px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u582_normal {
+    background-image: url('../我投标的项目_files/u582_normal.png');
+}
+
+.u582_container {
+    position:absolute;
+    left:651px;
+    top:332px;
+    width:92px;
+    height:20px;
+}
+
+#u582_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:98px;
+    height:26px;
+}
+
+.u583 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:88px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u584_mouseOver {
+    background-image: url('../resources/images/transparent.gif');
+}
+
+.u584_normal {
+    background-image: url('../resources/images/transparent.gif');
+}
+
+.u584_container {
+    position:absolute;
+    left:320px;
+    top:491px;
+    width:500px;
+    height:20px;
+}
+
+#u584_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:506px;
+    height:26px;
+}
+
+.u585 {
+    position:absolute;
+    left:2px;
+    top:0px;
+    width:496px;
+    height:19px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u586_mouseOver {
+    background-image: url('../resources/images/transparent.gif');
+}
+
+.u586_normal {
+    background-image: url('../resources/images/transparent.gif');
+}
+
+.u586_container {
+    position:absolute;
+    left:320px;
+    top:599px;
+    width:500px;
+    height:20px;
+}
+
+#u586_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:506px;
+    height:26px;
+}
+
+.u587 {
+    position:absolute;
+    left:2px;
+    top:0px;
+    width:496px;
+    height:19px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u588_mouseOver {
+    background-image: url('../resources/images/transparent.gif');
+}
+
+.u588_normal {
+    background-image: url('../resources/images/transparent.gif');
+}
+
+.u588_container {
+    position:absolute;
+    left:320px;
+    top:708px;
+    width:500px;
+    height:20px;
+}
+
+#u588_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:506px;
+    height:26px;
+}
+
+.u589 {
+    position:absolute;
+    left:2px;
+    top:0px;
+    width:496px;
+    height:19px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u590_mouseOver {
+    background-image: url('../resources/images/transparent.gif');
+}
+
+.u590_normal {
+    background-image: url('../resources/images/transparent.gif');
+}
+
+.u590_container {
+    position:absolute;
+    left:320px;
+    top:815px;
+    width:500px;
+    height:20px;
+}
+
+#u590_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:506px;
+    height:26px;
+}
+
+.u591 {
+    position:absolute;
+    left:2px;
+    top:0px;
+    width:496px;
+    height:19px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u592_mouseOver {
+    background-image: url('../resources/images/transparent.gif');
+}
+
+.u592_normal {
+    background-image: url('../resources/images/transparent.gif');
+}
+
+.u592_container {
+    position:absolute;
+    left:320px;
+    top:924px;
+    width:500px;
+    height:20px;
+}
+
+#u592_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:506px;
+    height:26px;
+}
+
+.u593 {
+    position:absolute;
+    left:2px;
+    top:0px;
+    width:496px;
+    height:19px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u594_mouseOver {
+    background-image: url('../resources/images/transparent.gif');
+}
+
+.u594_normal {
+    background-image: url('../resources/images/transparent.gif');
+}
+
+.u594_container {
+    position:absolute;
+    left:320px;
+    top:1029px;
+    width:500px;
+    height:20px;
+}
+
+#u594_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:506px;
+    height:26px;
+}
+
+.u595 {
+    position:absolute;
+    left:2px;
+    top:0px;
+    width:496px;
+    height:19px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u596_normal {
+    background-image: url('../我投标的项目_files/u596_normal.png');
+}
+
+.u596_container {
+    position:absolute;
+    left:1238px;
+    top:484px;
+    width:320px;
+    height:56px;
+}
+
+#u596_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:326px;
+    height:62px;
+}
+
+.u597 {
+    position:absolute;
+    left:2px;
+    top:20px;
+    width:316px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u598_normal {
+    background-image: url('../我投标的项目_files/u598_normal.png');
+}
+
+.u598_container {
+    position:absolute;
+    left:1236px;
+    top:482px;
+    width:320px;
+    height:56px;
+}
+
+#u598_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:326px;
+    height:62px;
+}
+
+.u599 {
+    position:absolute;
+    left:2px;
+    top:20px;
+    width:316px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u600_normal {
+    background-image: url('../我投标的项目_files/u600_normal.png');
+}
+
+.u600_container {
+    position:absolute;
+    left:1221px;
+    top:495px;
+    width:15px;
+    height:30px;
+}
+
+#u600_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:21px;
+    height:36px;
+}
+
+.u601 {
+    position:absolute;
+    left:2px;
+    top:7px;
+    width:11px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u602 {
+    position:absolute;
+    left:1247px;
+    top:493px;
+    width:270px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u603 {
+    position:absolute;
+    left:1247px;
+    top:512px;
+    width:270px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u604_line {
+    background-image: url('../我投标的项目_files/u604_line.png');
+}
+
+.u604_line {
+    position:absolute;
+    left:4px;
+    top:0px;
+    width:3px;
+    height:28px;
+}
+
+.u604 {
+    position:absolute;
+    left:1231px;
+    top:496px;
+    width:10px;
+    height:28px;
+    
+}
+

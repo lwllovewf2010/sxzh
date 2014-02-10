@@ -3,6 +3,8 @@ package com.sanxian.sxzhuanhuan.entity;
 
 import java.io.Serializable;
 
+import com.sanxian.sxzhuanhuan.message.xmpp.XmppUtils;
+
 /**
  * 登录的用户信息
  *
@@ -33,11 +35,43 @@ public class UserInfo implements Serializable{
 	//好友模块
 	//距离
 	String distance = "";
+	public String getJid() {
+		return getUid()+"@"+XmppUtils.SERVER_NAME;
+	}
+	public void setJid(String jid) {
+		this.jid = jid;
+	}
 	//职位
 	String position = "";
 	//是否在线
 	String isonline = "";
+	String gender="";//性别
+	String signature="";//个性签名
 	
+	private String jid;
+	
+	
+
+	String token="";
+	public String getToken() {
+		return token;
+	}
+	public void setToken(String token) {
+		this.token = token;
+	}
+
+	public String getSignature() {
+		return signature;
+	}
+	public void setSignature(String signature) {
+		this.signature = signature;
+	}
+	public String getGender() {
+		return gender;
+	}
+	public void setGender(String gender) {
+		this.gender = gender;
+	}
 	// zhangfl
 	/**加入时间 */
 	String jointime = "" ;
@@ -52,7 +86,6 @@ public class UserInfo implements Serializable{
 	public void setStatus(String status) {
 		this.status = status;
 	}
-	String fullname = "";
 	//时间(fan加)
 	String status="";
 	String privatestr=""; 
@@ -70,7 +103,7 @@ public class UserInfo implements Serializable{
 		this.city = city;
 	}
 	String dateline="";
-	private String realName;
+	private String realName;//真实姓名
 	public String getRealName() {
 		return realName;
 	}
@@ -83,12 +116,7 @@ public class UserInfo implements Serializable{
 	public void setDateline(String dateline) {
 		this.dateline = dateline;
 	}
-	public String getFullname() {
-		return fullname;
-	}
-	public void setFullname(String fullname) {
-		this.fullname = fullname;
-	}
+
 	public String getIsonline() {
 		return isonline;
 	}

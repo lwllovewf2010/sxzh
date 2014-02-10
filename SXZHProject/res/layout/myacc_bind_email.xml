@@ -19,7 +19,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" >
+            android:orientation="vertical"
+            android:visibility="gone" >
 
             <TextView
                 android:layout_width="wrap_content"
@@ -40,18 +41,14 @@
                 android:layout_height="wrap_content"
                 android:hint="@string/input_oldemail_hint"
                 android:textColor="@color/black"
-                android:textSize="17sp" >
-
-                <requestFocus />
-            </EditText>
+                android:textSize="17sp" />
         </LinearLayout>
          
 
         <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" 
-            android:layout_marginTop="25dip">
+            android:orientation="vertical">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -61,21 +58,24 @@
                 android:textSize="17sp" />
 
             <EditText
+                android:id="@+id/input_email"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/input_newemail_hint"
+                android:inputType="textEmailAddress"
                 android:textColor="@color/black"
                 android:textSize="17sp" />
         </LinearLayout>
 
         <Button
+            android:id="@+id/send_link_btn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dip"
             android:gravity="center"
             android:text="@string/send_link_btn"
             android:textColor="@color/black"
-            android:textSize="15sp" />
+            android:textSize="15sp"/>
     </LinearLayout>
 
 </LinearLayout>

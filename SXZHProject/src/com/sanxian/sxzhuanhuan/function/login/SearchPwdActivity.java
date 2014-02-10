@@ -128,7 +128,7 @@ public class SearchPwdActivity extends BaseActivity implements OnClickListener ,
 				System.out.println("next");
 //				checkPhoneVertifyCode() ;
 				
-				input.put("user_con", "13811689766") ; // etTelephone.getText().toString()
+				input.put("user_con",  etTelephone.getText().toString() ) ;
 				input.put("virify_code", etVertifyCode.getText().toString() ) ; //"898635") ;
 				api.checkVertifyCode(input, this, Constant.REQUESTCODE.CHECK_VERTIFY_CODE_REQUEST) ;
 				break ;
@@ -142,7 +142,7 @@ public class SearchPwdActivity extends BaseActivity implements OnClickListener ,
 			tvShowInfo.setTextSize(12.0f) ;
 			tvShowInfo.setText(Html.fromHtml("<font color='red'>" + getResources().getString(R.string.search_pwd_tv_vertify_info) + "</font>")) ;
 			
-			input.put("mobile", "18689221661") ; //etTelephone.getText().toString().trim()
+			input.put("mobile",etTelephone.getText().toString().trim() ) ;
 			api.sendVertifyCode(input, this, Constant.REQUESTCODE.SEND_VERTIFY_CODE_REQUEST) ;
 			
 			tempThread = new Thread(timeThread) ;

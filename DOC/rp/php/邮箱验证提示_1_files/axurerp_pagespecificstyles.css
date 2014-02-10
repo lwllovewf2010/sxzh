@@ -1,0 +1,596 @@
+﻿body {
+    margin: 0px;
+}
+
+div {
+    background-repeat: no-repeat;
+}
+
+.raw_image {
+    width: 100%;
+    height: 100%;
+}
+
+.preload {
+    display: none;
+}
+#main_container {
+}
+
+.form_sketch {
+    border-color: transparent;
+    background-color: transparent;
+}
+
+.u0_normal {
+    background-image: url('../邮箱验证提示_1_files/u0_normal.png');
+}
+
+.u0_container {
+    position:absolute;
+    left:80px;
+    top:153px;
+    width:1024px;
+    height:511px;
+}
+
+#u0_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:1030px;
+    height:517px;
+}
+
+.u1 {
+    position:absolute;
+    left:2px;
+    top:248px;
+    width:1020px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u2_normal {
+    background-image: url('../前台页尾_files/u248_normal.png');
+}
+
+.u2_container {
+    position:absolute;
+    left:0px;
+    top:729px;
+    width:1201px;
+    height:80px;
+}
+
+#u2_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:1207px;
+    height:86px;
+}
+
+.u3 {
+    position:absolute;
+    left:2px;
+    top:32px;
+    width:1197px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u4 {
+    position:absolute;
+    left:58px;
+    top:745px;
+    width:1002px;
+    height:48px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u6_normal {
+    background-image: url('../邮箱验证提示_1_files/u6_normal.png');
+}
+
+.u6_container {
+    position:absolute;
+    left:424px;
+    top:176px;
+    width:336px;
+    height:37px;
+}
+
+#u6_img {
+    position:absolute;
+    left:0px;
+    top:0px;
+    width:336px;
+    height:37px;
+}
+
+.u7 {
+    position:absolute;
+    left:2px;
+    top:10px;
+    width:332px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u8_normal {
+    background-image: url('../邮箱验证提示_1_files/u8_normal.png');
+}
+
+.u8_container {
+    position:absolute;
+    left:760px;
+    top:176px;
+    width:337px;
+    height:37px;
+}
+
+#u8_img {
+    position:absolute;
+    left:0px;
+    top:0px;
+    width:337px;
+    height:37px;
+}
+
+.u9 {
+    position:absolute;
+    left:2px;
+    top:10px;
+    width:333px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u10_normal {
+    background-image: url('../邮箱验证提示_1_files/u10_normal.png');
+}
+
+.u10_container {
+    position:absolute;
+    left:93px;
+    top:176px;
+    width:331px;
+    height:37px;
+}
+
+#u10_img {
+    position:absolute;
+    left:0px;
+    top:0px;
+    width:331px;
+    height:37px;
+}
+
+.u11 {
+    position:absolute;
+    left:2px;
+    top:10px;
+    width:327px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u12 {
+    position:absolute;
+    left:109px;
+    top:186px;
+    width:150px;
+    height:17px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u13 {
+    position:absolute;
+    left:441px;
+    top:186px;
+    width:150px;
+    height:17px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u14 {
+    position:absolute;
+    left:783px;
+    top:186px;
+    width:150px;
+    height:17px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u15_line {
+    background-image: url('../邮箱验证提示_1_files/u15_line.png');
+}
+
+.u15_line {
+    position:absolute;
+    left:4px;
+    top:0px;
+    width:3px;
+    height:32px;
+}
+
+.u15 {
+    position:absolute;
+    left:394px;
+    top:59px;
+    width:10px;
+    height:32px;
+    
+}
+
+.u16 {
+    position:absolute;
+    left:415px;
+    top:60px;
+    width:150px;
+    height:24px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u17_normal {
+    background-image: url('../注册登录页头_files/u46_normal.png');
+}
+
+.u17_container {
+    position:absolute;
+    left:29px;
+    top:32px;
+    width:179px;
+    height:86px;
+}
+
+#u17_img {
+    position:absolute;
+    left:0px;
+    top:0px;
+    width:179px;
+    height:86px;
+}
+
+.u18 {
+    position:absolute;
+    left:2px;
+    top:35px;
+    width:175px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u19_normal {
+    background-image: url('../resources/images/transparent.gif');
+}
+
+.u19_container {
+    position:absolute;
+    left:210px;
+    top:35px;
+    width:126px;
+    height:40px;
+}
+
+#u19_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:132px;
+    height:46px;
+}
+
+.u20 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:122px;
+    height:36px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u21_normal {
+    background-image: url('../resources/images/transparent.gif');
+}
+
+.u21_container {
+    position:absolute;
+    left:210px;
+    top:77px;
+    width:174px;
+    height:20px;
+}
+
+#u21_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:180px;
+    height:26px;
+}
+
+.u22 {
+    position:absolute;
+    left:2px;
+    top:0px;
+    width:170px;
+    height:21px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u24_mouseOver {
+    background-image: url('../邮箱验证提示_1_files/button_u24_mouseOver.png');
+}
+
+.u24_disabled {
+    background-image: url('../邮箱验证提示_1_files/button_u24_disabled.png');
+}
+
+.u24_normal {
+    background-image: url('../邮箱验证提示_1_files/button_u24_normal.png');
+}
+
+.u24_container {
+    position:absolute;
+    left:343px;
+    top:339px;
+    width:100px;
+    height:36px;
+}
+
+#u24_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:106px;
+    height:42px;
+}
+
+.u25 {
+    position:absolute;
+    left:2px;
+    top:10px;
+    width:96px;
+    height:17px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u26_normal {
+    background-image: url('../邮箱验证提示_1_files/u26_normal.png');
+}
+
+.u26_container {
+    position:absolute;
+    left:197px;
+    top:264px;
+    width:32px;
+    height:32px;
+}
+
+#u26_img {
+    position:absolute;
+    left:0px;
+    top:0px;
+    width:32px;
+    height:32px;
+}
+
+.u27 {
+    position:absolute;
+    left:2px;
+    top:8px;
+    width:28px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u28 {
+    position:absolute;
+    left:257px;
+    top:271px;
+    width:572px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u29 {
+    position:absolute;
+    left:257px;
+    top:302px;
+    width:390px;
+    height:14px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u30_line {
+    background-image: url('../邮箱验证提示_1_files/u30_line.png');
+}
+
+.u30_line {
+    position:absolute;
+    left:0px;
+    top:4px;
+    width:807px;
+    height:3px;
+}
+
+.u30 {
+    position:absolute;
+    left:197px;
+    top:523px;
+    width:807px;
+    height:10px;
+    
+}
+
+.u31 {
+    position:absolute;
+    left:197px;
+    top:580px;
+    width:469px;
+    height:14px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u32 {
+    position:absolute;
+    left:197px;
+    top:553px;
+    width:213px;
+    height:14px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u33 {
+    position:absolute;
+    left:197px;
+    top:606px;
+    width:469px;
+    height:14px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u34_mouseOver {
+    background-image: url('../邮箱验证提示_1_files/button_u34_mouseOver.png');
+}
+
+.u34_disabled {
+    background-image: url('../邮箱验证提示_1_files/button_u34_disabled.png');
+}
+
+.u34_normal {
+    background-image: url('../邮箱验证提示_1_files/button_u34_normal.png');
+}
+
+.u34_container {
+    position:absolute;
+    left:379px;
+    top:601px;
+    width:100px;
+    height:25px;
+}
+
+#u34_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:106px;
+    height:31px;
+}
+
+.u35 {
+    position:absolute;
+    left:2px;
+    top:4px;
+    width:96px;
+    height:17px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+

@@ -1,0 +1,667 @@
+﻿body {
+    margin: 0px;
+}
+
+div {
+    background-repeat: no-repeat;
+}
+
+.raw_image {
+    width: 100%;
+    height: 100%;
+}
+
+.preload {
+    display: none;
+}
+#main_container {
+}
+
+.form_sketch {
+    border-color: transparent;
+    background-color: transparent;
+}
+
+.u0_normal {
+    background-image: url('../前台页尾_files/u248_normal.png');
+}
+
+.u0_container {
+    position:absolute;
+    left:0px;
+    top:598px;
+    width:1201px;
+    height:80px;
+}
+
+#u0_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:1207px;
+    height:86px;
+}
+
+.u1 {
+    position:absolute;
+    left:2px;
+    top:32px;
+    width:1197px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u2 {
+    position:absolute;
+    left:58px;
+    top:614px;
+    width:1002px;
+    height:48px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u4_normal {
+    background-image: url('../支付失败页面_files/u4_normal.png');
+}
+
+.u4_container {
+    position:absolute;
+    left:158px;
+    top:228px;
+    width:949px;
+    height:336px;
+}
+
+#u4_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:955px;
+    height:342px;
+}
+
+.u5 {
+    position:absolute;
+    left:2px;
+    top:160px;
+    width:945px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u6 {
+    position:absolute;
+    left:300px;
+    top:316px;
+    width:218px;
+    height:19px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u7 {
+    position:absolute;
+    left:300px;
+    top:357px;
+    width:401px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u8 {
+    position:absolute;
+    left:300px;
+    top:419px;
+    width:218px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u9 {
+    position:absolute;
+    left:479px;
+    top:414px;
+    width:69px;
+    height:25px;
+    ;
+    ;
+    text-align: center;;
+    font-family:'Arial';
+    font-size: 13px;
+    color:#000000;
+    font-style:normal;
+    font-weight:normal;
+    text-decoration:none;
+    
+}
+
+.u10_normal {
+    background-image: url('../支付失败页面_files/u10_normal.png');
+}
+
+.u10_container {
+    position:absolute;
+    left:0px;
+    top:0px;
+    width:1199px;
+    height:20px;
+}
+
+#u10_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:1205px;
+    height:26px;
+}
+
+.u11 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:1195px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u12 {
+    position:absolute;
+    left:705px;
+    top:2px;
+    width:493px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u13_normal {
+    background-image: url('../支付失败页面_files/u13_normal.png');
+}
+
+.u13_container {
+    position:absolute;
+    left:10px;
+    top:32px;
+    width:179px;
+    height:86px;
+}
+
+#u13_img {
+    position:absolute;
+    left:0px;
+    top:0px;
+    width:179px;
+    height:86px;
+}
+
+.u14 {
+    position:absolute;
+    left:2px;
+    top:35px;
+    width:175px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u15_normal {
+    background-image: url('../resources/images/transparent.gif');
+}
+
+.u15_container {
+    position:absolute;
+    left:191px;
+    top:35px;
+    width:126px;
+    height:40px;
+}
+
+#u15_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:132px;
+    height:46px;
+}
+
+.u16 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:122px;
+    height:36px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u17_normal {
+    background-image: url('../resources/images/transparent.gif');
+}
+
+.u17_container {
+    position:absolute;
+    left:191px;
+    top:77px;
+    width:174px;
+    height:20px;
+}
+
+#u17_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:180px;
+    height:26px;
+}
+
+.u18 {
+    position:absolute;
+    left:2px;
+    top:0px;
+    width:170px;
+    height:21px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u19_line {
+    background-image: url('../支付失败页面_files/u19_line.png');
+}
+
+.u19_line {
+    position:absolute;
+    left:0px;
+    top:4px;
+    width:1199px;
+    height:3px;
+}
+
+.u19 {
+    position:absolute;
+    left:0px;
+    top:138px;
+    width:1199px;
+    height:10px;
+    
+}
+
+.u20_normal {
+    background-image: url('../支付失败页面_files/u20_normal.png');
+}
+
+.u20_container {
+    position:absolute;
+    left:10px;
+    top:3px;
+    width:16px;
+    height:16px;
+}
+
+#u20_img {
+    position:absolute;
+    left:0px;
+    top:0px;
+    width:16px;
+    height:16px;
+}
+
+.u21 {
+    position:absolute;
+    left:2px;
+    top:0px;
+    width:12px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u22 {
+    position:absolute;
+    left:26px;
+    top:4px;
+    width:46px;
+    height:14px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u23 {
+    position:absolute;
+    left:201px;
+    top:5px;
+    width:45px;
+    height:15px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u24 {
+    position:absolute;
+    left:74px;
+    top:4px;
+    width:141px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u25_normal {
+    background-image: url('../支付失败页面_files/u25_normal.png');
+}
+
+.u25_container {
+    position:absolute;
+    left:426px;
+    top:55px;
+    width:105px;
+    height:40px;
+}
+
+#u25_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:111px;
+    height:46px;
+}
+
+.u26 {
+    position:absolute;
+    left:2px;
+    top:12px;
+    width:101px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u27_line {
+    background-image: url('../支付失败页面_files/u27_line.png');
+}
+
+.u27_line {
+    position:absolute;
+    left:0px;
+    top:4px;
+    width:60px;
+    height:3px;
+}
+
+.u27 {
+    position:absolute;
+    left:531px;
+    top:70px;
+    width:60px;
+    height:10px;
+    
+}
+
+.u28_normal {
+    background-image: url('../支付失败页面_files/u28_normal.png');
+}
+
+.u28_container {
+    position:absolute;
+    left:591px;
+    top:55px;
+    width:105px;
+    height:40px;
+}
+
+#u28_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:111px;
+    height:46px;
+}
+
+.u29 {
+    position:absolute;
+    left:2px;
+    top:12px;
+    width:101px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u30_line {
+    background-image: url('../支付失败页面_files/u30_line.png');
+}
+
+.u30_line {
+    position:absolute;
+    left:0px;
+    top:4px;
+    width:60px;
+    height:3px;
+}
+
+.u30 {
+    position:absolute;
+    left:696px;
+    top:70px;
+    width:60px;
+    height:10px;
+    
+}
+
+.u31_normal {
+    background-image: url('../支付失败页面_files/u25_normal.png');
+}
+
+.u31_container {
+    position:absolute;
+    left:756px;
+    top:55px;
+    width:105px;
+    height:40px;
+}
+
+#u31_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:111px;
+    height:46px;
+}
+
+.u32 {
+    position:absolute;
+    left:2px;
+    top:12px;
+    width:101px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u33_line {
+    background-image: url('../支付失败页面_files/u33_line.png');
+}
+
+.u33_line {
+    position:absolute;
+    left:0px;
+    top:4px;
+    width:60px;
+    height:3px;
+}
+
+.u33 {
+    position:absolute;
+    left:861px;
+    top:70px;
+    width:60px;
+    height:10px;
+    
+}
+
+.u34_normal {
+    background-image: url('../支付失败页面_files/u34_normal.png');
+}
+
+.u34_container {
+    position:absolute;
+    left:921px;
+    top:55px;
+    width:105px;
+    height:40px;
+}
+
+#u34_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:111px;
+    height:46px;
+}
+
+.u35 {
+    position:absolute;
+    left:2px;
+    top:12px;
+    width:101px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u36_line {
+    background-image: url('../支付失败页面_files/u36_line.png');
+}
+
+.u36_line {
+    position:absolute;
+    left:0px;
+    top:4px;
+    width:60px;
+    height:3px;
+}
+
+.u36 {
+    position:absolute;
+    left:1026px;
+    top:70px;
+    width:60px;
+    height:10px;
+    
+}
+
+.u37_normal {
+    background-image: url('../支付失败页面_files/u25_normal.png');
+}
+
+.u37_container {
+    position:absolute;
+    left:1086px;
+    top:55px;
+    width:105px;
+    height:40px;
+}
+
+#u37_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:111px;
+    height:46px;
+}
+
+.u38 {
+    position:absolute;
+    left:2px;
+    top:12px;
+    width:101px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+

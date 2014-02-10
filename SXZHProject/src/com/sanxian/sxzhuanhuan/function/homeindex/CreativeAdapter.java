@@ -9,6 +9,7 @@ import com.sanxian.sxzhuanhuan.function.homeindex.originality.OriginalityActivit
 
 import android.content.Context;
 import android.content.Intent;
+import android.text.Html;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -92,7 +93,7 @@ public class CreativeAdapter extends BaseAdapter implements OnClickListener{
 	
 	private void setData(ViewHolder holder , CreativeInfo creativeInfo) {
 		holder.tvCreativeName.setText(creativeInfo.getOrg_name()) ;
-		holder.tvCreativeDesc.setText(creativeInfo.getOrg_desc()) ;
+		holder.tvCreativeDesc.setText(creativeInfo.getOrg_explain()) ;
 		holder.tvCreativeCollected.setText(creativeInfo.getComment_nums()) ;
 		holder.tvCreativeAnswer.setText(creativeInfo.getFavorite_nums()) ;
 		//added by yuanqk

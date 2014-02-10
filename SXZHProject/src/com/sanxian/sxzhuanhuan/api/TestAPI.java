@@ -62,6 +62,33 @@ public class TestAPI extends BaseAPI {
 		params.put("input", Util.toJSONObject(inputinfo));
 		requestforframeactivity("", params, HTTPMETHOD_POST, false, listener, requestCode);
 	}
+	//added by yuanqk
+	/*
+	 * {"action":"get_common_data","type":"region_province"} 
+	 */
+	public void getSortProvince(BaseFragmentActivity listener, final int requestCode) {
+		RequestParams params = new RequestParams();
+		RequestInputInfo inputinfo = new RequestInputInfo();
+		inputinfo.setAction("get_common_data");
+		inputinfo.setType("region_province");
+		inputinfo.setMcr("0");
+		params.put("input", Util.toJSONObject(inputinfo));
+		requestforframeactivity("", params, HTTPMETHOD_POST, false, listener, requestCode);
+	}
+	//added by yuanqk
+	/*
+	 * {"action":"get_common_data","type":"region_city","mcr":0,"params":{"province_id":6}}
+	 */
+	public void getSortCity(Map<String ,String> input, BaseFragmentActivity listener, final int requestCode) {
+		RequestParams params = new RequestParams();
+		RequestInputInfo inputinfo = new RequestInputInfo();
+		inputinfo.setAction("get_common_data");
+		inputinfo.setType("region_city");
+		inputinfo.setMcr("0");
+		inputinfo.setParams(input) ;
+		params.put("input", Util.toJSONObject(inputinfo));
+		requestforframeactivity("", params, HTTPMETHOD_POST, false, listener, requestCode);
+	}
 	
 	/**
 	 * 检查用户名、手机号是否已被使用过
@@ -108,8 +135,7 @@ public class TestAPI extends BaseAPI {
 	 * @param input
 	 * @param listener
 	 * @param requestCode
-	 * {"action":"notice_mobile","type":"send_virify_mobile","mcr":0,"params":{"user_con":"18689221661"}}
-	 * {"action":"user_register","type":"get_captcha_message","mcr":0,"params":{"mobile":"18689221661"}}  //...
+	 * {"action":"user_register","type":"get_captcha_message","mcr":0,"params":{"mobile":"18689221661"}}  
 	 */
 	public void sendVertifyCode(Map<String ,String> input, BaseActivity listener, final int requestCode) {
 		RequestParams params = new RequestParams();
@@ -122,6 +148,24 @@ public class TestAPI extends BaseAPI {
 		request("", params, HTTPMETHOD_POST, false, listener, requestCode);
 	}
 	
+	/**
+	 * 修改密码
+	 * @param input
+	 * @param listener
+	 * @param requestCode
+	 * input={"action":"user_center","type":"change_password","mcr":0,
+	 * "params":{"open_id":"5_1278_539947","token":"123456","old_password":"111222","new_password":"333333"}}
+	 */
+	public void changePassword(Map<String ,String> input, BaseActivity listener, final int requestCode) {
+		RequestParams params = new RequestParams();
+		RequestInputInfo inputinfo = new RequestInputInfo();
+		inputinfo.setAction("user_center");
+		inputinfo.setType("change_password");
+		inputinfo.setMcr("0");
+		inputinfo.setParams(input) ;
+		params.put("input", Util.toJSONObject(inputinfo));
+		request("", params, HTTPMETHOD_POST, false, listener, requestCode);
+	}
 	/**
 	 * 检查用户提交的短信验证码是否有效
 	 * @param input
@@ -275,6 +319,26 @@ public class TestAPI extends BaseAPI {
 		params.put("input", Util.toJSONObject(inputinfo));
 		request("", params, HTTPMETHOD_POST, false, listener, requestCode);
 	}
+	public void operaProjects(String type , Map<String ,String> input, BaseFragment listener, final int requestCode) {
+		RequestParams params = new RequestParams();
+		RequestInputInfo inputinfo = new RequestInputInfo();
+		inputinfo.setAction("project");
+		inputinfo.setType(type);
+		inputinfo.setMcr("0");
+		inputinfo.setParams(input) ;
+		params.put("input", Util.toJSONObject(inputinfo));
+		request("", params, HTTPMETHOD_POST, false, listener, requestCode);
+	}
+	public void operaProjects(String type , Map<String ,String> input, BaseFragmentActivity listener, final int requestCode) {
+		RequestParams params = new RequestParams();
+		RequestInputInfo inputinfo = new RequestInputInfo();
+		inputinfo.setAction("project");
+		inputinfo.setType(type);
+		inputinfo.setMcr("0");
+		inputinfo.setParams(input) ;
+		params.put("input", Util.toJSONObject(inputinfo));
+		requestforframeactivity("", params, HTTPMETHOD_POST, false, listener, requestCode);
+	}
 	
 	/**
 	 * 删除项目
@@ -295,6 +359,87 @@ public class TestAPI extends BaseAPI {
 		request("", params, HTTPMETHOD_POST, false, listener, requestCode);
 	}
 	
+	/**
+	 * 创意的查找
+	 * @param type
+	 * @param input
+	 * @param listener
+	 * @param requestCode
+	 * 查找单个:input={"action":"originality","type":"get_row","mcr":0,"params":{"id": 100}}
+	 * 查找多个：input={"action":"originality","type":"search","mcr":0,"params":{"start":0,"pagesize":10,"category_id":1,"total_count":1, "title":"关键词1,关键词2"...}}
+	 * 创建一个创意:nput={"action":"originality","type":"create","mcr":0,"params":提交的各字段见接口文档
+	 */
+	public void operaCreativess(String type , Map<String ,String> input, BaseActivity listener, final int requestCode) {
+		RequestParams params = new RequestParams();
+		RequestInputInfo inputinfo = new RequestInputInfo();
+		inputinfo.setAction("originality");
+		inputinfo.setType(type);
+		inputinfo.setMcr("0");
+		inputinfo.setParams(input) ;
+		params.put("input", Util.toJSONObject(inputinfo));
+		request("", params, HTTPMETHOD_POST, false, listener, requestCode);
+	}
+	public void operaCreativess(String type , Map<String ,String> input, BaseFragment listener, final int requestCode) {
+		RequestParams params = new RequestParams();
+		RequestInputInfo inputinfo = new RequestInputInfo();
+		inputinfo.setAction("originality");
+		inputinfo.setType(type);
+		inputinfo.setMcr("0");
+		inputinfo.setParams(input) ;
+		params.put("input", Util.toJSONObject(inputinfo));
+		request("", params, HTTPMETHOD_POST, false, listener, requestCode);
+	}
+	public void operaCreativess(String type , Map<String ,String> input, BaseFragmentActivity listener, final int requestCode) {
+		RequestParams params = new RequestParams();
+		RequestInputInfo inputinfo = new RequestInputInfo();
+		inputinfo.setAction("originality");
+		inputinfo.setType(type);
+		inputinfo.setMcr("0");
+		inputinfo.setParams(input) ;
+		params.put("input", Util.toJSONObject(inputinfo));
+		requestforframeactivity("", params, HTTPMETHOD_POST, false, listener, requestCode);
+	}
 	
+	/**
+	 * 
+	 * @param type
+	 * @param input
+	 * @param listener
+	 * @param requestCode
+	 * 查找单个商品:input={"action":"goods","type":"get_row","mcr":0,"params":{"goods_id": 489, "open_id": "1_1177_469954"}}
+	 * 查找多个商品:input={"action":"goods","type":"search","mcr":0,"params":{"start":0,"pagesize":10,"mode_id":1,"total_count":1....}}
+	 */
+	public void operaProduct(String type , Map<String ,String> input, BaseActivity listener, final int requestCode) {
+		RequestParams params = new RequestParams();
+		RequestInputInfo inputinfo = new RequestInputInfo();
+		inputinfo.setAction("goods");
+		inputinfo.setType(type);
+		inputinfo.setMcr("0");
+		inputinfo.setParams(input) ;
+		params.put("input", Util.toJSONObject(inputinfo));
+		request("", params, HTTPMETHOD_POST, false, listener, requestCode);
+	}
+	
+	public void operaProduct(String type , Map<String ,String> input, BaseFragment listener, final int requestCode) {
+		RequestParams params = new RequestParams();
+		RequestInputInfo inputinfo = new RequestInputInfo();
+		inputinfo.setAction("goods");
+		inputinfo.setType(type);
+		inputinfo.setMcr("0");
+		inputinfo.setParams(input) ;
+		params.put("input", Util.toJSONObject(inputinfo));
+		request("", params, HTTPMETHOD_POST, false, listener, requestCode);
+	}
+	
+	public void operaProduct(String type , Map<String ,String> input, BaseFragmentActivity listener, final int requestCode) {
+		RequestParams params = new RequestParams();
+		RequestInputInfo inputinfo = new RequestInputInfo();
+		inputinfo.setAction("goods");
+		inputinfo.setType(type);
+		inputinfo.setMcr("0");
+		inputinfo.setParams(input) ;
+		params.put("input", Util.toJSONObject(inputinfo));
+		requestforframeactivity("", params, HTTPMETHOD_POST, false, listener, requestCode);
+	}
 	
 }

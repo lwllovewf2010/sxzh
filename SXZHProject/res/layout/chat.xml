@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.sanxian.sxzhuanhuan"
+     xmlns:my="http://schemas.android.com/apk/res/com.sanxian.sxzhuanhuan.message"
+    android:id="@+id/mainlayout"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/system_bg" >
+
+    <!-- 顶部栏 -->
+
+    <LinearLayout
+        android:id="@+id/title"
+        android:layout_width="fill_parent"
+        android:layout_height="46dp" >
+
+        <include layout="@layout/title_bar" />
+    </LinearLayout>
+
+    <!-- 正文内容 -->
+    
+    
+   
+     
+	
+    <LinearLayout
+        android:layout_below="@id/title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="47dp"
+        >
+		<!-- <HorizontalScrollView 
+	    android:layout_width="fill_parent"
+        android:layout_height="wrap_content"> -->
+          
+        
+        <ListView
+            android:id="@+id/HistoryListView"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:cacheColorHint="#00000000"
+            android:divider="@null"
+            android:paddingBottom="47dp"
+            android:scrollbars="vertical"
+            android:stackFromBottom="true"
+            android:transcriptMode="alwaysScroll" />
+      <!--   </HorizontalScrollView> -->
+    </LinearLayout>
+
+    <!-- 底部栏 -->
+	<LinearLayout android:id="@+id/toolBottomlayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#B0B0B0"
+        android:layout_alignParentBottom="true"
+        >
+       
+    <LinearLayout
+        android:id="@+id/bottomlayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#B0B0B0"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingBottom="2dp"
+        android:paddingTop="5dp" >
+	
+        <LinearLayout  android:id="@+id/ChatShowToolLinear"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp">
+            <ImageView
+            android:id="@+id/sendVoiceMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/aio_voice_nor"
+             />
+        <ImageView
+            android:id="@+id/ChatShowTool"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+		</LinearLayout>
+        <ImageView
+            android:id="@+id/FontSettingImageView"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="3.0"
+           
+            android:visibility="gone" />
+
+        <com.sanxian.sxzhuanhuan.message.CustomEmoticonEditText
+            android:id="@+id/text_editor"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.7"
+            
+            android:hint="输入消息"
+            
+             />
+	
+        <Button android:id="@+id/voiceButton"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/voice_input_bg"
+            android:layout_weight="0.65"
+            android:text="按住说话"
+            android:hint="输入消息" 
+            android:visibility="gone"
+            android:layout_marginRight="10dip"
+             />
+        
+        <Button
+            android:id="@+id/SendContentButton"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="发送"
+            android:background="@drawable/voice_input_bg" />
+    </LinearLayout>
+        <LinearLayout
+            android:id="@+id/chat_tools"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            >
+             <include layout="@layout/chat_tool" />
+        </LinearLayout>
+	</LinearLayout>
+</RelativeLayout>

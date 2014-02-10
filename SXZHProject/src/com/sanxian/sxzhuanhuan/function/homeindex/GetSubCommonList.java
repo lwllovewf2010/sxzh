@@ -32,13 +32,18 @@ public class GetSubCommonList extends BaseActivity {
 
 	private ListView common_list;
 	private String type = "";
+	private String is_get_last = "0";
 	private CommonAPI api = null;
 	private final int REQUESTCODE = 12;
 	private List<Map<String, String>> list;
 	private GetRootCommonAdapter adapter;
 	private String root_id = "";
+	private String sub_id = "";
+	private String sub_name = "";
 	private  String paramsname = "";
 	private final int RESULT_CODE = 118;
+	private final int SUB_SUB_RESULT_CODE = 60;
+	private final int SUB_SUB_REQUESTCODE = 130;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
@@ -58,6 +63,7 @@ public class GetSubCommonList extends BaseActivity {
 		if(intent != null){
 			type = getIntent().getStringExtra("type");
 			root_id = getIntent().getStringExtra("root_id");
+			is_get_last = getIntent().getStringExtra("is_get_last");
 		}
 		if("region_city".equals(type)){
 			setTitle("城市");
@@ -115,6 +121,7 @@ public class GetSubCommonList extends BaseActivity {
 							JSONObject jsonmode = array.getJSONObject(i);
 							areaMap.put("id", jsonmode.getString("id"));
 							areaMap.put("type_name", jsonmode.getString("region_name"));
+							areaMap.put("province_id", jsonmode.getString("province_id"));
 							list.add(areaMap);
 						}
 				 }
@@ -151,18 +158,48 @@ public class GetSubCommonList extends BaseActivity {
 		public void onItemClick(AdapterView<?> arg0, View arg1, int arg2,
 				long arg3) {
 			// TODO Auto-generated method stub
+			sub_name = list.get(arg2).get("type_name");
+			sub_id = list.get(arg2).get("id");
 			if(!"".equals(type)){
-				Bundle bundle = new Bundle();
-				bundle.putString("sub_id", list.get(arg2).get("id"));
-				bundle.putString("sub_name", list.get(arg2).get("type_name"));
-                bundle.putString("type",type);
-				setResult(RESULT_CODE, getIntent().putExtras(bundle));
-				finish();
+				if("region_city".equals(type)){
+					if("0".equals(is_get_last)){
+						Bundle bundle = new Bundle();
+						bundle.putString("sub_id", sub_id);
+						bundle.putString("sub_name", sub_name);
+						bundle.putString("type", type);
+						setResult(RESULT_CODE, getIntent().putExtras(bundle));
+						finish();
+					}else{
+					Intent intent = new Intent(GetSubCommonList.this,GetSubSubCommonList.class);
+					intent.putExtra("type","region_county");
+					intent.putExtra("sub_id", sub_id);
+					startActivityForResult(intent, SUB_SUB_REQUESTCODE);
+					}
+				}else{
+					Bundle bundle = new Bundle();
+					bundle.putString("sub_id", sub_id);
+					bundle.putString("sub_name",sub_name);
+	                bundle.putString("type",type);
+					setResult(RESULT_CODE, getIntent().putExtras(bundle));
+					finish();
+				}
+				
 			}
 		}
 		
 	}
-
+	@Override
+	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+		// TODO Auto-generated method stub
+		super.onActivityResult(requestCode, resultCode, data);
+		if(resultCode == SUB_SUB_RESULT_CODE){
+			Bundle bundle = data.getExtras();
+			bundle.putString("sub_id", sub_id);
+			bundle.putString("sub_name", sub_name);
+			setResult(RESULT_CODE, getIntent().putExtras(bundle));
+			finish();
+		 }
+		}
 	@Override
 	public void onClick(View v) {
 		// TODO Auto-generated method stub

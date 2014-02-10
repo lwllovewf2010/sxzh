@@ -111,7 +111,7 @@ public class RegisterStep2Activity extends BaseActivity implements OnClickListen
 		conTitle.btnLeft.setOnClickListener(this) ;
 		btnVertifyCode.setOnClickListener(this) ;
 		
-		tvVertifyInfo.setText(tvVertifyInfo.getText().toString() + phone) ;
+		tvVertifyInfo.setText(tvVertifyInfo.getText().toString() + formatPhone(phone)) ;
 		UIHelper.setTextColor((TextView)findViewById(R.id.register_tv_step_second) , getResources().getString(R.string.reg_step_first), 
 				getResources().getString(R.string.reg_step_second) ,
 				getResources().getString(R.string.reg_step_third) ,"green" , Constant.RegisterStep.STEP2) ;
@@ -184,5 +184,9 @@ public class RegisterStep2Activity extends BaseActivity implements OnClickListen
 		input.clear() ;
 		timeLimit = 0 ;
 		timeThread.interrupt() ;
+	}
+	
+	private String formatPhone(String phone) {
+		return phone.substring(0, 3) + "****" + phone.substring(7, 11) ;
 	}
 }

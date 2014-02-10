@@ -35,6 +35,7 @@ public class ProjectInfo extends MetaData {
 	private int reward_limit; // true (int) 是否限定入股人数 1=限 0=不限
 	private int reward_person; // true (int) 限定入股人数
 	private int reward_post; // true (int) 邮寄 0=不包邮 1=快递 2=平邮/EMS
+	private int reward_post_free ; //是否包邮 0=不包邮 1=大陆包邮
 	private String reward_patent_id; // false (string) 专利编号
 	private String reward_patent_name; // false (string) 专利名
 	private String project_qq; // false (string) 发起人QQ
@@ -59,8 +60,113 @@ public class ProjectInfo extends MetaData {
 	private String project_zlh ; //"project_zlh": null,
 	private String project_zlname ;//"project_zlname": null,
 	private String purchase_money ; //"purchase_money": 0,
-	private String purchase_user_num ; //"purchase_user_num": 0
+	private String purchase_user_num ; //"purchase_user_num":11,  //参与预购人数
 	
+	private String attention_nums ; //"attention_nums":111, //项目成员人数
+	private String comment_nums ; //"comment_nums":111, //评论数
+	private String project_topic_count ; //"project_topic_count":111, //话题讨论数
+    private boolean purchase_already ; // "purchase_already":true, //当前登录open_id是否参与预购 true or false
+    private String province_name ;
+    private String city_name ;
+    private String category_name ;
+    private String reward_content ;
+    
+    public int getReward_post_free() {
+		return reward_post_free;
+	}
+	public void setReward_post_free(int reward_post_free) {
+		this.reward_post_free = reward_post_free;
+	}
+	public String getProvince_name() {
+		return province_name;
+	}
+	public void setProvince_name(String province_name) {
+		this.province_name = province_name;
+	}
+	/**
+	 * @return the city_name
+	 */
+	public String getCity_name() {
+		return city_name;
+	}
+	/**
+	 * @param city_name the city_name to set
+	 */
+	public void setCity_name(String city_name) {
+		this.city_name = city_name;
+	}
+	/**
+	 * @return the category_name
+	 */
+	public String getCategory_name() {
+		return category_name;
+	}
+	/**
+	 * @param category_name the category_name to set
+	 */
+	public void setCategory_name(String category_name) {
+		this.category_name = category_name;
+	}
+	/**
+	 * @return the reward_content
+	 */
+	public String getReward_content() {
+		return reward_content;
+	}
+	/**
+	 * @param reward_content the reward_content to set
+	 */
+	public void setReward_content(String reward_content) {
+		this.reward_content = reward_content;
+	}
+	/**
+	 * @return the purchase_already
+	 */
+	public boolean isPurchase_already() {
+		return purchase_already;
+	}
+	/**
+	 * @param purchase_already the purchase_already to set
+	 */
+	public void setPurchase_already(boolean purchase_already) {
+		this.purchase_already = purchase_already;
+	}
+	/**
+	 * @return the attention_nums
+	 */
+	public String getAttention_nums() {
+		return attention_nums;
+	}
+	/**
+	 * @param attention_nums the attention_nums to set
+	 */
+	public void setAttention_nums(String attention_nums) {
+		this.attention_nums = attention_nums;
+	}
+	/**
+	 * @return the comment_nums
+	 */
+	public String getComment_nums() {
+		return comment_nums;
+	}
+	/**
+	 * @param comment_nums the comment_nums to set
+	 */
+	public void setComment_nums(String comment_nums) {
+		this.comment_nums = comment_nums;
+	}
+	/**
+	 * @return the project_topic_count
+	 */
+	public String getProject_topic_count() {
+		return project_topic_count;
+	}
+	/**
+	 * @param project_topic_count the project_topic_count to set
+	 */
+	public void setProject_topic_count(String project_topic_count) {
+		this.project_topic_count = project_topic_count;
+	}
 	/**
 	 * @return the id
 	 */

@@ -23,6 +23,7 @@ import org.apache.http.util.EntityUtils;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.text.Html;
@@ -237,9 +238,10 @@ public class UIHelper {
 	 * 
 	 * @param context
 	 */
-	public static void showCategoryActivity(Context context, String category , String id) {
+	public static void showCategoryActivity(Context context, String sortName ,String category , String id) {
 		Intent intent = new Intent(context, SortCategoryActivity.class);
 		intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+		intent.putExtra("sort_name", sortName);
 		intent.putExtra("parent_id", id) ;
 		intent.putExtra("category_name", category);
 		context.startActivity(intent);
@@ -268,11 +270,12 @@ public class UIHelper {
 	 *            大分类下的子分类
 	 */
 	public static void showSortDetailActivity(Context context,
-			String sortParent, String sortChild) {
+			String sortParent, String sortChild , String sortChildID) {
 		Intent intent = new Intent(context, SortDetailActivity.class);
 		intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
 		intent.putExtra("sort_parent", sortParent);
 		intent.putExtra("sort_child", sortChild);
+		intent.putExtra("sort_child_id", sortChildID) ;
 		context.startActivity(intent);
 	}
 
@@ -281,10 +284,18 @@ public class UIHelper {
 	 * 
 	 * @param context
 	 */
-	public static void showSearchHistoryActivity(Context context) {
+	public static void showSearchHistoryActivity(Context context ,String sortname ) {
 		Intent intent = new Intent(context, SearchHistoryActivity.class);
 		intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+		intent.putExtra("sortname", sortname) ;
 		context.startActivity(intent);
+	}
+	public static void showSearchHistoryActivity(Activity activity,
+			String sortname) {
+		Intent intent = new Intent(activity, SearchHistoryActivity.class);
+		intent.putExtra("sortname", sortname) ;
+		activity.startActivity(intent);
+//		activity.finish() ;
 	}
 
 	/**
@@ -301,6 +312,15 @@ public class UIHelper {
 		intent.putExtra("sort_parent", sortParent);
 		intent.putExtra("sort_child", sortChild);
 		context.startActivity(intent);
+	}
+	
+	public static void showSearchResultActivity(Activity activity,
+			String sortParent, String sortChild) {
+		Intent intent = new Intent(activity, SearchResultActivity.class);
+		intent.putExtra("sort_parent", sortParent);
+		intent.putExtra("sort_child", sortChild);
+		activity.startActivity(intent);
+		activity.finish() ;
 	}
 
 	/**
@@ -418,7 +438,11 @@ public class UIHelper {
 	}
 	
 	
-	
+	public static String getOpenID(Context context) {
+		SharedPreferences spf = context.getSharedPreferences("login_user", 0) ;
+		System.out.println("UIHElper:-----" + spf.getString("open_id", "") );
+		return spf.getString("open_id", "") ;
+	}
 	
 	
 	

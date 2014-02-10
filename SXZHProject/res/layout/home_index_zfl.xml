@@ -42,6 +42,8 @@
             android:layout_height="34.5dip"
             android:layout_marginLeft="5dip"
             android:layout_marginRight="5dip"
+            android:maxLines="1"
+            android:singleLine="true"
             android:layout_toLeftOf="@+id/home_index_title_right_btn"
             android:background="@drawable/ic_setting_item_round_normal" />
         
@@ -140,7 +142,7 @@
                     android:text="商品" />
             </LinearLayout>
 
-            <LinearLayout
+            <!-- <LinearLayout
                 android:id="@+id/home_index_content_button_botton"
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
@@ -152,7 +154,15 @@
                     android:layout_width="fill_parent"
                     android:layout_height="fill_parent" >
                 </ListView>
-            </LinearLayout>
+            </LinearLayout> -->
+            
+            <com.sanxian.sxzhuanhuan.view.xlistview.XListView
+            	android:id="@+id/home_index_content_xlist"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_below="@+id/home_index_content_botton_top"
+                >
+       		</com.sanxian.sxzhuanhuan.view.xlistview.XListView>
         </RelativeLayout>
     </RelativeLayout>
 

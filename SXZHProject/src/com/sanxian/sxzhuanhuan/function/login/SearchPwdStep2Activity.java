@@ -1,5 +1,8 @@
 package com.sanxian.sxzhuanhuan.function.login;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -7,9 +10,12 @@ import android.view.Window;
 import android.widget.Button;
 import android.widget.EditText;
 import com.sanxian.sxzhuanhuan.R;
+import com.sanxian.sxzhuanhuan.api.JSONParser;
+import com.sanxian.sxzhuanhuan.api.TestAPI;
 import com.sanxian.sxzhuanhuan.common.BaseActivity;
 import com.sanxian.sxzhuanhuan.common.CommonTitle;
 import com.sanxian.sxzhuanhuan.common.UIHelper;
+import com.sanxian.sxzhuanhuan.entity.Constant;
 import com.sanxian.sxzhuanhuan.util.Util;
 
 /**   
@@ -26,6 +32,9 @@ public class SearchPwdStep2Activity extends BaseActivity implements OnClickListe
 	private EditText etPassword2 = null ;
 	private Button btnCommit = null ;
 	
+	private TestAPI api = null;
+	private Map<String , String> input = null ;
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
@@ -40,6 +49,9 @@ public class SearchPwdStep2Activity extends BaseActivity implements OnClickListe
 	}
 	
 	private void init() {
+		api = new TestAPI();
+		input = new HashMap<String, String>() ;
+		
 		conTitle = (CommonTitle) findViewById(R.id.common_title) ;
 		etPassword = (EditText) findViewById(R.id.search_pwd_et_new_password) ;
 		etPassword2 = (EditText) findViewById(R.id.search_pwd_et_new_password_commit) ;
@@ -73,7 +85,14 @@ public class SearchPwdStep2Activity extends BaseActivity implements OnClickListe
 		} else if ( !password1.equals(password2)) {
 			Util.toastInfo(SearchPwdStep2Activity.this, getResources().getString(R.string.search_pwd_warning_pwd_not_same)) ;
 		} else {
-			UIHelper.showLoginActivity(SearchPwdStep2Activity.this) ;
+//			UIHelper.showLoginActivity(SearchPwdStep2Activity.this) ;
+			//"params":{"open_id":"5_1278_539947","token":"123456","old_password":"111222","new_password":"333333"}}
+			input.clear() ;
+			input.put("open_id", "") ;
+			input.put("token", "") ;
+			input.put("old_password", "") ;
+			input.put("new_password", password1) ;
+			api.changePassword(input, SearchPwdStep2Activity.this, Constant.REQUESTCODE.USER_CHANGE_PASSWORD_REQUEST); 
 		}
 	}
 	
@@ -81,6 +100,29 @@ public class SearchPwdStep2Activity extends BaseActivity implements OnClickListe
 	public void refresh(Object... param) {
 		// TODO Auto-generated method stub
 		super.refresh(param);
+		
+		int flag = ((Integer) param[0]).intValue();
+		switch (flag) {
+		case Constant.REQUESTCODE.USER_CHANGE_PASSWORD_REQUEST:
+			if (param.length > 0 && param[1] != null
+					&& param[1] instanceof String) {
+				String jsondata = param[1].toString();
+
+				if (Constant.ResultStatus.RESULT_OK == JSONParser
+						.getReturnFlag(jsondata)) {
+
+					UIHelper.showLoginActivity(SearchPwdStep2Activity.this);
+
+				} else if (1001 == JSONParser.getReturnFlag(jsondata)) {
+					// token无效：{"ret":1001,"content":"The logon has become invalid!"}
+				} else if (401 == JSONParser.getReturnFlag(jsondata)) {
+					// 缺少参数：{"ret":401,"content":"params not exist!"}
+				} else if (402 == JSONParser.getReturnFlag(jsondata)) {
+					// 原密码不正确：{"ret":402,"content":"password error"}
+				}
+			}
+			break;
+		}
 	}
 
 

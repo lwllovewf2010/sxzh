@@ -1,0 +1,788 @@
+﻿body {
+    margin: 0px;
+}
+
+div {
+    background-repeat: no-repeat;
+}
+
+.raw_image {
+    width: 100%;
+    height: 100%;
+}
+
+.preload {
+    display: none;
+}
+#main_container {
+}
+
+.form_sketch {
+    border-color: transparent;
+    background-color: transparent;
+}
+
+.u0_normal {
+    background-image: url('../20140113三弦思维模式探讨_files/u0_normal.png');
+}
+
+.u0_container {
+    position:absolute;
+    left:123px;
+    top:653px;
+    width:412px;
+    height:317px;
+}
+
+#u0_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:418px;
+    height:323px;
+}
+
+.u1 {
+    position:absolute;
+    left:2px;
+    top:130px;
+    width:408px;
+    height:58px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u2_normal {
+    background-image: url('../20140113三弦思维模式探讨_files/u2_normal.png');
+}
+
+.u2_container {
+    position:absolute;
+    left:129px;
+    top:180px;
+    width:224px;
+    height:192px;
+}
+
+#u2_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:230px;
+    height:198px;
+}
+
+.u3 {
+    position:absolute;
+    left:2px;
+    top:67px;
+    width:220px;
+    height:58px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u4 {
+    position:absolute;
+    left:252px;
+    top:295px;
+    width:140px;
+    height:40px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u5 {
+    position:absolute;
+    left:99px;
+    top:667px;
+    width:140px;
+    height:40px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u6 {
+    position:absolute;
+    left:100px;
+    top:840px;
+    width:140px;
+    height:40px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u7 {
+    position:absolute;
+    left:446px;
+    top:295px;
+    width:140px;
+    height:40px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u8_end {
+    background-image: url('../20140113三弦思维模式探讨_files/u8_end.png');
+}
+
+.u8_end {
+    position:absolute;
+    left:98px;
+    top:-5px;
+    width:14px;
+    height:20px;
+}
+
+.u8_line {
+    background-image: url('../20140113三弦思维模式探讨_files/u8_line.png');
+}
+
+.u8_line {
+    position:absolute;
+    left:0px;
+    top:4px;
+    width:107px;
+    height:3px;
+}
+
+.u8 {
+    position:absolute;
+    left:329px;
+    top:302px;
+    width:107px;
+    height:10px;
+    
+}
+
+.u9_start {
+    background-image: url('../20140113三弦思维模式探讨_files/u9_start.png');
+}
+
+.u9_start {
+    position:absolute;
+    left:-4px;
+    top:-5px;
+    width:14px;
+    height:20px;
+}
+
+.u9_end {
+    background-image: url('../20140113三弦思维模式探讨_files/u9_end.png');
+}
+
+.u9_end {
+    position:absolute;
+    left:98px;
+    top:-5px;
+    width:14px;
+    height:20px;
+}
+
+.u9_line {
+    background-image: url('../20140113三弦思维模式探讨_files/u9_line.png');
+}
+
+.u9_line {
+    position:absolute;
+    left:0px;
+    top:4px;
+    width:107px;
+    height:3px;
+}
+
+.u9 {
+    position:absolute;
+    left:329px;
+    top:316px;
+    width:107px;
+    height:10px;
+    
+}
+
+.u10 {
+    position:absolute;
+    left:252px;
+    top:431px;
+    width:140px;
+    height:40px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u11 {
+    position:absolute;
+    left:252px;
+    top:594px;
+    width:140px;
+    height:40px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u12 {
+    position:absolute;
+    left:99px;
+    top:510px;
+    width:140px;
+    height:40px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u13 {
+    position:absolute;
+    left:252px;
+    top:753px;
+    width:140px;
+    height:40px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u14 {
+    position:absolute;
+    left:240px;
+    top:930px;
+    width:140px;
+    height:40px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u15_end {
+    background-image: url('../20140113三弦思维模式探讨_files/u15_end.png');
+}
+
+.u15_end {
+    position:absolute;
+    left:-5px;
+    top:58px;
+    width:20px;
+    height:14px;
+}
+
+.u15_line {
+    background-image: url('../20140113三弦思维模式探讨_files/u15_line.png');
+}
+
+.u15_line {
+    position:absolute;
+    left:4px;
+    top:0px;
+    width:3px;
+    height:67px;
+}
+
+.u15 {
+    position:absolute;
+    left:285px;
+    top:354px;
+    width:10px;
+    height:67px;
+    
+}
+
+.u16_end {
+    background-image: url('../20140113三弦思维模式探讨_files/u16_end.png');
+}
+
+.u16_end {
+    position:absolute;
+    left:-5px;
+    top:69px;
+    width:20px;
+    height:14px;
+}
+
+.u16_line {
+    background-image: url('../20140113三弦思维模式探讨_files/u16_line.png');
+}
+
+.u16_line {
+    position:absolute;
+    left:4px;
+    top:0px;
+    width:3px;
+    height:78px;
+}
+
+.u16 {
+    position:absolute;
+    left:285px;
+    top:500px;
+    width:10px;
+    height:78px;
+    
+}
+
+.u17_end {
+    background-image: url('../20140113三弦思维模式探讨_files/u17_end.png');
+}
+
+.u17_end {
+    position:absolute;
+    left:-5px;
+    top:69px;
+    width:20px;
+    height:14px;
+}
+
+.u17_line {
+    background-image: url('../20140113三弦思维模式探讨_files/u17_line.png');
+}
+
+.u17_line {
+    position:absolute;
+    left:4px;
+    top:0px;
+    width:3px;
+    height:78px;
+}
+
+.u17 {
+    position:absolute;
+    left:285px;
+    top:652px;
+    width:10px;
+    height:78px;
+    
+}
+
+.u18_end {
+    background-image: url('../20140113三弦思维模式探讨_files/u18_end.png');
+}
+
+.u18_end {
+    position:absolute;
+    left:-5px;
+    top:69px;
+    width:20px;
+    height:14px;
+}
+
+.u18_line {
+    background-image: url('../20140113三弦思维模式探讨_files/u18_line.png');
+}
+
+.u18_line {
+    position:absolute;
+    left:4px;
+    top:0px;
+    width:3px;
+    height:78px;
+}
+
+.u18 {
+    position:absolute;
+    left:285px;
+    top:834px;
+    width:10px;
+    height:78px;
+    
+}
+
+.u19_normal {
+    background-image: url('../20140113三弦思维模式探讨_files/u19_normal.png');
+}
+
+.u19_container {
+    position:absolute;
+    left:637px;
+    top:353px;
+    width:641px;
+    height:513px;
+}
+
+#u19_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:647px;
+    height:519px;
+}
+
+.u20 {
+    position:absolute;
+    left:2px;
+    top:228px;
+    width:637px;
+    height:58px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u21 {
+    position:absolute;
+    left:609px;
+    top:930px;
+    width:110px;
+    height:40px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u22_end {
+    background-image: url('../20140113三弦思维模式探讨_files/u22_end.png');
+}
+
+.u22_end {
+    position:absolute;
+    left:193px;
+    top:-5px;
+    width:14px;
+    height:20px;
+}
+
+.u22_line {
+    background-image: url('../20140113三弦思维模式探讨_files/u22_line.png');
+}
+
+.u22_line {
+    position:absolute;
+    left:0px;
+    top:4px;
+    width:202px;
+    height:3px;
+}
+
+.u22 {
+    position:absolute;
+    left:384px;
+    top:945px;
+    width:202px;
+    height:10px;
+    
+}
+
+.u23 {
+    position:absolute;
+    left:413px;
+    top:895px;
+    width:192px;
+    height:40px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u24 {
+    position:absolute;
+    left:955px;
+    top:930px;
+    width:110px;
+    height:40px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u25_end {
+    background-image: url('../20140113三弦思维模式探讨_files/u25_end.png');
+}
+
+.u25_end {
+    position:absolute;
+    left:193px;
+    top:-5px;
+    width:14px;
+    height:20px;
+}
+
+.u25_line {
+    background-image: url('../20140113三弦思维模式探讨_files/u25_line.png');
+}
+
+.u25_line {
+    position:absolute;
+    left:0px;
+    top:4px;
+    width:202px;
+    height:3px;
+}
+
+.u25 {
+    position:absolute;
+    left:705px;
+    top:945px;
+    width:202px;
+    height:10px;
+    
+}
+
+.u26 {
+    position:absolute;
+    left:968px;
+    top:758px;
+    width:140px;
+    height:40px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u27_end {
+    background-image: url('../20140113三弦思维模式探讨_files/u27_end.png');
+}
+
+.u27_end {
+    position:absolute;
+    left:-5px;
+    top:69px;
+    width:20px;
+    height:14px;
+}
+
+.u27_line {
+    background-image: url('../20140113三弦思维模式探讨_files/u27_line.png');
+}
+
+.u27_line {
+    position:absolute;
+    left:4px;
+    top:0px;
+    width:3px;
+    height:78px;
+}
+
+.u27 {
+    position:absolute;
+    left:983px;
+    top:829px;
+    width:10px;
+    height:78px;
+    
+}
+
+.u28_start {
+    background-image: url('../20140113三弦思维模式探讨_files/u28_start.png');
+}
+
+.u28_start {
+    position:absolute;
+    left:-5px;
+    top:-4px;
+    width:20px;
+    height:14px;
+}
+
+.u28_line {
+    background-image: url('../20140113三弦思维模式探讨_files/u28_line.png');
+}
+
+.u28_line {
+    position:absolute;
+    left:4px;
+    top:0px;
+    width:3px;
+    height:78px;
+}
+
+.u28 {
+    position:absolute;
+    left:1010px;
+    top:829px;
+    width:10px;
+    height:78px;
+    
+}
+
+.u29_normal {
+    background-image: url('../20140113三弦思维模式探讨_files/u29_normal.png');
+}
+
+.u29_container {
+    position:absolute;
+    left:817px;
+    top:215px;
+    width:23px;
+    height:24px;
+}
+
+#u29_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:29px;
+    height:30px;
+}
+
+.u30 {
+    position:absolute;
+    left:2px;
+    top:4px;
+    width:19px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u31_normal {
+    background-image: url('../20140113三弦思维模式探讨_files/u31_normal.png');
+}
+
+.u31_container {
+    position:absolute;
+    left:817px;
+    top:273px;
+    width:23px;
+    height:24px;
+}
+
+#u31_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:29px;
+    height:30px;
+}
+
+.u32 {
+    position:absolute;
+    left:2px;
+    top:4px;
+    width:19px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u33 {
+    position:absolute;
+    left:880px;
+    top:206px;
+    width:140px;
+    height:40px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u34 {
+    position:absolute;
+    left:880px;
+    top:265px;
+    width:140px;
+    height:40px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u35 {
+    position:absolute;
+    left:59px;
+    top:361px;
+    width:198px;
+    height:40px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u36 {
+    position:absolute;
+    left:59px;
+    top:1052px;
+    width:1129px;
+    height:40px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u37 {
+    position:absolute;
+    left:59px;
+    top:1112px;
+    width:1129px;
+    height:80px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+

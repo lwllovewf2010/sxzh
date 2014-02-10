@@ -32,6 +32,9 @@ public class GoodsItemDetails {
 	private String company_name; // 公司名
 	private String attention_num; // 关注商品人数
 	private String is_attention;// 当前登记用户是否关注 true/false
+	private String com_project;//项目ID
+	private String project_name;//"项目名称",	//原项目名
+	private String proj_purchase_user_num;//参与人数
 	
 	public String getId() {
 		return id;
@@ -153,4 +156,26 @@ public class GoodsItemDetails {
 	public void setIs_attention(String is_attention) {
 		this.is_attention = is_attention;
 	}
+	public String getCom_project() {
+		return com_project;
+	}
+	public void setCom_project(String com_project) {
+		this.com_project = com_project;
+	}
+	public String getProject_name() {
+		return project_name;
+	}
+	public void setProject_name(String project_name) {
+		this.project_name = project_name;
+	}
+	public String getProj_purchase_user_num() {
+		return proj_purchase_user_num;
+	}
+	public void setProj_purchase_user_num(String proj_purchase_user_num) {
+		this.proj_purchase_user_num = proj_purchase_user_num;
+	}
+	public String getIs_attention() {
+		return is_attention;
+	}
+	
 }

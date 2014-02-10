@@ -1,5 +1,10 @@
 package com.sanxian.sxzhuanhuan.function.personal.setting;
 
+import java.util.HashMap;
+import java.util.Map;
+
+import android.app.Activity;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
@@ -14,6 +19,13 @@ import com.sanxian.sxzhuanhuan.SApplication;
 import com.sanxian.sxzhuanhuan.api.CommonAPI;
 import com.sanxian.sxzhuanhuan.common.BaseActivity;
 import com.sanxian.sxzhuanhuan.common.UIHelper;
+import com.sanxian.sxzhuanhuan.dialog.DialogConstant;
+import com.sanxian.sxzhuanhuan.dialog.MiddleDialog;
+import com.sanxian.sxzhuanhuan.dialog.MiddleDialogInfo;
+import com.sanxian.sxzhuanhuan.entity.Constant;
+import com.sanxian.sxzhuanhuan.function.personal.myaccount.MyAccoAddressIndexActivity;
+import com.sanxian.sxzhuanhuan.message.xmpp.XmppService;
+import com.sanxian.sxzhuanhuan.message.xmpp.XmppUtils;
 import com.sanxian.sxzhuanhuan.util.Util;
 /**
  * 设置页面 joe
@@ -33,6 +45,7 @@ public class SetIndexActiVity extends BaseActivity implements OnClickListener{
     private RelativeLayout about_layout;//关于
     private RelativeLayout help_layout;//帮助信息
     private Button exit_btn;//退出
+    private final int SHOWMIDDIALOG = 12;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
@@ -107,12 +120,15 @@ public class SetIndexActiVity extends BaseActivity implements OnClickListener{
 			break;
 		case R.id.set_image:
          Util.toastInfo(this, "仅wifi下显示图片");
+            setStatus(set_image);
 			break;
 		case R.id.set_privacy:
 			Util.toastInfo(this, "个人信息");
+			setStatus(set_privacy);
 			break;
 		case R.id.set_new_project:
 			Util.toastInfo(this, "项目提醒");
+			setStatus(set_new_project);
 			break;
 		case R.id.share_layout:
 			Util.toastInfo(this, "分享");
@@ -138,16 +154,56 @@ public class SetIndexActiVity extends BaseActivity implements OnClickListener{
 	}
 	
 	/**
+	 * 开关图标切换
+	 * joe
+	 * @param view
+	 */
+	private void setStatus(ImageView view){
+		if("1".equals(view.getTag())){
+			view.setTag("0");
+			view.setBackgroundResource(R.drawable.anniu_off);
+		}else if("0".equals(view.getTag())){
+			view.setTag("1");
+			view.setBackgroundResource(R.drawable.anniu_on);
+		}
+	}
+	
+	/**
 	 * 退出应用之前清除掉用户登录的相关信息
 	 */
 	private void clearUserData() {
-
-		System.out.println("-------clear user data !!!!----------");
-		SharedPreferences spf = getSharedPreferences("login_user", 0) ;
-		SharedPreferences.Editor editor = spf.edit() ;
-		editor.putString("open_id", "") ;
-		editor.putString("token", "" );
-		editor.commit() ;
+		showMidDialog();
+		
 	}
+	private void showMidDialog() {
+		Intent intent = new Intent(SetIndexActiVity.this , MiddleDialog.class);
+		MiddleDialogInfo info = new MiddleDialogInfo("提示", "是否退出应用程序", 
+				false, "", "", "确定", "取消");
+		intent.putExtra("info", info);
+		startActivityForResult(intent, SHOWMIDDIALOG);
+	}
+	
+	@Override
+	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+		// TODO Auto-generated method stub
+		super.onActivityResult(requestCode, resultCode, data);
 
+			if (resultCode == DialogConstant.MIDDLE_OK) {
+				System.out.println("-------clear user data !!!!----------");
+				SharedPreferences spf = getSharedPreferences("login_user", 0) ;
+				SharedPreferences.Editor editor = spf.edit() ;
+				editor.putString("open_id", "") ;
+				editor.putString("token", "" );
+				editor.commit() ;
+				
+				XmppUtils.getInstance().closeConn();
+				Intent intent = new Intent(this, XmppService.class);
+				stopService(intent);
+				for (Activity activity : app.getAllActivity()) {                           
+		              activity.finish();
+		          }
+				SetIndexActiVity.this.finish();
+			} else if (resultCode == DialogConstant.MIDDLE_CANCEL) {
+			}
+		}
 }

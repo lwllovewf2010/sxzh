@@ -26,15 +26,15 @@ import com.sanxian.sxzhuanhuan.entity.SortInfo;
 public class SearchHistoryAdapter extends BaseAdapter{
 
 	private Context context ;
-	private ArrayList<SortInfo> sorts ;
+	private ArrayList<String> sorts ;
 	private LayoutInflater inflater ;
 	
-	public SearchHistoryAdapter(Context context, ArrayList<SortInfo> sorts) {
+	public SearchHistoryAdapter(Context context, ArrayList<String> sorts) {
 		this.context = context ;
 		if (sorts != null)
 			this.sorts = sorts;
 		else
-			this.sorts = new ArrayList<SortInfo>();
+			this.sorts = new ArrayList<String>();
 		inflater = LayoutInflater.from(context);
 		// loader = new ImageAsyncLoader();
 	}
@@ -84,10 +84,10 @@ public class SearchHistoryAdapter extends BaseAdapter{
 			holder = (ViewHolder) convertView.getTag() ;
 		}
 		
-		SortInfo sort = sorts.get(position) ;
+//		SortInfo sort = sorts.get(position) ;
 //		holder.ivSortLogo.setImageBitmap(loadLogo(sort.getSortLogoUrl()));
 		holder.ivHistoryLogo.setImageDrawable(context.getResources().getDrawable(R.drawable.ic_launcher)) ;
-		holder.tvHistorySortName.setText(sort.getSortName()) ;
+		holder.tvHistorySortName.setText(sorts.get(position)) ;
 		
 		return convertView;
 	}

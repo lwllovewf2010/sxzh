@@ -1,0 +1,72 @@
+<script type="text/javascript">
+	$(function(){
+		//———————— 登录注册选项卡
+		$(".login-tab li").click(function(){
+			var curr = $(".login-tab li").index($(this));
+			$(this).addClass("active").siblings().removeClass("active");
+			$(".tab-item").eq(curr).show().siblings("div.tab-item").hide();
+		});
+		//————————条件单选按钮
+		$(".filter-span").click(function(){
+			$(this).toggleClass("active").siblings("span.filter-span").removeClass("active");
+		});
+	});
+</script>
+<!-- 登录表单 -->
+<div id="pop-login" class="div-form fr">
+	<!-- 登录选项卡 -->
+	<div class="login-tab">
+		<ul class="ufl clearfix">
+			<li class="active">个人登录<i class="down"></i></li>
+			<li>企业登录 <i class="down"></i></li>
+		</ul>
+	</div>
+	<!--End 登录选项卡 -->
+	<div class="tab-item">
+		<!-- 登录表单 -->
+		<form action="#" action="post" id="personal-login" class="login-form" name="login-form">
+			<input type="text" id="usename" name="usename" class="input-block" placeholder="账户名"/>
+			<input type="text" id="password" name="password" class="input-block" placeholder="登录密码"/>
+			<div class="forget-div clearfix">
+				<span class="filter-span active fl">自动登录</span>
+				<a href="#" class="fr">忘记密码</a>
+			</div>
+			<button type="submit" class="btn-sub">登 录</button>
+			<div class="cent">不是会员？<a href="#">免费注册</a></div>
+		</form>
+		<!--End 登录表单 -->
+		<!-- 第三方登录平台 -->
+		<div class="login-method">
+			<p class="cent">第三方平台登录</p>
+			<ul class="ufl clearfix">
+				<li><a href="#">新浪微博</a></li>
+				<li><a href="#">腾讯qq</a></li>
+				<li><a href="#">百度</a></li>
+				<li><a href="#">twite</a></li>
+			</ul>
+		</div>
+		<!-- 第三方登录平台 -->
+	</div>
+	<!-- 企业登录 -->
+	<div class="tab-item hiden">
+		<!-- 登录表单 -->
+		<form action="#" action="post" id="personal-login" class="login-form" name="login-form">
+			<input type="text" id="usename" name="usename" class="input-block" placeholder="账户名"/>
+			<input type="text" id="password" name="password" class="input-block" placeholder="登录密码"/>
+			<div class="forget-div clearfix">
+				<span class="filter-span active fl">自动登录</span>
+				<a href="#" class="fr">忘记密码</a>
+			</div>
+			<button type="submit" class="btn-sub">登 录</button>
+			<div class="cent">不是会员？<a href="#">免费注册</a></div>
+		</form>
+		<!--End 登录表单 -->
+		<!-- 第三方登录平台 -->
+		<div class="login-method">
+			<p class="text-v-middle cent">不是会员？<a href="#">马上注册</a></p>
+		</div>
+		<!-- 第三方登录平台 -->
+	</div>
+	<!--End 企业登录 -->
+</div>
+<!--End 登录表单 -->

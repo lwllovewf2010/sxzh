@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" 
+    android:background="@color/white">
+<include layout="@layout/title_bar"
+    />
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="@color/grey"
+    android:layout_marginTop="-2.5dip" >
+
+    <LinearLayout
+        android:id="@+id/project_left_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="40dip"
+        android:layout_weight="1" >
+         <TextView
+         android:id="@+id/project_left_tv"   
+         android:layout_width="match_parent"
+         android:layout_height="fill_parent"
+         android:text="@string/all_project"
+         android:gravity="center"
+         android:textColor="@color/black"
+        />
+    </LinearLayout>
+   <View 
+         android:layout_width="1px"
+         android:layout_height="fill_parent"
+         android:background="@color/line_color"/>
+    <LinearLayout
+        android:id="@+id/project_right_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="40dip"
+        android:layout_weight="1" >
+        <TextView
+         android:id="@+id/project_right_tv"  
+         android:layout_width="match_parent"
+         android:layout_height="fill_parent"
+         android:text="@string/all_project"
+         android:gravity="center"
+         android:textColor="@color/black"
+        />
+    </LinearLayout>
+   
+</LinearLayout>
+
+<ListView
+    android:id="@+id/project_list"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+</ListView>
+
+</LinearLayout>

@@ -27,7 +27,6 @@ import com.sanxian.sxzhuanhuan.common.UIHelper;
 import com.sanxian.sxzhuanhuan.entity.Constant;
 import com.sanxian.sxzhuanhuan.entity.TestData;
 import com.sanxian.sxzhuanhuan.entity.InterfaceData.ICategory;
-import com.sanxian.sxzhuanhuan.util.Util;
 
 /**
  * @Title: SortCategoryActivity.java
@@ -43,6 +42,7 @@ public class SortCategoryActivity extends BaseActivity implements
 	private ListView lvLeftSort = null;
 	private ListView lvRightSort = null;
 	
+	private String sortName = "" ;
 	private String categoryName = "" ;
 	private String parent_id = "" ;
 	private List<ICategory> sortParent = null ;
@@ -63,12 +63,13 @@ public class SortCategoryActivity extends BaseActivity implements
 		
 		Intent intent = getIntent() ;
 		if(null != intent) {
+			sortName = intent.getStringExtra("sort_name") ;
 			categoryName = intent.getStringExtra("category_name") ;
 			parent_id = intent.getStringExtra("parent_id") ;
+			System.out.println("----sort-category-activity:" + sortName + "---" + categoryName + "---" + parent_id);
 		}
 
 		initWidget();
-//		initData();
 		
 		getSortParent() ;
 	}
@@ -89,20 +90,6 @@ public class SortCategoryActivity extends BaseActivity implements
 		lvRightSort.setOnScrollListener(this);
 	}
 
-	private void initData() {
-
-		lvLeftSort.setAdapter(new SimpleAdapter(this, TestData
-				.initIndustry(getResources().getStringArray(
-						R.array.array_industry_total)),
-				R.layout.sort_category_item, new String[] { "CONTENT" },
-				new int[] { R.id.sort_category_item_content }));
-		lvRightSort.setAdapter(new SimpleAdapter(this, TestData
-				.initIndustry(getResources().getStringArray(
-						R.array.array_industry_keji)),
-				R.layout.sort_category_item, new String[] { "CONTENT" },
-				new int[] { R.id.sort_category_item_content }));
-	}
-
 	private TextView tvSelect = null ;
 	private TextView tvPreSelect = null ;
 	@Override
@@ -115,26 +102,18 @@ public class SortCategoryActivity extends BaseActivity implements
 				tvPreSelect = tvSelect ;
 			else 
 				tvPreSelect.setText(categoryName) ;
-			if(null == postLeftView && null != sortParent ) {
-        		curLeftSort = sortParent.get(0) ;
-        		view.setBackgroundResource(R.drawable.back_behind_list);
-            } else {
-            	postLeftView.setBackgroundColor(Color.TRANSPARENT);
-            	curLeftSort = sortParent.get(position) ;
-            }
-            view.setBackgroundResource(R.drawable.back_behind_list);
+			curLeftSort = sortParent.get(position) ;
             postLeftView = view ;
             getSortChild(curLeftSort.getId()) ;
             
-//			curLeftSort = sortParent.get(position) ;
 			categoryName = tvSelect.getText().toString() ;
 			conTitle.tvTitle.setText(categoryName) ;
 			tvSelect.setText(categoryName + "                    >") ;
 			tvPreSelect = tvSelect ;
-//			getSortChild(curLeftSort.getId()) ;
 		}
 		if(parent.getId() == lvRightSort.getId()) {
-			UIHelper.showSortDetailActivity(this, categoryName, tvSelect.getText().toString()) ;
+			curRightSort = sortChild.get(position) ;
+			UIHelper.showSortDetailActivity(this, sortName, tvSelect.getText().toString() , curRightSort.getId()) ;
 		}
 	}
 
@@ -151,11 +130,6 @@ public class SortCategoryActivity extends BaseActivity implements
 
 	}
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see android.view.View.OnClickListener#onClick(android.view.View)
-	 */
 	@Override
 	public void onClick(View v) {
 		// TODO Auto-generated method stub

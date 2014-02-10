@@ -507,7 +507,7 @@
                         android:text="原项目：" />
 
                     <TextView
-                        android:id="@+id/project_describe"
+                        android:id="@+id/project_name2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="项目名称是一段文字啊一段文字" />
@@ -598,7 +598,7 @@
                                 android:id="@+id/adver1_price"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_alignBottom="@+id/image1"
+                                android:layout_alignBottom="@+id/adver1_pic"
                                 android:layout_alignParentRight="true"
                                 android:text="￥136.00" />
                         </RelativeLayout>
@@ -634,7 +634,7 @@
                                 android:id="@+id/adver2_price"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_alignBottom="@+id/image2"
+                                android:layout_alignBottom="@+id/adver2_pic"
                                 android:layout_alignParentRight="true"
                                 android:text="￥136.00" />
                         </RelativeLayout>
@@ -670,7 +670,7 @@
                                 android:id="@+id/adver3_price"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_alignBottom="@+id/image3"
+                                android:layout_alignBottom="@+id/adver3_pic"
                                 android:layout_alignParentRight="true"
                                 android:text="￥136.00" />
                         </RelativeLayout>

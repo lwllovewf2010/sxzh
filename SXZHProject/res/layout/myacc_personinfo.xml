@@ -34,6 +34,7 @@
           android:text="@string/myacc_avatar_table"
           android:textSize="18sp"
           android:textStyle="bold"
+          android:textColor="@color/black"
           android:layout_centerVertical="true"
             />
           <ImageView
@@ -76,6 +77,7 @@
           android:text="@string/username_table"
           android:textSize="18sp"
           android:textStyle="bold"
+          android:textColor="@color/black"
           android:layout_centerVertical="true"
             />
           <ImageView
@@ -95,7 +97,8 @@
            android:layout_centerVertical="true"
            android:layout_marginRight="10dip"
            android:layout_marginLeft="10dip"
-           android:text="赵钱孙"
+           android:text=""
+           android:textColor="@color/black"
            android:gravity="right"
            android:textSize="18sp"
            android:singleLine="true"
@@ -123,6 +126,7 @@
           android:text="@string/sex_table"
           android:textSize="18sp"
           android:textStyle="bold"
+          android:textColor="@color/black"
           android:layout_centerVertical="true"
             />
           <ImageView
@@ -142,7 +146,8 @@
            android:layout_centerVertical="true"
            android:layout_marginRight="10dip"
            android:layout_marginLeft="10dip"
-           android:text="男"
+           android:text=""
+           android:textColor="@color/black"
            android:gravity="right"
            android:singleLine="true"
             />
@@ -169,6 +174,7 @@
           android:text="地区"
           android:textSize="18sp"
           android:textStyle="bold"
+          android:textColor="@color/black"
           android:layout_centerVertical="true"
             />
           <ImageView
@@ -188,7 +194,8 @@
            android:layout_centerVertical="true"
            android:layout_marginRight="10dip"
            android:layout_marginLeft="10dip"
-           android:text="广东 深圳"
+           android:text=""
+           android:textColor="@color/black"
            android:gravity="right"
            android:singleLine="true"
             />
@@ -216,6 +223,7 @@
           android:text="@string/signature_table"
           android:textSize="18sp"
           android:textStyle="bold"
+          android:textColor="@color/black"
           android:layout_centerVertical="true"
             />
           <ImageView
@@ -236,7 +244,8 @@
            android:layout_marginRight="10dip"
            android:layout_marginLeft="10dip"
            android:gravity="right"
-           android:text="禾我i让我热河我i如何"
+           android:text=""
+           android:textColor="@color/black"
             />
     </RelativeLayout>
   <View

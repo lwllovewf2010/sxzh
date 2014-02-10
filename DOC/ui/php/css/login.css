@@ -1,0 +1,400 @@
+#login-box{
+	height:100%;
+}
+#login-box .div-img{
+	width:510px;
+	overflow:hidden;
+}
+#login-box .div-right{
+	width:400px;
+	background-color:#fcfcfc;
+}
+#login-box .div-form,#pop-login{
+	width:340px;
+	background-color:#f7f7f7;
+	overflow:hidden;
+}
+#pop-login{
+	margin:0 auto;
+}
+#login-box.company-login .div-form-box{
+	width:600px;
+}
+#login-box.company-login .div-form{
+	margin:0 auto;
+}
+#login-box .main-box{
+	padding:60px 40px;
+	background-color:#fff;
+}
+.input-block{
+	height:30px;
+	line-height:30px;
+	padding:4px;
+	border:1px solid #ddd;
+	width:270px;
+	margin:0 auto;
+}
+.input-yzm{
+	margin-right: 20px;
+    width: 118px;
+}
+#login-form,.login-form{
+	padding:40px 30px 0;
+}
+#login-form .input-block,.login-form .input-block{
+	margin-bottom:20px;
+}
+#login-form .btn-sub,.login-form .btn-sub{
+	display:block;
+	width:100%;
+	background:#8cce36;
+	font-size:20px;
+	border-radius:0;
+	-webkit-border-radius:0;
+	-moz-border-radius:0;
+}
+#login-form .cent,.login-form .cent{
+	margin:20px 0 0;
+	font-size:14px;
+}
+#login-form .cent a,.login-form .cent a,.forget-div a,.agreement-div a{
+	color:#3277b1;
+	text-decoration:underline;
+}
+.login-tab,.people-tab{
+	height:40px;
+	line-height:40px;
+	background-color:#697175;
+}
+.people-tab{
+	background:#f2f2f2;
+	width:420px;
+}
+.login-tab li,.people-tab li{
+	width:50%;
+	text-align:center;
+	color:#fff;
+	font-size:18px;
+	position:relative;
+	cursor:pointer;
+}
+.people-tab li{
+	width:33.3333%;
+	color:#666666;
+}
+.login-tab li i.down,.people-tab li i.down{
+	background:url(../images/arrow.png) 0 0 no-repeat;
+	position:absolute;
+	width:12px;
+	height:6px;
+	bottom:-6px;
+	left:80px;
+	display:none;
+}
+.people-tab li i.down{
+	left:60px;
+}
+.login-tab li.active,.people-tab li.active{
+	background-color:#8cce36;
+}
+.people-tab li.active{
+	color:#fff;
+}
+.login-tab li.active i.down,.people-tab li.active i.down{
+	display:block;
+}
+.login-method{
+	height:90px;
+	background-color:#444d53;
+	margin-top:20px;
+}
+.div-img-bottom h2{
+	font-size:24px;
+	color:#ccc;
+	font-weight:normal;
+	line-height:30px;
+	margin:50px 0 0;
+}
+.bottom-img{
+	margin-top:20px;
+}
+.bottom-img a{
+	background:url(../images/IOS.png) 0 0 no-repeat;
+	width:220px;
+	height:62px;
+	text-indent:-9999px;
+	transition:none;
+	-webkit-transition:none;
+	-moz-transition:none;
+}
+.bottom-img a:hover{
+	background-position:0 -80px;
+}
+.bottom-img a.android{
+	background:url(../images/android.png) 0 0 no-repeat;
+}
+.bottom-img a.android:hover{
+	background-position:0 -80px;
+}
+.forget-div{
+	margin-bottom:20px;
+	font-size:14px;
+}
+.header-main h1{
+	font-size:30px;
+	font-weight:normal;
+	color:#373a35;
+}
+.header-main h1 em{
+	color:#373a35;
+	font-weight:bold;
+	margin: 0 20px;
+}
+.login-method p{
+	padding-top:5px;
+	margin-bottom:10px;
+}
+.login-method li{
+	width:25%;
+	text-align:center;
+}
+.login-method li a,#platform li a{
+	display:block;
+	background:url(../images/qq.png) 0 0 no-repeat;
+	width:40px;
+	height:40px;
+	margin:0 auto;
+	text-indent:-9999px;
+}
+#platform li a{
+	background:url(../images/xl-zc.png) 0 0 no-repeat;
+}
+/* ————企业注册———— */
+#do-step{
+	height:50px;
+	line-height:50px;
+	width:100%;
+	overflow:hidden;
+	margin-bottom:20px;
+}
+.step-1{
+	background:url(../images/step1.png) 0 0 no-repeat;
+}
+.step-2{
+	background:url(../images/step2.png) 0 0 no-repeat;
+}
+.step-3{
+	background:url(../images/step3.png) 0 0 no-repeat;
+}
+.pwd-step-1{
+	background:url(../images/step4-1.png) 0 0 no-repeat;
+}
+.pwd-step-2{
+	background:url(../images/step4-2.png) 0 0 no-repeat;
+}
+.pwd-step-3{
+	background:url(../images/step4-3.png) 0 0 no-repeat;
+}
+.pwd-step-4{
+	background:url(../images/step4-4.png) 0 0 no-repeat;
+}
+#do-step .step.active{
+	color:#fff;
+}
+#login-box.company-login .div-form{
+	background-color:#fff;
+}
+.column-box{
+	background-color:#fff;
+	overflow:hidden;
+}
+.column-box .div-right,.column-box .div-form-box{
+	margin-bottom:-1000px;
+	padding-bottom:1000px;
+}
+.column-box .div-right{
+	border-left:1px solid #ddd;
+	padding-top:130px;
+}
+.column-box .div-right a.btn-btn{
+	border-radius:0;
+	-moz-border-radius:0;
+	-webkit-border-radius:0;
+	font-size:20px;
+	padding:5px 30px;
+}
+.column-box .div-form-box{
+	padding-top:50px;
+}
+.column-box #login-form{
+	padding-bottom:70px;
+}
+.column-box .div-right .div-btns .cent{
+	height:40px;
+	line-height:40px;
+	font-size:14px;
+	color:#000;
+	margin-bottom:20px;
+}
+/*———— 个人注册 ————*/
+.personal-login #password{
+	margin-bottom:0;
+}
+/* 密码强度验证 */
+#pwd-strength{
+	background-color: #FFD099;
+    height: 20px;
+    margin:10px 0;
+    overflow: hidden;
+    position: relative;
+    width: 279px;
+}
+.pwd-bar{
+	background-color: #8bcf36;
+    height: 20px;
+    overflow: hidden;
+    transition: all 0.4s linear 0s;
+	-moz-transition: all 0.4s linear 0s;
+	-webkit-transition: all 0.4s linear 0s;
+    width: 0;
+}
+.pwd-weak .pwd-bar {
+    width: 92px;
+}
+.pwd-medium .pwd-bar {
+    width: 185px;
+}
+.pwd-strong .pwd-bar {
+    width: 278px;
+}
+.pwd-letter{
+	left: 0;
+    position: absolute;
+    top: 0;
+}
+.pwd-letter span{
+	border-right: 1px solid #FFFFFF;
+    color: #FFFFFF;
+    display: inline;
+    float: left;
+    font-size: 12px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    width: 92px;
+}
+#platform img{
+	margin-top:50px;
+	margin-bottom:20px;
+}
+#platform ul{
+	width:280px;
+	margin:0 auto;
+}
+#platform ul li{
+	margin:0 15px;
+}
+#login-box.register-box .div-img{
+	padding-top:44px;
+}
+/* 企业注册第二步 */
+.company-login #theform,.forget-pwd-box #theform{
+	margin-left:230px;
+}
+#login-box .form-list label{
+	font-size:14px;
+	color:#888;
+}
+#get-yzm{
+	 background-color:#444A4D;
+    color: #FFFFFF;
+    font-size: 14px;
+    padding: 10px;
+    vertical-align: middle;
+}
+a#get-yzm:hover,a.btn-gray:hover{
+	background-color:#606568;
+	color:#fff;
+}
+#login-box #theform .btns{
+	margin-top:20px;
+}
+#login-box #theform .btn-sub-b,.agreement-div{
+	margin-left:120px;
+}
+#login-box .btn-sub-b{
+	border-radius:0;
+	-webkit-border-radius:0;
+	-moz-border-radius:0;
+	padding:4px 105px;
+}
+.li-separat{
+	margin-top:70px;
+}
+/* 注册成功页面 */
+.div-success h2{
+	font-size:24px;
+	color:#000000;
+	margin:30px 0 0;
+}
+p.notice{
+	font-size:14px;
+	margin-top:50px;
+}
+.div-success .btns{
+	margin-top:30px;
+	margin-bottom:30px;
+}
+.div-success .p-a{
+	font-size:14px;
+}
+.div-success .p-a a{
+	color:#8bcf36;
+	text-decoration:underline;
+}
+.btn-gray{
+	background-color:#444d53;
+	padding:8px 20px;
+	color:#fff;
+}
+.div-success .email-img{
+	margin-bottom:30px;
+}
+/* 个人注册 */
+.div-tab-box{
+	border-bottom:1px solid #8CCE36;
+}
+.div-tab-box .login-tab{
+	width:340px;
+	margin:0 auto;
+}
+.personal-login #get-yzm{
+	vertical-align:top;
+}
+.personal-login p.notice{
+	color:#aaa;
+}
+.div-success .p-a-m{
+	margin-top:40px;
+}
+.span-tel{
+	color:#000;
+	font-size:14px;
+}
+.ft-size{
+	font-size:14px;
+}
+#login-box.forget-pwd-email #theform .btn-sub-b,.forget-pwd-email .ip-cell{
+	margin-left:90px;
+}
+p.text-v-middle,p.text-v-middle a{
+	color:#fff;
+}
+p.text-v-middle{
+	padding-top:35px;
+}
+p.text-v-middle a{
+	font-size:14px;
+	text-decoration:underline;
+}

@@ -47,6 +47,8 @@
                     style="@style/spinner_style"
                     android:layout_width="100dp"
                     android:layout_height="fill_parent"
+                    android:entries="@array/sorts" 
+                    android:clickable="false"
                     android:animationCache="true"
                     android:drawSelectorOnTop="true" />
 
@@ -64,23 +66,28 @@
                     android:singleLine="true" />
             </LinearLayout>
 
-            <ImageButton
-                android:id="@+id/sort_detail_head_ivsearch"
-                android:layout_width="24dp"
-                android:layout_height="24dp"
+            <LinearLayout
+                android:id="@+id/sort_detail_ll"
+                android:layout_width="25dp"
+                android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
                 android:layout_marginRight="10dp"
-                android:layout_marginTop="0dp"
-                android:background="@drawable/frame_icon_search" />
+                android:clickable="true"
+                android:onClick="onClick"
+                android:orientation="vertical" >
 
-            <TextView
-                android:id="@+id/sort_detail_head_tvsearch"
-                style="@style/main_head_title"
-                android:layout_alignParentRight="true"
-                android:layout_below="@id/sort_detail_head_ivsearch"
-                android:layout_marginRight="10dp"
-                android:layout_marginTop="-5dp"
-                android:text="筛选" />
+                <ImageView
+                    android:id="@+id/sort_detail_head_ivsearch"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:background="@drawable/frame_icon_search" />
+
+                <TextView
+                    android:id="@+id/sort_detail_head_tvsearch"
+                    style="@style/main_head_title"
+                    android:layout_marginTop="0dp"
+                    android:text="筛选" />
+            </LinearLayout>
         </RelativeLayout>
     </LinearLayout>
 

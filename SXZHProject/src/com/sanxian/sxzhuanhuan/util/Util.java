@@ -36,6 +36,7 @@ import android.util.Log;
 import android.view.Gravity;
 import android.widget.Toast;
 
+import com.sanxian.sxzhuanhuan.SApplication;
 import com.sanxian.sxzhuanhuan.entity.RequestInputInfo;
 
 /**
@@ -64,8 +65,7 @@ public class Util {
 			String hour = time.substring(8, 10);
 			String minute = time.substring(10, 12);
 			String second = time.substring(12, 14);
-			date = String.format("%s-%s-%s %s:%s:%s", year, mouth, day, hour,
-					minute, second);
+			date = String.format("%s-%s-%s %s:%s:%s", year, mouth, day, hour, minute, second);
 		}
 		return date;
 	}
@@ -90,8 +90,7 @@ public class Util {
 			hour = time.substring(11, 13);
 			minute = time.substring(14, 16);
 			second = time.substring(17, 19);
-			String newTime = String.format("%s%s%s%s%s%s", year, month, day,
-					hour, minute, second);
+			String newTime = String.format("%s%s%s%s%s%s", year, month, day, hour, minute, second);
 			return newTime;
 		} else
 			return time;
@@ -99,32 +98,18 @@ public class Util {
 
 	public static String timeToDay(String timeStr) {
 		Calendar cal = Calendar.getInstance();
-		String dayStart = String.format("%04d%02d%02d000000",
-				cal.get(Calendar.YEAR), cal.get(Calendar.MONTH) + 1,
-				cal.get(Calendar.DATE));
-		String nextDayStart = String.format("%04d%02d%02d000000",
-				cal.get(Calendar.YEAR), cal.get(Calendar.MONTH) + 2,
-				cal.get(Calendar.DATE));
-		String lastYearEnd = String.format("%04d1231606060",
-				cal.get(Calendar.YEAR) - 1);
+		String dayStart = String.format("%04d%02d%02d000000", cal.get(Calendar.YEAR), cal.get(Calendar.MONTH) + 1, cal.get(Calendar.DATE));
+		String nextDayStart = String.format("%04d%02d%02d000000", cal.get(Calendar.YEAR), cal.get(Calendar.MONTH) + 2, cal.get(Calendar.DATE));
+		String lastYearEnd = String.format("%04d1231606060", cal.get(Calendar.YEAR) - 1);
 		String strText = "";
 		if (timeStr != null) {
-			if (timeStr.compareTo(dayStart) >= 0
-					&& timeStr.compareTo(nextDayStart) < 0) {
-				strText = "今天  " + timeStr.substring(8, 10) + ":"
-						+ timeStr.substring(10, 12);
+			if (timeStr.compareTo(dayStart) >= 0 && timeStr.compareTo(nextDayStart) < 0) {
+				strText = "今天  " + timeStr.substring(8, 10) + ":" + timeStr.substring(10, 12);
 			} else {
 				if (timeStr.compareTo(lastYearEnd) >= 0) {
-					strText = timeStr.substring(4, 6) + "-"
-							+ timeStr.substring(6, 8) + " "
-							+ timeStr.substring(8, 10) + ":"
-							+ timeStr.substring(10, 12);
+					strText = timeStr.substring(4, 6) + "-" + timeStr.substring(6, 8) + " " + timeStr.substring(8, 10) + ":" + timeStr.substring(10, 12);
 				} else {
-					strText = timeStr.substring(0, 4) + "-"
-							+ timeStr.substring(4, 6) + "-"
-							+ timeStr.substring(6, 8) + " "
-							+ timeStr.substring(8, 10) + ":"
-							+ timeStr.substring(10, 12);
+					strText = timeStr.substring(0, 4) + "-" + timeStr.substring(4, 6) + "-" + timeStr.substring(6, 8) + " " + timeStr.substring(8, 10) + ":" + timeStr.substring(10, 12);
 				}
 			}
 		}
@@ -143,8 +128,7 @@ public class Util {
 		if (!Util.isEmpty(url)) {
 			int index = newUrl.indexOf(".jpg");
 			if (index != -1) {
-				newUrl = newUrl.substring(0, index) + "_" + type
-						+ newUrl.substring(index);
+				newUrl = newUrl.substring(0, index) + "_" + type + newUrl.substring(index);
 			}
 		}
 		return newUrl;
@@ -176,9 +160,7 @@ public class Util {
 	 * @return
 	 */
 	public static boolean checkNet(Activity act) {
-		ConnectivityManager manager = (ConnectivityManager) act
-				.getApplicationContext().getSystemService(
-						Context.CONNECTIVITY_SERVICE);
+		ConnectivityManager manager = (ConnectivityManager) act.getApplicationContext().getSystemService(Context.CONNECTIVITY_SERVICE);
 		if (manager == null) {
 			return false;
 		}
@@ -306,8 +288,7 @@ public class Util {
 	 */
 	public static String getFileName() {
 		SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd_HH-mm-ss_SS");
-		String fileName = format.format(new Timestamp(System
-				.currentTimeMillis()));
+		String fileName = format.format(new Timestamp(System.currentTimeMillis()));
 		return fileName;
 	}
 
@@ -368,17 +349,13 @@ public class Util {
 			e.printStackTrace();
 		}
 		if (exif != null) {
-			Log.d("nilai exif ",
-					exif.getAttribute(ExifInterface.TAG_ORIENTATION));
-			if (exif.getAttribute(ExifInterface.TAG_ORIENTATION)
-					.equalsIgnoreCase("6")) {
+			Log.d("nilai exif ", exif.getAttribute(ExifInterface.TAG_ORIENTATION));
+			if (exif.getAttribute(ExifInterface.TAG_ORIENTATION).equalsIgnoreCase("6")) {
 
 				readimage = Util.rotate(readimage, 90);
-			} else if (exif.getAttribute(ExifInterface.TAG_ORIENTATION)
-					.equalsIgnoreCase("8")) {
+			} else if (exif.getAttribute(ExifInterface.TAG_ORIENTATION).equalsIgnoreCase("8")) {
 				readimage = Util.rotate(readimage, 270);
-			} else if (exif.getAttribute(ExifInterface.TAG_ORIENTATION)
-					.equalsIgnoreCase("3")) {
+			} else if (exif.getAttribute(ExifInterface.TAG_ORIENTATION).equalsIgnoreCase("3")) {
 				readimage = Util.rotate(readimage, 180);
 			}
 
@@ -414,10 +391,8 @@ public class Util {
 		return bitmap;
 	}
 
-	public static int computeSampleSize(BitmapFactory.Options options,
-			int minSideLength, int maxNumOfPixels) {
-		int initialSize = computeInitialSampleSize(options, minSideLength,
-				maxNumOfPixels);
+	public static int computeSampleSize(BitmapFactory.Options options, int minSideLength, int maxNumOfPixels) {
+		int initialSize = computeInitialSampleSize(options, minSideLength, maxNumOfPixels);
 		int roundedSize;
 		if (initialSize <= 8) {
 			roundedSize = 1;
@@ -430,14 +405,11 @@ public class Util {
 		return roundedSize;
 	}
 
-	private static int computeInitialSampleSize(BitmapFactory.Options options,
-			int minSideLength, int maxNumOfPixels) {
+	private static int computeInitialSampleSize(BitmapFactory.Options options, int minSideLength, int maxNumOfPixels) {
 		double w = options.outWidth;
 		double h = options.outHeight;
-		int lowerBound = (maxNumOfPixels == -1) ? 1 : (int) Math.ceil(Math
-				.sqrt(w * h / maxNumOfPixels));
-		int upperBound = (minSideLength == -1) ? 128 : (int) Math.min(
-				Math.floor(w / minSideLength), Math.floor(h / minSideLength));
+		int lowerBound = (maxNumOfPixels == -1) ? 1 : (int) Math.ceil(Math.sqrt(w * h / maxNumOfPixels));
+		int upperBound = (minSideLength == -1) ? 128 : (int) Math.min(Math.floor(w / minSideLength), Math.floor(h / minSideLength));
 		if (upperBound < lowerBound) {
 			// return the larger one when there is no overlapping zone.
 			return lowerBound;
@@ -477,11 +449,9 @@ public class Util {
 		String pre2 = "file://" + FileUtils.SDCARD_MNT + File.separator;
 
 		if (mUriString.startsWith(pre1)) {
-			filePath = Environment.getExternalStorageDirectory().getPath()
-					+ File.separator + mUriString.substring(pre1.length());
+			filePath = Environment.getExternalStorageDirectory().getPath() + File.separator + mUriString.substring(pre1.length());
 		} else if (mUriString.startsWith(pre2)) {
-			filePath = Environment.getExternalStorageDirectory().getPath()
-					+ File.separator + mUriString.substring(pre2.length());
+			filePath = Environment.getExternalStorageDirectory().getPath() + File.separator + mUriString.substring(pre2.length());
 		}
 		return filePath;
 	}
@@ -524,8 +494,7 @@ public class Util {
 	}
 
 	// /////////中文转换成拼音///////////
-	public static String converterToPinYin(String chinese)
-			throws BadHanyuPinyinOutputFormatCombination {
+	public static String converterToPinYin(String chinese) throws BadHanyuPinyinOutputFormatCombination {
 		if (chinese == null)
 			return "";
 
@@ -541,8 +510,7 @@ public class Util {
 			if (charArray[i] > 128) {
 				// charAt(0)取出首字母
 
-				String[] strarray = PinyinHelper.toHanyuPinyinStringArray(
-						charArray[i], defaultFormat);
+				String[] strarray = PinyinHelper.toHanyuPinyinStringArray(charArray[i], defaultFormat);
 				if (strarray != null && strarray.length > 0) {
 					String tmpstr = strarray[0];
 					if (tmpstr != null && tmpstr.length() > 0)
@@ -564,8 +532,7 @@ public class Util {
 	public static int getVerCode(Context context) {
 		int verCode = -1;
 		try {
-			verCode = context.getPackageManager().getPackageInfo(
-					context.getPackageName(), 0).versionCode;
+			verCode = context.getPackageManager().getPackageInfo(context.getPackageName(), 0).versionCode;
 		} catch (NameNotFoundException e) {
 			Log.e("getVerCode", e.getMessage());
 		}
@@ -575,8 +542,7 @@ public class Util {
 	public static String getVerName(Context context) {
 		String verName = "";
 		try {
-			verName = context.getPackageManager().getPackageInfo(
-					context.getPackageName(), 0).versionName;
+			verName = context.getPackageManager().getPackageInfo(context.getPackageName(), 0).versionName;
 		} catch (NameNotFoundException e) {
 			Log.e("getVerCode", e.getMessage());
 		}
@@ -586,8 +552,7 @@ public class Util {
 	public static Bitmap createRepeater(int width, Bitmap src) {
 		int count = (width + src.getWidth() - 1) / src.getWidth();
 
-		Bitmap bitmap = Bitmap.createBitmap(width, src.getHeight(),
-				Config.ARGB_8888);
+		Bitmap bitmap = Bitmap.createBitmap(width, src.getHeight(), Config.ARGB_8888);
 		Canvas canvas = new Canvas(bitmap);
 
 		for (int idx = 0; idx < count; ++idx) {
@@ -608,11 +573,12 @@ public class Util {
 		toast.setGravity(Gravity.CENTER, 0, 0); // 设置居中与屏幕
 		toast.show();
 	}
-	
+
 	/**
-	 * 通用input JSON字符串
-	 * joe
-	 * @param inputinfo 请求参数对象
+	 * 通用input JSON字符串 joe
+	 * 
+	 * @param inputinfo
+	 *            请求参数对象
 	 * @return
 	 */
 	public static String toJSONObject(RequestInputInfo inputinfo) {
@@ -621,12 +587,13 @@ public class Util {
 			json.put("action", inputinfo.getAction());
 			json.put("type", inputinfo.getType());
 			json.put("mcr", inputinfo.getMcr());
-			Map<String,String> params = inputinfo.getParams();
+			Map<String, String> params = inputinfo.getParams();
 			if (params != null && params.size() > 0) {
 				JSONObject jsonItems = new JSONObject();
 				for (String key : params.keySet()) {
-					 jsonItems.put(key,params.get(key));
-					 }
+					jsonItems.put(key, params.get(key));
+				}
+
 				json.put("params", jsonItems);
 			}
 		} catch (JSONException e) {
@@ -635,13 +602,36 @@ public class Util {
 		}
 		return json.toString();
 	}
-	
+
+	public static String toJSONObject(RequestInputInfo inputinfo, SApplication app) {
+		JSONObject json = new JSONObject();
+		try {
+			json.put("action", inputinfo.getAction());
+			json.put("type", inputinfo.getType());
+			json.put("mcr", inputinfo.getMcr());
+			Map<String, String> params = inputinfo.getParams();
+			JSONObject jsonItems = new JSONObject();
+			if (app.getOpen_idOrToken() != null && app.getOpen_idOrToken().length != 0) {
+				jsonItems.put("open_id", app.getOpen_idOrToken()[0]);
+				jsonItems.put("token", app.getOpen_idOrToken()[1]);
+			}
+			if (params != null && params.size() > 0) {
+				for (String key : params.keySet()) {
+					jsonItems.put(key, params.get(key));
+				}
+				// "open_id":"5_1278_539947","token":"b1fccbf52f67ca26"
+			}
+			json.put("params", jsonItems);
+		} catch (JSONException e) {
+			e.printStackTrace();
+		}
+		return json.toString();
+	}
 
 	/**
 	 * 手机号是否合法验证
 	 * 中国移动134,135,136,137,138,139,150,151,152,157,158,159,182,183,187,188,147
-	 * 中国联通130,131,132,155,156,185,186 中国电信133,153,180,181,189
-	 * joe
+	 * 中国联通130,131,132,155,156,185,186 中国电信133,153,180,181,189 joe
 	 */
 	public static boolean checkMobile(String mobile) {
 		String regex = "^1(3[0-9]|5[012356789]|8[012356789])\\d{8}$";
@@ -651,8 +641,8 @@ public class Util {
 	}
 
 	/**
-	 * 判断email格式是否正确
-	 * joe
+	 * 判断email格式是否正确 joe
+	 * 
 	 * @param email
 	 * @return
 	 */

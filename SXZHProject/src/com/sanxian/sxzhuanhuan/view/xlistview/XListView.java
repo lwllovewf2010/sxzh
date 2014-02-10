@@ -106,44 +106,13 @@ public class XListView extends ListView implements OnScrollListener {
 	@Override
 	public void setAdapter(ListAdapter adapter) {
 		// make sure XListViewFooter is the last footer view, and only add once.
-		setPullLoadEnable(false);
-//		addFooterView();
-		super.setAdapter(adapter);
-	}
-    
-	/**
-	 * 根据list判断是否加载底部footerView
-	 * @param currentPageNb 当前页
-	 * @param totalpageNb 总页数
-	 */
-	public void judgeIfDisplayFooterView(int currentPageNb, int totalpageNb) {
-		if(currentPageNb < totalpageNb){
-			addFooterView();
-		}else{
-			removeFooterView();
-		}
-	}
-	
-	public void addFooterView(){
 		if (mIsFooterReady == false) {
 			mIsFooterReady = true;
 			addFooterView(mFooterView);
-			setPullLoadEnable(true);
 		}
+		super.setAdapter(adapter);
 	}
-	
-	public void removeFooterView(){
-		if(mIsFooterReady == true){
-			mIsFooterReady = false;
-			removeFooterView(mFooterView);
-			setPullLoadEnable(false);	
-		}
-	}
-	
-	public void removeHeadView(){
-		removeHeaderView(mFooterView);
-		setPullRefreshEnable(false);
-	}
+
 	/**
 	 * enable or disable pull down refresh feature.
 	 * 

@@ -1,0 +1,84 @@
+#dialog{
+	background-color:#fff;
+	width:720px;
+	padding:40px;
+}
+#dialog .step{
+	width:50%;
+}
+.report-box .report{
+	border:1px solid #ddd;
+	width:320px;
+	padding:15px;
+	height:155px;
+	border-radius:5px;
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+}
+.my-text{
+	margin-left:90px;
+}
+.report-box h2{
+	background-color:#e5e5e5;
+	font-size:18px;
+	color:#676767;
+	height:40px;
+	line-height:40px;
+	margin-bottom:30px;
+}
+#dialog h2.title{
+	margin:20px 0;
+}
+.yzm-box input{
+	padding:4px;
+	width:150px;
+	border:1px solid #ddd;
+}
+.yzm-box{
+	margin:10px 0;
+}
+.yzm-box img{
+	vertical-align:middle;
+	margin:0 10px;
+}
+/* 弹出框 */
+#pop{
+	background-color: #FFFFFF;
+    border-radius: 10px;
+    box-shadow: 0 0 25px 5px #999999;
+	-moz-box-shadow: 0 0 25px 5px #999999;
+	-webkit-box-shadow: 0 0 25px 5px #999999;
+    display: none;
+    min-width:335px;
+    padding: 25px;
+}
+
+#pop .button.b-close {
+    border-radius: 22px;
+	-webkit-border-radius: 22px;
+	-moz-border-radius: 22px;
+    box-shadow: none;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+    padding: 10px 15px;
+    position: absolute;
+    right: -15px;
+    top: -15px;
+}
+#pop .button {
+    background-color: #2B91AF;
+    border-radius: 10px;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
+	-moz-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
+	-webkit-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+}
+
+#pop .button > span {
+    font-size: 26px;
+}

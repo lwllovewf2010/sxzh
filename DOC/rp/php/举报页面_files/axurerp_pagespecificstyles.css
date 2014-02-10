@@ -1,0 +1,704 @@
+﻿body {
+    margin: 0px;
+}
+
+div {
+    background-repeat: no-repeat;
+}
+
+.raw_image {
+    width: 100%;
+    height: 100%;
+}
+
+.preload {
+    display: none;
+}
+#main_container {
+}
+
+.form_sketch {
+    border-color: transparent;
+    background-color: transparent;
+}
+
+.u0_normal {
+    background-image: url('../举报页面_files/u0_normal.png');
+}
+
+.u0_container {
+    position:absolute;
+    left:19px;
+    top:10px;
+    width:971px;
+    height:694px;
+}
+
+#u0_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:977px;
+    height:700px;
+}
+
+.u1 {
+    position:absolute;
+    left:2px;
+    top:339px;
+    width:967px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u2 {
+    position:absolute;
+    left:83px;
+    top:54px;
+    width:72px;
+    height:22px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u3_normal {
+    background-image: url('../举报页面_files/u3_normal.png');
+}
+
+.u3_container {
+    position:absolute;
+    left:318px;
+    top:90px;
+    width:372px;
+    height:58px;
+}
+
+#u3_img {
+    position:absolute;
+    left:0px;
+    top:0px;
+    width:372px;
+    height:58px;
+}
+
+.u4 {
+    position:absolute;
+    left:2px;
+    top:21px;
+    width:368px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u5 {
+    position:absolute;
+    left:82px;
+    top:168px;
+    width:150px;
+    height:19px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u6_normal {
+    background-image: url('../举报页面_files/u6_normal.png');
+}
+
+.u6_container {
+    position:absolute;
+    left:194px;
+    top:214px;
+    width:293px;
+    height:143px;
+}
+
+#u6_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:299px;
+    height:149px;
+}
+
+.u7 {
+    position:absolute;
+    left:2px;
+    top:64px;
+    width:289px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u8_normal {
+    background-image: url('../举报页面_files/u8_normal.png');
+}
+
+.u8_container {
+    position:absolute;
+    left:212px;
+    top:230px;
+    width:254px;
+    height:26px;
+}
+
+#u8_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:260px;
+    height:32px;
+}
+
+.u9 {
+    position:absolute;
+    left:2px;
+    top:5px;
+    width:250px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u11 {
+    position:absolute;
+    left:16px;
+    top:0px;
+    width:82px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u13 {
+    position:absolute;
+    left:16px;
+    top:0px;
+    width:82px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u14_normal {
+    background-image: url('../举报页面_files/u14_normal.png');
+}
+
+.u14_container {
+    position:absolute;
+    left:369px;
+    top:278px;
+    width:16px;
+    height:16px;
+}
+
+#u14_img {
+    position:absolute;
+    left:0px;
+    top:0px;
+    width:16px;
+    height:16px;
+}
+
+.u15 {
+    position:absolute;
+    left:2px;
+    top:0px;
+    width:12px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u16_normal {
+    background-image: url('../举报页面_files/u14_normal.png');
+}
+
+.u16_container {
+    position:absolute;
+    left:369px;
+    top:304px;
+    width:16px;
+    height:16px;
+}
+
+#u16_img {
+    position:absolute;
+    left:0px;
+    top:0px;
+    width:16px;
+    height:16px;
+}
+
+.u17 {
+    position:absolute;
+    left:2px;
+    top:0px;
+    width:12px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u18_normal {
+    background-image: url('../举报页面_files/u18_normal.png');
+}
+
+.u18_container {
+    position:absolute;
+    left:525px;
+    top:214px;
+    width:293px;
+    height:143px;
+}
+
+#u18_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:299px;
+    height:149px;
+}
+
+.u19 {
+    position:absolute;
+    left:2px;
+    top:64px;
+    width:289px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u20_normal {
+    background-image: url('../举报页面_files/u20_normal.png');
+}
+
+.u20_container {
+    position:absolute;
+    left:543px;
+    top:232px;
+    width:254px;
+    height:26px;
+}
+
+#u20_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:260px;
+    height:32px;
+}
+
+.u21 {
+    position:absolute;
+    left:2px;
+    top:5px;
+    width:250px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u23 {
+    position:absolute;
+    left:16px;
+    top:0px;
+    width:82px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u25 {
+    position:absolute;
+    left:16px;
+    top:0px;
+    width:82px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u26_normal {
+    background-image: url('../举报页面_files/u14_normal.png');
+}
+
+.u26_container {
+    position:absolute;
+    left:701px;
+    top:278px;
+    width:16px;
+    height:16px;
+}
+
+#u26_img {
+    position:absolute;
+    left:0px;
+    top:0px;
+    width:16px;
+    height:16px;
+}
+
+.u27 {
+    position:absolute;
+    left:2px;
+    top:0px;
+    width:12px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u28_normal {
+    background-image: url('../举报页面_files/u14_normal.png');
+}
+
+.u28_container {
+    position:absolute;
+    left:701px;
+    top:306px;
+    width:16px;
+    height:16px;
+}
+
+#u28_img {
+    position:absolute;
+    left:0px;
+    top:0px;
+    width:16px;
+    height:16px;
+}
+
+.u29 {
+    position:absolute;
+    left:2px;
+    top:0px;
+    width:12px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u31 {
+    position:absolute;
+    left:16px;
+    top:0px;
+    width:82px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u32_normal {
+    background-image: url('../举报页面_files/u14_normal.png');
+}
+
+.u32_container {
+    position:absolute;
+    left:701px;
+    top:334px;
+    width:16px;
+    height:16px;
+}
+
+#u32_img {
+    position:absolute;
+    left:0px;
+    top:0px;
+    width:16px;
+    height:16px;
+}
+
+.u33 {
+    position:absolute;
+    left:2px;
+    top:0px;
+    width:12px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u34 {
+    position:absolute;
+    left:82px;
+    top:379px;
+    width:150px;
+    height:19px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u35_normal {
+    background-image: url('../举报页面_files/u35_normal.png');
+}
+
+.u35_container {
+    position:absolute;
+    left:189px;
+    top:414px;
+    width:629px;
+    height:143px;
+}
+
+#u35_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:635px;
+    height:149px;
+}
+
+.u36 {
+    position:absolute;
+    left:2px;
+    top:64px;
+    width:625px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u37_normal {
+    background-image: url('../举报页面_files/u37_normal.png');
+}
+
+.u37_container {
+    position:absolute;
+    left:207px;
+    top:435px;
+    width:84px;
+    height:86px;
+}
+
+#u37_img {
+    position:absolute;
+    left:0px;
+    top:0px;
+    width:84px;
+    height:86px;
+}
+
+.u38 {
+    position:absolute;
+    left:2px;
+    top:35px;
+    width:80px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u39 {
+    position:absolute;
+    left:229px;
+    top:531px;
+    width:40px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u40 {
+    position:absolute;
+    left:301px;
+    top:444px;
+    width:507px;
+    height:48px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u41 {
+    position:absolute;
+    left:82px;
+    top:581px;
+    width:122px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u42 {
+    position:absolute;
+    left:214px;
+    top:576px;
+    width:180px;
+    height:25px;
+    ;
+    ;
+    text-align: left;;
+    font-family:'Arial';
+    font-size: 13px;
+    color:#000000;
+    font-style:normal;
+    font-weight:normal;
+    text-decoration:none;
+    
+}
+
+.u43_normal {
+    background-image: url('../举报页面_files/u43_normal.png');
+}
+
+.u43_container {
+    position:absolute;
+    left:404px;
+    top:571px;
+    width:87px;
+    height:35px;
+}
+
+#u43_img {
+    position:absolute;
+    left:0px;
+    top:0px;
+    width:87px;
+    height:35px;
+}
+
+.u44 {
+    position:absolute;
+    left:2px;
+    top:10px;
+    width:83px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u45 {
+    position:absolute;
+    left:495px;
+    top:582px;
+    width:94px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u46 {
+    position:absolute;
+    left:413px;
+    top:655px;
+    width:100px;
+    height:25px;
+    ;
+    ;
+    text-align: center;;
+    font-family:'Arial';
+    font-size: 13px;
+    color:#000000;
+    font-style:normal;
+    font-weight:normal;
+    text-decoration:none;
+    
+}
+

@@ -6,7 +6,9 @@ import com.fasterxml.jackson.databind.deser.Deserializers.Base;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.sanxian.sxzhuanhuan.R;
 import com.sanxian.sxzhuanhuan.common.BaseActivity;
+import com.sanxian.sxzhuanhuan.entity.AddressInfo;
 import com.sanxian.sxzhuanhuan.entity.GoodsBuyEntity;
+import com.sanxian.sxzhuanhuan.function.personal.myaccount.MyAccoAddressIndexActivity;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -29,6 +31,7 @@ public class GoodsBuyActivity extends BaseActivity {
 	static final int GoodsPayActivity = 0;
 	static final int GoodsPayFmsActivity = 1;
 	static final int ACTIVITY_FINISH = 4;
+	static final int REQUEST_ADDR = 2;
 
 	TextView goods_buy_name;
 	TextView goods_buy_phone;
@@ -107,6 +110,11 @@ public class GoodsBuyActivity extends BaseActivity {
 		case R.id.goods_buy_back:
 			finish();
 			break;
+		case R.id.goods_buy_changeAddr:
+			Intent intent = new Intent(this,MyAccoAddressIndexActivity.class);
+			intent.putExtra("from", "goods_buy");
+			startActivityForResult(intent, GoodsContentActivity.REQUEST_NEW_ADDR);
+			break;
 
 		default:
 			break;
@@ -143,6 +151,14 @@ public class GoodsBuyActivity extends BaseActivity {
 				goods_buy_fms.setText(text);
 			}
 			
+		}else if(requestCode == GoodsContentActivity.REQUEST_NEW_ADDR){
+			Log.d("REQUEST_NEW_ADDR", "REQUEST_NEW_ADDR  111");
+			if(resultCode == MyAccoAddressIndexActivity.CHOOSE_ADDRESS_CODE){
+				AddressInfo addr = (AddressInfo)data.getSerializableExtra("addressInfo");
+				goods_buy_name.setText(addr.getName());
+				goods_buy_phone.setText(addr.getPhoneNum());
+				goods_buy_addr.setText(addr.getAddress());
+			}
 		}
 	}
 }

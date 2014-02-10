@@ -12,11 +12,14 @@
         android:orientation="vertical" >
 
         <LinearLayout
+            android:id="@+id/goods_buy_changeAddr"
             android:layout_width="match_parent"
             android:layout_height="100dp"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
             android:layout_marginTop="5dp"
+            android:clickable="true"
+            android:onClick="dellwithbuttons"
             android:background="@drawable/border"
             android:orientation="vertical" >
 

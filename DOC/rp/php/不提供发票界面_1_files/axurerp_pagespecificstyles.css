@@ -1,0 +1,1857 @@
+﻿body {
+    margin: 0px;
+}
+
+div {
+    background-repeat: no-repeat;
+}
+
+.raw_image {
+    width: 100%;
+    height: 100%;
+}
+
+.preload {
+    display: none;
+}
+#main_container {
+}
+
+.form_sketch {
+    border-color: transparent;
+    background-color: transparent;
+}
+
+.u0_normal {
+    background-image: url('../不提供发票界面_1_files/u0_normal.png');
+}
+
+.u0_container {
+    position:absolute;
+    left:0px;
+    top:0px;
+    width:1199px;
+    height:20px;
+}
+
+#u0_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:1205px;
+    height:26px;
+}
+
+.u1 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:1195px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u2 {
+    position:absolute;
+    left:705px;
+    top:2px;
+    width:493px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u3_normal {
+    background-image: url('../不提供发票界面_1_files/u3_normal.png');
+}
+
+.u3_container {
+    position:absolute;
+    left:10px;
+    top:32px;
+    width:179px;
+    height:86px;
+}
+
+#u3_img {
+    position:absolute;
+    left:0px;
+    top:0px;
+    width:179px;
+    height:86px;
+}
+
+.u4 {
+    position:absolute;
+    left:2px;
+    top:35px;
+    width:175px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u5_normal {
+    background-image: url('../resources/images/transparent.gif');
+}
+
+.u5_container {
+    position:absolute;
+    left:191px;
+    top:35px;
+    width:126px;
+    height:40px;
+}
+
+#u5_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:132px;
+    height:46px;
+}
+
+.u6 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:122px;
+    height:36px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u7_normal {
+    background-image: url('../resources/images/transparent.gif');
+}
+
+.u7_container {
+    position:absolute;
+    left:191px;
+    top:77px;
+    width:174px;
+    height:20px;
+}
+
+#u7_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:180px;
+    height:26px;
+}
+
+.u8 {
+    position:absolute;
+    left:2px;
+    top:0px;
+    width:170px;
+    height:21px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u9_line {
+    background-image: url('../不提供发票界面_1_files/u9_line.png');
+}
+
+.u9_line {
+    position:absolute;
+    left:0px;
+    top:4px;
+    width:1199px;
+    height:3px;
+}
+
+.u9 {
+    position:absolute;
+    left:0px;
+    top:131px;
+    width:1199px;
+    height:10px;
+    
+}
+
+.u10_normal {
+    background-image: url('../不提供发票界面_1_files/u10_normal.png');
+}
+
+.u10_container {
+    position:absolute;
+    left:10px;
+    top:3px;
+    width:16px;
+    height:16px;
+}
+
+#u10_img {
+    position:absolute;
+    left:0px;
+    top:0px;
+    width:16px;
+    height:16px;
+}
+
+.u11 {
+    position:absolute;
+    left:2px;
+    top:0px;
+    width:12px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u12 {
+    position:absolute;
+    left:26px;
+    top:4px;
+    width:46px;
+    height:14px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u13 {
+    position:absolute;
+    left:201px;
+    top:5px;
+    width:45px;
+    height:15px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u14 {
+    position:absolute;
+    left:74px;
+    top:4px;
+    width:141px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u15_normal {
+    background-image: url('../不提供发票界面_1_files/u15_normal.png');
+}
+
+.u15_container {
+    position:absolute;
+    left:413px;
+    top:63px;
+    width:105px;
+    height:40px;
+}
+
+#u15_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:111px;
+    height:46px;
+}
+
+.u16 {
+    position:absolute;
+    left:2px;
+    top:12px;
+    width:101px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u17_line {
+    background-image: url('../不提供发票界面_1_files/u17_line.png');
+}
+
+.u17_line {
+    position:absolute;
+    left:0px;
+    top:4px;
+    width:60px;
+    height:3px;
+}
+
+.u17 {
+    position:absolute;
+    left:518px;
+    top:78px;
+    width:60px;
+    height:10px;
+    
+}
+
+.u18_line {
+    background-image: url('../不提供发票界面_1_files/u18_line.png');
+}
+
+.u18_line {
+    position:absolute;
+    left:0px;
+    top:4px;
+    width:60px;
+    height:3px;
+}
+
+.u18 {
+    position:absolute;
+    left:683px;
+    top:78px;
+    width:60px;
+    height:10px;
+    
+}
+
+.u19_line {
+    background-image: url('../不提供发票界面_1_files/u19_line.png');
+}
+
+.u19_line {
+    position:absolute;
+    left:0px;
+    top:4px;
+    width:60px;
+    height:3px;
+}
+
+.u19 {
+    position:absolute;
+    left:848px;
+    top:78px;
+    width:60px;
+    height:10px;
+    
+}
+
+.u20_normal {
+    background-image: url('../不提供发票界面_1_files/u15_normal.png');
+}
+
+.u20_container {
+    position:absolute;
+    left:908px;
+    top:63px;
+    width:105px;
+    height:40px;
+}
+
+#u20_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:111px;
+    height:46px;
+}
+
+.u21 {
+    position:absolute;
+    left:2px;
+    top:12px;
+    width:101px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u22_line {
+    background-image: url('../不提供发票界面_1_files/u22_line.png');
+}
+
+.u22_line {
+    position:absolute;
+    left:0px;
+    top:4px;
+    width:60px;
+    height:3px;
+}
+
+.u22 {
+    position:absolute;
+    left:1013px;
+    top:78px;
+    width:60px;
+    height:10px;
+    
+}
+
+.u23_normal {
+    background-image: url('../不提供发票界面_1_files/u15_normal.png');
+}
+
+.u23_container {
+    position:absolute;
+    left:1073px;
+    top:63px;
+    width:105px;
+    height:40px;
+}
+
+#u23_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:111px;
+    height:46px;
+}
+
+.u24 {
+    position:absolute;
+    left:2px;
+    top:12px;
+    width:101px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u25_line {
+    background-image: url('../不提供发票界面_1_files/u25_line.png');
+}
+
+.u25_line {
+    position:absolute;
+    left:0px;
+    top:4px;
+    width:1152px;
+    height:3px;
+}
+
+.u25 {
+    position:absolute;
+    left:39px;
+    top:198px;
+    width:1152px;
+    height:10px;
+    
+}
+
+.u26_normal {
+    background-image: url('../不提供发票界面_1_files/u15_normal.png');
+}
+
+.u26_container {
+    position:absolute;
+    left:578px;
+    top:63px;
+    width:105px;
+    height:40px;
+}
+
+#u26_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:111px;
+    height:46px;
+}
+
+.u27 {
+    position:absolute;
+    left:2px;
+    top:12px;
+    width:101px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u28_normal {
+    background-image: url('../不提供发票界面_1_files/u28_normal.png');
+}
+
+.u28_container {
+    position:absolute;
+    left:742px;
+    top:63px;
+    width:105px;
+    height:40px;
+}
+
+#u28_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:111px;
+    height:46px;
+}
+
+.u29 {
+    position:absolute;
+    left:2px;
+    top:10px;
+    width:101px;
+    height:19px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u30 {
+    position:absolute;
+    left:46px;
+    top:176px;
+    width:150px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u31_normal {
+    background-image: url('../不提供发票界面_1_files/u31_normal.png');
+}
+
+.u31_container {
+    position:absolute;
+    left:46px;
+    top:224px;
+    width:1145px;
+    height:35px;
+}
+
+#u31_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:1151px;
+    height:41px;
+}
+
+.u32 {
+    position:absolute;
+    left:2px;
+    top:10px;
+    width:1141px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u33 {
+    position:absolute;
+    left:174px;
+    top:233px;
+    width:475px;
+    height:19px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u34 {
+    position:absolute;
+    left:55px;
+    top:235px;
+    width:58px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u36 {
+    position:absolute;
+    left:16px;
+    top:0px;
+    width:19px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u37 {
+    position:absolute;
+    left:1088px;
+    top:176px;
+    width:97px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u38 {
+    position:absolute;
+    left:1091px;
+    top:233px;
+    width:74px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u39 {
+    position:absolute;
+    left:176px;
+    top:271px;
+    width:475px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u41 {
+    position:absolute;
+    left:16px;
+    top:0px;
+    width:19px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u42 {
+    position:absolute;
+    left:785px;
+    top:235px;
+    width:62px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u43 {
+    position:absolute;
+    left:166px;
+    top:310px;
+    width:97px;
+    height:36px;
+    ;
+    ;
+    text-align: center;;
+    font-family:'Arial';
+    font-size: 11px;
+    color:#000000;
+    font-style:normal;
+    font-weight:normal;
+    text-decoration:none;
+    
+}
+
+.u44 {
+    position:absolute;
+    left:290px;
+    top:320px;
+    width:217px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u45_normal {
+    background-image: url('../前台页尾_2_files/u29_normal.png');
+}
+
+.u45_container {
+    position:absolute;
+    left:0px;
+    top:1605px;
+    width:1201px;
+    height:80px;
+}
+
+#u45_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:1207px;
+    height:86px;
+}
+
+.u46 {
+    position:absolute;
+    left:2px;
+    top:32px;
+    width:1197px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u47 {
+    position:absolute;
+    left:58px;
+    top:1621px;
+    width:1002px;
+    height:48px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u49_line {
+    background-image: url('../不提供发票界面_1_files/u49_line.png');
+}
+
+.u49_line {
+    position:absolute;
+    left:0px;
+    top:4px;
+    width:1152px;
+    height:3px;
+}
+
+.u49 {
+    position:absolute;
+    left:47px;
+    top:477px;
+    width:1152px;
+    height:10px;
+    
+}
+
+.u50 {
+    position:absolute;
+    left:54px;
+    top:437px;
+    width:150px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u51 {
+    position:absolute;
+    left:199px;
+    top:460px;
+    width:56px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u52 {
+    position:absolute;
+    left:455px;
+    top:460px;
+    width:40px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u53 {
+    position:absolute;
+    left:575px;
+    top:460px;
+    width:40px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u54 {
+    position:absolute;
+    left:357px;
+    top:460px;
+    width:29px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u55 {
+    position:absolute;
+    left:660px;
+    top:460px;
+    width:80px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u56 {
+    position:absolute;
+    left:750px;
+    top:460px;
+    width:80px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u57_normal {
+    background-image: url('../不提供发票界面_1_files/u57_normal.png');
+}
+
+.u57_container {
+    position:absolute;
+    left:54px;
+    top:525px;
+    width:1095px;
+    height:77px;
+}
+
+#u57_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:1101px;
+    height:83px;
+}
+
+.u58 {
+    position:absolute;
+    left:2px;
+    top:30px;
+    width:1091px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u59 {
+    position:absolute;
+    left:174px;
+    top:552px;
+    width:235px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u60 {
+    position:absolute;
+    left:559px;
+    top:550px;
+    width:370px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u61_normal {
+    background-image: url('../不提供发票界面_1_files/u61_normal.png');
+}
+
+.u61_container {
+    position:absolute;
+    left:84px;
+    top:537px;
+    width:50px;
+    height:50px;
+}
+
+#u61_img {
+    position:absolute;
+    left:0px;
+    top:0px;
+    width:50px;
+    height:50px;
+}
+
+.u62 {
+    position:absolute;
+    left:2px;
+    top:17px;
+    width:46px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u63_normal {
+    background-image: url('../不提供发票界面_1_files/u57_normal.png');
+}
+
+.u63_container {
+    position:absolute;
+    left:54px;
+    top:607px;
+    width:1095px;
+    height:77px;
+}
+
+#u63_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:1101px;
+    height:83px;
+}
+
+.u64 {
+    position:absolute;
+    left:2px;
+    top:30px;
+    width:1091px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u65 {
+    position:absolute;
+    left:174px;
+    top:634px;
+    width:250px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u66 {
+    position:absolute;
+    left:559px;
+    top:632px;
+    width:370px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u67_normal {
+    background-image: url('../不提供发票界面_1_files/u61_normal.png');
+}
+
+.u67_container {
+    position:absolute;
+    left:84px;
+    top:619px;
+    width:50px;
+    height:50px;
+}
+
+#u67_img {
+    position:absolute;
+    left:0px;
+    top:0px;
+    width:50px;
+    height:50px;
+}
+
+.u68 {
+    position:absolute;
+    left:2px;
+    top:17px;
+    width:46px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u69_normal {
+    background-image: url('../不提供发票界面_1_files/u69_normal.png');
+}
+
+.u69_container {
+    position:absolute;
+    left:56px;
+    top:857px;
+    width:1095px;
+    height:77px;
+}
+
+#u69_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:1101px;
+    height:83px;
+}
+
+.u70 {
+    position:absolute;
+    left:2px;
+    top:30px;
+    width:1091px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u71 {
+    position:absolute;
+    left:176px;
+    top:884px;
+    width:235px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u72 {
+    position:absolute;
+    left:561px;
+    top:882px;
+    width:370px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u73_normal {
+    background-image: url('../不提供发票界面_1_files/u61_normal.png');
+}
+
+.u73_container {
+    position:absolute;
+    left:86px;
+    top:869px;
+    width:50px;
+    height:50px;
+}
+
+#u73_img {
+    position:absolute;
+    left:0px;
+    top:0px;
+    width:50px;
+    height:50px;
+}
+
+.u74 {
+    position:absolute;
+    left:2px;
+    top:17px;
+    width:46px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u75_normal {
+    background-image: url('../不提供发票界面_1_files/u69_normal.png');
+}
+
+.u75_container {
+    position:absolute;
+    left:56px;
+    top:939px;
+    width:1095px;
+    height:77px;
+}
+
+#u75_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:1101px;
+    height:83px;
+}
+
+.u76 {
+    position:absolute;
+    left:2px;
+    top:30px;
+    width:1091px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u77 {
+    position:absolute;
+    left:176px;
+    top:966px;
+    width:250px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u78 {
+    position:absolute;
+    left:561px;
+    top:964px;
+    width:370px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u79_normal {
+    background-image: url('../不提供发票界面_1_files/u61_normal.png');
+}
+
+.u79_container {
+    position:absolute;
+    left:86px;
+    top:951px;
+    width:50px;
+    height:50px;
+}
+
+#u79_img {
+    position:absolute;
+    left:0px;
+    top:0px;
+    width:50px;
+    height:50px;
+}
+
+.u80 {
+    position:absolute;
+    left:2px;
+    top:17px;
+    width:46px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u81 {
+    position:absolute;
+    left:54px;
+    top:499px;
+    width:150px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u82 {
+    position:absolute;
+    left:54px;
+    top:834px;
+    width:150px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u83 {
+    position:absolute;
+    left:461px;
+    top:550px;
+    width:29px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u84 {
+    position:absolute;
+    left:460px;
+    top:632px;
+    width:29px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u85 {
+    position:absolute;
+    left:460px;
+    top:886px;
+    width:29px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u86 {
+    position:absolute;
+    left:460px;
+    top:966px;
+    width:29px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u87 {
+    position:absolute;
+    left:999px;
+    top:460px;
+    width:80px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u88 {
+    position:absolute;
+    left:978px;
+    top:552px;
+    width:107px;
+    height:22px;
+    ;
+    ;
+    ;
+    font-family:'Arial';
+    font-size: 13px;
+    color:#000000;
+    font-style:normal;
+    font-weight:normal;
+    text-decoration:none;
+    
+}
+
+.u89 {
+    position:absolute;
+    left:978px;
+    top:631px;
+    width:107px;
+    height:22px;
+    ;
+    ;
+    ;
+    font-family:'Arial';
+    font-size: 13px;
+    color:#000000;
+    font-style:normal;
+    font-weight:normal;
+    text-decoration:none;
+    
+}
+
+.u90 {
+    position:absolute;
+    left:978px;
+    top:882px;
+    width:107px;
+    height:22px;
+    ;
+    ;
+    ;
+    font-family:'Arial';
+    font-size: 13px;
+    color:#000000;
+    font-style:normal;
+    font-weight:normal;
+    text-decoration:none;
+    
+}
+
+.u91 {
+    position:absolute;
+    left:978px;
+    top:963px;
+    width:107px;
+    height:22px;
+    ;
+    ;
+    ;
+    font-family:'Arial';
+    font-size: 13px;
+    color:#000000;
+    font-style:normal;
+    font-weight:normal;
+    text-decoration:none;
+    
+}
+
+.u92 {
+    position:absolute;
+    left:960px;
+    top:1217px;
+    width:181px;
+    height:22px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u93_line {
+    background-image: url('../不提供发票界面_1_files/u93_line.png');
+}
+
+.u93_line {
+    position:absolute;
+    left:0px;
+    top:4px;
+    width:1104px;
+    height:3px;
+}
+
+.u93 {
+    position:absolute;
+    left:47px;
+    top:1249px;
+    width:1104px;
+    height:10px;
+    
+}
+
+.u94_normal {
+    background-image: url('../不提供发票界面_1_files/u94_normal.png');
+}
+
+.u94_container {
+    position:absolute;
+    left:1016px;
+    top:1278px;
+    width:133px;
+    height:39px;
+}
+
+#u94_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:139px;
+    height:45px;
+}
+
+.u95 {
+    position:absolute;
+    left:2px;
+    top:8px;
+    width:129px;
+    height:24px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u96 {
+    position:absolute;
+    left:897px;
+    top:1295px;
+    width:96px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u97_normal {
+    background-image: url('../不提供发票界面_1_files/u97_normal.png');
+}
+
+.u97_container {
+    position:absolute;
+    left:54px;
+    top:689px;
+    width:1095px;
+    height:125px;
+}
+
+#u97_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:1101px;
+    height:131px;
+}
+
+.u98 {
+    position:absolute;
+    left:2px;
+    top:54px;
+    width:1091px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u99 {
+    position:absolute;
+    left:947px;
+    top:706px;
+    width:222px;
+    height:19px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u100 {
+    position:absolute;
+    left:60px;
+    top:708px;
+    width:150px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u101 {
+    position:absolute;
+    left:139px;
+    top:705px;
+    width:572px;
+    height:25px;
+    ;
+    ;
+    text-align: left;;
+    font-family:'Arial';
+    font-size: 13px;
+    color:#C9C9C9;
+    font-style:normal;
+    font-weight:normal;
+    text-decoration:none;
+    
+}
+
+.u102_line {
+    background-image: url('../不提供发票界面_1_files/u102_line.png');
+}
+
+.u102_line {
+    position:absolute;
+    left:0px;
+    top:4px;
+    width:1073px;
+    height:3px;
+}
+
+.u102 {
+    position:absolute;
+    left:60px;
+    top:737px;
+    width:1073px;
+    height:10px;
+    
+}
+
+.u103 {
+    position:absolute;
+    left:864px;
+    top:767px;
+    width:300px;
+    height:19px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u104_normal {
+    background-image: url('../不提供发票界面_1_files/u97_normal.png');
+}
+
+.u104_container {
+    position:absolute;
+    left:54px;
+    top:1023px;
+    width:1095px;
+    height:125px;
+}
+
+#u104_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:1101px;
+    height:131px;
+}
+
+.u105 {
+    position:absolute;
+    left:2px;
+    top:54px;
+    width:1091px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u106 {
+    position:absolute;
+    left:947px;
+    top:1040px;
+    width:222px;
+    height:19px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u107 {
+    position:absolute;
+    left:60px;
+    top:1042px;
+    width:150px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u108 {
+    position:absolute;
+    left:139px;
+    top:1039px;
+    width:572px;
+    height:25px;
+    ;
+    ;
+    text-align: left;;
+    font-family:'Arial';
+    font-size: 13px;
+    color:#C9C9C9;
+    font-style:normal;
+    font-weight:normal;
+    text-decoration:none;
+    
+}
+
+.u109_line {
+    background-image: url('../不提供发票界面_1_files/u109_line.png');
+}
+
+.u109_line {
+    position:absolute;
+    left:0px;
+    top:4px;
+    width:1073px;
+    height:3px;
+}
+
+.u109 {
+    position:absolute;
+    left:60px;
+    top:1071px;
+    width:1073px;
+    height:10px;
+    
+}
+
+.u110 {
+    position:absolute;
+    left:864px;
+    top:1101px;
+    width:300px;
+    height:19px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u111 {
+    position:absolute;
+    left:123px;
+    top:494px;
+    width:81px;
+    height:25px;
+    ;
+    ;
+    text-align: center;;
+    font-family:'Arial';
+    font-size: 13px;
+    color:#000000;
+    font-style:normal;
+    font-weight:normal;
+    text-decoration:none;
+    
+}
+
+.u112 {
+    position:absolute;
+    left:123px;
+    top:829px;
+    width:81px;
+    height:25px;
+    ;
+    ;
+    text-align: center;;
+    font-family:'Arial';
+    font-size: 13px;
+    color:#000000;
+    font-style:normal;
+    font-weight:normal;
+    text-decoration:none;
+    
+}
+
+.u113_line {
+    background-image: url('../不提供发票界面_1_files/u113_line.png');
+}
+
+.u113_line {
+    position:absolute;
+    left:0px;
+    top:4px;
+    width:1146px;
+    height:3px;
+}
+
+.u113 {
+    position:absolute;
+    left:49px;
+    top:400px;
+    width:1146px;
+    height:10px;
+    
+}
+
+.u114 {
+    position:absolute;
+    left:50px;
+    top:383px;
+    width:150px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u115 {
+    position:absolute;
+    left:113px;
+    top:383px;
+    width:150px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+

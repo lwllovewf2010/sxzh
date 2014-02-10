@@ -220,6 +220,7 @@ public class MainActivity extends BaseFragmentActivity implements OnClickListene
 				final Fragment personal = fm.findFragmentByTag(tag);
 				if (personal != null) {
 					fragment = personal;
+					((PersonalIndex) fragment).initData();
 				} else {
 					fragment = new PersonalIndex();
 				}

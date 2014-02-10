@@ -48,7 +48,7 @@
             android:gravity="left|center"
             android:text="这是一段详" />
 
-        <ProgressBar
+        <!-- <ProgressBar
             android:id="@+id/sort_detail_item_progressBar"
             style="?android:attr/progressBarStyleHorizontal"
             android:layout_width="fill_parent"
@@ -57,7 +57,16 @@
             android:layout_margin="5dip"
             android:max="100"
             android:progress="30"
-            android:secondaryProgress="100" />
+            android:secondaryProgress="100" /> -->
+            <com.sanxian.sxzhuanhuan.common.CustomProgress 
+                android:id="@+id/sort_detail_item_progressBar"
+	    	android:max="100"
+	    	android:layout_width="fill_parent"
+            android:layout_height="10dp"
+            android:layout_below="@+id/sort_detail_item_list_image"
+            android:layout_margin="5dip"
+	    	style="?android:attr/progressBarStyleHorizontal"
+	    	android:visibility="visible"/>
 
         <LinearLayout
             android:id="@+id/sort_detail_item_button_bar"

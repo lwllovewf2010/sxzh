@@ -1,0 +1,2085 @@
+﻿body {
+    margin: 0px;
+}
+
+div {
+    background-repeat: no-repeat;
+}
+
+.raw_image {
+    width: 100%;
+    height: 100%;
+}
+
+.preload {
+    display: none;
+}
+#main_container {
+}
+
+.form_sketch {
+    border-color: transparent;
+    background-color: transparent;
+}
+
+.u0_normal {
+    background-image: url('../虚拟公司展示页_files/u0_normal.png');
+}
+
+.u0_container {
+    position:absolute;
+    left:36px;
+    top:563px;
+    width:1130px;
+    height:277px;
+}
+
+#u0_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:1136px;
+    height:283px;
+}
+
+.u1 {
+    position:absolute;
+    left:2px;
+    top:130px;
+    width:1126px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u2_normal {
+    background-image: url('../虚拟公司展示页_files/u2_normal.png');
+}
+
+.u2_container {
+    position:absolute;
+    left:0px;
+    top:0px;
+    width:1199px;
+    height:20px;
+}
+
+#u2_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:1205px;
+    height:26px;
+}
+
+.u3 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:1195px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u4 {
+    position:absolute;
+    left:705px;
+    top:2px;
+    width:493px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u5_normal {
+    background-image: url('../resources/images/transparent.gif');
+}
+
+.u5_container {
+    position:absolute;
+    left:48px;
+    top:47px;
+    width:126px;
+    height:40px;
+}
+
+#u5_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:132px;
+    height:46px;
+}
+
+.u6 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:122px;
+    height:36px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u7_normal {
+    background-image: url('../resources/images/transparent.gif');
+}
+
+.u7_container {
+    position:absolute;
+    left:26px;
+    top:89px;
+    width:174px;
+    height:20px;
+}
+
+#u7_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:180px;
+    height:26px;
+}
+
+.u8 {
+    position:absolute;
+    left:2px;
+    top:0px;
+    width:170px;
+    height:21px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u9_line {
+    background-image: url('../虚拟公司展示页_files/u9_line.png');
+}
+
+.u9_line {
+    position:absolute;
+    left:0px;
+    top:4px;
+    width:1199px;
+    height:3px;
+}
+
+.u9 {
+    position:absolute;
+    left:0px;
+    top:189px;
+    width:1199px;
+    height:10px;
+    
+}
+
+.u10_normal {
+    background-image: url('../虚拟公司展示页_files/u10_normal.png');
+}
+
+.u10_container {
+    position:absolute;
+    left:570px;
+    top:168px;
+    width:85px;
+    height:25px;
+}
+
+#u10_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:91px;
+    height:31px;
+}
+
+.u11 {
+    position:absolute;
+    left:2px;
+    top:4px;
+    width:81px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u12_normal {
+    background-image: url('../虚拟公司展示页_files/u10_normal.png');
+}
+
+.u12_container {
+    position:absolute;
+    left:465px;
+    top:168px;
+    width:85px;
+    height:25px;
+}
+
+#u12_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:91px;
+    height:31px;
+}
+
+.u13 {
+    position:absolute;
+    left:2px;
+    top:4px;
+    width:81px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u14_normal {
+    background-image: url('../虚拟公司展示页_files/u14_normal.png');
+}
+
+.u14_container {
+    position:absolute;
+    left:358px;
+    top:169px;
+    width:85px;
+    height:25px;
+}
+
+#u14_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:91px;
+    height:31px;
+}
+
+.u15 {
+    position:absolute;
+    left:2px;
+    top:4px;
+    width:81px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u16_normal {
+    background-image: url('../虚拟公司展示页_files/u10_normal.png');
+}
+
+.u16_container {
+    position:absolute;
+    left:680px;
+    top:168px;
+    width:85px;
+    height:25px;
+}
+
+#u16_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:91px;
+    height:31px;
+}
+
+.u17 {
+    position:absolute;
+    left:2px;
+    top:4px;
+    width:81px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u18_normal {
+    background-image: url('../虚拟公司展示页_files/u18_normal.png');
+}
+
+.u18_container {
+    position:absolute;
+    left:10px;
+    top:3px;
+    width:16px;
+    height:16px;
+}
+
+#u18_img {
+    position:absolute;
+    left:0px;
+    top:0px;
+    width:16px;
+    height:16px;
+}
+
+.u19 {
+    position:absolute;
+    left:2px;
+    top:0px;
+    width:12px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u20 {
+    position:absolute;
+    left:26px;
+    top:4px;
+    width:46px;
+    height:14px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u21 {
+    position:absolute;
+    left:201px;
+    top:5px;
+    width:45px;
+    height:15px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u22 {
+    position:absolute;
+    left:74px;
+    top:4px;
+    width:141px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u23_normal {
+    background-image: url('../resources/images/transparent.gif');
+}
+
+.u23_container {
+    position:absolute;
+    left:225px;
+    top:59px;
+    width:82px;
+    height:40px;
+}
+
+#u23_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:88px;
+    height:46px;
+}
+
+.u24 {
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:78px;
+    height:36px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u25_line {
+    background-image: url('../虚拟公司展示页_files/u25_line.png');
+}
+
+.u25_line {
+    position:absolute;
+    left:4px;
+    top:0px;
+    width:3px;
+    height:63px;
+}
+
+.u25 {
+    position:absolute;
+    left:210px;
+    top:52px;
+    width:10px;
+    height:63px;
+    
+}
+
+.u26_normal {
+    background-image: url('../虚拟公司展示页_files/u26_normal.png');
+}
+
+.u26_container {
+    position:absolute;
+    left:36px;
+    top:209px;
+    width:1130px;
+    height:301px;
+}
+
+#u26_img {
+    position:absolute;
+    left:0px;
+    top:0px;
+    width:1130px;
+    height:301px;
+}
+
+.u27 {
+    position:absolute;
+    left:2px;
+    top:142px;
+    width:1126px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u28 {
+    position:absolute;
+    left:26px;
+    top:142px;
+    width:322px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u29_line {
+    background-image: url('../虚拟公司展示页_files/u29_line.png');
+}
+
+.u29_line {
+    position:absolute;
+    left:0px;
+    top:4px;
+    width:1199px;
+    height:3px;
+}
+
+.u29 {
+    position:absolute;
+    left:0px;
+    top:163px;
+    width:1199px;
+    height:10px;
+    
+}
+
+.u30 {
+    position:absolute;
+    left:358px;
+    top:142px;
+    width:150px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u31 {
+    position:absolute;
+    left:1042px;
+    top:142px;
+    width:150px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u32_normal {
+    background-image: url('../虚拟公司展示页_files/placeholder_u32_normal.png');
+}
+
+.u32_container {
+    position:absolute;
+    left:57px;
+    top:578px;
+    width:177px;
+    height:182px;
+}
+
+#u32_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:183px;
+    height:188px;
+}
+
+.u33 {
+    position:absolute;
+    left:2px;
+    top:83px;
+    width:173px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u34 {
+    position:absolute;
+    left:57px;
+    top:768px;
+    width:196px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u35 {
+    position:absolute;
+    left:57px;
+    top:794px;
+    width:191px;
+    height:28px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u36_normal {
+    background-image: url('../虚拟公司展示页_files/placeholder_u32_normal.png');
+}
+
+.u36_container {
+    position:absolute;
+    left:287px;
+    top:578px;
+    width:177px;
+    height:182px;
+}
+
+#u36_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:183px;
+    height:188px;
+}
+
+.u37 {
+    position:absolute;
+    left:2px;
+    top:83px;
+    width:173px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u38 {
+    position:absolute;
+    left:287px;
+    top:768px;
+    width:196px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u39 {
+    position:absolute;
+    left:287px;
+    top:794px;
+    width:191px;
+    height:28px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u40_normal {
+    background-image: url('../虚拟公司展示页_files/placeholder_u32_normal.png');
+}
+
+.u40_container {
+    position:absolute;
+    left:518px;
+    top:578px;
+    width:177px;
+    height:182px;
+}
+
+#u40_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:183px;
+    height:188px;
+}
+
+.u41 {
+    position:absolute;
+    left:2px;
+    top:83px;
+    width:173px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u42 {
+    position:absolute;
+    left:518px;
+    top:768px;
+    width:196px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u43 {
+    position:absolute;
+    left:518px;
+    top:794px;
+    width:191px;
+    height:28px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u44_normal {
+    background-image: url('../虚拟公司展示页_files/placeholder_u32_normal.png');
+}
+
+.u44_container {
+    position:absolute;
+    left:748px;
+    top:578px;
+    width:177px;
+    height:182px;
+}
+
+#u44_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:183px;
+    height:188px;
+}
+
+.u45 {
+    position:absolute;
+    left:2px;
+    top:83px;
+    width:173px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u46 {
+    position:absolute;
+    left:748px;
+    top:768px;
+    width:196px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u47 {
+    position:absolute;
+    left:748px;
+    top:794px;
+    width:191px;
+    height:28px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u48_normal {
+    background-image: url('../虚拟公司展示页_files/placeholder_u32_normal.png');
+}
+
+.u48_container {
+    position:absolute;
+    left:971px;
+    top:578px;
+    width:177px;
+    height:182px;
+}
+
+#u48_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:183px;
+    height:188px;
+}
+
+.u49 {
+    position:absolute;
+    left:2px;
+    top:83px;
+    width:173px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u50 {
+    position:absolute;
+    left:971px;
+    top:768px;
+    width:196px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u51 {
+    position:absolute;
+    left:971px;
+    top:794px;
+    width:191px;
+    height:28px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u52_normal {
+    background-image: url('../虚拟公司展示页_files/u52_normal.png');
+}
+
+.u52_container {
+    position:absolute;
+    left:36px;
+    top:537px;
+    width:180px;
+    height:26px;
+}
+
+#u52_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:186px;
+    height:32px;
+}
+
+.u53 {
+    position:absolute;
+    left:2px;
+    top:5px;
+    width:176px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u54_normal {
+    background-image: url('../虚拟公司展示页_files/u0_normal.png');
+}
+
+.u54_container {
+    position:absolute;
+    left:36px;
+    top:891px;
+    width:1130px;
+    height:277px;
+}
+
+#u54_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:1136px;
+    height:283px;
+}
+
+.u55 {
+    position:absolute;
+    left:2px;
+    top:130px;
+    width:1126px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u56_normal {
+    background-image: url('../虚拟公司展示页_files/placeholder_u32_normal.png');
+}
+
+.u56_container {
+    position:absolute;
+    left:57px;
+    top:906px;
+    width:177px;
+    height:182px;
+}
+
+#u56_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:183px;
+    height:188px;
+}
+
+.u57 {
+    position:absolute;
+    left:2px;
+    top:83px;
+    width:173px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u58 {
+    position:absolute;
+    left:57px;
+    top:1096px;
+    width:196px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u59 {
+    position:absolute;
+    left:57px;
+    top:1122px;
+    width:191px;
+    height:28px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u60_normal {
+    background-image: url('../虚拟公司展示页_files/placeholder_u32_normal.png');
+}
+
+.u60_container {
+    position:absolute;
+    left:287px;
+    top:906px;
+    width:177px;
+    height:182px;
+}
+
+#u60_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:183px;
+    height:188px;
+}
+
+.u61 {
+    position:absolute;
+    left:2px;
+    top:83px;
+    width:173px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u62 {
+    position:absolute;
+    left:287px;
+    top:1096px;
+    width:196px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u63 {
+    position:absolute;
+    left:287px;
+    top:1122px;
+    width:191px;
+    height:28px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u64_normal {
+    background-image: url('../虚拟公司展示页_files/placeholder_u32_normal.png');
+}
+
+.u64_container {
+    position:absolute;
+    left:518px;
+    top:906px;
+    width:177px;
+    height:182px;
+}
+
+#u64_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:183px;
+    height:188px;
+}
+
+.u65 {
+    position:absolute;
+    left:2px;
+    top:83px;
+    width:173px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u66 {
+    position:absolute;
+    left:518px;
+    top:1096px;
+    width:196px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u67 {
+    position:absolute;
+    left:518px;
+    top:1122px;
+    width:191px;
+    height:28px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u68_normal {
+    background-image: url('../虚拟公司展示页_files/placeholder_u32_normal.png');
+}
+
+.u68_container {
+    position:absolute;
+    left:748px;
+    top:906px;
+    width:177px;
+    height:182px;
+}
+
+#u68_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:183px;
+    height:188px;
+}
+
+.u69 {
+    position:absolute;
+    left:2px;
+    top:83px;
+    width:173px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u70 {
+    position:absolute;
+    left:748px;
+    top:1096px;
+    width:196px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u71 {
+    position:absolute;
+    left:748px;
+    top:1122px;
+    width:191px;
+    height:28px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u72_normal {
+    background-image: url('../虚拟公司展示页_files/placeholder_u32_normal.png');
+}
+
+.u72_container {
+    position:absolute;
+    left:971px;
+    top:906px;
+    width:177px;
+    height:182px;
+}
+
+#u72_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:183px;
+    height:188px;
+}
+
+.u73 {
+    position:absolute;
+    left:2px;
+    top:83px;
+    width:173px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u74 {
+    position:absolute;
+    left:971px;
+    top:1096px;
+    width:196px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u75 {
+    position:absolute;
+    left:971px;
+    top:1122px;
+    width:191px;
+    height:28px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u76_normal {
+    background-image: url('../虚拟公司展示页_files/u52_normal.png');
+}
+
+.u76_container {
+    position:absolute;
+    left:36px;
+    top:865px;
+    width:180px;
+    height:26px;
+}
+
+#u76_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:186px;
+    height:32px;
+}
+
+.u77 {
+    position:absolute;
+    left:2px;
+    top:5px;
+    width:176px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u78_normal {
+    background-image: url('../虚拟公司展示页_files/u0_normal.png');
+}
+
+.u78_container {
+    position:absolute;
+    left:36px;
+    top:1221px;
+    width:1130px;
+    height:277px;
+}
+
+#u78_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:1136px;
+    height:283px;
+}
+
+.u79 {
+    position:absolute;
+    left:2px;
+    top:130px;
+    width:1126px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u80_normal {
+    background-image: url('../虚拟公司展示页_files/placeholder_u32_normal.png');
+}
+
+.u80_container {
+    position:absolute;
+    left:57px;
+    top:1236px;
+    width:177px;
+    height:182px;
+}
+
+#u80_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:183px;
+    height:188px;
+}
+
+.u81 {
+    position:absolute;
+    left:2px;
+    top:83px;
+    width:173px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u82 {
+    position:absolute;
+    left:57px;
+    top:1426px;
+    width:196px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u83 {
+    position:absolute;
+    left:57px;
+    top:1452px;
+    width:191px;
+    height:28px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u84_normal {
+    background-image: url('../虚拟公司展示页_files/placeholder_u32_normal.png');
+}
+
+.u84_container {
+    position:absolute;
+    left:287px;
+    top:1236px;
+    width:177px;
+    height:182px;
+}
+
+#u84_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:183px;
+    height:188px;
+}
+
+.u85 {
+    position:absolute;
+    left:2px;
+    top:83px;
+    width:173px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u86 {
+    position:absolute;
+    left:287px;
+    top:1426px;
+    width:196px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u87 {
+    position:absolute;
+    left:287px;
+    top:1452px;
+    width:191px;
+    height:28px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u88_normal {
+    background-image: url('../虚拟公司展示页_files/placeholder_u32_normal.png');
+}
+
+.u88_container {
+    position:absolute;
+    left:518px;
+    top:1236px;
+    width:177px;
+    height:182px;
+}
+
+#u88_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:183px;
+    height:188px;
+}
+
+.u89 {
+    position:absolute;
+    left:2px;
+    top:83px;
+    width:173px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u90 {
+    position:absolute;
+    left:518px;
+    top:1426px;
+    width:196px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u91 {
+    position:absolute;
+    left:518px;
+    top:1452px;
+    width:191px;
+    height:28px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u92_normal {
+    background-image: url('../虚拟公司展示页_files/placeholder_u32_normal.png');
+}
+
+.u92_container {
+    position:absolute;
+    left:748px;
+    top:1236px;
+    width:177px;
+    height:182px;
+}
+
+#u92_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:183px;
+    height:188px;
+}
+
+.u93 {
+    position:absolute;
+    left:2px;
+    top:83px;
+    width:173px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u94 {
+    position:absolute;
+    left:748px;
+    top:1426px;
+    width:196px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u95 {
+    position:absolute;
+    left:748px;
+    top:1452px;
+    width:191px;
+    height:28px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u96_normal {
+    background-image: url('../虚拟公司展示页_files/placeholder_u32_normal.png');
+}
+
+.u96_container {
+    position:absolute;
+    left:971px;
+    top:1236px;
+    width:177px;
+    height:182px;
+}
+
+#u96_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:183px;
+    height:188px;
+}
+
+.u97 {
+    position:absolute;
+    left:2px;
+    top:83px;
+    width:173px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u98 {
+    position:absolute;
+    left:971px;
+    top:1426px;
+    width:196px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u99 {
+    position:absolute;
+    left:971px;
+    top:1452px;
+    width:191px;
+    height:28px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u100_normal {
+    background-image: url('../虚拟公司展示页_files/u52_normal.png');
+}
+
+.u100_container {
+    position:absolute;
+    left:36px;
+    top:1195px;
+    width:180px;
+    height:26px;
+}
+
+#u100_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:186px;
+    height:32px;
+}
+
+.u101 {
+    position:absolute;
+    left:2px;
+    top:5px;
+    width:176px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u102_normal {
+    background-image: url('../虚拟公司展示页_files/u0_normal.png');
+}
+
+.u102_container {
+    position:absolute;
+    left:36px;
+    top:1555px;
+    width:1130px;
+    height:277px;
+}
+
+#u102_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:1136px;
+    height:283px;
+}
+
+.u103 {
+    position:absolute;
+    left:2px;
+    top:130px;
+    width:1126px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u104_normal {
+    background-image: url('../虚拟公司展示页_files/placeholder_u32_normal.png');
+}
+
+.u104_container {
+    position:absolute;
+    left:57px;
+    top:1570px;
+    width:177px;
+    height:182px;
+}
+
+#u104_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:183px;
+    height:188px;
+}
+
+.u105 {
+    position:absolute;
+    left:2px;
+    top:83px;
+    width:173px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u106 {
+    position:absolute;
+    left:57px;
+    top:1760px;
+    width:196px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u107 {
+    position:absolute;
+    left:57px;
+    top:1786px;
+    width:191px;
+    height:28px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u108_normal {
+    background-image: url('../虚拟公司展示页_files/placeholder_u32_normal.png');
+}
+
+.u108_container {
+    position:absolute;
+    left:287px;
+    top:1570px;
+    width:177px;
+    height:182px;
+}
+
+#u108_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:183px;
+    height:188px;
+}
+
+.u109 {
+    position:absolute;
+    left:2px;
+    top:83px;
+    width:173px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u110 {
+    position:absolute;
+    left:287px;
+    top:1760px;
+    width:196px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u111 {
+    position:absolute;
+    left:287px;
+    top:1786px;
+    width:191px;
+    height:28px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u112_normal {
+    background-image: url('../虚拟公司展示页_files/placeholder_u32_normal.png');
+}
+
+.u112_container {
+    position:absolute;
+    left:518px;
+    top:1570px;
+    width:177px;
+    height:182px;
+}
+
+#u112_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:183px;
+    height:188px;
+}
+
+.u113 {
+    position:absolute;
+    left:2px;
+    top:83px;
+    width:173px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u114 {
+    position:absolute;
+    left:518px;
+    top:1760px;
+    width:196px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u115 {
+    position:absolute;
+    left:518px;
+    top:1786px;
+    width:191px;
+    height:28px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u116_normal {
+    background-image: url('../虚拟公司展示页_files/placeholder_u32_normal.png');
+}
+
+.u116_container {
+    position:absolute;
+    left:748px;
+    top:1570px;
+    width:177px;
+    height:182px;
+}
+
+#u116_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:183px;
+    height:188px;
+}
+
+.u117 {
+    position:absolute;
+    left:2px;
+    top:83px;
+    width:173px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u118 {
+    position:absolute;
+    left:748px;
+    top:1760px;
+    width:196px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u119 {
+    position:absolute;
+    left:748px;
+    top:1786px;
+    width:191px;
+    height:28px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u120_normal {
+    background-image: url('../虚拟公司展示页_files/placeholder_u32_normal.png');
+}
+
+.u120_container {
+    position:absolute;
+    left:971px;
+    top:1570px;
+    width:177px;
+    height:182px;
+}
+
+#u120_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:183px;
+    height:188px;
+}
+
+.u121 {
+    position:absolute;
+    left:2px;
+    top:83px;
+    width:173px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u122 {
+    position:absolute;
+    left:971px;
+    top:1760px;
+    width:196px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u123 {
+    position:absolute;
+    left:971px;
+    top:1786px;
+    width:191px;
+    height:28px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u124_normal {
+    background-image: url('../虚拟公司展示页_files/u52_normal.png');
+}
+
+.u124_container {
+    position:absolute;
+    left:36px;
+    top:1529px;
+    width:180px;
+    height:26px;
+}
+
+#u124_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:186px;
+    height:32px;
+}
+
+.u125 {
+    position:absolute;
+    left:2px;
+    top:5px;
+    width:176px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u126_normal {
+    background-image: url('../前台页尾_files/u248_normal.png');
+}
+
+.u126_container {
+    position:absolute;
+    left:0px;
+    top:1849px;
+    width:1201px;
+    height:80px;
+}
+
+#u126_img {
+    position:absolute;
+    left:-3px;
+    top:-3px;
+    width:1207px;
+    height:86px;
+}
+
+.u127 {
+    position:absolute;
+    left:2px;
+    top:32px;
+    width:1197px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u128 {
+    position:absolute;
+    left:58px;
+    top:1865px;
+    width:1002px;
+    height:48px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+

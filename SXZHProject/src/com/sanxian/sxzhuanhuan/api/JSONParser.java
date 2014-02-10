@@ -15,6 +15,8 @@ import com.sanxian.sxzhuanhuan.entity.InterfaceData.ILogin;
 import com.sanxian.sxzhuanhuan.entity.InterfaceData.IMode;
 import com.sanxian.sxzhuanhuan.entity.ProductInfo;
 import com.sanxian.sxzhuanhuan.entity.ProjectInfo;
+import com.sanxian.sxzhuanhuan.entity.City;
+import com.sanxian.sxzhuanhuan.entity.Province;
 
 /**
  * @Title: JSONParser.java
@@ -172,17 +174,22 @@ public class JSONParser {
 	 * @param jsondata
 	 * @return
 	 * {
-		    "ret": 0,
-		    "content": {
-		        "open_id": "5_1278_539947",
-		        "user_name": "10629762@qq.com",
-		        "photo": "",
-		        "dname": null,
-		        "mobile": "13811689766",
-		        "email": "10629762@qq.com",
-		        "token": "f9a4745d0a1c8ba7"
-		    }
-		}
+    "content": {
+        "company_name": "长城文化传媒有限公司",
+        "email": "",
+        "mobile": "13113021201",
+        "money": 100489,
+        "my_order_num": 1,
+        "my_project_num": 2,
+        "my_shopping_cart_num": 2,
+        "my_tribe_num": 1,
+        "photo": "",
+        "place_name": "董事长",
+        "true_name": "",
+        "user_name": "yangyongqiao"
+    },
+    "ret": 0
+}
 	 */
 	public static ILogin getLoginData(String jsondata) {
 		JSONObject object = null;
@@ -195,6 +202,11 @@ public class JSONParser {
 			System.out.println("token:" + mJSONObject.optString("token"));
 			login.setOpen_id(mJSONObject.optString("open_id"));
 			login.setToken(mJSONObject.optString("token"));
+			login.setUser_name(mJSONObject.optString("user_name"));
+			login.setMobile(mJSONObject.optString("mobile"));
+			login.setEmail(mJSONObject.optString("email"));
+			login.setPhoto(mJSONObject.optString("photo"));
+			login.setTrue_name(mJSONObject.optString("true_name"));
 
 		} catch (JSONException e) {
 			// TODO Auto-generated catch block
@@ -283,9 +295,8 @@ public class JSONParser {
 					info.setUpdatetime(mJSONObject.optString("updatetime")) ;
 					info.setPid(mJSONObject.optString("pid")) ;
 					info.setGzcount(mJSONObject.optString("gzcount")) ;
-					
-					info.setComment_nums("11" ) ; //mJSONObject.optString("comment_nums")) ;
-					info.setFavorite_nums("22" ) ; //mJSONObject.optString("favorite_nums")) ;
+					info.setComment_nums(mJSONObject.optString("comment_nums")); 
+					info.setFavorite_nums(mJSONObject.optString("favorite_nums")); 
 					
 //					System.out.println(info.toString());
 					infos.add(info);
@@ -297,6 +308,42 @@ public class JSONParser {
 			return infos;
 	 }
 
+	public static CreativeInfo parseCreativeInfo(String jsondata) {
+
+		JSONObject object = null;
+		CreativeInfo info = new CreativeInfo();
+		try {
+			object = new JSONObject(jsondata);
+			JSONObject mJSONObject = object.getJSONObject("content");
+
+			info.setId(mJSONObject.optString("id"));
+			info.setUser_id(mJSONObject.optString("user_id"));
+			info.setOrg_name(mJSONObject.optString("org_name"));
+			info.setOrg_desc(mJSONObject.optString("org_desc"));
+			info.setOrg_explain(mJSONObject.optString("org_explain"));
+			info.setOrg_video(mJSONObject.optString("org_video"));
+			info.setOrg_state(mJSONObject.optString("org_state"));
+			info.setProvince_id(mJSONObject.optString("province_id"));
+			info.setCity_id(mJSONObject.optString("city_id"));
+			info.setCategory_id(mJSONObject.optString("category_id"));
+			info.setScancount(mJSONObject.optString("scancount"));
+			info.setAddtime(mJSONObject.optString("addtime"));
+			info.setUpdatetime(mJSONObject.optString("updatetime"));
+			info.setPid(mJSONObject.optString("pid"));
+			info.setGzcount(mJSONObject.optString("gzcount"));
+
+			info.setComment_nums(mJSONObject.optString("comment_nums")); 
+			info.setFavorite_nums(mJSONObject.optString("favorite_nums")); 
+			
+			System.out.println("-----parse----" + info.toString());
+
+		} catch (JSONException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return info;
+	}
+	 
 	//
 	/**
 	 * 获取项目相关的数据信息
@@ -342,8 +389,8 @@ public class JSONParser {
 						.optString("project_days")));
 				info.setProject_step(Integer.parseInt(mJSONObject
 						.optString("project_step")));
-				info.setMode_id(Integer.parseInt(mJSONObject
-						.optString("mode_id")));
+//				info.setMode_id(Integer.parseInt(mJSONObject
+//						.optString("mode_id")));
 				info.setReward_mode(Integer.parseInt(mJSONObject
 						.optString("reward_mode")));
 				info.setProject_money_refund(mJSONObject
@@ -369,6 +416,9 @@ public class JSONParser {
 				info.setPurchase_money(mJSONObject.optString("purchase_money"));
 				info.setPurchase_user_num(mJSONObject
 						.optString("purchase_user_num"));
+				info.setAttention_nums(mJSONObject.optString("attention_nums")) ;
+				info.setComment_nums(mJSONObject.optString("comment_nums")) ;
+				info.setProject_topic_count(mJSONObject.optString("project_topic_count"))  ;
 //				System.out.println(info.toString());
 				projectinfos.add(info);
 			}
@@ -407,6 +457,49 @@ public class JSONParser {
 					info.setCompany_name(mJSONObject.optString("company_name")) ;
 		            
 //					System.out.println(info.toString());
+					infos.add(info);
+				}
+			} catch (JSONException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			return infos;
+	}
+	//yuanqk added
+	public static List<City> getCityInfo(String jsondata) {
+		 List<City> infos = new ArrayList<City>();
+			JSONObject object = null;
+			try {
+				object = new JSONObject(jsondata);
+				JSONArray mJSONArray = object.getJSONArray("content");
+				City info = null;
+				for (int i = 0; i < mJSONArray.length(); i++) {
+					info = new City();
+					JSONObject mJSONObject = mJSONArray.getJSONObject(i);
+					info.setId(mJSONObject.optString("id")) ;
+					info.setProvince_id(mJSONObject.optString("province_id")) ;
+					info.setRegion_name(mJSONObject.optString("region_name")) ;
+					infos.add(info);
+				}
+			} catch (JSONException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			return infos;
+	}
+	//yuanqk added
+	public static List<Province> getProvinceInfo(String jsondata) {
+		 List<Province> infos = new ArrayList<Province>();
+			JSONObject object = null;
+			try {
+				object = new JSONObject(jsondata);
+				JSONArray mJSONArray = object.getJSONArray("content");
+				Province info = null;
+				for (int i = 0; i < mJSONArray.length(); i++) {
+					info = new Province();
+					JSONObject mJSONObject = mJSONArray.getJSONObject(i);
+					info.setId(mJSONObject.optString("id")) ;
+					info.setRegion_name(mJSONObject.optString("region_name")) ;
 					infos.add(info);
 				}
 			} catch (JSONException e) {
@@ -478,6 +571,15 @@ public class JSONParser {
 			info.setPurchase_money(mJSONObject.optString("purchase_money"));
 			info.setPurchase_user_num(mJSONObject
 					.optString("purchase_user_num"));
+			info.setAttention_nums(mJSONObject.optString("attention_nums")) ;
+			info.setComment_nums(mJSONObject.optString("comment_nums")) ;
+			info.setProject_topic_count(mJSONObject.optString("project_topic_count"))  ;
+			info.setPurchase_already(mJSONObject.optBoolean("purchase_already")) ;
+			info.setProvince_name(mJSONObject.optString("province_name")) ;
+			info.setCity_name(mJSONObject.optString("city_name")) ;
+			info.setCategory_name(mJSONObject.optString("category_name")) ;
+			info.setReward_content(mJSONObject.optString("reward_content")) ;
+			info.setReward_post_free(mJSONObject.optInt("reward_post_free")) ;
 //			System.out.println(info.toString());
 		} catch (JSONException e) {
 			// TODO Auto-generated catch block
@@ -486,6 +588,42 @@ public class JSONParser {
 		
 		return info ;
 
+	}
+	
+	/**
+	 * 解析单个商品
+	 * @param jsondata
+	 * @return
+	 */
+	public static ProductInfo parseProductInfo(String jsondata) {
+		JSONObject object = null;
+		ProductInfo info = new ProductInfo();
+		try {
+			object = new JSONObject(jsondata);
+			JSONObject mJSONObject = object.getJSONObject("content");
+
+			info.setId(mJSONObject.optString("id"));
+			info.setGoods_name(mJSONObject.optString("goods_name"));
+			info.setGoods_image(mJSONObject.optString("goods_image"));
+			info.setProvince_id(mJSONObject.optString("province_id"));
+			info.setGoods_status(mJSONObject.optString("goods_status"));
+			info.setCompany_id(mJSONObject.optString("company_id"));
+			info.setGoods_post_min(mJSONObject.optString("goods_post_min"));
+			info.setGoods_price(mJSONObject.optString("goods_price"));
+			info.setGoods_post_type(mJSONObject.optString("goods_post_type"));
+			info.setGoods_post_free(mJSONObject.optString("goods_post_free"));
+			info.setGoods_post_price(mJSONObject.optString("goods_post_price"));
+			info.setGoods_sales_time(mJSONObject.optString("goods_sales_time"));
+			info.setAttention_num(mJSONObject.optString("attention_num"));
+			info.setSales_num(mJSONObject.optString("sales_num"));
+			info.setCompany_name(mJSONObject.optString("company_name"));
+
+			 System.out.println("-----parse-----" + info.toString());
+		} catch (JSONException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return info;
 	}
 
 }

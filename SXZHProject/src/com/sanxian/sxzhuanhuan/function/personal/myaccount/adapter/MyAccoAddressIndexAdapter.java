@@ -59,28 +59,36 @@ public class MyAccoAddressIndexAdapter extends BaseAdapter {
 	public View getView(int position, View convertView, ViewGroup parent) {
 
 		Holder holder;
-		AddressInfo entity = list.get(position);
 		if (convertView == null) {
 			convertView = mInflater.inflate(R.layout.myacc_address_index_item, null);
-			   holder = new Holder();
-//               holder.titleTV = (TextView)convertView.findViewById(R.id.message_index_title);
-               convertView.setTag(holder);
+			holder = new Holder();
+            holder.name = (TextView)convertView.findViewById(R.id.name);
+            holder.district = (TextView)convertView.findViewById(R.id.district);
+            holder.address = (TextView)convertView.findViewById(R.id.address);
+            holder.is_default = (ImageView)convertView.findViewById(R.id.is_default);
+            convertView.setTag(holder);
 		} else {
 			holder = (Holder) convertView.getTag();
 		}
+		AddressInfo entity = list.get(position);
+		String isdefault = entity.getIsDefault();
+		if("1".equals(isdefault)){
+			holder.is_default.setVisibility(View.VISIBLE);
+		}else{
+			holder.is_default.setVisibility(View.GONE);
+		}
+		holder.name.setText(entity.getName());
+		holder.district.setText(entity.getProvince_name()+ " " + entity.getCity_name() + " " + entity.getArea_name() );
+		holder.address.setText(entity.getAddress());
 		return convertView;
 	}
 
 
     class Holder {
-        ImageView avatarIV;
-
-        TextView titleTV;
-
-        TextView contentTV;
-
-        TextView datelineTV;
-
+        TextView name;
+        TextView district;
+        TextView address;
+        ImageView is_default;
 
     }
 }
