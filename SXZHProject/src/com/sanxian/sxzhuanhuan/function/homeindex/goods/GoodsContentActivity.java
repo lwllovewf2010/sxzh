@@ -310,9 +310,12 @@ public class GoodsContentActivity extends BaseActivity {
 								address.setPhoneNum(jsonmode.getString("mobile"));
 								address.setPostcode(jsonmode.getString("zipcode"));
 								address.setProvince_id(jsonmode
-										.getString("province"));
-								address.setCity_id(jsonmode.getString("city"));
-								address.setArea_id(jsonmode.getString("area"));
+										.getString("province_id"));
+								address.setCity_id(jsonmode.getString("city_id"));
+								address.setArea_id(jsonmode.getString("area_id"));
+								address.setProvince_name(jsonmode.getString("province"));
+								address.setCity_name(jsonmode.getString("city"));
+								address.setArea_name(jsonmode.getString("area"));
 								address.setAddress(jsonmode.getString("address"));
 								//跳到购买页面
 								dellgoodsBuybutton(address);
@@ -404,7 +407,7 @@ public class GoodsContentActivity extends BaseActivity {
 
 	public void dellgoodsBuybutton(AddressInfo address) {
 		GoodsBuyEntity entity = new GoodsBuyEntity();
-		entity.setAddress(address.getAddress());// 从地址栏返回
+		entity.setAddress(address.getProvince_name()+address.getCity_name()+address.getArea_name()+address.getAddress());// 从地址栏返回
 		entity.setEnterprise(goodsItem.getCompany_name());
 		entity.setGoodsColor(checkedRadioText(radioGroup1
 				.getCheckedRadioButtonId()));

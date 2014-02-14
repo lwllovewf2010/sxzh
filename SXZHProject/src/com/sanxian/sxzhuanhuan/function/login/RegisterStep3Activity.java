@@ -10,13 +10,11 @@ import android.view.View.OnClickListener;
 import android.view.Window;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
-
 import com.sanxian.sxzhuanhuan.R;
 import com.sanxian.sxzhuanhuan.api.JSONParser;
 import com.sanxian.sxzhuanhuan.api.TestAPI;
 import com.sanxian.sxzhuanhuan.common.BaseActivity;
-import com.sanxian.sxzhuanhuan.common.CommonTitle;
+import com.sanxian.sxzhuanhuan.common.CommonHeader;
 import com.sanxian.sxzhuanhuan.common.UIHelper;
 import com.sanxian.sxzhuanhuan.entity.Constant;
 import com.sanxian.sxzhuanhuan.util.Util;
@@ -34,13 +32,13 @@ public class RegisterStep3Activity extends BaseActivity implements OnClickListen
 	private TestAPI api = null;
 	private Map<String , String> input = null ;
 	
-	private CommonTitle conTitle = null ;
+	private CommonHeader conHeader = null ;
 	private EditText etAccount = null ;
 	private String phone = "" ;
 	private String username = "" ;
 	private String reference_open_id = "" ;
 	private EditText etPassword = null ;
-	private EditText etPasswordCommit = null ;
+//	private EditText etPasswordCommit = null ;
 	private Button btnRegister = null ;
 	
 	@Override
@@ -59,38 +57,33 @@ public class RegisterStep3Activity extends BaseActivity implements OnClickListen
 		}
 		
 		init() ;
-		conTitle.show(true, "返回", true, "注册", false, "") ;
+		conHeader.show(true, true , "返回", true, "免费注册", false , "" , false) ;
 	}
 	
 	private void init() {
 		api = new TestAPI();
 		input = new HashMap<String, String>() ;
 		
-		conTitle = (CommonTitle) findViewById(R.id.common_title) ;
+		conHeader = (CommonHeader) findViewById(R.id.common_header) ;
 		etAccount = (EditText) findViewById(R.id.register_et_account) ;
 		etPassword = (EditText) findViewById(R.id.register_et_set_password) ;
-		etPasswordCommit = (EditText) findViewById(R.id.register_et_commit_password) ;
 		btnRegister = (Button) findViewById(R.id.register_btn_register) ;
 		
-		conTitle.btnLeft.setOnClickListener(this) ;
+		conHeader.ivPre.setOnClickListener(this);
+		conHeader.tvLeft.setOnClickListener(this) ;
 		btnRegister.setOnClickListener(this) ;
 		
-		UIHelper.setTextColor((TextView)findViewById(R.id.register_tv_step_third) , getResources().getString(R.string.reg_step_first), 
-				getResources().getString(R.string.reg_step_second) ,
-				getResources().getString(R.string.reg_step_third) ,"green" , Constant.RegisterStep.STEP3) ;
 		
 	}
 	
-	/* (non-Javadoc)
-	 * @see android.view.View.OnClickListener#onClick(android.view.View)
-	 */
 	@Override
 	public void onClick(View v) {
 		// TODO Auto-generated method stub
 		int viewId = v.getId() ;
 		switch (viewId) {
-			case R.id.title_btn_left:
-//				UIHelper.showRegisterStep2Activity(RegisterStep3Activity.this, phone) ;
+//			case R.id.title_btn_left:
+			case R.id.header_left_tv :
+			case R.id.header_pre_iv :
 				UIHelper.showRegisterStep2Activity(RegisterStep3Activity.this, phone, username, reference_open_id) ;
 				break ;
 				
@@ -102,18 +95,16 @@ public class RegisterStep3Activity extends BaseActivity implements OnClickListen
 				input.put("password", etPassword.getText().toString() ) ; //"abcd123") ;
 				input.put("reference_open_id", reference_open_id) ;
 				
-				int flag = UIHelper.register(etAccount.getText().toString(), etPassword.getText().toString(), etPasswordCommit.getText().toString()) ;
+				int flag = UIHelper.register(etAccount.getText().toString(), etPassword.getText().toString()) ;
 				switch (flag) {
 					case Constant.RegisterStatus.REGISTER_OK :
-//						UIHelper.showRegisterSuccessActivity(RegisterStep3Activity.this) ;
-//						System.out.println(etAccount.getText().toString() + "---" + phone + "---" + reference_open_id + "---" + etPassword.getText().toString());
 						api.register(input, this, Constant.REQUESTCODE.REGISTER_REQUEST) ;
 						break;
 					case Constant.RegisterStatus.REGISTER_PWD_NULL :
-						Util.toastInfo(RegisterStep3Activity.this, getResources().getString(R.string.warning_commit_pwd_is_null)) ;
+						Util.toastInfo(RegisterStep3Activity.this, "密码不能为空") ;
 						break ;
-					case Constant.RegisterStatus.REGISTER_PWD_WRONG :
-						Util.toastInfo(RegisterStep3Activity.this, getResources().getString(R.string.warning_pwd_not_same)) ;
+					case Constant.RegisterStatus.REGISTER_ACCOUNT_NULL :
+						Util.toastInfo(RegisterStep3Activity.this, "用户名不能为空") ;
 						break ;
 				}
 				break ;
@@ -123,16 +114,12 @@ public class RegisterStep3Activity extends BaseActivity implements OnClickListen
 		}
 	}
 	
-	/* (non-Javadoc)
-	 * @see com.sanxian.sxzhuanhuan.common.BaseActivity#refresh(java.lang.Object[])
-	 */
 	@Override
 	public void refresh(Object... param) {
 		// TODO Auto-generated method stub
 		super.refresh(param);
 		
 		int flag = ((Integer) param[0]).intValue();
-		System.out.println("----" + flag);
 		//{"action":"user_register","type":"submit_register","mcr":0,"params":{"user_name":"106297632@qq.com","mobile":"13811689766","password":"abcd123"}}
 		switch (flag) {
 			case Constant.REQUESTCODE.REGISTER_REQUEST:

@@ -5,24 +5,130 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:focusable="true"
-    android:focusableInTouchMode="true"
-    android:orientation="vertical" >
-
-    <include
-        android:id="@+id/home_index_bar"
-        layout="@layout/title_bar3" />
+    android:focusableInTouchMode="true" >
 
     <RelativeLayout
-        android:id="@+id/home_index_context"
+        android:id="@+id/home_index_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/common_back"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:gravity="center_vertical" >
+
+        <Button
+            android:id="@+id/home_index_title_right_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="38dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+        	android:layout_marginRight="5dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/common_btn"
+            android:text="@string/publish_text"
+            android:textColor="@color/white"
+            android:textSize="@dimen/size_18" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="38dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@+id/home_index_title_right_btn"
+            android:background="@drawable/preference_item_last_rect"
+            android:gravity="center" >
+
+            <ImageView
+                android:id="@+id/home_index_title_search_img"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="5dp"
+                android:gravity="left"
+                android:src="@drawable/zoom_in_icon" />
+
+            <EditText
+                android:id="@+id/home_index_title_search_text"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:background="@null"
+                android:hint="@string/search_pro"
+                android:singleLine="true"
+                android:textSize="@dimen/size_18" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/home_index_content_nav"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_below="@+id/home_index_bar"
+        >
+		<LinearLayout android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:gravity="center"
+		    android:layout_marginLeft="15dp"
+		    android:layout_alignParentLeft="true">
+		    <ImageView android:id="@+id/home_index_content_nav_creative_iv"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:src="@drawable/iv_creative"/>
+		    <TextView android:id="@+id/home_index_content_nav_creative_tv"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:textSize="@dimen/size_18"
+			    android:textColor="@color/color_444a4d"
+			    android:text="@string/creative"/>
+		</LinearLayout>
+		<LinearLayout android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:gravity="center"
+		    android:layout_marginRight="15dp"
+		    android:layout_alignParentRight="true">
+		    <ImageView android:id="@+id/home_index_content_nav_goods_iv"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:src="@drawable/iv_goods"/>
+		    <TextView android:id="@+id/home_index_content_nav_goods_tv"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:textSize="@dimen/size_18"
+			    android:textColor="@color/color_6d6d72"
+			    android:text="@string/goods"/>
+		</LinearLayout>
+		<LinearLayout android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:gravity="center"
+		    android:layout_centerHorizontal="true">
+		    <ImageView android:id="@+id/home_index_content_nav_project_iv"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:src="@drawable/iv_project"/>
+		    <TextView android:id="@+id/home_index_content_nav_project_tv"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:textSize="@dimen/size_18"
+			    android:textColor="@color/color_6d6d72"
+			    android:text="@string/project"/>
+		</LinearLayout>
+        
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/home_index_broad"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:layout_below="@+id/home_index_bar"
+        android:layout_below="@+id/home_index_content_nav"
         android:orientation="vertical" >
 
         <com.sanxian.sxzhuanhuan.function.homeindex.SlidingSwitcherView
             android:id="@+id/home_index_bar_slidingLayout"
             android:layout_width="fill_parent"
-            android:layout_height="100dip"
+            android:layout_height="120dp"
             myattr:auto_play="true" >
 
             <LinearLayout
@@ -30,23 +136,23 @@
                 android:layout_height="fill_parent"
                 android:orientation="horizontal" >
 
-                <Button
+                <ImageView
                     android:id="@+id/home_index_image1"
                     android:layout_width="fill_parent"
                     android:layout_height="fill_parent"
-                    android:background="@drawable/image1" />
+                    android:src="@drawable/image1" />
 
-                <Button
+                <ImageView
                     android:id="@+id/home_index_image2"
                     android:layout_width="fill_parent"
                     android:layout_height="fill_parent"
-                    android:background="@drawable/image2" />
+                    android:src="@drawable/image2" />
 
-                <Button
+                <ImageView
                     android:id="@+id/home_index_image3"
                     android:layout_width="fill_parent"
                     android:layout_height="fill_parent"
-                    android:background="@drawable/image3" />
+                    android:src="@drawable/image3" />
             </LinearLayout>
 
             <LinearLayout
@@ -59,65 +165,34 @@
             </LinearLayout>
         </com.sanxian.sxzhuanhuan.function.homeindex.SlidingSwitcherView>
 
+        
         <RelativeLayout
-            android:id="@+id/home_index_content_botton"
+            android:id="@+id/home_index_content"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
+            android:layout_marginTop="15dp"
             android:layout_below="@+id/home_index_bar_slidingLayout"
             android:orientation="vertical" >
 
-            <LinearLayout
-                android:id="@+id/home_index_content_botton_top"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:orientation="horizontal" >
-
-                <TextView
-                    android:id="@+id/home_index_originality"
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1.0"
-                    android:background="@drawable/ic_setting_item_round_normal"
-                    android:gravity="center"
-                    android:text="@string/home_index_originality"
-                    android:textSize="15sp" />
-
-                <TextView
-                    android:id="@+id/home_index_project"
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1.0"
-                    android:background="@drawable/ic_setting_item_round_normal"
-                    android:gravity="center"
-                    android:text="@string/home_index_project"
-                    android:textSize="15sp" />
-
-                <TextView
-                    android:id="@+id/home_index_commodity"
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1.0"
-                    android:background="@drawable/ic_setting_item_round_normal"
-                    android:gravity="center"
-                    android:text="@string/home_index_commodity"
-                    android:textSize="15sp" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/home_index_content_button_botton"
+            <com.sanxian.sxzhuanhuan.view.xlistview.XListView
+            	android:id="@+id/home_index_content_xlist"
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
-                android:layout_below="@+id/home_index_content_botton_top"
-                android:orientation="vertical" >
-
-                <ListView
-                    android:id="@+id/home_index_content_list"
-                    android:layout_width="fill_parent"
-                    android:layout_height="fill_parent" >
-                </ListView>
-            </LinearLayout>
+                android:divider="@null"
+                >
+     		</com.sanxian.sxzhuanhuan.view.xlistview.XListView>
+            <!-- <ScrollView android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+                <com.sanxian.sxzhuanhuan.view.xlistview.XListView
+            	android:id="@+id/home_index_content_xlist"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                >
+                android:background="@color/color_edeff0"
+       			</com.sanxian.sxzhuanhuan.view.xlistview.XListView>
+            </ScrollView> -->
         </RelativeLayout>
+       
     </RelativeLayout>
 
 </RelativeLayout>

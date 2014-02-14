@@ -1,0 +1,71 @@
+<form action="#" method="post" id="add-address">
+	<ul class="form-list clearfix">
+		<li>	
+			<label><b>*</b>所在城市：</label>
+			<div class="ip-cell">
+				<select name="project_province">
+					<option value="0">北京市</option>
+				</select>
+				<select name="project_city">
+					<option value="">请选择</option>
+				</select>
+				<select name="project_city">
+					<option value="">请选择</option>
+				</select>
+				<span id="project_province_tip" style="color:#F00;"></span>
+			</div>
+		</li>
+		<li>
+			<label class="fl"><b>*</b>详细地址：</label>
+			<div class="ip-cell">
+				<textarea type="text" class="txt-ip" id="buy_addr" name="buy_addr" value=""></textarea>
+				<span id="buy_addr_tip" style="color:#F00;"></span>
+			</div>
+		</li>
+		<li>
+			<label><b>*</b>邮政编码:</label>
+			<div class="ip-cell">
+				<input type="text" class="txt-ip" id="buy_mailNo" name="buy_mailNo" value="">
+				<span id="buy_mailNo_tip" style="color:#F00;"></span>
+			</div>
+		</li>
+		<li>
+			<label><b>*</b>收货人姓名：</label>
+			<div class="ip-cell">
+				<input type="text" class="txt-ip" id="buy_name" name="buy" value="">
+				<span id="buy_name_tip" style="color:#F00;"></span>
+			</div>
+		</li>
+		<li>
+			<label><b>*</b>手机：</label>
+			<div class="ip-cell">
+				<input type="text" class="txt-ip" id="buy_mobilephone" name="buy_mobilephone" value="">
+				<span id="buy_mobilephone_tip" style="color:#F00;"></span>
+			</div>
+		</li>
+		<li>
+			<label>电话：</label>
+			<div class="ip-cell">
+				<input type="text" class="txt-ip txt-phone" id="buy_phone1" name="buy_phone1" value="">
+				<span id="buy_phone1_tip" style="color:#F00;"></span>
+			</div>
+			<div class="ip-cell">
+				<input type="text" class="txt-ip txt-phone" id="buy_phone2" name="buy_phone2" value="">
+				<span id="buy_phone2_tip" style="color:#F00;"></span>
+			</div>
+			<div class="ip-cell">
+				<input type="text" class="txt-ip txt-phone" id="buy_phone3" name="buy_phone3" value="">
+				<span id="buy_phone3_tip" style="color:#F00;"></span>
+			</div>
+			<span class="tip-text">电话格式：区号-电话号码-分机</span>
+		</li>
+		<li>
+			<label class="addr_right_txt">设置默认：</label>
+			<span class="filter-span">设置为默认地址</span>
+			<span class="tip-text">
+				设置后系统将在购买时自动选中该收货地址
+			</span>
+		</li>
+	</ul>
+	<div class="btns cent"><button class="btn-sub">保存</button><button class="btn-sub btn-fff">取消</button></div>
+</form>

@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="@color/common_bg"
     android:focusable="true"
     android:focusableInTouchMode="true"
     android:orientation="vertical"
@@ -23,10 +23,15 @@
             android:layout_height="wrap_content"
             android:orientation="vertical" >
 
+            <include
+                android:id="@+id/top_step"
+                layout="@layout/publish_top_step" />
+
             <TextView
                 android:id="@+id/publish_project_report_jinerxin"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_below="@+id/top_step"
                 android:layout_marginLeft="10dip"
                 android:layout_marginRight="10dip"
                 android:layout_marginTop="10dip"
@@ -35,100 +40,132 @@
                 android:textSize="15sp" />
 
             <RelativeLayout
-                android:id="@+id/publish_project_report_projectcount_rel"
+                android:id="@+id/raise_moneyinfo"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/publish_project_report_jinerxin"
                 android:layout_marginLeft="10dip"
                 android:layout_marginRight="10dip"
-                android:layout_marginTop="10dip"
-                android:orientation="vertical" >
+                android:background="@drawable/big_box" >
 
-                <EditText
-                    android:id="@+id/publish_project_report_projectcount"
-                    android:layout_width="240dip"
-                    android:layout_height="wrap_content"
-                    android:hint="项目总金额，必填，整数" />
+                <RelativeLayout
+                    android:id="@+id/publish_project_report_projectcount_rel"
+                    style="@style/box_item_height"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginRight="10dip"
+                    android:layout_marginTop="10dip"
+                    android:orientation="vertical" >
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:layout_toRightOf="@+id/publish_project_report_projectcount"
-                    android:text="RMB"
-                    android:textColor="@color/black"
-                    android:textSize="15sp" />
-            </RelativeLayout>
+                    <TextView
+                        android:id="@+id/tip1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="项目资金"
+                        android:textColor="@color/black"
+                        android:textSize="15sp" />
 
-            <RelativeLayout
-                android:id="@+id/publish_project_report_projectcountxiane_rel"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/publish_project_report_projectcount_rel"
-                android:layout_marginLeft="10dip"
-                android:layout_marginRight="10dip"
-                android:layout_marginTop="10dip"
-                android:orientation="vertical" >
+                    <TextView
+                        android:id="@+id/rmb"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:text="RMB"
+                        android:textColor="@color/black"
+                        android:textSize="15sp" />
 
-                <EditText
-                    android:id="@+id/publish_project_report_projectcountxiane"
-                    android:layout_width="240dip"
-                    android:layout_height="wrap_content"
-                    android:hint="集资限额，必填，整数" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:layout_toRightOf="@+id/publish_project_report_projectcountxiane"
-                    android:text="RMB"
-                    android:textColor="@color/black"
-                    android:textSize="15sp" />
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:id="@+id/publish_project_report_day_rel"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/publish_project_report_projectcountxiane_rel"
-                android:layout_marginLeft="10dip"
-                android:layout_marginRight="10dip"
-                android:layout_marginTop="10dip"
-                android:orientation="vertical" >
-
-                <EditText
-                    android:id="@+id/publish_project_report_day"
-                    android:layout_width="240dip"
-                    android:layout_height="wrap_content"
-                    android:hint=""
-                    android:singleLine="true" />
+                    <EditText
+                        android:id="@+id/publish_project_report_projectcount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_centerVertical="true"
+                        android:layout_toLeftOf="@id/rmb"
+                        android:layout_toRightOf="@id/tip1"
+                        android:background="@color/transparent"
+                        android:inputType="number"
+                        android:singleLine="true" />
+                </RelativeLayout>
 
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:layout_toRightOf="@+id/publish_project_report_day"
-                    android:text="RMB"
-                    android:textColor="@color/black"
-                    android:textSize="15sp" />
-            </RelativeLayout>
+                    android:id="@+id/line1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:layout_below="@id/publish_project_report_projectcount_rel"
+                    android:background="@drawable/lines_item" />
 
-            <EditText
-                android:id="@+id/publish_project_report_tuikuanshoum_rel"
-                android:layout_width="fill_parent"
-                android:layout_height="50dip"
-                android:layout_below="@+id/publish_project_report_day_rel"
-                android:layout_marginLeft="10dip"
-                android:layout_marginRight="10dip"
-                android:layout_marginTop="10dip"
-                android:gravity="top"
-                android:hint="退款说明，必填，不超过75字" />
+                <RelativeLayout
+                    android:id="@+id/publish_project_report_day_rel"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_below="@+id/line1"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginRight="10dip"
+                    android:layout_marginTop="10dip"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/tip2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="筹集天数"
+                        android:textColor="@color/black"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/day"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:text="天"
+                        android:textColor="@color/black"
+                        android:textSize="15sp" />
+
+                    <EditText
+                        android:id="@+id/publish_project_report_day"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_centerVertical="true"
+                        android:layout_toLeftOf="@id/day"
+                        android:layout_toRightOf="@id/tip2"
+                        android:background="@color/transparent"
+                        android:hint=""
+                        android:inputType="number"
+                        android:singleLine="true" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/line2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:layout_below="@id/publish_project_report_day_rel"
+                    android:background="@drawable/lines_item" />
+
+                <EditText
+                    android:id="@+id/publish_project_report_tuikuanshoum_rel"
+                    android:layout_width="fill_parent"
+                    android:layout_height="80dip"
+                    android:layout_below="@+id/line2"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginRight="10dip"
+                    android:layout_marginTop="10dip"
+                    android:background="@color/transparent"
+                    android:gravity="top"
+                    android:hint="退款说明，必填，不超过75字"
+                    android:maxLength="75" />
+            </RelativeLayout>
 
             <TextView
                 android:id="@+id/publish_project_report_huibaoxinxi_rel"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/publish_project_report_tuikuanshoum_rel"
+                android:layout_below="@id/raise_moneyinfo"
                 android:layout_marginLeft="10dip"
                 android:layout_marginRight="10dip"
                 android:layout_marginTop="10dip"
@@ -144,96 +181,182 @@
                 android:layout_marginLeft="10dip"
                 android:layout_marginRight="10dip"
                 android:layout_marginTop="10dip"
+                android:background="@drawable/big_box"
                 android:orientation="vertical" >
 
                 <EditText
                     android:id="@+id/publish_project_report_huibaotitle"
-                    android:layout_width="240dip"
-                    android:layout_height="wrap_content"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginRight="10dip"
+                    android:layout_marginTop="10dip"
+                    android:background="@color/transparent"
                     android:hint="回报标题" />
-            </RelativeLayout>
 
-            <RelativeLayout
-                android:id="@+id/publish_project_report_huibaotime_rel"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/publish_project_report_huibaotitle_rel"
-                android:layout_marginLeft="10dip"
-                android:layout_marginRight="10dip"
-                android:layout_marginTop="10dip"
-                android:orientation="vertical" >
+                <RelativeLayout
+                    android:id="@+id/purchase_money_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_below="@+id/publish_project_report_huibaotitle"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginRight="10dip"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/tip1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="项目预购金额"
+                        android:textColor="@color/black"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/rmb"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:text="RMB"
+                        android:textColor="@color/black"
+                        android:textSize="15sp" />
+
+                    <EditText
+                        android:id="@+id/publish_project_report_projectcountxiane"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toLeftOf="@id/rmb"
+                        android:layout_toRightOf="@id/tip1"
+                        android:background="@color/transparent"
+                        android:inputType="number" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/publish_project_report_huibaotime_rel"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_below="@+id/purchase_money_layout"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginRight="10dip"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/tip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:text="回报时间"
+                        android:textColor="@color/black"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/day"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:text="天"
+                        android:textColor="@color/black"
+                        android:textSize="15sp" />
+
+                    <EditText
+                        android:id="@+id/publish_project_report_huibaotime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toLeftOf="@id/day"
+                        android:layout_toRightOf="@id/tip"
+                        android:background="@color/transparent"
+                        android:inputType="number" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/limit_num"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_below="@id/publish_project_report_huibaotime_rel"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginRight="10dip"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:text="限定股东人数"
+                        android:textColor="@color/black"
+                        android:textSize="15sp" />
+
+                    <Button
+                        android:id="@+id/btn_limit_partner"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/check_box"
+                        android:tag="1"
+                        android:textColor="@color/black" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/publish_project_report_xiandingrenshu_rel"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_below="@id/limit_num"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginRight="10dip"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/publish_project_renchu_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:text="最大股东人数"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/publish_project_renchu_title2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:text="人"
+                        android:textColor="@color/black" />
+
+                    <EditText
+                        android:id="@+id/publish_project_renchu"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toLeftOf="@id/publish_project_renchu_title2"
+                        android:layout_toRightOf="@+id/publish_project_renchu_title"
+                        android:background="@color/transparent"
+                        android:inputType="number" />
+                </RelativeLayout>
 
                 <EditText
-                    android:id="@+id/publish_project_report_huibaotime"
-                    android:layout_width="240dip"
-                    android:layout_height="wrap_content"
-                    android:hint="回报时间" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:layout_toRightOf="@+id/publish_project_report_huibaotime"
-                    android:text="天"
-                    android:textColor="@color/black"
-                    android:textSize="15sp" />
-            </RelativeLayout>
-
-            <EditText
-                android:id="@+id/publish_project_report_huinbaocontent_rel"
-                android:layout_width="fill_parent"
-                android:layout_height="80dip"
-                android:layout_below="@+id/publish_project_report_huibaotime_rel"
-                android:layout_marginLeft="10dip"
-                android:layout_marginRight="10dip"
-                android:layout_marginTop="10dip"
-                android:gravity="top"
-                android:hint="回报内容" />
-
-            <RelativeLayout
-                android:id="@+id/publish_project_report_xiandingrenshu_rel"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/publish_project_report_huinbaocontent_rel"
-                android:layout_marginLeft="10dip"
-                android:layout_marginRight="10dip"
-                android:layout_marginTop="10dip"
-                android:orientation="vertical" >
-
-                <Button
-                    android:id="@+id/publish_project_report_buxianding"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="不限定入股人数" />
-
-                <Button
-                    android:id="@+id/publish_project_report_xianding"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_toRightOf="@+id/publish_project_report_buxianding"
-                    android:text="限定人数" />
-
-                <EditText
-                    android:id="@+id/publish_project_renchu"
-                    android:layout_width="60dip"
-                    android:layout_height="wrap_content"
-                    android:layout_toRightOf="@+id/publish_project_report_xianding" />
-
-                <TextView
-                    android:id="@+id/publish_project_renchu_title"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:layout_toRightOf="@+id/publish_project_renchu"
-                    android:text="人"
-                    android:textColor="@color/black" />
+                    android:id="@+id/publish_project_report_huinbaocontent_rel"
+                    android:layout_width="fill_parent"
+                    android:layout_height="80dip"
+                    android:layout_below="@id/publish_project_report_xiandingrenshu_rel"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginRight="10dip"
+                    android:background="@color/transparent"
+                    android:gravity="top"
+                    android:hint="回报内容" />
             </RelativeLayout>
 
             <TextView
                 android:id="@+id/publish_project_kuaidi_fangsi_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/publish_project_report_xiandingrenshu_rel"
+                android:layout_below="@+id/publish_project_report_huibaotitle_rel"
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="10dip"
                 android:layout_marginRight="10dip"
@@ -241,7 +364,7 @@
                 android:text="支持邮寄方式："
                 android:textColor="@color/black" />
 
-            <LinearLayout
+            <RelativeLayout
                 android:id="@+id/publish_project_report_kuaidifangsi_linear"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
@@ -249,70 +372,148 @@
                 android:layout_marginLeft="10dip"
                 android:layout_marginRight="10dip"
                 android:layout_marginTop="10dip"
+                android:background="@drawable/big_box"
                 android:orientation="horizontal" >
 
-                <Button
-                    android:id="@+id/publish_project_report_kuaidi"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1.0"
-                    android:text="快递" />
+                <RelativeLayout
+                    android:id="@+id/fast_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp" >
 
-                <Button
-                    android:id="@+id/publish_project_report_ems"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1.0"
-                    android:text="EMS" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dip"
+                        android:layout_marginTop="10dip"
+                        android:text="快递"
+                        android:textColor="@color/black" />
 
-                <Button
-                    android:id="@+id/publish_project_report_bubaoyou"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1.0"
-                    android:text="不包邮" />
-            </LinearLayout>
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/tick" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/ems_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_below="@id/fast_layout" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dip"
+                        android:layout_marginTop="10dip"
+                        android:text="EMS"
+                        android:textColor="@color/black" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/tick" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/un_free"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_below="@id/ems_layout" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dip"
+                        android:layout_marginTop="10dip"
+                        android:text="不包邮"
+                        android:textColor="@color/black" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/tick" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/project_patent_tip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/publish_project_report_kuaidifangsi_linear"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dip"
+                android:layout_marginTop="10dip"
+                android:text="项目专利"
+                android:textColor="@color/black" />
 
             <RelativeLayout
                 android:id="@+id/publish_project_report_zhuanli_rel"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/publish_project_report_kuaidifangsi_linear"
+                android:layout_below="@+id/project_patent_tip"
                 android:layout_marginLeft="10dip"
                 android:layout_marginRight="10dip"
                 android:layout_marginTop="10dip"
-                android:background="@drawable/ic_setting_item_round_normal"
+                android:background="@drawable/big_box"
                 android:orientation="vertical" >
 
-                <Button
-                    android:id="@+id/publish_project_report_meiyoufaming"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="5dip"
-                    android:layout_marginTop="5dip"
-                    android:text="没有发明专利" />
+                <RelativeLayout
+                    android:id="@+id/patent_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp" >
 
-                <Button
-                    android:id="@+id/publish_project_report_youfaming"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="5dip"
-                    android:layout_marginTop="5dip"
-                    android:layout_toRightOf="@id/publish_project_report_meiyoufaming"
-                    android:text="有发明专利" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dip"
+                        android:layout_marginTop="10dip"
+                        android:text="有发明专利"
+                        android:textColor="@color/black" />
+
+                    <Button
+                        android:id="@+id/btn_patent_limit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/check_box"
+                        android:tag="1" />
+                </RelativeLayout>
 
                 <EditText
                     android:id="@+id/publish_project_report_zhuanlibianhao"
                     android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/publish_project_report_meiyoufaming"
+                    android:layout_height="40dp"
+                    android:layout_below="@id/patent_layout"
+                    android:layout_marginLeft="10dip"
+                    android:background="@color/transparent"
                     android:hint="发明专利编号" />
 
                 <EditText
                     android:id="@+id/publish_project_report_zhuanliname"
                     android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="40dp"
                     android:layout_below="@+id/publish_project_report_zhuanlibianhao"
+                    android:layout_marginLeft="10dip"
+                    android:background="@color/transparent"
                     android:hint="发明专利名称" />
             </RelativeLayout>
 
@@ -323,51 +524,130 @@
                 android:layout_below="@id/publish_project_report_zhuanli_rel"
                 android:layout_marginLeft="10dip"
                 android:layout_marginRight="10dip"
-                android:layout_marginTop="10dip"
-                android:background="@drawable/ic_setting_item_round_normal"
-                android:orientation="vertical"
-                android:paddingBottom="10dp" >
+                android:background="@drawable/big_box"
+                android:orientation="vertical" >
 
-                <Button
-                    android:id="@+id/publish_project_report_gufenzi"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="5dip"
-                    android:layout_marginTop="5dip"
-                    android:text="全部股份均分" />
+                <RelativeLayout
+                    android:id="@+id/stock_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp" >
 
-                <Button
-                    android:id="@+id/publish_project_report_yougufenzi"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="5dip"
-                    android:layout_marginTop="5dip"
-                    android:layout_toRightOf="@id/publish_project_report_gufenzi"
-                    android:text="有股票数限制" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dip"
+                        android:layout_marginTop="10dip"
+                        android:text="有股票数限制"
+                        android:textColor="@color/black" />
+
+                    <Button
+                        android:id="@+id/btn_stock_limit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/check_box"
+                        android:tag="1" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/stock_me_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_below="@id/stock_layout"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginRight="10dip"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/tip6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="我占股份"
+                        android:textColor="@color/black"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/rmb6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:text="%"
+                        android:textColor="@color/black"
+                        android:textSize="15sp" />
+
+                    <EditText
+                        android:id="@+id/stock_me"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toLeftOf="@id/rmb6"
+                        android:layout_toRightOf="@id/tip6"
+                        android:background="@color/transparent"
+                        android:inputType="number" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/stock_share_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_below="@id/stock_me_layout"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginRight="10dip"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/tip5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="项目参与者均分"
+                        android:textColor="@color/black"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/rmb5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:text="%"
+                        android:textColor="@color/black"
+                        android:textSize="15sp" />
+
+                    <EditText
+                        android:id="@+id/publish_project_report_rate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toLeftOf="@id/rmb5"
+                        android:layout_toRightOf="@id/tip5"
+                        android:background="@color/transparent"
+                        android:inputType="number" />
+                </RelativeLayout>
 
                 <TextView
-                    android:id="@+id/publish_project_report_gufentitle"
+                    android:id="@+id/tip_tip"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/publish_project_report_gufenzi"
-                    android:hint="我占股份的百分比：" />
-
-                <EditText
-                    android:id="@+id/publish_project_report_rate"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/publish_project_report_gufenzi"
-                    android:layout_toRightOf="@id/publish_project_report_gufentitle"
-                    android:inputType="number"
-                    android:text="10" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/publish_project_report_gufenzi"
-                    android:layout_toRightOf="@id/publish_project_report_rate"
-                    android:text="%" />
+                    android:layout_height="40dp"
+                    android:layout_below="@id/stock_share_layout"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dip"
+                    android:text="无股票数限制为全部股份均分"
+                    android:textColor="@color/gray"
+                    android:textSize="15sp" />
             </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/publish_project_report_gufenzi_rel" >
+
+                <include layout="@layout/publish_bottom_layout" />
+            </LinearLayout>
         </RelativeLayout>
     </ScrollView>
 

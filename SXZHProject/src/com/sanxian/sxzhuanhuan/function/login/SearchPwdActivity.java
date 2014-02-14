@@ -20,7 +20,7 @@ import com.sanxian.sxzhuanhuan.R;
 import com.sanxian.sxzhuanhuan.api.JSONParser;
 import com.sanxian.sxzhuanhuan.api.TestAPI;
 import com.sanxian.sxzhuanhuan.common.BaseActivity;
-import com.sanxian.sxzhuanhuan.common.CommonTitle;
+import com.sanxian.sxzhuanhuan.common.CommonHeader;
 import com.sanxian.sxzhuanhuan.common.UIHelper;
 import com.sanxian.sxzhuanhuan.entity.Constant;
 import com.sanxian.sxzhuanhuan.util.Util;
@@ -38,7 +38,7 @@ public class SearchPwdActivity extends BaseActivity implements OnClickListener ,
 	private TestAPI api = null;
 	private Map<String , String> input = null ;
 	
-	private CommonTitle conTitle = null ;
+	private CommonHeader conHeader = null ;
 	private EditText etTelephone = null ;
 	private TextView tvShowInfo = null ;
 	private EditText etVertifyCode = null ;
@@ -89,7 +89,7 @@ public class SearchPwdActivity extends BaseActivity implements OnClickListener ,
 		setContentView(R.layout.search_password_first) ;
 		
 		init() ;
-		conTitle.show(true, "取消", true, "找回密码", false, "") ;
+		conHeader.show(true, true , "返回", true, "找回密码", false , "" , false) ;
 		
 	}
 	
@@ -97,17 +97,17 @@ public class SearchPwdActivity extends BaseActivity implements OnClickListener ,
 		api = new TestAPI();
 		input = new HashMap<String, String>() ;
 		
-		conTitle = (CommonTitle) findViewById(R.id.common_title) ;
+		conHeader = (CommonHeader) findViewById(R.id.common_header) ;
 		etTelephone = (EditText) findViewById(R.id.search_pwd_et_telephone) ;
 		tvShowInfo = (TextView) findViewById(R.id.search_pwd_tv_show_info) ;
 		etVertifyCode = (EditText) findViewById(R.id.search_pwd_et_vertify_code) ;
 		btnVertifyCode = (Button) findViewById(R.id.search_pwd_btn_get_vertify_code) ;
 		btnNext = (Button) findViewById(R.id.search_pwd_btn_next) ;
 		
-		conTitle.btnLeft.setOnClickListener(this) ;
+		conHeader.ivPre.setOnClickListener(this) ;
+		conHeader.tvLeft.setOnClickListener(this) ;
 		btnVertifyCode.setOnClickListener(this) ;
 		btnNext.setOnClickListener(this) ;
-//		etTelephone.addTextChangedListener(this) ;
 	}
 	
 	@Override
@@ -115,19 +115,15 @@ public class SearchPwdActivity extends BaseActivity implements OnClickListener ,
 		// TODO Auto-generated method stub
 		int viewId = v.getId() ;
 		switch (viewId) {
-			case R.id.title_btn_left:
-				System.out.println("-------------" + conTitle.btnLeft.getText().toString());
+			case R.id.header_left_tv :
+			case R.id.header_pre_iv :
 				UIHelper.showLoginActivity(SearchPwdActivity.this) ;
 				break;
 			case R.id.search_pwd_btn_get_vertify_code :
-				System.out.println("get vvertify code");
 				getVertifyCode() ;
 				
 				break ;
 			case R.id.search_pwd_btn_next :
-				System.out.println("next");
-//				checkPhoneVertifyCode() ;
-				
 				input.put("user_con",  etTelephone.getText().toString() ) ;
 				input.put("virify_code", etVertifyCode.getText().toString() ) ; //"898635") ;
 				api.checkVertifyCode(input, this, Constant.REQUESTCODE.CHECK_VERTIFY_CODE_REQUEST) ;
@@ -168,7 +164,6 @@ public class SearchPwdActivity extends BaseActivity implements OnClickListener ,
 		btnVertifyCode.setBackgroundDrawable(SearchPwdActivity.this.getResources().getDrawable(R.drawable.login_btn)) ;
 		tvShowInfo.setText("请输入短信验证码") ;
 		tvShowInfo.setTextSize(23.0f) ;
-//		init() ;
 	}
 	
 	@Override
@@ -177,7 +172,6 @@ public class SearchPwdActivity extends BaseActivity implements OnClickListener ,
 		super.refresh(param);
 		
 		int flag = ((Integer) param[0]).intValue();
-		System.out.println("----" + flag);
 		switch (flag) {
 			case Constant.REQUESTCODE.CHECK_VERTIFY_CODE_REQUEST:
 				if (param.length > 0 && param[1] != null

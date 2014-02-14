@@ -414,11 +414,20 @@ public class JSONParser {
 				info.setProject_zlh(mJSONObject.optString("project_zlh"));
 				info.setProject_zlname(mJSONObject.optString("project_zlname"));
 				info.setPurchase_money(mJSONObject.optString("purchase_money"));
-				info.setPurchase_user_num(mJSONObject
-						.optString("purchase_user_num"));
-				info.setAttention_nums(mJSONObject.optString("attention_nums")) ;
+				info.setPurchase_user_num("" + mJSONObject
+						.optInt("purchase_user_num"));
+				info.setAttention_nums(mJSONObject.optString("project_attention_num")) ;
 				info.setComment_nums(mJSONObject.optString("comment_nums")) ;
 				info.setProject_topic_count(mJSONObject.optString("project_topic_count"))  ;
+				info.setPurchase_already(mJSONObject.optBoolean("purchase_already")) ;
+				info.setProvince_name(mJSONObject.optString("province_name")) ;
+				info.setCity_name(mJSONObject.optString("city_name")) ;
+				info.setCategory_name(mJSONObject.optString("category_name")) ;
+				info.setReward_content(mJSONObject.optString("reward_content")) ;
+				info.setReward_post_free(mJSONObject.optInt("reward_post_free")) ;
+				info.setProject_end_time(mJSONObject.optString("project_end_time")) ;
+				info.setReward_money(mJSONObject.optString("reward_money")) ;
+//				System.out.println("---" + mJSONObject.optString("project_end_time"));
 //				System.out.println(info.toString());
 				projectinfos.add(info);
 			}
@@ -546,7 +555,7 @@ public class JSONParser {
 					.optString("project_days")));
 			info.setProject_step(Integer.parseInt(mJSONObject
 					.optString("project_step")));
-			info.setMode_id(Integer.parseInt(mJSONObject.optString("mode_id")));
+//			info.setMode_id(Integer.parseInt(mJSONObject.optString("mode_id")));
 			info.setReward_mode(Integer.parseInt(mJSONObject
 					.optString("reward_mode")));
 			info.setProject_money_refund(mJSONObject
@@ -569,9 +578,9 @@ public class JSONParser {
 			info.setProject_zlh(mJSONObject.optString("project_zlh"));
 			info.setProject_zlname(mJSONObject.optString("project_zlname"));
 			info.setPurchase_money(mJSONObject.optString("purchase_money"));
-			info.setPurchase_user_num(mJSONObject
-					.optString("purchase_user_num"));
-			info.setAttention_nums(mJSONObject.optString("attention_nums")) ;
+			info.setPurchase_user_num("" + mJSONObject
+					.optInt("purchase_user_num"));
+			info.setAttention_nums(mJSONObject.optString("project_attention_num")) ;
 			info.setComment_nums(mJSONObject.optString("comment_nums")) ;
 			info.setProject_topic_count(mJSONObject.optString("project_topic_count"))  ;
 			info.setPurchase_already(mJSONObject.optBoolean("purchase_already")) ;
@@ -580,6 +589,9 @@ public class JSONParser {
 			info.setCategory_name(mJSONObject.optString("category_name")) ;
 			info.setReward_content(mJSONObject.optString("reward_content")) ;
 			info.setReward_post_free(mJSONObject.optInt("reward_post_free")) ;
+			info.setProject_end_time(mJSONObject.optString("project_end_time")) ;
+			info.setReward_money(mJSONObject.optString("reward_money")) ;
+			info.setReward_return_days(mJSONObject.optString("reward_return_days")) ;
 //			System.out.println(info.toString());
 		} catch (JSONException e) {
 			// TODO Auto-generated catch block

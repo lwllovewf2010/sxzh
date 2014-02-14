@@ -23,6 +23,8 @@ public class Constant {
 	public final static int PUBLISH_TOPIC = 0x00 ;
 	/**发布集资项目 */
 	public final static int PUBLISH_ORIGINALITY = 0x01 ;
+	/**三弦的客服电话 */
+	public final static String PHONE_NUMBER = "4008008008" ;
 	
 	/** 
 	 * 注册设计到的步骤 
@@ -40,6 +42,7 @@ public class Constant {
 		public final static int REGISTER_OK  = 0x01 ;
 		public final static int REGISTER_PWD_NULL = 0x02 ;
 		public final static int REGISTER_PWD_WRONG = 0x03 ;
+		public final static int REGISTER_ACCOUNT_NULL = 0x04 ;
 	}
 	
 	/**

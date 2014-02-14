@@ -2,24 +2,30 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
-    android:orientation="vertical"
-    android:padding="10dp" >
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:layout_marginTop="15dp">
 
+    <TextView android:id="@+id/temp_rl_tc_1"
+        android:background="#eeeff3"
+        android:layout_width="fill_parent"
+        android:layout_height="20dp"/>
     <LinearLayout
         android:id="@+id/product_index_item_ll_top"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:background="@color/darkcyan"
+        android:layout_marginLeft="10dp"
+    	android:layout_marginRight="10dp"
+        android:layout_below="@id/temp_rl_tc_1"
         android:orientation="horizontal" >
 
         <TextView
             android:id="@+id/product_index_item_pro_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="5dp"
-            android:layout_marginTop="5dip"
             android:maxLines="1"
+            android:textSize="@dimen/size_18"
+            android:textColor="@color/color_444a4d"
             android:text="NewsZeit - Google Reader 的完美替代" />
 
     </LinearLayout>
@@ -28,15 +34,18 @@
     <RelativeLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        android:padding="4dp"
+        android:layout_marginLeft="10dp"
+    	android:layout_marginRight="10dp"
         android:layout_below="@+id/product_index_item_ll_top" >
 
         <ImageView
             android:id="@+id/product_index_item_pro_img"
-            android:layout_width="150dp"
-            android:layout_height="80dp"
-            android:layout_marginTop="5dp"
+            android:layout_width="140dp"
+            android:layout_height="66dp"
+            android:layout_marginRight="15dp"
             android:layout_alignRight="@id/product_index_item_ll_top"
-            android:src="@drawable/logo" />
+            android:src="@drawable/index" />
 
         <TextView
             android:id="@+id/product_index_item_pro_price_text"
@@ -45,6 +54,7 @@
             android:paddingLeft="5dp"
             android:layout_alignTop="@id/product_index_item_pro_img"
             android:layout_toRightOf="@id/product_index_item_pro_img"
+            android:textSize="@dimen/size_12"
             android:text="商品价格:" />
         <TextView
             android:id="@+id/product_index_item_pro_price"
@@ -53,6 +63,7 @@
             android:paddingLeft="5dp"
             android:layout_alignTop="@id/product_index_item_pro_price_text"
             android:layout_toRightOf="@id/product_index_item_pro_price_text"
+            android:textSize="@dimen/size_12"
             android:text="12333" />
         
         <TextView
@@ -62,15 +73,18 @@
             android:paddingLeft="5dp"
             android:layout_below="@id/product_index_item_pro_price_text"
             android:layout_toRightOf="@id/product_index_item_pro_img"
+            android:textSize="@dimen/size_12"
             android:text="购买方式" />
         
         <CheckBox
             android:id="@+id/product_index_item_pro_buy_check"
-            android:layout_width="20dp"
-            android:layout_height="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/MyCheckBox"
+            android:checked="true"
             android:layout_below="@id/product_index_item_pro_buy_type_text"
             android:layout_toRightOf="@id/product_index_item_pro_img"
-            android:paddingLeft="5dp" />
+            android:layout_marginLeft="5dp" />
         
         <TextView
             android:id="@+id/product_index_item_pro_buy_type"
@@ -79,6 +93,7 @@
             android:paddingLeft="5dp"
             android:layout_alignBaseline="@id/product_index_item_pro_buy_check"
             android:layout_toRightOf="@id/product_index_item_pro_buy_check"
+            android:textSize="@dimen/size_12"
             android:text="预约购买" />
         
         <TextView
@@ -88,6 +103,7 @@
             android:paddingLeft="5dp"
             android:layout_below="@id/product_index_item_pro_buy_check"
             android:layout_toRightOf="@id/product_index_item_pro_img"
+            android:textSize="@dimen/size_12"
             android:text="销量:" />
         
         <TextView
@@ -97,6 +113,7 @@
             android:paddingLeft="5dp"
             android:layout_alignBaseline="@id/product_index_item_pro_sales_count_text"
             android:layout_toRightOf="@id/product_index_item_pro_sales_count_text"
+            android:textSize="@dimen/size_12"
             android:text="1234123" />
 
 

@@ -9,9 +9,8 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.view.Window;
+import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -19,7 +18,7 @@ import com.sanxian.sxzhuanhuan.R;
 import com.sanxian.sxzhuanhuan.api.JSONParser;
 import com.sanxian.sxzhuanhuan.api.TestAPI;
 import com.sanxian.sxzhuanhuan.common.BaseActivity;
-import com.sanxian.sxzhuanhuan.common.CommonTitle;
+import com.sanxian.sxzhuanhuan.common.CommonHeader;
 import com.sanxian.sxzhuanhuan.common.UIHelper;
 import com.sanxian.sxzhuanhuan.entity.Constant;
 import com.sanxian.sxzhuanhuan.entity.InterfaceData.ILogin;
@@ -41,11 +40,12 @@ public class LoginActivity extends BaseActivity implements OnClickListener{
 	private Map<String , String> input = null ;
 	
 	//布局中的相关控件
-	private CommonTitle conTitle = null ;
+	private CommonHeader conHeader = null ;
 	private EditText etAccount = null ;
 	private EditText etPassword = null ;
 	private TextView tvRegister = null ;
-	private ImageView ivForgetPwd = null ;
+	private TextView tvForgetPwd = null ;
+	private Button btnLogin = null ;
 	
 	//相关变量
 	private String strAccount = "" ;
@@ -58,54 +58,58 @@ public class LoginActivity extends BaseActivity implements OnClickListener{
 		setContentView(R.layout.login) ;
 		
 		init() ;
-		conTitle.show(true, "取消", true, "登录", true, "登录") ;
+		conHeader.show(true, true , "返回", true, "登录", false , "" , false) ;
 	}
 	
 	private void init() {
 		api = new TestAPI();
 		input = new HashMap<String, String>() ;
 		
-		conTitle = (CommonTitle) findViewById(R.id.common_title) ;
+		conHeader = (CommonHeader) findViewById(R.id.common_header) ;
 		etAccount = (EditText) findViewById(R.id.login_et_account) ;
 		etPassword = (EditText) findViewById(R.id.login_et_password) ;
-		ivForgetPwd = (ImageView) findViewById(R.id.login_iv_forget_pwd) ;
+		btnLogin = (Button) findViewById(R.id.login_btn_ok) ;
+		tvForgetPwd = (TextView) findViewById(R.id.login_tv_forget_pwd) ;
 		tvRegister = (TextView) findViewById(R.id.login_tv_register) ;
 		
-		conTitle.btnLeft.setOnClickListener(this) ;
-		conTitle.btnRight.setOnClickListener(this) ;
+		conHeader.ivPre.setOnClickListener(this);
+		conHeader.tvLeft.setOnClickListener(this) ;
+		btnLogin.setOnClickListener(this) ;
 		tvRegister.setOnClickListener(this) ;
-		ivForgetPwd.setOnClickListener(this) ;
+		tvForgetPwd.setOnClickListener(this) ;
 		
 	}
 
-	/* (non-Javadoc)
-	 * @see android.view.View.OnClickListener#onClick(android.view.View)
-	 */
 	@Override
 	public void onClick(View v) {
 		// TODO Auto-generated method stub
 		int tag = v.getId() ;
 		switch(tag) {
-			case R.id.title_btn_left:
+			case R.id.header_left_tv :
+			case R.id.header_pre_iv :
 				setResult(Constant.LOGIN_CANCLE) ;
 				finish() ;
 				break ;
 				
-			case R.id.title_btn_right :
-				strAccount = etAccount.getText().toString().trim() ;
-				strPassword = etPassword.getText().toString().trim() ;
-				input.put("uname", strAccount) ;
-				input.put("password", strPassword) ;
-				api.login(input, this, Constant.REQUESTCODE.LOGIN_REQUEST) ;
+			case R.id.login_btn_ok : //R.id.title_btn_right :
+				strAccount = etAccount.getText().toString() ;
+				strPassword = etPassword.getText().toString() ;
+				if("".endsWith(strAccount)) {
+					Util.toastInfo(LoginActivity.this, "用户名不能为空，请重新输入") ;
+				} else if ("".equals(strPassword)) {
+					Util.toastInfo(LoginActivity.this, "密码不能为空，请重新输入") ;
+				} else {
+					input.put("uname", strAccount) ;
+					input.put("password", strPassword) ;
+					api.login(input, this, Constant.REQUESTCODE.LOGIN_REQUEST) ;
+				}
 				break ;
 				
 			case R.id.login_tv_register :
-				System.out.println("------" + "register");
 				UIHelper.showRegisterActivity(LoginActivity.this) ;
 				break ;
 				
-			case R.id.login_iv_forget_pwd :
-				System.out.println("-------" + "forget password");
+			case R.id.login_tv_forget_pwd :
 				UIHelper.showSearchPwdActivity(LoginActivity.this) ;
 				break ;
 				
@@ -121,7 +125,6 @@ public class LoginActivity extends BaseActivity implements OnClickListener{
 		super.refresh(param);
 
 		int flag = ((Integer) param[0]).intValue();
-		System.out.println("----" + flag);
 		switch (flag) {
 			case Constant.REQUESTCODE.LOGIN_REQUEST:
 				if (param.length > 0 && param[1] != null

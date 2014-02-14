@@ -48,7 +48,8 @@ public class MyAccoInvitationNoteActivity extends BaseActivity {
 	public void initView() {
 		// TODO Auto-generated method stub
 		super.initView();
-		setRight("清除");
+		displayRight();
+//		setRight("清除");
 		setTitle("邀请记录");
 		note_list = (ListView)findViewById(R.id.invitation_note_list);
 		invitelist = new ArrayList<InvitationUser>();
@@ -56,7 +57,7 @@ public class MyAccoInvitationNoteActivity extends BaseActivity {
 		note_list.setAdapter(adapter);
 	}
     /**
-     * 初始化数据（获取，清除收货地址列表）
+     * 初始化数据（获取，清除列表）
      * joe
      * @param type
      */
@@ -77,7 +78,7 @@ public class MyAccoInvitationNoteActivity extends BaseActivity {
 		// TODO Auto-generated method stub
 		super.initListener();
 		button_left.setOnClickListener(this);
-		button_right.setOnClickListener(this);
+//		button_right.setOnClickListener(this);
 	}
 
 	@Override

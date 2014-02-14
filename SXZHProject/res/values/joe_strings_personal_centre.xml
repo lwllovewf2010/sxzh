@@ -15,6 +15,9 @@
   <string name="my_friend_table">我的好友</string>
   <string name="blogger_table">微博</string>
   <string name="world_table">微世界</string>
+  <string name="safety_instal">安全设置</string>
+  <string name="exit_login">退出登录</string>
+  <string name="welcome_sanxina_table">欢迎进入三弦转换平台</string>
    <!-- 设置页面 -->
   <string name="set_image">仅wifi下显示图片</string>
   <string name="set_privacy">公开个人信息</string>
@@ -36,6 +39,7 @@
   <string name="sex_table">性别</string>
   <string name="area_table">地区</string>
   <string name="signature_table">个性签名</string>
+  <string name="submit_review">提交审核</string>
   <string name="album_btn_table">从相册选择</string>
   <string name="take_photo_btn_table">拍照</string>
   <string name="cancel_btn_table">取消</string>
@@ -56,21 +60,21 @@
   <string name="certify_email_table">邮箱验证</string>
   <string name="preson_addres_table">个人地址管理</string>
   <string name="set_pay_passw_table">设置支付密码</string>
-  <string name="current_passw_table">当前密码：</string>
-  <string name="new_passw_table">新密码：</string>
-  <string name="confirm_passw_table">确认新密码：</string>
-  <string name="set_password_suggest">密码长度6-32个字符</string>
-  <string name="reality_name_table">真实姓名：</string>
-  <string name="id_card_number_table">身份证号码：</string>
-  <string name="id_card_img_suggest">上传身份证正面和背面照片：</string>
+  <string name="current_passw_table">当前密码</string>
+  <string name="new_passw_table">新密码</string>
+  <string name="confirm_passw_table">确认新密码</string>
+  <string name="save_table">保存</string>
+  <string name="set_password_suggest">密码长度6-15个字符</string>
+  <string name="reality_name_table">真实姓名</string>
+  <string name="id_card_number_table">身份证号</string>
+  <string name="id_card_img_suggest">上传身份证正面和背面照片</string>
+  <string name="submit_button_table">提交</string>
   <string name="input_oldphone_suggest">请输入之前绑定的手机号码</string>
-  <string name="bind_phone_suggest">重新绑定后，原手机号将不能作为登录凭证</string>
-  <string name="input_oldphone_hint">输入之前绑定的手机号码</string>
   <string name="input_newphone_suggest">请输入新的手机号码</string>
   <string name="get_verify_code_btn">获取验证码</string>
-  <string name="input_phone_hint">填写11位手机号码</string>
+  <string name="input_phone_hint">输入11位手机号码</string>
   <string name="input_verify_code_suggest">请输入验证码</string>
-  <string name="get_verify_code_hint">点击“获取验证码”按钮获取验证码</string>
+  <string name="get_verify_code_hint">输入6位验证码</string>
   <string name="bind_phone_btn">绑定</string>
   <string name="input_oldemail_suggest">请输入之前绑定的电子邮箱</string>
   <string name="bind_email_suggest">重新绑定后，原电子邮箱将不能作为登录凭证</string>
@@ -78,8 +82,10 @@
   <string name="input_newemail_suggest">请输入要绑定的电子邮箱</string>
   <string name="input_newemail_hint">输入电子邮箱</string>
   <string name="send_link_btn">发送验证链接</string>
-  <string name="set_pay_password">设置支付密码：</string>
-  <string name="confirm_pay_password">确认支付密码：</string>
+  <string name="set_pay_password">输入支付密码</string>
+  <string name="confirm_pay_password">确认支付密码</string>
+  <string name="current_pay_password">当前支付密码</string>
+  <string name="new_pay_password">新支付密码</string>
   
   <!-- 添加编辑收货地址 -->
   <string name="consignee_table">收货人姓名：</string>

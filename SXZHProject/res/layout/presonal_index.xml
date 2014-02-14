@@ -4,7 +4,10 @@
     android:layout_height="fill_parent"
     android:orientation="vertical" >
 
-    <include layout="@layout/title_bar" />
+    <include
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/title_bar" />
 
     <ScrollView
         android:id="@+id/scrollView1"
@@ -14,546 +17,780 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" >
-<!-- 头部内容 -->
- <RelativeLayout
-     android:id="@+id/preson_data_layout"
-     android:layout_width="match_parent"
-     android:layout_height="wrap_content"
-     android:paddingTop="5dip"
-     android:paddingBottom="5dip"
-     android:paddingLeft="10dip"
-     android:paddingRight="10dip"
-      >
-     <ImageView
-         android:id="@+id/preson_avatar"
-         android:layout_width="75dip"
-         android:layout_height="75dip"
-         android:layout_centerVertical="true"
-         android:background="@drawable/default_avatar"
-         />
- <ImageView
-         android:id="@+id/arraw1"
-         android:layout_width="wrap_content"
-         android:layout_height="wrap_content"
-         android:layout_alignParentRight="true"
-         android:background="@drawable/arrow"
-         android:layout_centerVertical="true"
-         />
+            android:background="@color/bg_color"
+            android:orientation="vertical"
+            android:paddingBottom="25dip">
 
-     <RelativeLayout
-         android:layout_width="fill_parent"
-         android:layout_height="wrap_content"
-         android:layout_centerVertical="true"
-         android:layout_marginLeft="10dip"
-         android:layout_marginRight="10dip"
-         android:layout_toLeftOf="@id/arraw1"
-         android:layout_toRightOf="@id/preson_avatar" >
+            <RelativeLayout
+                android:id="@+id/already_login_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/person_title_bg"
+                >
 
-         <TextView
-             android:id="@+id/username_tv"
-             android:layout_width="wrap_content"
-             android:layout_height="wrap_content"
-             android:text="" 
-             android:textColor="@color/red"/>
+                <ImageView
+                    android:id="@+id/avatar_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dip"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/person_default_icon" />
+                
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" 
+                    android:orientation="horizontal"
+                    android:layout_below="@id/avatar_img"
+                    android:gravity="center"
+                    android:layout_marginTop="8dip"
+                    >
+                    <TextView
+                    android:id="@+id/preson_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textColor="#fff"
+                    android:textSize="18sp"
+                    />
+                 <TextView
+                    android:id="@+id/is_certify"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="V已验证"
+                    android:textColor="#fff"
+                    android:paddingLeft="3dip"
+                    android:paddingRight="3dip"
+                    android:layout_marginLeft="5dip"
+                    android:background="#fc802e"
+                    />
+                </LinearLayout>
+               
+            </RelativeLayout>
 
-         <TextView
-             android:id="@+id/phone_tv"
-             android:layout_width="wrap_content"
-             android:layout_height="wrap_content"
-             android:layout_below="@id/username_tv"
-             android:text="@string/mobile_phone_table" 
-             android:textColor="@color/black"/>
+            <RelativeLayout
+                android:id="@+id/never_login_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/person_title_bg"
+                android:visibility="gone"
+                >
+                   <TextView
+                    android:id="@+id/sanxina_table"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/welcome_sanxina_table"
+                    android:textColor="#fff"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dip"
+                    android:textSize="18sp"
+                    />
+                 <TextView
+                    android:id="@+id/person_login"
+                    android:layout_below="@id/sanxina_table"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dip"
+                    android:background="@drawable/person_login"
+                    />
+               
+            </RelativeLayout>
+            
+            <!-- 头部内容 -->
 
-         <TextView
-             android:id="@+id/phone_content_tv"
-             android:layout_width="wrap_content"
-             android:layout_height="wrap_content"
-             android:layout_below="@id/username_tv"
-             android:layout_toRightOf="@id/phone_tv"
-             android:text=""
-             android:textColor="@color/black" />
+            <RelativeLayout
+                android:id="@+id/preson_data_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dip"
+                android:paddingLeft="10dip"
+                android:paddingRight="10dip"
+                android:paddingTop="5dip"
+                android:visibility="gone" >
 
-         <LinearLayout
-             android:layout_width="fill_parent"
-             android:layout_height="wrap_content" 
-              android:layout_below="@id/phone_tv">
+                <ImageView
+                    android:id="@+id/preson_avatar"
+                    android:layout_width="75dip"
+                    android:layout_height="75dip"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/default_avatar" />
 
-             <TextView
-                 android:id="@+id/company_tv"
-                 android:layout_width="fill_parent"
-                 android:layout_height="wrap_content"
-                 android:layout_weight="1"
-                 android:singleLine="true"
-                 android:text="" 
-                 android:textColor="@color/black"/>
+                <ImageView
+                    android:id="@+id/arraw1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/arrow" />
 
-             <TextView
-                 android:id="@+id/position_tv"
-                 android:layout_width="fill_parent"
-                 android:layout_height="wrap_content"
-                 android:layout_weight="2"
-                 android:singleLine="true"
-                 android:text=""
-                 android:textColor="@color/black" />
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginRight="10dip"
+                    android:layout_toLeftOf="@id/arraw1"
+                    android:layout_toRightOf="@id/preson_avatar" >
 
-         </LinearLayout>
-     </RelativeLayout>
+                    <TextView
+                        android:id="@+id/username_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textColor="@color/red" />
 
- </RelativeLayout>
- <View
-     android:layout_width="fill_parent"
-     android:layout_height="1px"
-     android:background="@color/line_color"
-    />
+                    <TextView
+                        android:id="@+id/phone_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/username_tv"
+                        android:text="@string/mobile_phone_table"
+                        android:textColor="@color/black" />
 
- <RelativeLayout
-     android:id="@+id/tiny_bank_layout"
-     android:layout_width="match_parent"
-     android:layout_height="wrap_content" 
-     android:paddingTop="10dip"
-     android:paddingBottom="10dip"
-     android:paddingLeft="15dip"
-     android:paddingRight="10dip">
-     <TextView
-         android:id="@+id/tiny_bank_table"
-         android:layout_width="wrap_content"
-         android:layout_height="wrap_content"
-         android:text="@string/tiny_bank_table"
-         android:layout_centerVertical="true"
-         android:textSize="18sp"
-         android:textColor="@color/black"
-         />
-       <ImageView
-         android:id="@+id/arraw2"
-         android:layout_width="wrap_content"
-         android:layout_height="wrap_content"
-         android:layout_alignParentRight="true"
-         android:background="@drawable/arrow"
-         android:layout_centerVertical="true"
-         
-         />
-        <TextView
-         android:id="@+id/gold_coins_sum"
-         android:layout_width="wrap_content"
-         android:layout_height="wrap_content"
-         android:layout_toLeftOf="@id/arraw2"
-         android:text=""
-         android:textColor="@color/black"
-         android:layout_marginRight="20dip"
-         android:layout_centerVertical="true"
-         />
-         <TextView
-         android:id="@+id/gold_coins_table"
-         android:layout_width="wrap_content"
-         android:layout_height="wrap_content"
-         android:layout_toLeftOf="@id/gold_coins_sum"
-         android:layout_centerVertical="true"
-         android:textColor="@color/black"
-         android:text="@string/gold_coins_table"
-         />
-         
- </RelativeLayout>
- <View
-     android:layout_width="fill_parent"
-     android:layout_height="1px"
-     android:background="@color/line_color"
-    />
-<!-- 项目，部落，购物车，订单 -->
- <LinearLayout
-     android:layout_width="match_parent"
-     android:layout_height="wrap_content" >
+                    <TextView
+                        android:id="@+id/phone_content_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/username_tv"
+                        android:layout_toRightOf="@id/phone_tv"
+                        android:text=""
+                        android:textColor="@color/black" />
 
-     <LinearLayout
-         android:id="@+id/my_project_layout"
-         android:layout_width="fill_parent"
-         android:layout_height="wrap_content"
-         android:layout_weight="1"
-         android:orientation="vertical"
-         android:paddingTop="5dip"
-         android:paddingBottom="5dip"
-         android:gravity="center" >
-         
-         <TextView
-             android:layout_width="wrap_content"
-             android:layout_height="wrap_content"
-             android:text="@string/my_project_table"
-             android:textColor="@color/black"
-             />
-         <TextView
-             android:id="@+id/my_project_sum"
-             android:layout_width="wrap_content"
-             android:layout_height="wrap_content"
-             android:text=""
-             android:textColor="@color/black"
-             />
-         
-     </LinearLayout>
-<View
-     android:layout_width="1px"
-     android:layout_height="fill_parent"
-     android:background="@color/line_color"
-    />
-   <LinearLayout
-         android:id="@+id/my_tribe_layout"
-         android:layout_width="fill_parent"
-         android:layout_height="wrap_content"
-         android:layout_weight="1"
-         android:orientation="vertical"
-         android:paddingTop="5dip"
-         android:paddingBottom="5dip"
-         android:gravity="center" >
-         
-         <TextView
-             android:layout_width="wrap_content"
-             android:layout_height="wrap_content"
-             android:text="@string/my_tribe_table"
-             android:textColor="@color/black"
-             />
-         <TextView
-             android:id="@+id/my_tribe_sum"
-             android:layout_width="wrap_content"
-             android:layout_height="wrap_content"
-             android:text=""
-             android:textColor="@color/black"
-             />
-         
-     </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/phone_tv" >
 
- </LinearLayout>
-<View
-     android:layout_width="fill_parent"
-     android:layout_height="1px"
-     android:background="@color/line_color"
-    />
+                        <TextView
+                            android:id="@+id/company_tv"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:singleLine="true"
+                            android:text=""
+                            android:textColor="@color/black" />
 
- <LinearLayout
-     android:layout_width="match_parent"
-     android:layout_height="wrap_content" >
+                        <TextView
+                            android:id="@+id/position_tv"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:singleLine="true"
+                            android:text=""
+                            android:textColor="@color/black" />
+                    </LinearLayout>
+                </RelativeLayout>
+            </RelativeLayout>
 
-     <LinearLayout
-         android:id="@+id/shopping_trolley_layout"
-         android:layout_width="fill_parent"
-         android:layout_height="wrap_content"
-         android:layout_weight="1"
-         android:orientation="vertical"
-         android:paddingTop="5dip"
-         android:paddingBottom="5dip"
-         android:gravity="center" >
-         
-         <TextView
-             android:layout_width="wrap_content"
-             android:layout_height="wrap_content"
-             android:text="@string/shopping_trolley_table"
-             android:textColor="@color/black"
-             />
-         <TextView
-             android:id="@+id/my_article_sum"
-             android:layout_width="wrap_content"
-             android:layout_height="wrap_content"
-             android:text=""
-             android:textColor="@color/black"
-             />
-         
-     </LinearLayout>
- <View
-     android:layout_width="1px"
-     android:layout_height="fill_parent"
-     android:background="@color/line_color"
-    />
-   <LinearLayout
-         android:id="@+id/my_order_layout"
-         android:layout_width="fill_parent"
-         android:layout_height="wrap_content"
-         android:layout_weight="1"
-         android:orientation="vertical"
-         android:paddingTop="5dip"
-         android:paddingBottom="5dip"
-         android:gravity="center" >
-         
-         <TextView
-             android:layout_width="wrap_content"
-             android:layout_height="wrap_content"
-             android:text="@string/my_order_table"
-             android:textColor="@color/black"
-             />
-         <TextView
-             android:id="@+id/my_order_sum"
-             android:layout_width="wrap_content"
-             android:layout_height="wrap_content"
-             android:text=""
-             android:textColor="@color/black"
-             />
-         
-     </LinearLayout>
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:layout_marginTop="25dip"
+                android:background="@color/line_color" />
 
- </LinearLayout>
- <View
-     android:layout_width="fill_parent"
-     android:layout_height="1px"
-     android:background="@color/line_color"
-    />
-<!-- 微超市 -->
- <RelativeLayout
-     android:id="@+id/supermarket_layout"
-     android:layout_width="match_parent"
-     android:layout_height="wrap_content"
-     android:paddingLeft="10dip"
-     android:paddingRight="10dip" 
-     android:paddingTop="5dip"
-     android:paddingBottom="5dip">
-   
-     <ImageView
-         android:id="@+id/supermarket_img"
-         android:layout_width="40dip"
-         android:layout_height="40dip" 
-         android:src="@drawable/ic_launcher"
-         />
-     
-     <TextView
-         android:id="@+id/tiny_supermarket"
-         android:layout_width="wrap_content"
-         android:layout_height="wrap_content"
-         android:text="@string/tiny_supermarket"
-         android:layout_toRightOf="@id/supermarket_img"
-         android:layout_centerVertical="true"
-         android:textSize="18sp"
-         android:layout_marginLeft="5dip"
-         android:textColor="@color/black"
-         />
-      <ImageView
-         android:id="@+id/arraw2"
-         android:layout_width="wrap_content"
-         android:layout_height="wrap_content"
-         android:layout_alignParentRight="true"
-         android:background="@drawable/arrow"
-         android:layout_centerVertical="true"
-         />
- </RelativeLayout>
- <View
-     android:layout_width="fill_parent"
-     android:layout_height="1px"
-     android:background="@color/line_color"
-    />
- <!-- 微信 -->
-  <RelativeLayout
-     android:id="@+id/wxin_layout"
-     android:layout_width="match_parent"
-     android:layout_height="wrap_content"
-     android:paddingLeft="10dip"
-     android:paddingRight="10dip" 
-     android:paddingTop="5dip"
-     android:paddingBottom="5dip">
-   
-     <ImageView
-         android:id="@+id/wxin_img"
-         android:layout_width="40dip"
-         android:layout_height="40dip" 
-         android:src="@drawable/ic_launcher"
-         />
-     
-     <TextView
-         android:id="@+id/wxin"
-         android:layout_width="wrap_content"
-         android:layout_height="wrap_content"
-         android:text="@string/wxin_table"
-         android:layout_toRightOf="@id/wxin_img"
-         android:layout_centerVertical="true"
-         android:textSize="18sp"
-         android:textColor="@color/black"
-         android:layout_marginLeft="5dip"
-         />  
-         
-      <TextView
-         android:id="@+id/wxin_sum"
-         android:layout_width="wrap_content"
-         android:layout_height="wrap_content"
-         android:text=""
-         android:layout_toRightOf="@id/wxin"
-         android:layout_centerVertical="true"
-         android:textSize="16sp"
-         android:textColor="@color/black"
-         android:layout_marginLeft="10dip"
-         /> 
-         
-      <ImageView
-         android:id="@+id/arraw3"
-         android:layout_width="wrap_content"
-         android:layout_height="wrap_content"
-         android:layout_alignParentRight="true"
-         android:background="@drawable/arrow"
-         android:layout_centerVertical="true"
-         />
- </RelativeLayout>
- <View
-     android:layout_width="fill_parent"
-     android:layout_height="1px"
-     android:background="@color/line_color"
-    />
- <!-- 我的收藏-->
- <RelativeLayout
-     android:id="@+id/collection_layout"
-     android:layout_width="match_parent"
-     android:layout_height="wrap_content"
-     android:paddingLeft="10dip"
-     android:paddingRight="10dip" 
-     android:paddingTop="5dip"
-     android:paddingBottom="5dip">
-   
-     <ImageView
-         android:id="@+id/collection_img"
-         android:layout_width="40dip"
-         android:layout_height="40dip" 
-         android:src="@drawable/ic_launcher"
-         />
-     
-     <TextView
-         android:id="@+id/my_collection"
-         android:layout_width="wrap_content"
-         android:layout_height="wrap_content"
-         android:text="@string/my_collection_table"
-         android:layout_toRightOf="@id/collection_img"
-         android:layout_centerVertical="true"
-         android:textSize="18sp"
-         android:textColor="@color/black"
-         android:layout_marginLeft="5dip"
-         />
-      <ImageView
-         android:id="@+id/arraw4"
-         android:layout_width="wrap_content"
-         android:layout_height="wrap_content"
-         android:layout_alignParentRight="true"
-         android:background="@drawable/arrow"
-         android:layout_centerVertical="true"
-         />
- </RelativeLayout>
- <View
-     android:layout_width="fill_parent"
-     android:layout_height="1px"
-     android:background="@color/line_color"
-    />
-  <!-- 我的好友-->
-  <RelativeLayout
-     android:id="@+id/friend_layout"
-     android:layout_width="match_parent"
-     android:layout_height="wrap_content"
-     android:paddingLeft="10dip"
-     android:paddingRight="10dip" 
-     android:paddingTop="5dip"
-     android:paddingBottom="5dip">
-   
-     <ImageView
-         android:id="@+id/friend_img"
-         android:layout_width="40dip"
-         android:layout_height="40dip" 
-         android:src="@drawable/ic_launcher"
-         />
-     
-     <TextView
-         android:id="@+id/my_friend"
-         android:layout_width="wrap_content"
-         android:layout_height="wrap_content"
-         android:text="@string/my_friend_table"
-         android:layout_toRightOf="@id/friend_img"
-         android:layout_centerVertical="true"
-         android:textSize="18sp"
-         android:textColor="@color/black"
-         android:layout_marginLeft="5dip"
-         />
-      <ImageView
-         android:id="@+id/arraw5"
-         android:layout_width="wrap_content"
-         android:layout_height="wrap_content"
-         android:layout_alignParentRight="true"
-         android:background="@drawable/arrow"
-         android:layout_centerVertical="true"
-         />
- </RelativeLayout>
- <View
-     android:layout_width="fill_parent"
-     android:layout_height="1px"
-     android:background="@color/line_color"
-    />
- <!-- 微博-->
-   <RelativeLayout
-     android:id="@+id/blogger_layout"
-     android:layout_width="match_parent"
-     android:layout_height="wrap_content"
-     android:paddingLeft="10dip"
-     android:paddingRight="10dip" 
-     android:paddingTop="5dip"
-     android:paddingBottom="5dip">
-   
-     <ImageView
-         android:id="@+id/blogger_img"
-         android:layout_width="40dip"
-         android:layout_height="40dip" 
-         android:src="@drawable/ic_launcher"
-         />
-     
-     <TextView
-         android:id="@+id/blogger"
-         android:layout_width="wrap_content"
-         android:layout_height="wrap_content"
-         android:text="@string/blogger_table"
-         android:layout_toRightOf="@id/blogger_img"
-         android:layout_centerVertical="true"
-         android:textSize="18sp"
-         android:textColor="@color/black"
-         android:layout_marginLeft="5dip"
-         />
-      <ImageView
-         android:id="@+id/arraw6"
-         android:layout_width="wrap_content"
-         android:layout_height="wrap_content"
-         android:layout_alignParentRight="true"
-         android:background="@drawable/arrow"
-         android:layout_centerVertical="true"
-         />
- </RelativeLayout>
- <View
-     android:layout_width="fill_parent"
-     android:layout_height="1px"
-     android:background="@color/line_color"
-    />
- <!-- 微世界-->
-   <RelativeLayout
-     android:id="@+id/world_layout"
-     android:layout_width="match_parent"
-     android:layout_height="wrap_content"
-     android:paddingLeft="10dip"
-     android:paddingRight="10dip" 
-     android:paddingTop="5dip"
-     android:paddingBottom="5dip">
-   
-     <ImageView
-         android:id="@+id/world_img"
-         android:layout_width="40dip"
-         android:layout_height="40dip" 
-         android:src="@drawable/ic_launcher"
-         />
-     
-     <TextView
-         android:id="@+id/world"
-         android:layout_width="wrap_content"
-         android:layout_height="wrap_content"
-         android:text="@string/world_table"
-         android:layout_toRightOf="@id/world_img"
-         android:layout_centerVertical="true"
-         android:textSize="18sp"
-         android:textColor="@color/black"
-         android:layout_marginLeft="5dip"
-         />
-      <ImageView
-         android:id="@+id/arraw7"
-         android:layout_width="wrap_content"
-         android:layout_height="wrap_content"
-         android:layout_alignParentRight="true"
-         android:background="@drawable/arrow"
-         android:layout_centerVertical="true"
-         />
- </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/tiny_bank_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/preson_index_itemColor">
+
+                <ImageView
+                    android:id="@+id/tiny_bank_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/bank" />
+
+                <TextView
+                    android:id="@+id/tiny_bank_table"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dip"
+                    android:layout_toRightOf="@id/tiny_bank_img"
+                    android:text="@string/tiny_bank_table"
+                    style="@style/preson_index_textColor" />
+
+                <ImageView
+                    android:id="@+id/arraw2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/arrow" />
+
+                <TextView
+                    android:id="@+id/gold_coins_sum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="20dip"
+                    android:layout_toLeftOf="@id/arraw2"
+                    android:text=""
+                    android:visibility="invisible"
+                    android:textColor="#444a4d"  />
+
+                <TextView
+                    android:id="@+id/gold_coins_table"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/gold_coins_sum"
+                    android:text="@string/gold_coins_table"
+                    android:visibility="invisible"
+                    android:textColor="#444a4d" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:background="@color/line_color" />
+            <!-- 微超市 -->
+
+            <RelativeLayout
+                android:id="@+id/supermarket_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/preson_index_itemColor"
+                 >
+
+                <ImageView
+                    android:id="@+id/supermarket_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/supermarket" />
+
+                <TextView
+                    android:id="@+id/tiny_supermarket"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dip"
+                    android:layout_toRightOf="@id/supermarket_img"
+                    android:text="@string/tiny_supermarket"
+                    style="@style/preson_index_textColor" />
+
+                <ImageView
+                    android:id="@+id/arraw2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/arrow" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:background="@color/line_color" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:layout_marginTop="25dip"
+                android:background="@color/line_color" />
+
+            <!-- 项目 -->
+
+            <RelativeLayout
+                android:id="@+id/my_project_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/preson_index_itemColor"
+               >
+
+                <ImageView
+                    android:id="@+id/project_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/my_project" />
+
+                <TextView
+                    android:id="@+id/my_project"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dip"
+                    android:layout_toRightOf="@id/project_img"
+                    android:text="@string/my_project_table"
+                    style="@style/preson_index_textColor" />
+
+                <ImageView
+                    android:id="@+id/arraw8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/arrow" />
+
+                <TextView
+                    android:id="@+id/my_project_sum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dip"
+                    android:layout_toLeftOf="@id/arraw8"
+                    android:text=""
+                    android:gravity="center"
+                    android:textColor="#fff"
+                    android:textSize="16sp" 
+                    android:background="@drawable/sum_bg"/>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:background="@color/line_color" />
+            <!-- 我的部落 -->
+
+            <RelativeLayout
+                android:id="@+id/my_tribe_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/preson_index_itemColor">
+
+                <ImageView
+                    android:id="@+id/my_tribe_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/my_tribe" />
+
+                <TextView
+                    android:id="@+id/my_tribe"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dip"
+                    android:layout_toRightOf="@id/my_tribe_img"
+                    android:text="@string/my_tribe_table"
+                    style="@style/preson_index_textColor" />
+
+                <ImageView
+                    android:id="@+id/arraw9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/arrow" />
+
+                <TextView
+                    android:id="@+id/my_tribe_sum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dip"
+                    android:layout_toLeftOf="@id/arraw9"
+                    android:text=""
+                    android:gravity="center"
+                    android:textColor="#fff"
+                    android:textSize="16sp"
+                    android:background="@drawable/sum_bg" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:background="@color/line_color" />
+            <!-- 我的购物车 -->
+
+            <RelativeLayout
+                android:id="@+id/shopping_trolley_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/preson_index_itemColor">
+
+                <ImageView
+                    android:id="@+id/my_article_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/my_shopping_trolley" />
+
+                <TextView
+                    android:id="@+id/my_article"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dip"
+                    android:layout_toRightOf="@id/my_article_img"
+                    android:text="@string/shopping_trolley_table"
+                    style="@style/preson_index_textColor"/>
+
+                <ImageView
+                    android:id="@+id/arraw10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/arrow" />
+
+                <TextView
+                    android:id="@+id/my_article_sum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dip"
+                    android:layout_toLeftOf="@id/arraw10"
+                    android:text=""
+                    android:textColor="#fff"
+                    android:textSize="16sp"
+                    android:gravity="center"
+                    android:background="@drawable/sum_bg" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:background="@color/line_color" />
+            <!-- 我的订单 -->
+
+            <RelativeLayout
+                android:id="@+id/my_order_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/preson_index_itemColor" >
+
+                <ImageView
+                    android:id="@+id/my_order_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/my_order" />
+
+                <TextView
+                    android:id="@+id/my_order"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dip"
+                    android:layout_toRightOf="@id/my_order_img"
+                    android:text="@string/my_order_table"
+                    style="@style/preson_index_textColor" />
+
+                <ImageView
+                    android:id="@+id/arraw11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/arrow" />
+
+                <TextView
+                    android:id="@+id/my_order_sum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dip"
+                    android:layout_toLeftOf="@id/arraw11"
+                    android:text=""
+                    android:textColor="#fff"
+                    android:textSize="16sp"
+                    android:gravity="center"
+                    android:background="@drawable/sum_bg" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:background="@color/line_color" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:layout_marginTop="25dip"
+                    android:background="@color/line_color" />
+                <!-- 微信 -->
+
+                <RelativeLayout
+                    android:id="@+id/wxin_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/preson_index_itemColor">
+
+                    <ImageView
+                        android:id="@+id/wxin_img"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/my_order" />
+
+                    <TextView
+                        android:id="@+id/wxin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5dip"
+                        android:layout_toRightOf="@id/wxin_img"
+                        android:text="@string/wxin_table"
+                        style="@style/preson_index_textColor" />
+
+                    <ImageView
+                        android:id="@+id/arraw3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/arrow" />
+
+                    <TextView
+                        android:id="@+id/wxin_sum"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dip"
+                        android:layout_toLeftOf="@id/arraw3"
+                        android:text=""
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:background="@color/line_color" />
+                <!-- 我的收藏 -->
+
+                <RelativeLayout
+                    android:id="@+id/collection_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/preson_index_itemColor">
+
+                    <ImageView
+                        android:id="@+id/collection_img"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/my_order" />
+
+                    <TextView
+                        android:id="@+id/my_collection"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5dip"
+                        android:layout_toRightOf="@id/collection_img"
+                        android:text="@string/my_collection_table"
+                        style="@style/preson_index_textColor"
+                        />
+
+                    <ImageView
+                        android:id="@+id/arraw4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/arrow" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:background="@color/line_color" />
+                <!-- 我的好友 -->
+
+                <RelativeLayout
+                    android:id="@+id/friend_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/preson_index_itemColor" >
+
+                    <ImageView
+                        android:id="@+id/friend_img"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/my_order" />
+
+                    <TextView
+                        android:id="@+id/my_friend"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5dip"
+                        android:layout_toRightOf="@id/friend_img"
+                        android:text="@string/my_friend_table"
+                        style="@style/preson_index_textColor"
+                         />
+
+                    <ImageView
+                        android:id="@+id/arraw5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/arrow" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:background="@color/line_color" />
+                <!-- 微博 -->
+
+                <RelativeLayout
+                    android:id="@+id/blogger_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/preson_index_itemColor" >
+
+                    <ImageView
+                        android:id="@+id/blogger_img"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/my_order" />
+
+                    <TextView
+                        android:id="@+id/blogger"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5dip"
+                        android:layout_toRightOf="@id/blogger_img"
+                        android:text="@string/blogger_table"
+                        style="@style/preson_index_textColor" />
+
+                    <ImageView
+                        android:id="@+id/arraw6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/arrow" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:background="@color/line_color" />
+                <!-- 微世界 -->
+
+                <RelativeLayout
+                    android:id="@+id/world_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/preson_index_itemColor" >
+
+                    <ImageView
+                        android:id="@+id/world_img"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/my_order" />
+
+                    <TextView
+                        android:id="@+id/world"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5dip"
+                        android:layout_toRightOf="@id/world_img"
+                        android:text="@string/world_table"
+                        style="@style/preson_index_textColor" />
+
+                    <ImageView
+                        android:id="@+id/arraw7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/arrow" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:background="@color/line_color" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:layout_marginTop="25dip"
+                android:background="@color/line_color" />
+            <!-- 安全设置 -->
+
+            <RelativeLayout
+                android:id="@+id/safety_instal_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/preson_index_itemColor" >
+
+                <ImageView
+                    android:id="@+id/safety_instal_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/safety_instal" />
+
+                <TextView
+                    android:id="@+id/safety_instal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dip"
+                    android:layout_toRightOf="@id/safety_instal_img"
+                    android:text="@string/safety_instal"
+                    style="@style/preson_index_textColor" />
+
+                <ImageView
+                    android:id="@+id/arraw12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/arrow" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:background="@color/line_color" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:layout_marginTop="25dip"
+                android:background="@color/line_color"
+                android:visibility="gone" />
+            <!-- 退出登录 -->
+
+            <RelativeLayout
+                android:id="@+id/exit_login_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone" 
+                style="@style/preson_index_itemColor">
+
+                <ImageView
+                    android:id="@+id/exit_login_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/my_order" />
+
+                <TextView
+                    android:id="@+id/exit_login"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dip"
+                    android:layout_toRightOf="@id/exit_login_img"
+                    android:text="@string/exit_login"
+                    style="@style/preson_index_textColor"/>
+
+                <ImageView
+                    android:id="@+id/arraw13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/arrow" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:background="@color/line_color"
+                android:visibility="gone" />
         </LinearLayout>
     </ScrollView>
- 
+
 </LinearLayout>

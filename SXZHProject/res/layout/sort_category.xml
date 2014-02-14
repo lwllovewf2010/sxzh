@@ -17,7 +17,7 @@
 
         <LinearLayout
             android:id="@+id/sort_category_ll_left_category_big"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="fill_parent"
             android:layout_weight="1"
             android:orientation="vertical" >
@@ -32,9 +32,9 @@
 
         <LinearLayout
             android:id="@+id/sort_category_ll_right_category_small"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="fill_parent"
-            android:layout_weight="2"
+            android:layout_weight="1"
             android:orientation="vertical" >
 
             <ListView

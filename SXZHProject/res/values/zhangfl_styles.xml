@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <style name="MyCheckBox" parent="@android:style/Widget.CompoundButton.CheckBox">
+        <item name="android:button">@drawable/checkbox_selector</item>
+    </style>
+
     <style name="wel_page_txt">
         <item name="android:textSize">23sp</item>
         <item name="android:textColor">@android:color/white</item>

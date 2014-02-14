@@ -31,6 +31,8 @@ import com.sanxian.sxzhuanhuan.function.login.LoginActivity;
 import com.sanxian.sxzhuanhuan.function.personal.microbank.MicroBankIndexActivity;
 import com.sanxian.sxzhuanhuan.function.personal.microworld.MicroWorldIndexActivity;
 import com.sanxian.sxzhuanhuan.function.personal.myaccount.MyAccountActivity;
+import com.sanxian.sxzhuanhuan.function.personal.myaccount.MyAccountInfoActivity;
+import com.sanxian.sxzhuanhuan.function.personal.myaccount.PersonInfoActivity;
 import com.sanxian.sxzhuanhuan.function.personal.mycollection.MyCollectionIndexActivity;
 import com.sanxian.sxzhuanhuan.function.personal.myfriends.MyFriendsIndexActivity;
 import com.sanxian.sxzhuanhuan.function.personal.myorder.MyOrderIndexActivity;
@@ -46,16 +48,23 @@ public class PersonalIndex extends BaseFragment implements OnClickListener{
 	
 	private RelativeLayout preson_data_layout; //个人基本信息
 	private RelativeLayout tiny_bank_layout;  //微银行
-	private LinearLayout my_project_layout;  //我的项目 
-	private LinearLayout my_tribe_layout;  //我的部落
-	private LinearLayout shopping_trolley_layout;  //我的购物车 
-	private LinearLayout my_order_layout;  //我的订单
+	private RelativeLayout my_project_layout;  //我的项目 
+	private RelativeLayout my_tribe_layout;  //我的部落
+	private RelativeLayout shopping_trolley_layout;  //我的购物车 
+	private RelativeLayout my_order_layout;  //我的订单
 	private RelativeLayout supermarket_layout; //微超市
 	private RelativeLayout wxin_layout;  //微信
 	private RelativeLayout collection_layout;  //我的收藏 
 	private RelativeLayout friend_layout;  //我的好友
 	private RelativeLayout blogger_layout;  //微博
 	private RelativeLayout world_layout;  //微世界
+	private RelativeLayout safety_instal_layout;  //安全设置
+	private RelativeLayout exit_login_layout;  //退出登录
+	
+	private RelativeLayout already_login_layout,never_login_layout;//已登录,未登录
+	private TextView person_login;//登录
+	private boolean is_login = false;//是否登录
+	private TextView is_certify;//是否认证
 	
 	private ImageView preson_avatar;
 	private TextView username;//用户名
@@ -108,18 +117,27 @@ public class PersonalIndex extends BaseFragment implements OnClickListener{
 	     setRight("设置");
 	     preson_data_layout = (RelativeLayout)view.findViewById(R.id.preson_data_layout);
 	     tiny_bank_layout = (RelativeLayout)view.findViewById(R.id.tiny_bank_layout);
-	     my_project_layout = (LinearLayout)view.findViewById(R.id.my_project_layout);
-	     my_tribe_layout = (LinearLayout)view.findViewById(R.id.my_tribe_layout);
-	     shopping_trolley_layout = (LinearLayout)view.findViewById(R.id.shopping_trolley_layout);
-	     my_order_layout = (LinearLayout)view.findViewById(R.id.my_order_layout);
+	     my_project_layout = (RelativeLayout)view.findViewById(R.id.my_project_layout);
+	     my_tribe_layout = (RelativeLayout)view.findViewById(R.id.my_tribe_layout);
+	     shopping_trolley_layout = (RelativeLayout)view.findViewById(R.id.shopping_trolley_layout);
+	     my_order_layout = (RelativeLayout)view.findViewById(R.id.my_order_layout);
 	     supermarket_layout = (RelativeLayout)view.findViewById(R.id.supermarket_layout);
 	     wxin_layout = (RelativeLayout)view.findViewById(R.id.wxin_layout);
 	     collection_layout = (RelativeLayout)view.findViewById(R.id.collection_layout);
 	     friend_layout = (RelativeLayout)view.findViewById(R.id.friend_layout);
 	     blogger_layout = (RelativeLayout)view.findViewById(R.id.blogger_layout);
 	     world_layout = (RelativeLayout)view.findViewById(R.id.world_layout);
+	     safety_instal_layout = (RelativeLayout)view.findViewById(R.id.safety_instal_layout);
+	     exit_login_layout = (RelativeLayout)view.findViewById(R.id.exit_login_layout);
 	     
-	     username = (TextView)view.findViewById(R.id.username_tv);
+	     already_login_layout = (RelativeLayout)view.findViewById(R.id.already_login_layout);
+	     never_login_layout = (RelativeLayout)view.findViewById(R.id.never_login_layout);
+	     person_login = (TextView)view.findViewById(R.id.person_login);
+	     
+	     username = (TextView)view.findViewById(R.id.preson_name);
+	     preson_avatar = (ImageView)view.findViewById(R.id.avatar_img);
+	     is_certify = (TextView)view.findViewById(R.id.is_certify);
+	     
 	     phone = (TextView)view.findViewById(R.id.phone_content_tv);
 	     company = (TextView)view.findViewById(R.id.company_tv);
 	     position = (TextView)view.findViewById(R.id.position_tv);
@@ -128,7 +146,6 @@ public class PersonalIndex extends BaseFragment implements OnClickListener{
 	     article = (TextView)view.findViewById(R.id.my_article_sum);
 	     order = (TextView)view.findViewById(R.id.my_order_sum);
 	     gold_coins_sum = (TextView)view.findViewById(R.id.gold_coins_sum);
-	     preson_avatar = (ImageView)view.findViewById(R.id.preson_avatar);
 	}
 	
 	/**
@@ -139,6 +156,22 @@ public class PersonalIndex extends BaseFragment implements OnClickListener{
 		SharedPreferences spf = context.getSharedPreferences("login_user", 0) ;
 		String open_id = spf.getString("open_id", null);
 		String token = spf.getString("token", null);
+		if("".equals(open_id) || "".equals(token)){
+			never_login_layout.setVisibility(View.VISIBLE);
+			already_login_layout.setVisibility(View.GONE);
+			is_login = false;
+			project.setVisibility(View.INVISIBLE);
+			tribe.setVisibility(View.INVISIBLE);
+			article.setVisibility(View.INVISIBLE);
+			order.setVisibility(View.INVISIBLE);
+		}else{
+			never_login_layout.setVisibility(View.GONE);
+			already_login_layout.setVisibility(View.VISIBLE);
+			is_login = true;
+			project.setVisibility(View.VISIBLE);
+			tribe.setVisibility(View.VISIBLE);
+			article.setVisibility(View.VISIBLE);
+			order.setVisibility(View.VISIBLE);
 		if(api == null){
 			api = new CommonAPI();
 		}
@@ -146,7 +179,7 @@ public class PersonalIndex extends BaseFragment implements OnClickListener{
 		paramsmap.put("open_id",open_id);
 		paramsmap.put("token",token);
 		api.getPersonIndex(paramsmap, PersonalIndex.this, GETPRESONINDEX);
-//	 }
+	 }
 	}
 	
 	/**
@@ -160,7 +193,7 @@ public class PersonalIndex extends BaseFragment implements OnClickListener{
 				// .showImageForEmptyUri(R.drawable.denglu_morentouxiang)//uri为空的时候
 				// .showImageOnFail(R.drawable.denglu_morentouxiang)//加载失败的时候
 				//.cacheOnDisc()
-		        .displayer(new RoundedBitmapDisplayer(7)).build();
+		        .displayer(new RoundedBitmapDisplayer(110)).build();
 	}
 
 	/* (non-Javadoc)
@@ -192,9 +225,16 @@ public class PersonalIndex extends BaseFragment implements OnClickListener{
 						String true_name = object.optString("true_name");
 						String user_name = object.optString("user_name");
 						String mobile = object.optString("mobile");
-						
-						username.setText(user_name + " V");
-						phone.setText(mobile.replace(mobile.subSequence(3,7), "XXXX"));
+						if("null".equals(user_name)){
+							user_name = "";
+						}
+						username.setText(user_name);
+						if("null".equals(mobile)){
+							mobile = "";
+						}
+						if(mobile.length() > 0){
+							phone.setText(mobile.replace(mobile.subSequence(3,7), "XXXX"));
+						}
 						company.setText(company_name);
 						position.setText(position_name);
 						project.setText(project_num);
@@ -202,7 +242,9 @@ public class PersonalIndex extends BaseFragment implements OnClickListener{
 						article.setText(shopping_cart_num);
 						order.setText(order_num);
 						gold_coins_sum.setText(money);
+						if(!"null".equals(photo) && photo.length() > 0){
 						imageLoader.displayImage(photo, preson_avatar, options);
+						}
 					}else if(status == 1001){
 						Intent intent = new Intent(context, LoginActivity.class);
 						startActivityForResult(intent,Constant.REQUEST_LOGIN_CODE);
@@ -230,7 +272,8 @@ public class PersonalIndex extends BaseFragment implements OnClickListener{
 	 * 注册监听事件方法
 	 */
 	public void initListener(){
-		preson_data_layout.setOnClickListener(this);
+//		preson_data_layout.setOnClickListener(this);
+		preson_avatar.setOnClickListener(this);
 		tiny_bank_layout.setOnClickListener(this);
 		my_project_layout.setOnClickListener(this);
 		my_tribe_layout.setOnClickListener(this);
@@ -243,7 +286,9 @@ public class PersonalIndex extends BaseFragment implements OnClickListener{
 		blogger_layout.setOnClickListener(this);
 		world_layout.setOnClickListener(this);
 		button_right.setOnClickListener(this);
-		
+		safety_instal_layout.setOnClickListener(this);
+		exit_login_layout.setOnClickListener(this);
+		person_login.setOnClickListener(this);
 	}
   
 	/**
@@ -253,33 +298,62 @@ public class PersonalIndex extends BaseFragment implements OnClickListener{
 	public void onClick(View v) {
 		Intent intent=new Intent();
 		switch (v.getId()) {
-		case R.id.preson_data_layout:
-			Intent presonintent = new Intent(context,MyAccountActivity.class);
-			startActivity(presonintent);
+		case R.id.avatar_img:
+			if(is_login == true){
+				Intent presonintent = new Intent(context,PersonInfoActivity.class);
+				startActivity(presonintent);
+			}else if(is_login == false){
+				Util.toastInfo(context, "请先登录");
+			}
+			break;
+		case R.id.person_login:
+			Intent loginintent = new Intent(context,LoginActivity.class);
+			startActivityForResult(loginintent,Constant.REQUEST_LOGIN_CODE);
 			break;
 		case R.id.tiny_bank_layout:
-			Util.toastInfo(context, "微银行");
-			intent.setClass(context, MicroBankIndexActivity.class);
-			startActivity(intent);
+			if(is_login == true){
+				intent.setClass(context, MicroBankIndexActivity.class);
+				startActivity(intent);
+			}else if(is_login == false){
+				Util.toastInfo(context, "请先登录");
+			}
 			break;
 		case R.id.my_project_layout:
-			Util.toastInfo(context, "我的项目");
-			intent.setClass(context, MyProjectIndexActivity.class);
-			startActivity(intent);
+			if(is_login == true){
+				intent.setClass(context, MyProjectIndexActivity.class);
+				startActivity(intent);
+			}else if(is_login == false){
+				Util.toastInfo(context, "请先登录");
+			}
 			break;
 		case R.id.my_tribe_layout:
-			Util.toastInfo(context, "我的部落");
+			if(is_login == true){
+				Util.toastInfo(context, "我的部落");
+			}else if(is_login == false){
+				Util.toastInfo(context, "请先登录");
+			}
 			break;
 		case R.id.shopping_trolley_layout:
-			Util.toastInfo(context, "我的购物车");
+			if(is_login == true){
+				Util.toastInfo(context, "我的购物车");
+			}else if(is_login == false){
+				Util.toastInfo(context, "请先登录");
+			}
 			break;
 		case R.id.my_order_layout:
-			Util.toastInfo(context, "我的订单");
-			intent.setClass(context, MyOrderIndexActivity.class);
-			startActivity(intent);
+			if(is_login == true){
+				intent.setClass(context, MyOrderIndexActivity.class);
+				startActivity(intent);
+			}else if(is_login == false){
+				Util.toastInfo(context, "请先登录");
+			}
 			break;
 		case R.id.supermarket_layout:
-			Util.toastInfo(context, "微超市");
+			if(is_login == true){
+				Util.toastInfo(context, "微超市");
+			}else if(is_login == false){
+				Util.toastInfo(context, "请先登录");
+			}
 			break;
 		case R.id.wxin_layout:
 			Util.toastInfo(context, "微信");
@@ -306,18 +380,37 @@ public class PersonalIndex extends BaseFragment implements OnClickListener{
 			Intent setintent = new Intent(context,SetIndexActiVity.class);
 			startActivity(setintent);
 			break;
+		case R.id.safety_instal_layout:
+//			Util.toastInfo(context, "安全设置");
+			if(is_login == true){
+				Intent safetyintent = new Intent(context,MyAccountInfoActivity.class);
+				startActivity(safetyintent);
+			}else if(is_login == false){
+				Util.toastInfo(context, "请先登录");
+			}
+			break;
+		case R.id.exit_login_layout:
+			Util.toastInfo(context, "退出登录");
+			break;
 		default:
 			break;
 		}
 	}
 	
-	/*@Override
+	@Override
+	public void onStart() {
+		// TODO Auto-generated method stub
+		super.onStart();
+		System.out.println("----PersonalIndex     onStart ------");
+		initData();
+		}
+	@Override
 	public void onActivityResult(int requestCode, int resultCode, Intent data) {
 		// TODO Auto-generated method stub
 		super.onActivityResult(requestCode, resultCode, data);
 		if(resultCode == Constant.RESULT_LOGIN_CODE){
 			initData();
 		}
-	}*/
+	}
 
 }

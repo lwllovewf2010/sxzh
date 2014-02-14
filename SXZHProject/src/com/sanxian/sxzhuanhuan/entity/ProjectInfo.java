@@ -29,9 +29,9 @@ public class ProjectInfo extends MetaData {
 	private int reward_mode; // true (int)0~100 我占股份的百分比，100=100%占股, 90=90%占股,
 								// 10=10%占股, 此处手机界面显示与网页显示相反,接口已经做了转换，可直接使用回报设置项
 	private int project_money; // true (int) 项目总金额
-	private int reward_money; // true (int) 集资限额
+	private String reward_money; // true (int) 集资限额
 	private String reward_name; // true (string) 回报标题
-	private int reward_return_days; // true (int) 回报时间
+	private String reward_return_days; // true (int) 回报时间
 	private int reward_limit; // true (int) 是否限定入股人数 1=限 0=不限
 	private int reward_person; // true (int) 限定入股人数
 	private int reward_post; // true (int) 邮寄 0=不包邮 1=快递 2=平邮/EMS
@@ -70,8 +70,16 @@ public class ProjectInfo extends MetaData {
     private String city_name ;
     private String category_name ;
     private String reward_content ;
+    private String project_end_time ;
     
-    public int getReward_post_free() {
+    
+	public String getProject_end_time() {
+		return project_end_time;
+	}
+	public void setProject_end_time(String project_end_time) {
+		this.project_end_time = project_end_time;
+	}
+	public int getReward_post_free() {
 		return reward_post_free;
 	}
 	public void setReward_post_free(int reward_post_free) {
@@ -590,13 +598,13 @@ public class ProjectInfo extends MetaData {
 	/**
 	 * @return the reward_money
 	 */
-	public int getReward_money() {
+	public String getReward_money() {
 		return reward_money;
 	}
 	/**
 	 * @param reward_money the reward_money to set
 	 */
-	public void setReward_money(int reward_money) {
+	public void setReward_money(String reward_money) {
 		this.reward_money = reward_money;
 	}
 	/**
@@ -614,13 +622,13 @@ public class ProjectInfo extends MetaData {
 	/**
 	 * @return the reward_return_days
 	 */
-	public int getReward_return_days() {
+	public String getReward_return_days() {
 		return reward_return_days;
 	}
 	/**
 	 * @param reward_return_days the reward_return_days to set
 	 */
-	public void setReward_return_days(int reward_return_days) {
+	public void setReward_return_days(String reward_return_days) {
 		this.reward_return_days = reward_return_days;
 	}
 	/**

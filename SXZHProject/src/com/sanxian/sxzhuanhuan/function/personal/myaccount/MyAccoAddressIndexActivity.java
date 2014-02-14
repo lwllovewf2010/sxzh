@@ -224,7 +224,10 @@ public class MyAccoAddressIndexActivity extends BaseActivity {
 								Util.toastInfo(this, "设置默认收货地址成功");
 							}else if("goods_buy".equals(from)){
 								Intent intent = new Intent();
-								intent.putExtra("addressInfo", list.get(setdefault_position));
+								//added by yuanqk
+								AddressInfo temp = list.get(setdefault_position);
+								temp.setAddress(temp.getProvince_name()+temp.getCity_name()+temp.getArea_name()+temp.getAddress());
+								intent.putExtra("addressInfo", temp);
 								setResult(CHOOSE_ADDRESS_CODE, intent);
 								finish();
 							}

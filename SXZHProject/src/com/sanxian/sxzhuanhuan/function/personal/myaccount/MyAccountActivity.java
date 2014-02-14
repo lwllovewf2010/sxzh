@@ -1,6 +1,7 @@
 package com.sanxian.sxzhuanhuan.function.personal.myaccount;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -21,6 +22,7 @@ public class MyAccountActivity extends BaseActivity implements OnClickListener{
 	private RelativeLayout erweima_layout;//二维码名片
 	private RelativeLayout my_account_layout;//我的账号
 	private ImageView preson_img; //个人头像
+	private final int PRESON_REQUESTCODE = 10;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -42,8 +44,18 @@ public class MyAccountActivity extends BaseActivity implements OnClickListener{
 		erweima_layout = (RelativeLayout)findViewById(R.id.erweima_layout);
 		my_account_layout = (RelativeLayout)findViewById(R.id.my_account_layout);
 		preson_img = (ImageView)findViewById(R.id.preson_img);
+		updateavatar();
 	}
-
+	
+	/**
+	 * 用户头像更新
+	 * joe
+	 */
+    public void updateavatar(){
+    	SharedPreferences spf = this.getSharedPreferences("login_user", 0);
+		String avatar = spf.getString("photo", "");
+		imageLoader.displayImage(avatar, preson_img, options);
+    }
 	@Override
 	public void initListener() {
 		// TODO Auto-generated method stub
@@ -70,7 +82,7 @@ public class MyAccountActivity extends BaseActivity implements OnClickListener{
 			break;
 		case R.id.preson_data_layout:
 			Intent personintent = new Intent(this,PersonInfoActivity.class);
-			startActivity(personintent);
+			startActivityForResult(personintent, PRESON_REQUESTCODE);
 			break;
 		case R.id.invitation_layout:
 			Intent invitation = new Intent(this,MyAccoInviteUserActivity.class);
@@ -81,11 +93,19 @@ public class MyAccountActivity extends BaseActivity implements OnClickListener{
 			startActivity(erintent);
 			break;
         case R.id.my_account_layout:
-        	Intent intent = new Intent(this,MyAccountInfoActivity.class);
-			startActivity(intent);
+//        	Intent intent = new Intent(this,MyAccountInfoActivity.class);
+//			startActivity(intent);
 			break;
 		default:
 			break;
+		}
+	}
+	@Override
+	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+		// TODO Auto-generated method stub
+		super.onActivityResult(requestCode, resultCode, data);
+		if(requestCode == PRESON_REQUESTCODE){
+			updateavatar();
 		}
 	}
 

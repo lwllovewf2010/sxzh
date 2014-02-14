@@ -1,260 +1,307 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/person_data_layout"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:id="@+id/person_data_layout"
-     android:background="@color/white" >
-    <include
-        android:id="@+id/person_tar" 
-        layout="@layout/title_bar">
-    </include>
-<ScrollView
-        android:id="@+id/scrollView"
-        android:layout_below="@id/person_tar"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" >
-<LinearLayout
-    android:layout_width="fill_parent"
-    android:layout_height="wrap_content"
-    android:orientation="vertical"
-    >
-    <RelativeLayout
-        android:id="@+id/avatar_layout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingLeft="10dip"
-        android:paddingRight="10dip" 
-        android:paddingTop="5dip"
-        android:paddingBottom="5dip"
-        android:background="@drawable/my_account_item_selector">
-        
-        <TextView
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content" 
-          android:text="@string/myacc_avatar_table"
-          android:textSize="18sp"
-          android:textStyle="bold"
-          android:textColor="@color/black"
-          android:layout_centerVertical="true"
-            />
-          <ImageView
-            android:id="@+id/arrow1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" 
-            android:background="@drawable/arrow"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
-            />
-           <ImageView
-           android:id="@+id/myacc_avatar"
-           android:layout_width="75dip"
-           android:layout_height="75dip" 
-           android:background="@drawable/default_avatar"
-           android:layout_toLeftOf="@id/arrow1"
-           android:layout_centerVertical="true"
-           android:layout_marginRight="10dip"
-            />
-    </RelativeLayout>
-  <View
-         android:layout_width="fill_parent"
-         android:layout_height="1sp"
-         android:background="@color/line_color"
-        />
-      <RelativeLayout
-        android:id="@+id/username_layout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingLeft="10dip"
-        android:paddingRight="10dip" 
-        android:paddingTop="15dip"
-        android:paddingBottom="15dip"
-        android:background="@drawable/my_account_item_selector">
-        
-        <TextView
-          android:id="@+id/username_table"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content" 
-          android:text="@string/username_table"
-          android:textSize="18sp"
-          android:textStyle="bold"
-          android:textColor="@color/black"
-          android:layout_centerVertical="true"
-            />
-          <ImageView
-            android:id="@+id/arrow2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" 
-            android:background="@drawable/arrow"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
-            />
-           <TextView
-           android:id="@+id/username_tv"
-           android:layout_width="fill_parent"
-           android:layout_height="wrap_content" 
-           android:layout_toLeftOf="@id/arrow2"
-           android:layout_toRightOf="@id/username_table"
-           android:layout_centerVertical="true"
-           android:layout_marginRight="10dip"
-           android:layout_marginLeft="10dip"
-           android:text=""
-           android:textColor="@color/black"
-           android:gravity="right"
-           android:textSize="18sp"
-           android:singleLine="true"
-            />
-    </RelativeLayout>
-  <View
-         android:layout_width="fill_parent"
-         android:layout_height="1sp"
-         android:background="@color/line_color"
-        />
-      <RelativeLayout
-        android:id="@+id/sex_layout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingLeft="10dip"
-        android:paddingRight="10dip" 
-        android:paddingTop="15dip"
-        android:paddingBottom="15dip"
-        android:background="@drawable/my_account_item_selector">
-        
-        <TextView
-          android:id="@+id/sex_table"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content" 
-          android:text="@string/sex_table"
-          android:textSize="18sp"
-          android:textStyle="bold"
-          android:textColor="@color/black"
-          android:layout_centerVertical="true"
-            />
-          <ImageView
-            android:id="@+id/arrow3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" 
-            android:background="@drawable/arrow"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
-            />
-           <TextView
-           android:id="@+id/sex_tv"
-           android:layout_width="fill_parent"
-           android:layout_height="wrap_content" 
-           android:layout_toLeftOf="@id/arrow3"
-           android:layout_toRightOf="@id/sex_table"
-           android:layout_centerVertical="true"
-           android:layout_marginRight="10dip"
-           android:layout_marginLeft="10dip"
-           android:text=""
-           android:textColor="@color/black"
-           android:gravity="right"
-           android:singleLine="true"
-            />
-    </RelativeLayout>
-  <View
-         android:layout_width="fill_parent"
-         android:layout_height="1sp"
-         android:background="@color/line_color"
-        />
-      <RelativeLayout
-        android:id="@+id/area_layout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingLeft="10dip"
-        android:paddingRight="10dip" 
-        android:paddingTop="15dip"
-        android:paddingBottom="15dip"
-        android:background="@drawable/my_account_item_selector">
-        
-        <TextView
-          android:id="@+id/area_table"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content" 
-          android:text="地区"
-          android:textSize="18sp"
-          android:textStyle="bold"
-          android:textColor="@color/black"
-          android:layout_centerVertical="true"
-            />
-          <ImageView
-            android:id="@+id/arrow1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" 
-            android:background="@drawable/arrow"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
-            />
-           <TextView
-           android:id="@+id/area_tv"
-           android:layout_width="fill_parent"
-           android:layout_height="wrap_content" 
-           android:layout_toLeftOf="@id/arrow1"
-           android:layout_toRightOf="@id/area_table"
-           android:layout_centerVertical="true"
-           android:layout_marginRight="10dip"
-           android:layout_marginLeft="10dip"
-           android:text=""
-           android:textColor="@color/black"
-           android:gravity="right"
-           android:singleLine="true"
-            />
-           
-    </RelativeLayout>
-   <View
-         android:layout_width="fill_parent"
-         android:layout_height="1sp"
-         android:background="@color/line_color"
-        />
-      <RelativeLayout
-        android:id="@+id/signature_layout"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:paddingLeft="10dip"
-        android:paddingRight="10dip" 
-        android:paddingTop="15dip"
-        android:paddingBottom="15dip"
-        android:background="@drawable/my_account_item_selector">
-        
-        <TextView
-          android:id="@+id/signature_table"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content" 
-          android:text="@string/signature_table"
-          android:textSize="18sp"
-          android:textStyle="bold"
-          android:textColor="@color/black"
-          android:layout_centerVertical="true"
-            />
-          <ImageView
-            android:id="@+id/arrow1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" 
-            android:background="@drawable/arrow"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
-            />
-          <TextView
-           android:id="@+id/signature_tv"
-           android:layout_width="fill_parent"
-           android:layout_height="wrap_content" 
-           android:layout_toLeftOf="@id/arrow1"
-           android:layout_toRightOf="@id/signature_table"
-           android:layout_centerVertical="true"
-           android:layout_marginRight="10dip"
-           android:layout_marginLeft="10dip"
-           android:gravity="right"
-           android:text=""
-           android:textColor="@color/black"
-            />
-    </RelativeLayout>
-  <View
-         android:layout_width="fill_parent"
-         android:layout_height="1sp"
-         android:background="@color/line_color"
-        />
+    android:background="@color/bg_color" >
 
-</LinearLayout>
-</ScrollView>
+    <include
+        android:id="@+id/person_tar"
+        layout="@layout/title_bar" >
+    </include>
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/person_tar" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:layout_marginTop="10dip"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/person_big_bg_box"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:id="@+id/avatar_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#fff"
+                    android:paddingBottom="5dip"
+                    android:paddingLeft="10dip"
+                    android:paddingRight="15dip"
+                    android:paddingTop="5dip" >
+
+                    <ImageView
+                        android:id="@+id/arrow1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/arrow" />
+
+                    <ImageView
+                        android:id="@+id/myacc_avatar"
+                        android:layout_width="75dip"
+                        android:layout_height="75dip"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/person_default_icon">
+                    </ImageView>
+                    <TextView
+                        style="@style/myaccount_textColor"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="15dip"
+                        android:layout_toRightOf="@id/myacc_avatar"
+                        android:text="@string/myacc_avatar_table" /> 
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1sp"
+                    android:background="@color/line_color" />
+
+                <LinearLayout
+                    android:id="@+id/username_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#fff"
+                    android:paddingBottom="15dip"
+                    android:paddingLeft="10dip"
+                    android:paddingRight="10dip"
+                    android:paddingTop="15dip" >
+
+                    <TextView
+                        android:id="@+id/username_table"
+                        style="@style/myaccount_textColor"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/username_table"
+                        android:layout_weight="1"
+                         />
+
+                    <TextView
+                        android:id="@+id/username_tv"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="15dip"
+                        android:singleLine="true"
+                        android:text=""
+                        android:layout_weight="0.5"
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1sp"
+                    android:background="@color/line_color" />
+
+                <LinearLayout
+                    android:id="@+id/sex_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#fff"
+                    android:paddingBottom="15dip"
+                    android:paddingLeft="10dip"
+                    android:paddingRight="10dip"
+                    android:paddingTop="15dip" >
+
+                    <TextView
+                        android:id="@+id/sex_table"
+                        style="@style/myaccount_textColor"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/sex_table"
+                        android:layout_weight="1" />
+
+                    <TextView
+                        android:id="@+id/sex_tv"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="15dip"
+                        android:singleLine="true"
+                        android:text=""
+                        android:layout_weight="0.5"
+                        android:textColor="@color/black" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1sp"
+                    android:background="@color/line_color" />
+
+                <LinearLayout
+                    android:id="@+id/area_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#fff"
+                    android:paddingBottom="15dip"
+                    android:paddingLeft="10dip"
+                    android:paddingRight="10dip"
+                    android:paddingTop="15dip" >
+
+                    <TextView
+                        android:id="@+id/area_table"
+                        style="@style/myaccount_textColor"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/area_table"
+                        android:layout_weight="1" />
+
+                    <TextView
+                        android:id="@+id/area_tv"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="15dip"
+                        android:singleLine="true"
+                        android:text=""
+                        android:layout_weight="0.5"
+                        android:textColor="@color/black" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1sp"
+                    android:background="@color/line_color" />
+
+                <LinearLayout
+                    android:id="@+id/signature_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#fff"
+                    android:paddingBottom="15dip"
+                    android:paddingLeft="10dip"
+                    android:paddingRight="10dip"
+                    android:paddingTop="15dip" >
+
+                    <TextView
+                        android:id="@+id/signature_table"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/signature_table"
+                        android:textColor="#c7c7cc"
+                        android:textSize="18sp" 
+                        android:layout_weight="1"/>
+
+                    <TextView
+                        android:id="@+id/signature_tv"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="15dip"
+                        android:text=""
+                        android:layout_weight="0.5"
+                        android:textColor="@color/black" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1sp"
+                    android:background="@color/line_color" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1sp"
+                android:layout_marginTop="30dip"
+                android:background="@color/line_color" />
+
+            <RelativeLayout
+                android:id="@+id/preson_erweima_layout"
+                style="@style/preson_index_itemColor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <ImageView
+                    android:id="@+id/icon_img_5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/erweima_icon" />
+
+                <ImageView
+                    android:id="@+id/arrow11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/arrow" />
+
+                <TextView
+                    style="@style/preson_index_textColor"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginRight="5dip"
+                    android:layout_toLeftOf="@id/arrow11"
+                    android:layout_toRightOf="@+id/icon_img_5"
+                    android:text="@string/erweima_table" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1sp"
+                android:background="@color/line_color" />
+
+            <RelativeLayout
+                android:id="@+id/person_invitation_layout"
+                style="@style/preson_index_itemColor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <ImageView
+                    android:id="@+id/icon_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/erweima_icon" />
+
+                <ImageView
+                    android:id="@+id/arrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/arrow" />
+
+                <TextView
+                    style="@style/preson_index_textColor"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginRight="5dip"
+                    android:layout_toLeftOf="@id/arrow"
+                    android:layout_toRightOf="@+id/icon_img"
+                    android:text="@string/invitation_table" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1sp"
+                android:background="@color/line_color" />
+
+            <Button
+                android:id="@+id/save_loginpw_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="50dip"
+                android:layout_marginTop="30dip"
+                android:background="@drawable/button_tongyong1"
+                android:text="@string/submit_review"
+                android:textColor="#fff"
+                android:textSize="22sp" />
+        </LinearLayout>
+    </ScrollView>
 
 </RelativeLayout>

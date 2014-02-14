@@ -176,7 +176,7 @@
 							<li>
 								<label><b>*</b>专利情况：</label>
 								<div class="ip-cell">
-									<span class="choose-icon active">没有发明专利</span><span class="choose-icon">有发明专利</span>
+									<span class="choose-icon choose-patent active">没有发明专利</span><span class="choose-icon choose-patent yes-patent">有发明专利</span>
 									 <div class="choose-div">
 										专利编号：<input type="text" class="txt-ip txt-sort-ip"/>
 										专利名称：<input type="text" class="txt-ip txt-sort-ip"/>
@@ -306,5 +306,17 @@
 	</div>
 	<script type="text/javascript" src="../js/jquery.js"></script>
 	<script type="text/javascript" src="../js/comm.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			//是否有发明专利
+			$("span.choose-patent").click(function(){
+				if($(this).hasClass("yes-patent")){
+					$("div.choose-div").show();
+				}else{
+					$("div.choose-div").hide();
+				}
+			});
+		});
+	</script>
 </body>
 </html>

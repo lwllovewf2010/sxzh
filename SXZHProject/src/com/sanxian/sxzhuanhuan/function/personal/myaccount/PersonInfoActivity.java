@@ -26,10 +26,14 @@ import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.nostra13.universalimageloader.core.DisplayImageOptions;
+import com.nostra13.universalimageloader.core.ImageLoader;
+import com.nostra13.universalimageloader.core.display.RoundedBitmapDisplayer;
 import com.sanxian.sxzhuanhuan.R;
 import com.sanxian.sxzhuanhuan.api.CommonAPI;
 import com.sanxian.sxzhuanhuan.api.JSONParser;
@@ -51,8 +55,8 @@ import com.sanxian.sxzhuanhuan.util.Util;
  * 
  */
 public class PersonInfoActivity extends BaseActivity implements OnClickListener {
-	private RelativeLayout avatar_layout, username_layout, sex_layout, area_layout, signature_layout;// 头像，姓名，性别，地区，个性签名
-
+	private RelativeLayout avatar_layout, preson_erweima_layout,person_invitation_layout;// 头像，二维码，邀请
+    private LinearLayout username_layout, sex_layout, area_layout, signature_layout;//姓名，性别，地区，个性签名
 	/* 请求码 */
 	private static final int IMAGE_REQUEST_CODE = 6;
 	private static final int CAMERA_REQUEST_CODE = 7;
@@ -87,6 +91,8 @@ public class PersonInfoActivity extends BaseActivity implements OnClickListener 
 	private final int UPDATEAVATAR = 19;
 	private final int UPDATEAREA = 20;
 	UserInfo userInfo=new UserInfo();
+	private DisplayImageOptions options;
+	protected ImageLoader imageLoader;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -94,10 +100,25 @@ public class PersonInfoActivity extends BaseActivity implements OnClickListener 
 		setContentView(R.layout.myacc_personinfo);
 		initView();
 		initListener();
+		intImageUtil();
 		initData();
 
 	}
 
+	/**
+	 * 初始化图片加载方法
+	 * joe
+	 */
+	public void intImageUtil() {
+		imageLoader = ImageLoader.getInstance();
+		options = new DisplayImageOptions.Builder()
+				//.showStubImage(R.drawable.denglu_morentouxiang)
+				// .showImageForEmptyUri(R.drawable.denglu_morentouxiang)//uri为空的时候
+				// .showImageOnFail(R.drawable.denglu_morentouxiang)//加载失败的时候
+				//.cacheOnDisc()
+		        .displayer(new RoundedBitmapDisplayer(110)).build();
+	}
+	
 	@Override
 	public void initView() {
 		super.initView();
@@ -105,10 +126,14 @@ public class PersonInfoActivity extends BaseActivity implements OnClickListener 
 		setTitle("个人信息");
 
 		avatar_layout = (RelativeLayout) findViewById(R.id.avatar_layout);
-		username_layout = (RelativeLayout) findViewById(R.id.username_layout);
-		sex_layout = (RelativeLayout) findViewById(R.id.sex_layout);
-		area_layout = (RelativeLayout) findViewById(R.id.area_layout);
-		signature_layout = (RelativeLayout) findViewById(R.id.signature_layout);
+		username_layout = (LinearLayout) findViewById(R.id.username_layout);
+		sex_layout = (LinearLayout) findViewById(R.id.sex_layout);
+		area_layout = (LinearLayout) findViewById(R.id.area_layout);
+		signature_layout = (LinearLayout) findViewById(R.id.signature_layout);
+		
+		preson_erweima_layout = (RelativeLayout) findViewById(R.id.preson_erweima_layout);
+		person_invitation_layout = (RelativeLayout) findViewById(R.id.person_invitation_layout);
+		
 		myacc_avatar = (ImageView) findViewById(R.id.myacc_avatar);
 		area_tv = (TextView) findViewById(R.id.area_tv);
 		username_tv = (TextView) findViewById(R.id.username_tv);
@@ -127,6 +152,8 @@ public class PersonInfoActivity extends BaseActivity implements OnClickListener 
 		sex_layout.setOnClickListener(this);
 		area_layout.setOnClickListener(this);
 		signature_layout.setOnClickListener(this);
+		preson_erweima_layout.setOnClickListener(this);
+		person_invitation_layout.setOnClickListener(this);
 	}
 
 	private void initData() {
@@ -287,6 +314,14 @@ public class PersonInfoActivity extends BaseActivity implements OnClickListener 
 			signature.putExtra("set_type", "signature");
 			signature.putExtra("content", signature_tv.getText().toString().trim());
 			startActivityForResult(signature, UPDATESIGNATURE);
+			break;
+		case R.id.preson_erweima_layout:
+			Intent erintent = new Intent(this,ErWeiMaActivity.class);
+			startActivity(erintent);
+			break;
+		case R.id.person_invitation_layout:
+			Intent invitation = new Intent(this,MyAccoInviteUserActivity.class);
+			startActivity(invitation);
 			break;
 		default:
 			break;

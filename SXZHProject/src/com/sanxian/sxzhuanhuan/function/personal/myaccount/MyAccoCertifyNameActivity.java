@@ -1,7 +1,6 @@
 package com.sanxian.sxzhuanhuan.function.personal.myaccount;
 
 import java.io.File;
-import java.io.FileOutputStream;
 import java.util.Date;
 
 import android.content.ContentResolver;
@@ -17,6 +16,7 @@ import android.provider.MediaStore;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.sanxian.sxzhuanhuan.R;
@@ -25,7 +25,6 @@ import com.sanxian.sxzhuanhuan.dialog.DialogConstant;
 import com.sanxian.sxzhuanhuan.dialog.FootDialog;
 import com.sanxian.sxzhuanhuan.dialog.FootDialogInfo;
 import com.sanxian.sxzhuanhuan.util.ImageUtil;
-import com.sanxian.sxzhuanhuan.util.Util;
 /**
  * 我的账号实名认证页面
  * @author joe
@@ -35,7 +34,7 @@ public class MyAccoCertifyNameActivity extends BaseActivity {
     
 	private ImageView id_card_image1;
 	private ImageView id_card_image2;
-	private ImageView add_id_card_image;
+	private LinearLayout add_image_layout;
 	
 	private final String avatorpath = Environment.getExternalStorageDirectory()+ "/sanxian/sxzhproject/avator/";
 	private String sheariamgepath = ""; // 裁剪后头像路径
@@ -65,7 +64,7 @@ public class MyAccoCertifyNameActivity extends BaseActivity {
 		setTitle("实名认证");
 		id_card_image1 = (ImageView)findViewById(R.id.id_card_image1);
 		id_card_image2 = (ImageView)findViewById(R.id.id_card_image2);
-		add_id_card_image = (ImageView)findViewById(R.id.add_id_card_image);
+		add_image_layout = (LinearLayout)findViewById(R.id.add_image_layout);
 	}
 
 	@Override
@@ -73,7 +72,7 @@ public class MyAccoCertifyNameActivity extends BaseActivity {
 		// TODO Auto-generated method stub
 		super.initListener();
 		button_left.setOnClickListener(this);
-		add_id_card_image.setOnClickListener(this);
+		add_image_layout.setOnClickListener(this);
 	}
 
 	@Override
@@ -90,7 +89,7 @@ public class MyAccoCertifyNameActivity extends BaseActivity {
 		case R.id.title_Left:
 			finish();
 			break;
-		case R.id.add_id_card_image:
+		case R.id.add_image_layout:
 			showDialog();
 		    break;
 		default:

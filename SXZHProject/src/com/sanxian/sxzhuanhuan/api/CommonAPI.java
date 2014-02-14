@@ -67,7 +67,7 @@ public class CommonAPI extends BaseAPI{
 		inputinfo.setMcr("0");
 		inputinfo.setParams(paramsmap);
 		params.put("input", Util.toJSONObject(inputinfo));		
-		request("", params, HTTPMETHOD_POST, false, listener, requestCode);
+		request("", params, HTTPMETHOD_POST, true, listener, requestCode);
 	}
 	
 	/**
@@ -194,12 +194,30 @@ public class CommonAPI extends BaseAPI{
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		}
-		
-//		action : "upload"
-//			 type : "up_avatar"
-//			 mcr : 0  (可不传)
-//			 params 参数内容：user_photo
-
+	}
+	/**
+	 * 
+	* @Description: 上传图片  (项目)
+	* @param @param paramsmap
+	* @param @param listener
+	* @param @param requestCode    设定文件  
+	* @return void    返回类型  
+	* @throws
+	 */
+	public void uploadAvatarForProject(Map<String,String> paramsmap,File file,BaseActivity listener,final int requestCode){
+		try {
+			RequestParams params = new RequestParams();
+			RequestInputInfo inputinfo = new RequestInputInfo();
+			inputinfo.setAction("upload");
+			inputinfo.setType("up_project_img");
+			inputinfo.setMcr("0");
+			inputinfo.setParams(paramsmap);
+			params.put("input", Util.toJSONObject(inputinfo,(SApplication)listener.getApplicationContext()));	
+			params.put("project_img", file);
+			request("", params, HTTPMETHOD_POST, false, listener, requestCode);
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		}
 	}
 	
 }

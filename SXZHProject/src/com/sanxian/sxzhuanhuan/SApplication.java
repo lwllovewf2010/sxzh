@@ -2,6 +2,7 @@ package com.sanxian.sxzhuanhuan;
 
 import java.io.File;
 import java.util.ArrayList;
+import java.util.List;
 
 import com.nostra13.universalimageloader.cache.disc.naming.Md5FileNameGenerator;
 import com.nostra13.universalimageloader.core.ImageLoader;
@@ -60,6 +61,14 @@ public class SApplication extends Application {
 		String token = spf.getString("token", "");
 		String str[]=new String[]{open_id,token};
 		return str;
+	}
+	//临时图片地址（上传项目时的本地图片地址）
+	List<String> imagelist=new ArrayList<String>();
+	public List<String> getImagelist() {
+		return imagelist;
+	}
+	public void setImagelist(List<String> imagelist) {
+		this.imagelist = imagelist;
 	}
 	@Override
 	public void onCreate() {

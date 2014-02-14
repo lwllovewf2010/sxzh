@@ -631,10 +631,11 @@ public class Util {
 	/**
 	 * 手机号是否合法验证
 	 * 中国移动134,135,136,137,138,139,150,151,152,157,158,159,182,183,187,188,147
-	 * 中国联通130,131,132,155,156,185,186 中国电信133,153,180,181,189 joe
+	 * 中国联通130,131,132,155,156,185,186,145 中国电信133,153,180,181,189 
+	 * joe
 	 */
 	public static boolean checkMobile(String mobile) {
-		String regex = "^1(3[0-9]|5[012356789]|8[012356789])\\d{8}$";
+		String regex = "^1(3[0-9]|4[57]|5[012356789]|8[012356789])\\d{8}$";
 		Pattern p = Pattern.compile(regex);
 		Matcher m = p.matcher(mobile);
 		return m.find();

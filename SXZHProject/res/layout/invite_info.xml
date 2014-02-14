@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_gravity="center"
+    android:background="@color/color_efeff4"
+    android:orientation="vertical" >
+
+    <com.sanxian.sxzhuanhuan.common.CommonHeader
+        android:id="@+id/common_header"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:gravity="left|center"
+        android:text="如何获得邀请？"
+        android:textSize="@dimen/size_18" />
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:gravity="left|center"
+        android:text="由于目前平台仅限于平台好友之间相互邀请，从保证项目的可行性和降低投资的风险性两方面进行把控。"
+        android:textSize="@dimen/size_14" />
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:gravity="left|center"
+        android:text="您可以通过以下两种方式来获得邀请，"
+        android:textSize="@dimen/size_14" />
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:gravity="left|center"
+        android:text="1、发现您身边有没有该平台的用户，让他们发出邀请（邀请时，务必让他们准确填写您的真实姓名和手
+机号，以便于核对您的身份信息）"
+        android:textSize="@dimen/size_14" />
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:gravity="left|center"
+        android:text="2、如果您是思八达体系内用户，与管理员取得联系，让管理员添加您的平台用户，联系电话4008008008"
+        android:textSize="@dimen/size_14" />
+
+    
+    <Button
+        android:id="@+id/invite_phone_call"
+        android:layout_width="fill_parent"
+        android:layout_height="48dp"
+        android:layout_gravity="center"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/common_back"
+        android:gravity="center"
+        android:text="拨打三弦客服电话"
+        android:textColor="@color/color_ffffff"
+        android:textSize="@dimen/size_18" />
+
+</LinearLayout>

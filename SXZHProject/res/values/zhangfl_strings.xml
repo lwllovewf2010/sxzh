@@ -29,15 +29,17 @@
     <string name="reg_get_phone_code">获取验证码</string>
     <string name="reg_submit_phone_code">提交验证码</string>
     <string name="reg_telephone_hint">请输入您的手机号</string>
-    <string name="reg_vertify_hint">请输入短信中的验证码</string>
+    <string name="reg_vertify_hint">请输入手机验证码</string>
     <string name="reg_password_hint">请设置密码</string>
-    <string name="reg_step_first">1.输入邀请信息 &#160;&#160;</string>
-    <string name="reg_step_second">>&#160;&#160;2.输入验证码&#160;&#160;</string>
-    <string name="reg_step_third">>&#160;&#160;3.设置密码&#160;&#160;</string>
+    <string name="reg_step_first_info">系统需邀请才能注册，请输入您的被邀请信息：</string>
+    <string name="reg_step_first">输入手机号</string>
+    <string name="reg_step_second">输入验证码</string>
+    <string name="reg_step_third">设置密码</string>
     <string name="reg_agree">已阅读并同意</string>
-    <string name="reg_agree_content">某某网网络使用协议相关内容</string>
+    <string name="reg_agree_content">《三弦转换网络使用协议》</string>
+    <string name="reg_invite"><u>如何获得邀请?</u></string>
     <string name="reg_vertify_code_info">验证码短信已经发送到</string>
-    <string name="reg_et_account_hint">用户名:</string>
+    <string name="reg_et_account_hint">输入用户名:</string>
     <string name="reg_et_set_password_hint">设置密码:</string>
     <string name="reg_et_commit_password_hint">确认密码:</string>
     <string name="reg_suc_congratulation"> <b>恭喜您，注册成功！ </b></string>
@@ -68,6 +70,17 @@
     <string name="search_pwd_warning_pwd_not_same">确认密码和新密码不一致，请重新输入</string>
     <!-- zfl end forget password -->
 
+	<!-- zfl start home index --> 
+	<string name="search_pro">搜索项目</string>
+	<string name="publish_text">我要发布</string>
+	<string name="creative">创意</string>
+	<string name="project">项目</string>
+	<string name="goods">商品</string>
+	
+	
+	<!-- zfl end home index -->
+	
+	
     <string-array name="sorts">
         <item>创意</item>
         <item>项目</item>

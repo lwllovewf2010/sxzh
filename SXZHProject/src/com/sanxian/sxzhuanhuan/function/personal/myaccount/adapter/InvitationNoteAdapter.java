@@ -14,6 +14,7 @@ import android.widget.TextView;
 import com.sanxian.sxzhuanhuan.R;
 import com.sanxian.sxzhuanhuan.entity.InvitationUser;
 import com.sanxian.sxzhuanhuan.function.personal.myaccount.PersonInfoActivity;
+import com.sanxian.sxzhuanhuan.function.personal.myaccount.RegisteredPersonInfoActivity;
 /**
  * 邀请记录页面Adapter
  * @author joe
@@ -94,8 +95,7 @@ public class InvitationNoteAdapter extends BaseAdapter {
 		@Override
 		public void onClick(View v) {
 			// TODO Auto-generated method stub
-			Intent intent = new Intent(context,PersonInfoActivity.class);
-			intent.putExtra("from","invite");
+			Intent intent = new Intent(context,RegisteredPersonInfoActivity.class);
 			intent.putExtra("see_uid", list.get(position).getInvite_userid());
 			context.startActivity(intent);
 		}

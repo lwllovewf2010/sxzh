@@ -102,22 +102,17 @@ public class MyProjectIndexAdapter extends BaseAdapter implements OnClickListene
 		holder.ivProgress = (CustomProgress) convertView
 				.findViewById(R.id.sort_detail_item_progressBar);
 
-		holder.ivParticipate = (ImageView) convertView
-				.findViewById(R.id.sort_detail_item_ivParticipate);
-		holder.tvParticipate = (TextView) convertView
-				.findViewById(R.id.sort_detail_item_tvParticipate);
-		holder.ivDiscuss = (ImageView) convertView
-				.findViewById(R.id.sort_detail_item_ivDiscuss);
-		holder.tvDiscuss = (TextView) convertView
-				.findViewById(R.id.sort_detail_item_tvDiscuss);
-		holder.ivDays = (ImageView) convertView
-				.findViewById(R.id.sort_detail_item_ivDays);
-		holder.tvDays = (TextView) convertView
-				.findViewById(R.id.sort_detail_item_tvDays);
-		holder.ivMoney = (ImageView) convertView
-				.findViewById(R.id.sort_detail_item_ivMoney);
-		holder.tvMoney = (TextView) convertView
-				.findViewById(R.id.sort_detail_item_tvMoney);
+		holder.ivProgress = (CustomProgress) convertView
+				.findViewById(R.id.sort_detail_item_progressBar);
+
+		holder.tvCurMoney = (TextView) convertView
+				.findViewById(R.id.sort_detail_item_cur_money);
+		holder.tvJoinPerson = (TextView) convertView
+				.findViewById(R.id.sort_detail_item_person_join);
+		holder.tvAllMoney = (TextView) convertView
+				.findViewById(R.id.sort_detail_item_all_money);
+		holder.tvShenTime = (TextView) convertView
+				.findViewById(R.id.sort_detail_item_shen_time);
 
 	}
 
@@ -134,18 +129,10 @@ public class MyProjectIndexAdapter extends BaseAdapter implements OnClickListene
 		holder.ivProgress.setProgress(Integer.parseInt(info.getPurchase_money()) * 100 / info.getProject_money() ) ;
 		
 
-		holder.ivParticipate.setImageDrawable(context.getResources()
-				.getDrawable(R.drawable.groupico));
-		holder.tvParticipate.setText("" + info.getAttention_nums() + "人");
-		holder.ivDiscuss.setImageDrawable(context.getResources().getDrawable(
-				R.drawable.groupico));
-		holder.tvDiscuss.setText("" + info.getProject_topic_count() + "讨论");
-		holder.ivDays.setImageDrawable(context.getResources().getDrawable(
-				R.drawable.groupico));
-		holder.tvDays.setText("" + info.getProject_days() + "天");
-		holder.ivMoney.setImageDrawable(context.getResources().getDrawable(
-				R.drawable.groupico));
-		holder.tvMoney.setText("￥" + info.getProject_money());
+		holder.tvCurMoney.setText("￥" + info.getPurchase_money() );
+		holder.tvJoinPerson.setText("" + info.getAttention_nums() );
+		holder.tvAllMoney.setText("￥" + info.getProject_money());
+		holder.tvShenTime.setText("---" );
 		
 		holder.project_id = info.getId() ;
 	}
@@ -157,17 +144,14 @@ public class MyProjectIndexAdapter extends BaseAdapter implements OnClickListene
 //		public ProgressBar ivProgress;
 		public CustomProgress ivProgress ;
 
-		public ImageView ivParticipate;
-		public TextView tvParticipate;
-		public ImageView ivDiscuss;
-		public TextView tvDiscuss;
-		public ImageView ivDays;
-		public TextView tvDays;
-		public ImageView ivMoney;
-		public TextView tvMoney;
+		public TextView tvCurMoney;
+		public TextView tvJoinPerson;
+		public TextView tvAllMoney;
+		public TextView tvShenTime;
 		
 		public String project_id ; 
 	}
+
 
 	@Override
 	public void onClick(View v) {

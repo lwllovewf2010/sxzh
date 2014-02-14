@@ -3,16 +3,17 @@ package com.sanxian.sxzhuanhuan.function.login;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
+import android.text.Html;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.view.Window;
 import android.widget.Button;
 import android.widget.TextView;
 
 import com.sanxian.sxzhuanhuan.R;
 import com.sanxian.sxzhuanhuan.common.BaseActivity;
-import com.sanxian.sxzhuanhuan.common.CommonTitle;
+import com.sanxian.sxzhuanhuan.common.CommonHeader;
 import com.sanxian.sxzhuanhuan.common.UIHelper;
+import com.sanxian.sxzhuanhuan.util.Util;
 
 /**
  * @Title: RegisterSuccessActivity.java
@@ -24,9 +25,10 @@ import com.sanxian.sxzhuanhuan.common.UIHelper;
  */
 public class RegisterSuccessActivity extends BaseActivity implements
 		OnClickListener {
-	private CommonTitle conTitle = null ;
+	private CommonHeader conHeader = null ;
 	private TextView tvTimeLimit = null ;
 	private TextView tvGotoNow = null ;
+	private TextView tvTextColor = null ;
 	private Button btnRelnameAuth = null ;
 	
 	private final static int MSG_TIME = 0x01 ;
@@ -67,23 +69,29 @@ public class RegisterSuccessActivity extends BaseActivity implements
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
-		requestWindowFeature(Window.FEATURE_NO_TITLE);
 
 		setContentView(R.layout.register_success);
 
 		init();
-		conTitle.show(false, "", true, "注册", false, "");
+		conHeader.show(true, true , "返回", true, "注册完成", false , "" , false) ;
 		
 		timeThread.start() ;
 	}
 
 	private void init() {
-		conTitle = (CommonTitle) findViewById(R.id.common_title) ;
+		conHeader = (CommonHeader) findViewById(R.id.common_header) ;
 		tvTimeLimit = (TextView) findViewById(R.id.register_suc_tv_time_limit) ;
 		tvGotoNow = (TextView) findViewById(R.id.register_suc_tv_goto_now) ;
+		tvTextColor = (TextView) findViewById(R.id.reg_suc_tv_color) ;
 		btnRelnameAuth = (Button) findViewById(R.id.register_suc_btn_relname_auth) ;
 		
+		conHeader.ivPre.setOnClickListener(this);
+		conHeader.tvLeft.setOnClickListener(this) ;
 		tvGotoNow.setOnClickListener(this) ;
+		//如果您有许多想法或者想要投资
+		tvTextColor.setText(Html.fromHtml("如果您有" + "<font color='" + getResources().getColor(R.color.color_f39700) + "'>" + "许多想法"
+					+ "</font>" + "或者" + "<font color='" + getResources().getColor(R.color.color_00a0e9) + "'>" + "想要投资"
+					+ "</font>")) ;
 		btnRelnameAuth.setOnClickListener(this) ;
 	}
 	
@@ -91,12 +99,14 @@ public class RegisterSuccessActivity extends BaseActivity implements
 	public void onClick(View v) {
 		// TODO Auto-generated method stub
 		switch (v.getId()) {
+			case R.id.header_left_tv :
+			case R.id.header_pre_iv :
+				Util.toastInfo(RegisterSuccessActivity.this, "去哪") ;
+				break;
 			case R.id.register_suc_tv_goto_now:
-				System.out.println("goto now");
 				finish() ;
 				break;
 			case R.id.register_suc_btn_relname_auth :
-				System.out.println("relname_auth");
 				UIHelper.showRealAuthActivity(RegisterSuccessActivity.this) ;
 				break ;
 

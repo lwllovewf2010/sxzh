@@ -1,6 +1,8 @@
 package com.sanxian.sxzhuanhuan.function.homeindex;
 
+import java.io.File;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import org.json.JSONException;
@@ -22,13 +24,14 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 public class PublishProjectLast extends BaseActivity implements OnClickListener {
 	private TextView fullname;
 	private TextView mobile_number;
 	private EditText qq_number;
-	private Button submit;
 	private SharedPreferences spf;
 	String open_id;
 	String token;
@@ -36,6 +39,25 @@ public class PublishProjectLast extends BaseActivity implements OnClickListener 
 	String mobile_numbersString;
 	CommonAPI api = new CommonAPI();
 	private static final int CREATEPROJECTONE = 100;
+	private String tempImages = "";// 临时组装图片地址
+	private int tempSize = 0;// 用来标志图片是否上传完成
+	private static final int UPLOADAVATAR = 9;
+
+	// 步骤流程图
+	public ImageView img_one;
+	public ImageView img_two;
+	public ImageView img_three;
+	public TextView txt_two;
+	public TextView txt_three;
+
+	private Button submit;
+	private Button cancel_submit;
+
+	private RelativeLayout charge_self;
+	private RelativeLayout charge_vote;
+
+	private ImageView tick_self;
+	private ImageView tick_vote;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -59,23 +81,78 @@ public class PublishProjectLast extends BaseActivity implements OnClickListener 
 		mobile_number = (TextView) this.findViewById(R.id.mobile_number);
 		qq_number = (EditText) this.findViewById(R.id.qq_number);
 		submit = (Button) this.findViewById(R.id.submit);
+		// 步骤流程图
+		img_one = (ImageView) this.findViewById(R.id.img_one);
+		img_two = (ImageView) this.findViewById(R.id.img_two);
+		img_three = (ImageView) this.findViewById(R.id.img_three);
+		img_one.setBackgroundResource(R.drawable.finish);
+		img_two.setBackgroundResource(R.drawable.finish);
+		img_three.setBackgroundResource(R.drawable.step_three_on);
 
+		txt_two = (TextView) this.findViewById(R.id.txt_two);
+		txt_two.setTextColor(getResources().getColor(R.color.common_font_color));
+		txt_three = (TextView) this.findViewById(R.id.txt_three);
+		txt_three.setTextColor(getResources().getColor(R.color.common_font_color));
+
+		submit = (Button) this.findViewById(R.id.submit);
+		submit.setText("提交审核");
+		cancel_submit = (Button) this.findViewById(R.id.cancel_submit);
+
+		charge_self = (RelativeLayout) this.findViewById(R.id.charge_self);
+		charge_vote = (RelativeLayout) this.findViewById(R.id.charge_vote);
+
+		tick_self = (ImageView) this.findViewById(R.id.tick_self);
+		tick_vote = (ImageView) this.findViewById(R.id.tick_vote);
 	}
 
 	public void initListener() {
 		super.initListener();
 		submit.setOnClickListener(this);
+		cancel_submit.setOnClickListener(this);
+
+		charge_self.setOnClickListener(this);
+		charge_vote.setOnClickListener(this);
 	}
+
+	private boolean checkInput() {
+		return true;
+	}
+
+	boolean charge = true;
 
 	@Override
 	public void onClick(View v) {
 		switch (v.getId()) {
+		case R.id.charge_self:
+			charge = true;
+			tick_self.setVisibility(View.VISIBLE);
+			tick_vote.setVisibility(View.INVISIBLE);
+			break;
+		case R.id.charge_vote:
+			charge = false;
+			tick_self.setVisibility(View.INVISIBLE);
+			tick_vote.setVisibility(View.VISIBLE);
+			break;
 		case R.id.title_Left:
 			this.finish();
 			break;
+		case R.id.cancel_submit:
+			this.finish();
+			break;
 		case R.id.submit:
-			getMap();
-			api.manageProject("create", PublishConstant.paramMap, this, CREATEPROJECTONE);
+			// 项目图片（获取）
+			if (app.getImagelist().size() == 0) {
+				getMap();
+				api.manageProject("create", PublishConstant.paramMap, this, CREATEPROJECTONE);
+			} else {
+
+				for (int i = 0; i < app.getImagelist().size(); i++) {
+
+					// tempImages+=app.getImagelist().get(i)+",";
+					api.uploadAvatarForProject(new HashMap<String, String>(), new File(app.getImagelist().get(i)), this, UPLOADAVATAR);
+				}
+				// tempMap.put("project_logo", tempImages);
+			}
 			break;
 		default:
 			break;
@@ -87,7 +164,6 @@ public class PublishProjectLast extends BaseActivity implements OnClickListener 
 		super.refresh(param);
 
 		int flag = ((Integer) param[0]).intValue();
-		System.out.println("----" + flag);
 		try {
 			switch (flag) {
 			case CREATEPROJECTONE:
@@ -97,13 +173,31 @@ public class PublishProjectLast extends BaseActivity implements OnClickListener 
 					if (Constant.ResultStatus.RESULT_OK == JSONParser.getReturnFlag(jsondata)) {
 						JSONObject contentObject = new JSONObject(jsondata);
 						Util.toastInfo(this, "创建成功！" + contentObject.optString("content"));
-					
-						
+
 					} else if (Constant.ResultStatus.RESULT_FAIL == JSONParser.getReturnFlag(jsondata)) {
 						Util.toastInfo(this, "创建失败！");
 					}
-					Intent intent=new Intent(this,MainActivity.class);
+					Intent intent = new Intent(this, MainActivity.class);
 					startActivity(intent);
+					finish();
+				}
+				break;
+
+			case UPLOADAVATAR:
+				if (param.length > 0 && param[1] != null && param[1] instanceof String) {
+					String jsondata = param[1].toString();
+					if (Constant.ResultStatus.RESULT_OK == JSONParser.getReturnFlag(jsondata)) {
+						JSONObject dataObject = new JSONObject(jsondata);
+						tempImages = dataObject.optString("content");
+						tempSize++;
+						if (app.getImagelist().size() == tempSize) {
+							Util.toastInfo(this, "上传成功");
+							getMap();
+							api.manageProject("create", PublishConstant.paramMap, this, CREATEPROJECTONE);
+						}
+					} else if (Constant.ResultStatus.RESULT_FAIL == JSONParser.getReturnFlag(jsondata)) {
+						Util.toastInfo(this, "上传失败");
+					}
 				}
 				break;
 			}
@@ -111,6 +205,7 @@ public class PublishProjectLast extends BaseActivity implements OnClickListener 
 		} catch (JSONException e) {
 			e.printStackTrace();
 		}
+
 	}
 
 	public Map<String, String> getMap() {
@@ -119,6 +214,8 @@ public class PublishProjectLast extends BaseActivity implements OnClickListener 
 		tempMap.put("project_qq", qq_number.getText().toString());
 		tempMap.put("project_mobile", mobile_number.getText().toString());
 		tempMap.put("project_realname", fullname.getText().toString());
+		tempMap.put("project_logo", tempImages);
+
 		PublishConstant.paramMap.putAll(tempMap);
 		return PublishConstant.paramMap;
 
@@ -136,10 +233,10 @@ public class PublishProjectLast extends BaseActivity implements OnClickListener 
 		token = spf.getString("token", "");
 		fullnamesString = spf.getString("user_name", "");
 		mobile_numbersString = spf.getString("mobile", "");
-		// fullname.setText(fullnamesString);
-		// mobile_number.setText(mobile_numbersString);
-		fullname.setText("honaf");
-		mobile_number.setText("13794484349");
+		fullname.setText(fullnamesString);
+		mobile_number.setText(mobile_numbersString);
+		// fullname.setText("honaf");
+		// mobile_number.setText("13794484349");
 	}
 
 }

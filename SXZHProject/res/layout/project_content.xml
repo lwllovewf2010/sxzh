@@ -2,13 +2,19 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
+    android:background="@color/color_efeff4"
     android:orientation="vertical" >
 
+    <com.sanxian.sxzhuanhuan.common.CommonHeader
+  	    android:id="@+id/common_header"
+  	    android:layout_height="wrap_content" 
+        android:layout_width="fill_parent"
+  	    />
+    
     <LinearLayout
         android:id="@+id/linearLayout1"
         android:layout_width="fill_parent"
         android:layout_height="48dp"
-    	android:background="@drawable/tongyong_top"
         >
 
         <TextView
@@ -18,8 +24,8 @@
             android:layout_weight="1.0"
             android:gravity="center"
             android:text="@string/topic_content_miaos"
-            android:textColor="#000000"
-            android:textSize="22.0dip" />
+            android:textColor="@color/color_444a4d"
+            android:textSize="@dimen/size_22" />
        
         <TextView
             android:id="@+id/common_content_comment"
@@ -28,8 +34,8 @@
             android:layout_weight="1.0"
             android:gravity="center"
             android:text="@string/topic_content_comment"
-            android:textColor="#000000"
-            android:textSize="22.0dip" />
+            android:textColor="@color/color_444a4d"
+            android:textSize="@dimen/size_22" />
     </LinearLayout>
 
     <ImageView
@@ -37,7 +43,7 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:scaleType="matrix"
-        android:src="@drawable/a" />
+        android:src="@drawable/nav_icon" />
 
     <android.support.v4.view.ViewPager
         android:id="@+id/vPager"
@@ -49,7 +55,7 @@
         android:flipInterval="30"
         android:persistentDrawingCache="animation" />
     
-    <LinearLayout
+    <!-- <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="48dp"
         android:layout_marginBottom="-4dp"
@@ -84,6 +90,6 @@
                 android:src="@drawable/ic_launcher" />
 
         </RelativeLayout>
-    </LinearLayout>
+    </LinearLayout> -->
 
 </LinearLayout>

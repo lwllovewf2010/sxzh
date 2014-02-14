@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="@color/common_bg"
     android:focusable="true"
     android:focusableInTouchMode="true"
     android:orientation="vertical" >
@@ -11,193 +11,278 @@
         android:id="@+id/publish_project_last_bar"
         layout="@layout/title_bar4" />
 
-    <TextView
-        android:id="@+id/publish_project_report_last_contact_info"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/publish_project_last_bar"
-        android:layout_marginLeft="10dip"
-        android:layout_marginRight="10dip"
-        android:layout_marginTop="10dip"
-        android:text="项目联系人信息"
-        android:textColor="@color/black"
-        android:textSize="15sp" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/publish_project_last_bar" >
 
-    <RelativeLayout
-        android:id="@+id/publish_project_report_last_user_info_rel"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/publish_project_report_last_contact_info"
-        android:layout_marginLeft="10dip"
-        android:layout_marginRight="10dip"
-        android:layout_marginTop="10dip"
-        android:orientation="vertical" >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
 
-        <TextView
-            android:id="@+id/publish_project_report_publish_name"
-            android:layout_width="80dip"
-            android:layout_height="wrap_content"
-            android:gravity="right"
-            android:text="姓名："
-            android:textColor="@color/black" />
+            <include
+                android:id="@+id/top_step"
+                layout="@layout/publish_top_step" />
 
-        <TextView
-            android:id="@+id/fullname"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_toRightOf="@+id/publish_project_report_publish_name"
-            android:text="testtest"
-            android:textColor="@color/black"
-            android:textSize="15sp" />
-    </RelativeLayout>
+            <TextView
+                android:id="@+id/publish_project_report_last_contact_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/top_step"
+                android:layout_marginBottom="10dip"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dip"
+                android:text="项目联系人信息"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
 
-    <RelativeLayout
-        android:id="@+id/publish_project_report_last_user_phone_rel"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/publish_project_report_last_user_info_rel"
-        android:layout_marginLeft="10dip"
-        android:layout_marginRight="10dip"
-        android:layout_marginTop="10dip"
-        android:orientation="vertical" >
+            <RelativeLayout
+                android:id="@+id/basic_info"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/publish_project_report_last_contact_info"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dip"
+                android:background="@drawable/big_box" >
 
-        <TextView
-            android:id="@+id/publish_project_report_publish_phone"
-            android:layout_width="80dip"
-            android:layout_height="wrap_content"
-            android:gravity="right"
-            android:text="手机号码："
-            android:textColor="@color/black" />
+                <RelativeLayout
+                    android:id="@+id/publish_project_report_last_user_info_rel"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:background="@color/box_gray"
+                    android:orientation="vertical"
+                    android:paddingLeft="10dip"
+                    android:paddingRight="10dip"
+                    android:paddingTop="10dip" >
 
-        <TextView
-            android:id="@+id/mobile_number"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_toRightOf="@+id/publish_project_report_publish_phone"
-            android:text="135****8888"
-            android:textColor="@color/black"
-            android:textSize="15sp" />
-    </RelativeLayout>
+                    <TextView
+                        android:id="@+id/publish_project_report_publish_name"
+                        android:layout_width="80dip"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:gravity="right"
+                        android:text="姓名："
+                        android:textColor="@color/black" />
 
-    <RelativeLayout
-        android:id="@+id/publish_project_report_last_user_qq_rel"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/publish_project_report_last_user_phone_rel"
-        android:layout_marginLeft="10dip"
-        android:layout_marginRight="10dip"
-        android:layout_marginTop="10dip"
-        android:orientation="vertical" >
+                    <TextView
+                        android:id="@+id/fullname"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/publish_project_report_publish_name"
+                        android:text="testtest"
+                        android:textColor="@color/black"
+                        android:textSize="15sp" />
+                </RelativeLayout>
 
-        <TextView
-            android:id="@+id/publish_project_report_publish_qq"
-            android:layout_width="80dip"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:gravity="right"
-            android:text="qq号码："
-            android:textColor="@color/black" />
+                <TextView
+                    android:id="@+id/line1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:layout_below="@+id/publish_project_report_last_user_info_rel"
+                    android:background="@drawable/lines_item" />
 
-        <EditText
-            android:id="@+id/qq_number"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_toRightOf="@+id/publish_project_report_publish_qq"
-            android:text="2350804678"
-            android:textColor="@color/black"
-            android:textSize="15sp" />
-    </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/publish_project_report_last_user_phone_rel"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_below="@id/line1"
+                    android:layout_centerVertical="true"
+                    android:background="@color/box_gray"
+                    android:orientation="vertical"
+                    android:paddingLeft="10dip"
+                    android:paddingRight="10dip"
+                    android:paddingTop="10dip" >
 
-    <TextView
-        android:id="@+id/publish_project_report_last_rugutouzi"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/publish_project_report_last_user_qq_rel"
-        android:layout_marginLeft="10dip"
-        android:layout_marginRight="10dip"
-        android:layout_marginTop="10dip"
-        android:text="入股投资"
-        android:textColor="@color/black"
-        android:textSize="15sp" />
+                    <TextView
+                        android:id="@+id/publish_project_report_publish_phone"
+                        android:layout_width="80dip"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:gravity="right"
+                        android:text="手机号码："
+                        android:textColor="@color/black" />
 
-    <RelativeLayout
-        android:id="@+id/publish_project_report_last_user_rugufangsi_rel"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/publish_project_report_last_rugutouzi"
-        android:layout_marginLeft="10dip"
-        android:layout_marginRight="10dip"
-        android:layout_marginTop="10dip"
-        android:background="@drawable/ic_setting_item_round_normal"
-        android:orientation="vertical" >
+                    <TextView
+                        android:id="@+id/mobile_number"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/publish_project_report_publish_phone"
+                        android:text="135****8888"
+                        android:textColor="@color/black"
+                        android:textSize="15sp" />
+                </RelativeLayout>
 
-        <Button
-            android:id="@+id/publish_project_report_publish_zhijierugu"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dip"
-            android:layout_marginTop="10dip"
-            android:text="直接入资"
-            android:textColor="@color/black" />
+                <TextView
+                    android:id="@+id/line2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:layout_below="@+id/publish_project_report_last_user_phone_rel"
+                    android:background="@drawable/lines_item" />
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dip"
-            android:layout_toRightOf="@+id/publish_project_report_publish_zhijierugu"
-            android:text="暂时观望"
-            android:textColor="@color/black"
-            android:textSize="15sp" />
+                <RelativeLayout
+                    android:id="@+id/publish_project_report_last_user_qq_rel"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_below="@id/line2"
+                    android:orientation="vertical"
+                    android:paddingLeft="10dip"
+                    android:paddingRight="10dip"
+                    android:paddingTop="10dip" >
 
-        <TextView
-            android:id="@+id/publish_project_report_publish_ruguinfo"
-            android:layout_width="fill_parent"
-            android:layout_height="100dip"
-            android:layout_below="@+id/publish_project_report_publish_zhijierugu"
-            android:layout_marginLeft="10dip"
-            android:layout_marginTop="10dip"
-            android:text="直接入资"
-            android:textColor="@color/black" />
-    </RelativeLayout>
+                    <TextView
+                        android:id="@+id/publish_project_report_publish_qq"
+                        android:layout_width="80dip"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:gravity="right"
+                        android:text="qq号码："
+                        android:textColor="@color/black" />
 
-    <LinearLayout
-        android:id="@+id/publish_project_last_xieyi_lin"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/publish_project_report_last_user_rugufangsi_rel"
-        android:layout_marginLeft="10dip"
-        android:layout_marginRight="10dip"
-        android:layout_marginTop="5dip"
-        android:gravity="center_vertical"
-        android:orientation="horizontal" >
+                    <EditText
+                        android:id="@+id/qq_number"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/publish_project_report_publish_qq"
+                        android:background="@color/transparent"
+                        android:inputType="number"
+                        android:textColor="@color/black"
+                        android:textSize="15sp" />
+                </RelativeLayout>
+            </RelativeLayout>
 
-        <CheckBox
-            android:id="@+id/publish_project_last_xieyi"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:checked="true" />
+            <TextView
+                android:id="@+id/publish_project_report_last_rugutouzi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/basic_info"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dip"
+                android:layout_marginTop="10dip"
+                android:text="项目负责人产生方式"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
 
-        <TextView
-            android:id="@+id/publish_project_last_xieyi_text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/publish_topic_xieyi"
-            android:textColor="@color/black" />
-    </LinearLayout>
+            <RelativeLayout
+                android:id="@+id/publish_project_report_last_user_rugufangsi_rel"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/publish_project_report_last_rugutouzi"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dip"
+                android:layout_marginTop="10dip"
+                android:background="@drawable/big_box"
+                android:orientation="vertical" >
 
-    <Button
-        android:id="@+id/submit"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/publish_project_last_xieyi_lin"
-        android:layout_marginBottom="5dip"
-        android:layout_marginLeft="10dip"
-        android:layout_marginRight="10dip"
-        android:layout_marginTop="5dip"
-        android:background="@drawable/ic_setting_item_round_normal"
-        android:text="@string/publish_submit" />
+                <RelativeLayout
+                    android:id="@+id/charge_self"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/listview_item_click_bg" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dip"
+                        android:layout_marginTop="10dip"
+                        android:text="默认我为选择人"
+                        android:textColor="@color/black" />
+
+                    <ImageView
+                        android:id="@+id/tick_self"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/tick" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/line3"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:layout_below="@+id/charge_self"
+                    android:background="@drawable/lines_item" />
+
+                <RelativeLayout
+                    android:id="@+id/charge_vote"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/line3"
+                    android:background="@drawable/listview_item_click_bg" >
+
+                    <TextView
+                        android:id="@+id/publish_project_report_publish_ruguinfo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dip"
+                        android:layout_marginTop="10dip"
+                        android:text="选举产生负责人"
+                        android:textColor="@color/black" />
+
+                    <ImageView
+                        android:id="@+id/tick_vote"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/tick"
+                        android:visibility="invisible" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/readme"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/publish_project_report_last_user_rugufangsi_rel"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dip"
+                android:text="你妹啊你妹啊你妹啊你妹啊你妹啊你妹啊你妹啊你妹啊你妹啊你妹啊你妹啊你妹啊你妹啊你妹啊你妹啊你妹啊你妹啊你妹啊你妹啊你妹啊"
+                android:textColor="@color/black" />
+
+            <LinearLayout
+                android:id="@+id/publish_project_last_xieyi_lin"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/readme"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dip"
+                android:layout_marginTop="5dip"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <CheckBox
+                    android:id="@+id/publish_project_last_xieyi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true" />
+
+                <TextView
+                    android:id="@+id/publish_project_last_xieyi_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/publish_topic_xieyi"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/publish_project_last_xieyi_lin" >
+
+                <include layout="@layout/publish_bottom_layout" />
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
 
 </RelativeLayout>

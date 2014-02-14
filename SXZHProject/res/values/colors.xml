@@ -320,9 +320,11 @@
     <color name="renmai_item_name">#000000</color>
     <color name="renmai_item_position">#5B5B5B</color>
     <color name="status_blue">#3C8586</color>
+    
+    <color name="bg_color">#eeeff3</color>
     <!-- 类型背景 -->
     <color name="action_down">#bfbfbf</color>
-    <color name="action_on">#fff</color>
+    <color name="action_on">#17AF8D</color>
     
     <color name="line_color">#cfcfcf</color>
     <color name="item_down">#2763e2</color>

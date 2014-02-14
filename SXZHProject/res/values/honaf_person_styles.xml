@@ -1,5 +1,8 @@
 <resources xmlns:android="http://schemas.android.com/apk/res/android">
 
+    <style name="box_item_height">
+        <item name="android:height">40dp</item>
+    </style>
     <style name="myfriends_index">
         <item name="android:textColor">@color/black</item>
         <item name="android:textSize">16sp</item>

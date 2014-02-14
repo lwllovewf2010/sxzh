@@ -51,6 +51,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.6"
+                        android:maxLength="10"
                         android:textColor="@color/black"
                         android:textSize="17sp" />
                 </LinearLayout>
@@ -75,7 +76,8 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="0.6"
                         android:text=""
-                        android:inputType="phone"
+                        android:maxLength="11"
+                        android:digits="0123456789"
                         android:textColor="@color/black"
                         android:textSize="17sp" />
                 </LinearLayout>

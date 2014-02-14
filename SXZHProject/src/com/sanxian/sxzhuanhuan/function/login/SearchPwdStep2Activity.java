@@ -9,11 +9,12 @@ import android.view.View.OnClickListener;
 import android.view.Window;
 import android.widget.Button;
 import android.widget.EditText;
+
 import com.sanxian.sxzhuanhuan.R;
 import com.sanxian.sxzhuanhuan.api.JSONParser;
 import com.sanxian.sxzhuanhuan.api.TestAPI;
 import com.sanxian.sxzhuanhuan.common.BaseActivity;
-import com.sanxian.sxzhuanhuan.common.CommonTitle;
+import com.sanxian.sxzhuanhuan.common.CommonHeader;
 import com.sanxian.sxzhuanhuan.common.UIHelper;
 import com.sanxian.sxzhuanhuan.entity.Constant;
 import com.sanxian.sxzhuanhuan.util.Util;
@@ -27,7 +28,7 @@ import com.sanxian.sxzhuanhuan.util.Util;
  * @version V1.0   
  */
 public class SearchPwdStep2Activity extends BaseActivity implements OnClickListener {
-	private CommonTitle conTitle = null ;
+	private CommonHeader conHeader = null ;
 	private EditText etPassword = null ;
 	private EditText etPassword2 = null ;
 	private Button btnCommit = null ;
@@ -44,20 +45,21 @@ public class SearchPwdStep2Activity extends BaseActivity implements OnClickListe
 		setContentView(R.layout.search_password_second) ;
 		
 		init() ;
-		conTitle.show(true, "返回", true, "找回密码", false, "") ;
+		conHeader.show(true, true , "返回", true, "设置新密码", false , "" , false) ;
 		
 	}
 	
 	private void init() {
 		api = new TestAPI();
 		input = new HashMap<String, String>() ;
-		
-		conTitle = (CommonTitle) findViewById(R.id.common_title) ;
+
+		conHeader = (CommonHeader) findViewById(R.id.common_header) ;
 		etPassword = (EditText) findViewById(R.id.search_pwd_et_new_password) ;
 		etPassword2 = (EditText) findViewById(R.id.search_pwd_et_new_password_commit) ;
 		btnCommit = (Button) findViewById(R.id.search_pwd_btn_change_password) ;
 		
-		conTitle.btnLeft.setOnClickListener(this) ;
+		conHeader.ivPre.setOnClickListener(this);
+		conHeader.tvLeft.setOnClickListener(this) ;
 		btnCommit.setOnClickListener(this) ;
 	}
 	
@@ -66,8 +68,8 @@ public class SearchPwdStep2Activity extends BaseActivity implements OnClickListe
 		// TODO Auto-generated method stub
 		int viewId = v.getId() ;
 		switch (viewId) {
-			case R.id.title_btn_left:
-				System.out.println("-------------" + conTitle.btnLeft.getText().toString());
+			case R.id.header_left_tv :
+			case R.id.header_pre_iv :
 				UIHelper.showSearchPwdActivity(SearchPwdStep2Activity.this) ;
 				break;
 			case R.id.search_pwd_btn_change_password :

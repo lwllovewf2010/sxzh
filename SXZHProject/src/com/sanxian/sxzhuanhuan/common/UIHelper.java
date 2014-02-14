@@ -38,6 +38,7 @@ import com.sanxian.sxzhuanhuan.WelViewPagerActivity;
 import com.sanxian.sxzhuanhuan.entity.Constant;
 import com.sanxian.sxzhuanhuan.function.homeindex.goods.GoodsContentActivity;
 import com.sanxian.sxzhuanhuan.function.homeindex.project.ProjectContentActivity;
+import com.sanxian.sxzhuanhuan.function.login.InviteInfoActivity;
 import com.sanxian.sxzhuanhuan.function.login.LoginActivity;
 import com.sanxian.sxzhuanhuan.function.login.RealAuthActivity;
 import com.sanxian.sxzhuanhuan.function.login.RegisterActivity;
@@ -140,6 +141,15 @@ public class UIHelper {
 		activity.finish();
 	}
 
+	/**
+	 * 进入到如何被邀请信息页
+	 * @param activity
+	 */
+	public static void showInviteInfoActivity(Activity activity) {
+		Intent intent = new Intent(activity, InviteInfoActivity.class);
+		activity.startActivity(intent) ;
+	}
+	
 	/**
 	 * 进入到注册页面
 	 * 
@@ -417,7 +427,14 @@ public class UIHelper {
 			return Constant.RegisterStatus.REGISTER_PWD_WRONG;
 	}
 
-	
+	public static int register(String accountName, String password) {
+		if ("".equals(accountName) || null == accountName)
+			return Constant.RegisterStatus.REGISTER_ACCOUNT_NULL;
+		else if ("".equals(password) || null == password)
+			return Constant.RegisterStatus.REGISTER_PWD_NULL;
+		else
+			return Constant.RegisterStatus.REGISTER_OK;
+	}
 	
 	
 	
@@ -425,14 +442,24 @@ public class UIHelper {
 	
 	public static DisplayImageOptions setOption() {
 		DisplayImageOptions options = new DisplayImageOptions.Builder()
-		.showImageOnLoading(R.drawable.logo)
-		.showImageForEmptyUri(R.drawable.ic_empty)
-		.showImageOnFail(R.drawable.ic_error)
+		.showImageOnLoading(R.drawable.index)
+		.showImageForEmptyUri(R.drawable.index)
+		.showImageOnFail(R.drawable.index)
 		.cacheInMemory(true)
 		.cacheOnDisc(true)
 		.considerExifParams(true)
 		.displayer(new RoundedBitmapDisplayer(20))
 		.build();
+		
+//		DisplayImageOptions options = new DisplayImageOptions.Builder()
+//		.showImageOnLoading(R.drawable.logo)
+//		.showImageForEmptyUri(R.drawable.ic_empty)
+//		.showImageOnFail(R.drawable.ic_error)
+//		.cacheInMemory(true)
+//		.cacheOnDisc(true)
+//		.considerExifParams(true)
+//		.displayer(new RoundedBitmapDisplayer(20))
+//		.build();
 		
 		return options ;
 	}

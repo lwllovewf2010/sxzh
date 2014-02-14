@@ -10,6 +10,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 
 import com.sanxian.sxzhuanhuan.R;
@@ -27,6 +28,7 @@ public class MyAccoSetLoginPWActivity extends BaseActivity {
     private EditText old_password;
     private EditText new_password;
     private EditText confirm_new_password;
+    private Button save_loginpw;
     private CommonAPI api = null;
     private final int CHANGE_PASSWORD = 25;
 	@Override
@@ -42,11 +44,12 @@ public class MyAccoSetLoginPWActivity extends BaseActivity {
 	public void initView() {
 		// TODO Auto-generated method stub
 		super.initView();
-		setRight("确定");
-		setTitle("修改登录密码");
+		setTitle("修改密码");
+		displayRight();
 		old_password = (EditText)findViewById(R.id.old_password);
 		new_password = (EditText)findViewById(R.id.new_password);
 		confirm_new_password = (EditText)findViewById(R.id.confirm_new_password);
+		save_loginpw = (Button)findViewById(R.id.save_loginpw_button);
 	}
 
 	@Override
@@ -54,7 +57,7 @@ public class MyAccoSetLoginPWActivity extends BaseActivity {
 		// TODO Auto-generated method stub
 		super.initListener();
 		button_left.setOnClickListener(this);
-		button_right.setOnClickListener(this);
+		save_loginpw.setOnClickListener(this);
 	}
 
 	@Override
@@ -65,7 +68,7 @@ public class MyAccoSetLoginPWActivity extends BaseActivity {
 		case R.id.title_Left:
 			finish();
 			break;
-		case R.id.title_right:
+		case R.id.save_loginpw_button:
 			SharedPreferences spf = this.getSharedPreferences("login_user", 0) ;
 			String open_id = spf.getString("open_id","");
 			String token = spf.getString("token","");

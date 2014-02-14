@@ -177,12 +177,14 @@
             android:textColor="@color/black"
             android:textSize="18sp" />
 
-        <Spinner
-            android:id="@+id/topic_content_commnent_publish_order_type"
+        <Button
+            android:id="@+id/topic_content_commnent_publish_order_type" 
             android:layout_width="150dip"
             android:layout_height="40dip"
             android:layout_below="@+id/topic_content_comment_publish_title"
-            android:layout_marginTop="10dip" />
+            android:onClick="onPopupButtonClick"
+            android:layout_marginTop="10dip"
+            android:text="--请选择--" />
 
         <Button
             android:id="@+id/topic_content_comment_publish_but"

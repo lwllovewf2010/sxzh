@@ -2,6 +2,8 @@ package com.sanxian.sxzhuanhuan.function.personal.myaccount;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -9,7 +11,9 @@ import org.json.JSONObject;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.text.Editable;
 import android.text.Html;
+import android.text.TextWatcher;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -73,6 +77,7 @@ public class MyAccoInviteUserActivity extends BaseActivity implements OnClickLis
 		button_left.setOnClickListener(this);
 		invitation_layout.setOnClickListener(this);
 		invitation_btn.setOnClickListener(this);
+//		friend_name.addTextChangedListener(new inputEditListener());
 	}
 
 	@Override
@@ -124,10 +129,17 @@ public class MyAccoInviteUserActivity extends BaseActivity implements OnClickLis
 			startActivity(intent);
 			break;
 		case R.id.invitation_btn:
-			String name = friend_name.getText().toString().trim();
+			String name = friend_name.getText().toString();
 			String phone = friend_phone.getText().toString().trim();
-			if(name != null && !"".equals(name)){
-				if(phone != null && !"".equals(phone)){
+			if (name.length() > 0) {
+				if(name.contains(" ")){
+					Util.toastInfo(this, "好友姓名中不能含有空格");
+				}else{
+				Pattern pat = Pattern.compile("^[\u4e00-\u9fa5]*$");
+				Matcher mat = pat.matcher(name);
+				if(mat.find()){
+					if(name.length()> 1){
+				   if(phone != null && !"".equals(phone)){
 					if(Util.checkMobile(phone)){
 						SharedPreferences spf = this.getSharedPreferences(
 								"login_user", 0);
@@ -149,8 +161,15 @@ public class MyAccoInviteUserActivity extends BaseActivity implements OnClickLis
 					}else{
 					  Util.toastInfo(this, "输入的手机号码格式不正确");	
 					}
+				 }else{
+					 Util.toastInfo(this, "好友手机号码不能为空");
+					}
+				 }else{
+					 Util.toastInfo(this, "好友姓名不能少于两个汉字");	
+					}
 				}else{
-					Util.toastInfo(this, "好友手机号码不能为空");
+					Util.toastInfo(this, "好友姓名只能输入中文");	
+				 }
 				}
 			}else{
 				Util.toastInfo(this, "好友姓名不能为空");
@@ -182,4 +201,33 @@ public class MyAccoInviteUserActivity extends BaseActivity implements OnClickLis
 			}
 		}
 	}
+	
+	 class inputEditListener implements TextWatcher{
+
+			@Override
+			public void afterTextChanged(Editable arg0) {
+				// TODO Auto-generated method stub
+				
+			}
+
+			@Override
+			public void beforeTextChanged(CharSequence arg0, int arg1, int arg2,
+					int arg3) {
+				// TODO Auto-generated method stub
+			}
+
+			@Override
+			public void onTextChanged(CharSequence arg0, int arg1, int arg2, int arg3) {
+				// TODO Auto-generated method stub
+				String content = friend_name.getText().toString().trim();
+				if(content.length() > 10){
+					Util.toastInfo(MyAccoInviteUserActivity.this, "姓名请输入10个汉字以内");
+					friend_name.setText(content.subSequence(0, 10));
+					friend_name.setSelection(10);
+					
+				}
+				
+			}
+			 
+		 }
 }

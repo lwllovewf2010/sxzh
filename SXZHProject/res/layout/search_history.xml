@@ -34,6 +34,7 @@
                     android:animationCache="true"
                     android:entries="@array/sorts" 
                     android:clickable="false"
+                    android:background="@android:color/transparent"
                     android:drawSelectorOnTop="true" />
 
                 <EditText

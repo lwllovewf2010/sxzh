@@ -22,6 +22,7 @@ import android.os.Bundle;
 import android.text.Html;
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.webkit.WebView;
@@ -29,9 +30,11 @@ import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.PopupMenu;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.content.SharedPreferences;
 
@@ -48,6 +51,7 @@ public class OriginalityActivity extends BaseActivity implements OnClickListener
 	TextView topic_content_describe_region;
 	WebView topic_content_describe_text;
 	Button topic_content_button;
+	Button spinner;
 	
 	private HomeIndexGoodsAPI api = null;
 	private final int REQUESTCODE = 12;
@@ -91,18 +95,24 @@ public class OriginalityActivity extends BaseActivity implements OnClickListener
 		topic_content_button = (Button)topicDescribe.findViewById(R.id.topic_content_button);
 		//初始化发表评论按钮
 		Button butCommnet=(Button)topicComment.findViewById(R.id.topic_content_comment_publish_but);
-		Spinner spinner=(Spinner)topicComment.findViewById(R.id.topic_content_commnent_publish_order_type);
-		
-		ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
-		        R.array.planets_array, android.R.layout.simple_spinner_item);
-		// Specify the layout to use when the list of choices appears
-		adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-		// Apply the adapter to the spinner
-		spinner.setAdapter(adapter);
-		spinner.setOnItemSelectedListener(this);
+		spinner=(Button)topicComment.findViewById(R.id.topic_content_commnent_publish_order_type);
+		spinner.setOnClickListener(this);
 		
 		butCommnet.setOnClickListener(this);
 	}
+	
+	@SuppressLint("NewApi")
+	public void onPopupButtonClick(View button) {
+        PopupMenu popup = new PopupMenu(this, button);
+        popup.getMenuInflater().inflate(R.menu.popup, popup.getMenu());
+        popup.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
+            public boolean onMenuItemClick(MenuItem item) {
+                spinner.setText(item.getTitle());
+                return true;
+            }
+        });
+        popup.show();
+    }
 	
 	public void initDate() {
 		// 这里进行http请求
@@ -199,6 +209,9 @@ public class OriginalityActivity extends BaseActivity implements OnClickListener
 		case R.id.topic_content_comment_publish_but:
 			Intent intent=new Intent(this, PublishComment.class);
 			startActivity(intent);
+			break;
+		case R.id.topic_content_commnent_publish_order_type:
+			onPopupButtonClick(v);
 			break;
 		case R.id.topic_content_button:
 			String tag = (String)v.getTag();

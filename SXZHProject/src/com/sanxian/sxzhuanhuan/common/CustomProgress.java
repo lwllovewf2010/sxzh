@@ -62,7 +62,7 @@ public class CustomProgress extends ProgressBar {
 	private void initText() {
 		this.mPaint = new Paint();
 		this.mPaint.setColor(Color.WHITE);
-
+//		this.mPaint.setTextSize(10.0f) ;
 	}
 
 	private void setText() {

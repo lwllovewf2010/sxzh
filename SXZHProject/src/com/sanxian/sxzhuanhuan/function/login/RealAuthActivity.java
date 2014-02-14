@@ -59,11 +59,9 @@ public class RealAuthActivity extends BaseActivity implements OnClickListener {
 		// TODO Auto-generated method stub
 		switch (v.getId()) {
 			case R.id.title_btn_left:
-				System.out.println("return");
 				finish() ;
 				break;
 			case R.id.title_btn_right :
-				System.out.println("ok");
 				finish() ;
 				break ;
 				

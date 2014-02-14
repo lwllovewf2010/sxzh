@@ -2,4 +2,19 @@
 <resources>
     <color name="frame_button_text_nor">#033a5c</color>
     <color name="frame_button_text_select">#FFFFFF</color>
+    
+    <!-- 2014-02-12 -->
+    <color name="color_efeff4">#efeff4</color>
+    <color name="color_ffffff">#ffffff</color>
+    <color name="color_cccccc">#cccccc</color>
+    <color name="color_444a4d">#444a4d</color>
+    <color name="color_6d6d72">#6d6d72</color>
+    <color name="color_c7c7cc">#c7c7cc</color>
+    <color name="color_66cc33">#66cc33</color>
+    <color name="color_18af8e">#18af8e</color>
+    <color name="color_8e8e93">#8e8e93</color>
+    <color name="color_00a0e9">#00a0e9</color>
+    <color name="color_000000">#000000</color>
+    <color name="color_edeff0">#edeff0</color>
+    <color name="color_f39700">#f39700</color>
 </resources>

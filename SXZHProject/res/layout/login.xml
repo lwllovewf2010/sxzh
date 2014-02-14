@@ -3,52 +3,42 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:layout_gravity="center"
-    android:background="@color/gray"
+    android:background="@color/color_efeff4"
     android:orientation="vertical" >
-
-    <com.sanxian.sxzhuanhuan.common.CommonTitle
-  	    android:id="@+id/common_title"
+  	    
+  	<com.sanxian.sxzhuanhuan.common.CommonHeader
+  	    android:id="@+id/common_header"
   	    android:layout_height="wrap_content" 
         android:layout_width="fill_parent"
   	    />
-  	    
-
-    <LinearLayout
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="10dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginRight="30dp"
-        android:layout_gravity="center"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content" >
-
-        <ImageView
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_launcher" />
-    </LinearLayout>
 
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="50dp"
+        android:layout_marginTop="10dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
-        android:background="@drawable/edit_search_bg"
+        android:background="@drawable/preference_item"
         android:gravity="center" >
 
+        <ImageView android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:layout_marginLeft="5dp"
+            android:src="@drawable/login_icon_user"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="18sp"
-            android:gravity="left"
+            android:textSize="@dimen/size_18"
+            android:layout_marginLeft="5dp"
             android:text="@string/account" />
 
         <EditText
             android:id="@+id/login_et_account"
-            android:layout_width="240dp"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
-            android:textSize="14sp"
+            android:textSize="@dimen/size_14"
             android:background="@null"
             android:hint="@string/account_hint" />
     </LinearLayout>
@@ -58,46 +48,70 @@
         android:layout_height="50dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
-        android:background="@drawable/edit_search_bg"
+        android:background="@drawable/preference_item_last_rect"
         android:gravity="center" >
 
+        <ImageView android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:layout_marginLeft="5dp"
+            android:src="@drawable/login_icon_pwd"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/password"
-            android:gravity="left"
-            android:textSize="18sp" />
+            android:layout_marginLeft="5dp"
+            android:textSize="@dimen/size_18" />
 
         <EditText
             android:id="@+id/login_et_password"
-            android:layout_width="220dp"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:textSize="14sp"
+            android:layout_marginLeft="10dp"
+            android:textSize="@dimen/size_14"
             android:background="@null"
-             android:layout_marginLeft="10dp"
             android:hint="@string/password_hint"
             android:inputType="textPassword" />
         
-        <ImageView android:id="@+id/login_iv_forget_pwd"
-            android:layout_width="14dp"
-            android:layout_height="14dp"
-            android:src="@drawable/ic_launcher"/>
-        
     </LinearLayout>
 
-    <LinearLayout
+    <Button
+        android:id="@+id/login_btn_ok"
+        android:layout_width="fill_parent"
+        android:layout_height="48dp"
+        android:layout_gravity="center"
+        android:background="@drawable/common_back"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:gravity="center"
+        android:textSize="@dimen/size_18"
+        android:textColor="@color/color_ffffff"
+        android:text="@string/log_ok" />
+    
+    <RelativeLayout 
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:gravity="center" >
-
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        >
         <TextView
             android:id="@+id/login_tv_register"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
             android:focusable="true"
+            android:textSize="@dimen/size_18"
             android:text="@string/register" />
-        
-    </LinearLayout>
+        <TextView
+            android:id="@+id/login_tv_forget_pwd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:focusable="true"
+            android:textSize="@dimen/size_18"
+            android:text="@string/forget_pwd" />
+    </RelativeLayout>
 
 </LinearLayout>

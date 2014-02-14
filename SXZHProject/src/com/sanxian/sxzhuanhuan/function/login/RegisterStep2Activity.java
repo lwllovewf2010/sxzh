@@ -12,13 +12,11 @@ import android.view.View.OnClickListener;
 import android.view.Window;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
-
 import com.sanxian.sxzhuanhuan.R;
 import com.sanxian.sxzhuanhuan.api.JSONParser;
 import com.sanxian.sxzhuanhuan.api.TestAPI;
 import com.sanxian.sxzhuanhuan.common.BaseActivity;
-import com.sanxian.sxzhuanhuan.common.CommonTitle;
+import com.sanxian.sxzhuanhuan.common.CommonHeader;
 import com.sanxian.sxzhuanhuan.common.UIHelper;
 import com.sanxian.sxzhuanhuan.entity.Constant;
 import com.sanxian.sxzhuanhuan.util.Util;
@@ -36,8 +34,7 @@ public class RegisterStep2Activity extends BaseActivity implements OnClickListen
 	private TestAPI api = null;
 	private Map<String , String> input = null ;
 	
-	private CommonTitle conTitle = null ;
-	private TextView tvVertifyInfo = null ; 
+	private CommonHeader conHeader = null ;	
 	private EditText etVertifyCode = null ;
 	private Button btnVertifyCode = null ;
 	
@@ -94,7 +91,7 @@ public class RegisterStep2Activity extends BaseActivity implements OnClickListen
 		}
 		
 		init() ;
-		conTitle.show(true, "返回", true, "注册", false, "") ;
+		conHeader.show(true, true , "返回", true, "输入验证码", false , "" , false) ;
 		
 		timeThread.start() ;
 	}
@@ -103,30 +100,23 @@ public class RegisterStep2Activity extends BaseActivity implements OnClickListen
 		api = new TestAPI();
 		input = new HashMap<String, String>() ;
 		
-		conTitle = (CommonTitle) findViewById(R.id.common_title) ;
-		tvVertifyInfo = (TextView) findViewById(R.id.register_tv_vertify_info) ;
+		conHeader = (CommonHeader) findViewById(R.id.common_header) ;
 		etVertifyCode = (EditText) findViewById(R.id.register_et_vertify_code) ;
 		btnVertifyCode = (Button) findViewById(R.id.register_btn_cimmit_vertiry_code) ;
 		
-		conTitle.btnLeft.setOnClickListener(this) ;
 		btnVertifyCode.setOnClickListener(this) ;
-		
-		tvVertifyInfo.setText(tvVertifyInfo.getText().toString() + formatPhone(phone)) ;
-		UIHelper.setTextColor((TextView)findViewById(R.id.register_tv_step_second) , getResources().getString(R.string.reg_step_first), 
-				getResources().getString(R.string.reg_step_second) ,
-				getResources().getString(R.string.reg_step_third) ,"green" , Constant.RegisterStep.STEP2) ;
-		
+		conHeader.ivPre.setOnClickListener(this);
+		conHeader.tvLeft.setOnClickListener(this) ;		
 	}
 	
-	/* (non-Javadoc)
-	 * @see android.view.View.OnClickListener#onClick(android.view.View)
-	 */
 	@Override
 	public void onClick(View v) {
 		// TODO Auto-generated method stub
 		int viewId = v.getId() ;
 		switch (viewId) {
-			case R.id.title_btn_left:
+//			case R.id.title_btn_left:
+			case R.id.header_left_tv :
+			case R.id.header_pre_iv :
 				UIHelper.showRegisterActivity(RegisterStep2Activity.this) ;
 				break ;
 				
@@ -158,8 +148,6 @@ public class RegisterStep2Activity extends BaseActivity implements OnClickListen
 					String jsondata = param[1].toString();
 					System.out.println(jsondata);
 					
-//					UIHelper.showRegisterStep3Activity(RegisterStep2Activity.this , phone) ;
-					
 					if(Constant.ResultStatus.RESULT_OK == JSONParser.getReturnFlag(jsondata)) {
 						//{"user_name":"zhangsan","mobile":"12345678900","passwor":"123456","reference_open_id":"5_1278_539947"}}
 						UIHelper.showRegisterStep3Activity(RegisterStep2Activity.this , phone , username , reference_open_id ) ;
@@ -173,7 +161,6 @@ public class RegisterStep2Activity extends BaseActivity implements OnClickListen
 					}
 				}
 				break;
-				
 		}
 	}
 	

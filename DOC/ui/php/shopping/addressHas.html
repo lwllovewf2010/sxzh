@@ -1,0 +1,338 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>直接购买-三弦转换智慧系统</title>
+	<link rel="stylesheet" href="../css/base.css" />
+	<link rel="stylesheet" href="../css/style.css" />
+	<link rel="stylesheet" href="../css/shopping.css">
+	<link rel="stylesheet" href="../css/dialog.css"/>
+</head>
+<body>
+	<!--———— 头部板块———— -->
+	<div id="header">
+		<div class="header-top clearfix">
+			<div class="w1003">
+				<div class="top-fl fl">
+					<ul class="clearfix">
+						<li><i class="mobile-icon"></i>手机版</li>
+						<li>您好，zhangtongbo！<a href="#">[退出]</a></li>
+					</ul>
+				</div>
+				<!-- 我的订单 -->
+				<div class="top-fr fr">
+					<ul class="clearfix">
+						<li class="my_dd li-drop">
+							<a href="javascript:;" class="nav-a">我的订单<i class="down-icon"></i></a>
+							<ul class="ul-list">
+								<li><a href="#">我的订单1</a></li>
+								<li><a href="#">我的订单2</a></li>
+								<li><a href="#">我的订单3</a></li>
+							</ul>
+						</li>
+						<li class="my_car li-drop">
+							<a href="javascript:;" class="nav-a"><i class="car-icon"></i>购物车<i>5</i>件<i class="down-icon"></i></a>
+							<ul class="ul-list">
+								<li><a href="#">我的购物车1</a></li>
+								<li><a href="#">我的购物车2</a></li>
+								<li><a href="#">我的购物车3</a></li>
+							</ul>
+						</li>
+						<li class="service li-drop">
+							<a href="javascript:;" class="nav-a">客户服务<i class="down-icon"></i></a>
+							<ul class="ul-list">
+								<li><a href="#">我的客服1</a></li>
+								<li><a href="#">我的客服2</a></li>
+								<li><a href="#">我的客服3</a></li>
+							</ul>
+						</li>
+						<li class="navigation li-drop"><a href="#"><i class="nav-icon"></i>网站导航</a></li>
+					</ul>
+				</div>
+				<!-- 我的订单 -->
+			</div>
+		</div>
+		<!-- 头部主要内容 -->
+		<div class="header-main">
+			<div class="w1003 clearfix">
+				<!-- logo -->
+				<div id="logo" class="fl">
+					<img src="../images/logo.png" alt=""/>
+				</div>
+				<!--End logo -->
+				<!-- 顶部导航 -->
+				<div id="nav" class="fl">
+					<ul class="clearfix">
+						<li class="active"><a href="#">首页</a></li>
+						<li><a href="#">创意大厅</a></li>
+						<li><a href="#">项目大厅</a></li>
+						<li><a href="#">商品大厅</a></li>
+					</ul>
+				</div>
+				<!-- End顶部导航 -->
+				<!-- 收索 -->
+				<div id="search-box" class="fl">
+					<div class="search-bg clearfix">
+						<form action="#" name="form-search" id="form-search">
+							<input type="text" name="search" id="search"/>
+							<button>收索</button>
+						</form>
+					</div>
+				</div>
+				<!-- 收索 -->
+				<div id="publish" class="fr">
+					<a href="javascript:;" class="publish-a">免费发布项目</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--商品购买，内容模块-->
+	<div id="my-home" class="main-fff">
+		<div class="w1003">
+			<!--步骤-->
+			<div id="do-step" class="shop-step clearfix step-3">
+				<div class="step step1 fl"><span>1</span>挑选商品</div>
+				<div class="step step2 fl"><span>2</span>放入购物车</div>
+				<div class="step step3 fl active"><span>3</span>确认订单</div>
+				<div class="step step4 fl"><span>4</span>支付</div>
+				<div class="step step5 fl"><span>5</span>订购成功</div>
+			</div>
+			<!--End 步骤-->
+			
+			<!-- 展示地址信息 -->
+			<div id="address-show" class="table-div-box clearfix">
+				<div class="table-td table-left-td fl">
+					<h2>确认收货地址  </h2>
+				</div>
+				<div class="table-td table-right-td">
+					<div class="btns trt"><button class="btn-btn">管理收货地址</button></div>
+					<!-- 地址信息列表 -->
+					<ul class="address-list">
+						<li class="active clearfix"><label>寄送至：</label><span class="choose-space-icon address-detail active">北京  北京市  朝阳区  太阳宫大厦12层（张通博 收）<em class="tel">13333333333</em></span><a href="javascript:;" class="status mr-status">默认地址</a><a href="javascript:;" class="edit-address fr">修改本地址</a></li>
+						<li class="clearfix"><label> &nbsp </label><span class="choose-space-icon address-detail">上海  上海市  普陀区  金融中心A座11层1123室（张通博  收）<em class="tel">13333333333</em></span><a href="javascript:;" class="status">设为默认地址</a></li>
+					</ul>
+					<!--End 地址信息列表 -->
+					<div class="btns btn-address"><button class="btn-btn"><i class="icon-add"></i>使用新地址</button></div>
+				</div>
+			</div>
+			<!--End 展示地址信息 -->
+			<!-- 确认订单信息 -->
+			<div id="form-submit">
+				<div class="table-div-box clearfix">
+					<div class="table-td table-left-td fl">
+						<h2>确认订单信息</h2>
+					</div>
+					<div class="table-td table-right-td">
+						<!-- 订单商品信息 -->
+						<table class="table-box">
+							<thead>
+								<tr>
+									<th>企业名称</th>
+									<th width="260">商品名称</th>
+									<th>属性</th>
+									<th>数量</th>
+									<th>单价</th>
+									<th>小计</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td colspan="6" class="space-td"></td>
+								</tr>
+								<tr>
+									<td><h3>某某某企业公司</h3><button class="btn-btn">联系卖家</button></td>
+									<td>
+										<div class="product-info clearfix">
+											<img src="../images/people1.jpg" class="fl" alt="">
+											<div class="product-name fl">
+												布鲁克林brooklyn冠军运动裤
+											</div>
+										</div>
+									</td>
+									<td>红色，L号</td>
+									<td>
+										<div class="prd-num-select">
+											<a class="btn btn-jian" href="javascript:;">-</a>
+											<input type="text" class="num-ip" value="1" id="" onfocus="fnum();">
+											<a class="btn btn-add" href="javascript:;">+</a>
+										</div>
+									</td>
+									<td><em>￥00.00</em></td>
+									<td class="last-td"><em>￥116.80</em></td>
+								</tr>
+							</tbody>
+						</table>
+						<!--End 订单商品信息 -->
+						<ul class="form-list clearfix">
+							<li>	
+								<label>派送方式：</label>
+								<div class="ip-cell">
+									<select name="delivery_method">
+										<option value="0">快递10元</option>
+									</select>
+									<span id="delivery_method_tip" style="color:#F00;"></span>
+								</div>
+							</li>
+							
+							<li>
+								<label>给卖家留言：</label>
+								<div class="ip-cell">
+									<input type="text" class="txt-ip" id="sole_message" name="sole_message" value="" placeholder="对本次交易的补充说明（建议填写已经和卖家达成一致的说明）">
+									<span id="sole_message_tip" style="color:#F00;"></span>
+								</div>
+							</li>
+
+							<li>
+								<label>发票信息：</label>
+								<div class="ip-cell">
+									<span class="choose-icon choose-invoice active">不需要发票</span>
+									<span class="choose-icon choose-invoice yes-invoice">需要发票</span>
+									<!-- 如果卖家提供发票此span隐藏 -->
+									<span class="no-invoice hiden">卖家暂不能提供发票</span>
+									<!--End 如果卖家提供发票此span隐藏 -->
+									<input type="hidden" value="0" name="invoice_v">
+								</div>
+							</li>
+						</ul>
+						<!-- 发票信息展示 -->
+						<form action="#" method="post" id="form-invoice">
+							<ul class="form-list invoice-list clearfix">
+								<li>
+									<label>发票类型：</label>
+									<div class="ip-cell">
+										<span class="choose-icon active">普通发票</span>
+										<span class="choose-icon">增值税发票</span>
+										<input type="hidden" value="0" name="invoice_type_v">
+									</div>
+								</li>
+								<li>
+									<label>发票内容：</label>
+									<div class="ip-cell">
+										<span class="choose-icon active">明细</span>
+										<span class="choose-icon">办公用品</span>
+										<span class="choose-icon">电脑配件</span>
+										<span class="choose-icon">音像</span>
+										<input type="hidden" value="0" name="invoice_text_v">
+									</div>
+								</li>
+								<li>
+									<label>发票抬头： </label>
+									<div class="ip-cell">
+										<span class="choose-icon active">个人</span>
+										<span class="choose-icon">单位<input type="text" id="company_name" name="company_name" class="txt-ip" placeholder="请输入单位名称"/></span>
+										<input type="hidden" value="0" name="invoice_top_v">
+									</div>
+								</li>
+							</ul>
+							<div class="btns"><button class="btn-btn btn-invoice">保存发票信息</button></div>
+						</form>
+						<!--End 发票信息展示 -->
+					</div>
+				</div>
+				<!--End 确认订单信息 -->
+				<!-- 提交表单 -->
+				<div class="form-submit-box">
+					<p class="p-item trt">店铺合计(含运费)：<em>￥116.80元</em></p>
+					<h2 class="trt">实付款：<em>￥116.80元</em></h2>
+					<div class="btns trt"><button class="btn-sub-b"><i class="icon-submit"></i>提交表单</button></div>
+				</div>
+				<!-- 提交表单 -->
+			</div>
+		</div>
+	</div>
+	<!-- ————底部文件 ————-->
+	<div id="footer">
+		<div class="links-box w1003">
+			<a href="#">
+				<img src="../images/logo1.jpg" alt=""/>
+				<div class="link-img">
+					<img src="../images/logo1_hover.jpg" alt=""/>
+				</div>
+			</a>
+			<a href="#">
+				<img src="../images/logo2.jpg" alt=""/>
+				<div class="link-img">
+					<img src="../images/logo2_hover.jpg" alt=""/>
+				</div>
+			</a>
+			<a href="#">
+				<img src="../images/logo3.jpg" alt=""/>
+				<div class="link-img">
+					<img src="../images/logo3_hover.jpg" alt=""/>
+				</div>
+			</a>
+			<a href="#">
+				<img src="../images/logo4.jpg" alt=""/>
+				<div class="link-img">
+					<img src="../images/logo4_hover.jpg" alt=""/>
+				</div>
+			</a>
+			<a href="#">
+				<img src="../images/logo5.jpg" alt=""/>
+				<div class="link-img">
+					<img src="../images/logo5_hover.jpg" alt=""/>
+				</div>
+			</a>
+			<a href="#">
+				<img src="../images/logo6.jpg" alt=""/>
+				<div class="link-img">
+					<img src="../images/logo6_hover.jpg" alt=""/>
+				</div>
+			</a>
+			<a href="#">
+				<img src="../images/logo7.jpg" alt=""/>
+				<div class="link-img">
+					<img src="../images/logo7_hover.jpg" alt=""/>
+				</div>
+			</a>
+		</div>
+		<!-- 大图片背景 -->
+		<div class="footer-img">
+			<div class="w1003">
+				<a href="#">>>了解更多</a>
+			</div>
+		</div>
+		<!-- End大图片背景 -->
+		<div class="footer">
+			<div class="footer-text">
+				<p class="cent"><a href="#">发起项目</a><a href="#">服务介绍</a><a href="#">项目规范</a><a href="#">常见问题</a><a href="#">服务条款</a><a href="#">隐私权政策</a><a href="#">关于我们</a><a href="#">建议反馈</a><a href="#">官方微博</a></p>
+				<p class="cent">Copyright ? 2012-2013三弦转换(北京)网络科技有限公司 版权所有</p>
+				<p class="cent">京ICP备13032648号</p>
+			</div>
+		</div>
+	</div>
+	<!-- 添加新地址弹出框 -->
+	<div id="pop-alert" class="pop-edit-add">
+        <h2 class="alert-title">修改当前地址<span class="button b-close"><span>X</span></span></h2>
+        <div class="content"></div>
+    </div>
+	<script type="text/javascript" src="../js/jquery.js"></script>
+	<script type="text/javascript" src="../js/comm.js"></script>
+	<script type="text/javascript" src="../js/dialog.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			//新增地址
+			$(".btn-address button.btn-btn").click(function(){
+				$("#pop-alert").bPopup({contentContainer:'.content',loadUrl: 'address.html'});
+			});
+			//需要发票单选按钮点击事件
+			$("span.choose-invoice").click(function(){
+				if($(this).hasClass("yes-invoice")){
+					$("ul.invoice-list").show();
+				}else{
+					$("ul.invoice-list").hide();
+				}
+			});
+			//确认收货地址!
+			$("span.choose-space-icon").click(function(){
+				var doc = $(this).parent("li");
+				var Doc = $(this).parents("ul.address-list");
+				Doc.find("li").removeClass("active");
+				doc.addClass("active");
+				Doc.find("span.choose-space-icon").removeClass("active");
+				$(this).addClass("active");
+			});
+		});
+	</script>
+</body>
+</html>

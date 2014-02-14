@@ -1,0 +1,35 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+   <!-- 个人中心首页  项标题 文字 -->
+    <style name="preson_index_textColor">
+        <item name="android:textColor">#444a4d</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+    
+    <style name="preson_index_itemColor">
+        <item name="android:background">#fff</item>
+        <item name="android:paddingLeft">15dip</item>
+        <item name="android:paddingRight">15dip</item>
+        <item name="android:paddingTop">10dip</item>
+        <item name="android:paddingBottom">10dip</item>
+    </style>
+    
+    <!-- 我的账号 项标题 文字 -->
+    <style name="myaccount_textColor">
+        <item name="android:textColor">#444a4d</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+    
+    <!-- 我的账号 身份证号，手机号，邮箱 文字 -->
+    <style name="myaccount_number_text">
+        <item name="android:textColor">#8e8e93</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+    
+      <!-- 我的账号 绑定手机号码 -->
+    <style name="myaccount_bind_phone_text">
+        <item name="android:textColor">#6d6d72</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+    
+    
+</resources>

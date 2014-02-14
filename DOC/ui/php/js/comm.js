@@ -22,11 +22,13 @@ $(function(){
 	});
 	//———————— 购物车数量按钮
 	$(".prd-num-select a.btn").click(function(){
-		var num = $(".num-ip").val();
-		var btn_n = $(".prd-num-select a.btn").index($(this));
+		var doc = $(this).parent().find("input.num-ip");
+		var doc_p = $(this).parent().find("a.btn");
+		var num = doc.val();
+		var btn_n = doc_p.index($(this));
 		btn_n==0?num--:num++;
 		if(num<1) num=1;
-		$(".num-ip").val(num);
+		doc.val(num);
 	}); 
 	//———————— 举报弹出框
 	$(".report").click(function(){
@@ -38,16 +40,18 @@ $(function(){
 	//———————— 下拉菜单
 	$(".li-drop").hover(function(){
 		$(this).addClass("active");
-		$(this).find("ul").slideDown()
+		$(this).find("ul").slideDown("fast")
 	},function(){
 		$(this).removeClass("active");
-		$(this).find("ul").slideUp();
+		$(this).find("ul").slideUp("fast");
 	});
 	//———————— 选项卡
+	var arr_tab = ["发布创意","发布项目"];
 	$(".process").click(function(){
 		var curr = $(".process").index($(this));
 		$(this).addClass("active").siblings("div.process").removeClass("active");
 		$(".tab-box").eq(curr).show().siblings("div.tab-box").hide();
+		$(".bread em").html(arr_tab[curr]);
 	});
 	//———————— 登录注册选项卡
 	$(".login-tab li").click(function(){

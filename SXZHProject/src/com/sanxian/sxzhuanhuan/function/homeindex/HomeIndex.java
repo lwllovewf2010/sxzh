@@ -22,7 +22,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.ListView;
+import android.widget.TextView;
 
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import com.nostra13.universalimageloader.core.ImageLoader;
@@ -75,16 +75,21 @@ public class HomeIndex extends BaseFragment implements OnClickListener , IXListV
 	private Button btnPublish = null ;
 	private EditText etSearch = null ;
 	private ImageView ivSearch = null ;
-	private Button btnCreative = null;
-	private Button btnProject = null;
-	private Button btnProduct = null;
+	private ImageView ivCreative = null ;
+	private TextView tvCreative = null ;
+	private ImageView ivProject = null ;
+	private TextView tvProject = null ;
+	private ImageView ivGoods = null ;
+	private TextView tvGoods = null ;
+//	private Button btnCreative = null;
+//	private Button btnProject = null;
+//	private Button btnProduct = null;
 	private ArrayList<CreativeInfo> creativeInfos = null ;
 	private ArrayList<ProjectInfo> projectInfos = null ;
 	private ArrayList<ProductInfo> productInfos = null ;
 	private ArrayList<CreativeInfo> creativeSearchInfos = null ;
 	private ArrayList<ProjectInfo> projectSearchInfos = null ;
 	private ArrayList<ProductInfo> productSearchInfos = null ;
-	private ListView lvSortDetail;
 	private Context context;
 
 	private TopDialogInfo dialogInfo = null ;
@@ -109,7 +114,6 @@ public class HomeIndex extends BaseFragment implements OnClickListener , IXListV
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
 		context = SApplication.getInstance();
-//		System.out.println("---- onCreat------");
 	}
 
 	@Override
@@ -117,10 +121,8 @@ public class HomeIndex extends BaseFragment implements OnClickListener , IXListV
 			Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		super.onCreateView(inflater, container, savedInstanceState);
-		View view = inflater.inflate(R.layout.home_index_zfl, container, false);
+		View view = inflater.inflate(R.layout.home_index, container, false);
 		init(view);
-		
-//		System.out.println("---- onCreateView------");
 		
 		options = UIHelper.setOption() ;
 		
@@ -156,16 +158,24 @@ public class HomeIndex extends BaseFragment implements OnClickListener , IXListV
 				}
 				break;
 				
-			case Constant.REQUESTCODE.CREATIVE_LIST_REQUEST :	//首页创意列表
+			case Constant.REQUESTCODE.CREATIVE_LIST_REQUEST :	//首页创意列表 
 				if (param.length > 0 && param[1] != null
 						&& param[1] instanceof String) {
-					PAGE[0]++ ;
+//					PAGE[0]++ ;
 					String jsondata = param[1].toString();
+					System.out.println("首页创意列表 :" + jsondata);
 					ArrayList<CreativeInfo> tempCreativeInfo = null ;
 					tempCreativeInfo = (ArrayList<CreativeInfo>) JSONParser.getCreativeInfo(jsondata);
-					if( null != creativeInfos) 
-						creativeInfos.addAll(tempCreativeInfo) ;
-					else creativeInfos = tempCreativeInfo ;
+					
+					if(isUpRefresh) {
+						creativeInfos = tempCreativeInfo ;
+					} else {
+						PAGE[0]++ ;
+						if( null != creativeInfos) 
+							creativeInfos.addAll(tempCreativeInfo) ;
+						else creativeInfos = tempCreativeInfo ;
+					}
+					
 					mListView.setAdapter(new CreativeAdapter(getActivity(), creativeInfos)) ; 
 					setXlistviewPos() ;
 				}
@@ -173,13 +183,17 @@ public class HomeIndex extends BaseFragment implements OnClickListener , IXListV
 			case Constant.REQUESTCODE.PROJECT_LIST_REQUEST : 	//首页项目列表 
 				if (param.length > 0 && param[1] != null
 						&& param[1] instanceof String) {
-					PAGE[1]++ ;
 					String jsondata = param[1].toString();
 					ArrayList<ProjectInfo> tempProjectInfo = null ;
 					tempProjectInfo = (ArrayList<ProjectInfo>) JSONParser.getProjectInfo(jsondata);
-					if( null != projectInfos )
-						projectInfos.addAll(tempProjectInfo) ;
-					else projectInfos = tempProjectInfo ;
+					if(isUpRefresh) {
+						projectInfos = tempProjectInfo ;
+					} else {
+						PAGE[1]++ ;
+						if( null != projectInfos) 
+							projectInfos.addAll(tempProjectInfo) ;
+						else projectInfos = tempProjectInfo ;
+					}
 					mListView.setAdapter(new ProjectAdapter(getActivity(), projectInfos)) ; 
 					setXlistviewPos() ;
 				}
@@ -187,13 +201,17 @@ public class HomeIndex extends BaseFragment implements OnClickListener , IXListV
 			case Constant.REQUESTCODE.PRODUCT_LIST_REQUEST :	//首页商品列表
 				if (param.length > 0 && param[1] != null
 						&& param[1] instanceof String) {
-					PAGE[2]++ ;
 					String jsondata = param[1].toString();
 					ArrayList<ProductInfo> tempProductInfo = null ;
 					tempProductInfo = (ArrayList<ProductInfo>) JSONParser.getProductInfo(jsondata);
-					if( null != productInfos ) 
-						productInfos.addAll(tempProductInfo) ;
-					else productInfos = tempProductInfo ;
+					if(isUpRefresh) {
+						productInfos = tempProductInfo ;
+					} else {
+						PAGE[2]++ ;
+						if( null != productInfos ) 
+							productInfos.addAll(tempProductInfo) ;
+						else productInfos = tempProductInfo ;
+					}
 					mListView.setAdapter(new ProductAdapter(getActivity(), productInfos)) ;
 					setXlistviewPos() ;
 				}
@@ -223,7 +241,6 @@ public class HomeIndex extends BaseFragment implements OnClickListener , IXListV
 					String jsondata = param[1].toString();
 					System.out.println(jsondata);
 					productSearchInfos = (ArrayList<ProductInfo>) JSONParser.getProductInfo(jsondata);
-//					lvSortDetail.setAdapter(new ProductAdapter(getActivity(),productSearchInfos));	//---
 					mListView.setAdapter(new ProductAdapter(getActivity(),productSearchInfos)); // +++
 				}
 				break ;
@@ -330,8 +347,9 @@ public class HomeIndex extends BaseFragment implements OnClickListener , IXListV
 			PAGE[i] = 0 ;
 		}
 		
+		//初始刷新相关
 		mHandler = new Handler();
-		mListView = (XListView) view.findViewById(R.id.home_index_content_xlist) ; // +++ 
+		mListView = (XListView) view.findViewById(R.id.home_index_content_xlist) ; 
 		mListView.setPullLoadEnable(true);
 		mListView.setXListViewListener(this);
 		
@@ -350,53 +368,63 @@ public class HomeIndex extends BaseFragment implements OnClickListener , IXListV
 		listImgs.add(imageBut2) ;
 		listImgs.add(imageBut3) ;
 
-		btnCreative = (Button) view
-				.findViewById(R.id.home_index_content_btn_creative);
-		btnProject = (Button) view
-				.findViewById(R.id.home_index_content_btn_project);
-		btnProduct = (Button) view
-				.findViewById(R.id.home_index_content_btn_product);
+		ivCreative = (ImageView) view.findViewById(R.id.home_index_content_nav_creative_iv);
+		tvCreative = (TextView) view.findViewById(R.id.home_index_content_nav_creative_tv) ;
+		ivProject = (ImageView) view.findViewById(R.id.home_index_content_nav_project_iv);
+		tvProject = (TextView) view.findViewById(R.id.home_index_content_nav_project_tv) ;
+		ivGoods = (ImageView) view.findViewById(R.id.home_index_content_nav_goods_iv);
+		tvGoods = (TextView) view.findViewById(R.id.home_index_content_nav_goods_tv);
 
-		btnCreative.setOnClickListener(sortsBtnClick(btnCreative, 1));
-		btnProject.setOnClickListener(sortsBtnClick(btnProject, 2));
-		btnProduct.setOnClickListener(sortsBtnClick(btnProduct, 3));
+		ivCreative.setOnClickListener(sortsClick(ivCreative, 1));
+		tvCreative.setOnClickListener(sortsClick(tvCreative, 1));
+		ivProject.setOnClickListener(sortsClick(ivProject, 2));
+		tvProject.setOnClickListener(sortsClick(tvProject, 2));
+		ivGoods.setOnClickListener(sortsClick(ivGoods, 3));
+		tvGoods.setOnClickListener(sortsClick(tvGoods, 3));
 
-//		lvSortDetail = (ListView) view
-//				.findViewById(R.id.home_index_content_list);
-
-		btnCreative.setEnabled(false);
+		ivCreative.setPressed(true) ;
+		tvCreative.setTextColor(getActivity().getResources().getColor(R.color.color_444a4d)) ;
+//		btnCreative.setEnabled(false);
 		initData(Constant.Sort.SORT_CREATIVE);
 	}
 
-	private View.OnClickListener sortsBtnClick(final Button btn,
+	private View.OnClickListener sortsClick(final View view,
 			final int catalog) {
 		return new View.OnClickListener() {
 
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
-				if(btn == btnCreative) {
+				if(catalog == 1) {
 					SORTID = 0 ;
-					btnCreative.setEnabled(false) ;
+//					btnCreative.setEnabled(false) ;
+					ivCreative.setPressed(true) ;
+					tvCreative.setTextColor(getActivity().getResources().getColor(R.color.color_444a4d)) ;
 					initData(Constant.Sort.SORT_CREATIVE) ;
 				} else {
-					btnCreative.setEnabled(true) ;
+//					btnCreative.setEnabled(true) ;
+					ivCreative.setPressed(false) ;
+					tvCreative.setTextColor(getActivity().getResources().getColor(R.color.color_6d6d72)) ;
 				}
 				
-				if(btn == btnProject) {
+				if(catalog == 2) {
 					SORTID = 1 ;
-					btnProject.setEnabled(false) ;
+					ivProject.setPressed(true) ;
+					tvProject.setTextColor(getActivity().getResources().getColor(R.color.color_444a4d)) ;
 					initData(Constant.Sort.SORT_PROJECT) ;
 				} else {
-					btnProject.setEnabled(true) ;
+					ivProject.setPressed(false) ;
+					tvProject.setTextColor(getActivity().getResources().getColor(R.color.color_6d6d72)) ;
 				}
 				
-				if(btn == btnProduct) {
+				if(catalog == 3) {
 					SORTID = 2 ;
-					btnProduct.setEnabled(false) ;
+					ivGoods.setPressed(true) ;
+					tvGoods.setTextColor(getActivity().getResources().getColor(R.color.color_444a4d)) ;;
 					initData(Constant.Sort.SORT_PRODUCT) ;
 				} else {
-					btnProduct.setEnabled(true) ;
+					ivGoods.setPressed(false) ;
+					tvGoods.setTextColor(getActivity().getResources().getColor(R.color.color_6d6d72)) ;
 				}
 			}
 			
@@ -410,14 +438,10 @@ public class HomeIndex extends BaseFragment implements OnClickListener , IXListV
 	private void initData(int flag) {
 		switch (flag) {
 			case Constant.Sort.SORT_CREATIVE:
-//				if(null == creativeInfos) {
 				input.put("start", "" + PAGE[SORTID] * PAGESIZE) ;
 				input.put("pmode", "2") ;
 				input.put("pagesize", "" + PAGESIZE) ;
 				api.getCPPData(input, this, Constant.REQUESTCODE.CREATIVE_LIST_REQUEST) ;
-//				} else {
-//					lvSortDetail.setAdapter(new CreativeAdapter(getActivity(), creativeInfos)) ;
-//				}
 				break;
 			case Constant.Sort.SORT_PROJECT :
 				if(null == projectInfos) {
@@ -543,7 +567,6 @@ public class HomeIndex extends BaseFragment implements OnClickListener , IXListV
 	public void onDestroy() {
 		// TODO Auto-generated method stub
 		super.onDestroy();
-//		System.out.println("----HomeIndex   onDestroy ------");
 		
 	}
 
@@ -580,6 +603,28 @@ public class HomeIndex extends BaseFragment implements OnClickListener , IXListV
 			public void run() {
 				// TODO Auto-generated method stub
 				isUpRefresh = true ;
+				isDownRefresh = false ;
+				switch (SORTID) {
+					case 0:
+						input.put("start", "0"  ) ;
+						input.put("pmode", "2") ;
+						input.put("pagesize", "" + (PAGESIZE + PAGE[SORTID] * PAGESIZE)) ;
+						api.getCPPData(input, HomeIndex.this, Constant.REQUESTCODE.CREATIVE_LIST_REQUEST) ;
+						break;
+					case 1:
+						input.put("start", "0" ) ;
+						input.put("pmode", "1") ;
+						input.put("pagesize", "" + (PAGESIZE + PAGE[SORTID] * PAGESIZE)) ;
+						api.getCPPData(input, HomeIndex.this, Constant.REQUESTCODE.PROJECT_LIST_REQUEST) ;
+						break;
+					case 2:
+						input.put("start", "0" ) ;
+						input.put("pmode", "4") ;
+						input.put("pagesize", "" + (PAGESIZE + PAGE[SORTID] * PAGESIZE)) ;
+						api.getCPPData(input, HomeIndex.this, Constant.REQUESTCODE.PRODUCT_LIST_REQUEST) ;
+						break;
+				}
+				
 				onLoad(refreshTime[SORTID]);
 				refreshTime[SORTID] = refTimeFormat() ;
 			}
@@ -594,21 +639,22 @@ public class HomeIndex extends BaseFragment implements OnClickListener , IXListV
 			public void run() {
 				// TODO Auto-generated method stub
 				isDownRefresh = true ;
+				isUpRefresh = false ;
 				switch (SORTID) {
 					case 0:
-						input.put("start", "" + PAGE[SORTID] * PAGESIZE) ;
+						input.put("start", "" +  PAGE[SORTID] * PAGESIZE) ;
 						input.put("pmode", "2") ;
 						input.put("pagesize", "" + PAGESIZE) ;
 						api.getCPPData(input, HomeIndex.this, Constant.REQUESTCODE.CREATIVE_LIST_REQUEST) ;
 						break;
 					case 1:
-						input.put("start", "" + PAGE[SORTID] * PAGESIZE) ;
+						input.put("start", "" +  PAGE[SORTID] * PAGESIZE) ;
 						input.put("pmode", "1") ;
 						input.put("pagesize", "" + PAGESIZE) ;
 						api.getCPPData(input, HomeIndex.this, Constant.REQUESTCODE.PROJECT_LIST_REQUEST) ;
 						break;
 					case 2:
-						input.put("start", "" + PAGE[SORTID] * PAGESIZE) ;
+						input.put("start", "" +  PAGE[SORTID] * PAGESIZE) ;
 						input.put("pmode", "4") ;
 						input.put("pagesize", "" + PAGESIZE) ;
 						api.getCPPData(input, HomeIndex.this, Constant.REQUESTCODE.PRODUCT_LIST_REQUEST) ;

@@ -6,7 +6,9 @@
 
     <ScrollView
         android:layout_width="fill_parent"
-        android:layout_height="fill_parent" >
+        android:layout_height="fill_parent"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="25dp" >
 
         <RelativeLayout
             android:layout_width="fill_parent"
@@ -16,8 +18,7 @@
                 android:id="@+id/project_content_tab1__pro_logo"
                 android:layout_width="fill_parent"
                 android:layout_height="100dip"
-                android:src="@drawable/logo"
-                >
+                android:src="@drawable/logo" >
             </ImageView>
 
             <RelativeLayout
@@ -25,203 +26,248 @@
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/project_content_tab1__pro_logo"
-                android:gravity="center"
-                android:layout_margin="10dip" >
-
-                <ImageView android:id="@+id/project_content_tab1_share"
-                    android:layout_alignParentRight="true"
-                    android:baselineAlignBottom="true"
-                    android:src="@drawable/ic_launcher"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
+                android:layout_margin="10dp"
+                android:gravity="center" >
 
                 <TextView
                     android:id="@+id/project_content_tab1_title"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:text="L-RemoteL-RemoteL-RemoteL-Remote 智慧遥控器"
+                    android:textColor="@color/color_444a4d"
+                    android:textSize="@dimen/size_20" />
+
+                <ImageView
+                    android:id="@+id/project_content_tab1_ongoing"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@id/project_content_tab1_title"
+                    android:src="@drawable/ongoing" />
+            </RelativeLayout>
+
+            <com.sanxian.sxzhuanhuan.common.CustomProgress 
+                android:id="@+id/project_content_tab1_progressBar"
+		    	android:max="100"
+		    	android:layout_width="fill_parent"
+	            android:layout_height="10dp"
+	            android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+	            android:layout_below="@id/project_content_tab1_title_rel"
+		    	style="?android:attr/progressBarStyleHorizontal"
+		    	android:visibility="visible"/>
+            
+            <RelativeLayout
+                android:id="@+id/project_content_tab1_title_rel2"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/project_content_tab1_progressBar"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp" >
+
+                <TextView
+                    android:id="@+id/sort_detail_item_1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentLeft="true"
-                    android:layout_centerVertical="true"
-                    android:layout_toLeftOf="@id/project_content_tab1_share"
-                    android:text="L-Remote 智慧遥控器"
-                    android:textColor="@color/black"
-                    android:textSize="20sp" />
+                    android:text="当前金额"
+                    android:textSize="@dimen/size_14" />
 
+                <TextView
+                    android:id="@+id/sort_detail_item_cur_money"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@id/sort_detail_item_1"
+                    android:text="￥850.00"
+                    android:textColor="@color/color_444a4d"
+                    android:textSize="@dimen/size_14" />
+
+                <TextView
+                    android:id="@+id/sort_detail_item_person_join"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="60dp"
+                    android:text="186"
+                    android:textColor="@color/color_444a4d"
+                    android:textSize="@dimen/size_14" />
+
+                <TextView
+                    android:id="@+id/sort_detail_item_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_toLeftOf="@id/sort_detail_item_person_join"
+                    android:text="参与人数"
+                    android:textSize="@dimen/size_14" />
+
+                <TextView
+                    android:id="@+id/sort_detail_item_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@id/sort_detail_item_1"
+                    android:text="目标金额"
+                    android:textSize="@dimen/size_14" />
+
+                <TextView
+                    android:id="@+id/sort_detail_item_all_money"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/sort_detail_item_cur_money"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@id/sort_detail_item_3"
+                    android:text="￥200.0"
+                    android:textColor="@color/color_444a4d"
+                    android:textSize="@dimen/size_14" />
+
+                <TextView
+                    android:id="@+id/sort_detail_item_4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@id/sort_detail_item_2"
+                    android:layout_below="@id/sort_detail_item_2"
+                    android:layout_marginRight="5dp"
+                    android:text="剩余时间"
+                    android:textSize="@dimen/size_14" />
+
+                <TextView
+                    android:id="@+id/sort_detail_item_shen_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@id/sort_detail_item_person_join"
+                    android:layout_alignTop="@id/sort_detail_item_4"
+                    android:layout_toRightOf="@id/sort_detail_item_4"
+                    android:text="一天三小时"
+                    android:textColor="@color/color_444a4d"
+                    android:textSize="@dimen/size_14" />
             </RelativeLayout>
 
             <RelativeLayout
                 android:id="@+id/project_content_tab1_name_rel"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/project_content_tab1_title_rel"
-                android:layout_margin="10dip" >
+                android:layout_below="@+id/project_content_tab1_title_rel2"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="20dp" >
 
-                <TextView
-                    android:id="@+id/project_content_tab1_name"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true"
-                    android:text="创建人：赵钱孙"
-                    android:textColor="@color/black" />
-                <TextView
-                    android:id="@+id/project_content_tab1_sale"
-                    android:layout_alignParentRight="true"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="项目预售中(我已加入)"
-                    android:textColor="@color/red" />
+                <LinearLayout
+                    android:id="@+id/temp_ll_first"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/preference_item"
+                    android:gravity="center" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:text="创建人"
+                        android:textSize="@dimen/size_18" />
+
+                    <TextView
+                        android:id="@+id/project_content_tab1_name"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="张三"
+                        android:textColor="@color/color_444a4d"
+                        android:textSize="@dimen/size_18" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/temp_ll_second"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_below="@id/temp_ll_first"
+                    android:background="@drawable/preference_item"
+                    android:gravity="center" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:text="所属行业"
+                        android:textSize="@dimen/size_18" />
+
+                    <TextView
+                        android:id="@+id/project_content_tab1_hangye"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="互联网"
+                        android:textColor="@color/color_444a4d"
+                        android:textSize="@dimen/size_18" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/temp_ll_third"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_below="@id/temp_ll_second"
+                    android:background="@drawable/preference_item_last_rect"
+                    android:gravity="center" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:text="所在地"
+                        android:textSize="@dimen/size_18" />
+
+                    <TextView
+                        android:id="@+id/project_content_tab1_zone"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="北京"
+                        android:textColor="@color/color_444a4d"
+                        android:textSize="@dimen/size_18" />
+                </LinearLayout>
             </RelativeLayout>
 
             <RelativeLayout
-                android:id="@+id/project_content_tab1_hanye_rel"
+                android:id="@+id/project_content_tab1_name_rel_2"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/project_content_tab1_name_rel"
-                android:layout_margin="10dip" >
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="20dp" >
 
                 <TextView
-                    android:id="@+id/project_content_tab1_hangye"
+                    android:id="@+id/temp_pro_tv_first"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="所属行业：高科技·IT"
-                    android:textColor="@color/black" />
+                    android:layout_alignParentLeft="true"
+                    android:text="项目描述"
+                    android:textColor="@color/color_444a4d"
+                    android:textSize="@dimen/size_22" />
 
                 <TextView
-                    android:id="@+id/project_content_tab1_zone"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
-                    android:text="所属地域：北京·朝阳"
-                    android:textColor="@color/black" />
-            </RelativeLayout>
-
-            <TextView
-                android:id="@+id/project_content_tab1_text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/project_content_tab1_hanye_rel"
-                android:layout_margin="10dip"
-                android:text="我们是北京青柠睿创（Lemphi）智慧团队，Lemphi由两个词合并而成分别是Lemon和Phi，
-		            	  因为我们都喜欢柠檬所以就用了Lemon这个词，Phi代表着精巧的斐波那契数列（黄金比例）。
-		            	  我们希望用最简单的方法解决家庭中的智能控制问题，犹如黄金比例那样为大家带来功能，外观，性价比各方面尽可能完美的产品"
-                android:textColor="@color/black" />
-
-            <RelativeLayout
-                android:id="@+id/project_content_tab1_showtime_rel"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/project_content_tab1_text"
-                android:layout_marginLeft="10dip"
-                android:layout_marginRight="10dip"
-                android:layout_marginTop="10dip"
-                android:background="@drawable/ic_setting_item_round_normal" >
-
-                <LinearLayout
-                    android:id="@+id/project_content_tab1_lin1"
+                    android:id="@+id/project_content_tab1_text"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dip" >
-
-                    <TextView
-                        android:layout_width="fill_parent"
-                        android:layout_height="fill_parent"
-                        android:layout_weight="1.0"
-                        android:text="目标资金" />
-
-                    <TextView
-                        android:layout_width="fill_parent"
-                        android:layout_height="fill_parent"
-                        android:layout_weight="1.0"
-                        android:text="预购人数" />
-
-                    <TextView
-                        android:layout_width="fill_parent"
-                        android:layout_height="fill_parent"
-                        android:layout_weight="1.0"
-                        android:text="当前金额" />
-
-                    <TextView
-                        android:layout_width="fill_parent"
-                        android:layout_height="fill_parent"
-                        android:layout_weight="1.0"
-                        android:text="结束时间" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/project_content_tab1_lin2"
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/project_content_tab1_lin1"
-                    android:layout_marginTop="10dip" >
-
-                    <TextView
-                        android:id="@+id/project_content_tab1_total_money"
-                        android:layout_width="fill_parent"
-                        android:layout_height="fill_parent"
-                        android:layout_weight="1.0"
-                        android:text="$100000" />
-
-                    <TextView
-                        android:id="@+id/project_content_tab1_buy_count"
-                        android:layout_width="fill_parent"
-                        android:layout_height="fill_parent"
-                        android:layout_weight="1.0"
-                        android:text="10" />
-
-                    <TextView
-                        android:id="@+id/project_content_tab1_cur_money"
-                        android:layout_width="fill_parent"
-                        android:layout_height="fill_parent"
-                        android:layout_weight="1.0"
-                        android:text="$50000" />
-
-                    <TextView
-                        android:id="@+id/project_content_tab1_shen_time"
-                        android:layout_width="fill_parent"
-                        android:layout_height="fill_parent"
-                        android:layout_weight="1.0"
-                        android:singleLine="true"
-                        android:layout_marginLeft="-30dp"
-                        android:text="2014/12/12" />
-                </LinearLayout>
-
-                <!-- <ProgressBar
-                    android:id="@+id/project_content_tab1_progressBar"
-                    style="?android:attr/progressBarStyleHorizontal"
-                    android:layout_width="fill_parent"
-                    android:layout_height="5dip"
-                    android:layout_below="@+id/project_content_tab1_lin2"
-                    android:layout_marginBottom="9dip"
-                    android:layout_marginTop="10dip"
-                    android:max="100"
-                    android:progress="100"
-                    android:secondaryProgress="100" /> -->
-                    
-                    <com.sanxian.sxzhuanhuan.common.CustomProgress 
-                android:id="@+id/project_content_tab1_progressBar"
-	    	android:max="100"
-	    	 android:layout_width="fill_parent"
-                    android:layout_height="15dip"
-                    android:layout_below="@+id/project_content_tab1_lin2"
-                    android:layout_marginBottom="9dip"
-                    android:layout_marginTop="10dip"
-	    	style="?android:attr/progressBarStyleHorizontal"
-	    	android:visibility="visible"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="1dip"
-                    android:layout_below="@+id/project_content_tab1_progressBar" />
+                    android:layout_below="@+id/temp_pro_tv_first"
+                    android:background="@drawable/preference_item_last_rect"
+                    android:padding="10dp"
+                    android:text="我们是北京青柠睿创（Lemphi）智慧团队，Lemphi由两个词合并而成分别是Lemon和Phi"
+                    android:textSize="@dimen/size_14" />
             </RelativeLayout>
 
             <RelativeLayout
                 android:id="@+id/project_content_type_rel_hall"
                 android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/project_content_tab1_showtime_rel"
-                android:layout_marginLeft="10dip"
-                android:layout_marginRight="10dip"
-                android:layout_marginTop="5dip"
-                android:background="@drawable/ic_setting_item_round_normal" >
+                android:layout_height="40dp"
+                android:layout_below="@+id/project_content_tab1_name_rel_2"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/preference_item" >
 
                 <TextView
                     android:id="@+id/project_content_goto_hall"
@@ -229,27 +275,29 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentLeft="true"
                     android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
                     android:clickable="true"
                     android:text="部落大厅"
-                    android:textColor="@color/black" />
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/size_18" />
 
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
                     android:layout_centerVertical="true"
-                    android:src="@drawable/arrow" />
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/next_icon" />
             </RelativeLayout>
-            
+
             <RelativeLayout
                 android:id="@+id/project_content_type_rel"
                 android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="40dp"
                 android:layout_below="@+id/project_content_type_rel_hall"
-                android:layout_marginLeft="10dip"
-                android:layout_marginRight="10dip"
-                android:layout_marginTop="5dip"
-                android:background="@drawable/ic_setting_item_round_normal" >
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/preference_item" >
 
                 <TextView
                     android:id="@+id/project_content_goto_pro_detail"
@@ -257,26 +305,29 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentLeft="true"
                     android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
                     android:clickable="true"
                     android:text="详情介绍"
-                    android:textColor="@color/black" />
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/size_18" />
 
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
                     android:layout_centerVertical="true"
-                    android:src="@drawable/arrow" />
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/next_icon" />
             </RelativeLayout>
 
             <RelativeLayout
                 android:id="@+id/project_content_renshuss_rel"
                 android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="40dp"
                 android:layout_below="@+id/project_content_type_rel"
-                android:layout_marginLeft="10dip"
-                android:layout_marginRight="10dip"
-                android:background="@drawable/ic_setting_item_round_normal" >
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/preference_item" >
 
                 <TextView
                     android:id="@+id/project_content_goto_videos"
@@ -284,26 +335,29 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentLeft="true"
                     android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
                     android:clickable="true"
                     android:text="宣传视频"
-                    android:textColor="@color/black" />
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/size_18" />
 
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
                     android:layout_centerVertical="true"
-                    android:src="@drawable/arrow" />
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/next_icon" />
             </RelativeLayout>
 
             <RelativeLayout
                 android:id="@+id/project_content_xiangmu_chengyuan_rel"
                 android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="40dp"
                 android:layout_below="@+id/project_content_renshuss_rel"
-                android:layout_marginLeft="10dip"
-                android:layout_marginRight="10dip"
-                android:background="@drawable/ic_setting_item_round_normal" >
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/preference_item" >
 
                 <TextView
                     android:id="@+id/project_content_goto_xiangmu_chengyuan"
@@ -311,26 +365,29 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentLeft="true"
                     android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
                     android:clickable="true"
                     android:text="项目成员"
-                    android:textColor="@color/black" />
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/size_18" />
 
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
                     android:layout_centerVertical="true"
-                    android:src="@drawable/arrow" />
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/next_icon" />
             </RelativeLayout>
 
             <RelativeLayout
                 android:id="@+id/project_content_type_rel_pro_product"
                 android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="40dp"
                 android:layout_below="@+id/project_content_xiangmu_chengyuan_rel"
-                android:layout_marginLeft="10dip"
-                android:layout_marginRight="10dip"
-                android:background="@drawable/ic_setting_item_round_normal" >
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/preference_item_last_rect" >
 
                 <TextView
                     android:id="@+id/project_content_goto_pro_product"
@@ -338,111 +395,142 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentLeft="true"
                     android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
                     android:clickable="true"
                     android:text="项目产品(未开始)"
-                    android:textColor="@color/black" />
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/size_18" />
 
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
                     android:layout_centerVertical="true"
-                    android:src="@drawable/arrow" />
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/next_icon" />
             </RelativeLayout>
-            
+
             <RelativeLayout
                 android:id="@+id/project_content_tab1_huibaofans_rel"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/project_content_type_rel_pro_product"
-                android:layout_marginLeft="10dip"
-                android:layout_marginRight="10dip"
-                android:layout_marginTop="10dip"
-                android:background="@drawable/ic_setting_item_round_normal" >
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="15dp" >
 
                 <LinearLayout
-                    android:id="@+id/project_content_tab1_huibao_lin1"
+                    android:id="@+id/temp_ll_fourth"
                     android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dip" >
+                    android:layout_height="40dp"
+                    android:layout_alignParentLeft="true"
+                    android:gravity="center" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="参与项目"
+                        android:textSize="@dimen/size_22" />
 
                     <TextView
                         android:id="@+id/project_content_tab1_huibao_lin1_money"
                         android:layout_width="fill_parent"
-                        android:layout_height="fill_parent"
-                        android:layout_weight="1.0"
-                        android:text="$10000"
-                        android:textColor="@color/black" />
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="￥1000.0"
+                        android:textColor="@color/color_18af8e"
+                        android:textSize="@dimen/size_22" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/temp_ll_fifth"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_below="@id/temp_ll_fourth"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:text="预计回报时间"
+                        android:textSize="@dimen/size_22" />
 
                     <TextView
                         android:id="@+id/project_content_tab1_huibao_lin1_time"
                         android:layout_width="fill_parent"
-                        android:layout_height="fill_parent"
-                        android:layout_weight="1.0"
-                        android:text="预计回报时间：60天"
-                        android:textColor="@color/black" />
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="365天"
+                        android:textColor="@color/color_444a4d"
+                        android:textSize="@dimen/size_22" />
                 </LinearLayout>
 
                 <LinearLayout
-                    android:id="@+id/project_content_tab1ss_lin2"
+                    android:id="@+id/temp_ll_sixth"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/project_content_tab1_huibao_lin1"
-                    android:layout_marginTop="10dip" >
+                    android:layout_below="@id/temp_ll_fifth"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center" >
 
                     <TextView
                         android:id="@+id/project_content_tab1_huibao_lin1_content"
                         android:layout_width="fill_parent"
-                        android:layout_height="50dip"
-                        android:layout_weight="1.0"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
                         android:text="回报内容：能得到一堆东西啊一堆东西啊一堆东西啊一堆东西啊一堆东西啊一堆东西啊一堆东西啊一堆东西啊一堆东西啊一堆东西啊一堆东西啊一堆东西啊一堆东西啊一堆东西啊一堆东西啊"
-                        android:textColor="@color/black" />
+                        android:textSize="@dimen/size_14" />
                 </LinearLayout>
 
                 <LinearLayout
-                    android:id="@+id/project_content_pro_pro"
+                    android:id="@+id/temp_ll_seven"
                     android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/project_content_tab1ss_lin2"
-                    android:layout_marginBottom="10dip"
-                    android:layout_marginTop="10dip" >
+                    android:layout_height="40dp"
+                    android:layout_below="@id/temp_ll_sixth"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center" >
 
                     <TextView
                         android:id="@+id/project_content_tab1_huibao_lin1_pre_buy"
                         android:layout_width="fill_parent"
-                        android:layout_height="fill_parent"
-                        android:layout_weight="1.0"
-                        android:text="已购19人/不限定名额"
-                        android:textColor="@color/black" />
-
-                    <TextView
-                        android:id="@+id/project_content_tab1_huibao_baoyou"
-                        android:layout_width="fill_parent"
-                        android:layout_height="fill_parent"
-                        android:layout_weight="1.0"
-                        android:text="包快递（大陆地区）"
-                        android:textColor="@color/black" />
+                        android:layout_height="wrap_content"
+                        android:text="已参与19人/人数上限30人"
+                        android:textSize="@dimen/size_18" />
                 </LinearLayout>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="1dip"
-                    android:layout_below="@+id/project_content_pro_pro" />
             </RelativeLayout>
 
             <Button
-                android:id="@+id/project_content_button_but"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:id="@+id/project_content_button_no_join"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
                 android:layout_alignParentRight="true"
                 android:layout_below="@+id/project_content_tab1_huibaofans_rel"
-                android:layout_marginBottom="10dip"
-                android:layout_marginRight="10dip"
-                android:layout_marginTop="10dip"
-                android:background="@color/red"
-                android:text="立即参股" />
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/common_back"
+                android:textSize="@dimen/size_20"
+                android:textColor="@color/color_444a4d"
+                android:text="立即参与" />
+            
+            <Button
+                android:id="@+id/project_content_button_yes_join"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/project_content_button_no_join"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/common_btn"
+                android:textSize="@dimen/size_20"
+                android:textColor="@color/color_444a4d"
+                android:text="我已参与" />
+            
         </RelativeLayout>
     </ScrollView>
 
-    
 </RelativeLayout>

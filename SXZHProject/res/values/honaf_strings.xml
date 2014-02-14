@@ -49,5 +49,8 @@
     <string name="receive_time_hint">次日到账</string>
     <string name="pay_password_hint">支付密码</string>
     <string name="cashout_btn">确认提现</string>
-
+    <string name="projectinfo">项目信息</string>
+    <string name="orderinfo">预购信息</string>
+    <string name="contactway">联系方式</string>
+	<string name="add_image">添加图片</string>
 </resources>

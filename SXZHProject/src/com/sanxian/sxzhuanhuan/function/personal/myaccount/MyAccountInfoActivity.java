@@ -29,12 +29,13 @@ import com.sanxian.sxzhuanhuan.util.Util;
 public class MyAccountInfoActivity extends BaseActivity implements OnClickListener{
 	/*修改密码，实名验证，手机验证，邮箱验证，个人地址管理，设置支付密码*/
 	private RelativeLayout set_passw_layout,certify_name_layout,certify_phone_layout,certify_email_layout,preson_address_layout,set_pay_passw_layout;
-	private TextView phone_number,email_number,certify_number;//手机号码，邮箱
+	private TextView phone_number,email_number,certify_number,certify_phone_table,certify_email_table,certify_table;//手机号码，邮箱,实名认证;已绑定（手机号码，邮箱,实名认证）标签
 	private String email = "";
 	private final int REQUESTCODE = 10;
 	private final int RESULTCODE = 15;
 	private CommonAPI api = null;
 	private final int GETACCOUNTINFO = 22;
+	private boolean is_set_paypw = false;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
@@ -50,7 +51,7 @@ public class MyAccountInfoActivity extends BaseActivity implements OnClickListen
 		// TODO Auto-generated method stub
 		super.initView();
 		displayRight();
-		setTitle("我的账号");
+		setTitle("账号设置");
 		
 		set_passw_layout = (RelativeLayout)findViewById(R.id.set_passw_layout);
 		certify_name_layout = (RelativeLayout)findViewById(R.id.certify_name_layout);
@@ -61,6 +62,9 @@ public class MyAccountInfoActivity extends BaseActivity implements OnClickListen
 		certify_number = (TextView)findViewById(R.id.certify_number);
 		phone_number = (TextView)findViewById(R.id.phone_number);
 		email_number = (TextView)findViewById(R.id.email_number);
+		certify_phone_table = (TextView)findViewById(R.id.certify_phone_table);
+		certify_email_table = (TextView)findViewById(R.id.certify_email_table);
+		certify_table = (TextView)findViewById(R.id.certify_table);
 		
 	}
 	
@@ -121,6 +125,12 @@ public class MyAccountInfoActivity extends BaseActivity implements OnClickListen
 						String id_card = object.optString("id_card");
 						email = object.optString("email");
 						String mobile = object.optString("mobile");
+						String isset_paypwd = object.optString("isset_paypwd");
+						if("0".equals(isset_paypwd)){
+							is_set_paypw = false;
+						}else if("1".equals(isset_paypwd)){
+							is_set_paypw = true;
+						}
 						
 						if("null".equals(id_card)){
 							id_card = "";
@@ -133,12 +143,15 @@ public class MyAccountInfoActivity extends BaseActivity implements OnClickListen
 						}
 						if(mobile.length() > 0){
 							phone_number.setText(mobile.replace(mobile.subSequence(3,7), "XXXX"));
+							certify_phone_table.setText("已绑定手机号    ");
 						}
 						if(email.length() > 0){
 							email_number.setText(email.replace(email.subSequence(3,7), "XXXX"));
+							certify_email_table.setText("已绑定邮箱        ");
 						}
 					    if(id_card.length() > 0){
 					    	certify_number.setText(id_card.replace(id_card.subSequence(3,14), "XXXXXXXXXXX"));
+					    	certify_table.setText("已认证身份证号");
 					    }
 					}else if(status == 1001){
 						Intent intent = new Intent(this, LoginActivity.class);
@@ -178,10 +191,13 @@ public class MyAccountInfoActivity extends BaseActivity implements OnClickListen
 			startActivityForResult(bindphone, REQUESTCODE);
 			break;
 		case R.id.certify_email_layout:
-			if(email.length() == 0){
 			Intent bindemail = new Intent(MyAccountInfoActivity.this,MyAccoBindEmailActivity.class);
-			startActivity(bindemail);
+			if(email.length() == 0){
+			bindemail.putExtra("type","bind");
+			}else{
+			bindemail.putExtra("type","modify");
 			}
+			startActivity(bindemail);	
 			break;
 		case R.id.preson_address_layout:
 			Intent address = new Intent(MyAccountInfoActivity.this,MyAccoAddressIndexActivity.class);
@@ -190,6 +206,7 @@ public class MyAccountInfoActivity extends BaseActivity implements OnClickListen
 			break;
 		case R.id.set_pay_passw_layout:
 			Intent setpaypw = new Intent(MyAccountInfoActivity.this,MyAccoSetPayPWActivity.class);
+			setpaypw.putExtra("is_set_paypw",is_set_paypw);
 			startActivity(setpaypw);
 			break;
 		default:
@@ -205,6 +222,9 @@ public class MyAccountInfoActivity extends BaseActivity implements OnClickListen
 			SharedPreferences spf = getSharedPreferences("login_user", 0) ;
 			String mobile = spf.getString("mobile","");
 			phone_number.setText(mobile.replace(mobile.subSequence(3,7), "XXXX"));
+			
+		}else if(resultCode == Constant.RESULT_LOGIN_CODE){
+			initData();
 		}
 	}
 

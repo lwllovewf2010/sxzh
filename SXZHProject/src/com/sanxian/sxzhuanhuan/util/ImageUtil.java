@@ -5,8 +5,10 @@ import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileOutputStream;
 
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.net.Uri;
 import android.os.Environment;
 
 /**
@@ -79,5 +81,27 @@ public class ImageUtil {
 			e.printStackTrace();
 		}
 		return bitmap;
+	}
+	
+	/**
+	 * 裁剪图片方法实现
+	 * 
+	 * @param uri
+	 */
+	public Intent startPhotoZoom(Uri uri) {
+
+		Intent intent = new Intent("com.android.camera.action.CROP");
+		intent.setDataAndType(uri, "image/*");
+		// 设置裁剪
+		intent.putExtra("crop", "true");
+		// aspectX aspectY 是宽高的比例
+		intent.putExtra("aspectX", 1);
+		intent.putExtra("aspectY", 1);
+		// outputX outputY 是裁剪图片宽高
+		intent.putExtra("outputX", 320);
+		intent.putExtra("outputY", 320);
+		intent.putExtra("return-data", true);
+		return intent;
+//		startActivityForResult(intent, RESULT_REQUEST_CODE);
 	}
 }

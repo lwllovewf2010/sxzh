@@ -14,7 +14,8 @@
     <TextView
         android:id="@+id/sort_category_item_content"
         android:layout_width="fill_parent"
-        android:layout_height="30dp" />
+        android:text="asdf"
+        android:layout_height="wrap_content" />
 
     <View
         android:layout_width="7px"

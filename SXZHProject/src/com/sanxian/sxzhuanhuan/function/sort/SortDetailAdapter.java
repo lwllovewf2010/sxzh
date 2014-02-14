@@ -12,6 +12,7 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.sanxian.sxzhuanhuan.R;
+import com.sanxian.sxzhuanhuan.common.CustomProgress;
 import com.sanxian.sxzhuanhuan.entity.MetaData;
 
 /**   
@@ -88,16 +89,19 @@ public class SortDetailAdapter extends BaseAdapter {
 		holder.tvName = (TextView) convertView.findViewById(R.id.sort_detail_item_list_top_content) ;
 		holder.ivLogo = (ImageView) convertView.findViewById(R.id.sort_detail_item_list_image) ;
 		holder.tvProfile = (TextView) convertView.findViewById(R.id.sort_detail_item_list_right_text) ;
-		holder.ivProgress = (ProgressBar) convertView.findViewById(R.id.sort_detail_item_progressBar) ;
+//		holder.ivProgress = (ProgressBar) convertView.findViewById(R.id.sort_detail_item_progressBar) ;
 		
-		holder.ivParticipate = (ImageView) convertView.findViewById(R.id.sort_detail_item_ivParticipate) ;
-		holder.tvParticipate = (TextView) convertView.findViewById(R.id.sort_detail_item_tvParticipate) ;
-		holder.ivDiscuss = (ImageView) convertView.findViewById(R.id.sort_detail_item_ivDiscuss) ;
-		holder.tvDiscuss = (TextView) convertView.findViewById(R.id.sort_detail_item_tvDiscuss) ;
-		holder.ivDays = (ImageView) convertView.findViewById(R.id.sort_detail_item_ivDays) ;
-		holder.tvDays = (TextView) convertView.findViewById(R.id.sort_detail_item_tvDays) ;
-		holder.ivMoney = (ImageView) convertView.findViewById(R.id.sort_detail_item_ivMoney) ;
-		holder.tvMoney = (TextView) convertView.findViewById(R.id.sort_detail_item_tvMoney) ;
+		holder.ivProgress = (CustomProgress) convertView
+				.findViewById(R.id.sort_detail_item_progressBar);
+
+		holder.tvCurMoney = (TextView) convertView
+				.findViewById(R.id.sort_detail_item_cur_money);
+		holder.tvJoinPerson = (TextView) convertView
+				.findViewById(R.id.sort_detail_item_person_join);
+		holder.tvAllMoney = (TextView) convertView
+				.findViewById(R.id.sort_detail_item_all_money);
+		holder.tvShenTime = (TextView) convertView
+				.findViewById(R.id.sort_detail_item_shen_time);
 		
 	}
 	
@@ -118,20 +122,19 @@ public class SortDetailAdapter extends BaseAdapter {
 	}
 
 	class ViewHolder {
-		public TextView tvName ;
-		public ImageView ivLogo ;
-		public TextView tvProfile ;
-		public ProgressBar ivProgress ;
+		public TextView tvName;
+		public ImageView ivLogo;
+		public TextView tvProfile;
+//		public ProgressBar ivProgress;
+		public CustomProgress ivProgress ;
+
+		public TextView tvCurMoney;
+		public TextView tvJoinPerson;
+		public TextView tvAllMoney;
+		public TextView tvShenTime;
 		
-		public ImageView ivParticipate ;
-		public TextView tvParticipate ;
-		public ImageView ivDiscuss ;
-		public TextView tvDiscuss ;
-		public ImageView ivDays ; 
-		public TextView tvDays ;
-		public ImageView ivMoney ;
-		public TextView tvMoney ;
-		
+		public String project_id ; 
 	}
+
 	
 }

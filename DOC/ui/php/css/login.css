@@ -328,6 +328,7 @@ a#get-yzm:hover,a.btn-gray:hover{
 	-webkit-border-radius:0;
 	-moz-border-radius:0;
 	padding:4px 105px;
+	*padding:2px 62px;
 }
 .li-separat{
 	margin-top:70px;
@@ -341,6 +342,7 @@ a#get-yzm:hover,a.btn-gray:hover{
 p.notice{
 	font-size:14px;
 	margin-top:50px;
+	margin-bottom:20px;
 }
 .div-success .btns{
 	margin-top:30px;

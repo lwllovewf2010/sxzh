@@ -14,6 +14,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 
+import com.sanxian.sxzhuanhuan.MainActivity;
 import com.sanxian.sxzhuanhuan.R;
 import com.sanxian.sxzhuanhuan.SApplication;
 import com.sanxian.sxzhuanhuan.api.CommonAPI;
@@ -143,7 +144,6 @@ public class SetIndexActiVity extends BaseActivity implements OnClickListener{
 			Util.toastInfo(this, "帮助");
 			break;
 		case R.id.exit_btn:
-			Util.toastInfo(this, "退出");
 			clearUserData() ;
 			
 //			SApplication.getInstance().exit() ; //
@@ -199,10 +199,13 @@ public class SetIndexActiVity extends BaseActivity implements OnClickListener{
 				XmppUtils.getInstance().closeConn();
 				Intent intent = new Intent(this, XmppService.class);
 				stopService(intent);
+//				MainActivity.finish();
+				
 				for (Activity activity : app.getAllActivity()) {                           
 		              activity.finish();
 		          }
 				SetIndexActiVity.this.finish();
+				System.exit(0);
 			} else if (resultCode == DialogConstant.MIDDLE_CANCEL) {
 			}
 		}

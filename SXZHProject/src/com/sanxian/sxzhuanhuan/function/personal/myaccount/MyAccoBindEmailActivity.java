@@ -14,6 +14,8 @@ import android.text.TextWatcher;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import com.sanxian.sxzhuanhuan.R;
 import com.sanxian.sxzhuanhuan.api.CommonAPI;
@@ -27,11 +29,13 @@ import com.sanxian.sxzhuanhuan.util.Util;
  *
  */
 public class MyAccoBindEmailActivity extends BaseActivity {
-    private EditText input_email;
+	private TextView new_email_table;
+    private EditText input_old_email,input_new_email;
+    private LinearLayout old_email_layout;
+    private String type = "";
     private Button send_link_btn;
     private CommonAPI api = null;
     private final int BIND_EMAIL = 20;
-    private final int RESULTCODE = 15;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -48,8 +52,17 @@ public class MyAccoBindEmailActivity extends BaseActivity {
 		super.initView();
 		displayRight();
 		setTitle("绑定邮箱");
-		input_email = (EditText)findViewById(R.id.input_email);
+		old_email_layout = (LinearLayout)findViewById(R.id.old_email_layout);
+		new_email_table = (TextView)findViewById(R.id.input_new_email_table);
+		input_old_email = (EditText)findViewById(R.id.input_old_email);
+		input_new_email = (EditText)findViewById(R.id.input_new_email);
 		send_link_btn = (Button)findViewById(R.id.send_link_btn);
+		type = getIntent().getStringExtra("type");
+		if("modify".equals(type)){
+			old_email_layout.setVisibility(View.VISIBLE);
+			new_email_table.setText("请输入新的电子邮箱");
+			input_new_email.setHint("请输入新的电子邮箱");
+		}
 	}
 
 	@Override
@@ -58,7 +71,7 @@ public class MyAccoBindEmailActivity extends BaseActivity {
 		super.initListener();
 		button_left.setOnClickListener(this);
 		send_link_btn.setOnClickListener(this);
-		input_email.addTextChangedListener(new input());
+		input_new_email.addTextChangedListener(new input());
 	}
 
 	@Override
@@ -74,13 +87,26 @@ public class MyAccoBindEmailActivity extends BaseActivity {
 					JSONObject json = new JSONObject(data);
 					int status = json.optInt("ret");
 					if(status == 1){
-						Util.toastInfo(this, "邮箱验证链接已发送，赶快去验证吧");
-						finish();
+						if("modify".equals("type")){
+							Util.toastInfo(this, "修改邮箱失败");
+						}else if("bind".equals(type)){
+							Util.toastInfo(this, "邮箱验证链接已发送，赶快去验证吧");
+							finish();
+						}
 					}else if(status == 1001){
 						Intent intent = new Intent(this, LoginActivity.class);
 						startActivityForResult(intent,Constant.REQUEST_LOGIN_CODE);
 					}else{
-						Util.toastInfo(this, "绑定邮箱失败");
+						if("modify".equals(type)){
+							if(status == 0){
+								Util.toastInfo(this, "新邮箱验证链接已发送，赶快去验证吧");
+								finish();
+							}else{
+								Util.toastInfo(this, "修改邮箱失败");
+							}
+						}else if("bind".equals(type)){
+							Util.toastInfo(this, "绑定邮箱失败");
+						}
 					}
 				} catch (JSONException e) {
 					// TODO Auto-generated catch block
@@ -104,33 +130,75 @@ public class MyAccoBindEmailActivity extends BaseActivity {
 			finish();
 			break;
         case R.id.send_link_btn:
-        	String email = input_email.getText().toString().trim();
-        	if(email.length() > 0){
-        		if(Util.isEmail(email)){
-        			SharedPreferences spf = this.getSharedPreferences("login_user", 0) ;
-        			String open_id = spf.getString("open_id","");
-        			String token = spf.getString("token","");
-        			String user_name = spf.getString("user_name","");
-        			if("".equals(open_id)|| "".equals(token)){
-        				Intent intent = new Intent(this, LoginActivity.class);
-        				startActivityForResult(intent,Constant.REQUEST_LOGIN_CODE);
-        			}else{
-        			if(api == null){
-        				api = new CommonAPI();
-        			}
-        			Map<String,String> paramsmap = new HashMap<String, String>();
-        			paramsmap.put("open_id",open_id);
-        			paramsmap.put("token",token);
-        			paramsmap.put("email",email);
-        			paramsmap.put("user_name",user_name);
-        			api.getVerifyCodeOrBind("binding_email", paramsmap, this, BIND_EMAIL);
-        			}
-        		}else{
-        			Util.toastInfo(this, "邮箱格式不正确");
-        		}
-        	}else{
-        		Util.toastInfo(this, "请输入要绑定的邮箱");
+        	if("bind".equals(type)){//绑定邮箱
+            	String email = input_new_email.getText().toString().trim();
+            	if(email.length() > 0){
+            		if(Util.isEmail(email)){
+            			SharedPreferences spf = this.getSharedPreferences("login_user", 0) ;
+            			String open_id = spf.getString("open_id","");
+            			String token = spf.getString("token","");
+            			String user_name = spf.getString("user_name","");
+            			if("".equals(open_id)|| "".equals(token)){
+            				Intent intent = new Intent(this, LoginActivity.class);
+            				startActivityForResult(intent,Constant.REQUEST_LOGIN_CODE);
+            			}else{
+            			if(api == null){
+            				api = new CommonAPI();
+            			}
+            			Map<String,String> paramsmap = new HashMap<String, String>();
+            			paramsmap.put("open_id",open_id);
+            			paramsmap.put("token",token);
+            			paramsmap.put("email",email);
+            			paramsmap.put("user_name",user_name);
+            			api.getVerifyCodeOrBind("binding_email", paramsmap, this, BIND_EMAIL);
+            			}
+            		}else{
+            			Util.toastInfo(this, "邮箱格式不正确");
+            		}
+            	}else{
+            		Util.toastInfo(this, "请输入要绑定的邮箱");
+            	}	
+        	}else if("modify".equals(type)){  //修改邮箱
+        		String old_email = input_old_email.getText().toString().trim();
+        		if(old_email.length() > 0){
+            		if(Util.isEmail(old_email)){
+            			String new_email = input_new_email.getText().toString().trim();
+            			if(new_email.length() > 0){
+                    		if(Util.isEmail(new_email)){
+                    			SharedPreferences spf = this.getSharedPreferences("login_user", 0) ;
+                    			String open_id = spf.getString("open_id","");
+                    			String token = spf.getString("token","");
+                    			String user_name = spf.getString("user_name","");
+                    			if("".equals(open_id)|| "".equals(token)){
+                    				Intent intent = new Intent(this, LoginActivity.class);
+                    				startActivityForResult(intent,Constant.REQUEST_LOGIN_CODE);
+                    			}else{
+                    				if(api == null){
+                        				api = new CommonAPI();
+                        			}
+                        			Map<String,String> paramsmap = new HashMap<String, String>();
+                        			paramsmap.put("open_id",open_id);
+                        			paramsmap.put("token",token);
+                        			paramsmap.put("old_email",old_email);
+                        			paramsmap.put("new_email",new_email);
+                        			paramsmap.put("user_name",user_name);
+                        			paramsmap.put("from","mobile");
+                        			api.getVerifyCodeOrBind("get_edit_email", paramsmap, this, BIND_EMAIL);
+                    			}
+                    			}else{
+                    				Util.toastInfo(this, "新的邮箱格式不正确");
+                    			}
+                    		}else{
+                    			Util.toastInfo(this, "请输入新的邮箱");	
+                    		}
+            			}else{
+            				Util.toastInfo(this, "之前的邮箱格式不正确");
+            			}
+            		}else{
+            			Util.toastInfo(this, "请输入之前绑定的邮箱");
+            		}
         	}
+
 			break;
 		default:
 			break;

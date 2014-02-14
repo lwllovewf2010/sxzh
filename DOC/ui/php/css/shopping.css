@@ -1,0 +1,581 @@
+#my-home.main-fff{
+	background:#fff;
+}
+/* 步骤 */
+#do-step{
+	margin-bottom: 25px;
+	margin-top:15px;
+}
+.shop-step .step{
+  width: 19.9%;
+  height: 50px;
+  line-height: 50px;
+}
+#do-step .step.active{
+	color: #fff;
+}
+.step-2{
+	background:url(../images/Step5-2.png) 0 0 no-repeat;
+}
+.step-3{
+	background:url(../images/Step5-3.png) 0 0 no-repeat;
+}
+.step-4{
+	background:url(../images/Step5-4.png) 0 0 no-repeat;
+}
+/* table-div-box 样式 */
+.table-div-box{
+	border: 1px solid #ddd; 
+	margin-bottom: 7px;
+	overflow:hidden;
+	position:relative;
+}
+.table-left-td{
+	background-color:#f4f4f4;
+	width: 130px;
+	text-align:center;
+}
+.table-left-td h2{
+	position:absolute;
+	width:130px;
+	top:50%;
+	text-align:center;
+	font-size:14px;
+	color:#24292c;
+	left:0;
+}
+.table-right-td{
+	margin-left:130px;
+	border-left:1px solid #ddd;
+}
+.table-td{
+	margin-bottom:-9999px;
+	padding-bottom:9999px;
+}
+.table-right-td{
+    margin-left: 130px;
+	border-left:1px solid #d1d1d1;
+}
+/* form input 样式 */
+#form-add{
+	margin-bottom:40px;
+	padding:40px 35px 0;
+}
+#address-show .table-right-td{
+	padding-left:35px;
+	padding-right:35px;
+	padding-top:20px;
+}
+.table-div-box input.txt-ip,#add-address input.txt-ip{
+	padding:4px;
+	width:130px;
+}
+.table-div-box .form-list li,#add-address .form-list li{
+	margin-bottom:15px;
+	line-height:24px;
+}
+.table-div-box input.txt-phone,#add-address input.txt-phone{
+	width:46px;
+}
+.table-div-box input#buy_phone2,#add-address input#buy_phone2{
+	width:104px;
+	margin:0 10px;
+}
+#add-address{
+	width:600px;
+}
+#add-address .form-list textarea{
+	width:420px;
+}
+.tip-text{
+	vertical-align:middle;
+	margin-left:15px;
+	color:#b4b4b4;
+}
+.table-td .btns .btn-sub,#add-address .btns .btn-sub{
+	margin:0 5px;
+}
+.table-right-td .table-box,.table-right-td .table-box th,.table-right-td .table-box td,.item-car th,.item-car td{
+	border:none;
+}
+.table-right-td .table-box td,.item-car td{
+	border-right:1px solid #ddd;
+}
+.table-right-td .table-box td.last-td{
+	border-right:none;
+}
+.table-right-td .table-box td.last-td em{
+	color:#ff6600;
+}
+#form-submit .form-list{
+	border-top:1px solid #ddd;
+	margin-top:20px;
+	padding-top:20px;
+}
+#form-submit .form-list label{
+	color:#24292c;
+	font-size:12px;
+}
+#form-submit .invoice-list{
+	border-top:none;
+	margin-top:0;
+	padding-top:0;
+}
+#form-submit .invoice-list label{
+	color:#828282;
+}
+#form-add .form-list,#form-submit .form-list{
+	*margin-bottom:20px;
+}
+#sole_message,#company_name{
+	width:335px;
+	padding:5px;
+}
+#company_name{
+	margin-left:10px;
+}
+.product-info{
+	padding-left:20px;
+}
+.product-info img{
+	margin-right:10px;
+	width:64px;
+	height:64px;
+}
+.product-name{
+	text-align:left;
+	color:#3277b1;
+	text-decoration:underline;
+	width:120px;
+}
+.table-box .prd-num-select input{
+	margin-top:6px;
+}
+.table-box .btn-btn{
+	font-size:14px;
+	padding:2px 10px;
+	margin-top:20px;
+}
+#form-submit td{
+	margin-top:20px;
+}
+.table-right-td .table-box td.space-td,.item-car td.space-td{
+	border:none;
+	height:10px;
+}
+.form-submit-box{
+	margin:50px 0;
+}
+.form-submit-box h2{
+	margin:15px 0;
+	font-size:15px;
+	color:#24292c;
+}
+.form-submit-box h2 em{
+	color:#ff6600;
+}
+.icon-submit,.icon-add,.icon-buy{
+	display:inline-block;
+	*display:inline;
+	zoom:1;
+	margin-right: 10px;
+    vertical-align: middle;
+}
+.icon-submit{
+	background:url(../images/tick.png) 0 0 no-repeat;
+	width:32px;
+	height:24px;
+}
+.icon-add{
+	background:url(../images/add.png) 0 0 no-repeat;
+	width:15px;
+	height:15px;
+}
+.icon-buy{
+	background:url("../images/account.png") 0 0 no-repeat;
+	width:38px;
+	height:27px;
+}
+.icon-right{
+	background:url(../images/tick_Green.png) 0 0 no-repeat;
+	width:32px;
+	height:24px;
+	margin: 10px 15px 0 0;
+}
+.form-submit-box .btn-sub-b{
+	padding:4px 42px;
+}
+/* 确认收货地址 */
+#address-show .address-list{
+	margin:20px 0;
+}
+#address-show .address-list li{
+	padding:10px;
+	margin:10px 0;
+	border:1px solid #fff;
+}
+#address-show .address-list li.active{
+	border:1px solid #ddd;
+	background-color:#f8f8f8;
+}
+.address-detail em,#address-show .address-list li .mr-status{
+	color:#b4b4b4;
+	margin:0 15px;
+}
+.address-list li .status{
+	color:#3277b1;
+}
+#address-show .address-list li .edit-address{
+	color:#3277b1;
+	margin-right:20px;
+}
+#address-show .address-list label{
+	width:50px;
+	display:inline-block;
+	*display:inline;
+	zoom:1;
+}
+.address-detail strong{
+	color:#24292c;
+}
+.btn-address,.address-save{
+	margin-bottom:40px;
+}
+.btn-address .btn-btn{
+	margin-left:60px;
+	background-color:#f0f0f0;
+	border-color:#f0f0f0;
+	border-radius:0;
+	-webkit-border-radius:0;
+	-moz-border-radius:0;
+	color:#828282;
+	font-size:15px;
+	font-weight:bold;
+	border:1px solid #ccc;
+}
+.address-save .btn-btn{
+	margin-left:10px;
+}
+.btn-invoice{
+	margin-left:35px;
+	margin-bottom:30px;
+}
+.no-invoice{
+	color:#FF6600;
+}
+/* 购物车 */
+table.item-car{
+	margin-bottom:8px;
+}
+td.td-buy{
+	text-align:right;
+	padding:20px 25px 20px 0;
+}
+td.td-buy a{
+	color:#ff6600;
+	margin-right:20px;
+	font-size:14px;
+	text-decoration:underline;
+	vertical-align: bottom;
+}
+.table-buy th,.table-buy th a{
+	color:#24292c;
+}
+table.table-buy{
+	margin-bottom:30px;
+}
+th.car-all{
+	text-align:right;
+	padding-right:25px;
+	font-size:15px;
+}
+th.car-all em{
+	color:#ff6600;
+}
+/* 选项卡 */
+#tabs{
+	border-bottom:1px solid #ddd;
+	border-left:1px solid #ddd;
+}
+#tabs li{
+	width:200px;
+	text-align:center;
+	height:40px;
+	line-height:40px;
+	border-top:1px solid #ddd;
+	border-right:1px solid #ddd;
+	background-color:#f8f8f8;
+}
+#tabs li a{
+	display:block;
+	font-size:14px;
+}
+#tabs li.active{
+	background-color:#fff;
+	font-weight:bold;
+}
+#tabs li.active a{
+	border-bottom:1px solid #fff;
+	margin-bottom:-1px;
+}
+.div-tabs{
+	border:1px solid #ddd;
+	border-top:none;
+	padding:20px 10px;
+	margin-bottom:150px;
+}
+.div-tabs li{
+	width:105px;
+	overflow:hidden;
+	margin:0 17px;
+}
+.div-tabs .div-img{
+	border:1px solid #666;
+}
+.div-tabs .div-img img{
+ display:block;
+ width:102px;
+ height:102px;
+}
+.div-tabs a{
+	margin:10px 0;
+	display:block;
+}
+.div-tabs h2{
+	color:#ff6600;
+	font-size:15px;
+	margin-bottom:10px;
+	text-align:center;
+}
+.div-tabs .btn-btn{
+	font-size:14px;
+	padding:4px 5px;
+}
+h3.title{
+	font-size:14px;
+	color:#24292c;
+	font-weight:bold;
+	margin:10px 0;
+}
+/* 购物车为空 */
+.div-status-box{
+	position:relative;
+	height:400px;
+}
+.div-status{
+	width:500px;
+	height:200px;
+	position:absolute;
+	top:50%;
+	left:50%;
+	margin:-100px 0 0 -250px;
+}
+.div-status .car-img{
+	margin-right:30px;
+}
+.div-status-text{
+	padding-top:10px;
+}
+.div-status-text h2{
+	color:#24292c;
+	font-weight:bold;
+	margin-bottom:40px;
+}
+.div-status-text p.p-item{
+	margin-bottom:10px;
+}
+.div-status-text a{
+	color:#3277b1;
+}
+.empty-car .div-tabs{
+	margin-bottom:30px;
+}
+.div-status-box .pay-success{
+	border:1px solid #ddd;
+	padding:35px;
+}
+.div-status-box .pay-success li{
+	border-left:1px solid #ddd;
+	padding-left:90px;
+}
+.div-status-box .pay-success li.first{
+	width:48%;
+	border-left:none;
+	height:150px;
+	padding-left:30px;
+}
+.div-status-box .pay-success a.btn-btn{
+	display:inline-block;
+	*display:inline;
+	zoom:1;
+}
+.div-status-box .pay-success h2{
+	margin-bottom:15px;
+	color:#24292c;
+	font-weight:bold;
+}
+.div-status-box .pay-success h2 em,.div-status-box .pay-success p em{
+	color:#ff6600;
+}
+.div-status-box .pay-success p{
+	margin-bottom:15px;
+}
+.pay-home .div-status-box{
+	margin-top:80px;
+}
+/* 支付css */
+#pay-table{
+	border-top: 2px solid #8BCF36;
+    margin-bottom: 20px;
+    padding-top: 6px;
+}
+#pay-table .li-1{
+	width: 295px;
+}
+#pay-table .li-2{
+	width:240px;
+}
+#pay-table .li-3{
+	width:215px;
+}
+#pay-table li.li-li{
+	border-right: 1px solid #8BCF36;
+    color: #24292C;
+    float: left;
+    height: 50px;
+    padding-left: 20px;
+    padding-top: 10px;
+}
+#pay-table .li-1 h2{
+	margin-bottom:10px;
+}
+#pay-table .li-3 p{
+	line-height:35px;
+}
+#pay-table .li-4{
+	padding-left: 60px;
+    padding-top: 10px;
+}
+#pay-main strong{
+	color:#ff6600;
+	font-size:16px;
+	font-weight:normal;
+}
+#pay-table .li-drop{
+	position:relative;
+}
+#pay-table .li-drop.active a.nav-a{
+	border-color:#ddd;
+	border-bottom:1px solid #fff;
+}
+#pay-table a.nav-a{
+	border:none;
+	display:block;
+	height:34px;
+	line-height:34px;
+	border:1px solid #fff;
+	position:relative;
+	z-index:10;
+	background:#fff;
+	color:#8bcf36;
+}
+/* 第三方支付 */
+i.third,i.online{
+	background:url("../images/ZhiFu.png") 0 0 no-repeat;
+	display: inline-block;
+	*display:inline;
+	zoom:1;
+    height: 47px;
+    vertical-align: middle;
+    width: 113px;
+	margin-left:10px;
+}
+i.third.zfb{
+	background-position: -40px -55px;
+}
+i.third.cft{
+	background-position: -240px -55px;
+}
+li.li-third label,li.li-bank label{
+	border:1px solid #ddd;
+	display:inline-block;
+	*display:inline;
+	zoom:1;
+	margin-right:20px;
+	padding-left:10px;
+}
+li.li-third label.active,li.li-bank label.active{
+	border:1px solid #8BCF36;
+}
+li.li-bank label{
+	margin-bottom:20px;
+}
+.ul-slide li.li-bank{
+	margin-bottom:0;
+	border-top:1px solid #ccc;
+	padding-top:30px;
+	margin-top:30px;
+}
+i.online{
+	background:url("../images/bank.png") 0 0 no-repeat;
+}
+i.online.abc{
+	background-position: -660px -10px;
+}
+i.online.cb{
+	background-position: -495px -65px;
+}
+i.online.icbc{
+	background-position: -140px -50px;
+}
+
+.ul-slide .pay-method{
+	width:650px;
+	float:left;
+	display:inline;
+}
+.li-third p.pay-title,.li-bank p.pay-title{
+	line-height:45px;
+	width:96px;
+	margin-right:20px;
+}
+p.p-tip{
+	color:#b4b4b4;
+}
+#pay-main .filter-slide-span{
+	margin-top:30px;
+	display:block;
+	color:#24292c;
+	font-size:14px;
+	font-weight:bold;
+}
+#pay-main h3.title{
+	border-top:1px solid #ddd;
+	padding-top:20px;
+}
+#pay-main h3.title span{
+	font-size:12px;
+	color:#828282;
+	font-weight:normal;
+}
+.ul-slide li{
+	margin:20px 0;
+}
+#form-pay .btns{
+	margin-top:30px;
+	margin-bottom:20px;
+}
+input#pay_pwd{
+	padding:4px;
+	width:200px;
+}
+.forget-pwd{
+	color:#3277b1;
+	margin-left:20px;
+}
+.filter-slide-box,.invoice-list{
+	display:none;
+}
+#pay-main span.no-active{
+	color:#b4b4b4;
+}

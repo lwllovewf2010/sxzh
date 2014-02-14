@@ -2,29 +2,30 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:orientation="vertical"
-     android:background="@color/white"  >
+    android:orientation="vertical" 
+    android:background="@color/bg_color" >
 <include layout="@layout/title_bar"/>
 
 <LinearLayout
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical" >
-
+    android:orientation="vertical"
+    android:layout_marginTop="30dip" 
+    >
+    <View
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:background="@color/line_color" />
     <RelativeLayout
         android:id="@+id/set_passw_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" 
-        android:paddingLeft="5dip"
-        android:paddingRight="10dip"
-        android:paddingTop="15dip"
-        android:paddingBottom="15dip"
-        android:background="@drawable/my_account_item_selector">
+        style="@style/preson_index_itemColor">
         <ImageView
             android:id="@+id/icon_img_1"             
-            android:layout_width="25dip"
-            android:layout_height="25dip"
-            android:background="@drawable/ic_launcher" 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/modify_login_pw" 
             android:layout_centerVertical="true"
             />
           <ImageView
@@ -42,8 +43,7 @@
             android:layout_toLeftOf="@id/arrow1"
             android:text="@string/set_passw_table"
             android:layout_centerVertical="true"
-            android:textSize="18sp"
-            android:textColor="@color/black"
+            style="@style/myaccount_textColor"
             android:layout_marginLeft="5dip"
             android:layout_marginRight="5dip"
             />
@@ -51,7 +51,7 @@
     </RelativeLayout>
     <View
          android:layout_width="fill_parent"
-         android:layout_height="1sp"
+         android:layout_height="1px"
          android:background="@color/line_color"
         />
     
@@ -59,16 +59,12 @@
         android:id="@+id/certify_name_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" 
-        android:paddingLeft="5dip"
-        android:paddingRight="10dip"
-        android:paddingTop="15dip"
-        android:paddingBottom="15dip"
-        android:background="@drawable/my_account_item_selector">
+        style="@style/preson_index_itemColor">
         <ImageView
             android:id="@+id/icon_img_2"             
-            android:layout_width="25dip"
-            android:layout_height="25dip"
-            android:background="@drawable/ic_launcher" 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/id_card_certify" 
             android:layout_centerVertical="true"
             android:layout_marginRight="5dip"
             />
@@ -79,8 +75,7 @@
             android:layout_toRightOf="@+id/icon_img_2"
             android:text="@string/certify_name_table"
             android:layout_centerVertical="true"
-            android:textSize="18sp"
-            android:textColor="@color/black"
+            style="@style/myaccount_textColor"
             />
          <TextView
             android:id="@+id/certify_number"  
@@ -90,9 +85,9 @@
             android:layout_toLeftOf="@+id/arrow2"
             android:text=""
             android:layout_centerVertical="true"
-            android:layout_marginLeft="5dip"
             android:layout_marginRight="5dip"
-            android:textSize="18sp"
+            android:layout_marginLeft="10dip"
+            style="@style/myaccount_number_text"
             android:singleLine="true"
             />
          <ImageView
@@ -107,7 +102,7 @@
     </RelativeLayout>
     <View
          android:layout_width="fill_parent"
-         android:layout_height="1sp"
+         android:layout_height="1px"
          android:background="@color/line_color"
         />
     
@@ -115,16 +110,12 @@
         android:id="@+id/certify_phone_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" 
-        android:paddingLeft="5dip"
-        android:paddingRight="10dip"
-        android:paddingTop="15dip"
-        android:paddingBottom="15dip"
-        android:background="@drawable/my_account_item_selector">
+        style="@style/preson_index_itemColor">
         <ImageView
             android:id="@+id/icon_img_3"             
-            android:layout_width="25dip"
-            android:layout_height="25dip"
-            android:background="@drawable/ic_launcher" 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/phone_certify" 
             android:layout_centerVertical="true"
             android:layout_marginRight="5dip"
             />
@@ -135,8 +126,7 @@
             android:layout_toRightOf="@+id/icon_img_3"
             android:text="@string/certify_phone_table"
             android:layout_centerVertical="true"
-            android:textSize="18sp"
-            android:textColor="@color/black"
+            style="@style/myaccount_textColor"
             />
          <TextView
             android:id="@+id/phone_number"  
@@ -146,10 +136,9 @@
             android:layout_toLeftOf="@+id/arrow3"
             android:text=""
             android:layout_centerVertical="true"
-            android:layout_marginLeft="5dip"
             android:layout_marginRight="5dip"
-            android:textSize="18sp"
-            android:textColor="@color/black"
+            android:layout_marginLeft="10dip"
+            style="@style/myaccount_number_text"
             android:singleLine="true"
             />
          <ImageView
@@ -164,23 +153,19 @@
     </RelativeLayout>
     <View
          android:layout_width="fill_parent"
-         android:layout_height="1sp"
+         android:layout_height="1px"
          android:background="@color/line_color"
         />
       <RelativeLayout
         android:id="@+id/certify_email_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" 
-        android:paddingLeft="5dip"
-        android:paddingRight="10dip"
-        android:paddingTop="15dip"
-        android:paddingBottom="15dip"
-        android:background="@drawable/my_account_item_selector">
+        style="@style/preson_index_itemColor">
         <ImageView
             android:id="@+id/icon_img_4"             
-            android:layout_width="25dip"
-            android:layout_height="25dip"
-            android:background="@drawable/ic_launcher" 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/email_certify" 
             android:layout_centerVertical="true"
             android:layout_marginRight="5dip"
             />
@@ -191,8 +176,7 @@
             android:layout_toRightOf="@+id/icon_img_4"
             android:text="@string/certify_email_table"
             android:layout_centerVertical="true"
-            android:textSize="18sp"
-            android:textColor="@color/black"
+            style="@style/myaccount_textColor"
             />
          <TextView
             android:id="@+id/email_number"  
@@ -202,10 +186,9 @@
             android:layout_toLeftOf="@+id/arrow4"
             android:text=""
             android:layout_centerVertical="true"
-            android:layout_marginLeft="5dip"
             android:layout_marginRight="5dip"
-            android:textSize="18sp"
-            android:textColor="@color/black"
+            android:layout_marginLeft="10dip"
+            style="@style/myaccount_number_text"
             android:singleLine="true"
             />
          <ImageView
@@ -220,23 +203,19 @@
     </RelativeLayout>
     <View
          android:layout_width="fill_parent"
-         android:layout_height="1sp"
+         android:layout_height="1px"
          android:background="@color/line_color"
         />
         <RelativeLayout
         android:id="@+id/preson_address_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" 
-        android:paddingLeft="5dip"
-        android:paddingRight="10dip"
-        android:paddingTop="15dip"
-        android:paddingBottom="15dip"
-        android:background="@drawable/my_account_item_selector">
+        style="@style/preson_index_itemColor">
         <ImageView
             android:id="@+id/icon_img_5"             
-            android:layout_width="25dip"
-            android:layout_height="25dip"
-            android:background="@drawable/ic_launcher" 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/person_address" 
             android:layout_centerVertical="true"
             />
           <ImageView
@@ -255,16 +234,15 @@
             android:layout_toLeftOf="@id/arrow5"
             android:text="@string/preson_addres_table"
             android:layout_centerVertical="true"
-            android:textSize="18sp"
             android:layout_marginLeft="5dip"
             android:layout_marginRight="5dip"
-            android:textColor="@color/black"
+            style="@style/myaccount_textColor"
             />
        
     </RelativeLayout>
     <View
          android:layout_width="fill_parent"
-         android:layout_height="1sp"
+         android:layout_height="1px"
          android:background="@color/line_color"
         />
     
@@ -272,16 +250,12 @@
         android:id="@+id/set_pay_passw_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" 
-        android:paddingLeft="5dip"
-        android:paddingRight="10dip"
-        android:paddingTop="15dip"
-        android:paddingBottom="15dip"
-        android:background="@drawable/my_account_item_selector">
+        style="@style/preson_index_itemColor">
         <ImageView
             android:id="@+id/icon_img_6"             
-            android:layout_width="25dip"
-            android:layout_height="25dip"
-            android:background="@drawable/ic_launcher" 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/set_pay_pw" 
             android:layout_centerVertical="true"
             />
           <ImageView
@@ -300,8 +274,7 @@
             android:layout_toLeftOf="@id/arrow6"
             android:text="@string/set_pay_passw_table"
             android:layout_centerVertical="true"
-            android:textSize="18sp"
-            android:textColor="@color/black"
+            style="@style/myaccount_textColor"
             android:layout_marginLeft="5dip"
             android:layout_marginRight="5dip"
             />
@@ -309,7 +282,7 @@
     </RelativeLayout>
     <View
          android:layout_width="fill_parent"
-         android:layout_height="1sp"
+         android:layout_height="1px"
          android:background="@color/line_color"
         />
 </LinearLayout>

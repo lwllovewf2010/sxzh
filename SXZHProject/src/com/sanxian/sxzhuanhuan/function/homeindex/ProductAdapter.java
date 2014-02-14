@@ -1,12 +1,8 @@
 package com.sanxian.sxzhuanhuan.function.homeindex;
 
 import java.util.ArrayList;
-import java.util.Map.Entry;
-
 import android.content.Context;
 import android.content.Intent;
-import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,7 +13,6 @@ import android.widget.TextView;
 
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import com.nostra13.universalimageloader.core.ImageLoader;
-import com.nostra13.universalimageloader.core.display.RoundedBitmapDisplayer;
 import com.sanxian.sxzhuanhuan.R;
 import com.sanxian.sxzhuanhuan.common.UIHelper;
 import com.sanxian.sxzhuanhuan.entity.MetaData;
@@ -95,8 +90,6 @@ public class ProductAdapter extends BaseAdapter implements OnClickListener{
 		}
 		
 		productInfo = (ProductInfo) infos.get(position) ;
-		Log.d("yuanqikai", "yuanqikai goodsID  1 = "+productInfo.getId());
-		System.out.println("------" + productInfo.getId());
 		holder.goodsID = productInfo.getId();
 		setData(holder , productInfo) ;
 		

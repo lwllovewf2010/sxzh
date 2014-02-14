@@ -73,19 +73,17 @@ hr {
     border: 0 none;
     height: 1px;
 }
-html {
-    overflow-y: scroll;
-}
-
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
     display: block;
 }
 
 .fl {
     float: left;
+	display:inline;
 }
 .fr {
     float: right;
+	display:inline;
 }
 .clearfix:after {
     clear: both;
@@ -98,3 +96,30 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 	zoom:1;
 }
 .hiden{display:none;}
+
+
+/* table 表格 */
+.table-box {
+    width: 100%;
+}
+.table-box th{
+	background-color:#f9f9f9;
+	height:35px;
+ }
+ .table-box td{
+	height:35px;
+ }
+.table-box, .table-box th, .table-box td {
+    border: 1px solid #ddd;
+}
+.table-box th, .table-box td {
+    padding: 5px;
+    text-align: center;
+    vertical-align: middle;
+}
+.table-box td.status{
+	color:#8bcf36;
+}
+.table-box em.status3{
+	color:#a9a9a9;
+}

@@ -94,20 +94,6 @@ i.icon7-5.active{
 .safe-s-box .safe-grade .shop-speed{
 	width:100px;
 }
-.form-div{
-	margin-left:100px;
-	padding-top:30px;
-}
-.form-div .form-list label{
-	width:145px;
-}
-.form-div input.txt-sort-ip{
-	text-align:left;
-	width:200px;
-}
-.form-div .btns{
-	margin-top:20px;
-}
 input.txt-sort{
 	width:60px;
 	text-align:center;
@@ -145,6 +131,16 @@ input.txt-sort{
 .bottom-div a.btn-btn{
 	margin-left:10px;
 }
+.success-tip,.wrong-tip{
+	background:url(../images/right.png) 0 0px no-repeat;
+	padding-left:40px;
+	height:30px;
+	line-height:30px;
+	color:#444444;
+}
+.wrong-tip{
+	background-image:url(../images/wrong.png);
+}
 .explain-div{
 	margin-top:30px;
 	padding-left:40px;
@@ -158,16 +154,6 @@ input.txt-sort{
 }
 .explain-div .safe-grade{
 	margin-bottom:10px;
-}
-.success-tip,.wrong-tip{
-	background:url(../images/right.png) 0 0px no-repeat;
-	padding-left:40px;
-	height:30px;
-	line-height:30px;
-	color:#444444;
-}
-.wrong-tip{
-	background-image:url(../images/wrong.png);
 }
 .other-div{
 	font-size:14px;
@@ -237,32 +223,8 @@ h2.h2-long:after{
 .chose-div li.active{
 	color:#8bcf36;
 }
-.table-box {
-    width: 100%;
-}
-.table-box th{
-	background-color:#f9f9f9;
-	height:35px;
- }
- .table-box td{
-	height:35px;
- }
-.table-box, .table-box th, .table-box td {
-    border: 1px solid #ddd;
-}
-.table-box th, .table-box td {
-    padding: 5px;
-    text-align: center;
-    vertical-align: middle;
-}
 .chose-div{
 	margin-bottom:20px;
-}
-.table-box td.status{
-	color:#8bcf36;
-}
-.table-box em.status3{
-	color:#a9a9a9;
 }
 .div-tip a{
 	color:#8bcf36;
@@ -916,4 +878,8 @@ li.odd .box-right-icon1{
 .timeline-btn.right-btn{
 	right:-22px;
 	background-position:-14px 0;
+}
+/*-------------------------------------- 企业中心 -----------------------------------------*/
+#company-home #slide-nav .slide-box.active,#company-home #slide-nav .slide-box.child-box a.active{
+	background-color:#3277b1;
 }

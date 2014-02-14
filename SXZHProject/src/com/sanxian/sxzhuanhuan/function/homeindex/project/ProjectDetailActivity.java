@@ -27,7 +27,7 @@ public class ProjectDetailActivity extends BaseActivity implements
 	private TextView tvProname = null ;
 	private ImageView ivPrologo = null ;
 	private TextView tvProDetail = null ;
-	private ImageView ivBack = null ;
+//	private ImageView ivBack = null ;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -43,9 +43,9 @@ public class ProjectDetailActivity extends BaseActivity implements
 		tvProname = (TextView) findViewById(R.id.project_detail_tv_proname) ;
 		ivPrologo = (ImageView) findViewById(R.id.project_detail_iv_prologo) ;
 		tvProDetail = (TextView) findViewById(R.id.project_detail_tv_pridetail) ;
-		ivBack = (ImageView) findViewById(R.id.project_content_footer_iv_back) ;
+//		ivBack = (ImageView) findViewById(R.id.project_content_footer_iv_back) ;
 		
-		ivBack.setOnClickListener(this) ;
+//		ivBack.setOnClickListener(this) ;
 	}
 
 	@Override
@@ -55,9 +55,9 @@ public class ProjectDetailActivity extends BaseActivity implements
 				Intent intent = new Intent(this, PublishComment.class);
 				startActivity(intent);
 				break;
-			case R.id.project_content_footer_iv_back :
-				
-				break ;
+//			case R.id.project_content_footer_iv_back :
+//				
+//				break ;
 		}
 	}
 

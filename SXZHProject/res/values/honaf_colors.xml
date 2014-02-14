@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="common_font_color">#17AF8D</color>
+    <color name="common_bg">#efeff4</color>
+    <color name="font_gray">#8e8e93</color>
+    <color name="font_gray_white">#c7c7cc</color>
+    <color name="font_gray_black">#6d6d72</color>
+    <color name="box_gray">#F5F5F5</color>
+
+</resources>

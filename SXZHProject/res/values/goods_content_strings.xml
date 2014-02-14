@@ -12,4 +12,7 @@
   <!-- 创意 -->
   <string name="topic_content_button1">提交项目</string>
   <string name="topic_content_button2">进入此项目详情</string>
+  <!-- 项目 -->
+  <string name="project_buy">确认购买</string>
+  <string name="project_protocol">我已阅读并同意《三弦平台购买服务协议》</string>
 </resources>

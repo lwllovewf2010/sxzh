@@ -66,19 +66,22 @@ button[disabled]{
 .trt{
 	text-align:right;
 }
+.tlt,.table-box .tlt{
+	text-align:left;
+}
 textarea{
 	width:100%;
 	border:1px solid #ddd;
 	padding:4px;
 }
 .btn-btn,.btn-sub,.btn-sub-b{
-	background:#8bcf36;
+	background-color:#8bcf36;
 	padding:4px 20px;
 	border-radius:5px;
 	-webkit-border-radius:5px;
 	-moz-border-radius:5px;
 	color:#fff;
-	border:1px solid #8bcf36;
+	border:none;
 	cursor:pointer;
 	font-size:16px;
 }
@@ -113,7 +116,7 @@ a.btn-btn:hover,a.btn-sub:hover,a.btn-sub-b:hover{
 li.li-drop{
 	position:relative;
 }
-#header  ul.ul-list{
+#header  ul.ul-list,#pay-table .li-drop .ul-list{
 	display:none;
 	position:absolute;
 	background-color:#fff;
@@ -122,6 +125,13 @@ li.li-drop{
 	width:100px;
 	border:1px solid #ddd;
 	border-top:none;
+}
+#pay-table .li-drop .ul-list{
+	border-top:1px solid #ddd;
+}
+#pay-table .li-drop .ul-list li{
+	padding-left:8px;
+	margin:3px 0;
 }
 a.nav-a{
 	float:left;
@@ -224,12 +234,12 @@ i.color-icon{
 	width:13px;
 	height:13px;
 }
-.choose-icon{
+.choose-icon,.choose-space-icon{
 	background:url(../images/choses.png) 0 -33px no-repeat;
 	padding:5px 20px 5px 30px;
 	cursor:pointer;
 }
-.choose-icon.active{
+.choose-icon.active,.choose-space-icon.active{
 	background-position:0 0;
 }
 i.pour-icon,i.support-icon{
@@ -402,6 +412,7 @@ i.topic-icon{
 }
 #logo img{
 	margin-top:25px;
+	*margin-top:10px;
 }
 #nav{
 	margin:0 30px;
@@ -699,6 +710,7 @@ h2.shop-name{
 }
 #classify li a{
 	padding:0 4px;
+	white-space:nowrap;
 }
 #classify li em{
 	color: #828282;
@@ -778,6 +790,8 @@ h2.shop-name{
 	width:115px;
 	height:34px;
 	vertical-align:top;
+	float:left;
+	cursor:pointer;
 }
 .link-img{
 	position:absolute;
@@ -825,6 +839,7 @@ h2.shop-name{
 #creative-hall{
 	background:#f3f3f3;
 	padding:20px 0;
+	overflow:hidden;
 }
 /* 分类区块 */
 #classify-box{
@@ -981,6 +996,7 @@ h3.bread{
 	height:36px;
 	height:36px;
 	line-height:36px;
+	overflow:hidden;
 }
 .page-num a{
 	display:inline-block;
@@ -1008,10 +1024,9 @@ input#page_num{
 	background:url(../images/pageIcon.png) 0 0 no-repeat;
 	width:34px;
 	height:34px;
-	display:inline-block;
-	*display:inline;
-	zoom:1;
+	float:left;
 	text-indent:-9999px;
+	margin-left:7px;
 }
 .page-btns a.prev:hover{
 	background-position:0 -34px;
@@ -1063,13 +1078,13 @@ input#page_num{
 	padding-right: 15px;
 	cursor:pointer;
 }
-span.filter-span{
+span.filter-span,span.filter-slide-span,span.filter-select{
 	background:url(../images/chose.png) 0 0 no-repeat;
 	padding-left:23px;
 	cursor:pointer;
 	padding-bottom:1px;
 }
-span.filter-span.active{
+span.filter-span.active,span.filter-slide-span.active,span.filter-select.active{
 	background-position:0 -22px;
 }
 span.filter-span-b{
@@ -1083,6 +1098,7 @@ span.filter-span-b.active{
 }
 #goods-hall #page,#products-hall #page{
 	margin-top:0;
+	*margin-top:20px;
 }
 
 /* 商品详细页面 */
@@ -1198,6 +1214,8 @@ span.filter-span-b.active{
     border: 1px solid #ddd;
     border-radius: 4px;
     display: inline-block;
+	*display:inline;
+	zoom:1;
     height: 30px;
 }
 .prd-num-select .btn {
@@ -2404,4 +2422,208 @@ div.good-price span{
 }
 .yzm-div{
 	*margin-bottom:20px;
+}
+/* 项目详细页 */
+.btn-blue{
+	background-color:#96b5d5;
+	border:1px solid #96b5d5;
+}
+a.btn-blue:hover{
+	background-color:#a1bbd5;
+	border:1px solid #a1bbd5;
+}
+.side-box{
+	background-color:#f5f5f5;
+	padding:15px;
+	margin-bottom:20px;
+}
+.side-box .side-title{
+	margin-bottom:15px;
+}
+.side-box .side-title h2{
+	color:#4781b6;
+	font-size:18px;
+	float:left;
+}
+ul.side-num{
+	margin-bottom:15px;
+}
+ul.side-num li{
+	width:104px;
+	padding-left:20px;
+	font-size:15px;
+}
+ul.side-num li h2{
+	font-size:24px;
+	margin-top:10px;
+	color:#4e4c4c;
+}
+ul.side-num li.li-first{
+	width:135px;
+	padding-left:10px;
+}
+ul.side-num li.li-first h2{
+	color:#3277b1;
+}
+li.li-first{
+	border-right:1px solid #ccc;
+}
+.side-box .shop-speed{
+	height:15px;
+	border-radius:0;
+	-webkit-border-radius:0;
+	-moz-border-radius:0;
+	border:1px solid #ddd;
+	background-color:#fff;
+	position: relative;
+    width: 100%;
+}
+.side-box .shop-speed-bg{
+	height:15px;
+	border-radius:0;
+}
+.shop-speed h4{
+	position:absolute;
+	width:100%;
+	text-align:center;
+	top:0;
+	height:15px;
+	line-height:15px;
+	font-weight:normal;
+}
+.buy-time{
+	margin-top:10px;
+}
+.side-border{
+	border:1px solid #ddd;
+	padding:10px;
+}
+#slide-right .side-border h2.title{
+	margin:10px 0;
+}
+.side-border .people-list{
+	border:none;
+	padding-bottom:0;
+}
+#slide-right h2.title-color{
+	font-size:20px;
+	color:#4e4c4c;
+}
+#slide-right h2.title-color span{
+	font-size:13px;
+	margin-left:5px;
+}
+.text-color{
+	color:#3277b1;
+	margin-bottom:2px;
+}
+p.p-content{
+	margin-bottom:10px;
+}
+.side-border p{
+	font-size:13px;
+	line-height:22px;
+}
+.side-border ol{
+	list-style-type:decimal;
+	list-style-position: inside;
+}
+.side-border ol li{
+	font-size:13px;
+	line-height:22px;
+}
+#slide-right a.btn-blue{
+	font-size:18px;
+}
+#slide-right .people-fq a.btn-blue{
+	margin:20px 0;
+}
+.choose-div{
+	display:none;
+}
+/* 最后一步操作是否成功 */
+.form-div{
+	margin-left:100px;
+	padding-top:30px;
+}
+.form-div .form-list label{
+	width:145px;
+}
+.form-div input.txt-sort-ip{
+	text-align:left;
+	width:200px;
+}
+.form-div .btns{
+	margin-top:20px;
+}
+#project-tip .success-tip{
+	background:url(../images/icon-right.png) 0 0 no-repeat;
+	height:40px;
+	line-height:40px;
+	padding-left:40px;
+	padding-left:55px;
+	color:#3277b1;
+}
+#project-tip p.p-tip{
+	padding-left:55px;
+}
+#project-tip .explain-div{
+	padding-left:55px;
+	margin-top:30px;
+}
+#project-tip .explain-div li{
+	list-style-position: inside;
+    list-style-type: square;
+	margin-bottom:8px;
+}
+#project-tip a{
+	color:#3277B1;
+	text-decoration:underline;
+}
+/* 项目确认收货地址 */
+.confirm-list ul{
+	margin-bottom:60px;
+	margin-top: 20px;
+}
+.confirm-list li{
+	margin:10px 0;
+}
+.confirm-list li label{
+	font-weight:bold;
+	color:#6f6f6f;
+	float:left;
+	width:100px;
+}
+.confirm-list .project-discript{
+	width:750px;
+}
+.confirm-list .btn-fff{
+	background-color:#9cd1f6;
+	color:#fff;
+}
+#confirm-order .table-box{
+	margin:20px 0;
+}
+#confirm-order .table-box tr{
+	cursor:pointer;
+}
+#confirm-order .table-box tr.active{
+	background-color:#fef6d8;
+}
+#confirm-order .table-box tr i{
+	display:inline-block;
+	*display:inline;
+	zoom:1;
+	width:22px;
+	height:22px;
+	vertical-align:middle;
+}
+#confirm-order .table-box tr.active i{
+	background:url(../images/wz.png) 0 0 no-repeat;
+}
+#confirm-order .btn-address .btn-btn{
+	margin-left:0;
+}
+#confirm-order .table-box th, .table-box td{
+	border:none;
 }
