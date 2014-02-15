@@ -2,6 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/transparent"
     android:orientation="vertical" >
     
 	<ImageView
@@ -10,7 +11,7 @@
         android:layout_height="50dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_margin="3dp"
+        android:layout_marginLeft="5dp"
         android:src="@drawable/ic_launcher" />
 	
 	<TextView
@@ -19,9 +20,9 @@
         android:layout_height="wrap_content"
         android:layout_alignTop="@+id/sort_iv_logo"
         android:layout_toRightOf="@+id/sort_iv_logo"
-        android:text="大分类X"
+        android:text="服装内衣"
         android:textColor="#000000"
-        android:textSize="20sp" />
+        android:textSize="18dp" />
 	
 	<TextView
         android:id="@+id/sort_tv_sortchild"
@@ -31,8 +32,8 @@
         android:layout_alignBottom="@+id/sort_iv_logo"
         android:layout_toRightOf="@+id/sort_iv_logo"
         android:gravity="bottom"
-        android:text="小分类1/消费类2/小分类3"
-        android:textColor="#000000"
-        android:textSize="16sp" />
+        android:text="棉衣|针织衫|毛呢外套|羽绒服|T恤"
+        android:textColor="#434443"
+        android:textSize="12dp" />
     
 </RelativeLayout>

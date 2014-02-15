@@ -174,7 +174,7 @@ public class PublishProjectLast extends BaseActivity implements OnClickListener 
 						JSONObject contentObject = new JSONObject(jsondata);
 						Util.toastInfo(this, "创建成功！" + contentObject.optString("content"));
 
-					} else if (Constant.ResultStatus.RESULT_FAIL == JSONParser.getReturnFlag(jsondata)) {
+					} else  {
 						Util.toastInfo(this, "创建失败！");
 					}
 					Intent intent = new Intent(this, MainActivity.class);

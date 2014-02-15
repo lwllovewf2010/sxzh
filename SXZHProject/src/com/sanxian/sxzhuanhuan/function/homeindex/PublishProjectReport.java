@@ -106,6 +106,7 @@ public class PublishProjectReport extends BaseActivity implements OnClickListene
 
 	// 验证非空
 	public boolean checkInput() {
+		String tempRate=publish_project_report_rate.getText().toString().trim();
 		if ("".equals(publish_project_report_projectcount.getText().toString().trim())) {
 			Util.toastInfo(this, "项目总金额必填！");
 			return false;
@@ -124,7 +125,13 @@ public class PublishProjectReport extends BaseActivity implements OnClickListene
 		} else if ("".equals(publish_project_report_huibaotime.getText().toString().trim())) {
 			Util.toastInfo(this, "回报天数必填");
 			return false;// 回报天数
-		} else {
+		}else if("".equals(tempRate)){
+			Util.toastInfo(this, "筹集回报按百分比均分必须是10的整数倍，并且不超过100");
+			return false;
+		} else if(!(Integer.parseInt(tempRate)%10==0&&Integer.parseInt(tempRate)<=100)){
+			Util.toastInfo(this, "筹集回报按百分比均分必须是10的整数倍，并且不超过100");
+			return false;
+		}else {
 			return true;
 
 		}

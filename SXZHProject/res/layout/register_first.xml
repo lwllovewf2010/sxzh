@@ -153,6 +153,7 @@
             android:textSize="@dimen/size_14"
             android:textColor="@color/color_c7c7cc"
             android:layout_alignBottom="@id/register_cb_agree"
+            android:layout_alignBaseline="@id/register_cb_agree"
             android:layout_toRightOf="@id/register_cb_agree"
             android:text="@string/reg_agree" />
 
@@ -161,6 +162,7 @@
             android:layout_height="wrap_content"
             android:layout_toRightOf="@id/register_tv_agree"
             android:layout_alignBottom="@id/register_cb_agree"
+            android:layout_alignBaseline="@id/register_cb_agree"
             android:textSize="@dimen/size_14"
             android:textColor="@color/color_444a4d"
             android:text="@string/reg_agree_content" />
