@@ -3,19 +3,18 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:layout_marginLeft="10dp"
-    android:layout_marginRight="10dp"
-    android:layout_marginTop="15dp">
+    android:background="@color/color_efeff4"
+    android:layout_marginTop="10dp">
 
     <TextView android:id="@+id/temp_rl_tc_1"
-        android:background="@color/bg_color"
         android:layout_width="fill_parent"
         android:layout_height="20dp"/>
     <RelativeLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
-    	android:layout_marginRight="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+    	android:background="#f8f8ff"
         android:layout_marginTop="5dp">
 
         <TextView

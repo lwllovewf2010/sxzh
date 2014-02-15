@@ -47,6 +47,7 @@ import com.sanxian.sxzhuanhuan.function.login.RegisterStep3Activity;
 import com.sanxian.sxzhuanhuan.function.login.RegisterSuccessActivity;
 import com.sanxian.sxzhuanhuan.function.login.SearchPwdActivity;
 import com.sanxian.sxzhuanhuan.function.login.SearchPwdStep2Activity;
+import com.sanxian.sxzhuanhuan.function.personal.myaccount.MyAccoCertifyNameActivity;
 import com.sanxian.sxzhuanhuan.function.sort.SearchHistoryActivity;
 import com.sanxian.sxzhuanhuan.function.sort.SearchResultActivity;
 import com.sanxian.sxzhuanhuan.function.sort.SortCategoryActivity;
@@ -205,13 +206,13 @@ public class UIHelper {
 	 * @param activity
 	 */
 	public static void showRealAuthActivity(Activity activity) {
-		Intent intent = new Intent(activity, RealAuthActivity.class);
+		Intent intent = new Intent(activity, MyAccoCertifyNameActivity.class);
 		activity.startActivity(intent);
 		activity.finish();
 	}
 	
 	public static void showRealAuthActivity(Context activity) {
-		Intent intent = new Intent(activity, RealAuthActivity.class);
+		Intent intent = new Intent(activity, MyAccoCertifyNameActivity.class);
 		intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
 		activity.startActivity(intent);
 	}
@@ -441,25 +442,18 @@ public class UIHelper {
 	
 	
 	public static DisplayImageOptions setOption() {
-		DisplayImageOptions options = new DisplayImageOptions.Builder()
-		.showImageOnLoading(R.drawable.index)
-		.showImageForEmptyUri(R.drawable.index)
-		.showImageOnFail(R.drawable.index)
-		.cacheInMemory(true)
-		.cacheOnDisc(true)
-		.considerExifParams(true)
-		.displayer(new RoundedBitmapDisplayer(20))
-		.build();
-		
 //		DisplayImageOptions options = new DisplayImageOptions.Builder()
-//		.showImageOnLoading(R.drawable.logo)
-//		.showImageForEmptyUri(R.drawable.ic_empty)
-//		.showImageOnFail(R.drawable.ic_error)
+//		.showImageOnLoading(R.drawable.index)
+//		.showImageForEmptyUri(R.drawable.index)
+//		.showImageOnFail(R.drawable.index)
 //		.cacheInMemory(true)
 //		.cacheOnDisc(true)
 //		.considerExifParams(true)
 //		.displayer(new RoundedBitmapDisplayer(20))
 //		.build();
+		
+		DisplayImageOptions options = new DisplayImageOptions.Builder().showStubImage(R.drawable.index)// 加载失败的时候
+				.cacheOnDisc().build();
 		
 		return options ;
 	}

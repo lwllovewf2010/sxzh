@@ -12,9 +12,15 @@
         android:background="@drawable/tongyong_top"
         android:orientation="horizontal"
         android:gravity="center" >
+        <Button
+            android:id="@+id/sort_cat"
+            android:layout_width="40dp"
+            android:layout_height="fill_parent"
+            android:text="分类"
+            android:background="@color/transparent"/>
         
         <LinearLayout
-        android:layout_width="250dp"
+        android:layout_width="240dp"
         android:layout_height="48dp"
         android:background="@drawable/search_bg"
         android:gravity="center_vertical"
@@ -24,10 +30,9 @@
             android:id="@+id/sort_index_head_spinner"
             android:layout_width="40dp"
             android:layout_height="fill_parent"
-            android:layout_marginLeft="10dp"
+            android:layout_marginLeft="2dp"
             android:text="创意"
-            android:background="@color/transparent"
-            android:entries="@array/sorts" />
+            android:background="@color/transparent"/>
         <ImageView
             android:layout_width="14dp"
             android:layout_height="9dp"
@@ -40,6 +45,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:hint="请输入搜索关键字"
+            android:textSize="12dp"
             android:ems="10" >
         </EditText>
         <ImageButton
@@ -49,6 +55,13 @@
             android:background="@drawable/search_btn"
             />
         </LinearLayout>
+        
+        <Button
+            android:id="@+id/sort_choose"
+            android:layout_width="40dp"
+            android:layout_height="fill_parent"
+            android:text="筛选"
+            android:background="@color/transparent"/>
     </LinearLayout>
 
     <ListView

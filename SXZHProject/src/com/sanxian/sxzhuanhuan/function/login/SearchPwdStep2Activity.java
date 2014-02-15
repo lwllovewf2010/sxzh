@@ -73,7 +73,6 @@ public class SearchPwdStep2Activity extends BaseActivity implements OnClickListe
 				UIHelper.showSearchPwdActivity(SearchPwdStep2Activity.this) ;
 				break;
 			case R.id.search_pwd_btn_change_password :
-				System.out.println("change password");
 				changePassword() ;
 				break ;
 		}
@@ -82,7 +81,9 @@ public class SearchPwdStep2Activity extends BaseActivity implements OnClickListe
 	private void changePassword() {
 		String password1 = etPassword.getText().toString() ;
 		String password2 = etPassword2.getText().toString() ;
-		if( !UIHelper.checkPasswordEffect(password1) ) {
+		if("".equals(password1)) {
+			Util.toastInfo(SearchPwdStep2Activity.this, "密码不能为空" ) ;
+		} else if( !UIHelper.checkPasswordEffect(password1) ) {
 			Util.toastInfo(SearchPwdStep2Activity.this, getResources().getString(R.string.search_pwd_warning_pwd_regular_wrong)) ;
 		} else if ( !password1.equals(password2)) {
 			Util.toastInfo(SearchPwdStep2Activity.this, getResources().getString(R.string.search_pwd_warning_pwd_not_same)) ;

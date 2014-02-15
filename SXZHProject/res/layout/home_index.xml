@@ -4,6 +4,7 @@
     xmlns:myattr="http://schemas.android.com/apk/res/com.sanxian.sxzhuanhuan"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
+    android:background="@color/bg_color"
     android:focusable="true"
     android:focusableInTouchMode="true" >
 
@@ -20,11 +21,11 @@
             android:id="@+id/home_index_title_right_btn"
             android:layout_width="wrap_content"
             android:layout_height="38dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/common_btn"
             android:paddingLeft="10dp"
             android:paddingRight="10dp"
-        	android:layout_marginRight="5dp"
-            android:layout_alignParentRight="true"
-            android:background="@drawable/common_btn"
             android:text="@string/publish_text"
             android:textColor="@color/white"
             android:textSize="@dimen/size_18" />
@@ -62,60 +63,76 @@
         android:id="@+id/home_index_content_nav"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/home_index_bar"
+        android:layout_marginBottom="5dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginBottom="5dp"
-        android:layout_below="@+id/home_index_bar"
-        >
-		<LinearLayout android:layout_width="wrap_content"
-		    android:layout_height="wrap_content"
-		    android:gravity="center"
-		    android:layout_marginLeft="15dp"
-		    android:layout_alignParentLeft="true">
-		    <ImageView android:id="@+id/home_index_content_nav_creative_iv"
-			    android:layout_width="wrap_content"
-			    android:layout_height="wrap_content"
-			    android:src="@drawable/iv_creative"/>
-		    <TextView android:id="@+id/home_index_content_nav_creative_tv"
-			    android:layout_width="wrap_content"
-			    android:layout_height="wrap_content"
-			    android:textSize="@dimen/size_18"
-			    android:textColor="@color/color_444a4d"
-			    android:text="@string/creative"/>
-		</LinearLayout>
-		<LinearLayout android:layout_width="wrap_content"
-		    android:layout_height="wrap_content"
-		    android:gravity="center"
-		    android:layout_marginRight="15dp"
-		    android:layout_alignParentRight="true">
-		    <ImageView android:id="@+id/home_index_content_nav_goods_iv"
-			    android:layout_width="wrap_content"
-			    android:layout_height="wrap_content"
-			    android:src="@drawable/iv_goods"/>
-		    <TextView android:id="@+id/home_index_content_nav_goods_tv"
-			    android:layout_width="wrap_content"
-			    android:layout_height="wrap_content"
-			    android:textSize="@dimen/size_18"
-			    android:textColor="@color/color_6d6d72"
-			    android:text="@string/goods"/>
-		</LinearLayout>
-		<LinearLayout android:layout_width="wrap_content"
-		    android:layout_height="wrap_content"
-		    android:gravity="center"
-		    android:layout_centerHorizontal="true">
-		    <ImageView android:id="@+id/home_index_content_nav_project_iv"
-			    android:layout_width="wrap_content"
-			    android:layout_height="wrap_content"
-			    android:src="@drawable/iv_project"/>
-		    <TextView android:id="@+id/home_index_content_nav_project_tv"
-			    android:layout_width="wrap_content"
-			    android:layout_height="wrap_content"
-			    android:textSize="@dimen/size_18"
-			    android:textColor="@color/color_6d6d72"
-			    android:text="@string/project"/>
-		</LinearLayout>
-        
+        android:layout_marginTop="5dp" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="15dp"
+            android:gravity="center" >
+
+            <ImageView
+                android:id="@+id/home_index_content_nav_creative_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/iv_creative" />
+
+            <TextView
+                android:id="@+id/home_index_content_nav_creative_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/creative"
+                android:textColor="@color/color_444a4d"
+                android:textSize="@dimen/size_18" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            android:gravity="center" >
+
+            <ImageView
+                android:id="@+id/home_index_content_nav_goods_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/iv_goods" />
+
+            <TextView
+                android:id="@+id/home_index_content_nav_goods_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/goods"
+                android:textColor="@color/color_6d6d72"
+                android:textSize="@dimen/size_18" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:gravity="center" >
+
+            <ImageView
+                android:id="@+id/home_index_content_nav_project_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/iv_project" />
+
+            <TextView
+                android:id="@+id/home_index_content_nav_project_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/project"
+                android:textColor="@color/color_6d6d72"
+                android:textSize="@dimen/size_18" />
+        </LinearLayout>
     </RelativeLayout>
 
     <RelativeLayout
@@ -125,63 +142,45 @@
         android:layout_below="@+id/home_index_content_nav"
         android:orientation="vertical" >
 
-        <com.sanxian.sxzhuanhuan.function.homeindex.SlidingSwitcherView
+        <RelativeLayout
             android:id="@+id/home_index_bar_slidingLayout"
             android:layout_width="fill_parent"
             android:layout_height="120dp"
-            myattr:auto_play="true" >
+            android:orientation="vertical" >
 
-            <LinearLayout
+            <android.support.v4.view.ViewPager
+                android:id="@+id/viewPager"
                 android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
-                android:orientation="horizontal" >
-
-                <ImageView
-                    android:id="@+id/home_index_image1"
-                    android:layout_width="fill_parent"
-                    android:layout_height="fill_parent"
-                    android:src="@drawable/image1" />
-
-                <ImageView
-                    android:id="@+id/home_index_image2"
-                    android:layout_width="fill_parent"
-                    android:layout_height="fill_parent"
-                    android:src="@drawable/image2" />
-
-                <ImageView
-                    android:id="@+id/home_index_image3"
-                    android:layout_width="fill_parent"
-                    android:layout_height="fill_parent"
-                    android:src="@drawable/image3" />
-            </LinearLayout>
+                android:layout_height="200dp"
+               >
+            </android.support.v4.view.ViewPager>
 
             <LinearLayout
-                android:layout_width="60dip"
-                android:layout_height="20dip"
-                android:layout_alignParentBottom="true"
-                android:layout_alignParentRight="true"
-                android:layout_margin="15dip"
-                android:orientation="horizontal" >
+                android:id="@+id/dot"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/viewPager"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="-20dp" >
             </LinearLayout>
-        </com.sanxian.sxzhuanhuan.function.homeindex.SlidingSwitcherView>
+        </RelativeLayout>
 
-        
         <RelativeLayout
             android:id="@+id/home_index_content"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:layout_marginTop="15dp"
             android:layout_below="@+id/home_index_bar_slidingLayout"
+            android:layout_marginTop="15dp"
             android:orientation="vertical" >
 
             <com.sanxian.sxzhuanhuan.view.xlistview.XListView
-            	android:id="@+id/home_index_content_xlist"
+                android:id="@+id/home_index_content_xlist"
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
-                android:divider="@null"
-                >
-     		</com.sanxian.sxzhuanhuan.view.xlistview.XListView>
-            <!-- <ScrollView android:layout_width="fill_parent"
+                android:divider="@null" >
+            </com.sanxian.sxzhuanhuan.view.xlistview.XListView>
+            <!--
+            <ScrollView android:layout_width="fill_parent"
                 android:layout_height="fill_parent">
                 <com.sanxian.sxzhuanhuan.view.xlistview.XListView
             	android:id="@+id/home_index_content_xlist"
@@ -190,9 +189,9 @@
                 >
                 android:background="@color/color_edeff0"
        			</com.sanxian.sxzhuanhuan.view.xlistview.XListView>
-            </ScrollView> -->
+            </ScrollView>
+            -->
         </RelativeLayout>
-       
     </RelativeLayout>
 
 </RelativeLayout>

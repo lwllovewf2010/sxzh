@@ -2,22 +2,22 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginLeft="10dp"
-    android:layout_marginRight="10dp"
-    android:layout_marginTop="15dp"
+    android:background="@color/color_efeff4"
+    android:layout_marginTop="10dp"
     >
 
     <TextView android:id="@+id/temp_rl_tc_1"
         android:layout_width="fill_parent"
-        android:background="#eeeff3"
         android:layout_height="20dp"/>
+    <!-- android:background="#eeeff3" -->
     
     <LinearLayout
         android:id="@+id/sort_detail_item_list_top"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
-    	android:layout_marginRight="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:background="#f8f8ff"
         android:layout_below="@id/temp_rl_tc_1"
         android:orientation="horizontal" >
 
@@ -37,9 +37,9 @@
         android:id="@+id/sort_detail_item_list_content"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:padding="4dp"
-        android:layout_marginLeft="10dp"
-    android:layout_marginRight="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:background="#f8f8ff"
         android:layout_below="@+id/sort_detail_item_list_top" >
 
         <ImageView

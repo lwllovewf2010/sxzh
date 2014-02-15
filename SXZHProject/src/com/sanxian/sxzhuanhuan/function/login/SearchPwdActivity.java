@@ -104,6 +104,7 @@ public class SearchPwdActivity extends BaseActivity implements OnClickListener ,
 		btnVertifyCode = (Button) findViewById(R.id.search_pwd_btn_get_vertify_code) ;
 		btnNext = (Button) findViewById(R.id.search_pwd_btn_next) ;
 		
+		etVertifyCode.setEnabled(false) ;
 		conHeader.ivPre.setOnClickListener(this) ;
 		conHeader.tvLeft.setOnClickListener(this) ;
 		btnVertifyCode.setOnClickListener(this) ;
@@ -133,8 +134,8 @@ public class SearchPwdActivity extends BaseActivity implements OnClickListener ,
 	
 	private void getVertifyCode() {
 		if(UIHelper.isRealTelephone(etTelephone.getText().toString())) {
-			etTelephone.setFocusable(false) ;
 			btnVertifyCode.setClickable(false) ;
+			etVertifyCode.setEnabled(true) ;
 			tvShowInfo.setTextSize(12.0f) ;
 			tvShowInfo.setText(Html.fromHtml("<font color='red'>" + getResources().getString(R.string.search_pwd_tv_vertify_info) + "</font>")) ;
 			
@@ -211,7 +212,7 @@ public class SearchPwdActivity extends BaseActivity implements OnClickListener ,
 	@Override
 	public void onTextChanged(CharSequence s, int start, int before, int count) {
 		// TODO Auto-generated method stub
-		System.out.println(etTelephone.getText().toString());
+//		System.out.println(etTelephone.getText().toString());
 	}
 	
 	@Override
