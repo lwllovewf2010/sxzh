@@ -28,8 +28,8 @@ import com.sanxian.sxzhuanhuan.util.Util;
  */
 public abstract class BaseAPI {
 
-//	public static final String API_SERVER = "http://v2api.sxzhuanhuan.com/mobileapi/index.php";
-	public static final String API_SERVER = "http://192.168.1.9/mobileapi/index.php";
+	public static final String API_SERVER = "http://v2api.sxzhuanhuan.com/mobileapi/index.php";
+//	public static final String API_SERVER = "http://192.168.1.9/mobileapi/index.php";
 	// public static final String API_SERVER
 	// ="http://192.168.0.107/index.php/v2/";
 	// public static final String API_SERVER

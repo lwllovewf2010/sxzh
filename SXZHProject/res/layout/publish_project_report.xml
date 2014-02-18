@@ -31,7 +31,7 @@
                 android:id="@+id/publish_project_report_jinerxin"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/top_step"
+                android:layout_below="@id/top_step"
                 android:layout_marginLeft="10dip"
                 android:layout_marginRight="10dip"
                 android:layout_marginTop="10dip"
@@ -46,6 +46,7 @@
                 android:layout_below="@+id/publish_project_report_jinerxin"
                 android:layout_marginLeft="10dip"
                 android:layout_marginRight="10dip"
+                android:layout_marginTop="10dp"
                 android:background="@drawable/big_box" >
 
                 <RelativeLayout
@@ -137,6 +138,7 @@
                         android:background="@color/transparent"
                         android:hint=""
                         android:inputType="number"
+                        android:maxLength="2"
                         android:singleLine="true" />
                 </RelativeLayout>
 
@@ -192,7 +194,8 @@
                     android:layout_marginRight="10dip"
                     android:layout_marginTop="10dip"
                     android:background="@color/transparent"
-                    android:hint="回报标题" />
+                    android:hint="回报标题"
+                    android:maxLength="25" />
 
                 <RelativeLayout
                     android:id="@+id/purchase_money_layout"
@@ -266,11 +269,14 @@
                         android:id="@+id/publish_project_report_huibaotime"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_centerVertical="true"
-                        android:layout_toLeftOf="@id/day"
-                        android:layout_toRightOf="@id/tip"
+                        android:layout_alignTop="@+id/day"
+                        android:layout_toLeftOf="@+id/day"
                         android:background="@color/transparent"
-                        android:inputType="number" />
+                        android:ems="10"
+                        android:inputType="number" >
+
+                        <requestFocus />
+                    </EditText>
                 </RelativeLayout>
 
                 <RelativeLayout
@@ -349,7 +355,8 @@
                     android:layout_marginRight="10dip"
                     android:background="@color/transparent"
                     android:gravity="top"
-                    android:hint="回报内容" />
+                    android:hint="回报内容"
+                    android:maxLength="100" />
             </RelativeLayout>
 
             <TextView
@@ -378,7 +385,8 @@
                 <RelativeLayout
                     android:id="@+id/fast_layout"
                     android:layout_width="fill_parent"
-                    android:layout_height="40dp" >
+                    android:layout_height="40dp"
+                    android:background="@drawable/listview_item_click_bg" >
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -391,6 +399,7 @@
                         android:textColor="@color/black" />
 
                     <ImageView
+                        android:id="@+id/img_fast"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentRight="true"
@@ -403,7 +412,8 @@
                     android:id="@+id/ems_layout"
                     android:layout_width="fill_parent"
                     android:layout_height="40dp"
-                    android:layout_below="@id/fast_layout" >
+                    android:layout_below="@id/fast_layout"
+                    android:background="@drawable/listview_item_click_bg" >
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -416,19 +426,22 @@
                         android:textColor="@color/black" />
 
                     <ImageView
+                        android:id="@+id/img_ems"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentRight="true"
                         android:layout_centerVertical="true"
                         android:layout_marginRight="10dp"
-                        android:background="@drawable/tick" />
+                        android:background="@drawable/tick"
+                        android:visibility="invisible" />
                 </RelativeLayout>
 
                 <RelativeLayout
                     android:id="@+id/un_free"
                     android:layout_width="fill_parent"
                     android:layout_height="40dp"
-                    android:layout_below="@id/ems_layout" >
+                    android:layout_below="@id/ems_layout"
+                    android:background="@drawable/listview_item_click_bg" >
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -441,12 +454,14 @@
                         android:textColor="@color/black" />
 
                     <ImageView
+                        android:id="@+id/img_un_free"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentRight="true"
                         android:layout_centerVertical="true"
                         android:layout_marginRight="10dp"
-                        android:background="@drawable/tick" />
+                        android:background="@drawable/tick"
+                        android:visibility="invisible" />
                 </RelativeLayout>
             </RelativeLayout>
 
@@ -517,13 +532,25 @@
                     android:hint="发明专利名称" />
             </RelativeLayout>
 
+            <TextView
+                android:id="@+id/stock_share_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/publish_project_report_zhuanli_rel"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dip"
+                android:layout_marginTop="10dip"
+                android:text="股票分配"
+                android:textColor="@color/black" />
+
             <RelativeLayout
                 android:id="@+id/publish_project_report_gufenzi_rel"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/publish_project_report_zhuanli_rel"
+                android:layout_below="@id/stock_share_textview"
                 android:layout_marginLeft="10dip"
                 android:layout_marginRight="10dip"
+                android:layout_marginTop="10dp"
                 android:background="@drawable/big_box"
                 android:orientation="vertical" >
 
@@ -585,6 +612,7 @@
                         android:id="@+id/stock_me"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
                         android:layout_toLeftOf="@id/rmb6"
                         android:layout_toRightOf="@id/tip6"
                         android:background="@color/transparent"
@@ -623,11 +651,12 @@
                         android:id="@+id/publish_project_report_rate"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
                         android:layout_toLeftOf="@id/rmb5"
                         android:layout_toRightOf="@id/tip5"
-                        android:text="10"
                         android:background="@color/transparent"
-                        android:inputType="number" />
+                        android:inputType="number"
+                        android:text="10" />
                 </RelativeLayout>
 
                 <TextView

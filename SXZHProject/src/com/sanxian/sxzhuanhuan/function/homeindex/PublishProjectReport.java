@@ -15,6 +15,7 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 /**
@@ -47,6 +48,14 @@ public class PublishProjectReport extends BaseActivity implements OnClickListene
 	private Button btn_limit_partner;
 	private Button btn_patent_limit;
 	private Button btn_stock_limit;
+	// 邮寄方式
+	private RelativeLayout fast_layout;
+	private RelativeLayout ems_layout;
+	private RelativeLayout un_free;
+	//邮寄方式选择
+	private ImageView img_fast;
+	private ImageView img_ems;
+	private ImageView img_un_free;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -54,7 +63,7 @@ public class PublishProjectReport extends BaseActivity implements OnClickListene
 		setContentView(R.layout.publish_project_report);
 		init();
 		initListener();
-		
+
 	}
 
 	public void initView() {
@@ -84,7 +93,15 @@ public class PublishProjectReport extends BaseActivity implements OnClickListene
 		btn_limit_partner = (Button) this.findViewById(R.id.btn_limit_partner);
 		btn_patent_limit = (Button) this.findViewById(R.id.btn_patent_limit);
 		btn_stock_limit = (Button) this.findViewById(R.id.btn_stock_limit);
-
+		// 包邮方式布局
+		fast_layout = (RelativeLayout) this.findViewById(R.id.fast_layout);
+		ems_layout = (RelativeLayout) this.findViewById(R.id.ems_layout);
+		un_free = (RelativeLayout) this.findViewById(R.id.un_free);
+		// 包邮方式布局选中
+		img_fast=(ImageView)this.findViewById(R.id.img_fast);
+		img_ems=(ImageView)this.findViewById(R.id.img_ems);
+		img_un_free=(ImageView)this.findViewById(R.id.img_un_free);
+		
 	}
 
 	public void initListener() {
@@ -96,6 +113,10 @@ public class PublishProjectReport extends BaseActivity implements OnClickListene
 		btn_limit_partner.setOnClickListener(this);
 		btn_patent_limit.setOnClickListener(this);
 		btn_stock_limit.setOnClickListener(this);
+		// 包邮方式
+		fast_layout.setOnClickListener(this);
+		ems_layout.setOnClickListener(this);
+		un_free.setOnClickListener(this);
 
 	}
 
@@ -106,18 +127,28 @@ public class PublishProjectReport extends BaseActivity implements OnClickListene
 
 	// 验证非空
 	public boolean checkInput() {
-		String tempRate=publish_project_report_rate.getText().toString().trim();
-		if ("".equals(publish_project_report_projectcount.getText().toString().trim())) {
+		String tempRate = publish_project_report_rate.getText().toString().trim();
+		String tempProjectcount = publish_project_report_projectcount.getText().toString().trim();
+		String tempRaiseDay = publish_project_report_day.getText().toString().trim();
+		if ("".equals(tempProjectcount)) {
 			Util.toastInfo(this, "项目总金额必填！");
 			return false;
-		} else if ("".equals(publish_project_report_day.getText().toString().trim())) {
+		} else if (!(Integer.parseInt(tempProjectcount) > 0 && Integer.parseInt(tempProjectcount) % 100 == 0)) {
+			Util.toastInfo(this, "仅限整数，必须大于0，且以（含）100的整数倍！");
+			return false;
+
+		} else if ("".equals(tempRaiseDay)) {
 			Util.toastInfo(this, "筹集天数必填");
+			return false;
+		} else if (Integer.parseInt(tempRaiseDay) < 0 || Integer.parseInt(tempRaiseDay) > 60) {
+
+			Util.toastInfo(this, "不超过2个字符，仅允许数字，取值范围1-60之间");
 			return false;
 		} else if ("".equals(publish_project_report_tuikuanshoum_rel.getText().toString().trim())) {
 			Util.toastInfo(this, "退款说明必填");
 			return false;
 		} else if ("".equals(publish_project_report_huibaotitle.getText().toString().trim())) {
-			Util.toastInfo(this, "回报标题必填");
+			Util.toastInfo(this, "回报标题必填,不超过50个字符，允许任何字符");
 			return false;// 回报标题
 		} else if ("".equals(publish_project_report_projectcountxiane.getText().toString().trim())) {
 			Util.toastInfo(this, "预购金额必填");
@@ -125,13 +156,13 @@ public class PublishProjectReport extends BaseActivity implements OnClickListene
 		} else if ("".equals(publish_project_report_huibaotime.getText().toString().trim())) {
 			Util.toastInfo(this, "回报天数必填");
 			return false;// 回报天数
-		}else if("".equals(tempRate)){
+		} else if ("".equals(tempRate)) {
 			Util.toastInfo(this, "筹集回报按百分比均分必须是10的整数倍，并且不超过100");
 			return false;
-		} else if(!(Integer.parseInt(tempRate)%10==0&&Integer.parseInt(tempRate)<=100)){
+		} else if (!(Integer.parseInt(tempRate) % 10 == 0 && Integer.parseInt(tempRate) <= 100)) {
 			Util.toastInfo(this, "筹集回报按百分比均分必须是10的整数倍，并且不超过100");
 			return false;
-		}else {
+		} else {
 			return true;
 
 		}
@@ -154,36 +185,54 @@ public class PublishProjectReport extends BaseActivity implements OnClickListene
 			this.finish();
 			break;
 		case R.id.title_Left:
-//			this.finish();
+			// this.finish();
 			Util.toastInfo(this, "清空");
 			break;
-		case R.id.btn_limit_partner://股东人数
-			if("1".equals(btn_limit_partner.getTag())){
+		case R.id.btn_limit_partner:// 股东人数
+			if ("1".equals(btn_limit_partner.getTag())) {
 				btn_limit_partner.setBackgroundResource(R.drawable.uncheck_box);
 				btn_limit_partner.setTag("0");
-			}else{
+			} else {
 				btn_limit_partner.setBackgroundResource(R.drawable.check_box);
 				btn_limit_partner.setTag("1");
 			}
 
 			break;
-		case R.id.btn_patent_limit://专利
-			if("1".equals(btn_patent_limit.getTag())){
+		case R.id.btn_patent_limit:// 专利
+			if ("1".equals(btn_patent_limit.getTag())) {
 				btn_patent_limit.setBackgroundResource(R.drawable.uncheck_box);
 				btn_patent_limit.setTag("0");
-			}else{
+			} else {
 				btn_patent_limit.setBackgroundResource(R.drawable.check_box);
 				btn_patent_limit.setTag("1");
 			}
 			break;
-		case R.id.btn_stock_limit://股票限制
-			if("1".equals(btn_stock_limit.getTag())){
+		case R.id.btn_stock_limit:// 股票限制
+			if ("1".equals(btn_stock_limit.getTag())) {
 				btn_stock_limit.setBackgroundResource(R.drawable.uncheck_box);
 				btn_stock_limit.setTag("0");
-			}else{
+			} else {
 				btn_stock_limit.setBackgroundResource(R.drawable.check_box);
 				btn_stock_limit.setTag("1");
 			}
+			break;
+		case R.id.fast_layout:
+			img_fast.setVisibility(View.VISIBLE);
+			img_ems.setVisibility(View.INVISIBLE);
+			img_un_free.setVisibility(View.INVISIBLE);
+			reward_post="1";
+			break;
+		case R.id.ems_layout:
+			img_fast.setVisibility(View.INVISIBLE);
+			img_ems.setVisibility(View.VISIBLE);
+			img_un_free.setVisibility(View.INVISIBLE);
+			reward_post="2";
+			break;
+		case R.id.un_free:
+			img_fast.setVisibility(View.INVISIBLE);
+			img_ems.setVisibility(View.INVISIBLE);
+			img_un_free.setVisibility(View.VISIBLE);
+			reward_post="0";
 			break;
 		default:
 			break;
@@ -191,7 +240,7 @@ public class PublishProjectReport extends BaseActivity implements OnClickListene
 	}
 
 	Boolean isLimit = true;// 默认限制人数
-
+	String reward_post="1";//默认快递
 	public Map<String, String> getMap() {
 
 		Map<String, String> tempMap = new HashMap<String, String>();
@@ -202,9 +251,9 @@ public class PublishProjectReport extends BaseActivity implements OnClickListene
 		tempMap.put("reward_name", publish_project_report_huibaotitle.getText().toString());
 		tempMap.put("reward_return_days", publish_project_report_huibaotime.getText().toString());
 		tempMap.put("reward_content", publish_project_report_huinbaocontent_rel.getText().toString());
-		tempMap.put("reward_limit", btn_limit_partner.getTag().toString()+"");// 默认限制人数，待定
+		tempMap.put("reward_limit", btn_limit_partner.getTag().toString() + "");// 默认限制人数，待定
 		tempMap.put("reward_person", publish_project_renchu.getText().toString());
-		tempMap.put("reward_post", "1");// 默认快递，待定
+		tempMap.put("reward_post", reward_post);// 默认快递，待定
 		tempMap.put("reward_patent_id", publish_project_report_zhuanlibianhao.getText().toString());
 		tempMap.put("reward_patent_name", publish_project_report_zhuanliname.getText().toString());
 		tempMap.put("reward_mode", publish_project_report_rate.getText().toString());

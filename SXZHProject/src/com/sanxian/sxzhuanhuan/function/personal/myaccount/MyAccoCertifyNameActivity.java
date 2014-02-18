@@ -60,7 +60,7 @@ public class MyAccoCertifyNameActivity extends BaseActivity {
 	public void initView() {
 		// TODO Auto-generated method stub
 		super.initView();
-		setRight("确定");
+		displayRight();
 		setTitle("实名认证");
 		id_card_image1 = (ImageView)findViewById(R.id.id_card_image1);
 		id_card_image2 = (ImageView)findViewById(R.id.id_card_image2);

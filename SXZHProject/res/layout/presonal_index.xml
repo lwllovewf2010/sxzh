@@ -5,8 +5,6 @@
     android:orientation="vertical" >
 
     <include
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
         layout="@layout/title_bar" />
 
     <ScrollView
@@ -30,8 +28,8 @@
 
                 <ImageView
                     android:id="@+id/avatar_img"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="75dip"
+                    android:layout_height="75dip"
                     android:layout_marginTop="12dip"
                     android:layout_centerHorizontal="true"
                     android:background="@drawable/person_default_icon" />
@@ -583,10 +581,11 @@
                         android:layout_centerVertical="true"
                         android:background="@drawable/arrow" />
                 </RelativeLayout>
-
+            </LinearLayout>
                 <View
                     android:layout_width="fill_parent"
                     android:layout_height="1px"
+                    android:layout_marginTop="25dip"
                     android:background="@color/line_color" />
                 <!-- 我的好友 -->
 
@@ -626,6 +625,11 @@
                     android:layout_width="fill_parent"
                     android:layout_height="1px"
                     android:background="@color/line_color" />
+               <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone" >
                 <!-- 微博 -->
 
                 <RelativeLayout

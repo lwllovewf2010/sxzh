@@ -362,13 +362,13 @@ public class MainActivity extends BaseFragmentActivity implements OnClickListene
 			updateContent(checkid);
 			break;
 		case R.id.presonal:
-			SharedPreferences spf = this.getSharedPreferences("login_user", 0);
-			String open_id = spf.getString("open_id", "");
-			String token = spf.getString("token", "");
-			if ("".equals(open_id) || "".equals(token)) {
-				Intent intent = new Intent(this, LoginActivity.class);
-				startActivityForResult(intent, Constant.REQUEST_LOGIN_CODE);
-			} else {
+//			SharedPreferences spf = this.getSharedPreferences("login_user", 0);
+//			String open_id = spf.getString("open_id", "");
+//			String token = spf.getString("token", "");
+//			if ("".equals(open_id) || "".equals(token)) {
+//				Intent intent = new Intent(this, LoginActivity.class);
+//				startActivityForResult(intent, Constant.REQUEST_LOGIN_CODE);
+//			} else {
 				img_homeindex.setImageDrawable(resources.getDrawable(R.drawable.icon_home2_press2));
 				img_sort.setImageDrawable(resources.getDrawable(R.drawable.icon_classes_press));
 				img_discuss.setImageDrawable(resources.getDrawable(R.drawable.icon_meassage_press2));
@@ -378,7 +378,7 @@ public class MainActivity extends BaseFragmentActivity implements OnClickListene
 				text_discuss.setTextColor(resources.getColor(R.color.action_down));
 				text_presonal.setTextColor(resources.getColor(R.color.action_on));
 				updateContent(checkid);
-			}
+//			}
 			break;
 		}
 
@@ -440,20 +440,20 @@ public class MainActivity extends BaseFragmentActivity implements OnClickListene
 		changeUI(id);
 	}
 
-	@Override
-	protected void onActivityResult(int arg0, int arg1, Intent arg2) {
-		// TODO Auto-generated method stub
-		super.onActivityResult(arg0, arg1, arg2);
-		if (arg1 == Constant.RESULT_LOGIN_CODE) {
-			// img_homeindex.setImageDrawable(resources.getDrawable(R.drawable.shangji_down));
-			// img_sort.setImageDrawable(resources.getDrawable(R.drawable.renmai_down));
-			// img_discuss.setImageDrawable(resources.getDrawable(R.drawable.xiaoxi_down));
-			// img_presonal.setImageDrawable(resources.getDrawable(R.drawable.hezhi_on));
-			text_homeindex.setTextColor(resources.getColor(R.color.action_down));
-			text_sort.setTextColor(resources.getColor(R.color.action_down));
-			text_discuss.setTextColor(resources.getColor(R.color.action_down));
-			text_presonal.setTextColor(resources.getColor(R.color.action_on));
-			updateContent(R.id.presonal);
-		}
-	}
+//	@Override
+//	protected void onActivityResult(int arg0, int arg1, Intent arg2) {
+//		// TODO Auto-generated method stub
+//		super.onActivityResult(arg0, arg1, arg2);
+//		if (arg1 == Constant.RESULT_LOGIN_CODE) {
+//			// img_homeindex.setImageDrawable(resources.getDrawable(R.drawable.shangji_down));
+//			// img_sort.setImageDrawable(resources.getDrawable(R.drawable.renmai_down));
+//			// img_discuss.setImageDrawable(resources.getDrawable(R.drawable.xiaoxi_down));
+//			// img_presonal.setImageDrawable(resources.getDrawable(R.drawable.hezhi_on));
+//			text_homeindex.setTextColor(resources.getColor(R.color.action_down));
+//			text_sort.setTextColor(resources.getColor(R.color.action_down));
+//			text_discuss.setTextColor(resources.getColor(R.color.action_down));
+//			text_presonal.setTextColor(resources.getColor(R.color.action_on));
+//			updateContent(R.id.presonal);
+//		}
+//	}
 }

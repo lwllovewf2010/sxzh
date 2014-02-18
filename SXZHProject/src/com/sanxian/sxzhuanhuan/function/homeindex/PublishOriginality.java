@@ -82,8 +82,8 @@ public class PublishOriginality extends BaseActivity implements OnClickListener 
 	private CharSequence[] testType = { "创意", "项目" };
 	private CharSequence[] testArea = { "北京", "上海", "深圳" };
 	private CharSequence[] testProfession = { "互联网", "科技" };
-	
-	private  Button submit;
+
+	private Button submit;
 	private Button cancel_submit;
 
 	@Override
@@ -146,19 +146,21 @@ public class PublishOriginality extends BaseActivity implements OnClickListener 
 		originalityIntroduce = (EditText) findViewById(R.id.publish_originality_originality_introduce); // 需求简介
 		originalityNetaddress = (EditText) findViewById(R.id.publish_originality_originality_netaddress); // 需求视频播放地址
 		originalityDetailedIntroduce = (EditText) findViewById(R.id.publish_originality_originality_detailed_introduce); // 需求详细介绍
-//		originalityType = (TextView) findViewById(R.id.publish_originality_type); // 发布类型
+		// originalityType = (TextView)
+		// findViewById(R.id.publish_originality_type); // 发布类型
 		originalityEara = (TextView) findViewById(R.id.publish_originality_eara); // 发布地区
 		originalityProfession = (TextView) findViewById(R.id.publish_originality_profession); // 发布行业
 		// originalityImage=(ImageView)findViewById(R.id.publish_originality_image_1);
 		// //添加需求图片
-//		originalityTypeRel = (RelativeLayout) findViewById(R.id.publish_originality_originality_type_rel); // 类型
+		// originalityTypeRel = (RelativeLayout)
+		// findViewById(R.id.publish_originality_originality_type_rel); // 类型
 		originalityAreaRel = (RelativeLayout) findViewById(R.id.publish_originality_originality_area_rel); // 地区
 		originalityProfessionRel = (RelativeLayout) findViewById(R.id.publish_originality_originality_profession_rel); // 行业
 
 		HListView = (HorizontalListViews) this.findViewById(R.id.HlistView);
-		
-		submit=(Button)this.findViewById(R.id.submit);
-		cancel_submit=(Button)this.findViewById(R.id.cancel_submit);
+
+		submit = (Button) this.findViewById(R.id.submit);
+		cancel_submit = (Button) this.findViewById(R.id.cancel_submit);
 
 	}
 
@@ -166,12 +168,12 @@ public class PublishOriginality extends BaseActivity implements OnClickListener 
 	public void initListener() {
 		// TODO Auto-generated method stub
 		super.initListener();
-//		originalityTypeRel.setOnClickListener(this);
+		// originalityTypeRel.setOnClickListener(this);
 		originalityAreaRel.setOnClickListener(this);
 		originalityProfessionRel.setOnClickListener(this);
 		button_left.setOnClickListener(this);
 		button_right.setOnClickListener(this);
-		
+
 		submit.setOnClickListener(this);
 		cancel_submit.setOnClickListener(this);
 	}
@@ -180,6 +182,10 @@ public class PublishOriginality extends BaseActivity implements OnClickListener 
 		if ("".equals(originalityTitle.getText().toString().trim())) {
 			Util.toastInfo(this, "需求名字必填");
 			originalityTitle.setFocusable(true);
+			return false;
+		} else if ("".equals(originalityDetailedIntroduce.getText().toString().trim())) {
+			Util.toastInfo(this, "详细介绍必填");
+			originalityDetailedIntroduce.setFocusable(true);
 			return false;
 		} else {
 			return true;
@@ -190,15 +196,16 @@ public class PublishOriginality extends BaseActivity implements OnClickListener 
 	public void onClick(View v) {
 		// TODO Auto-generated method stub
 		switch (v.getId()) {
-//		// 类型
-//		case R.id.publish_originality_originality_type_rel:
-//			// removeDialog(SHOW_TYPE);
-//			// showDialog(SHOW_TYPE, null);
-//			Intent typeintent = new Intent(PublishOriginality.this, GetRootCommonList.class);
-//			typeintent.putExtra("type", "mode");
-//			typeintent.putExtra("is_get_last", "0");
-//			startActivityForResult(typeintent, REQUESTCODE);
-//			break;
+		// // 类型
+		// case R.id.publish_originality_originality_type_rel:
+		// // removeDialog(SHOW_TYPE);
+		// // showDialog(SHOW_TYPE, null);
+		// Intent typeintent = new Intent(PublishOriginality.this,
+		// GetRootCommonList.class);
+		// typeintent.putExtra("type", "mode");
+		// typeintent.putExtra("is_get_last", "0");
+		// startActivityForResult(typeintent, REQUESTCODE);
+		// break;
 		// 地区
 		case R.id.publish_originality_originality_area_rel:
 			// removeDialog(SHOW_AREA);
@@ -235,6 +242,7 @@ public class PublishOriginality extends BaseActivity implements OnClickListener 
 			this.finish();
 			break;
 		case R.id.title_Left:
+			app.getImagelist().clear();
 			this.finish();
 			break;
 		default:

@@ -154,8 +154,8 @@ public class PersonalIndex extends BaseFragment implements OnClickListener{
 	 */
 	public void initData(){
 		SharedPreferences spf = context.getSharedPreferences("login_user", 0) ;
-		String open_id = spf.getString("open_id", null);
-		String token = spf.getString("token", null);
+		String open_id = spf.getString("open_id","");
+		String token = spf.getString("token","");
 		if("".equals(open_id) || "".equals(token)){
 			never_login_layout.setVisibility(View.VISIBLE);
 			already_login_layout.setVisibility(View.GONE);
@@ -364,9 +364,12 @@ public class PersonalIndex extends BaseFragment implements OnClickListener{
 			startActivity(intent);
 			break;
 		case R.id.friend_layout:
-			Util.toastInfo(context, "我的好友");
-			intent.setClass(context, MyFriendsIndexActivity.class);
-			startActivity(intent);
+			if(is_login == true){
+				intent.setClass(context, MyFriendsIndexActivity.class);
+				startActivity(intent);
+			}else if(is_login == false){
+				Util.toastInfo(context, "请先登录");
+			}
 			break;
 		case R.id.blogger_layout:
 			Util.toastInfo(context, "微博");

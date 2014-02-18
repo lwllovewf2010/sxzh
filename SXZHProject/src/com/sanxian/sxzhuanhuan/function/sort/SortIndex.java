@@ -20,7 +20,9 @@ import android.widget.AdapterView.OnItemClickListener;
 import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.ListView;
+import android.widget.PopupWindow;
 import android.widget.Spinner;
 import android.widget.PopupMenu;
 
@@ -50,6 +52,8 @@ public class SortIndex extends BaseFragment implements OnItemClickListener,
 	private Context context = null;
 	/** 分类列表 */
 	private ListView lvSort = null;
+	private Button sort_cat = null;
+	private Button sort_choose = null;
 	/** 分类适配器 */
 	private SortAdapter sortAdapter = null;
 
@@ -62,6 +66,8 @@ public class SortIndex extends BaseFragment implements OnItemClickListener,
 	private List<ICategory> sortChild = null;
 	private View postLeftView = null;
 	private View postRightView = null;
+	
+	public LinearLayout layout;
 
 	public SortIndex() {
 		super();
@@ -102,6 +108,10 @@ public class SortIndex extends BaseFragment implements OnItemClickListener,
 		spSort = (Button) view.findViewById(R.id.sort_index_head_spinner);
 		ivSearch = (ImageView) view.findViewById(R.id.sort_index_head_search);
 		lvSort = (ListView) view.findViewById(R.id.sort_index_lv);
+		sort_cat = (Button) view.findViewById(R.id.sort_cat);
+		sort_choose = (Button) view.findViewById(R.id.sort_choose);
+		sort_choose.setOnClickListener(this);
+		sort_cat.setOnClickListener(this);
 	}
 
 	/**
@@ -130,6 +140,7 @@ public class SortIndex extends BaseFragment implements OnItemClickListener,
 			if (param.length > 0 && param[1] != null
 					&& param[1] instanceof String) {
 				String jsondata = param[1].toString();
+				System.out.println("jsondata:" + jsondata);   
 				sortParent = JSONParser.getCategory(jsondata);
 
 				for (int i = 0; i < sortParent.size(); i++) {
@@ -197,6 +208,12 @@ public class SortIndex extends BaseFragment implements OnItemClickListener,
 		case R.id.sort_index_head_spinner:
 			onPopupButtonClick(v);
 			break;
+		case R.id.sort_cat:
+			onPopupSortCat(v);
+			break;
+		case R.id.sort_choose:
+//			onPopupSortChoose(v);
+			break;
 		}
 	}
 	
@@ -213,5 +230,27 @@ public class SortIndex extends BaseFragment implements OnItemClickListener,
         });
         popup.show();
     }
+	
+	public void onPopupSortCat(View button){
+		
+	}
+	//R.layout.slidingmenu_sort_right
+	public void onPopupSortChoose(View button){
+		layout = (LinearLayout) LayoutInflater.from(getActivity()).inflate(
+				R.layout.slidingmenu_sort_right, null);
+		PopupWindow popupWindow = new PopupWindow(getActivity());
+		popupWindow
+				.setWidth(getActivity().getWindowManager().getDefaultDisplay().getWidth());
+		popupWindow.setHeight(getActivity().getWindowManager().getDefaultDisplay().getHeight());
+		popupWindow.setAnimationStyle(R.style.PopupWindowAnimation);
+		popupWindow.setOutsideTouchable(true);
+		popupWindow.setFocusable(true);
+		popupWindow.setContentView(layout);
+		// showAsDropDown会把里面的view作为参照物，所以要那满屏幕parent
+		 popupWindow.showAsDropDown(sort_choose, 0, 0);
+//		popupWindow.showAtLocation(findViewById(R.id.main),
+//				Gravity.CENTER_HORIZONTAL, x, y);// 需要指定Gravity，默认情况是center.
+	}
+	
 
 }

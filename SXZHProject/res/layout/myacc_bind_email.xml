@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:background="@color/white"
+    android:background="@color/bg_color"
     android:orientation="vertical" >
 
     <include layout="@layout/title_bar" >
@@ -37,7 +37,8 @@
                 android:layout_height="wrap_content"
                 android:text="@string/bind_email_suggest"
                 style="@style/myaccount_bind_phone_text"
-                android:layout_marginBottom="8dip" />
+                android:layout_marginBottom="8dip"
+                android:visibility="gone" />
 
             <EditText
                 android:id="@+id/input_old_email"
@@ -45,8 +46,8 @@
                 android:layout_height="wrap_content"
                 android:inputType="textEmailAddress"
                 android:hint="@string/input_oldemail_hint"
-                android:textColor="@color/black"
-                android:textSize="17sp" />
+                style="@style/myaccount_bind_phone"
+                android:digits="abcdefghijklmnopqrstuvwxyz.0123456789@"/>
         </LinearLayout>
          
 
@@ -69,14 +70,14 @@
                 android:layout_height="wrap_content"
                 android:hint="@string/input_newemail_hint"
                 android:inputType="textEmailAddress"
-                android:textColor="@color/black"
-                android:textSize="17sp" />
+                style="@style/myaccount_bind_phone"
+                android:digits="abcdefghijklmnopqrstuvwxyz.0123456789@" />
         </LinearLayout>
 
         <Button
             android:id="@+id/send_link_btn"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="50dip"
             android:layout_marginTop="30dip"
             android:gravity="center"
             android:text="@string/send_link_btn"

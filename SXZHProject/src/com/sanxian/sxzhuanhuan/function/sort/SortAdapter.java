@@ -85,7 +85,7 @@ public class SortAdapter extends BaseAdapter{
 		}
 		
 		ICategory sort = sorts.get(position) ;
-		holder.ivSortLogo.setImageDrawable(context.getResources().getDrawable(R.drawable.logo)) ;
+//		holder.ivSortLogo.setImageDrawable(context.getResources().getDrawable(R.drawable.logo)) ;
 		holder.tvSortName.setText(sort.getTitle()) ;
 //		String sortChild = "" ;
 //		for (String s : sort.getSortChild()) {

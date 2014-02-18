@@ -155,7 +155,7 @@ public class ProjectContentActivity extends BaseActivity implements
 		api = new TestAPI();
 		input = new HashMap<String, String>();
 		input.put("proj_id", proID ) ; //Integer.parseInt(proID)) ;
-		input.put("open_id", open_id) ;
+		input.put("open_id", UIHelper.getOpenID(ProjectContentActivity.this) ); //open_id) ; // UIHelper.getOpenID(ProjectContentActivity.this) ;
 		api.operaProjects("get_row", input, ProjectContentActivity.this, Constant.REQUESTCODE.PROJECT_GET_ROW_REQUEST) ; 
 		
 		initContent();
@@ -352,7 +352,7 @@ public class ProjectContentActivity extends BaseActivity implements
 //				tvProjectContentCurMoney.setText(projectInfoDetail.getPurchase_money()) ;
 //				tvProjectContentShenTime.setText(projectInfoDetail.getProject_shentime()) ;  //  substring(0, 10)
 				//test
-				projectInfoDetail.setPurchase_money("100") ;
+//				projectInfoDetail.setPurchase_money("100") ;
 				if(null == projectInfoDetail.getPurchase_money() || (0 == projectInfoDetail.getProject_money()) )
 					pbProjectContentBar.setProgress(0) ;
 				else pbProjectContentBar.setProgress(Integer.parseInt(projectInfoDetail.getPurchase_money()) * 100 / projectInfoDetail.getProject_money() ) ;
@@ -392,7 +392,7 @@ public class ProjectContentActivity extends BaseActivity implements
 			if(null != projectInfoDetail ) {
 				tvProjectDetailName.setText(projectInfoDetail.getProject_name()) ;
 				imageLoader.displayImage(projectInfoDetail.getProject_logo(), ivProjectDetailLogo, options, null);
-				tvProjectDetailContent.setText(Html.fromHtml(projectInfoDetail.getProject_describe())) ;
+				tvProjectDetailContent.setText((null == projectInfoDetail.getProject_describe()) ? "" : Html.fromHtml(projectInfoDetail.getProject_describe())) ;
 			}
 			
 		} else if (3 == PAGE_FALG ) {

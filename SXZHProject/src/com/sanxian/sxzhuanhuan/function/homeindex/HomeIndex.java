@@ -137,7 +137,7 @@ public class HomeIndex extends BaseFragment implements OnClickListener, IXListVi
 
 //		options = UIHelper.setOption();
 		
-		 api.getIndexImgs(HomeIndex.this, Constant.REQUESTCODE.INDEX_IMGS_REQUEST) ; //首页轮播图----
+		api.getIndexImgs(HomeIndex.this, Constant.REQUESTCODE.INDEX_IMGS_REQUEST) ; //首页轮播图----
 
 //		input.put("start", "" + PAGE[SORTID] * PAGESIZE) ;
 //		input.put("pmode", "2") ;

@@ -225,6 +225,7 @@
                 android:layout_marginTop="5dip"
                 android:background="@drawable/big_box"
                 android:gravity="top"
+                android:maxLength="2000"
                 android:scrollbars="vertical"
                 android:singleLine="false"
                 android:textColor="@color/font_gray_black" />

@@ -32,7 +32,6 @@ public class MyAccoBindPhoneActivity extends BaseActivity {
     private Button bind_phone_btn;
     private CommonAPI api = null;
     private final int GET_VERIFY_CODE = 15;
-    private final int RESULTCODE = 15;
     private String type = "";
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -88,7 +87,6 @@ public class MyAccoBindPhoneActivity extends BaseActivity {
 							SharedPreferences.Editor editor = spf.edit() ;
 							editor.putString("mobile",input_newphone_et.getText().toString().trim() ) ;
 							editor.commit() ;
-							setResult(RESULTCODE);
 							finish();
 						}
 					}else if(status == 408){

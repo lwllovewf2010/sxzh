@@ -134,7 +134,7 @@ public class ProjectAdapter extends BaseAdapter implements OnClickListener {
 //		holder.tvProfile.setText(info.getProject_explain()) ;
 		holder.tvProfile.setText(Html.fromHtml(info.getProject_explain()));
 //		holder.ivProgress.setProgress(25) ;
-		info.setPurchase_money("50") ;
+//		info.setPurchase_money("50") ;
 		holder.ivProgress.setProgress(Integer.parseInt(info.getPurchase_money()) * 100 / info.getProject_money() ) ;
 		
 

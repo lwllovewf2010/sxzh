@@ -130,6 +130,7 @@ public class CommonAPI extends BaseAPI{
 	 * 修改登录密码
 	 * 获取个人收货地址列表
 	 * 增加收货地址
+	 * 设置修改支付密码
 	 * joe
 	 * @param type
 	 * @param paramsmap

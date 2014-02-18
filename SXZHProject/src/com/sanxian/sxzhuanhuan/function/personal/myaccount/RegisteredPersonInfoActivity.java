@@ -13,6 +13,9 @@ import android.view.View.OnClickListener;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.nostra13.universalimageloader.core.DisplayImageOptions;
+import com.nostra13.universalimageloader.core.ImageLoader;
+import com.nostra13.universalimageloader.core.display.RoundedBitmapDisplayer;
 import com.sanxian.sxzhuanhuan.R;
 import com.sanxian.sxzhuanhuan.api.CommonAPI;
 import com.sanxian.sxzhuanhuan.api.JSONParser;
@@ -40,17 +43,32 @@ public class RegisteredPersonInfoActivity extends BaseActivity implements OnClic
 	private TextView sex_tv;
 	private String u_open_id = "";//要查询的open_id
 	UserInfo userInfo=new UserInfo();
-
+	private DisplayImageOptions options;
+	protected ImageLoader imageLoader;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.myacc_registered_personinfo);
 		initView();
 		initListener();
+		intImageUtil();
 		initData();
 
 	}
 
+	/**
+	 * 初始化图片加载方法
+	 * joe
+	 */
+	public void intImageUtil() {
+		imageLoader = ImageLoader.getInstance();
+		options = new DisplayImageOptions.Builder()
+				//.showStubImage(R.drawable.denglu_morentouxiang)
+				// .showImageForEmptyUri(R.drawable.denglu_morentouxiang)//uri为空的时候
+				// .showImageOnFail(R.drawable.denglu_morentouxiang)//加载失败的时候
+				//.cacheOnDisc()
+		        .displayer(new RoundedBitmapDisplayer(110)).build();
+	}
 	@Override
 	public void initView() {
 		super.initView();

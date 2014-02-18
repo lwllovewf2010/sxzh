@@ -241,6 +241,7 @@ public class PersonInfoActivity extends BaseActivity implements OnClickListener 
 				if (param.length > 0 && param[1] != null && param[1] instanceof String) {
 					String jsondata = param[1].toString();
 					if (Constant.ResultStatus.RESULT_OK == JSONParser.getReturnFlag(jsondata)) {
+						imageLoader.displayImage(returnAvatarPath, myacc_avatar, options);
 						Util.toastInfo(this, "修改成功");
 						returnAvatarPath = "";
 					} else if (Constant.ResultStatus.RESULT_FAIL == JSONParser.getReturnFlag(jsondata)) {
@@ -448,6 +449,9 @@ public class PersonInfoActivity extends BaseActivity implements OnClickListener 
 		if (requestCode == AREA_REQUESTCODE) {
 
 		}
+		if(resultCode == Constant.RESULT_LOGIN_CODE){ //更新数据
+				initData();
+			}
 	}
 
 	/**
@@ -509,8 +513,8 @@ public class PersonInfoActivity extends BaseActivity implements OnClickListener 
 		Bundle extras = data.getExtras();
 		if (extras != null) {
 			Bitmap photo = extras.getParcelable("data");
-			Drawable drawable = new BitmapDrawable(photo);
-			myacc_avatar.setImageDrawable(drawable);
+//			Drawable drawable = new BitmapDrawable(Util.toRoundCorner(photo, 110));
+//			myacc_avatar.setImageDrawable(drawable);
 			Log.e("qiao ", "原图路径 " + sheariamgepath);
 			if ("".equals(sheariamgepath)) {
 				sheariamgepath = app.sheariamgepath;

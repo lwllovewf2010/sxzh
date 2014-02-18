@@ -2,6 +2,8 @@ package com.sanxian.sxzhuanhuan.function.personal.myaccount;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -10,6 +12,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 
@@ -31,6 +34,7 @@ public class MyAccoSetLoginPWActivity extends BaseActivity {
     private Button save_loginpw;
     private CommonAPI api = null;
     private final int CHANGE_PASSWORD = 25;
+    private Pattern pat = Pattern.compile("^([a-zA-Z0-9]|[._!@#$%^&*~/,|]){6,15}$");
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
@@ -82,12 +86,15 @@ public class MyAccoSetLoginPWActivity extends BaseActivity {
 			String old_passw = old_password.getText().toString().trim();
 			if(old_passw.length() > 0){
 				if(old_passw.length() > 5){
+					Matcher mat = pat.matcher(old_passw);
+					if(mat.find()){
 					String new_passw = new_password.getText().toString().trim();
 					if(new_passw.length() > 0){
 						if(new_passw.length() > 5){
+							Matcher mat1 = pat.matcher(new_passw);
+							if(mat1.find()){
 							String confirm_passw = confirm_new_password.getText().toString().trim();
 							if(confirm_passw.length() > 0){
-								if(confirm_passw.length() > 5){
 									if(new_passw.equals(confirm_passw)){
 										Map<String,String> paramsmap = new HashMap<String, String>();
 					        			paramsmap.put("open_id",open_id);
@@ -98,20 +105,23 @@ public class MyAccoSetLoginPWActivity extends BaseActivity {
 									}else{
 										Util.toastInfo(this,"新密码与确认密码不一致");
 									}
-								}else{
-								  Util.toastInfo(this,"确认新密码长度不够");	
-								}
 							}else{
 								Util.toastInfo(this,"确认密码不能为空");
 							}
+							}else{
+								Util.toastInfo(this,"新密码只允许输入字母数字或字符");
+							}
 						}else{
-						  Util.toastInfo(this,"新密码长度不够");	
+						  Util.toastInfo(this,"新密码长度不符合要求");	
 						}
 					}else{
 						Util.toastInfo(this,"新密码不能为空");
 					}
+					}else{
+						 Util.toastInfo(this,"当前密码只允许输入字母数字或字符");
+				   }
 				}else{
-				  Util.toastInfo(this,"当前密码长度不够");	
+				  Util.toastInfo(this,"当前密码长度不符合要求");	
 				}
 			}else{
 				Util.toastInfo(this,"当前密码不能为空");
@@ -153,11 +163,19 @@ public class MyAccoSetLoginPWActivity extends BaseActivity {
 					e.printStackTrace();
 				}
 			}
+			KeyBoardCancle();
 			break;
 
 		default:
 			break;
 		}
 	}
-
+	// 关闭键盘
+		public void KeyBoardCancle() {
+			View view = getWindow().peekDecorView();
+			if (view != null) {
+				InputMethodManager inputmanger = (InputMethodManager) getSystemService(LoginActivity.INPUT_METHOD_SERVICE);
+				inputmanger.hideSoftInputFromWindow(view.getWindowToken(), 0);
+			}
+		}
 }

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="70dp"
     android:background="@color/transparent"
     android:orientation="vertical" >
     
@@ -12,7 +12,7 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:layout_marginLeft="5dp"
-        android:src="@drawable/ic_launcher" />
+        android:src="@drawable/sort_click_num" />
 	
 	<TextView
         android:id="@+id/sort_tv_name"

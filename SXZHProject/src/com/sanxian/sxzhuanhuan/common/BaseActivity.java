@@ -25,6 +25,7 @@ import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.sanxian.sxzhuanhuan.SApplication;
 import com.sanxian.sxzhuanhuan.R;
+import com.sanxian.sxzhuanhuan.entity.Constant;
 import com.sanxian.sxzhuanhuan.function.login.LoginActivity;
 import com.sanxian.sxzhuanhuan.util.FileUtils;
 import com.sanxian.sxzhuanhuan.util.MD5Util;
@@ -182,7 +183,7 @@ public class BaseActivity extends Activity implements IBaseActivity, OnClickList
 			// app.getLoginUserInfo().setUid("0");
 			// spf.edit().putBoolean("AUTO_ISCHECK", false).commit();
 			Intent intent = new Intent(this, LoginActivity.class);
-			this.startActivity(intent);
+			this.startActivityForResult(intent, Constant.REQUEST_LOGIN_CODE);
 			// for(Activity activity : app.getAllActivity())
 			// {
 			// if(activity.getClass().getName().indexOf("Login") == -1)

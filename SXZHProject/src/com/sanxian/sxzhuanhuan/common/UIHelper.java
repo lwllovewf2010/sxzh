@@ -442,18 +442,18 @@ public class UIHelper {
 	
 	
 	public static DisplayImageOptions setOption() {
-//		DisplayImageOptions options = new DisplayImageOptions.Builder()
-//		.showImageOnLoading(R.drawable.index)
-//		.showImageForEmptyUri(R.drawable.index)
-//		.showImageOnFail(R.drawable.index)
-//		.cacheInMemory(true)
-//		.cacheOnDisc(true)
-//		.considerExifParams(true)
-//		.displayer(new RoundedBitmapDisplayer(20))
-//		.build();
+		DisplayImageOptions options = new DisplayImageOptions.Builder()
+		.showImageOnLoading(R.drawable.index)
+		.showImageForEmptyUri(R.drawable.index)
+		.showImageOnFail(R.drawable.index)
+		.cacheInMemory(true)
+		.cacheOnDisc(true)
+		.considerExifParams(true)
+//		.displayer(new RoundedBitmapDisplayer(20))  
+		.build();
 		
-		DisplayImageOptions options = new DisplayImageOptions.Builder().showStubImage(R.drawable.index)// 加载失败的时候
-				.cacheOnDisc().build();
+//		DisplayImageOptions options = new DisplayImageOptions.Builder().showStubImage(R.drawable.index)// 加载失败的时候
+//				.cacheOnDisc().build();
 		
 		return options ;
 	}

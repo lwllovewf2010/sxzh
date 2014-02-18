@@ -198,8 +198,8 @@ public class JSONParser {
 			object = new JSONObject(jsondata);
 			JSONObject mJSONObject = object.getJSONObject("content");
 			login = new ILogin();
-			System.out.println("open_id:" + mJSONObject.optString("open_id"));
-			System.out.println("token:" + mJSONObject.optString("token"));
+//			System.out.println("open_id:" + mJSONObject.optString("open_id"));
+//			System.out.println("token:" + mJSONObject.optString("token"));
 			login.setOpen_id(mJSONObject.optString("open_id"));
 			login.setToken(mJSONObject.optString("token"));
 			login.setUser_name(mJSONObject.optString("user_name"));
