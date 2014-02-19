@@ -3,7 +3,7 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:orientation="vertical"
-    android:background="@color/white" >
+    android:background="@color/color_efeff4" >
 
     <LinearLayout
         android:id="@+id/linearLayout1"
@@ -12,7 +12,6 @@
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
         android:layout_marginTop="15dp"
-        android:background="@color/ivory"
         android:orientation="vertical" >
 
         <TextView
@@ -23,7 +22,7 @@
             android:text="aaaaaaaa"
             android:layout_marginBottom="5dp"
             android:textColor="#000000"
-            android:textSize="22.0dip" />
+            android:textSize="@dimen/size_18" />
 
         <ImageView
             android:id="@+id/project_detail_iv_prologo"
@@ -46,7 +45,7 @@
             android:gravity="left|center"
             android:text="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
             android:textColor="#000000"
-            android:textSize="22.0dip"/>
+            android:textSize="@dimen/size_14"/>
         </ScrollView>
     </LinearLayout>
 

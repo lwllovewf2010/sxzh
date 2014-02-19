@@ -85,9 +85,6 @@ public class HomeIndex extends BaseFragment implements OnClickListener, IXListVi
 	private TextView tvProject = null;
 	private ImageView ivGoods = null;
 	private TextView tvGoods = null;
-	// private Button btnCreative = null;
-	// private Button btnProject = null;
-	// private Button btnProduct = null;
 	private ArrayList<CreativeInfo> creativeInfos = null;
 	private ArrayList<ProjectInfo> projectInfos = null;
 	private ArrayList<ProductInfo> productInfos = null;
@@ -115,8 +112,6 @@ public class HomeIndex extends BaseFragment implements OnClickListener, IXListVi
 	private void intImageUtil() {
 
 		imageLoader = ImageLoader.getInstance();
-//		options = new DisplayImageOptions.Builder().showStubImage(R.drawable.index)// 加载失败的时候
-//				.cacheOnDisc().build();
 		options = UIHelper.setOption();
 	}
 	@Override
@@ -135,15 +130,8 @@ public class HomeIndex extends BaseFragment implements OnClickListener, IXListVi
 		mainView=view;
 		init(view);
 
-//		options = UIHelper.setOption();
-		
 		api.getIndexImgs(HomeIndex.this, Constant.REQUESTCODE.INDEX_IMGS_REQUEST) ; //首页轮播图----
 
-//		input.put("start", "" + PAGE[SORTID] * PAGESIZE) ;
-//		input.put("pmode", "2") ;
-//		input.put("pagesize", "" + PAGESIZE) ;
-//		api.getCPPData(input, HomeIndex.this, Constant.REQUESTCODE.CREATIVE_LIST_REQUEST) ;  //首页创意
-		
 		return view;
 	}
 
@@ -153,7 +141,6 @@ public class HomeIndex extends BaseFragment implements OnClickListener, IXListVi
 		super.refresh(param);
 
 		int flag = ((Integer) param[0]).intValue();
-		// imgpath:http://192.168.1.9/mobileapi/3.jpg
 		switch (flag) {
 		case Constant.REQUESTCODE.INDEX_IMGS_REQUEST: // 首页轮播图
 			if (param.length > 0 && param[1] != null && param[1] instanceof String) {
@@ -161,9 +148,6 @@ public class HomeIndex extends BaseFragment implements OnClickListener, IXListVi
 				System.out.println(jsondata);
 				indexImgs = JSONParser.getIndexImgs(jsondata);
 
-//				for (int i = 0; i < 3; i++) {
-//					imageLoader.displayImage(indexImgs.get(i).getImgpath(), listImgs.get(i), options, animateFirstListener);
-//				}
 				initViewPager();
 				initDot();
 				taggletHandler.sleep(5000);
@@ -173,7 +157,6 @@ public class HomeIndex extends BaseFragment implements OnClickListener, IXListVi
 
 		case Constant.REQUESTCODE.CREATIVE_LIST_REQUEST: // 首页创意列表
 			if (param.length > 0 && param[1] != null && param[1] instanceof String) {
-				// PAGE[0]++ ;
 				String jsondata = param[1].toString();
 				System.out.println("首页创意列表 :" + jsondata);
 				ArrayList<CreativeInfo> tempCreativeInfo = null;
@@ -354,7 +337,7 @@ public class HomeIndex extends BaseFragment implements OnClickListener, IXListVi
 		searchInput = new HashMap<String, String>();
 
 		for (int i = 0; i < PAGE.length; i++) {
-			PAGE[i] = 0;
+			PAGE[i] = 1;		//点击类别之后已经加载了一次
 		}
 
 		// 初始刷新相关
@@ -429,6 +412,20 @@ public class HomeIndex extends BaseFragment implements OnClickListener, IXListVi
 	}
 
 	/**
+	 * 首页公共的获取数据接口
+	 * @param start
+	 * @param pmode
+	 * @param pagesize
+	 * @param requestCode
+	 */
+	private void getIndexData(String start , String pmode , String pagesize , int requestCode) {
+		input.put("start", start);
+		input.put("pmode", pmode);
+		input.put("pagesize", pagesize);
+		api.getCPPData(input, this, requestCode);
+	}
+	
+	/**
 	 * 设置相关分类的数据信息
 	 * 
 	 * @param flag
@@ -437,27 +434,26 @@ public class HomeIndex extends BaseFragment implements OnClickListener, IXListVi
 	private void initData(int flag) {
 		switch (flag) {
 		case Constant.Sort.SORT_CREATIVE:
-			input.put("start", "" + PAGE[SORTID] * PAGESIZE);
-			input.put("pmode", "2");
-			input.put("pagesize", "" + PAGESIZE);
-			api.getCPPData(input, this, Constant.REQUESTCODE.CREATIVE_LIST_REQUEST);
+			if(null == creativeInfos ) {
+//				input.put("start", "0");
+//				input.put("pmode", "2");
+//				input.put("pagesize", "" + PAGESIZE);
+//				api.getCPPData(input, this, Constant.REQUESTCODE.CREATIVE_LIST_REQUEST);
+				getIndexData("0", "2", "" + PAGESIZE, Constant.REQUESTCODE.CREATIVE_LIST_REQUEST) ;
+			} else {
+				mListView.setAdapter(new CreativeAdapter(getActivity(), creativeInfos));
+			}
 			break;
 		case Constant.Sort.SORT_PROJECT:
 			if (null == projectInfos) {
-				input.put("start", "" + PAGE[SORTID] * PAGESIZE);
-				input.put("pmode", "1");
-				input.put("pagesize", "" + PAGESIZE);
-				api.getCPPData(input, this, Constant.REQUESTCODE.PROJECT_LIST_REQUEST);
+				getIndexData("0", "1", "" + PAGESIZE, Constant.REQUESTCODE.PROJECT_LIST_REQUEST) ;
 			} else {
 				mListView.setAdapter(new ProjectAdapter(getActivity(), projectInfos));
 			}
 			break;
 		case Constant.Sort.SORT_PRODUCT:
 			if (null == productInfos) {
-				input.put("start", "" + PAGE[SORTID] * PAGESIZE);
-				input.put("pmode", "4");
-				input.put("pagesize", "" + PAGESIZE);
-				api.getCPPData(input, this, Constant.REQUESTCODE.PRODUCT_LIST_REQUEST);
+				getIndexData("0", "4", "" + PAGESIZE, Constant.REQUESTCODE.PRODUCT_LIST_REQUEST) ;
 			} else {
 				mListView.setAdapter(new ProductAdapter(getActivity(), productInfos));
 			}
@@ -573,7 +569,6 @@ public class HomeIndex extends BaseFragment implements OnClickListener, IXListVi
 	public void onPause() {
 		// TODO Auto-generated method stub
 		super.onPause();
-		// System.out.println("---HomeIndex    -onPause ------");
 		SharedPreferences spf = getActivity().getSharedPreferences(Constant.PRE_CONFIG_FILE, 0);
 		SharedPreferences.Editor editor = spf.edit();
 		for (int i = 0; i < 3; i++) {
@@ -586,7 +581,6 @@ public class HomeIndex extends BaseFragment implements OnClickListener, IXListVi
 	public void onStart() {
 		// TODO Auto-generated method stub
 		super.onStart();
-		// System.out.println("----HomeIndex     onStart ------");
 		SharedPreferences spf = getActivity().getSharedPreferences(Constant.PRE_CONFIG_FILE, 0);
 		for (int i = 0; i < 3; i++) {
 			refreshTime[i] = spf.getString("refresh_time_" + i, "");
@@ -604,22 +598,17 @@ public class HomeIndex extends BaseFragment implements OnClickListener, IXListVi
 				isDownRefresh = false;
 				switch (SORTID) {
 				case 0:
-					input.put("start", "0");
-					input.put("pmode", "2");
-					input.put("pagesize", "" + (PAGESIZE + PAGE[SORTID] * PAGESIZE));
-					api.getCPPData(input, HomeIndex.this, Constant.REQUESTCODE.CREATIVE_LIST_REQUEST);
+//					input.put("start", "0");
+//					input.put("pmode", "2");
+//					input.put("pagesize", "" + ( PAGE[SORTID] * PAGESIZE));
+//					api.getCPPData(input, HomeIndex.this, Constant.REQUESTCODE.CREATIVE_LIST_REQUEST);
+					getIndexData("0", "2", "" + ( PAGE[SORTID] * PAGESIZE) , Constant.REQUESTCODE.CREATIVE_LIST_REQUEST) ;
 					break;
 				case 1:
-					input.put("start", "0");
-					input.put("pmode", "1");
-					input.put("pagesize", "" + (PAGESIZE + PAGE[SORTID] * PAGESIZE));
-					api.getCPPData(input, HomeIndex.this, Constant.REQUESTCODE.PROJECT_LIST_REQUEST);
+					getIndexData("0", "1", "" + ( PAGE[SORTID] * PAGESIZE) , Constant.REQUESTCODE.PROJECT_LIST_REQUEST) ;
 					break;
 				case 2:
-					input.put("start", "0");
-					input.put("pmode", "4");
-					input.put("pagesize", "" + (PAGESIZE + PAGE[SORTID] * PAGESIZE));
-					api.getCPPData(input, HomeIndex.this, Constant.REQUESTCODE.PRODUCT_LIST_REQUEST);
+					getIndexData("0", "4", "" + ( PAGE[SORTID] * PAGESIZE) , Constant.REQUESTCODE.PRODUCT_LIST_REQUEST) ;
 					break;
 				}
 
@@ -640,22 +629,17 @@ public class HomeIndex extends BaseFragment implements OnClickListener, IXListVi
 				isUpRefresh = false;
 				switch (SORTID) {
 				case 0:
-					input.put("start", "" + PAGE[SORTID] * PAGESIZE);
-					input.put("pmode", "2");
-					input.put("pagesize", "" + PAGESIZE);
-					api.getCPPData(input, HomeIndex.this, Constant.REQUESTCODE.CREATIVE_LIST_REQUEST);
+//					input.put("start", "" + PAGE[SORTID] * PAGESIZE);
+//					input.put("pmode", "2");
+//					input.put("pagesize", "" + PAGESIZE);
+//					api.getCPPData(input, HomeIndex.this, Constant.REQUESTCODE.CREATIVE_LIST_REQUEST);
+					getIndexData("" + PAGE[SORTID] * PAGESIZE, "2", "" + PAGESIZE , Constant.REQUESTCODE.CREATIVE_LIST_REQUEST) ;
 					break;
 				case 1:
-					input.put("start", "" + PAGE[SORTID] * PAGESIZE);
-					input.put("pmode", "1");
-					input.put("pagesize", "" + PAGESIZE);
-					api.getCPPData(input, HomeIndex.this, Constant.REQUESTCODE.PROJECT_LIST_REQUEST);
+					getIndexData("" + PAGE[SORTID] * PAGESIZE, "1", "" + PAGESIZE , Constant.REQUESTCODE.PROJECT_LIST_REQUEST) ;
 					break;
 				case 2:
-					input.put("start", "" + PAGE[SORTID] * PAGESIZE);
-					input.put("pmode", "4");
-					input.put("pagesize", "" + PAGESIZE);
-					api.getCPPData(input, HomeIndex.this, Constant.REQUESTCODE.PRODUCT_LIST_REQUEST);
+					getIndexData("" + PAGE[SORTID] * PAGESIZE, "4", "" + PAGESIZE , Constant.REQUESTCODE.PRODUCT_LIST_REQUEST) ;
 					break;
 
 				}

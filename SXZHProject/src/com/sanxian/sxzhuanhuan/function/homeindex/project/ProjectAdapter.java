@@ -94,11 +94,11 @@ public class ProjectAdapter extends BaseAdapter implements OnClickListener {
 			holder = (ViewHolder) convertView.getTag();
 		}
 
+		options = UIHelper.setOption() ;
+		
 		projectInfo = (ProjectInfo) infos.get(position);
 		setData(holder, projectInfo);
 
-		options = UIHelper.setOption() ;
-		
 		convertView.setOnClickListener(this);
 		return convertView;
 	}
