@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="10dp"
+    android:background="@color/color_efeff4"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="#f8f8ff"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp" >
+
+        <ImageView
+            android:id="@+id/discuss_hall_join_iv"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/my_tribe" />
+
+        <TextView
+            android:id="@+id/discuss_hall_join_title"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_toRightOf="@id/discuss_hall_join_iv"
+            android:text="待参与信息"
+            android:textColor="@color/color_000000"
+            android:textSize="@dimen/size_16" />
+
+        <ImageView
+            android:id="@+id/discuss_hall_join_iv_joined"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/ongoing" />
+
+        <TextView
+            android:id="@+id/discuss_hall_join_pubname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/discuss_hall_join_title"
+            android:layout_toRightOf="@id/discuss_hall_join_iv"
+            android:text="赵钱孙"
+            android:textColor="@color/color_000000"
+            android:textSize="@dimen/size_12" />
+
+        <TextView
+            android:id="@+id/discuss_hall_join_pubtime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/discuss_hall_join_title"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@id/discuss_hall_join_pubname"
+            android:text="发起于 2014-02-21 09:00"
+            android:textColor="@color/color_000000"
+            android:textSize="@dimen/size_12" />
+
+        <LinearLayout
+            android:id="@+id/temp_ll_02"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/discuss_hall_join_pubname"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@id/discuss_hall_join_iv"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:id="@+id/discuss_hall_join_iv_going"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ongoing" />
+
+            <TextView
+                android:id="@+id/discuss_hall_join_surplustime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="剩余：13小时12分"
+                android:textColor="@color/color_000000"
+                android:textSize="@dimen/size_12" />
+            
+            <TextView
+                android:id="@+id/discuss_hall_join_endtime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="结束时间： 2014-02-23 13小时12分"
+                android:background="@color/red"
+                android:textColor="@color/color_000000"
+                android:textSize="@dimen/size_12" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/temp_rl_tc_1"
+        android:layout_width="fill_parent"
+        android:layout_height="20dp" />
+    
+</LinearLayout>

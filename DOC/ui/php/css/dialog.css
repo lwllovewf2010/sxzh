@@ -42,7 +42,7 @@
 	margin:0 10px;
 }
 /* 弹出框 */
-#pop,#pop-alert{
+#pop,#pop-alert,.pop-alert{
 	background-color: #FFFFFF;
     border-radius: 10px;
     box-shadow: 0 0 25px 5px #999999;
@@ -52,39 +52,38 @@
     min-width:335px;
     padding: 25px;
 }
-#pop-alert{
+#pop-alert,.pop-alert{
 	padding:0;
 	border:1px solid #ccc;
 	border-radius:0;
 }
-#pop-alert .alert-title{
+#pop-alert .alert-title,.pop-alert .alert-title{
 	background-color:#f8f8f8;
 	height:42px;
 	line-height:42px;
-	position:relative;
 	padding-left:20px;
 }
-#pop-alert .button.b-close{
+#pop-alert .button.b-close,.pop-alert .button.b-close{
 	position:absolute;
 	top:0px;
 	right:10px;
 }
-#pop-alert .btn-cancel,#pop-alert .btn-false{
+#pop-alert .btn-cancel,#pop-alert .btn-false,.pop-alert .btn-fff{
 	margin-left:10px;
 }
-#pop-alert .main-box{
+#pop-alert .main-box,.pop-alert .main-box{
 	width:438px;
 	padding-top:50px;
 	padding-left:30px;
 	padding-right:30px;
 }
-#pop-alert .main-text{
+#pop-alert .main-text,.pop-alert .main-text{
 	margin-bottom:50px;
 }
-#pop-alert h2{
+#pop-alert h2,.pop-alert h2{
 	font-weight:bold;
 }
-#pop-alert i.icon-1{
+#pop-alert i.icon-1,.pop-alert i.icon-1{
 	float:none;
 	display:inline-block;
 	*display:inline;

@@ -98,8 +98,8 @@
   
   <!-- 我的项目 -->
   <string name="all_project">全部</string>
-  <string name="i_tart">我发起</string>
-  <string name="i_join">我参与</string>
+  <string name="i_start">我发起的</string>
+  <string name="i_join">我参与的</string>
   <string name="preheat_project">预热中的创意</string>
   <string name="ongoing_project">进行中的项目</string>
   <string name="ucce_project">已成功的项目</string>

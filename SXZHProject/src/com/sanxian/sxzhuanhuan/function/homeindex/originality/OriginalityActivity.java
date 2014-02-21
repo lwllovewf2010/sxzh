@@ -12,7 +12,9 @@ import org.json.JSONObject;
 import com.sanxian.sxzhuanhuan.R;
 import com.sanxian.sxzhuanhuan.api.HomeIndexGoodsAPI;
 import com.sanxian.sxzhuanhuan.common.BaseActivity;
+import com.sanxian.sxzhuanhuan.entity.CommentInfo;
 import com.sanxian.sxzhuanhuan.entity.OriginalityItemDetails;
+import com.sanxian.sxzhuanhuan.entity.ProjectInfo;
 import com.sanxian.sxzhuanhuan.function.homeindex.PublishComment;
 import com.sanxian.sxzhuanhuan.function.homeindex.project.ScUtil;
 import com.sanxian.sxzhuanhuan.util.Util;
@@ -30,6 +32,7 @@ import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ListView;
 import android.widget.PopupMenu;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -52,12 +55,15 @@ public class OriginalityActivity extends BaseActivity implements OnClickListener
 	WebView topic_content_describe_text;
 	Button topic_content_button;
 	Button spinner;
+	ListView lv_topic_comment_list;
 	
 	private HomeIndexGoodsAPI api = null;
 	private final int REQUESTCODE = 12;
 	private OriginalityItemDetails originalityItem = new OriginalityItemDetails();
 	String creativeID;
 	final String mimeType = "text/html";
+	
+	private ArrayList<CommentInfo> commentInfo = null;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -96,6 +102,9 @@ public class OriginalityActivity extends BaseActivity implements OnClickListener
 		//初始化发表评论按钮
 		Button butCommnet=(Button)topicComment.findViewById(R.id.topic_content_comment_publish_but);
 		spinner=(Button)topicComment.findViewById(R.id.topic_content_commnent_publish_order_type);
+		lv_topic_comment_list=(ListView)topicComment.findViewById(R.id.topic_content_comment_list);
+		//临时措施
+		lv_topic_comment_list.setAdapter(new OrgCommentAdapter(this, commentInfo));
 		spinner.setOnClickListener(this);
 		
 		butCommnet.setOnClickListener(this);

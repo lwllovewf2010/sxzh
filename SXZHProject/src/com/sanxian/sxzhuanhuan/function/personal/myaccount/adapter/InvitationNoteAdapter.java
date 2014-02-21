@@ -75,7 +75,15 @@ public class InvitationNoteAdapter extends BaseAdapter {
 		holder.invitation_name.setText(list.get(position).getInvite_name());
 		holder.invitation_phone.setText(list.get(position).getInvite_phone());
 		holder.invitation_time.setText(list.get(position).getInvite_time());
-		holder.invitation_status.setText(list.get(position).getInvite_status());
+		String status = list.get(position).getInvite_status().trim();
+		//0未注册 1已注册 2邀请已过期
+		if("0".equals(status)){
+			holder.invitation_status.setText("未注册");
+		}else if("1".equals(status)){
+			holder.invitation_status.setText("已注册");
+		}else{
+			holder.invitation_status.setText("邀请已过期");
+		}
 		holder.invitation_look_data.setOnClickListener(new ClickListener(position));
 		return convertView;
 	}

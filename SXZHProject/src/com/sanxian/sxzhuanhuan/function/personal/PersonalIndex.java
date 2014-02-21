@@ -359,9 +359,12 @@ public class PersonalIndex extends BaseFragment implements OnClickListener{
 			Util.toastInfo(context, "微信");
 			break;
 		case R.id.collection_layout:
-			Util.toastInfo(context, "我的收藏");
-			intent.setClass(context, MyCollectionIndexActivity.class);
-			startActivity(intent);
+			if(is_login == true){
+				intent.setClass(context, MyCollectionIndexActivity.class);
+				startActivity(intent);
+			}else if(is_login == false){
+				Util.toastInfo(context, "请先登录");
+			}
 			break;
 		case R.id.friend_layout:
 			if(is_login == true){

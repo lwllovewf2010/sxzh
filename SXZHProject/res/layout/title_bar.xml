@@ -12,22 +12,20 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="7dip"
-        android:orientation="vertical"
+        android:orientation="horizontal"
         android:layout_weight="2.0"
         android:textSize="15sp" >
-
         <Button
             android:id="@+id/title_Left"
             android:layout_width="wrap_content"
-            android:layout_height="34.5dip"
-            android:background="@drawable/titlebar_left_btn_selector"
+            android:layout_height="wrap_content"
+            android:background="@drawable/back_icon"
             android:gravity="center"
             android:paddingLeft="18dp"
             android:paddingRight="10dp"
-            android:paddingBottom="2dp"
-            android:text="返回"
+            android:text=""
             android:textColor="@color/white"
-            android:textSize="16sp" />
+            android:textSize="21.0sp" />
 
     </LinearLayout>
 
@@ -70,11 +68,11 @@
             android:id="@+id/title_right"
             android:layout_width="wrap_content"
             android:layout_height="34.5dip"
-            android:background="@drawable/titlebar_right_btn_selector"
+            android:background="@null"
             android:gravity="center"
             android:text="确定"
             android:textColor="@color/white"
-            android:textSize="16sp"
+            android:textSize="21.0sp"
             android:paddingLeft="11.4dp"
             android:paddingRight="11dp" />
     </LinearLayout>

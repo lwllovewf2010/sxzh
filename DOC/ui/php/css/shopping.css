@@ -134,6 +134,9 @@
 #company_name{
 	margin-left:10px;
 }
+.invoice-list #company_name{
+	display:none;
+}
 .product-info{
 	padding-left:20px;
 }
@@ -154,7 +157,20 @@
 .table-box .btn-btn{
 	font-size:14px;
 	padding:2px 10px;
-	margin-top:20px;
+}
+.table-box .btn-btn.btn-contact{
+	margin:0 20px;
+}
+input[name='shop-item']{
+	margin-right:10px;
+}
+table.item-car th.tlt a{
+	font-weight:normal;
+	color:#3277B1;
+} 
+.tr-discount td.trt{
+	background-color:#F9F9F9;
+	text-align:right;
 }
 #form-submit td{
 	margin-top:20px;
@@ -171,7 +187,7 @@
 	font-size:15px;
 	color:#24292c;
 }
-.form-submit-box h2 em{
+.form-submit-box h2 em,.form-submit-box h2 em i{
 	color:#ff6600;
 }
 .icon-submit,.icon-add,.icon-buy{
@@ -204,6 +220,10 @@
 }
 .form-submit-box .btn-sub-b{
 	padding:4px 42px;
+}
+/*兼容addressHas页面表单提交按钮*/
+.form-submit-box button.btn-sub-b {
+   *padding: 2px 21px;
 }
 /* 确认收货地址 */
 #address-show .address-list{
@@ -289,7 +309,7 @@ th.car-all{
 	padding-right:25px;
 	font-size:15px;
 }
-th.car-all em{
+th.car-all em,th.car-all em i{
 	color:#ff6600;
 }
 /* 选项卡 */
@@ -317,6 +337,8 @@ th.car-all em{
 #tabs li.active a{
 	border-bottom:1px solid #fff;
 	margin-bottom:-1px;
+    /*兼容IE7的margin*/
+	zoom: 1;
 }
 .div-tabs{
 	border:1px solid #ddd;
@@ -569,11 +591,7 @@ input#pay_pwd{
 	padding:4px;
 	width:200px;
 }
-.forget-pwd{
-	color:#3277b1;
-	margin-left:20px;
-}
-.filter-slide-box,.invoice-list{
+.filter-slide-box,#form-invoice{
 	display:none;
 }
 #pay-main span.no-active{

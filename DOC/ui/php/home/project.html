@@ -151,7 +151,7 @@
 							<div class="div-select-box fr">
 								<!-- 下拉选择框 -->
 								<div class="select-box active">
-									<div class="select-div"><em>项目种类</em><span></span></div>
+									<div class="select-div"><label class="fl"><em>项目种类</em></label><span></span></div>
 									<div class="option-box hiden">
 										<ul>
 											<li>项目种类1</li>
@@ -163,7 +163,7 @@
 								<!--End 下拉选择框 -->
 								<!-- 下拉选择框 -->
 								<div class="select-box">
-									<div class="select-div"><em>发布时间</em><span></span></div>
+									<div class="select-div clearfix"><label class="fl"><em>发布时间</em></label><span></span></div>
 									<div class="option-box hiden">
 										<ul>
 											<li>项目种类1</li>
@@ -175,7 +175,7 @@
 								<!--End 下拉选择框 -->
 								<!-- 下拉选择框 -->
 								<div class="select-box">
-									<div class="select-div"><em>项目状态</em><span></span></div>
+									<div class="select-div"><label class="fl"><em>项目状态</em></label><span></span></div>
 									<div class="option-box hiden">
 										<ul>
 											<li>项目种类1</li>
@@ -191,6 +191,9 @@
 					<!-- table列表 -->
 					<div class="table-div bg-fff">
 						<table class="table-box">
+						<colgroup>
+							<col width="200px"></col>
+						</colgroup>
 							<thead>
 								<tr>
 									<th width="200px">项目名称</th>
@@ -322,6 +325,7 @@
 					<!-- table列表 -->
 					<!-- 分页 -->
 					<div class="clearfix" id="page">
+					    <div class="fl">
 						<span class="page-num">
 							<a class="curr" href="#">1</a>
 							<a href="#">2</a>
@@ -334,6 +338,7 @@
 						</span>
 						<span class="m-span">共计12页</span>
 						<span>到第<input type="text" id="page_num" name="page_num">页</span>
+						</div>
 						<div class="page-btns fr">
 							<a class="btn prev" href="javascript:;">上一页</a>
 							<a class="btn next" href="javascript:;">下一页</a>

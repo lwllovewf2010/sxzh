@@ -36,6 +36,9 @@ import com.sanxian.sxzhuanhuan.R;
 import com.sanxian.sxzhuanhuan.TestAPIActivity;
 import com.sanxian.sxzhuanhuan.WelViewPagerActivity;
 import com.sanxian.sxzhuanhuan.entity.Constant;
+import com.sanxian.sxzhuanhuan.function.discusshall.DiscussJoinActivity;
+import com.sanxian.sxzhuanhuan.function.discusshall.DiscussVoteActivity;
+import com.sanxian.sxzhuanhuan.function.discusshall.TopicDetailActivity;
 import com.sanxian.sxzhuanhuan.function.homeindex.goods.GoodsContentActivity;
 import com.sanxian.sxzhuanhuan.function.homeindex.project.ProjectContentActivity;
 import com.sanxian.sxzhuanhuan.function.login.InviteInfoActivity;
@@ -465,8 +468,60 @@ public class UIHelper {
 		return spf.getString("open_id", "") ;
 	}
 	
+	/**
+	 * 进入到会话详情页
+	 * @param activity
+	 * @param topicID
+	 */
+	public static void showTopicDetailActivity(Activity activity , String topicID) {
+		Intent intent = new Intent(activity, TopicDetailActivity.class);
+		intent.putExtra("topic_id", topicID) ;
+		activity.startActivity(intent);
+	}
 	
+	public static void showTopicDetailActivity(Context context , String topicID) {
+		Intent intent = new Intent(context, TopicDetailActivity.class);
+		intent.putExtra("topic_id", topicID) ;
+		intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+		context.startActivity(intent);
+	}
 	
+	/**
+	 * 进入到投票页
+	 * @param activity
+	 * @param topicID
+	 */
+	public static void showDiscussVoteActivity(Activity activity , String topicID , int flag) {
+		Intent intent = new Intent(activity, DiscussVoteActivity.class);
+		intent.putExtra("topic_id", topicID) ;
+		intent.putExtra("choice_flag", flag) ;
+		activity.startActivity(intent);
+	}
+	public static void showDiscussVoteActivity(Context context , String topicID , int flag) {
+		Intent intent = new Intent(context, DiscussVoteActivity.class);
+		intent.putExtra("topic_id", topicID) ;
+		intent.putExtra("choice_flag", flag) ;
+		intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+		context.startActivity(intent);
+	}
+	
+	/**
+	 * 进入到待参与信息
+	 * @param activity
+	 * @param topicID
+	 */
+	public static void showDiscussJoinActivity(Activity activity , String projectID) {
+		Intent intent = new Intent(activity, DiscussJoinActivity.class);
+		intent.putExtra("project_id", projectID) ;
+		activity.startActivity(intent);
+	}
+	
+	public static void showDiscussJoinActivity(Context context , String projectID) {
+		Intent intent = new Intent(context, DiscussJoinActivity.class);
+		intent.putExtra("project_id", projectID) ;
+		intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+		context.startActivity(intent);
+	}
 	
 	
 	

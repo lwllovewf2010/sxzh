@@ -1,4 +1,4 @@
-body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, fieldset, lengend, button, input, textarea, th, td {
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, fieldset, lengend, button, input, textarea, th, td,form{
     margin: 0;
     padding: 0;
 }
@@ -11,6 +11,7 @@ h1 {
 }
 h2 {
     font-size: 16px;
+    *line-height: 24px;
 }
 h3 {
     font-size: 14px;
@@ -110,7 +111,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 	height:35px;
  }
 .table-box, .table-box th, .table-box td {
-    border: 1px solid #ddd;
+    border: 1px solid #e9e9e9;
 }
 .table-box th, .table-box td {
     padding: 5px;
@@ -122,4 +123,42 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 }
 .table-box em.status3{
 	color:#a9a9a9;
+}
+/* 表单验证 */
+.input-block{
+	height:30px;
+	line-height:30px;
+	padding:4px;
+	border:1px solid #ddd;
+	width:270px;
+	margin:0 auto;
+	margin-right:5px;
+}
+.input-block:focus,.txt-ip:focus,textarea:focus{
+	border-color:#7DB633;
+}
+.error-div{
+	line-height:35px;
+	height:35px;
+	color:#F00;
+	text-align:center;
+}
+.warning{
+	border:1px solid #f00;
+}
+em.error{
+	background: url("../images/error.png") no-repeat scroll 0 10px;
+    color: #B0B0B0;
+    display: inline-block;
+	*display:inline;
+	zoom:1;
+    margin-left: 5px;
+    padding-left: 23px;
+    vertical-align: middle;
+}
+#showImg{
+	/* display:none; */
+}
+#company-home .btn-btn.btn-disabled,#company-home .btn-sub.btn-disabled,#company-home .btn-sub-b.btn-disabled{
+	background-color:#ccc;
 }

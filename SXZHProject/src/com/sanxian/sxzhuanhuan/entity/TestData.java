@@ -165,4 +165,8 @@ public class TestData {
 		}
 		return userinfos ;
 	}
+	
+	public static void initTopicHallData() {
+		
+	}
 }

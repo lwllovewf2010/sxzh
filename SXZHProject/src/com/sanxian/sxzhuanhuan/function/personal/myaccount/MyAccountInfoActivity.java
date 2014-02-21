@@ -31,6 +31,7 @@ public class MyAccountInfoActivity extends BaseActivity implements OnClickListen
 	private RelativeLayout set_passw_layout,certify_name_layout,certify_phone_layout,certify_email_layout,preson_address_layout,set_pay_passw_layout;
 	private TextView phone_number,email_number,certify_number,certify_phone_table,certify_email_table,certify_table;//手机号码，邮箱,实名认证;已绑定（手机号码，邮箱,实名认证）标签
 	private String email = "";
+	private String mobile = "";
 	private final int RESULT_BIND_CODE = 15;
 	private CommonAPI api = null;
 	private final int GETACCOUNTINFO = 22;
@@ -123,7 +124,7 @@ public class MyAccountInfoActivity extends BaseActivity implements OnClickListen
 //						String user_name = object.optString("user_name");
 						String id_card = object.optString("id_card");
 						email = object.optString("email");
-						String mobile = object.optString("mobile");
+						mobile = object.optString("mobile");
 						String isset_paypwd = object.optString("isset_paypwd");
 						if("0".equals(isset_paypwd)){
 							is_set_paypw = false;
@@ -187,6 +188,11 @@ public class MyAccountInfoActivity extends BaseActivity implements OnClickListen
 			break;
 		case R.id.certify_phone_layout:
 			Intent bindphone = new Intent(MyAccountInfoActivity.this,MyAccoBindPhoneActivity.class);
+			if(mobile.length() == 0){
+				bindphone.putExtra("bindtype","bind");
+				}else{
+				bindphone.putExtra("bindtype","modify");
+				}
 			startActivityForResult(bindphone,RESULT_BIND_CODE);
 			break;
 		case R.id.certify_email_layout:

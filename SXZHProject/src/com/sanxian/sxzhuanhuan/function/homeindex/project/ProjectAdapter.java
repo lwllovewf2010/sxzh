@@ -128,6 +128,7 @@ public class ProjectAdapter extends BaseAdapter implements OnClickListener {
 
 	private void setData(ViewHolder holder, ProjectInfo info) {
 		holder.tvName.setText(info.getProject_name());
+		System.out.println("project_logo:" + info.getProject_logo());
 		imageLoader.displayImage(info.getProject_logo(),holder.ivLogo, options, null);
 		
 //		holder.tvProfile.setText(Html.fromHtml(info.getProject_describe()));

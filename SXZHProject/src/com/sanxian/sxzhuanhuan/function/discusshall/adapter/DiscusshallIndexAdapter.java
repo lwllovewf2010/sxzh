@@ -1,11 +1,13 @@
 package com.sanxian.sxzhuanhuan.function.discusshall.adapter;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.View.OnClickListener;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -13,44 +15,45 @@ import android.widget.TextView;
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.sanxian.sxzhuanhuan.R;
+import com.sanxian.sxzhuanhuan.common.UIHelper;
 import com.sanxian.sxzhuanhuan.entity.DiscusshallInfo;
-import com.sanxian.sxzhuanhuan.function.personal_microbank.adapter.MicroBankIndexAdapter;
 
-public class DiscusshallIndexAdapter extends BaseAdapter {
-	private Context context;
-	private List<DiscusshallInfo> list;
+/**
+ * @Title: DiscusshallIndexAdapter.java
+ * @Package com.sanxian.sxzhuanhuan.function.discusshall.adapter.DiscusshallIndexAdapter
+ * @Description: 讨论大厅首页数据
+ * @author zhangfl@sanxian.com
+ * @date 2014-2-20 下午3:27:42
+ * @version V1.0
+ */
+public class DiscusshallIndexAdapter extends BaseAdapter implements OnClickListener {
+	private Context context = null ;
+	private List<DiscusshallInfo> infos;
+	private DiscusshallInfo disInfo ;
 	private LayoutInflater mInflater;
-	
-	
-	
 	private DisplayImageOptions options;
-	protected ImageLoader imageLoader ;
+	protected ImageLoader imageLoader = ImageLoader.getInstance();;
 
-	public DiscusshallIndexAdapter(Context context, List<DiscusshallInfo> comcardsList) {
-		this.context = context;
-		this.list = comcardsList;
-		this.mInflater = LayoutInflater.from(context);
-		this.intImageUtil();
+	public DiscusshallIndexAdapter(Context context,
+			List<DiscusshallInfo> infos) {
+		this.context = context ;
+		if (infos != null)
+			this.infos = infos;
+		else
+			this.infos = new ArrayList<DiscusshallInfo>();
+		
+		System.out.println("--" + infos.size());
+		mInflater = LayoutInflater.from(context);
 	}
 
-	private  void intImageUtil(){
-		 imageLoader = ImageLoader.getInstance();
-		 options = new DisplayImageOptions.Builder()
-//		.showStubImage(R.drawable.default_ico)
-//		.showImageForEmptyUri(R.drawable.default_ico)//uri为空的时候
-//		.showImageOnFail(R.drawable.default_ico)//加载失败的时候
-		.cacheOnDisc()
-		.build();		
-	}
-	
 	@Override
 	public int getCount() {
-		return list.size();
+		return infos.size();
 	}
 
 	@Override
 	public Object getItem(int position) {
-		return list.get(position);
+		return infos.get(position);
 	}
 
 	@Override
@@ -60,34 +63,59 @@ public class DiscusshallIndexAdapter extends BaseAdapter {
 
 	@Override
 	public View getView(int position, View convertView, ViewGroup parent) {
-
-		Holder holder;
-		DiscusshallInfo entity = list.get(position);
+		ViewHolder holder = null;
 		if (convertView == null) {
 			convertView = mInflater.inflate(R.layout.discusshall_index_item, null);
-			   holder = new Holder();
-               holder.avatarIV = (ImageView)convertView.findViewById(R.id.message_index_avatar);
-               holder.titleTV = (TextView)convertView.findViewById(R.id.message_index_title);
-               holder.contentTV = (TextView)convertView.findViewById(R.id.message_index_content);
-               holder.datelineTV = (TextView)convertView.findViewById(R.id.message_index_dateline);
-               convertView.setTag(holder);
+			holder = new ViewHolder();
+			init(convertView, holder);
+			convertView.setTag(holder);
 		} else {
-			holder = (Holder) convertView.getTag();
+			holder = (ViewHolder) convertView.getTag();
 		}
-		imageLoader.displayImage(entity.getAvatar(), holder.avatarIV, options);
+
+		options = UIHelper.setOption() ;
+		
+		disInfo = (DiscusshallInfo) infos.get(position);
+		setData(holder, disInfo);
+
+		convertView.setOnClickListener(this);
 		return convertView;
 	}
+	
+	private void init(View convertView, ViewHolder holder) {
+		holder.disTitle = (TextView) convertView.findViewById(R.id.dis_index_tv_distitle) ;
+		holder.lastTime = (TextView) convertView.findViewById(R.id.dis_index_tv_lasttime) ;
+		holder.disCount = (TextView) convertView.findViewById(R.id.dis_index_tv_discount) ;
+		holder.disLogo = (ImageView) convertView.findViewById(R.id.dis_index_iv_dislogo) ;
+		holder.lastDis = (TextView) convertView.findViewById(R.id.dis_index_tv_lastdis) ;
+	}
+	
+	private void setData(ViewHolder holder, DiscusshallInfo disInfo) {
+		holder.disTitle.setText(disInfo.getDisTitle()) ;
+		holder.lastTime.setText(disInfo.getLastTime()) ;
+		holder.disCount.setText(disInfo.getDisCount()) ;
+		imageLoader.displayImage(disInfo.getDisLogo() , holder.disLogo, options, null);
+		holder.lastDis.setText(disInfo.getLastDis()) ;
+		
+		holder.topicID = disInfo.getId() ;
+	}
 
+	class ViewHolder {
+		public TextView disTitle;
+		public TextView lastTime;
+		public TextView disCount;
+		public ImageView disLogo;
+		public TextView lastDis;
 
-    class Holder {
-        ImageView avatarIV;
+		public String topicID ;
+	}
 
-        TextView titleTV;
-
-        TextView contentTV;
-
-        TextView datelineTV;
-
-
-    }
+	/* (non-Javadoc)
+	 * @see android.view.View.OnClickListener#onClick(android.view.View)
+	 */
+	@Override
+	public void onClick(View v) {
+		// TODO Auto-generated method stub
+		UIHelper.showTopicDetailActivity(context, ((ViewHolder)v.getTag()).topicID) ;
+	}
 }

@@ -158,6 +158,22 @@
         </activity>
         
         <activity
+            android:name="com.sanxian.sxzhuanhuan.function.discusshall.TopicDetailActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.sanxian.sxzhuanhuan.function.discusshall.DiscussJoinActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.sanxian.sxzhuanhuan.function.discusshall.DiscussVoteActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" >
+        </activity>
+        
+        <activity
             android:name="com.sanxian.sxzhuanhuan.TestAPIActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait" >

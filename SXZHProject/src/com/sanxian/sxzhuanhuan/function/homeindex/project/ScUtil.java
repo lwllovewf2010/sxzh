@@ -3,6 +3,7 @@ package com.sanxian.sxzhuanhuan.function.homeindex.project;
 import java.util.List;
 
 import com.sanxian.sxzhuanhuan.R;
+import com.sanxian.sxzhuanhuan.common.CommonHeader;
 
 import android.app.Activity;
 import android.graphics.BitmapFactory;
@@ -28,8 +29,6 @@ import android.widget.TextView;
  */
 public class ScUtil {
 
-	// ViewPager是google SDk中自带的一个附加包的一个类，可以用来实现屏幕间的切换。
-	// android-support-v4.jar
 	private ViewPager mPager;// 页卡内容
 	private List<View> listViews; // Tab页面列表
 	private ImageView cursor;// 动画图片
@@ -38,12 +37,19 @@ public class ScUtil {
 	private int currIndex = 0;// 当前页卡编号
 	private int bmpW;// 动画图片宽度
 	private Activity content;
-
+	private CommonHeader commonHeader = null ;
 	public ScUtil(Activity activity) {
 		content = activity;
 	}
 
-	public void showSc(String text1Name, String text2Name, List<View> list) {
+	public void showSc(String text1Name, String text2Name, List<View> list ) {
+		InitTextView(text1Name, text2Name);
+		InitViewPager(list);
+		InitImageView();
+	}
+	
+	public void showSc(String text1Name, String text2Name, List<View> list , CommonHeader commonHeader) {
+		this.commonHeader = commonHeader ;
 		InitTextView(text1Name, text2Name);
 		InitViewPager(list);
 		InitImageView();
@@ -176,6 +182,8 @@ public class ScUtil {
 			Animation animation = null;
 			switch (arg0) {
 			case 0:
+				if(null != commonHeader) 
+					commonHeader.show(true, true , "返回", true, t1.getText().toString(), false , "" , false) ;
 				if (currIndex == 1) {
 					animation = new TranslateAnimation(two, 0, 0, 0);
 				}
@@ -184,6 +192,8 @@ public class ScUtil {
 				// }
 				break;
 			case 1:
+				if(null != commonHeader) 
+					commonHeader.show(true, true , "返回", true, t2.getText().toString(), false , "" , false) ;
 				if (currIndex == 0) {
 					animation = new TranslateAnimation(offset, one, 0, 0);
 				}

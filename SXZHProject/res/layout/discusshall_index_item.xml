@@ -2,75 +2,82 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
-    android:paddingBottom="8dp" >
+    android:background="@color/color_efeff4" >
 
-    <FrameLayout
-        android:id="@+id/message_index_framelayout"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp" >
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="10dp"
+        android:background="#f8f8ff"
+        android:layout_below="@id/temp_rl_tc_1" >
 
-        <RelativeLayout
+        <TextView
+            android:id="@+id/dis_index_tv_distitle"
             android:layout_width="fill_parent"
-            android:layout_height="fill_parent" >
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:maxLines="1"
+            android:text="NewsZeit - Google Reader 的完美替代"
+            android:textColor="@color/color_444a4d"
+            android:textSize="@dimen/size_20" />
 
-            <ImageView
-                android:id="@+id/message_index_avatar"
-                android:layout_width="48dp"
-                android:layout_height="48dp"
-                android:background="@drawable/default_avatar"
-                android:layout_alignParentBottom="true"
-                android:scaleType="centerCrop" />
+        <TextView
+            android:id="@+id/dis_index_tv_lasttime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/dis_index_tv_distitle"
+            android:layout_marginTop="5dp"
+            android:text="2014-02-20"
+            android:textColor="@color/color_444a4d"
+            android:textSize="@dimen/size_14" />
 
-            <TextView
-                android:id="@+id/message_index_count"
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentTop="true"
-                android:gravity="center"
-                android:paddingBottom="2dp"
-                android:textColor="@color/white"
-                android:textSize="11sp"
-                android:visibility="invisible" />
-        </RelativeLayout>
-    </FrameLayout>
+        <TextView
+            android:id="@+id/dis_index_tv_discount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/dis_index_tv_distitle"
+            android:layout_marginTop="5dp"
+            android:text="1234"
+            android:textColor="@color/color_444a4d"
+            android:textSize="@dimen/size_14" />
 
+        <ImageView
+            android:id="@+id/dis_index_iv_dis"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/dis_index_tv_distitle"
+            android:layout_marginTop="5dp"
+            android:layout_toLeftOf="@id/dis_index_tv_discount"
+            android:src="@drawable/finish" />
+
+        <ImageView
+            android:id="@+id/dis_index_iv_dislogo"
+            android:layout_width="140dp"
+            android:layout_height="70dp"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/dis_index_tv_discount"
+            android:src="@drawable/index" />
+
+        <TextView
+            android:id="@+id/dis_index_tv_lastdis"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/dis_index_iv_dislogo"
+            android:layout_marginLeft="15dp"
+            android:layout_toRightOf="@id/dis_index_iv_dislogo"
+            android:gravity="left|center"
+            android:maxLines="4"
+            android:text="这是一段详这是一段详详"
+            android:textSize="@dimen/size_14" />
+    </RelativeLayout>
+    
     <TextView
-        android:id="@+id/message_index_title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/message_index_framelayout"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_toRightOf="@+id/message_index_framelayout"
-        android:singleLine="true"
-        android:text="标题"
-        android:textColor="#6A6A6A"
-        android:textSize="18sp" />
-
-    <TextView
-        android:id="@+id/message_index_content"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/message_index_title"
-        android:layout_below="@+id/message_index_title"
-        android:layout_marginTop="5dp"
-        android:text="内容"
-        android:singleLine="true"
-        android:textColor="#6A6A6A" />
-
-    <TextView
-        android:id="@+id/message_index_dateline"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:text="2014.1.14"
-        android:layout_alignTop="@+id/message_index_title"
-        android:layout_marginRight="8dp"
-        android:textColor="#696969" />
+        android:id="@+id/temp_rl_tc_1"
+        android:layout_width="fill_parent"
+        android:layout_height="20dp" />
 
 </RelativeLayout>

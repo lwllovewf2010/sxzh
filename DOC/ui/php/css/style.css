@@ -8,7 +8,7 @@ em,strong,i,em a{color:#3277b1;font-style:normal;}
 p.p-item{margin:5px 0;}
 .cent{text-align:center;}
 button[disabled]{
-	background-color:#f9f9f9;
+	background-color:#dedede;
 }
 .shop-text{
 	color:#969696;
@@ -27,11 +27,17 @@ button[disabled]{
 .pd20{
 	padding:20px;
 }
+.pl20{
+	padding-left:20px;
+}
 .gb10{
 	margin-bottom:10px;
 }
 .gb20{
 	margin-bottom:20px;
+}
+.gt10{
+	margin-top:10px;
 }
 .gt20{
 	margin-top:20px;
@@ -52,6 +58,10 @@ button[disabled]{
 	margin-top:20px;
 	margin-bottom:20px;
 }
+.gtb10{
+	margin-top:10px;
+	margin-bottom:10px;
+}
 .gtb35{
 	margin-top:35px;
 	margin-bottom:35px;
@@ -60,13 +70,16 @@ button[disabled]{
 	margin-top:50px;
 	margin-bottom:50px;
 }
+.glt20{
+ margin-left:20px;
+}
 .main-list .li-m20 li{
 	margin-bottom:20px;
 }
 .trt{
 	text-align:right;
 }
-.tlt,.table-box .tlt{
+.tlt,.table-box .tlt,.table-bidding .tlt{
 	text-align:left;
 }
 textarea{
@@ -85,6 +98,10 @@ textarea{
 	cursor:pointer;
 	font-size:16px;
 }
+/*页面按钮padding兼容*/
+button.btn-btn,button.btn-sub,button.btn-sub-b{
+	*padding: 2px 10px;
+}
 a.btn-btn:hover,a.btn-sub:hover,a.btn-sub-b:hover{
 	background:#7bb533;
 	color:#fff;
@@ -93,9 +110,18 @@ a.btn-btn:hover,a.btn-sub:hover,a.btn-sub-b:hover{
 	padding-left:30px;
 	padding-right:30px;
 }
+/*页面按钮padding兼容*/
+button.btn-sub,button.btn-sub-b{
+	*padding-left: 15px;
+	*padding-right:15px; 
+}
 .btn-sub-b{
 	padding:8px 70px;
 	font-size:22px;
+}
+/*creative页面按钮padding兼容*/
+button.btn-sub-b{
+	*padding: 4px 35px;
 }
 .btns .btn-sub-b{
 	margin:0 10px;
@@ -132,6 +158,8 @@ li.li-drop{
 #pay-table .li-drop .ul-list li{
 	padding-left:8px;
 	margin:3px 0;
+   /*兼容IE7中li不换行*/
+	white-space: nowrap;
 }
 a.nav-a{
 	float:left;
@@ -365,7 +393,7 @@ i.tip-icon{
     width: 30px;
 }
 i.yes-icon{
-	background-position: -129px -55px;
+	background-position: -129px -62px;
     height: 26px;
     width: 30px;
 }
@@ -861,8 +889,9 @@ h2.shop-name{
 	margin-bottom:10px;
 }
 .area a,.sort a{
-	margin:0 5px;
+	margin:0 5px 5px;
 	font-size:14px;
+	float:left;
 }
 .area a.active,.sort a.active{
 	color:#fff;
@@ -871,15 +900,18 @@ h2.shop-name{
 	margin:10px 0;
 }
 .classify-child li{
-	margin-right:10px;
+	margin-right:20px;
 }
 .classify-child li a{
-	margin:0 5px;
+	margin:0 10px;
 }
 .classify-child li a.active{
 	color:#fff;
 }
 .classify-child{background:#2a2e30;padding:10px;}
+#classify-box>.classify-child{
+	margin-left:50px;
+}
 h3.bread{
 	font-size:12px;
 	font-weight:normal;
@@ -892,18 +924,22 @@ h3.bread{
 	height:40px;
 	line-height:40px;
 	border-bottom:1px solid #666;
+	position:relative;
 }
 .classify-nav li.active a,.classify-nav li a:hover{
 	color:#7fbc23;
 	border-bottom: 1px solid #7FBC23;
 }
 .classify-nav li{
-	margin-right:20px;
+	margin-right:10px;
 }
 .classify-nav li a{
 	display: block;
     font-size: 14px;
     padding: 0 10px;
+}
+.classify-nav li:first-child a{
+	padding-left:0;
 }
 /* 侧栏 */
 #slide{
@@ -1005,7 +1041,7 @@ h3.bread{
 	width:36px;
 	text-align:center;
 	background:#fff;
-	margin-right:10px;
+	margin-right:6px;
 	background-color:#ededed;
 }
 .page-num a.curr,.page-num a:hover{
@@ -1083,6 +1119,14 @@ span.filter-span,span.filter-slide-span,span.filter-select{
 	padding-left:23px;
 	cursor:pointer;
 	padding-bottom:1px;
+	height:18px;
+	display:inline-block;
+	*display:inline;
+	zoom:1;
+	vertical-align:middle;
+}
+.car-items span.filter-span{
+	margin-top:25px;
 }
 span.filter-span.active,span.filter-slide-span.active,span.filter-select.active{
 	background-position:0 -22px;
@@ -1091,6 +1135,7 @@ span.filter-span-b{
 	background:url(../images/chose1.png) 0 0 no-repeat;
 	padding-left:38px;
 	line-height:30px;
+	height:30px;
 	display:block;
 }
 span.filter-span-b.active{
@@ -1401,7 +1446,7 @@ h2.title i.fr{
 	margin-left:10px;
 }
 .title-title button.btn-fff{
-	margin-left:18px;
+	margin-left:5px;
 }
 .share-box{
 	margin-top:5px;
@@ -1427,6 +1472,9 @@ h2.title-h2:after,h2.line:after{
 	border-bottom:2px solid #7DB633;
 	width:118px;
 	height:2px;
+}
+h2.title-long:after{
+	width:140px;
 }
 #main-left #discuss-box{
 	background:#fff;
@@ -1477,6 +1525,7 @@ h2.title-h2:after,h2.line:after{
 .publish-main h2{
 	font-size:26px;
 	margin-bottom:20px;
+	*line-height: 24px;
 }
 .publish-main p{
 	font-size:16px;
@@ -1514,7 +1563,8 @@ h2.title-h2:after,h2.line:after{
 	font-size:18px;
 }
 .pwd-step .step{
-	width:25%;
+    width:25%;
+	*width:24.9%;
 }
 .step span{
 	display:inline-block;
@@ -1552,7 +1602,7 @@ h2.title-h2:after,h2.line:after{
     text-align: right;
     width: 100px;
 	font-size:14px;
-	color:#999;
+	color:#828282;
 }
 .creative-main .form-list label{
 	font-size:14px;
@@ -1574,6 +1624,12 @@ input.txt-ip{
 	background:#fff;
 	color:#999999;
 }
+input.txt-ip[disabled='disabled']{
+	background-color:#eee;
+}
+input.txt-ip.error,textarea.error,select.error{
+	border-color:#ff7700;
+}
 .creative-main input.txt-ip{
 	width:280px;
 }
@@ -1584,7 +1640,7 @@ input.txt-sort-ip{
 }
 select{
 	border: 1px solid #DDDDDD;
-    padding: 5px;
+    padding: 4px;
 	color:#999999;
 	min-width:80px;
 	text-align:center;
@@ -1607,6 +1663,7 @@ textarea#project_explain{
 .tip-ul li{
 	float:left;
 	margin:0 30px;
+	white-space:nowrap;
 }
 h2.title{
 	font-size:20px;
@@ -2060,6 +2117,10 @@ h1.title{
 .status{
 	color:#828282;
 }
+a.no-status{
+	color:#3277b1;
+	text-decoration:underline;
+}
 #my-car .item{
 	margin-bottom:7px;
 	*margin-bottom:8px;
@@ -2399,6 +2460,9 @@ div.good-price span{
 	font-size:12px;
 	padding:7px 15px;
 }
+.friend-div a.status-2,.friend-div a.status-1{
+	*line-height:65px;
+}
 .friend-div a.btn-fff i.status{
 	background:url(../images/icon6.png) 0 2px no-repeat;
 	display:inline-block;
@@ -2407,7 +2471,7 @@ div.good-price span{
 	vertical-align:middle;
 	width:16px;
 	height:16px;
-	margin-right:10px;
+	padding-right:10px;
 }
 .friend-div a.btn-fff.status-2 i.status{
 	background-position:0 -13px;
@@ -2621,9 +2685,21 @@ p.p-content{
 #confirm-order .table-box tr.active i{
 	background:url(../images/wz.png) 0 0 no-repeat;
 }
-#confirm-order .btn-address .btn-btn{
-	margin-left:0;
+
+.span-tip{
+	width:260px;
+	display:inline-block;
+	*display:inline;
+	zoom:1;
+	color:#b5b5b5;
+	line-height:18px;
+	margin-left:20px;
+	vertical-align:middle;
 }
-#confirm-order .table-box th, .table-box td{
-	border:none;
+#company-home .bottom-div img{
+	vertical-align:middle;
+}
+.forget-pwd{
+	color:#3277b1;
+	margin-left:20px;
 }

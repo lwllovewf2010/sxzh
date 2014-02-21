@@ -1,9 +1,31 @@
 $(function(){
 	var ye_v = Number($("#pay-ye").text());//获取余额值
 	var zf_v = Number($("#pay-zf").text());//获取支付值
+	//余额充足，选择其中一种支付方式
+	if(ye_v-zf_v>=0){
+		$("#pay-main .filter-slide-span").each(function(){
+			$(this).addClass("filter-siggle");
+		});
+	}
 	//选择支付方式单击事件
 	$("span.filter-slide-span").click(function(){
-		$(this).toggleClass("active").next("div.filter-slide-box").toggle();
+		//余额充足，选择其中一种支付方式
+		if($(this).hasClass("filter-siggle")){
+			$(this).toggleClass("active").next("div.filter-slide-box").toggle();
+			$(this).parent("div.div-pay-box").siblings("div.div-pay-box").find("span.filter-slide-span").removeClass("active").next().hide();
+		}else{
+			$(this).toggleClass("active").next("div.filter-slide-box").toggle();//余额不足时，两种支付方式都可选
+		}
+		//判断支付方式
+		var check_num = $("#pay-main .filter-slide-span.active").length;
+		if(check_num == 2){
+			$("#pay-method").val(1);
+		}else if(check_num == 1){
+			var id_v = $("#pay-main .filter-slide-span.active").parent().attr("id");
+			id_v == "pay-overage"?$("#pay-method").val(2):$("#pay-method").val(3);
+		}else{
+			$("#pay-method").val("");
+		}
 	});
 	//判断余额是否为0
 	if(ye_v==0){

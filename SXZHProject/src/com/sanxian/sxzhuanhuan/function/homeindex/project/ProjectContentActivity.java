@@ -47,7 +47,9 @@ import com.sanxian.sxzhuanhuan.entity.GoodsBuyEntity;
 import com.sanxian.sxzhuanhuan.entity.ProjectInfo;
 import com.sanxian.sxzhuanhuan.entity.TestData;
 import com.sanxian.sxzhuanhuan.entity.UserInfo;
-import com.sanxian.sxzhuanhuan.function.homeindex.PublishComment;
+import com.sanxian.sxzhuanhuan.function.discusshall.adapter.DiscussHallCreaterAdapter;
+import com.sanxian.sxzhuanhuan.function.discusshall.adapter.DiscussHallJoinerAdapter;
+import com.sanxian.sxzhuanhuan.function.discusshall.adapter.DiscussHallManagerAdapter;
 import com.sanxian.sxzhuanhuan.function.personal.myaccount.MyAccoAddressIndexActivity;
 import com.sanxian.sxzhuanhuan.util.Util;
 
@@ -73,7 +75,8 @@ public class ProjectContentActivity extends BaseActivity implements
 	
 	// common
 	private CommonHeader conHeader = null ;
-	private static int PAGE_FALG = 0 ;
+	/** 1.项目描述  2.项目详情 3.项目成员  4.部落大厅  5.讨论大厅*/  
+	private static int PAGE_FALG = 0 ;  
 //	private ImageView ivBack = null;
 //	private ImageView ivCollect = null;
 //	private ImageView ivMenu = null;
@@ -116,7 +119,7 @@ public class ProjectContentActivity extends BaseActivity implements
 	private ImageView ivProjectDetailLogo = null ;
 	private TextView tvProjectDetailContent = null ;
 	
-	//members
+	//项目成员
 	private Spinner spFilter = null ;
 	private EditText etFilter = null ;
 	private ImageView ivSearch = null ;
@@ -125,6 +128,22 @@ public class ProjectContentActivity extends BaseActivity implements
 	private ProjectMembersAdapter pmAdapter = null ;
 	private String filter_level_1 = "" ;
 	private String filter_level_2 = "" ;
+	
+	//讨论大厅
+//	private ListView lvTopicHallControl = null ;
+//	private ListView lvTopicHallJoinfo = null ;
+//	private ListView lvTopicHallMyinfo = null ;
+//	private DiscussHallManagerAdapter dhmaTopicHallControl = null ;
+//	private DiscussHallJoinerAdapter dhmaTopicHallJoinfo = null ;
+//	private DiscussHallCreaterAdapter dhmaTopicHallMyinfo = null ;
+	private RelativeLayout rlTopicHallManager = null ;
+	private RelativeLayout rlTopicHallJoin = null ;
+	private RelativeLayout rlTopicHallCreate = null ;
+	private TextView tvManagerCount = null ; 
+	private TextView tvManagerMember = null ; 
+	private TextView tvJoinCount = null ; 
+	private TextView tvCreateCount = null ; 
+	
 	
 	private static String proID = "" ;
 	private static String open_id = "1_1177_469954" ;
@@ -170,7 +189,7 @@ public class ProjectContentActivity extends BaseActivity implements
 		mInflater = getLayoutInflater();
 		viewProjectContent = mInflater.inflate(R.layout.project_content_tab1,
 				null);
-		viewTopicContent = mInflater.inflate(R.layout.topic_content_comment,
+		viewTopicContent = mInflater.inflate(R.layout.topic_hall,
 				null);
 
 		initCommnet(viewTopicContent);
@@ -178,10 +197,9 @@ public class ProjectContentActivity extends BaseActivity implements
 		listViews.add(viewProjectContent);
 		listViews.add(viewTopicContent);
 
-		sc.showSc("项目描述", "讨论大厅", listViews);
-		
 		PAGE_FALG = 1 ;
 		initWidget();
+		sc.showSc("项目描述", "讨论大厅", listViews , conHeader);
 		initData() ;
 	}
 
@@ -197,10 +215,9 @@ public class ProjectContentActivity extends BaseActivity implements
 		listViews.add(viewProjectContent);
 		listViews.add(viewTopicContent);
 
-		sc.showSc("项目描述", "讨论大厅", listViews);
-		
 		PAGE_FALG = 2 ;
 		initWidget();
+		sc.showSc("项目描述", "讨论大厅", listViews , conHeader);
 		initData() ;
 	}
 	
@@ -215,11 +232,10 @@ public class ProjectContentActivity extends BaseActivity implements
 
 		listViews.add(viewProjectContent);
 		listViews.add(viewTopicContent);
-
-		sc.showSc("项目描述", "讨论大厅", listViews);
 		
 		PAGE_FALG = 3 ;
 		initWidget();
+		sc.showSc("项目描述", "讨论大厅", listViews , conHeader);
 		initData() ;
 	}
 	
@@ -235,13 +251,35 @@ public class ProjectContentActivity extends BaseActivity implements
 		listViews.add(viewProjectContent);
 		listViews.add(viewTopicContent);
 
-		sc.showSc("部落描述", "讨论大厅", listViews);
-		
 		PAGE_FALG = 4 ;
 		initWidget();
+		sc.showSc("部落描述", "讨论大厅", listViews , conHeader);
 		initData() ;
 	}
 
+	/**
+	 * 初始化用户评论页面
+	 * 
+	 * @param view
+	 */
+	private void initCommnet(View view) {
+//		PAGE_FALG = 5 ;
+//		initWidget();
+		rlTopicHallManager = (RelativeLayout) view.findViewById(R.id.topic_hall_rl_manager_info) ;
+		rlTopicHallJoin = (RelativeLayout) view.findViewById(R.id.topic_hall_rl_join_info) ;
+		rlTopicHallCreate = (RelativeLayout) view.findViewById(R.id.topic_hall_rl_create_info) ;
+		tvManagerCount = (TextView) view.findViewById(R.id.topic_hall_rl_manager_info_count) ;
+		tvManagerMember = (TextView) view.findViewById(R.id.topic_hall_rl_manager_member_count) ;
+		tvJoinCount = (TextView) view.findViewById(R.id.topic_hall_rl_join_info_count) ;
+		tvCreateCount = (TextView) view.findViewById(R.id.topic_hall_rl_create_info_count) ;
+		
+		rlTopicHallManager.setOnClickListener(this) ;
+		rlTopicHallJoin.setOnClickListener(this) ;
+		rlTopicHallCreate.setOnClickListener(this) ;
+		
+		sc.showSc("项目描述", "讨论大厅", listViews , conHeader);
+//		initData() ;
+	}
 
 	private TextView tvCurMoney = null ;
 	private TextView tvJoinPerson = null ;
@@ -332,7 +370,7 @@ public class ProjectContentActivity extends BaseActivity implements
 			lvMembers.setAdapter(pmAdapter) ;
 		} else if ( 4 == PAGE_FALG) {  //部落大厅
 			
-		}
+		} 
 		
 
 	}
@@ -397,7 +435,9 @@ public class ProjectContentActivity extends BaseActivity implements
 			
 		} else if (3 == PAGE_FALG ) {
 			
-		}
+		} else if (4 == PAGE_FALG) {
+			
+		} 
 
 	}
 	
@@ -499,10 +539,10 @@ public class ProjectContentActivity extends BaseActivity implements
 	@Override
 	public void onClick(View v) {
 		switch (v.getId()) {
-		case R.id.topic_content_comment_publish_but:
-			Intent intent = new Intent(this, PublishComment.class);
-			startActivity(intent);
-			break;
+//		case R.id.topic_content_comment_publish_but:
+//			Intent intent = new Intent(this, PublishComment.class);
+//			startActivity(intent);
+//			break;
 			
 		case R.id.header_left_tv :
 		case R.id.header_pre_iv :
@@ -564,6 +604,17 @@ public class ProjectContentActivity extends BaseActivity implements
 		case R.id.project_members_iv_search :     
 			filter_level_2 = etFilter.getText().toString() ;
 			System.out.println("fileter_level_1--->" + filter_level_1 + "---filter_level_2--->" + filter_level_2); 
+			break ;
+			
+		case R.id.topic_hall_rl_manager_info :
+			Util.toastInfo(ProjectContentActivity.this, "主持中的讨论") ;
+			break ;
+		case R.id.topic_hall_rl_join_info :
+//			Util.toastInfo(ProjectContentActivity.this, "待参与信息") ;
+			UIHelper.showDiscussJoinActivity(ProjectContentActivity.this, proID) ;
+			break ;
+		case R.id.topic_hall_rl_create_info :
+			Util.toastInfo(ProjectContentActivity.this, "我的信息") ;
 			break ;
 		}
 	}
@@ -633,17 +684,6 @@ public void getDefaultAddr() {
 		}
 	}
 
-	/**
-	 * 初始化用户评论页面
-	 * 
-	 * @param view
-	 */
-	private void initCommnet(View view) {
-		Button butCommnet = (Button) view
-				.findViewById(R.id.topic_content_comment_publish_but);
-		butCommnet.setOnClickListener(this);
-	}
-	
 	@Override
 	protected void onStart() {
 		super.onStart() ;

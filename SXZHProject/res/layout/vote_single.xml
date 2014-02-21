@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_gravity="center"
+    android:background="@color/color_efeff4"
+    android:orientation="vertical" >
+
+    <com.sanxian.sxzhuanhuan.common.CommonHeader
+        android:id="@+id/common_header"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="20dp" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/find_pwd_icon"
+            android:text="单选"
+            android:textSize="@dimen/size_16" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="投票选举董事长"
+            android:textColor="@color/color_000000"
+            android:textSize="@dimen/size_16" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp" >
+
+        <TextView
+            android:id="@+id/vote_pubname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="赵钱孙"
+            android:textColor="@color/color_000000"
+            android:textSize="@dimen/size_14" />
+
+        <TextView
+            android:id="@+id/vote_pubtime"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="发起于 2014-02-21 09:00"
+            android:textColor="@color/color_000000"
+            android:textSize="@dimen/size_14" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/vote_surplustime"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:text="剩余时间 2014-02-21 09:00"
+        android:textColor="@color/color_000000"
+        android:textSize="@dimen/size_14" />
+
+    <TextView
+        android:id="@+id/vote_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:text="这是董事长选举，请大家参加，今晚之前需要完成投票。"
+        android:textColor="@color/color_000000"
+        android:textSize="@dimen/size_14" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:layout_marginTop="10dp"
+        android:background="@color/line_color" />
+
+    <TextView
+        android:id="@+id/vote_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:text="已收到333票"
+        android:textColor="@color/color_000000"
+        android:textSize="@dimen/size_14" />
+
+    <RadioGroup
+        android:id="@+id/vote_member"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical" >
+
+        <RadioButton
+            android:id="@+id/radiobutton1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/color_000000"
+            android:text="1.张三" />
+
+        <RadioButton
+            android:id="@+id/radiobutton2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/color_000000"
+            android:text="2.李四" />
+
+        <RadioButton
+            android:id="@+id/radiobutton3"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/color_000000"
+            android:text="3.王五" />
+    </RadioGroup>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:layout_marginTop="10dp"
+        android:background="@color/line_color" />
+    
+    <Button
+        android:id="@+id/vote_commit"
+        android:layout_width="fill_parent"
+        android:layout_height="48dp"
+        android:layout_gravity="center"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/common_back"
+        android:gravity="center"
+        android:text="提交投票"
+        android:textColor="@color/color_ffffff"
+        android:textSize="@dimen/size_14" />
+
+</LinearLayout>

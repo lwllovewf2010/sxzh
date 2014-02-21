@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="#f7f7f7"
+            android:orientation="vertical" >
+
+            <TextView
+                style="@style/my_project_item_dialog"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:onClick="rootall"
+                android:text="@string/all_project" />
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1px"
+                android:background="@color/line_color" />
+
+            <TextView
+                style="@style/my_project_item_dialog"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:onClick="rootstart"
+                android:text="@string/i_start" />
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1px"
+                android:background="@color/line_color" />
+
+            <TextView
+                style="@style/my_project_item_dialog"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:onClick="rootjoin"
+                android:text="@string/i_join" />
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1px"
+                android:background="@color/line_color" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="1px"
+            android:layout_height="match_parent"
+            android:background="@color/line_color" />
+
+        <LinearLayout
+            android:id="@+id/LinearLayout2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#efefef"
+            android:orientation="vertical" >
+
+            <TextView
+                style="@style/my_project_item_dialog"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:onClick="suball"
+                android:text="@string/all_project" />
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1px"
+                android:background="@color/line_color" />
+
+            <TextView
+                style="@style/my_project_item_dialog"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:onClick="subpreheat"
+                android:text="@string/preheat_project" />
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1px"
+                android:background="@color/line_color" />
+
+            <TextView
+                style="@style/my_project_item_dialog"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:onClick="subongoing"
+                android:text="@string/ongoing_project" />
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1px"
+                android:background="@color/line_color" />
+
+            <TextView
+                style="@style/my_project_item_dialog"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:onClick="subucce"
+                android:text="@string/ucce_project" />
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1px"
+                android:background="@color/line_color" />
+
+            <TextView
+                style="@style/my_project_item_dialog"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:onClick="subfail"
+                android:text="@string/fail_project" />
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1px"
+                android:background="@color/line_color" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

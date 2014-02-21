@@ -111,5 +111,15 @@
 	</div>
 	<script type="text/javascript" src="../js/jquery.js"></script>
 	<script type="text/javascript" src="../js/comm.js"></script>
+	<script type="text/javascript" src="../js/placeholder.js"></script>
+	<script type="text/javascript">
+	$(function(){
+		if ($.browser.msie) {
+			$(':input[placeholder]').each(function() {
+				$(this).placeholder();
+			});
+		}
+	});
+	</script>
 </body>
 </html>

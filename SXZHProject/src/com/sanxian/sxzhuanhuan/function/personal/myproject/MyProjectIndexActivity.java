@@ -6,8 +6,11 @@ import java.util.List;
 import java.util.Map;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -16,27 +19,28 @@ import com.sanxian.sxzhuanhuan.R;
 import com.sanxian.sxzhuanhuan.api.JSONParser;
 import com.sanxian.sxzhuanhuan.api.TestAPI;
 import com.sanxian.sxzhuanhuan.common.BaseActivity;
-import com.sanxian.sxzhuanhuan.dialog.DialogConstant;
-import com.sanxian.sxzhuanhuan.dialog.TopDialogInfo;
-import com.sanxian.sxzhuanhuan.dialog.TopRightOrLeftDialog;
 import com.sanxian.sxzhuanhuan.entity.ProjectInfo;
 import com.sanxian.sxzhuanhuan.function.personal.myproject.adapter.MyProjectIndexAdapter;
+import com.sanxian.sxzhuanhuan.util.Util;
 /**
  * 我的项目首页
  * @author joe
  *
  */
 public class MyProjectIndexActivity extends BaseActivity {
-    private LinearLayout project_left_layout,project_right_layout;
-    private TextView project_left_tv,project_right_tv;
     private ListView project_list;
-    private String[] rightdialog = new String[]{"全部","预热中的创意","进行中的项目","已成功的项目","已失败的项目"};
-    private String[] liftdialog = new String[]{"全部","我发起","我参与"};
-    private final int REQUEST_TOP_RIGHT = 15;
-    private final int REQUEST_TOP_LEFT = 20;
+    private LinearLayout filter_layout,shaixuan_layout;
+    private TextView bg_text;
     private TestAPI api = null;
     private Map<String,String> input = null;
     private final int PROJECT_LIST_REQUEST = 25;
+    private boolean isshow = false;
+    private Animation showAction, hideAction;
+    private TextView rootall,rootstart,rootjoin,suball,subpreheat,subongoing,subucce,subfail;
+    private String rootcoosebg = "#efefef";
+    private String rootnocoosebg = "#f7f7f7";
+    private String subcoose = "#000000";
+    private String subnocoose = "#444a4d";
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
@@ -52,12 +56,25 @@ public class MyProjectIndexActivity extends BaseActivity {
 		// TODO Auto-generated method stub
 		super.initView();
 		setTitle("我的项目");
-		displayRight();
-		project_left_layout = (LinearLayout)findViewById(R.id.project_left_layout);
-		project_right_layout = (LinearLayout)findViewById(R.id.project_right_layout);
-		project_left_tv = (TextView)findViewById(R.id.project_left_tv);
-		project_right_tv = (TextView)findViewById(R.id.project_right_tv);
+		setRight("筛选");
 		project_list = (ListView)findViewById(R.id.project_list);
+		filter_layout = (LinearLayout)findViewById(R.id.filter_layout);
+		shaixuan_layout = (LinearLayout)findViewById(R.id.shaixuan_layout);
+		bg_text = (TextView)findViewById(R.id.bg_text);
+		bg_text.setBackgroundColor(Color.argb(100, 0, 0, 0));
+		
+		rootall = (TextView)findViewById(R.id.rootall);
+		rootstart = (TextView)findViewById(R.id.rootstart);
+		rootjoin = (TextView)findViewById(R.id.rootjoin);
+		suball = (TextView)findViewById(R.id.suball);
+		subpreheat = (TextView)findViewById(R.id.subpreheat);
+		subongoing = (TextView)findViewById(R.id.subongoing);
+		subucce = (TextView)findViewById(R.id.subucce);
+		subfail = (TextView)findViewById(R.id.subfail);
+		
+		showAction = AnimationUtils.loadAnimation(this, R.anim.push_top_in2);
+		hideAction = AnimationUtils.loadAnimation(this, R.anim.push_top_out2);
+		
 	}
 
 	@Override
@@ -65,8 +82,19 @@ public class MyProjectIndexActivity extends BaseActivity {
 		// TODO Auto-generated method stub
 		super.initListener();
 		button_left.setOnClickListener(this);
-		project_left_layout.setOnClickListener(this);
-		project_right_layout.setOnClickListener(this);
+		button_right.setOnClickListener(this);
+		bg_text.setOnClickListener(this);
+		shaixuan_layout.setOnClickListener(this);
+		
+		rootall.setOnClickListener(this);
+		rootstart.setOnClickListener(this);
+		rootjoin.setOnClickListener(this);
+		suball.setOnClickListener(this);
+		subpreheat.setOnClickListener(this);
+		subongoing.setOnClickListener(this);
+		subucce.setOnClickListener(this);
+		subfail.setOnClickListener(this);
+		
 	}
  
 	private void initData(){
@@ -106,66 +134,101 @@ public class MyProjectIndexActivity extends BaseActivity {
 		case R.id.title_Left:
 			finish();
 			break;
-		case R.id.project_left_layout:
-			showLeftDialog();
+		case R.id.title_right:
+			showorhide();
 			break;
-		case R.id.project_right_layout:
-			showRightDialog();
+		case R.id.bg_text:
+			showorhide();
+			break;
+		case R.id.rootall:
+			rootall.setBackgroundColor(Color.parseColor(rootcoosebg));
+			rootstart.setBackgroundColor(Color.parseColor(rootnocoosebg));
+			rootjoin.setBackgroundColor(Color.parseColor(rootnocoosebg));
+			rootall.setTextColor(Color.parseColor(subcoose));
+			rootstart.setTextColor(Color.parseColor(subnocoose));
+			rootjoin.setTextColor(Color.parseColor(subnocoose));
+			break;
+		case R.id.rootstart:
+			rootall.setBackgroundColor(Color.parseColor(rootnocoosebg));
+			rootstart.setBackgroundColor(Color.parseColor(rootcoosebg));
+			rootjoin.setBackgroundColor(Color.parseColor(rootnocoosebg));
+			rootall.setTextColor(Color.parseColor(subnocoose));
+			rootstart.setTextColor(Color.parseColor(subcoose));
+			rootjoin.setTextColor(Color.parseColor(subnocoose));
+			break;
+		case R.id.rootjoin:
+			rootall.setBackgroundColor(Color.parseColor(rootnocoosebg));
+			rootstart.setBackgroundColor(Color.parseColor(rootnocoosebg));
+			rootjoin.setBackgroundColor(Color.parseColor(rootcoosebg));
+			rootall.setTextColor(Color.parseColor(subnocoose));
+			rootstart.setTextColor(Color.parseColor(subnocoose));
+			rootjoin.setTextColor(Color.parseColor(subcoose));
+			break;
+		case R.id.suball:
+			suball.setTextColor(Color.parseColor(subcoose));
+			subpreheat.setTextColor(Color.parseColor(subnocoose));
+			subongoing.setTextColor(Color.parseColor(subnocoose));
+			subucce.setTextColor(Color.parseColor(subnocoose));
+			subfail.setTextColor(Color.parseColor(subnocoose));
+			showorhide();
+			break;
+		case R.id.subpreheat:
+			suball.setTextColor(Color.parseColor(subnocoose));
+			subpreheat.setTextColor(Color.parseColor(subcoose));
+			subongoing.setTextColor(Color.parseColor(subnocoose));
+			subucce.setTextColor(Color.parseColor(subnocoose));
+			subfail.setTextColor(Color.parseColor(subnocoose));
+			showorhide();
+			break;
+		case R.id.subongoing:
+			suball.setTextColor(Color.parseColor(subnocoose));
+			subpreheat.setTextColor(Color.parseColor(subnocoose));
+			subongoing.setTextColor(Color.parseColor(subcoose));
+			subucce.setTextColor(Color.parseColor(subnocoose));
+			subfail.setTextColor(Color.parseColor(subnocoose));
+			showorhide();
+			break;
+		case R.id.subucce:
+			suball.setTextColor(Color.parseColor(subnocoose));
+			subpreheat.setTextColor(Color.parseColor(subnocoose));
+			subongoing.setTextColor(Color.parseColor(subnocoose));
+			subucce.setTextColor(Color.parseColor(subcoose));
+			subfail.setTextColor(Color.parseColor(subnocoose));
+			showorhide();
+			break;
+		case R.id.subfail:
+			suball.setTextColor(Color.parseColor(subnocoose));
+			subpreheat.setTextColor(Color.parseColor(subnocoose));
+			subongoing.setTextColor(Color.parseColor(subnocoose));
+			subucce.setTextColor(Color.parseColor(subnocoose));
+			subfail.setTextColor(Color.parseColor(subcoose));
+			showorhide();
 			break;
 		default:
 			break;
 		}
 	}
-
-	/**
-	 * 右上角对话框
-	 */
-	private void showRightDialog() {
-		TopDialogInfo dialogInfo = new TopDialogInfo(DialogConstant.TRIGHT,rightdialog);
-		Intent intent = new Intent(this,TopRightOrLeftDialog.class);
-		intent.putExtra("info", dialogInfo);
-		startActivityForResult(intent,REQUEST_TOP_RIGHT);
-	}
+    
 	
 	/**
-	 * 左上角对话框
+	 * 隐藏显示筛选框
+	 * joe
 	 */
-	private void showLeftDialog() {
-		TopDialogInfo dialogInfo = new TopDialogInfo(DialogConstant.TLEFT,liftdialog);
-		Intent intent = new Intent(this,TopRightOrLeftDialog.class);
-		intent.putExtra("info", dialogInfo);
-		startActivityForResult(intent, REQUEST_TOP_LEFT);
+	private void showorhide(){
+		if(!isshow){
+			filter_layout.setVisibility(View.VISIBLE);
+			filter_layout.startAnimation(showAction);
+			isshow = true;
+		}else{
+			filter_layout.setVisibility(View.INVISIBLE);
+			filter_layout.startAnimation(hideAction);
+			isshow = false;
+		}
 	}
-	
 	@Override
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 		// TODO Auto-generated method stub
 		super.onActivityResult(requestCode, resultCode, data);
-		if(requestCode == REQUEST_TOP_LEFT){
-			if(resultCode!=DialogConstant.DIALOG_RETURN){
-				if(resultCode == 0){
-					project_left_tv.setText(liftdialog[0]);
-				}else if(resultCode == 1){
-					project_left_tv.setText(liftdialog[1]);
-				}else if(resultCode == 2){
-					project_left_tv.setText(liftdialog[2]);
-				}
-			}
-			
-		}else if(requestCode == REQUEST_TOP_RIGHT){
-            if(resultCode!=DialogConstant.DIALOG_RETURN){
-                if(resultCode == 0){
-                    project_right_tv.setText(rightdialog[0]);	
-				}else if(resultCode == 1){
-					project_right_tv.setText(rightdialog[1]);	
-				}else if(resultCode == 2){
-					project_right_tv.setText(rightdialog[2]);	
-				}else if(resultCode == 3){
-					project_right_tv.setText(rightdialog[3]);
-				}else if(resultCode == 4){
-					project_right_tv.setText(rightdialog[4]);
-				}
-			}
-		}
+		
 	}
 }
