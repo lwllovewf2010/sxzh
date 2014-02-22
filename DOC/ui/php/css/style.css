@@ -83,7 +83,7 @@ button[disabled]{
 	text-align:left;
 }
 textarea{
-	width:100%;
+	width:98%;
 	border:1px solid #ddd;
 	padding:4px;
 }
@@ -242,6 +242,7 @@ i.img-icon{
 	display:inline-block;
 	*display:inline;
 	zoom:1;
+	margin-left:5px;
 }
 i.up-icon{
 	position:absolute;
@@ -1130,6 +1131,9 @@ span.filter-span,span.filter-slide-span,span.filter-select{
 }
 span.filter-span.active,span.filter-slide-span.active,span.filter-select.active{
 	background-position:0 -22px;
+}
+.func_area span.filter-span{
+	line-height:18px;
 }
 span.filter-span-b{
 	background:url(../images/chose1.png) 0 0 no-repeat;

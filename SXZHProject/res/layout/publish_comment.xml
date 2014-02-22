@@ -10,69 +10,10 @@
         layout="@layout/title_bar" />
 
     <RelativeLayout
-        android:id="@+id/publish_comment_top_rel"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/publish_comment_bar"
-        android:layout_marginLeft="10dip"
-        android:layout_marginRight="10dip"
-        android:layout_marginTop="10dip" >
-
-        <TextView
-            android:id="@+id/topic_content_comment_title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/publish_comment_manner"
-            android:textColor="@color/black"
-            android:textSize="15sp" />
-    </RelativeLayout>
-
-    <LinearLayout
-        android:id="@+id/publish_comment_toupiao_linear"
-        android:layout_width="fill_parent"
-        android:layout_height="50dp"
-        android:layout_below="@+id/publish_comment_top_rel"
-        android:layout_marginLeft="10dip"
-        android:layout_marginTop="10dip"
-        android:orientation="horizontal" >
-
-        <RadioGroup
-            android:id="@+id/radioGroup1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal" >
-
-            <RadioButton
-                android:id="@+id/radio0"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:checked="true"
-                android:textColor="@color/black"
-                android:text="看好" />
-
-            <RadioButton
-                android:id="@+id/radio1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="@color/black"
-                android:text="不看好" />
-
-            <RadioButton
-                android:id="@+id/radio2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="@color/black"
-                android:text="说不清楚" />
-
-        </RadioGroup>
-
-    </LinearLayout>
-
-    <RelativeLayout
         android:id="@+id/publish_comment_content_rel"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/publish_comment_toupiao_linear"
+        android:layout_below="@+id/publish_comment_bar"
         android:layout_marginLeft="10dip"
         android:layout_marginRight="10dip"
         android:layout_marginTop="10dip" >
@@ -111,6 +52,7 @@
         android:layout_marginLeft="10dip"
         android:layout_marginRight="10dip"
         android:layout_marginTop="10dip"
+        android:onClick="onClick"
         android:background="@drawable/ic_setting_item_round_normal"
         android:hint="@string/publish_comment_content_submit" />
 

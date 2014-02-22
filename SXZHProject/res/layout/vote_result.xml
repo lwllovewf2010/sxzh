@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_gravity="center"
+    android:background="@color/color_efeff4"
+    android:orientation="vertical" >
+
+    <com.sanxian.sxzhuanhuan.common.CommonHeader
+        android:id="@+id/common_header"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="20dp" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/find_pwd_icon"
+            android:text="单选"
+            android:textSize="@dimen/size_16" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="投票选举董事长"
+            android:textColor="@color/color_000000"
+            android:textSize="@dimen/size_16" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp" >
+
+        <TextView
+            android:id="@+id/vote_pubname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="赵钱孙"
+            android:textColor="@color/color_c7c7cc"
+            android:textSize="@dimen/size_14" />
+
+        <TextView
+            android:id="@+id/vote_pubtime"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="发起于 2014-02-21 09:00"
+            android:textColor="@color/color_c7c7cc"
+            android:textSize="@dimen/size_14" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/vote_surplustime"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:text="结束时间 2014-02-21 09:00"
+        android:textColor="@color/red"
+        android:textSize="@dimen/size_14" />
+
+    <TextView
+        android:id="@+id/vote_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:text="这是董事长选举，请大家参加，今晚之前需要完成投票。"
+        android:textColor="@color/color_8e8e93"
+        android:textSize="@dimen/size_14" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:layout_marginTop="10dp"
+        android:background="@color/line_color" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:orientation="vertical"
+        android:layout_marginTop="10dp" >
+
+        <TextView
+            android:id="@+id/vote_count"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="已收到333票"
+            android:textColor="@color/color_c7c7cc"
+            android:textSize="@dimen/size_14" />
+
+        <ListView
+            android:id="@+id/vote_result_lv"
+            android:layout_width="fill_parent"
+            android:layout_height="100dp"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/color_c7c7cc"
+            android:textSize="@dimen/size_14" >
+        </ListView>
+        
+        <TextView
+            android:id="@+id/vote_result_info"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="结果说明：您已投票完毕，请等待其他人投票结束。"
+            android:textColor="@color/color_8e8e93"
+            android:textSize="@dimen/size_14" />
+        
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:layout_marginTop="10dp"
+        android:background="@color/line_color" />
+
+</LinearLayout>

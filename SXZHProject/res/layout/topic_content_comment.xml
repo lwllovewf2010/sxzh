@@ -39,6 +39,7 @@
                 android:id="@+id/topic_content_comment_toupao_kanhao_button"
                 android:layout_width="80dip"
                 android:layout_height="wrap_content"
+                android:onClick="onClick"
                 android:background="@drawable/ic_setting_item_round_normal"
                 android:text="@string/topic_content_describe_kanhao" />
 
@@ -52,8 +53,7 @@
                 android:layout_toLeftOf="@+id/topic_content_comment_toupao_kanhao_textview"
                 android:layout_toRightOf="@+id/topic_content_comment_toupao_kanhao_button"
                 android:max="100"
-                android:progress="30"
-                android:secondaryProgress="30" />
+                android:progress="0"/>
 
             <TextView
                 android:id="@+id/topic_content_comment_toupao_kanhao_textview"
@@ -84,6 +84,7 @@
                 android:id="@+id/topic_content_comment_toupao_buqingchu_button"
                 android:layout_width="80dip"
                 android:layout_height="wrap_content"
+                android:onClick="onClick"
                 android:background="@drawable/ic_setting_item_round_normal"
                 android:text="@string/topic_content_describe_bukanhao" />
 
@@ -97,8 +98,7 @@
                 android:layout_toLeftOf="@+id/topic_content_comment_toupao_buqingchu_textview"
                 android:layout_toRightOf="@+id/topic_content_comment_toupao_buqingchu_button"
                 android:max="100"
-                android:progress="40"
-                android:secondaryProgress="40" />
+                android:progress="0" />
 
             <TextView
                 android:id="@+id/topic_content_comment_toupao_buqingchu_textview"
@@ -111,51 +111,6 @@
 
             <TextView
                 android:id="@+id/topic_content_comment_toupao_buqingchu_textview_kanbuqing"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentRight="true" />
-        </RelativeLayout>
-
-        <RelativeLayout
-            android:id="@+id/topic_content_comment_toupao_bukanhao"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/topic_content_comment_toupao_buqingchu"
-            android:layout_marginTop="5dip"
-            android:gravity="center_vertical"
-            android:orientation="horizontal" >
-
-            <Button
-                android:id="@+id/topic_content_comment_toupao_bukanhao_button"
-                android:layout_width="80dip"
-                android:layout_height="wrap_content"
-                android:background="@drawable/ic_setting_item_round_normal"
-                android:text="@string/topic_content_describe_bukanhao" />
-
-            <ProgressBar
-                android:id="@+id/topic_content_comment_toupao_bukanhao_progressBar"
-                style="?android:attr/progressBarStyleHorizontal"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:layout_margin="5dip"
-                android:layout_toLeftOf="@+id/topic_content_comment_toupao_bukanhao_textview"
-                android:layout_toRightOf="@+id/topic_content_comment_toupao_bukanhao_button"
-                android:max="100"
-                android:progress="20"
-                android:secondaryProgress="20" />
-
-            <TextView
-                android:id="@+id/topic_content_comment_toupao_bukanhao_textview"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:layout_toLeftOf="@+id/topic_content_comment_toupao_bukanhao_textview_kanbuqing"
-                android:text="20票"
-                android:textColor="@color/black" />
-
-            <TextView
-                android:id="@+id/topic_content_comment_toupao_bukanhao_textview_kanbuqing"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true" />

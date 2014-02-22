@@ -221,7 +221,7 @@ public class TestAPI extends BaseAPI {
 		inputinfo.setMcr("0");
 		inputinfo.setParams(input) ;
 		params.put("input", Util.toJSONObject(inputinfo));
-		request("", params, HTTPMETHOD_POST, false, listener, requestCode);
+		request("", params, HTTPMETHOD_POST, true, listener, requestCode);
 	}
 	
 	/**

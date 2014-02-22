@@ -7,6 +7,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import com.sanxian.sxzhuanhuan.entity.CommentInfo;
 import com.sanxian.sxzhuanhuan.entity.CreativeInfo;
 import com.sanxian.sxzhuanhuan.entity.InterfaceData.IArea;
 import com.sanxian.sxzhuanhuan.entity.InterfaceData.ICategory;
@@ -33,7 +34,7 @@ public class JSONParser {
 	 * @return
 	 */
 	public static int getReturnFlag(String jsondata) {
-		int ret = 0 ;
+		int ret = -1 ;
 		JSONObject object = null;
 		try {
 			object = new JSONObject(jsondata);

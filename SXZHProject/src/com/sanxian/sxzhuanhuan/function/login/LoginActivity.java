@@ -101,7 +101,7 @@ public class LoginActivity extends BaseActivity implements OnClickListener{
 				} else {
 					input.put("uname", strAccount) ;
 					input.put("password", strPassword) ;
-					api.login(input, this, Constant.REQUESTCODE.LOGIN_REQUEST) ;
+					api.login(input, this, Constant.REQUESTCODE.LOGIN_REQUEST) ; 
 				}
 				break ;
 				
@@ -181,14 +181,16 @@ public class LoginActivity extends BaseActivity implements OnClickListener{
 						
 						setResult(Constant.RESULT_LOGIN_CODE) ;
 						finish() ;
-					} else if (Constant.ResultStatus.RESULT_FAIL == JSONParser.getReturnFlag(jsondata)) {
+					} else if (Constant.ResultStatus.RESULT_FAIL == JSONParser.getReturnFlag(jsondata) || 411 == JSONParser.getReturnFlag(jsondata)) {
 						//{"ret":1,"content":"info not find"}
 						//{"ret":1,"content":"password error"}
 						if("info not find" .equals(JSONParser.getFailString(jsondata))) {
 							Util.toastInfo(LoginActivity.this, "帐号不存在，请重新输入") ;
 						} else if ("password error" .equals(JSONParser.getFailString(jsondata))  ) {
 							Util.toastInfo(LoginActivity.this, "密码错误，请重新输入") ;
-						}
+						} 
+					} else {
+						Util.toastInfo(LoginActivity.this, "登录出现错误，请重新输入") ;
 					}
 				}
 				break;

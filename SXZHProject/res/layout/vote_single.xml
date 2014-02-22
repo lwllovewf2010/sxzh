@@ -55,7 +55,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="5dp"
             android:text="发起于 2014-02-21 09:00"
-            android:textColor="@color/color_000000"
+            android:textColor="@color/color_c7c7cc"
             android:textSize="@dimen/size_14" />
     </LinearLayout>
 
@@ -67,7 +67,7 @@
         android:layout_marginRight="10dp"
         android:layout_marginTop="10dp"
         android:text="剩余时间 2014-02-21 09:00"
-        android:textColor="@color/color_000000"
+        android:textColor="@color/color_18af8e"
         android:textSize="@dimen/size_14" />
 
     <TextView
@@ -95,7 +95,7 @@
         android:layout_marginRight="10dp"
         android:layout_marginTop="10dp"
         android:text="已收到333票"
-        android:textColor="@color/color_000000"
+        android:textColor="@color/color_c7c7cc"
         android:textSize="@dimen/size_14" />
 
     <RadioGroup

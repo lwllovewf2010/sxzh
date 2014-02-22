@@ -1,5 +1,5 @@
 i.icon7{
-	background:url(/../images/icon7.png) -30px -5px no-repeat;
+	background:url(../images/icon7.png) -30px -5px no-repeat;
 	height: 50px;
     vertical-align: middle;
     width: 50px;
@@ -141,14 +141,14 @@ input.txt-sort{
 	margin-left:10px;
 }
 .success-tip,.wrong-tip{
-	background:url(/../images/right.png) 0 0px no-repeat;
+	background:url(../images/right.png) 0 0px no-repeat;
 	padding-left:40px;
 	height:30px;
 	line-height:30px;
 	color:#444444;
 }
 .wrong-tip{
-	background-image:url(/../images/wrong.png);
+	background-image:url(../images/wrong.png);
 }
 .explain-div{
 	margin-top:30px;
@@ -171,7 +171,7 @@ input.txt-sort{
 	padding-left:168px;
 }
 i.tip-icon{
-	background:url(/../images/tip.png) 0 0 no-repeat;
+	background:url(../images/tip.png) 0 0 no-repeat;
 	width:30px;
 	height:30px;
 	display:inline-block;
@@ -198,7 +198,7 @@ i.tip-icon{
 	right:0;
 	bottom:-5px;
 	display:none;
-	background:url(/../images/right1.png) 0 0 no-repeat;
+	background:url(../images/right1.png) 0 0 no-repeat;
 	width:28px;
 	height:28px;
 }
@@ -352,7 +352,7 @@ p.p-tip{
 	width:30px;
 	height:30px;
 	margin-left:10px;
-	background:url(/../images/down1.png) center center no-repeat #999999;
+	background:url(../images/down1.png) center center no-repeat #999999;
 }
 .main-top div.title .active .select-div span{
 	background-color:#8bcf36;
@@ -513,7 +513,7 @@ p.p-tip{
 	border:2px solid #edd28b;
 }
 .pay-tab-item label.bank{
-	background:url(/../images/combo.png) 0 0 no-repeat;
+	background:url(../images/combo.png) 0 0 no-repeat;
 	width:126px;
 	height:35px;
 	display:inline-block;
@@ -578,7 +578,7 @@ a.back-btn{
 }
 .wecht-right span{
 	margin-right:50px;
-	background:url(/../images/wechat.png) 0 0 no-repeat;
+	background:url(../images/wechat.png) 0 0 no-repeat;
 	padding-left:35px;
 	font-size:16px;
 	padding-bottom:10px;
@@ -666,7 +666,7 @@ input.wechat{
 	left:-7px;
 	width:7px;
 	height:12px;
-	background:url(/../images/three.png) 0px -18px no-repeat;
+	background:url(../images/three.png) 0px -18px no-repeat;
 }
 .wechat-msg-text .time{
 	margin-left:20px;
@@ -803,12 +803,12 @@ input.wechat{
 	font-size:14px;
 }
 #timeline{
-	background:url(/../images/timeline.png) 190px top repeat-y;
+	background:url(../images/timeline.png) 190px top repeat-y;
 	min-height:20px;
 	padding:20px 0;
 }
 .timeline-right{
-	background:url(/../images/timeline1.png) center center repeat-x;
+	background:url(../images/timeline1.png) center center repeat-x;
 	height:186px;
 	position:relative;
 }
@@ -820,7 +820,7 @@ input.wechat{
 	margin-bottom:15px;
 }
 #timeline-left li{
-    background: url("/../images/cent.png") no-repeat scroll 183px;
+    background: url("../images/cent.png") no-repeat scroll 183px;
     font-size: 12px;
     height: 40px;
     list-style: none outside none;
@@ -839,7 +839,7 @@ input.wechat{
 	-moz-border-radius:5px;
 }
 .box-right-icon{
-	background:url(/../images/right-icon.png) 0 0 no-repeat;
+	background:url(../images/right-icon.png) 0 0 no-repeat;
 	width:7px;
 	height:14px;
 	position:absolute;
@@ -847,7 +847,7 @@ input.wechat{
 	top:10px;
 }
 .box-right-icon1{
-	 background: url("/../images/down2.png") no-repeat scroll 0 -13px #FFFFFF;
+	 background: url("../images/down2.png") no-repeat scroll 0 -13px #FFFFFF;
     bottom: -9px;
     height: 12px;
     left: 70px;
@@ -859,7 +859,7 @@ li.odd .box-right-icon1{
 	top:-12px;
 }
 .timeline-right li{
-    background: url("/../images/cent.png") center bottom no-repeat;
+    background: url("../images/cent.png") center bottom no-repeat;
     float: left;
 	display:inline;
     height: 102px;
@@ -878,7 +878,7 @@ li.odd .box-right-icon1{
 .timeline-btn{
 	position:absolute;
 	top:40%;
-	background:url(/../images/btns.png) 0 0 no-repeat;
+	background:url(../images/btns.png) 0 0 no-repeat;
 	display:block;
 	width:14px;
 	height:40px;
@@ -895,8 +895,8 @@ li.odd .box-right-icon1{
 #company-home #slide-nav .slide-box.active,#company-home #slide-nav .slide-box.child-box a.active{
 	background-color:#3277b1;
 }
-#company-home #slide-nav .slide-box.active a{
-	background:url(/../images/downIcon1.png) right 10px no-repeat;
+#company-home #slide-nav .slide-down.active a{
+	background:url(../images/downIcon1.png) right 10px no-repeat;
 }
 #company-home h2.title-h2:after, h2.line:after{
 	border-bottom-color:#3277b1;
@@ -916,6 +916,9 @@ li.odd .box-right-icon1{
 #company-home .div-tip{
 	padding:10px 10px 10px 20px;
 	font-size:14px;
+}
+#company-home .div-tip .safe-grade em{
+	margin-left:0;
 }
 #company-home .div-tip em{
 	margin-left:50px;
@@ -975,13 +978,13 @@ li.odd .box-right-icon1{
 	width:96px;
 }
 .cp-step3-1{
-	background:url(/../images/cp-step1.png) 0 0 no-repeat;
+	background:url(../images/cp-step1.png) 0 0 no-repeat;
 }
 .cp-step3-2{
-	background:url(/../images/cp-step2.png) 0 0 no-repeat;
+	background:url(../images/cp-step2.png) 0 0 no-repeat;
 }
 .cp-step3-3{
-	background:url(/../images/cp-step3.png) 0 0 no-repeat;
+	background:url(../images/cp-step3.png) 0 0 no-repeat;
 }
 
 #cp-step .step.active{
@@ -1047,7 +1050,7 @@ h2.h2-tip{
 	margin:0 40px 30px 0;
 }
 span.radio-blue{
-	background:url(/../images/chose-blue.png) 0 0 no-repeat;
+	background:url(../images/chose-blue.png) 0 0 no-repeat;
 	cursor: pointer;
     padding-bottom: 1px;
     padding-left: 23px;
@@ -1103,10 +1106,10 @@ span.radio-blue.active{
 #bidding-tab #tabs li{
 	padding-right:17px;
 	border-right:1px solid #fff;
-	background:url(/../images/nct-bg.png) right 0 no-repeat;
+	background:url(../images/nct-bg.png) right 0 no-repeat;
 }
 #bidding-tab #tabs li.active{
-	background-image:url(/../images/act-bg.png);
+	background-image:url(../images/act-bg.png);
 }
 #bidding-tab #tabs li.active a{
 	background-color:#3277b1;
@@ -1365,4 +1368,144 @@ button.btn-zdy:hover{
 }
 .item-img a{
 	display:block;
+}
+
+/* 我的收藏 */
+#company-home .page-num a.curr,#company-home .page-num a:hover{
+	background-color:#3277b1;
+}
+.table-table{
+	width:100%;
+	text-align:center;
+	border:1px solid #ddd;
+}
+.table-table th{
+	height:30px;
+	background-color:#f9f9f9;
+	font-weight:normal;
+}
+.table-table td{
+	border:1px solid #ddd;
+	height:60px;
+	font-size:14px;
+	color:#969696;
+}
+.table-table td a{
+	color:#3277b1;
+}
+/* 项目评论 */
+#comment-aside-box{
+	width:250px;
+}
+.comment-aside{
+	width:220px;
+	background-color:#f5f5f5;
+	padding:15px;
+}
+.comment-main{
+	width:555px;
+}
+#company-home .a-img img{
+	width:80px;
+	height:80px;
+}
+.comment-aside h3{
+	color:#3277b1;
+	font-size:14px;
+	margin:10px 0;
+}
+.comment-people .people-info{
+	font-size:14px;
+}
+.p-strong strong{
+	font-size:16px;
+	font-weight:normal;
+}
+.comment-aside i{
+	color:#aeadad;
+}
+.msg-name em{
+	font-size:14px;
+	margin-right:5px;
+}
+.comment-already{
+	background-color:#f5f5f5;
+	padding:10px 0 10px 30px;
+	margin-bottom:30px;
+}
+.comment-already h2{
+	color:#3277b1;
+}
+.comment-already h2 a{
+	color:#81bd33;
+	text-decoration:underline;
+}
+/* 评论详情 */
+#comment-detail{
+	padding-top:20px;
+}
+#comment-detail .div-note{
+	height:50px;
+	line-height:50px;
+}
+#comment-detail .comment-main{
+	border-right:1px solid #ddd;
+	padding-right:25px;
+	width:535px;
+}
+#comment-detail .comment-main h1.title{
+	line-height:30px;
+}
+#comment-detail .comment-main p{
+	line-height:22px;
+}
+#comment-detail h2.title-h2{
+	font-size:16px;
+	line-height:30px;
+	height:30px;
+	margin:20px 0;
+}
+#comment-detail h2.title-h2:after{
+	width:105px;
+}
+.detail-main li{
+	margin:5px 0;
+}
+.detail-main dl{
+	margin:10px 0;
+}
+.detail-main dl dt{
+	font-size:14px;
+	margin-bottom:5px;
+}
+.detail-main dl dd{
+	margin:5px 0;
+}
+#comment-aside-box h2.h2-title{
+	border-bottom:1px solid #ddd;
+	padding-bottom:5px;
+	margin-bottom:20px;
+	color:#3277b1;
+}
+#comment-aside-box button.btn-sub-b{
+	font-size:16px;
+	padding:8px 0;
+	width:100%;
+	margin:5px 0;
+	background-color:#98bbd8;
+	border-radius:0;
+	-webkit-border-radius:0;
+	-moz-border-radius:0;
+	text-align:left;
+	text-indent:2em;
+}
+#comment-aside-box h2.line:after{
+	border:none;
+}
+#comment-aside-box h2.line{
+	margin:30px 0;
+}
+h2.explain-h2{
+	color:#3277b1;
+	margin:10px 0 5px;
 }

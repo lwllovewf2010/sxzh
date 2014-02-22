@@ -11,10 +11,20 @@ import com.sanxian.sxzhuanhuan.util.Util;
 
 public class HomeIndexGoodsAPI extends BaseAPI {
 
+	public static HomeIndexGoodsAPI api = null;
+
+	public static HomeIndexGoodsAPI getInstance() {
+		if (api == null) {
+			api = new HomeIndexGoodsAPI();
+		}
+		return api;
+	}
+
 	/*
 	 * 根据ID获取商品详细信息
 	 */
-	public void getGoodsItemInfo(final Map<String,String> paramsmap, BaseActivity listener,final int requestCode) {
+	public void getGoodsItemInfo(final Map<String, String> paramsmap,
+			BaseActivity listener, final int requestCode) {
 		RequestParams params = new RequestParams();
 		RequestInputInfo inputinfo = new RequestInputInfo();
 		inputinfo.setAction("goods");
@@ -24,11 +34,12 @@ public class HomeIndexGoodsAPI extends BaseAPI {
 		params.put("input", Util.toJSONObject(inputinfo));
 		request("", params, HTTPMETHOD_POST, false, listener, requestCode);
 	}
-		
+
 	/*
 	 * 根据ID获取创意详细信息
 	 */
-	public void getOriginalityItemInfo(final Map<String,String> paramsmap, BaseActivity listener,final int requestCode) {
+	public void getOriginalityItemInfo(final Map<String, String> paramsmap,
+			BaseActivity listener, final int requestCode) {
 		RequestParams params = new RequestParams();
 		RequestInputInfo inputinfo = new RequestInputInfo();
 		inputinfo.setAction("originality");
@@ -38,10 +49,13 @@ public class HomeIndexGoodsAPI extends BaseAPI {
 		params.put("input", Util.toJSONObject(inputinfo));
 		request("", params, HTTPMETHOD_POST, false, listener, requestCode);
 	}
+
 	/*
-	 * {"action":"user_center","type":"get_default_address","mcr":0,"params":{"open_id":"5_1278_539947","token":"b1fccbf52f67ca26"}}
+	 * {"action":"user_center","type":"get_default_address","mcr":0,"params":{
+	 * "open_id":"5_1278_539947","token":"b1fccbf52f67ca26"}}
 	 */
-	public void getDefaultAddr(final Map<String,String> paramsmap, BaseActivity listener,final int requestCode) {
+	public void getDefaultAddr(final Map<String, String> paramsmap,
+			BaseActivity listener, final int requestCode) {
 		RequestParams params = new RequestParams();
 		RequestInputInfo inputinfo = new RequestInputInfo();
 		inputinfo.setAction("user_center");

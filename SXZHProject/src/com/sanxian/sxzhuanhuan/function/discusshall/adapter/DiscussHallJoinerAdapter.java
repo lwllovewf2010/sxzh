@@ -34,7 +34,7 @@ public class DiscussHallJoinerAdapter extends BaseAdapter implements OnClickList
 	private LayoutInflater mInflater;
 	private DisplayImageOptions options;
 	protected ImageLoader imageLoader = ImageLoader.getInstance();
-	private int flag = 0 ;
+	private int flag = 0 ;  //1,单选 2，多选
 
 	public DiscussHallJoinerAdapter(Context context,
 			List<DiscussData> infos , int flag) {

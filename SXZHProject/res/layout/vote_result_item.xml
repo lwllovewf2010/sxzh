@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/color_efeff4" >
+
+    <TextView
+        android:id="@+id/vote_pubname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1.张三"
+        android:textColor="@color/color_c7c7cc"
+        android:textSize="@dimen/size_14" />
+
+</RelativeLayout>

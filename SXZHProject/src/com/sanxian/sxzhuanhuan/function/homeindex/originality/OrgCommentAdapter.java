@@ -17,6 +17,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
@@ -109,7 +110,9 @@ public class OrgCommentAdapter extends BaseAdapter implements OnClickListener {
 				.findViewById(R.id.iv_userImage);
 		holder.tv_userName = (TextView) convertView
 				.findViewById(R.id.tv_userName);
-		holder.tv_date = (TextView) convertView.findViewById(R.id.tv_date);
+		holder.tv_addtime = (TextView) convertView.findViewById(R.id.tv_date);
+		holder.tv_dnum = (TextView) convertView.findViewById(R.id.tv_dnum);
+		holder.et_replay = (EditText) convertView.findViewById(R.id.et_replay);
 		holder.tv_content = (TextView) convertView
 				.findViewById(R.id.tv_content);
 
@@ -120,16 +123,20 @@ public class OrgCommentAdapter extends BaseAdapter implements OnClickListener {
 				options, null);
 
 		holder.tv_userName.setText(info.getUserName());
-		holder.tv_date.setText(info.getDate());
+		holder.tv_addtime.setText(info.getAddtime());
 		holder.tv_content.setText(info.getContent());
+		holder.tv_dnum.setText(info.getDnum()+"人觉得很赞");
+		
 	}
 
 	class ViewHolder {
 		public ImageView iv_userImage;
 		public TextView tv_userName;
-		public TextView tv_date;
+		public TextView tv_addtime;
 		public TextView tv_content;
-
+		public TextView tv_dnum;
+		public TextView tv_fdnum;
+		public EditText et_replay;
 	}
 
 	@Override
