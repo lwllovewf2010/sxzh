@@ -1,6 +1,7 @@
 package com.sanxian.sxzhuanhuan.entity;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -29,7 +30,8 @@ public class CommentInfo implements Serializable {
 	String replyid = "";// 父ID
 	String objtid = "";// 项目或者产品id，创意id
 	String sid = "";// 根id
-	List<CommentInfo> comment_groups = null;// 子评论
+	String r_user_name ="";//被回复者 用户名
+	ArrayList<CommentInfo> comment_groups = null;// 子评论
 
 	// added by yuanqk
 	public CommentInfo() {
@@ -139,12 +141,21 @@ public class CommentInfo implements Serializable {
 	public void setContent(String content) {
 		this.content = content;
 	}
-	public List<CommentInfo> getComment_groups() {
+	public ArrayList<CommentInfo> getComment_groups() {
+		if(comment_groups==null) comment_groups = new ArrayList<CommentInfo>();
 		return comment_groups;
 	}
 
-	public void setComment_groups(List<CommentInfo> comment_groups) {
+	public void setComment_groups(ArrayList<CommentInfo> comment_groups) {
 		this.comment_groups = comment_groups;
+	}
+
+	public String getR_user_name() {
+		return r_user_name;
+	}
+
+	public void setR_user_name(String r_user_name) {
+		this.r_user_name = r_user_name;
 	}
 
 }

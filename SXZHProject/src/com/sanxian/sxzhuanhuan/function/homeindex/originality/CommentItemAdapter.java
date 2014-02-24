@@ -17,13 +17,10 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.view.View.OnFocusChangeListener;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.BaseAdapter;
-import android.widget.ListView;
 import android.widget.TextView;
 
 /**
@@ -34,23 +31,23 @@ import android.widget.TextView;
  * @date 2014-1-14 上午10:42:45
  * @version V1.0
  */
-public class OrgCommentAdapter extends BaseAdapter implements OnClickListener {
+public class CommentItemAdapter extends BaseAdapter implements OnClickListener {
 
 	private Context context = null;
 	private ArrayList<CommentInfo> infos = null;
 	private LayoutInflater inflater;
-	private ImageLoader imageLoader = ImageLoader.getInstance();
-	private DisplayImageOptions options = null;
 	private CommentInfo commentInfo = null;
+	public static String[] itemInfo = new String[2];//Item点击后保存Item数据
+	private OrgCommentAdapter.ViewHolder holder;
 
-	public OrgCommentAdapter(Context context, ArrayList<CommentInfo> infos) {
+	public CommentItemAdapter(Context context, ArrayList<CommentInfo> infos,OrgCommentAdapter.ViewHolder holder) {
 		this.context = context;
+		this.holder = holder;
 		if (infos != null)
 			this.infos = (ArrayList<CommentInfo>) infos;
 		else
 			this.infos = new ArrayList<CommentInfo>();
 		inflater = LayoutInflater.from(context);
-		options = UIHelper.setOption();
 	}
 
 	@Override
@@ -78,7 +75,7 @@ public class OrgCommentAdapter extends BaseAdapter implements OnClickListener {
 	@Override
 	public long getItemId(int position) {
 		// TODO Auto-generated method stub
-		return 0;
+		return position;
 	}
 
 	/*
@@ -91,8 +88,9 @@ public class OrgCommentAdapter extends BaseAdapter implements OnClickListener {
 	public View getView(int position, View convertView, ViewGroup parent) {
 		// TODO Auto-generated method stub
 		ViewHolder holder = null;
+		Log.d("", "yuanqikai getView getView "+position);
 		if (convertView == null) {
-			convertView = inflater.inflate(R.layout.org_comment_item, null);
+			convertView = inflater.inflate(R.layout.org_comment_item_child, null);
 			holder = new ViewHolder();
 			init(convertView, holder);
 			convertView.setTag(holder);
@@ -105,74 +103,53 @@ public class OrgCommentAdapter extends BaseAdapter implements OnClickListener {
 			setData(holder, commentInfo);
 		}
 
-//		convertView.setOnClickListener(this);
+		convertView.setOnClickListener(this);
 		return convertView;
 	}
 
 	private void init(View convertView, ViewHolder holder) {
-		holder.iv_userImage = (ImageView) convertView
-				.findViewById(R.id.iv_userImage);
 		holder.tv_userName = (TextView) convertView
 				.findViewById(R.id.tv_userName);
-		holder.tv_addtime = (TextView) convertView.findViewById(R.id.tv_date);
-		holder.tv_dnum = (TextView) convertView.findViewById(R.id.tv_dnum);
-		holder.et_replay = (EditText) convertView.findViewById(R.id.et_replay);
-		holder.et_replay.setTag(new String[2]);
-		holder.tv_content = (TextView) convertView
-				.findViewById(R.id.tv_content);
-		holder.tv_content.setTag(holder);
-		holder.tv_content.setOnClickListener(this);
-		holder.listView1 = (ListView) convertView
-				.findViewById(R.id.listView1);
-		holder.submit = (Button)convertView.findViewById(R.id.btn_replay_send);
-		holder.submit.setTag(holder);
+		holder.tv_replay_character = (TextView) convertView.findViewById(R.id.tv_replay_character);
+		holder.tv_r_user_name = (TextView) convertView.findViewById(R.id.tv_userName2);
+		holder.tv_content = (TextView) convertView.findViewById(R.id.tv_content);
+
 	}
 
 	private void setData(ViewHolder holder, CommentInfo info) {
-		imageLoader.displayImage(info.getUserImage(), holder.iv_userImage,
-				options, null);
-
 		holder.tv_userName.setText(info.getUserName());
-		holder.tv_addtime.setText(info.getAddtime());
+		Log.d("", "yuanqk  = "+info.getReplyid()+" ; info.getR_user_name() = "+info.getR_user_name());
+		if(!"0".endsWith(info.getReplyid())&&!(info.getSid().endsWith(info.getReplyid()))){
+			holder.tv_replay_character.setVisibility(View.VISIBLE);
+			holder.tv_r_user_name.setText(info.getR_user_name());
+			holder.tv_r_user_name.setVisibility(View.VISIBLE);
+		}
 		holder.tv_content.setText(info.getContent());
-		holder.tv_dnum.setText(info.getDnum()+"人觉得很赞");
 		holder.id = info.getId();
-		holder.username = info.getUserName();
-		Log.d("", "yuanqikai info.getComment_groups().size() = "+info.getComment_groups().size());
-		holder.listView1.setAdapter(new CommentItemAdapter(context, info.getComment_groups(),holder));
+		holder.userName = info.getUserName();
 	}
 
 	public class ViewHolder {
-		public ImageView iv_userImage;
 		public TextView tv_userName;
-		public TextView tv_addtime;
+		public TextView tv_replay_character;
+		public TextView tv_r_user_name;
 		public TextView tv_content;
-		public TextView tv_dnum;
-		public TextView tv_fdnum;
-		public EditText et_replay;
-		public ListView listView1;
-		public Button submit;
 		public String id;
-		public String username;
+		public String userName;
 	}
 
 	@Override
 	public void onClick(View v) {
 		// TODO Auto-generated method stub
-		switch (v.getId()) {
-		case R.id.tv_content:
-			ViewHolder holder = (ViewHolder)v.getTag();
-			holder.et_replay.setHint("我也说一句...");
-			String[] arr = new String[2];
-			arr[0] = null;
-			arr[1] = null;
-			holder.et_replay.setTag(arr);
-			Log.d("", "yuanqikai info.getComment_groups().size() = "+arr[1]);
-			break;
-
-		default:
-			break;
-		}
+		// UIHelper.showProjectDetailActivity(context
+		 Log.d("", "yuanqikai 1232131232132");
+		 CommentItemAdapter.ViewHolder holder2 = (CommentItemAdapter.ViewHolder) v
+					.getTag();
+		 itemInfo[0] = holder2.id;
+		 itemInfo[1] = holder2.userName;
+		 holder.et_replay.setHint("回复"+itemInfo[1]);
+		 holder.et_replay.setTag(itemInfo);
+		 holder.et_replay.requestFocus();
 	}
 
 }

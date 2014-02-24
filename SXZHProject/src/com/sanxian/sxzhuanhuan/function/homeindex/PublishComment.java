@@ -20,7 +20,7 @@ import android.widget.EditText;
 
 /**
  * 发表评论
- * @author luozhiren
+ * @author yuanqk
  *
  */
 public class PublishComment extends BaseActivity implements OnClickListener{
@@ -83,7 +83,6 @@ public class PublishComment extends BaseActivity implements OnClickListener{
 		initView();
 		comment = (EditText)findViewById(R.id.topic_content_comment_content);
 		setTitle("创意评论");
-		setLeft("取消");
 		displayRight();
 		button_left.setOnClickListener(this);
 	}
@@ -102,7 +101,12 @@ public class PublishComment extends BaseActivity implements OnClickListener{
 				Util.toastInfo(this, "评论不能为空，请填写评论，然后再发表！");
 				return;
 			}
-			postCommentContent("0",creativeID,coments,"3");
+			String[] userInfo = getOpen_idOrToken();
+			if("".endsWith(userInfo[0].trim())) {
+				Util.toastInfo(this, "未登录，或登录超时，请重新登录！");
+				return;
+			}
+			CommentAPI.getInstance().postCommentContent(userInfo,"0",creativeID,coments,"3",this,POSTCOMMENTCONTENT);
 			break;
 
 		default:
@@ -110,30 +114,4 @@ public class PublishComment extends BaseActivity implements OnClickListener{
 		}
 	}
 	
-	/** 
-	* @Title: postCommentContent 
-	* @Description: TODO(这里用一句话描述这个方法的作用) 
-	* @param     设定文件 
-	* {"open_id":"5_1278_539947",
-           "token":"b1fccbf52f67ca26","yid":"0","objtid":"22","content":"i\u5730\u65b9'd'sdf","ctype":"3"}}
-	* @return void    返回类型 
-	* @throws 
-	*/
-	void postCommentContent(String yid,String objtid,String content,String ctype){
-		api = CommentAPI.getInstance();
-		
-		Map<String, String> paramsMap = new HashMap<String, String>();
-		String[] userInfo = getOpen_idOrToken();
-		if("".endsWith(userInfo[0].trim())) {
-			Util.toastInfo(this, "未登录，或登录超时，请重新登录！");
-			return;
-		}
-		paramsMap.put("open_id", userInfo[0]);
-		paramsMap.put("token", userInfo[1]);
-		paramsMap.put("yid", yid);
-		paramsMap.put("objtid", objtid);
-		paramsMap.put("content", content);
-		paramsMap.put("ctype", ctype);
-		api.postCommentContent(paramsMap, this, POSTCOMMENTCONTENT);
-	}
 }

@@ -4,6 +4,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import android.content.Context;
+
 import com.loopj.android.http.RequestParams;
 import com.sanxian.sxzhuanhuan.common.BaseActivity;
 import com.sanxian.sxzhuanhuan.entity.RequestInputInfo;
@@ -78,6 +80,26 @@ public class CommentAPI extends BaseAPI {
 		inputinfo.setParams(paramsmap);
 		params.put("input", Util.toJSONObject(inputinfo));
 		request("", params, HTTPMETHOD_POST, false, listener, requestCode);
+	}
+	
+	/** 
+	* @Title: postCommentContent 
+	* @Description: TODO(这里用一句话描述这个方法的作用) 
+	* @param     设定文件 
+	* {"open_id":"5_1278_539947",
+           "token":"b1fccbf52f67ca26","yid":"0","objtid":"22","content":"i\u5730\u65b9'd'sdf","ctype":"3"}}
+	* @return void    返回类型 
+	* @throws 
+	*/
+	public void postCommentContent(String[] userInfo,String yid,String objtid,String content,String ctype,BaseActivity context,int POSTCOMMENTCONTENT){
+		Map<String, String> paramsMap = new HashMap<String, String>();
+		paramsMap.put("open_id", userInfo[0]);
+		paramsMap.put("token", userInfo[1]);
+		paramsMap.put("yid", yid);
+		paramsMap.put("objtid", objtid);
+		paramsMap.put("content", content);
+		paramsMap.put("ctype", ctype);
+		CommentAPI.getInstance().postCommentContent(paramsMap, context, POSTCOMMENTCONTENT);
 	}
 
 }

@@ -36,6 +36,7 @@ import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.PopupMenu;
 import android.widget.ProgressBar;
@@ -75,6 +76,10 @@ public class OriginalityActivity extends BaseActivity implements
 	ProgressBar progressBarDisSupport;
 	TextView tv_progressBarSupport;
 	TextView tv_progressBarDisSupport;
+	EditText et_replay;
+	ListView listView1;
+	String replyid = "0";
+	String replyName = "";
 
 	private HomeIndexGoodsAPI api = null;
 
@@ -145,6 +150,8 @@ public class OriginalityActivity extends BaseActivity implements
 				.findViewById(R.id.topic_content_comment_toupao_kanhao_textview);
 		tv_progressBarDisSupport = (TextView) topicComment
 				.findViewById(R.id.topic_content_comment_toupao_buqingchu_textview);
+		// et_replay = (EditText) topicComment.findViewById(R.id.et_replay);
+		// listView1 = (ListView) topicComment.findViewById(R.id.listView1);
 		commentAdapter = new OrgCommentAdapter(this, commentInfo);
 		lv_topic_comment_list.setAdapter(commentAdapter);
 		spinner.setOnClickListener(this);
@@ -194,6 +201,7 @@ public class OriginalityActivity extends BaseActivity implements
 		super.refresh(param);
 		int flag = ((Integer) param[0]).intValue();
 		switch (flag) {
+		// 初始化请求
 		case REQUESTCODE:
 			if (param.length > 0 && param[1] != null
 					&& param[1] instanceof String) {
@@ -257,6 +265,7 @@ public class OriginalityActivity extends BaseActivity implements
 			// 更新界面
 			refreshUI(originalityItem);
 			break;
+		// 发送表态
 		case POSTCOMMENTCODE:
 			if (param.length > 0 && param[1] != null
 					&& param[1] instanceof String) {
@@ -272,6 +281,71 @@ public class OriginalityActivity extends BaseActivity implements
 						Util.toastInfo(this, "您已经表态过，不能再次表态！");
 					}
 					// adapter.notifyDataSetChanged();
+				} catch (JSONException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
+			break;
+		// 回复评论是否成功
+		case POSTCOMMENTCONCENTCODE:
+			if (param.length > 0 && param[1] != null
+					&& param[1] instanceof String) {
+				String data = param[1].toString();
+				try {
+					JSONObject json = new JSONObject(data);
+					int status = json.getInt("ret");
+					if (status == 0) {
+						Util.toastInfo(this, "回复成功！");
+					} else if (status == 1) {
+						Util.toastInfo(this, "回复失败，请重试！");
+					} else if (status == 2) {
+						Util.toastInfo(this, "您已经对该创意发表过评论，不能再发表！");
+					}
+				} catch (JSONException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
+			break;
+		// 获取评论信息
+		case GETCOMMENT_INFO_CODE:
+			if (param.length > 0 && param[1] != null
+					&& param[1] instanceof String) {
+				String data = param[1].toString();
+				try {
+					JSONObject json = new JSONObject(data);
+					int status = json.getInt("ret");
+					if (status == 0) {
+						JSONArray mJSONArray = json.getJSONArray("content");
+						for (int i = 0; i < mJSONArray.length(); i++) {
+							JSONObject jsonmode = mJSONArray.getJSONObject(i);
+							if (jsonmode != null && jsonmode.length() > 0) {
+								Log.d("", "yuanqikai jsonmode");
+								setCommentInfo(jsonmode, true);
+								// info.(jsonmode.getString("comment_groups"));
+								if (!jsonmode.getString("comment_groups")
+										.startsWith("[]")) {
+
+									Log.d("",
+											"yuanqikai comment_groups111 = "
+													+ jsonmode
+															.getString("comment_groups"));
+
+									setCommentArrayInfo(jsonmode
+											.getJSONArray("comment_groups"));
+								} else {
+									Log.d("",
+											"yuanqikai comment_groups222 = "
+													+ jsonmode
+															.getString("comment_groups"));
+								}
+							}
+						}
+						commentAdapter.notifyDataSetChanged();
+					} else {
+						Util.toastInfo(this, "查询失败！");
+					}
 				} catch (JSONException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
@@ -302,50 +376,6 @@ public class OriginalityActivity extends BaseActivity implements
 				}
 			}
 			break;
-		// 获取表态信息
-		case GETCOMMENT_INFO_CODE:
-			if (param.length > 0 && param[1] != null
-					&& param[1] instanceof String) {
-				String data = param[1].toString();
-				try {
-					JSONObject json = new JSONObject(data);
-					int status = json.getInt("ret");
-					if (status == 0) {
-						JSONArray mJSONArray = json.getJSONArray("content");
-						for (int i = 0; i < mJSONArray.length(); i++) {
-							JSONObject jsonmode = mJSONArray.getJSONObject(i);
-							if (jsonmode != null && jsonmode.length() > 0) {
-								Log.d("", "yuanqikai jsonmode");
-								setCommentInfo(jsonmode, true);
-								// info.(jsonmode.getString("comment_groups"));
-								if (!jsonmode.getString("comment_groups")
-										.startsWith("[]")) {
-									
-									Log.d("",
-											"yuanqikai comment_groups111 = "
-													+ jsonmode
-															.getString("comment_groups"));
-
-									setCommentArrayInfo(jsonmode
-											.getJSONArray("comment_groups"));
-								} else {
-									Log.d("",
-											"yuanqikai comment_groups222 = "
-													+ jsonmode
-															.getString("comment_groups"));
-								}
-							}
-						}
-						commentAdapter.notifyDataSetChanged();
-					} else {
-						Util.toastInfo(this, "查询失败！");
-					}
-				} catch (JSONException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
-			}
-			break;
 
 		default:
 			break;
@@ -355,6 +385,7 @@ public class OriginalityActivity extends BaseActivity implements
 	void setCommentInfo(JSONObject jsonmode, boolean isMainComment)
 			throws JSONException {
 		CommentInfo info = new CommentInfo();
+		info.setId(jsonmode.getString("id"));
 		info.setContent(jsonmode.getString("content"));
 		info.setDnum(jsonmode.getString("dnum"));
 		info.setFdnum(jsonmode.getString("fdnum"));
@@ -366,11 +397,13 @@ public class OriginalityActivity extends BaseActivity implements
 		info.setObjtid(jsonmode.getString("objtid"));
 		info.setSid(jsonmode.getString("sid"));
 		info.setUserName(jsonmode.getString("user_name"));
-		info.setUserImage(jsonmode.getString("photo"));
-
 		if (isMainComment) {
+			info.setUserImage(jsonmode.getString("photo"));
 			commentInfo.add(info);
 		} else {
+			//这个数据只有非主评论才有！
+			info.setR_user_name(jsonmode.getString("r_user_name"));
+			
 			commentInfo.get(commentInfo.size() - 1).getComment_groups()
 					.add(info);
 		}
@@ -480,6 +513,41 @@ public class OriginalityActivity extends BaseActivity implements
 			}
 			// 发送请求:2代表不看好
 			postComments(2 + "");
+			break;
+		case R.id.btn_replay_send:
+			// 提交回复
+			OrgCommentAdapter.ViewHolder holder = (OrgCommentAdapter.ViewHolder) v
+			.getTag();
+			String coments = holder.et_replay.getText().toString();
+			if ("".endsWith(coments.trim())) {
+				Util.toastInfo(this, "评论不能为空，请填写评论，然后再发表！");
+				return;
+			}
+			String[] userInfo3 = getOpen_idOrToken();
+			if ("".endsWith(userInfo3[0].trim())) {
+				Util.toastInfo(this, "未登录，或登录超时，请登录！");
+				Intent loginIntent = new Intent(this,LoginActivity.class);
+				startActivity(loginIntent);
+				return;
+			}
+			
+			String[] rId = (String[])holder.et_replay.getTag();
+			String id = holder.id;
+			if(rId[0]!=null&&!("".endsWith(rId[0].trim()))){
+				id = rId[0];
+			}
+			Log.d("", "yuanqikai id = "+id);
+			// 发表回复
+			CommentAPI.getInstance().postCommentContent(userInfo3, id,
+					creativeID, coments, "3", this, POSTCOMMENTCONCENTCODE);
+			break;
+		case R.id.ll_replay_item:
+			// 点击子评论
+			CommentItemAdapter.ViewHolder holder2 = (CommentItemAdapter.ViewHolder) v
+					.getTag();
+			replyid = holder2.id;
+			replyName = holder2.userName;
+			
 			break;
 
 		default:
