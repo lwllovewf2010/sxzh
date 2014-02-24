@@ -1,6 +1,8 @@
 package com.sanxian.sxzhuanhuan.function.homeindex.originality;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -18,13 +20,18 @@ import com.sanxian.sxzhuanhuan.entity.CommentInfo;
 import com.sanxian.sxzhuanhuan.entity.OriginalityItemDetails;
 import com.sanxian.sxzhuanhuan.entity.ProjectInfo;
 import com.sanxian.sxzhuanhuan.function.homeindex.PublishComment;
+import com.sanxian.sxzhuanhuan.function.homeindex.originality.OrgCommentAdapter.ViewHolder;
 import com.sanxian.sxzhuanhuan.function.homeindex.project.ScUtil;
 import com.sanxian.sxzhuanhuan.function.login.LoginActivity;
 import com.sanxian.sxzhuanhuan.util.Util;
+import com.sanxian.sxzhuanhuan.view.xlistview.XListView;
 import com.sanxian.sxzhuanhuan.view.xlistview.XListView.IXListViewListener;
 
 import android.opengl.Visibility;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.SystemClock;
+import android.renderscript.Sampler;
 import android.text.Html;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -59,8 +66,13 @@ public class OriginalityActivity extends BaseActivity implements
 	private final int POSTCOMMENTCONCENTCODE = 3;
 	// 获取评论
 	private final int GETCOMMENT_INFO_CODE = 4;
+	// 发表赞
+	private final int POST_COMMENT_ZAN = 5;
+	
+	private BaseActivity activity;
 
 	private List<View> listViews; // Tab页面列表
+	private Handler mHandler;
 
 	View topicDescribe; // 创意描述
 	View topicComment;// 创意内容
@@ -71,7 +83,7 @@ public class OriginalityActivity extends BaseActivity implements
 	WebView topic_content_describe_text;
 	Button topic_content_button;
 	Button spinner;
-	ListView lv_topic_comment_list;
+	XListView lv_topic_comment_list;
 	ProgressBar progressBarSupport;
 	ProgressBar progressBarDisSupport;
 	TextView tv_progressBarSupport;
@@ -93,17 +105,25 @@ public class OriginalityActivity extends BaseActivity implements
 	// 创意表态数据:看好，不看好
 	private String agreecount = "";
 	private String disagreecount = "";
+	//总评论数
+	public String requestCount = "0";
+	public String totalCount = "0";
+	public boolean isAdd = false;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.topic_content);
+		
+		activity = this;
+		
 		Intent intent = getIntent();
 		creativeID = intent.getStringExtra("creativeID");
 		Log.d("", "yuanqikai creativeID = " + creativeID);
 		ScUtil sc = new ScUtil(this);
 
 		listViews = new ArrayList<View>();
+		mHandler = new Handler();
 		LayoutInflater mInflater = getLayoutInflater();
 		topicDescribe = mInflater
 				.inflate(R.layout.topic_content_describe, null);
@@ -140,8 +160,14 @@ public class OriginalityActivity extends BaseActivity implements
 				.findViewById(R.id.topic_content_comment_publish_but);
 		spinner = (Button) topicComment
 				.findViewById(R.id.topic_content_commnent_publish_order_type);
-		lv_topic_comment_list = (ListView) topicComment
+		//评论xListView
+		lv_topic_comment_list = (XListView) topicComment
 				.findViewById(R.id.topic_content_comment_list);
+		lv_topic_comment_list.setPullLoadEnable(true);
+		commentAdapter = new OrgCommentAdapter(this, commentInfo);
+		lv_topic_comment_list.setAdapter(commentAdapter);
+		lv_topic_comment_list.setXListViewListener(this);
+		
 		progressBarSupport = (ProgressBar) topicComment
 				.findViewById(R.id.topic_content_comment_toupao_kanhao_progressBar);
 		progressBarDisSupport = (ProgressBar) topicComment
@@ -150,10 +176,7 @@ public class OriginalityActivity extends BaseActivity implements
 				.findViewById(R.id.topic_content_comment_toupao_kanhao_textview);
 		tv_progressBarDisSupport = (TextView) topicComment
 				.findViewById(R.id.topic_content_comment_toupao_buqingchu_textview);
-		// et_replay = (EditText) topicComment.findViewById(R.id.et_replay);
-		// listView1 = (ListView) topicComment.findViewById(R.id.listView1);
-		commentAdapter = new OrgCommentAdapter(this, commentInfo);
-		lv_topic_comment_list.setAdapter(commentAdapter);
+		
 		spinner.setOnClickListener(this);
 
 		butCommnet.setOnClickListener(this);
@@ -287,10 +310,10 @@ public class OriginalityActivity extends BaseActivity implements
 				}
 			}
 			break;
-		// 回复评论是否成功
+			// 回复评论是否成功
 		case POSTCOMMENTCONCENTCODE:
 			if (param.length > 0 && param[1] != null
-					&& param[1] instanceof String) {
+			&& param[1] instanceof String) {
 				String data = param[1].toString();
 				try {
 					JSONObject json = new JSONObject(data);
@@ -308,8 +331,8 @@ public class OriginalityActivity extends BaseActivity implements
 				}
 			}
 			break;
-		// 获取评论信息
-		case GETCOMMENT_INFO_CODE:
+		// 点赞是否成功
+		case POST_COMMENT_ZAN:
 			if (param.length > 0 && param[1] != null
 					&& param[1] instanceof String) {
 				String data = param[1].toString();
@@ -317,7 +340,45 @@ public class OriginalityActivity extends BaseActivity implements
 					JSONObject json = new JSONObject(data);
 					int status = json.getInt("ret");
 					if (status == 0) {
+						Util.toastInfo(this, "点赞成功！");
+					}else if (status == 2) {
+						Util.toastInfo(this, "您已经对该创意发表过赞，不能再发表！");
+					}else{
+						Util.toastInfo(this, "点赞失败，请登陆后，重试！");
+					}
+				} catch (JSONException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
+			break;
+		// 获取评论信息
+		case GETCOMMENT_INFO_CODE:
+			if (param.length > 0 && param[1] != null
+					&& param[1] instanceof String) {
+				String data = param[1].toString();
+				try {
+					JSONObject json = new JSONObject(data);
+					
+					//总评论数:累计之前的请求数
+					totalCount = json.getString("total_count");
+					
+					int status = json.getInt("ret");
+					if (status == 0) {
 						JSONArray mJSONArray = json.getJSONArray("content");
+						//判断评论数
+						String count = mJSONArray.length()+"";
+						if(!("0".equals(count.trim()))) {
+							count = count.trim();
+							int total = Integer.valueOf(count)+Integer.valueOf(requestCount);
+							Log.d("", "yuanqikai345 count = "+count+":total="+total);
+							requestCount = total+"";
+						}
+						if(!isAdd){
+							//刷新：先清空数据，再重新填入
+							commentInfo.clear();
+						}
+						
 						for (int i = 0; i < mJSONArray.length(); i++) {
 							JSONObject jsonmode = mJSONArray.getJSONObject(i);
 							if (jsonmode != null && jsonmode.length() > 0) {
@@ -343,6 +404,7 @@ public class OriginalityActivity extends BaseActivity implements
 							}
 						}
 						commentAdapter.notifyDataSetChanged();
+		                onLoad();
 					} else {
 						Util.toastInfo(this, "查询失败！");
 					}
@@ -549,6 +611,12 @@ public class OriginalityActivity extends BaseActivity implements
 			replyName = holder2.userName;
 			
 			break;
+			//点赞
+		case R.id.ll_zan:
+			ViewHolder holder3 = (ViewHolder)v.getTag();
+			String commentID = holder3.id;
+			CommentAPI.getInstance().postCommentZan(getOpen_idOrToken(), commentID, activity, POST_COMMENT_ZAN);
+			break;
 
 		default:
 			break;
@@ -591,15 +659,50 @@ public class OriginalityActivity extends BaseActivity implements
 	}
 
 	@Override
-	public void onRefresh() {
-		// TODO Auto-generated method stub
+    public void onRefresh() {
+        mHandler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+            	//刷新,不是更多
+            	isAdd = false;
+            	requestCount = "0";//重新初始化总数
+            	// 获取评论："params":{"oid":"22","ctype":3,"total_count":1}
+            	Map<String, String> paramsMap = new HashMap<String, String>();
+        		paramsMap.clear();
+        		paramsMap.put("oid", creativeID);
+        		paramsMap.put("ctype", "3");
+        		paramsMap.put("total_count", "1");
+        		CommentAPI.getInstance().getCommentInfo(paramsMap, activity, GETCOMMENT_INFO_CODE);
+            }
+        }, 1000);
+    }
 
-	}
-
-	@Override
-	public void onLoadMore() {
-		// TODO Auto-generated method stub
-
-	}
+    @Override
+    public void onLoadMore() {
+        mHandler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+            	//更多
+            	isAdd = true;
+            	//请求数据
+            	Map<String, String> paramsMap = new HashMap<String, String>();
+        		paramsMap.clear();
+        		paramsMap.put("oid", creativeID);
+        		paramsMap.put("ctype", "3");
+        		paramsMap.put("total_count", "1");
+        		paramsMap.put("start", requestCount);
+        		paramsMap.put("pagesize", "10");
+        		CommentAPI.getInstance().getCommentInfo(paramsMap, activity, GETCOMMENT_INFO_CODE);
+            }
+        }, 1000);
+    }
+    
+    private void onLoad() {
+    	lv_topic_comment_list.stopRefresh();
+    	lv_topic_comment_list.stopLoadMore();
+    	SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+    	String date = df.format(new Date());
+    	lv_topic_comment_list.setRefreshTime(date);
+    }
 
 }

@@ -15,6 +15,8 @@ public class DiscussData {
 	private String pubTime = "" ;
 	private String surplusTime = "" ;
 	private String endTime = "" ;
+	private String pubInfo = "" ;
+	
 	/**
 	 * @return the id
 	 */
@@ -86,6 +88,18 @@ public class DiscussData {
 	 */
 	public void setEndTime(String endTime) {
 		this.endTime = endTime;
+	}
+	/**
+	 * @return the pubInfo
+	 */
+	public String getPubInfo() {
+		return pubInfo;
+	}
+	/**
+	 * @param pubInfo the pubInfo to set
+	 */
+	public void setPubInfo(String pubInfo) {
+		this.pubInfo = pubInfo;
 	}
 	
 }

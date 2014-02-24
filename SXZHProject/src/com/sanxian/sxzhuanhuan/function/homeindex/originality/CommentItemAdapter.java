@@ -24,10 +24,10 @@ import android.widget.BaseAdapter;
 import android.widget.TextView;
 
 /**
- * @Title: ProjectAdapter.java
- * @Package com.sanxian.sxzhuanhuan.function.homeindex
- * @Description: 项目内容首页
- * @author zhangfl@sanxian.com
+ * @Title: CommentItemAdapter.java
+ * @Package com.sanxian.sxzhuanhuan.function.homeindex.originality
+ * @Description:评论页
+ * @author yuanqk@sanxian.com
  * @date 2014-1-14 上午10:42:45
  * @version V1.0
  */
@@ -38,6 +38,7 @@ public class CommentItemAdapter extends BaseAdapter implements OnClickListener {
 	private LayoutInflater inflater;
 	private CommentInfo commentInfo = null;
 	public static String[] itemInfo = new String[2];//Item点击后保存Item数据
+	//holder 是从主评论传进来的
 	private OrgCommentAdapter.ViewHolder holder;
 
 	public CommentItemAdapter(Context context, ArrayList<CommentInfo> infos,OrgCommentAdapter.ViewHolder holder) {
@@ -87,22 +88,21 @@ public class CommentItemAdapter extends BaseAdapter implements OnClickListener {
 	@Override
 	public View getView(int position, View convertView, ViewGroup parent) {
 		// TODO Auto-generated method stub
+		//特别注意：position的值总是在变，这是个严重BUG
 		ViewHolder holder = null;
-		Log.d("", "yuanqikai getView getView "+position);
+		Log.d("", "yuanqikai123 getView getView "+position);
 		if (convertView == null) {
 			convertView = inflater.inflate(R.layout.org_comment_item_child, null);
 			holder = new ViewHolder();
 			init(convertView, holder);
 			convertView.setTag(holder);
+			if (infos != null) {
+				commentInfo = (CommentInfo) infos.get(position);
+				setData(holder, commentInfo);
+			}
 		} else {
 			holder = (ViewHolder) convertView.getTag();
 		}
-		
-		if (infos != null) {
-			commentInfo = (CommentInfo) infos.get(position);
-			setData(holder, commentInfo);
-		}
-
 		convertView.setOnClickListener(this);
 		return convertView;
 	}
@@ -115,11 +115,10 @@ public class CommentItemAdapter extends BaseAdapter implements OnClickListener {
 		holder.tv_content = (TextView) convertView.findViewById(R.id.tv_content);
 
 	}
-
+	//设置数据
 	private void setData(ViewHolder holder, CommentInfo info) {
 		holder.tv_userName.setText(info.getUserName());
-		Log.d("", "yuanqk  = "+info.getReplyid()+" ; info.getR_user_name() = "+info.getR_user_name());
-		if(!"0".endsWith(info.getReplyid())&&!(info.getSid().endsWith(info.getReplyid()))){
+		if(!"0".equals(info.getReplyid())&&!(info.getSid().equals(info.getReplyid()))){
 			holder.tv_replay_character.setVisibility(View.VISIBLE);
 			holder.tv_r_user_name.setText(info.getR_user_name());
 			holder.tv_r_user_name.setVisibility(View.VISIBLE);
@@ -142,7 +141,7 @@ public class CommentItemAdapter extends BaseAdapter implements OnClickListener {
 	public void onClick(View v) {
 		// TODO Auto-generated method stub
 		// UIHelper.showProjectDetailActivity(context
-		 Log.d("", "yuanqikai 1232131232132");
+		
 		 CommentItemAdapter.ViewHolder holder2 = (CommentItemAdapter.ViewHolder) v
 					.getTag();
 		 itemInfo[0] = holder2.id;

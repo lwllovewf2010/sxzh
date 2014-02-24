@@ -174,7 +174,7 @@ public class PublishProjectLast extends BaseActivity implements OnClickListener 
 						JSONObject contentObject = new JSONObject(jsondata);
 						Util.toastInfo(this, "创建成功！" + contentObject.optString("content"));
 
-					} else  {
+					} else {
 						Util.toastInfo(this, "创建失败！");
 					}
 					Intent intent = new Intent(this, MainActivity.class);
@@ -212,7 +212,7 @@ public class PublishProjectLast extends BaseActivity implements OnClickListener 
 
 		Map<String, String> tempMap = new HashMap<String, String>();
 		tempMap.put("project_qq", qq_number.getText().toString());
-		tempMap.put("project_mobile", mobile_number.getText().toString());
+		tempMap.put("project_mobile", mobile_numbersString);
 		tempMap.put("project_realname", fullname.getText().toString());
 		tempMap.put("project_logo", tempImages);
 
@@ -234,9 +234,31 @@ public class PublishProjectLast extends BaseActivity implements OnClickListener 
 		fullnamesString = spf.getString("user_name", "");
 		mobile_numbersString = spf.getString("mobile", "");
 		fullname.setText(fullnamesString);
-		mobile_number.setText(mobile_numbersString);
+		mobile_number.setText(changeStar(mobile_numbersString, 4, 7));
 		// fullname.setText("honaf");
 		// mobile_number.setText("13794484349");
+	}
+
+	/**
+	 * 
+	 * @Description: 将中间数字转换为*号
+	 * @param @param phone 字符串
+	 * @param @param start 开始位置
+	 * @param @param end 结束位置
+	 * @param @return 返回结果
+	 * @return String 返回类型
+	 * @throws
+	 */
+	public String changeStar(String phone, int start, int end) {
+		String result = "";
+		for (int i = 0; i < phone.length(); i++) {
+			if (i >= start - 1 && i <= end - 1) {
+				result = result + "*";
+			} else {
+				result += phone.charAt(i);
+			}
+		}
+		return result;
 	}
 
 }

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_gravity="center"
+    android:background="@color/color_efeff4"
+    android:orientation="vertical" >
+
+    <com.sanxian.sxzhuanhuan.common.CommonHeader
+        android:id="@+id/common_header"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+	        android:layout_marginLeft="10dp"
+	        android:layout_marginRight="10dp"
+	        android:layout_marginTop="10dp"
+	        android:orientation="vertical">
+    	<EditText
+            android:id="@+id/pub_vote_title"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/preference_item"
+            android:hint="输入投票标题，直接抛出问题"
+            android:textSize="@dimen/size_14" />
+    	
+    	<EditText
+            android:id="@+id/pub_vote_detail"
+            android:layout_width="fill_parent"
+            android:layout_height="150dp"
+            android:background="@drawable/preference_item_last_rect"
+            android:hint="补充说明(选填)"
+            android:textSize="@dimen/size_14" />
+    	
+    	<TextView
+            android:id="@+id/pub_vote_detail"
+            android:layout_width="fill_parent"
+            android:layout_height="150dp"
+            android:background="@drawable/preference_item_last_rect"
+            android:text="单选"
+            android:textSize="@dimen/size_14" />
+    	
+    	<TextView
+            android:id="@+id/pub_vote_detail"
+            android:layout_width="fill_parent"
+            android:layout_height="150dp"
+            android:background="@drawable/preference_item_last_rect"
+            android:text="多选"
+            android:textSize="@dimen/size_14" />
+    	
+   	</LinearLayout>
+    <!-- <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/preference_item"
+        android:padding="5dp" >
+
+        <EditText
+            android:id="@+id/pub_vote_title"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:background="@null"
+            android:hint="输入投票标题，直接抛出问题"
+            android:textSize="@dimen/size_14" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="150dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/preference_item_last_rect"
+        android:padding="5dp" >
+
+        <EditText
+            android:id="@+id/pub_vote_detail"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:background="@null"
+            android:hint="补充说明(选填)"
+            android:textSize="@dimen/size_14" />
+    </LinearLayout> -->
+
+    <Button
+        android:id="@+id/pub_vote_btn"
+        android:layout_width="fill_parent"
+        android:layout_height="48dp"
+        android:layout_gravity="center"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/common_back"
+        android:gravity="center"
+        android:text="发起投票"
+        android:textColor="@color/color_ffffff"
+        android:textSize="@dimen/size_18" />
+
+</LinearLayout>

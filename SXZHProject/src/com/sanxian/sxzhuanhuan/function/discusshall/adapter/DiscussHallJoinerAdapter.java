@@ -132,6 +132,10 @@ public class DiscussHallJoinerAdapter extends BaseAdapter implements OnClickList
 	public void onClick(View v) {
 		// TODO Auto-generated method stub
 //		Util.toastInfo(context, "ssss") ;
-		UIHelper.showDiscussVoteActivity(context, ((ViewHolder)v.getTag()).topicID , flag) ;
+		if(1 == flag ) {
+			UIHelper.showDiscussVoteActivity(context, ((ViewHolder)v.getTag()).topicID , flag) ;
+		} else {
+			UIHelper.showDiscussVoteResultActivity(context, ((ViewHolder)v.getTag()).topicID , flag) ;
+		}
 	}
 }

@@ -3,18 +3,23 @@ package com.sanxian.sxzhuanhuan.function.personal.myfriends;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.View.OnClickListener;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemLongClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.BaseAdapter;
 import android.widget.Button;
@@ -32,9 +37,15 @@ import com.sanxian.sxzhuanhuan.api.JSONParser;
 import com.sanxian.sxzhuanhuan.api.MyFriendsAPI;
 import com.sanxian.sxzhuanhuan.common.BaseActivity;
 import com.sanxian.sxzhuanhuan.common.IBaseActivity;
+import com.sanxian.sxzhuanhuan.dialog.DialogConstant;
+import com.sanxian.sxzhuanhuan.dialog.MiddleDialog;
+import com.sanxian.sxzhuanhuan.dialog.MiddleDialogInfo;
 import com.sanxian.sxzhuanhuan.entity.Constant;
 import com.sanxian.sxzhuanhuan.entity.UserInfo;
+import com.sanxian.sxzhuanhuan.function.personal.setting.SetIndexActiVity;
 import com.sanxian.sxzhuanhuan.message.ChatActivity;
+import com.sanxian.sxzhuanhuan.message.xmpp.XmppService;
+import com.sanxian.sxzhuanhuan.message.xmpp.XmppUtils;
 import com.sanxian.sxzhuanhuan.util.Util;
 
 /**
@@ -46,8 +57,8 @@ import com.sanxian.sxzhuanhuan.util.Util;
  */
 public class MyFriendsIndexActivity extends BaseActivity implements IBaseActivity, OnClickListener {
 	private Spinner spinner;
-	private EditText content_et;
-	private Button search_btn;
+//	private EditText content_et;
+//	private Button search_btn;
 	private ListView friends_listview;
 	private Button near_people;
 	private String spinnerDataItems[] = { "按最新联系人排序", "按姓名首字母排序", "只显示互加好友" };
@@ -57,6 +68,7 @@ public class MyFriendsIndexActivity extends BaseActivity implements IBaseActivit
 
 	MyFriendsAPI api = new MyFriendsAPI();
 	private final int GETFRIENDLIST = 100;
+	private final int DELETEFRIEND  =101;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -66,7 +78,6 @@ public class MyFriendsIndexActivity extends BaseActivity implements IBaseActivit
 		this.initView();
 		this.initListener();
 		spinner.setAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, spinnerDataItems));
-		// getData();
 		adapter = new FriendListviewAdapter(this, friendList);
 		friends_listview.setAdapter(adapter);
 		api.getFriendList(new HashMap<String, String>(), this, GETFRIENDLIST);
@@ -76,24 +87,12 @@ public class MyFriendsIndexActivity extends BaseActivity implements IBaseActivit
 	public void initView() {
 		super.initView();
 		spinner = (Spinner) this.findViewById(R.id.spinner);
-		content_et = (EditText) this.findViewById(R.id.content_et);
-		search_btn = (Button) this.findViewById(R.id.search_btn);
+//		content_et = (EditText) this.findViewById(R.id.content_et);
+//		search_btn = (Button) this.findViewById(R.id.search_btn);
 		friends_listview = (ListView) this.findViewById(R.id.friends_listview);
 		near_people = (Button) this.findViewById(R.id.near_people);
 		near_people.setVisibility(View.VISIBLE);
 	}
-
-	// public void getData() {
-	// UserInfo userInfo = null;
-	// for (int i = 0; i < 20; i++) {
-	// userInfo = new UserInfo();
-	// userInfo.setUid(i + "");
-	// userInfo.setRealName("乔布斯" + i);
-	// userInfo.setAddress("深圳" + i);
-	// userInfo.setAvatar("http://h.hiphotos.baidu.com/image/w%3D2048/sign=443597d217ce36d3a20484300ecb3b87/3801213fb80e7bec4b6768e92d2eb9389b506b7c.jpg");
-	// friendList.add(userInfo);
-	// }
-	// }
 
 	@Override
 	public void initListener() {
@@ -102,10 +101,40 @@ public class MyFriendsIndexActivity extends BaseActivity implements IBaseActivit
 		super.button_right.setOnClickListener(this);
 		title_txt.setText("我的好友");
 		button_right.setText("添加");
-		search_btn.setOnClickListener(this);
+//		search_btn.setOnClickListener(this);
 		near_people.setOnClickListener(this);
+		friends_listview.setOnItemLongClickListener(new MyOnItemLongClick());
 	}
+	class MyOnItemLongClick implements OnItemLongClickListener{
 
+		@Override
+		public boolean onItemLongClick(AdapterView<?> arg0, View arg1, int position, long arg3) {
+			tempPosition=position;
+			showMidDialog();
+			return false;
+		}
+		
+	}
+	private void showMidDialog() {
+		Intent intent = new Intent(this , MiddleDialog.class);
+		MiddleDialogInfo info = new MiddleDialogInfo("提示", "你确定删除吗？", 
+				false, "", "", "确定", "取消");
+		intent.putExtra("info", info);
+		startActivityForResult(intent, DialogConstant.REQUEST_MIDDLE);
+	}
+	int tempPosition=-1;
+	@Override
+	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+		super.onActivityResult(requestCode, resultCode, data);
+
+			if (resultCode == DialogConstant.MIDDLE_OK) {
+				Map<String, String> map = new HashMap<String, String>();
+				map.put("friend_id", friendList.get(tempPosition).getUid());
+				api.deleteFriend(map, this, DELETEFRIEND);
+			} else if (resultCode == DialogConstant.MIDDLE_CANCEL) {
+				
+			}
+		}
 	@Override
 	public void refresh(Object... param) {
 		super.refresh(param);
@@ -136,11 +165,19 @@ public class MyFriendsIndexActivity extends BaseActivity implements IBaseActivit
 							}
 							adapter.notifyDataSetChanged();
 						}
-						// content":
-						// [{"open_id":"3_1206_629938","photo":"http:\/\/s.sxzhuanhuan.com\/avatar\/avatar1390467086989.png",
-						// "user_name":"houhui123","area":"\u4e0a\u6d77\u5e02\u4e0a\u6d77\u5e02\u9ec4\u6d66\u533a"},
 
 					} else if (Constant.ResultStatus.RESULT_FAIL == JSONParser.getReturnFlag(jsondata)) {
+					}
+				}
+				break;
+			case DELETEFRIEND:
+				if (param.length > 0 && param[1] != null && param[1] instanceof String) {
+					String jsondata = param[1].toString();
+					if (Constant.ResultStatus.RESULT_OK == JSONParser.getReturnFlag(jsondata)) {
+						friendList.remove(tempPosition);
+						adapter.notifyDataSetChanged();
+					} else if (Constant.ResultStatus.RESULT_FAIL == JSONParser.getReturnFlag(jsondata)) {
+						
 					}
 				}
 				break;
@@ -156,9 +193,9 @@ public class MyFriendsIndexActivity extends BaseActivity implements IBaseActivit
 	public void onClick(View v) {
 		Intent intent = null;
 		switch (v.getId()) {
-		case R.id.search_btn:// 搜索按钮
-			Util.toastInfo(this, "搜索");
-			break;
+//		case R.id.search_btn:// 搜索按钮
+//			Util.toastInfo(this, "搜索");
+//			break;
 		case R.id.title_Left:
 			this.finish();
 			break;
@@ -234,8 +271,6 @@ public class MyFriendsIndexActivity extends BaseActivity implements IBaseActivit
 			holder.lvitem_operation.setOnClickListener(new OnClickListener() {
 				@Override
 				public void onClick(View v) {
-//					Util.toastInfo(MyFriendsIndexActivity.this, "消息入口");
-					
 					Intent intent = new Intent(MyFriendsIndexActivity.this, ChatActivity.class);
 					intent.putExtra("userinfo", userInfo);
 					startActivity(intent);

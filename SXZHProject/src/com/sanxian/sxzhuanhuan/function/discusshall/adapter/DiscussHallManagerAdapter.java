@@ -6,8 +6,8 @@ import java.util.List;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.view.View.OnClickListener;
+import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -16,7 +16,7 @@ import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.sanxian.sxzhuanhuan.R;
 import com.sanxian.sxzhuanhuan.common.UIHelper;
-import com.sanxian.sxzhuanhuan.entity.DiscusshallInfo;
+import com.sanxian.sxzhuanhuan.util.Util;
 
 /**   
  * @Title: DiscussHallManagerAdapter.java 
@@ -28,21 +28,22 @@ import com.sanxian.sxzhuanhuan.entity.DiscusshallInfo;
  */
 public class DiscussHallManagerAdapter extends BaseAdapter implements OnClickListener {
 	private Context context = null ;
-	private List<DiscusshallInfo> infos;
-	private DiscusshallInfo disInfo ;
+	private List<DiscussData> infos;
+	private DiscussData disInfo ;
 	private LayoutInflater mInflater;
+	int FLAG = 0 ;
 	private DisplayImageOptions options;
-	protected ImageLoader imageLoader = ImageLoader.getInstance();;
+	protected ImageLoader imageLoader = ImageLoader.getInstance();
 
 	public DiscussHallManagerAdapter(Context context,
-			List<DiscusshallInfo> infos) {
+			List<DiscussData> infos , int flag) {
 		this.context = context ;
+		this.FLAG = flag ;
 		if (infos != null)
 			this.infos = infos;
 		else
-			this.infos = new ArrayList<DiscusshallInfo>();
+			this.infos = new ArrayList<DiscussData>();
 		
-		System.out.println("--" + infos.size());
 		mInflater = LayoutInflater.from(context);
 	}
 
@@ -65,7 +66,7 @@ public class DiscussHallManagerAdapter extends BaseAdapter implements OnClickLis
 	public View getView(int position, View convertView, ViewGroup parent) {
 		ViewHolder holder = null;
 		if (convertView == null) {
-			convertView = mInflater.inflate(R.layout.discusshall_index_item, null);
+			convertView = mInflater.inflate(R.layout.discuss_manager_item, null);
 			holder = new ViewHolder();
 			init(convertView, holder);
 			convertView.setTag(holder);
@@ -75,7 +76,7 @@ public class DiscussHallManagerAdapter extends BaseAdapter implements OnClickLis
 
 		options = UIHelper.setOption() ;
 		
-		disInfo = (DiscusshallInfo) infos.get(position);
+		disInfo = (DiscussData) infos.get(position);
 		setData(holder, disInfo);
 
 		convertView.setOnClickListener(this);
@@ -83,30 +84,30 @@ public class DiscussHallManagerAdapter extends BaseAdapter implements OnClickLis
 	}
 	
 	private void init(View convertView, ViewHolder holder) {
-		holder.disTitle = (TextView) convertView.findViewById(R.id.dis_index_tv_distitle) ;
-		holder.lastTime = (TextView) convertView.findViewById(R.id.dis_index_tv_lasttime) ;
-		holder.disCount = (TextView) convertView.findViewById(R.id.dis_index_tv_discount) ;
-		holder.disLogo = (ImageView) convertView.findViewById(R.id.dis_index_iv_dislogo) ;
-		holder.lastDis = (TextView) convertView.findViewById(R.id.dis_index_tv_lastdis) ;
+		holder.title = (TextView) convertView.findViewById(R.id.discuss_hall_manager_title) ;
+		holder.ivJoined = (ImageView) convertView.findViewById(R.id.discuss_hall_manager_iv) ;
+		holder.pubname = (TextView) convertView.findViewById(R.id.discuss_hall_manager_pubname) ;
+		holder.pubtime = (TextView) convertView.findViewById(R.id.discuss_hall_manager_distime) ;
+		holder.pubinfo = (TextView) convertView.findViewById(R.id.discuss_hall_manager_pubinfo) ;
 	}
 	
-	private void setData(ViewHolder holder, DiscusshallInfo disInfo) {
-		holder.disTitle.setText(disInfo.getDisTitle()) ;
-		holder.lastTime.setText(disInfo.getLastTime()) ;
-		holder.disCount.setText(disInfo.getDisCount()) ;
-		imageLoader.displayImage(disInfo.getDisLogo() , holder.disLogo, options, null);
-		holder.lastDis.setText(disInfo.getLastDis()) ;
+	private void setData(ViewHolder holder, DiscussData disInfo) {
+//		holder.title.setText(disInfo.getTitle()) ;
+//		holder.pubname.setText(disInfo.getPubName()) ;
+//		holder.pubtime.setText("发起于   " + disInfo.getPubTime()) ;
+//		holder.pubinfo.setText("" + disInfo.getPubInfo()) ;
+//		imageLoader.displayImage(disInfo.getDisLogo() , holder.disLogo, options, null);
 		
 		holder.topicID = disInfo.getId() ;
 	}
 
 	class ViewHolder {
-		public TextView disTitle;
-		public TextView lastTime;
-		public TextView disCount;
-		public ImageView disLogo;
-		public TextView lastDis;
-
+		public TextView title;
+		public ImageView ivJoined ;
+		public TextView pubname;
+		public TextView pubtime;
+		public TextView pubinfo;
+		
 		public String topicID ;
 	}
 
@@ -116,6 +117,11 @@ public class DiscussHallManagerAdapter extends BaseAdapter implements OnClickLis
 	@Override
 	public void onClick(View v) {
 		// TODO Auto-generated method stub
-		UIHelper.showTopicDetailActivity(context, ((ViewHolder)v.getTag()).topicID) ;
+		Util.toastInfo(context, "ssss") ;
+		if(1 == FLAG) {
+			UIHelper.showDiscussPubActivity(context, ((ViewHolder)v.getTag()).topicID) ;
+		} else if (2 == FLAG) {
+			UIHelper.showPubVoteActivity(context, ((ViewHolder)v.getTag()).topicID) ;
+		}
 	}
 }

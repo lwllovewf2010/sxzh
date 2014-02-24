@@ -31,7 +31,13 @@ public class UserInfo implements Serializable{
 	//公司
 	String company = "";
 	String address = "";
-	
+	String name_letter="";
+	public String getName_letter() {
+		return name_letter;
+	}
+	public void setName_letter(String name_letter) {
+		this.name_letter = name_letter;
+	}
 	//好友模块
 	//距离
 	String distance = "";

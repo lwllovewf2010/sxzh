@@ -52,7 +52,7 @@ public class PublishProjectReport extends BaseActivity implements OnClickListene
 	private RelativeLayout fast_layout;
 	private RelativeLayout ems_layout;
 	private RelativeLayout un_free;
-	//邮寄方式选择
+	// 邮寄方式选择
 	private ImageView img_fast;
 	private ImageView img_ems;
 	private ImageView img_un_free;
@@ -98,10 +98,30 @@ public class PublishProjectReport extends BaseActivity implements OnClickListene
 		ems_layout = (RelativeLayout) this.findViewById(R.id.ems_layout);
 		un_free = (RelativeLayout) this.findViewById(R.id.un_free);
 		// 包邮方式布局选中
-		img_fast=(ImageView)this.findViewById(R.id.img_fast);
-		img_ems=(ImageView)this.findViewById(R.id.img_ems);
-		img_un_free=(ImageView)this.findViewById(R.id.img_un_free);
+		img_fast = (ImageView) this.findViewById(R.id.img_fast);
+		img_ems = (ImageView) this.findViewById(R.id.img_ems);
+		img_un_free = (ImageView) this.findViewById(R.id.img_un_free);
+
+	}
+
+	// 重置数据
+	public void clearAllValue() {
+		publish_project_report_projectcount.setText("");
+		publish_project_report_projectcountxiane.setText("");
+		publish_project_report_day.setText("");
+		publish_project_report_tuikuanshoum_rel.setText("");
+		publish_project_report_huibaotitle.setText("");
+		publish_project_report_huibaotime.setText("");
+		publish_project_report_huinbaocontent_rel.setText("");
+		publish_project_renchu.setText("");
+		publish_project_report_zhuanlibianhao.setText("");
+		publish_project_report_zhuanliname.setText("");
+		publish_project_report_rate.setText("");
 		
+		img_fast.setVisibility(View.VISIBLE);
+		img_ems.setVisibility(View.INVISIBLE);
+		img_un_free.setVisibility(View.INVISIBLE);
+		reward_post = "1";
 	}
 
 	public void initListener() {
@@ -186,7 +206,7 @@ public class PublishProjectReport extends BaseActivity implements OnClickListene
 			break;
 		case R.id.title_Left:
 			// this.finish();
-			Util.toastInfo(this, "清空");
+			clearAllValue();
 			break;
 		case R.id.btn_limit_partner:// 股东人数
 			if ("1".equals(btn_limit_partner.getTag())) {
@@ -220,19 +240,19 @@ public class PublishProjectReport extends BaseActivity implements OnClickListene
 			img_fast.setVisibility(View.VISIBLE);
 			img_ems.setVisibility(View.INVISIBLE);
 			img_un_free.setVisibility(View.INVISIBLE);
-			reward_post="1";
+			reward_post = "1";
 			break;
 		case R.id.ems_layout:
 			img_fast.setVisibility(View.INVISIBLE);
 			img_ems.setVisibility(View.VISIBLE);
 			img_un_free.setVisibility(View.INVISIBLE);
-			reward_post="2";
+			reward_post = "2";
 			break;
 		case R.id.un_free:
 			img_fast.setVisibility(View.INVISIBLE);
 			img_ems.setVisibility(View.INVISIBLE);
 			img_un_free.setVisibility(View.VISIBLE);
-			reward_post="0";
+			reward_post = "0";
 			break;
 		default:
 			break;
@@ -240,7 +260,8 @@ public class PublishProjectReport extends BaseActivity implements OnClickListene
 	}
 
 	Boolean isLimit = true;// 默认限制人数
-	String reward_post="1";//默认快递
+	String reward_post = "1";// 默认快递
+
 	public Map<String, String> getMap() {
 
 		Map<String, String> tempMap = new HashMap<String, String>();

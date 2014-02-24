@@ -11,6 +11,7 @@ import com.sanxian.sxzhuanhuan.entity.CommentInfo;
 import com.sanxian.sxzhuanhuan.entity.MetaData;
 import com.sanxian.sxzhuanhuan.entity.ProjectInfo;
 
+import android.app.Activity;
 import android.content.Context;
 import android.text.Html;
 import android.util.Log;
@@ -23,6 +24,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.BaseAdapter;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -36,14 +38,14 @@ import android.widget.TextView;
  */
 public class OrgCommentAdapter extends BaseAdapter implements OnClickListener {
 
-	private Context context = null;
+	private Activity context = null;
 	private ArrayList<CommentInfo> infos = null;
 	private LayoutInflater inflater;
 	private ImageLoader imageLoader = ImageLoader.getInstance();
 	private DisplayImageOptions options = null;
 	private CommentInfo commentInfo = null;
 
-	public OrgCommentAdapter(Context context, ArrayList<CommentInfo> infos) {
+	public OrgCommentAdapter(Activity context, ArrayList<CommentInfo> infos) {
 		this.context = context;
 		if (infos != null)
 			this.infos = (ArrayList<CommentInfo>) infos;
@@ -117,6 +119,15 @@ public class OrgCommentAdapter extends BaseAdapter implements OnClickListener {
 		holder.tv_addtime = (TextView) convertView.findViewById(R.id.tv_date);
 		holder.tv_dnum = (TextView) convertView.findViewById(R.id.tv_dnum);
 		holder.et_replay = (EditText) convertView.findViewById(R.id.et_replay);
+		//评论
+		holder.ll_comment = (LinearLayout) convertView.findViewById(R.id.ll_comment);
+		holder.ll_comment.setOnClickListener(this);
+		holder.ll_comment.setTag(holder);
+		//赞
+		holder.ll_zan = (LinearLayout) convertView.findViewById(R.id.ll_zan);
+//		holder.ll_zan.setOnClickListener(this); //还是放到activity中去处理，要好点。
+		holder.ll_zan.setTag(holder);
+		
 		holder.et_replay.setTag(new String[2]);
 		holder.tv_content = (TextView) convertView
 				.findViewById(R.id.tv_content);
@@ -138,7 +149,6 @@ public class OrgCommentAdapter extends BaseAdapter implements OnClickListener {
 		holder.tv_dnum.setText(info.getDnum()+"人觉得很赞");
 		holder.id = info.getId();
 		holder.username = info.getUserName();
-		Log.d("", "yuanqikai info.getComment_groups().size() = "+info.getComment_groups().size());
 		holder.listView1.setAdapter(new CommentItemAdapter(context, info.getComment_groups(),holder));
 	}
 
@@ -151,8 +161,10 @@ public class OrgCommentAdapter extends BaseAdapter implements OnClickListener {
 		public TextView tv_fdnum;
 		public EditText et_replay;
 		public ListView listView1;
+		public LinearLayout ll_comment;//评论
+		public LinearLayout ll_zan;//赞
 		public Button submit;
-		public String id;
+		public String id;//该评论的ID
 		public String username;
 	}
 
@@ -160,16 +172,18 @@ public class OrgCommentAdapter extends BaseAdapter implements OnClickListener {
 	public void onClick(View v) {
 		// TODO Auto-generated method stub
 		switch (v.getId()) {
+		case R.id.ll_comment:
 		case R.id.tv_content:
 			ViewHolder holder = (ViewHolder)v.getTag();
 			holder.et_replay.setHint("我也说一句...");
+			Log.d("", "yuanle 111111111111");
 			String[] arr = new String[2];
 			arr[0] = null;
 			arr[1] = null;
+			//如果是回复主评论，则将holder.et_replay的tag设置为空，避免bug（因为在子评论中这个不为空）
 			holder.et_replay.setTag(arr);
-			Log.d("", "yuanqikai info.getComment_groups().size() = "+arr[1]);
+			holder.et_replay.requestFocus();
 			break;
-
 		default:
 			break;
 		}

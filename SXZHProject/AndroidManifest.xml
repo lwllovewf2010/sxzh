@@ -172,6 +172,27 @@
             android:launchMode="singleTop"
             android:screenOrientation="portrait" >
         </activity>
+        <activity
+            android:name="com.sanxian.sxzhuanhuan.function.discusshall.DiscussVoteResultActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.sanxian.sxzhuanhuan.function.discusshall.DiscussManagerActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.sanxian.sxzhuanhuan.function.discusshall.PubDiscussActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.sanxian.sxzhuanhuan.function.discusshall.PubVoteActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" >
+        </activity>
+        
         
         <activity
             android:name="com.sanxian.sxzhuanhuan.TestAPIActivity"

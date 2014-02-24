@@ -8,7 +8,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.AdapterView;
+import android.widget.LinearLayout;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.AdapterView.OnItemClickListener;
 import com.sanxian.sxzhuanhuan.R;
 import com.sanxian.sxzhuanhuan.common.BaseActivity;
@@ -38,16 +40,20 @@ public class DiscussJoinActivity extends BaseActivity implements
 	private View viewLeft = null;
 	private View viewRight = null;
 	private List<View> listViews; 
-	private DiscussHallManagerAdapter dhmaAdapter = null ;
-	private DiscussHallCreaterAdapter dhcaAdapter = null ; 
 	private DiscussHallJoinerAdapter dhjaAdapter = null ;
 	private List<DiscussData> disData = null ;
 	
 	private CommonHeader conHeader = null ;
-	/** 1.项目描述  2.项目详情 3.项目成员  4.部落大厅  5.讨论大厅*/  
 	private static int PAGE_FALG = 0 ;  
 	private ListView lvLeft = null ;
 	private ListView lvRight = null ;
+	
+	private LinearLayout llManagerLeft = null ;
+	private TextView tvManagerLeftDisPubname = null ;
+	private TextView tvManagerLeftDisCount = null ;
+	private LinearLayout llManagerRight = null ;
+	private TextView tvManagerRightCount = null ;
+	private View disDivide = null ;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -63,62 +69,62 @@ public class DiscussJoinActivity extends BaseActivity implements
 		
 		options = UIHelper.setOption() ;
 		
-		initLeft();
+		initContent();
 	}
 
-	/**
-	 * 初始化项目内容页
-	 */
-	private void initLeft() {
+	private void initContent() {
 		sc = new ScUtil(this);
 		listViews = new ArrayList<View>();
 		mInflater = getLayoutInflater();
 		viewLeft = mInflater.inflate(R.layout.discuss_join_left, null);
 		viewRight = mInflater.inflate(R.layout.discuss_join_right, null);
 
+		initCommon() ;
+		
 		initRight(viewRight);
 
 		listViews.add(viewLeft);
 		listViews.add(viewRight);
 
-		PAGE_FALG = 1 ;
-		initWidget();
+		initLeft(viewLeft);
 		sc.showSc("进行中", "已结束", listViews , conHeader);
-		initData() ;
+	}
+	
+	private void initCommon() {
+		conHeader = (CommonHeader) findViewById(R.id.common_header) ;
+		conHeader.show(true, true , "返回", true, "进行中", false , "" , false) ;
+		conHeader.ivPre.setOnClickListener(this);
+		conHeader.tvLeft.setOnClickListener(this) ;
+	}
+
+	private void initLeft(View view) {
+		llManagerLeft = (LinearLayout) view.findViewById(R.id.discuss_manager_ll_left) ;
+//		tvManagerLeftDisPubname = (TextView) view.findViewById(R.id.discuss_manager_ll_tv_name) ;
+//		tvManagerLeftDisCount = (TextView) view.findViewById(R.id.discuss_manager_ll_tv_count) ;
+		disDivide = (View) view.findViewById(R.id.dis_divide) ;
+		llManagerLeft.setVisibility(View.GONE) ;
+		disDivide.setVisibility(View.GONE ) ;
+		
+		lvLeft = (ListView) view.findViewById(R.id.discuss_join_left_lv) ;
+		getData() ;
+		dhjaAdapter = new DiscussHallJoinerAdapter(DiscussJoinActivity.this, disData , 1) ;
+		lvLeft.setAdapter(dhjaAdapter) ;
+
 	}
 
 	private void initRight(View view) {
+		llManagerRight = (LinearLayout) view.findViewById(R.id.discuss_manager_ll_right) ;
+//		tvManagerRightCount = (TextView) view.findViewById(R.id.discuss_manager_ll_tv_count);
+		disDivide = (View) view.findViewById(R.id.dis_divide) ;
+		disDivide.setVisibility(View.GONE ) ;
+		llManagerRight.setVisibility(View.GONE) ;
+		
 		lvRight = (ListView) view.findViewById(R.id.discuss_join_right_lv) ;
-//		sc.showSc("进行中", "已结束", listViews , conHeader);
 		getData() ;
 		dhjaAdapter = new DiscussHallJoinerAdapter(DiscussJoinActivity.this, disData , 2) ;
 		lvRight.setAdapter(dhjaAdapter) ;
 	}
-
-	private void initWidget() {
-		conHeader = (CommonHeader) findViewById(R.id.common_header) ;
-		conHeader.show(true, true , "返回", true, "项目介绍", false , "" , false) ;
-		conHeader.ivPre.setOnClickListener(this);
-		conHeader.tvLeft.setOnClickListener(this) ;
-		
- 		if( 1 == PAGE_FALG ) {
-			lvLeft = (ListView) viewLeft.findViewById(R.id.discuss_join_left_lv) ;
-		} else if (2 == PAGE_FALG ) {
-
-		} 
-
-	}
 	
-	private void initData() {
-		if( 1 == PAGE_FALG ) {
-			getData() ;
-			dhjaAdapter = new DiscussHallJoinerAdapter(DiscussJoinActivity.this, disData , 1) ;
-			lvLeft.setAdapter(dhjaAdapter) ;
-		} else if (2 == PAGE_FALG ) {
-			
-		} 
-
-	}
 	
 	@Override
 	public void refresh(Object... param) {

@@ -151,11 +151,11 @@
             android:text="@string/topic_content_comment_publish_but" />
     </RelativeLayout>
 
-    <ListView
+    <com.sanxian.sxzhuanhuan.view.xlistview.XListView
         android:id="@+id/topic_content_comment_list"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:layout_below="@+id/topic_content_comment_publish_rel" >
-    </ListView>
+    </com.sanxian.sxzhuanhuan.view.xlistview.XListView>
 
 </RelativeLayout>

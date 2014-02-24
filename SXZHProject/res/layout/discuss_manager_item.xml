@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_efeff4"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="#f8f8ff"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp" >
+
+        <ImageView
+            android:id="@+id/discuss_hall_manager_iv"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/my_tribe" />
+
+        <TextView
+            android:id="@+id/discuss_hall_manager_title"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_toRightOf="@id/discuss_hall_manager_iv"
+            android:text="什么叫物以类聚人以群分？ 什么叫做孕妇效应？"
+            android:singleLine="true"
+            android:textColor="@color/color_000000"
+            android:textSize="@dimen/size_16" />
+
+        <TextView
+            android:id="@+id/discuss_hall_manager_pubname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/discuss_hall_manager_title"
+            android:layout_toRightOf="@id/discuss_hall_manager_iv"
+            android:gravity="left|center"
+            android:layout_alignBottom="@id/discuss_hall_manager_iv"
+            android:text="赵钱孙"
+            android:textColor="@color/color_444a4d"
+            android:textSize="@dimen/size_12" />
+
+        <TextView
+            android:id="@+id/discuss_hall_manager_distime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/discuss_hall_manager_title"
+            android:layout_alignParentRight="true"
+            android:layout_toRightOf="@id/discuss_hall_manager_iv"
+            android:gravity="right|center"
+            android:layout_alignBottom="@id/discuss_hall_manager_iv"
+            android:text="09:00"
+            android:textColor="@color/color_444a4d"
+            android:textSize="@dimen/size_12" />
+        
+        <TextView
+            android:id="@+id/discuss_hall_manager_pubinfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/discuss_hall_manager_title"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="40dp"
+            android:layout_toRightOf="@id/discuss_hall_manager_pubname"
+            android:gravity="left|center"
+            android:layout_alignBottom="@id/discuss_hall_manager_pubname"
+            android:singleLine="true"
+            android:text="一下整理了一下整理了一下整理了一下整理了"
+            android:textColor="@color/color_444a4d"
+            android:textSize="@dimen/size_12" />
+        
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/temp_rl_tc_1"
+        android:layout_width="fill_parent"
+        android:layout_height="2dp" />
+    
+</LinearLayout>

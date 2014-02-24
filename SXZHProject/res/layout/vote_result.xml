@@ -19,6 +19,7 @@
         android:layout_marginTop="20dp" >
 
         <TextView
+            android:id="@+id/vote_type"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/find_pwd_icon"
@@ -26,6 +27,7 @@
             android:textSize="@dimen/size_16" />
 
         <TextView
+            android:id="@+id/vote_title"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="5dp"
@@ -71,7 +73,7 @@
         android:textSize="@dimen/size_14" />
 
     <TextView
-        android:id="@+id/vote_title"
+        android:id="@+id/vote_toast"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
@@ -106,8 +108,9 @@
         <ListView
             android:id="@+id/vote_result_lv"
             android:layout_width="fill_parent"
-            android:layout_height="100dp"
+            android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
+            android:divider="@null"
             android:textColor="@color/color_c7c7cc"
             android:textSize="@dimen/size_14" >
         </ListView>

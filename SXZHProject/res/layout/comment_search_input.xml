@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="52dip"
+        android:background="@drawable/tongyong_sousuokuang" >
+
+        <EditText
+            android:id="@+id/input"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="6dip"
+            android:layout_marginLeft="35dip"
+            android:layout_marginRight="35dip"
+            android:layout_marginTop="6dip"
+            android:background="@drawable/tongyong_sousuokuang_lan"
+            android:gravity="center|left"
+            android:paddingLeft="43dip"
+            android:singleLine="true"
+            android:textColor="#444444"
+            android:textColorHint="#888888"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/search_icon"
+            android:layout_width="25dip"
+            android:layout_height="25dip"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="45dip"
+            android:background="@drawable/tongyong_sousuo_icon1" />
+
+        <TextView
+            android:id="@+id/search_cancel"
+            android:layout_width="25dip"
+            android:layout_height="25dip"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="45dip"
+            android:background="@drawable/tongyong_sousuo_icon2" />
+    </RelativeLayout>
+
+</LinearLayout>

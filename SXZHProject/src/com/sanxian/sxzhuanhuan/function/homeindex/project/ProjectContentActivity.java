@@ -607,7 +607,8 @@ public class ProjectContentActivity extends BaseActivity implements
 			break ;
 			
 		case R.id.topic_hall_rl_manager_info :
-			Util.toastInfo(ProjectContentActivity.this, "主持中的讨论") ;
+//			Util.toastInfo(ProjectContentActivity.this, "主持中的讨论") ;
+			UIHelper.showDiscussManagerActivity(ProjectContentActivity.this, proID) ;
 			break ;
 		case R.id.topic_hall_rl_join_info :
 //			Util.toastInfo(ProjectContentActivity.this, "待参与信息") ;

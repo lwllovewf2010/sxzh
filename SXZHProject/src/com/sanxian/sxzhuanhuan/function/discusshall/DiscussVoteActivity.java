@@ -77,29 +77,4 @@ public class DiscussVoteActivity extends BaseActivity implements
 		}
 	}
 
-	@Override
-	protected void onStart() {
-		super.onStart() ;
-	}
-	
-	@Override
-	protected void onPause() {
-		super.onPause() ;
-	}
-	
-	@Override
-	protected void onResume() {
-		super.onResume() ;
-	}
-	
-	@Override
-	protected void onRestart() {
-		super.onRestart() ;
-	}
-	
-	@Override
-	public void onDestroy() {
-		super.onDestroy() ;
-	}
-
 }

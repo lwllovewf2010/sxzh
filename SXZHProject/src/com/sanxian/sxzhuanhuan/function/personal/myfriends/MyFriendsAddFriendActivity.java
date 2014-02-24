@@ -1,6 +1,5 @@
 package com.sanxian.sxzhuanhuan.function.personal.myfriends;
 
-
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -17,19 +16,20 @@ import com.nostra13.universalimageloader.core.ImageLoader;
 import com.sanxian.sxzhuanhuan.R;
 import com.sanxian.sxzhuanhuan.common.BaseActivity;
 import com.sanxian.sxzhuanhuan.common.IBaseActivity;
+import com.zxing.activity.CaptureActivity;
 
 /**
  * 
-* @ClassName: MyFriendsAddFriendActivity  
-* @Description: 各种添加好友入口
-* @author honaf
-* @date 2014-1-2 下午6:16:58
+ * @ClassName: MyFriendsAddFriendActivity
+ * @Description: 各种添加好友入口
+ * @author honaf
+ * @date 2014-1-2 下午6:16:58
  */
 public class MyFriendsAddFriendActivity extends BaseActivity implements IBaseActivity, OnClickListener {
 	private RelativeLayout addfriend_fromcontacts_rl;
 	private RelativeLayout scan_rl;
 	private RelativeLayout search_rl;
-	
+
 	public ImageLoader imageLoader;
 	public DisplayImageOptions options;
 
@@ -49,19 +49,15 @@ public class MyFriendsAddFriendActivity extends BaseActivity implements IBaseAct
 
 	}
 
-
-
 	@Override
 	public void initView() {
 		super.initView();
 		super.button_right.setVisibility(View.GONE);
 		super.title_txt.setText("添加好友");
-		addfriend_fromcontacts_rl=(RelativeLayout)this.findViewById(R.id.addfriend_fromcontacts_rl);
-		scan_rl=(RelativeLayout)this.findViewById(R.id.scan_rl);
-		search_rl=(RelativeLayout)this.findViewById(R.id.search_rl);
-		
-				
-		
+		addfriend_fromcontacts_rl = (RelativeLayout) this.findViewById(R.id.addfriend_fromcontacts_rl);
+		scan_rl = (RelativeLayout) this.findViewById(R.id.scan_rl);
+		search_rl = (RelativeLayout) this.findViewById(R.id.search_rl);
+
 	}
 
 	@Override
@@ -80,25 +76,28 @@ public class MyFriendsAddFriendActivity extends BaseActivity implements IBaseAct
 
 	@Override
 	public void onClick(View v) {
-		Intent intent=null;
+		Intent intent = null;
 		switch (v.getId()) {
 
 		case R.id.title_Left:
 			this.finish();
 			break;
 		case R.id.addfriend_fromcontacts_rl:
+			intent = new Intent(this, AddFriendFromMyPhoneActivity.class);
+			startActivity(intent);
 			break;
 		case R.id.scan_rl:
+			// 打开扫描界面扫描条形码或二维码
+			Intent openCameraIntent = new Intent(this, CaptureActivity.class);
+			startActivityForResult(openCameraIntent, 0);
 			break;
 		case R.id.search_rl:
-			intent=new Intent(this, MyFriendsSearchActivity.class);
+			intent = new Intent(this, MyFriendsSearchActivity.class);
 			startActivity(intent);
 			break;
 		default:
 			break;
 		}
 	}
-
-	
 
 }

@@ -2,18 +2,21 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:background="@color/gray"
+    android:background="@color/common_bg"
     android:orientation="vertical" >
 
     <include layout="@layout/title_bar" />
 
-    <include layout="@layout/search_common" />
+    <include
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/search_common" />
 
     <ListView
         android:id="@+id/friends_listview"
-        android:background="@color/white"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
+        android:layout_height="wrap_content"
+        android:background="@color/white" >
     </ListView>
 
 </LinearLayout>

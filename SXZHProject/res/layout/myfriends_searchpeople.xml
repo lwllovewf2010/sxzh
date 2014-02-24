@@ -2,30 +2,30 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:background="@color/gray"
+    android:background="@color/common_bg"
     android:orientation="vertical" >
 
     <include layout="@layout/title_bar" />
 
-    <LinearLayout
-        style="@style/myfriends_padding"
+    <RelativeLayout
         android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:orientation="vertical" >
+        android:layout_height="wrap_content" >
 
-        <TextView
-            android:id="@+id/textView1"
-            style="@style/myfriends_index"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/searchfriendtip" />
-
-        <EditText
-            android:id="@+id/editText1"
+        <LinearLayout
+            android:id="@+id/soso_linear"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+            <include layout="@layout/comment_search_input" />
+        </LinearLayout>
+        <ListView
+            android:id="@+id/result_listview"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:singleLine="true" >
-        </EditText>
-    </LinearLayout>
+            android:layout_height="match_parent"
+            android:layout_below="@id/soso_linear"
+            android:cacheColorHint="#00000000"
+            android:divider="@drawable/listview_drive_lines"
+            android:dividerHeight="2px"
+            android:visibility="visible" />
+    </RelativeLayout>
 
 </LinearLayout>

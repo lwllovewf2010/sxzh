@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_gravity="center"
+    android:background="@color/color_efeff4"
+    android:orientation="vertical" >
+
+    <com.sanxian.sxzhuanhuan.common.CommonHeader
+  	    android:id="@+id/common_header"
+  	    android:layout_height="wrap_content" 
+        android:layout_width="fill_parent"
+  	    />
+
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:padding="5dp"
+        android:background="@drawable/preference_item" >
+
+        <EditText
+            android:id="@+id/pub_discuss_title"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:textSize="@dimen/size_14"
+            android:background="@null"
+            android:hint="标题(必填)" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="150dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:padding="5dp"
+        android:background="@drawable/preference_item_last_rect" >
+
+        <EditText
+            android:id="@+id/pub_discuss_detail"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:background="@null"
+            android:ems="10"
+            android:hint="对要讨论主题的详细描述"
+            android:textSize="@dimen/size_14" >
+
+            <requestFocus />
+        </EditText>
+        
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/pub_discuss_btn"
+        android:layout_width="fill_parent"
+        android:layout_height="48dp"
+        android:layout_gravity="center"
+        android:background="@drawable/common_back"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:gravity="center"
+        android:textSize="@dimen/size_18"
+        android:textColor="@color/color_ffffff"
+        android:text="发布" />
+
+</LinearLayout>
